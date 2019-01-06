@@ -9,7 +9,7 @@ tags: ['chart.js','color conversion','color theory']
 
 I was warned, but I wanted to tackle charts anyway. That was my first mistake. Humans tend to understand graphical information better than text on average. But presenting information visually in a *compelling* way is not only *not* easy. It’s **hard**. If I wasn't convinced, my recent experience left me with little doubt. The process of adding simple charts took me down a number of rabbit holes to explore… and get lost in. 
 
-![](./alice.webp)
+![](./alice.gif)
 
 This post is intended to document three major takeaways from the process: 
 
