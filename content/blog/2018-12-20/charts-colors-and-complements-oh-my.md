@@ -1,5 +1,5 @@
 ---
-title: Charts, Colors, and Complements: Oh my!
+title: 'Charts, Colors, and Complements: Oh my!'
 date: '2018-12-20'
 category: ['programming']
 tags: ['chart.js','color conversion','color theory']
