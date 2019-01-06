@@ -2,7 +2,7 @@
 title: 'The allure of banned materials'
 date: '2017-05-06'
 category: ['musings']
-tags: ['anne coulter, 'baptists and bootleggers', 'berkeley','controversy','marketing','milo yiannopoulos','raymond sturgeon']
+tags: ['anne coulter','baptists and bootleggers','berkeley','controversy','marketing','milo yiannopoulos','raymond sturgeon']
 ---
 A few days ago, I got to talking with a friend about the Berkeley students' recent protests and threatened protests in advance of speeches by Milo Yiannopoulos and Anne Coulter on campus. In both cases, the speeches were cancelled. In both cases, the speakers are known firebrands who have gained notoriety by taking an aggressive approach to topics and advancing their agendas. In both cases, the students also helped the speakers. They helped by creating controversy and by telling others what they could or could not do. Their protests effectively created scarcity in something that was not scarce before. After the conversation I started thinking about what effect the students had on the conversation and how those lessons might apply to writers.
 

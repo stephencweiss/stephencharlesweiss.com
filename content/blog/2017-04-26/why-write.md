@@ -2,7 +2,7 @@
 title: 'Why write?'
 date: '2017-04-26'
 category: ['musings']
-tags: ['anne coulter','baptists and bootleggers','berkeley','controversy','marketing','milo yiannopoulos','raymond sturgeon']
+tags: ['adam grant', 'growth', 'jeff bezos', 'resilience', 'sheryl sandberg', 'writing']
 ---
 In his annual letter to shareholders, Jeff Bezos answered a question that had been following him around for twenty years: what does Day 2 look like. Bezos painted a bleak picture of stasis, irrelevance, excruciating painful decline, and ultimately death before describing four strategies to avoid falling into Day 2.¹ Bezos's letter reminded me that "writing is a medium for crystallizing thoughts" which is how my friend described it recently. He introduces very few new ideas, but did so with such clarity and vigor that they felt fresh and infused his letter with an energy that made me excited to learn more.
 
