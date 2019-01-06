@@ -1,5 +1,5 @@
 ---
-title: 'You're doing it wrong'
+title: "You're doing it wrong"
 date: '2017-05-17'
 category: musings
 tags: ['habits', 'opportunity cost', 'subscriptions']
