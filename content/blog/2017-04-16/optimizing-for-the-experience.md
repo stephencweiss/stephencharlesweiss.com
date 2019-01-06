@@ -1,7 +1,7 @@
 ---
 title: 'Optimizing for the experience'
 date: '2017-04-16'
-category: musings
+category: ['musings']
 tags: ['attention', 'doing', 'focus', 'learning', 'marinating thoughts', 'processing', 'ruminating', 'time']
 ---
 Think about the last time you were in an elevator. Did you pull out your phone to check your email or get an update on the score of the game? How many people were playing with theirs? Adjusting the song they were listening to as they rocked out in a world of their own or responded to a text from a friend? We are constantly faced with opportunities to engage in different activities, but how we do (or should) choose is less clear.

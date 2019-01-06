@@ -1,8 +1,8 @@
 ---
 title: 'Brief thoughts on reading and note taking'
 date: '2016-02-10'
-category: 'musings'
-tags:
+category: ['musings']
+tags: []
 ---
 Coming into 2015, I promised myself that I would read more than I did the year before. I was achieved this goal, but I finished was no where near where I wanted to be. Completing just 12 books in 2015, I have once again challenged myself to increase that number. So far, so good. In 2016, I have already finished nearly 20 books! 
 

@@ -1,7 +1,7 @@
 ---
 title: 'Alleviating the pressure to be right'
 date: '2017-03-29'
-category: musings
+category: ['musings']
 tags: ['ideation', 'pressure', 'resistance', 'steven pressfield']
 ---
 

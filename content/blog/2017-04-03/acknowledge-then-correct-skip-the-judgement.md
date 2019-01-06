@@ -1,7 +1,7 @@
 ---
 title: 'Acknowledge then correct; skip the judgment'
 date: '2017-04-03'
-category: musings
+category: ['musings']
 tags: ['frustration', 'introspection', 'judgment', 'writing']
 ---
 

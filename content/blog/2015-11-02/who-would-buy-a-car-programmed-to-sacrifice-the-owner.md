@@ -1,8 +1,8 @@
 ---
 title: 'Who would buy a car programmed to sacrifice the owner?'
 date: 2015/11/02 18:00:21
-category:
-tags: '99% invisible', 'cars','ethics', 'qz', 'self-driving'
+category: []
+tags: ['99% invisible', 'cars','ethics', 'qz', 'self-driving']
 ---
 "Who would buy a car programmed to sacrifice the owner?" ¹
 

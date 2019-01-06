@@ -1,7 +1,7 @@
 ---
 title: 'This too shall pass and thoughts on (im)permanence'
 date: '2017-04-06'
-category: musing
+category: ['musing']
 tags: []
 ---
 

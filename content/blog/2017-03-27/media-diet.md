@@ -1,7 +1,7 @@
 ---
 title: 'Media diet'
 date: '2017-03-27'
-category:
+category: ['musings']
 tags: ['julia cameron', 'media deprivation', 'reading diet']
 ---
 

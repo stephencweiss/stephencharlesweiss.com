@@ -1,7 +1,7 @@
 ---
 title: 'City of Big Shoulders'
 date: '2017-03-31'
-category:
+category: []
 tags: ['carl sandburg', 'chicago', 'energy', 'inspiration', 'motivation']
 ---
 > Hog Butcher for the World,

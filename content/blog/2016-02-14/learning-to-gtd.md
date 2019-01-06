@@ -1,7 +1,7 @@
 ---
 title: 'Learning to "GTD"'
 date: '2016-02-14'
-category: musings
+category: ['musings']
 tags: ['books', 'productivity']
 ---
 I have a friend who likes to say that people complain all the time about not having enough time to do what they find important, but when he gives them a copy of [David Allen's Getting Things Done: The Art of Stress-Free Productivity](http://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/?_encoding=UTF8&camp=1789&creative=9325&keywords=David%20Allen%20Get%20Things%20Done&linkCode=ur2&qid=1455513257&s=books&sr=1-1&tag=stepcharweis-20&linkId=IN3TMRMPUTBHCZBW) they still haven't read it three months later.

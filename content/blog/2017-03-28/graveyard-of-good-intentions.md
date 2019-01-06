@@ -1,7 +1,7 @@
 ---
 title: 'Graveyard of Good Intentions'
 date: '2017-03-28'
-category: musings
+category: ['musings']
 tags: ['attention', 'commitments', 'time']
 ---
 Commitments are easy to accumulate and much harder to extricate from. One of the reasons why I've felt this week to be particularly appropriate for a reading diet is that while unsubscribing from newsletters and mailing lists, I noticed that the emails that I was most attached to were also the biggest time commitments. They were a combination of pieces written by the sender and a mixed bag of links from around the web with a line or two of commentary.

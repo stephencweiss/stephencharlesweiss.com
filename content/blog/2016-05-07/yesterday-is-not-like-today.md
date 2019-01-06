@@ -1,7 +1,7 @@
 ---
 title: 'Yesterday is not like today'
 date: '2016-05-07'
-category: musings
+category: ['musings']
 tags: ['life lessons','oak street health']
 ---
 ![](./oshlogo.jpg)

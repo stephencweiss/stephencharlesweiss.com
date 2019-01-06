@@ -1,8 +1,8 @@
 ---
 title: 'Blue Origin's historic rocket landing'
 date: '2015-11-24'
-category: Musings
-tags:
+category: ['musings']
+tags: []
 ---
 `youtube: 9pillaOxGCo`
 

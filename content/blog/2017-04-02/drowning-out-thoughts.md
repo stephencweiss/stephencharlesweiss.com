@@ -1,7 +1,7 @@
 ---
 title: 'Drowning out thoughts'
 date: '2017-04-02'
-category: musings
+category: ['musings']
 tags: ['bill gates', 'engagement', 'julia cameron', 'learning', 'media deprivation']
 ---
 

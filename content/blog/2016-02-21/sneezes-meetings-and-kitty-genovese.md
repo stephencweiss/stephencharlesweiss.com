@@ -1,7 +1,7 @@
 ---
 title: 'Sneezes, meetings, and Kitty Genovese'
 date: '2016-02-21'
-category: musings
+category: ['musings']
 tags: ['bystander effect', 'communication', 'kitty genovese', 'psychology']
 ---
 The room was quiet and the music soothing. After 50 minutes of flowing from pose to pose in a room approaching 95°F, the class collectively sank into matts and savored the respite. Everything was as it should be. Then a sneeze filled the air and the peace shattered, temporarily at least. Jolted out of my introspection, I thought about how I might have responded to her sneeze if I had been in a different setting. Certainly, I assumed, I would not have been as frustrated with the innocuous and natural occurrence, so why was I now - in Yoga where I was practicing mindfulness and understanding? Flitting past my self-criticism as quickly as possible, I decided I would do my best to make up for it and say "Gesundheit." (When asked afterward, why do I feel it's necessary to say anything, I stuttered and stammered until I declared that it was a nice thing to wish someone good health and it's a reminder of being part of a larger community). It's unlikely my words were heard by anyone else over the din of the music, but I felt satisfied, my anxiety dissipated, and I fell back into the flow of class.

@@ -1,7 +1,7 @@
 ---
 title: 'Looking at the keys to successful (email) communication'
 date: '2017-03-30'
-category: musings
+category: ['musings']
 tags: ['communication','corporate', 'email']
 ---
 

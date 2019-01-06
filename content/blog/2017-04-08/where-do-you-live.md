@@ -1,7 +1,7 @@
 ---
 title: 'Where do you live?'
 date: '2017-04-08'
-category: musings
+category: ['musings']
 tags: ['amos tversky', 'assumptions', 'daniel kahneman', 'psychology', 'stereotypes']
 ---
 When we meet people for the first time, we are filling in gaps with all of the information we can gather about a person. No matter how good we are at extracting information, blind spots are bound to remain - people are just too complicated to be fully understood in a few moments of interaction. This is a good thing as it means that friendships that last years are richer than those that last minutes. On the other hand, our ability to abstract past the shortcomings of a dearth of information is impressive. Explaining the work he and Amos Tversky completed as well as subsequent research into human cognition, Daniel Kahneman's *Thinking, Fast and Slow* introduced a paradigm for the public on how we process information. There is System 1, the automatic response, and System 2, the slow and methodical approach.
