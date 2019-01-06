@@ -1,8 +1,8 @@
 ---
-title: 'Reaction: The Thucydides Trap: Are the U.S. and China Headed for War?'
+title: "Reaction: The Thucydides Trap: Are the U.S. and China Headed for War?"
 date: '2015-10-02'
-category:
-tags: 'economics', 'international politics', 'policy'
+category: []
+tags: ['economics', 'international politics', 'policy']
 ---
 
 Graham Allison's article "The Thucydides Trap: Are the U.S. and China headed for War?" published in this month's Atlantic reviews the rise of China in the context of other rising nations and the challenges they pose to incumbents. Notably, he points out that the mere presence of a challenger can cause such anxiety as to precipitate war. This is the Thucydides Trap. To demonstrate China's rise, Allison wrote, 
