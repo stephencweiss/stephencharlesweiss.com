@@ -2,7 +2,7 @@
 title: Postman, URI Encoding, and Occam's Razor
 date: '2018-12-25'
 category: ['programming']
-tags: ['learning to code','occam's razor','postman','uri encoding']
+tags: ['learning to code',`occam's razor`,'postman','uri encoding']
 ---
 Occam was a 14th century theologian-philosopher who is perhaps best known now for his relentless insistence on using the law of parsimony. Also known as, 'Keep it simple, stupid.'
 
