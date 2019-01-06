@@ -1,5 +1,5 @@
 ---
-title: 'Blue Origin's historic rocket landing'
+title: "Blue Origin's historic rocket landing"
 date: '2015-11-24'
 category: ['musings']
 tags: []
