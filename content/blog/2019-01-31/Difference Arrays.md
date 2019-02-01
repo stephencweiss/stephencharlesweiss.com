@@ -40,6 +40,7 @@ The second element is two bigger than the first. The third is an additional four
 Said another way, instead of writing the absolute values of each element, we could describe the same curve through its differences. If we were to re-write the above array in that way, we’d see `[0,2,6,4,2,0]` becomes `[2,4,-2,-2,-2,0]` .
 
 ![](./layers-view.png)
+
 Is there a fast way to figure out *what* those differences are? It turns out there is! And it takes advantage of the fact that we’re building this curve in layers.
 
 ## Step Through The Example

@@ -6,7 +6,7 @@ tags: ['vscode', 'ligatures','tips and tools']
 ---
 A few months ago, I found a font, `fira code` that introduced me to ligatures and how they could be useful in writing code.
 
-|![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/B6BE6CF2-4C54-4560-AF7B-50FED87665B9.png)|
+|![](./fira-ligatures.png)|
 |:---:|
 | *Fira Code’s ligature set* |
 
@@ -27,7 +27,8 @@ Before we get into *how* to use Ligaturizer (spoiler alert: the Readme is incred
 
 Ligatures are symbols that appear when two (or more) characters appear in sequence that is different than how those characters would appear if printed independently.
 
-![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/C2423E19-7DB5-46EC-8267-4D8A93CC8CB2.png)
+![](./wiki-ligature.png)
+
 (https://upload.wikimedia.org/wikipedia/commons/5/56/The_Wheel_Taumfel.jpg)
 
 As an example, this example from Wikipedia shows how the `Th` and `Wh` combine in unique ways when next to one another.
@@ -46,13 +47,13 @@ Once you download Ligaturizer and open it up, you’ll notice that there are sev
 ## Configuring Ligaturizer
 The first thing to do is add the fonts you want to the `fonts` directory.
 
-![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/52243438-5E3F-42F7-8077-1C83B0CCB408.png)
+![](./file-screen-grab.png)
 
 In my case, I’m adding both `DankMono` and `OperatorMono`.
 
 Once that’s done, open up `.build.py` in your text editor and add the new fonts. Before running `make`, I ended up commenting out rows 27-40, however, it’s not strictly necessary.
 
-![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/065C9212-FB3D-44CA-9AC9-D60E3AE62789.png)
+![](./prefixed-fonts.png)
 
 Optionally, at this point, you can go into the `ligatures.py` file and disable any of the ligatures you do *not* want added to the fonts.
 
@@ -61,7 +62,7 @@ Ligaturizer comes with ~600 different ligatures, so there’s plenty of customiz
 ## Make Your Fonts
 Now, you’re ready to run the program and make your fonts.
 
-![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/BAE79354-1297-4DF6-8B4E-2DF263C896B7.png)
+![](./ligaturizer-make.png)
 
 Ligaturizer requires python and `fontforge`. (If you don’t have it, look at the Readme to see how to get it. On Mac it’s as easy as `brew install fontforge`).
 
