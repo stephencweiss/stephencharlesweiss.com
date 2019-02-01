@@ -19,8 +19,7 @@ The quote was also reminiscent of Barbara Oakley’s suggestions in her course L
 
 In demonstrating the point, there’s an image of two brick walls. On the right is a jumble of brick and mortar. The wall has collapsed into a pile - the result of trying to build it all at once without allowing each layer to solidify. On the left is a beautiful wall, neatly organized, sturdy and strong.
 
-![](Heroic%20consistency,%20Wu%20Wei,%20and%20the%20Middle%20Way/image.png)
-(Source: https://goo.gl/images/UtszoL)
+![](./bricks.png)
 
 This is all to say I was primed to believe Brad. I’d drank the kool-aid. Yet, over the past few weeks, I’ve struggled to do some of the things I’d set out to do this month. Writing here is just one example.
 

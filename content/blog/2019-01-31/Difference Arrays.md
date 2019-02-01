@@ -29,7 +29,7 @@ So, in our first step, we’re going to add 2 to each index between 1 and 4 incl
 ```
 If each element in the array represented a height, you might see a bell curve, slightly skewed to its left. Seeing it as a bell curve really helped me understand *why* you could do this much more efficiently using what Geeks For Geeks calls a Difference Array.
 
-![](Difference%20Arrays/bell-curve-view.png)
+![](./bell-curve-view.png)
 This approach certainly works, but it’s not very efficient. For *each* query, we have to iterate over a subsection of the empty array with length n. If we say we have m queries, that gives us a time complexity of `O(n x m)`. We can do better.
 
 # Differences For The Win
@@ -39,7 +39,7 @@ The second element is two bigger than the first. The third is an additional four
 
 Said another way, instead of writing the absolute values of each element, we could describe the same curve through its differences. If we were to re-write the above array in that way, we’d see `[0,2,6,4,2,0]` becomes `[2,4,-2,-2,-2,0]` .
 
-![](Difference%20Arrays/layers-view.png)
+![](./layers-view.png)
 Is there a fast way to figure out *what* those differences are? It turns out there is! And it takes advantage of the fact that we’re building this curve in layers.
 
 ## Step Through The Example
