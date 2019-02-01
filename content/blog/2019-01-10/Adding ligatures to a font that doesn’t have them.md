@@ -4,7 +4,6 @@ date: '2018-12-29'
 category: ['programming']
 tags: ['vscode', 'ligatures','tips and tools']
 ---
-
 A few months ago, I found a font, `fira code` that introduced me to ligatures and how they could be useful in writing code.
 
 |![](Adding%20ligatures%20to%20a%20font%20that%20doesn%E2%80%99t%20have%20them/B6BE6CF2-4C54-4560-AF7B-50FED87665B9.png)|
@@ -128,3 +127,16 @@ Here are the custom settings I’ve added to get the effects I was looking for.
     ]
   }
 ```
+
+# Sources
+
+For more information, start here:
+
+* [MS: Syntax Highlighting Optimizations](https://code.visualstudio.com/blogs/2017/02/08/syntax-highlighting-optimizations)
+* [StackOverflow: Display italics in formatted code](https://stackoverflow.com/questions/41320848/how-do-i-get-visual-studio-code-to-display-italic-fonts-in-formatted-code)
+* [Custom Style Sheet with Fira Code and Fira Flott](https://gist.github.com/neetjn/3a132938e166f40e81cbb9a96db96cf8)
+* [Reddit: Combining Fonts in VSCode](https://www.reddit.com/r/vscode/comments/8e4sat/how_can_i_combine_2_fonts_in_vscode/)
+* [Wikipedia: Ligatures](https://en.wikipedia.org/wiki/Typographic_ligature)
+
+# Tools
+* [LIgaturizer](https://github.com/ToxicFrog/Ligaturizer)
