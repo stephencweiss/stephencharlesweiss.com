@@ -1,13 +1,13 @@
 ---
 title: 'The hat tip'
 date: '2017-05-23'
-category: musings
+category: ['musings']
 tags: ['Austin Kleon', 'community', 'reading', 'reference']
 ---
 
 The hat tip is "[a cultural expression of recognition, respect, gratitude](https://en.wikipedia.org/wiki/Hat_tip)." It's more modern incarnation takes that tradition and translated it to the internet what the constraints of Twitter created "h/t." It's an efficient way to acknowledge someone who inspired or taught you without eating up the available characters.
 
-It also happens to be a fantastic reminder of how constraints can drive creativity.  Initially I thought of the hat tip like an entry in a book's bibliography - but it's actually richer than that. It's not just the citation but the reference to the individual who turned the author onto it in the first place.  
+It also happens to be a fantastic reminder of how constraints can drive creativity.  Initially I thought of the hat tip like an entry in a book's bibliography - but it's actually richer than that. It's not just the citation but the reference to the individual who turned the author onto it in the first place. 
 
 Now, in addition to knowing what inspired the writer (the reference itself), you can know who.
 
