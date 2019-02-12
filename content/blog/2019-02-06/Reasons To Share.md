@@ -2,7 +2,7 @@
 title: "Reasons To Share"
 date: '2019-02-06'
 category: ['philosophy']
-tags: [`beginner's mind`]
+tags: [`beginner mind`]
 ---
 There are plenty of reasons to write this blog and share your perspective.
 
