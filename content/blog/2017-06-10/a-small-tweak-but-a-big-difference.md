@@ -1,7 +1,7 @@
 ---
 title: 'A small tweak but a big difference'
 date: '2017-06-10'
-category: musings
+category: ['musings']
 tags: ['design', 'evolution', 'life style', 'work space']
 ---
 Last night, I made a small change that made a big difference. It didn't feel significant when I made it. It felt like a thing you do when you're bored. I changed the background of my [Trello ](https://trello.com/)board.
