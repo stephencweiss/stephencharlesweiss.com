@@ -1,3 +1,10 @@
+---
+title: "JS Modules Primer: Export & Require"
+date: '2019-02-11'
+category: ['programming']
+tags: ['modules','export', 'require']
+---
+
 # Import/Export vs. Require in JS
 On more than one occasion I’ve found myself looking up the MDN page on imports and exports for modules in Javascript.
 

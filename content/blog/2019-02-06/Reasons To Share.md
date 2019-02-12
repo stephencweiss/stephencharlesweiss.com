@@ -17,7 +17,7 @@ At lunch the other day a friend remarked regarding my blog:
 Don’t I know it.
 
 Still, I happily write about the basics and I do so for a few reasons, most notably:
-1. Basics do not imply that everyone understands it. Take my recent post about [`.preventDefault()`]('../2019-01-04/20190104-better-form-submissions-with-event-preventdefault-and-htmlformelement-reset) (link) . I didn’t even know it was an option until I came across an instance where I wanted to stop my forms from reloading the page on submission. Now I do. Writing it down a) reinforced the lesson and b) meant that I now have a reference to it (that’s, hopefully, more polished than my notes).
+1. Basics do not imply that everyone understands it. Take my recent post about [`.preventDefault()`](../2019-01-04/20190104-better-form-submissions-with-event-preventdefault-and-htmlformelement-reset.md) (link) . I didn’t even know it was an option until I came across an instance where I wanted to stop my forms from reloading the page on submission. Now I do. Writing it down a) reinforced the lesson and b) meant that I now have a reference to it (that’s, hopefully, more polished than my notes).
 2. It’s *amazing* how quickly we forget what we used to not know. Once you learn how to ride a bicycle, you don’t really *think* about it. You just do it. If you can’t recall what it was like to *not* know, then it’s pretty hard to teach. After all, you wouldn’t even know *what* to teach!
 
 I’ve also been having a lot of conversations with new folks - a by-product of that’s what coffee chats and interviewing will do!). That’s given me an opportunity to talk about things that I like and has shown that not everyone spends as much time reading about / experimenting with productivity enhancements as I do.
