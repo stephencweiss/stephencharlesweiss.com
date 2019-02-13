@@ -84,7 +84,7 @@ module.exports = {
       options: {
         name: `{ In Scope }`,
         short_name: `{IS}`,
-        start_url: '/',
+        start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
