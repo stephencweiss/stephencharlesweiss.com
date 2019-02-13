@@ -1,4 +1,10 @@
-# Looking Up Shell Functions In Zsh
+---
+title: "Looking Up Shell Functions In Zsh"
+date: '2019-02-13'
+category: ['programming']
+tags: ['zsh','built-ins', 'shell functions']
+---
+
 I recently figured out how to write a shell function. The problem is that pretty quickly I’d forgotten *which* functions I’d written, or fi I had a general name, I couldn’t remember what they did exactly.
 
 So, I wanted to figure out a few things:
