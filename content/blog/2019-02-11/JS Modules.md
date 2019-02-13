@@ -233,10 +233,10 @@ Hopefully this was helpful and serves as a good jumping off point for anyone els
 I definitely am indebted to all of the people who came before to write down their thoughts.
 
 Articles:
-[How to publish native ES modules backwards compatible with Node < 8.5.0](https://medium.com/@dandv/publishing-native-es-modules-with-node-v8-5-0-730736e0f612)
-[Using import/export in node.js with esm – Jamis Charles – Medium](https://medium.com/@jamischarles/using-import-export-in-node-js-with-esm-7ce9153ff63)
-[Getting started with Node.js modules: require, exports, imports and beyond | Adrian Mejia Blog](https://adrianmejia.com/blog/2016/08/12/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/)
-[JavaScript Modules: A Beginner’s Guide – freeCodeCamp.org](https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc)
-[ECMAScript modules in Node.js: the new plan](http://2ality.com/2018/12/nodejs-esm-phases.html)
-[javascript - Using Node.js require vs. ES6 import/export - Stack Overflow](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export)
-[Modules | Node.js v11.9.0 Documentation](https://nodejs.org/api/modules.html)
+* [How to publish native ES modules backwards compatible with Node < 8.5.0](https://medium.com/@dandv/publishing-native-es-modules-with-node-v8-5-0-730736e0f612)
+* [Using import/export in node.js with esm – Jamis Charles – Medium](https://medium.com/@jamischarles/using-import-export-in-node-js-with-esm-7ce9153ff63)
+* [Getting started with Node.js modules: require, exports, imports and beyond | Adrian Mejia Blog](https://adrianmejia.com/blog/2016/08/12/getting-started-with-node-js-modules-require-exports-imports-npm-and-beyond/)
+* [JavaScript Modules: A Beginner’s Guide – freeCodeCamp.org](https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc)
+* [ECMAScript modules in Node.js: the new plan](http://2ality.com/2018/12/nodejs-esm-phases.html)
+* [javascript - Using Node.js require vs. ES6 import/export - Stack Overflow](https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export)
+* [Modules | Node.js v11.9.0 Documentation](https://nodejs.org/api/modules.html)
