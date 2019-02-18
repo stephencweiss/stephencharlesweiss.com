@@ -1,5 +1,5 @@
 ---
-title: 'A healthy skepticism'
+title: 'A Healthy Skepticism'
 date: '2017-06-13'
 category: ['musings']
 tags: ['advice', 'consumption', 'durable goods', 'economics', 'sleep']

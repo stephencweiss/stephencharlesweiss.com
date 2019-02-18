@@ -1,9 +1,10 @@
 ---
-title: "Heroic consistency, Wu Wei, and the Middle Way"
+title: 'Heroic Consistency, Wu Wei, And The Middle Way'
 date: '2019-01-30'
 category: ['philosophy']
 tags: ['wu-wei', 'motivation', 'heroic consistency']
 ---
+
 I recently found the following tweet about heroic consistency.
 
 > Don’t aim for consistently heroic efforts. Aim for being heroic at consistency.
@@ -11,6 +12,7 @@ I recently found the following tweet about heroic consistency.
 > Heroic efforts = take a huge toll emotionally, physically, and cognitively. Not a sustainable thing to strive for.
 >
 > Consistency = compounds over time. Good enough over and over again makes you great.
+>
 > - Brad Stulberg
 
 It’s short (it’s a tweet after all) but I found myself nodding along vigorously while reading it. More than that, I’ve spent hours thinking about it since. To start the month, I set goals for myself and Brad seemed to have a solution for how I might achieve that - not by binging but by showing up.
@@ -24,6 +26,7 @@ In demonstrating the point, there’s an image of two brick walls. On the right 
 This is all to say I was primed to believe Brad. I’d drank the kool-aid. Yet, over the past few weeks, I’ve struggled to do some of the things I’d set out to do this month. Writing here is just one example.
 
 # Understanding The Struggle
+
 My issue with the heroic consistency approach is the inclusion of heroism. The implication of the tweet is that by emphasizing consistency we can realize the benefits of compounding efforts. I whole-heartedly agree with that.
 
 My qualm is that we’re still striving to be heroes.
@@ -33,6 +36,7 @@ As Brad notes, heroic efforts “take a huge toll emotionally, physically, and c
 That may be true for heroic efforts, but I have found it’s also true for heroic consistency because the emotional, physical, and cognitive toll comes from trying to be a hero.
 
 # The Middle Way
+
 In Buddhism, the Middle Way was the first teaching Buddha delivered after his awakening and can refer to the path between eternalism and annihilation. Abstracting away the specifics, the Middle Way is about avoiding extremes - in life or in a specific practice.
 
 As Tamara Levitt said in her meditation by the same name,
@@ -44,6 +48,7 @@ My desire to live up to the standard Brad articulated meant I was burdening myse
 If the Middle Way is my goal, I needed a strategy for achieving it.
 
 # Wu-Wei
+
 _Wu Wei_ is what Benjamin Hoff describes as “Taoism-in-action” in _The Tao of Pooh_ and translates literally to “without doing, causing, or making”.
 
 To illustrate the practice, Hoff cites Chuang-Tse’s writing.
@@ -59,7 +64,9 @@ To illustrate the practice, Hoff cites Chuang-Tse’s writing.
 Unlike the old man in Chuang-Tse’s tale, I would have perished at the Gorge of Lu. In my pursuit of heroic consistency, I would have been unable to not try to affect my outcome - assuring my failure in a struggle against a force far greater than myself.
 
 # Coming Full Circle
+
 > Tao does not do, but nothing is not done.
+>
 > - Benjamin Hoff
 
 _Wu-Wei_ (Taoism-in-action) is not about doing **nothing**. It’s not about complacency and sitting still. It’s about letting the outcomes _happen_.
@@ -73,6 +80,7 @@ While that’s where I am today, I admit that ego is a powerful force and can of
 All of this is to say, today I remember these lessons. Tomorrow, I may forget or regress. When I do, I will be glad to have this as a reference to return to.
 
 # Related Topics And Further Reading
+
 [Brad Stulberg Tweet](https://twitter.com/bstulberg/status/1042060582218690561?lang=en)
 [Chuang-Tse - Wikipedia](https://en.m.wikipedia.org/wiki/Zhuang_Zhou)
 [The Middle Way - Wikipedia](https://en.m.wikipedia.org/wiki/Middle_Way)
