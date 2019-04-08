@@ -70,7 +70,7 @@ For more on this, see a different conversation on [Stackoverflow](https://stacko
 
 Is this the _best_ way to achieve my goal? Probably not, but it’s been w working for me and I understand it. If you can point me to a more common pattern with git for this, I’m all ears.
 
-Also, I have a `cpkg` function I created for the more specific use case of clearing changes to `package.json` and `package-lock.json`, but that didn’t force me to learn about arguments!
+I'd also be very interested if someone knows a good way of handling an unknown number of arguments to create a loop of repeating this process for each file passed into the gsdf function.
 
 # Resources
 
