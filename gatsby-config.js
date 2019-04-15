@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `{ In Scope }`,
+    title: `/* Code Comments */`,
     author: `Stephen Weiss`,
     description: `Investigating the world.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -56,9 +56,9 @@ module.exports = {
             },
           },
           {
-            resolve:`gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
+              classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
               showLineNumbers: true,
@@ -82,7 +82,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `{ In Scope }`,
+        name: `/* Code Comments */`,
         short_name: `{IS}`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -110,7 +110,7 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
                 })
               })
             },
@@ -135,8 +135,8 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "In Scope RSS Feed",
+            output: '/rss.xml',
+            title: 'Code-Comments RSS Feed',
           },
         ],
       },

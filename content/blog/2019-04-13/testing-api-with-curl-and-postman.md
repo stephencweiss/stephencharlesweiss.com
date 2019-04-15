@@ -1,5 +1,5 @@
 ---
-title: 'API Testing - cURL & Postman'
+title: 'How To Test Your API Using cURL & Postman'
 date: '2019-04-13'
 category: ['programming']
 tags: ['postman', 'curl', 'testing']
