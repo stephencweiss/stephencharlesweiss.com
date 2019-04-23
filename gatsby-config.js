@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `/* Code Comments */`,
     author: `Stephen Weiss`,
-    description: `Investigating the world.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `Notes on software and life.`,
+    siteUrl: `https://stephencharlesweiss.com/`,
     social: {
       twitter: `stephencweiss`,
     },
