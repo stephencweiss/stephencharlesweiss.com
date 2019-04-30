@@ -13,7 +13,7 @@ To rename the name of a branch, there are four potential steps:
 That’s it. At this point you have successfully renamed your local and remote Git branch.
 
 # A note about the `-m` flag:
-Similar to the `mv` command in Bash, the `-m` flag is for moving. Since you’re on a branch, Git infers the branch that’s being moved, however, you can be explicit and consolidate steps 1 and 2 with `git checkout -m <oldbranch> <newbranch>`.
+Similar to the `mv` command in Bash, the `-m` flag is for moving. Since you’re on a branch, Git infers the branch that’s being moved, however, you can be explicit and consolidate steps 1 and 2 with `git branch -m <oldbranch> <newbranch>`.
 
 # Additional Reading
 * [How To Rename a Local and Remote Git Branch](https://linuxize.com/post/how-to-rename-local-and-remote-git-branch/)
