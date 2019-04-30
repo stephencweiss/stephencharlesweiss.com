@@ -35,6 +35,6 @@ To combat some of the ambiguity the Bear team has added a bunch of [Special Sear
 # Writing With Search In Mind
 By far the way I help myself the most is by thinking about what a future me might look for.
 
-If I want to know how to quickly find notes in Bear at some point in the future, chances are high that I’ll search for “Find notes" and this post will come right to the top.
+If I want to know how to quickly find notes in Bear at some point in the future, chances are high that I’ll search for “Find notes quickly" and this post will come right to the top.
 
 Spending an extra minute or two on the front end tot change the title or add a specific sentence makes a world of difference. As a result, I like to think of my Bear app / blog as a little personal wiki - a place where I can go and do a quick search to find *exactly* what I did in the past to solve a particular problem.
