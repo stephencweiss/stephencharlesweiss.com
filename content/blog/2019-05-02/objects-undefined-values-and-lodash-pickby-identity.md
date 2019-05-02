@@ -1,6 +1,6 @@
 ---
 title: 'Objects, Undefined values, and Lodash’s `_.pickBy` and `_.identity`'
-date: '2019-04-30'
+date: '2019-05-01'
 category: ['programming']
 tags: ['lodash','pickBy','identity','learning']
 ---
