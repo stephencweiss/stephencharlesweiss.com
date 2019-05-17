@@ -1,8 +1,8 @@
 ---
-title: 'Lodash's "_groupBy" Vs. Custom Helper Functions'
+title: 'Lodash `_groupBy` Vs. Custom Helper Functions'
 date: '2019-05-03'
 category: ['programming']
-tags: ['lodash','groupBy','learning']
+tags: ['lodash', 'groupBy', 'learning']
 ---
 
 Yesterday, I wrote about using [Lodash’s `pickBy`](https://www.stephencharlesweiss.com/2019-05-02/objects-undefined-values-and-lodash-pickby-identity/) to solve a problem.
