@@ -1,6 +1,6 @@
 ---
 title: 'Hooks, Async, And The Joy Of New Problems'
-date: '2019-05-11'
+date: '2019-05-17'
 category: ['musings']
 tags: ['knowledge', 'communication', 'influence']
 ---
