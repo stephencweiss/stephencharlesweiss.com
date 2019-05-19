@@ -125,7 +125,7 @@ You can shoe-horn old solutions into new problems or create new skills and add t
 
 # Resources
 
-¹ [React Lifecycle Methods Primer](https://www.stephencharlesweiss.com/2019-04-04/react-lifecycle-methods/) \n
-² [Using the Effect Hook – React](https://reactjs.org/docs/hooks-effect.html)
-³ [Robin Weiruch on Data Fetching with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/)
-⁴ [Introduction to Hooks](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy)
+¹ [React Lifecycle Methods Primer](https://www.stephencharlesweiss.com/2019-04-04/react-lifecycle-methods/) <br/>
+² [Using the Effect Hook – React](https://reactjs.org/docs/hooks-effect.html) <br/>
+³ [Robin Weiruch on Data Fetching with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/)<br/>
+⁴ [Introduction to Hooks](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy)<br/>
