@@ -5,8 +5,6 @@ category: ['musings']
 tags: ['habits', 'limits', 'brian mccullough']
 ---
 
-# The Limits of Habits
-
 Are there areas of life where the costs of efficiency gained outweigh the costs? Of course.
 
 It’s just not a question that I ask that frequently about my life - I suspect I’m not alone.
