@@ -5,8 +5,6 @@ category: ['musings']
 tags: ['mindfulness', 'purposeful pause', 'intention']
 ---
 
-# The Purposeful Pause Practice
-
 The world is busier than it used to be. We’re bombarded by constantly with work emails, Instagram notifications, and Slack messages. My solution, in so far as it is one, has been to delete the apps from my phone. But that works for only so long. Eventually, we need a break.
 
 Breaks, not surprisingly, have been a solution to overwork and stress for hundreds of years. Cal Newport writes about Carl Jung’s escape to a summer cottage and Abraham Lincoln’s nightly rides to his house outside of DC. Teachers take sabbaticals (and more of us should).
