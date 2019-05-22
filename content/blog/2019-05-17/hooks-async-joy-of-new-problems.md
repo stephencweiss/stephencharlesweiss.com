@@ -1,8 +1,8 @@
 ---
 title: 'Hooks, Async, And The Joy Of New Problems'
 date: '2019-05-17'
-category: ['musings']
-tags: ['knowledge', 'communication', 'influence']
+category: ['programming']
+tags: ['react', 'hooks', 'async']
 ---
 
 > When all you have is a hammer, every problem looks like a nail.
