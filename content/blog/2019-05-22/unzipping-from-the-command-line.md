@@ -7,7 +7,7 @@ tags: ['unzip', 'command-line', 'shell']
 
 I should start with the observation that I hate using my mouse.
 
-Yet, that was exactly what I was about to do today to unzip a file. The reason was simple, I dind't (yet) know how to unzip files from the command line.
+Yet, that was exactly what I was about to do today to unzip a file. The reason was simple, I didn't (yet) know how to unzip files from the command line.
 
 So, I learned - and it turns out it's pretty simple.
 
