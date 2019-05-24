@@ -1,7 +1,7 @@
 ---
 title: 'Unzipping A File From The Command Line'
-date: '2019-05-17'
-category: ['musings']
+date: '2019-05-22'
+category: ['programming']
 tags: ['unzip', 'command-line', 'shell']
 ---
 
