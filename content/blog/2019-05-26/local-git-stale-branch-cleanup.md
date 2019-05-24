@@ -56,7 +56,7 @@ Total 32360 (delta 20663), reused 26595 (delta 16106)
 
 While this does optimize the repository’s storage, it doesn’t address the branch bloat.
 
-# Pruning!
+# Step Two: Pruning Dead References
 
 I’d heard a lot about “pruning”, so that was where I started. However, the manual page for `git prun` begins with the following note:
 
@@ -98,7 +98,7 @@ As the manual notes in the Pruning section for `git fetch`:
 
 That’s what we removed with `git fetch --prune`. But, that still leaves all of the local branches that have been merged and no longer have an upstream reference - not even a stale one. Let’s tackle those next.
 
-# Delete Local Branches That Have Been Merged Upstream
+# Step Three: Delete Orphaned Local Branches
 
 There are two potential hurdles to deleting branches then:
 
@@ -159,7 +159,7 @@ The `xargs` utility works by reading “space, tab, newline and end-of-file deli
 
 In our case that means it reads the newline delimited branch names that are piped from the `awk` utility and passes them as arguments to `git branch -d`, our utility.
 
-## Gotcha To Note
+## Gotchas
 
 The longer you allow branches to remain stale locally, the greater the chance that your branches will have conflicts with `master`. This is important to remember, because even if you’ve merged the branch into master, git may tell you that your branch hasn’t been fully merged and so will reject the deletion request unless forced.
 
@@ -172,6 +172,10 @@ If you are sure you want to delete it, run 'git branch -D bug/jump-to-menu-stepp
 # Other Fun
 
 A second useful option for `git branch` that I learned about through this process was the `-a` option (which combines the default with the `-r`). `git branch -a` will print out all of the branches for a repository - local and remote. This can be helpful to understand what is being worked on - particularly if you want to [check out a remote branch](https://www.stephencharlesweiss.com/2019-04-30/git-rename-branch-locally-and-remotely/) to review or continue the development of on your own.
+
+# Conclusion
+
+Adding these three arrows to my quiver won't revolutionize anything, but they will make me more productive by keeping my git repostiory clean and reducing the mental overhead necessary to figure out what to work on next.
 
 # Further Reading
 
