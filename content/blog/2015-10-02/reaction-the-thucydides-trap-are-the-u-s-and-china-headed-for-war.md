@@ -17,7 +17,7 @@ He continues...
 
 > What Xi Jinping calls the “[China Dream](http://www.theatlantic.com/international/archive/2015/09/xi-jinping-china-book-chinese-dream/406387/)” expresses the deepest aspirations of hundreds of millions of Chinese, who wish to be not only rich but also powerful. At the core of China’s civilizational creed is the belief—or conceit—that China is the center of the universe. In the oft-repeated narrative, a century of Chinese weakness led to exploitation and national humiliation by Western colonialists and Japan. In Beijing’s view, China is now being restored to its rightful place, where its power commands recognition of and respect for China’s core interests.
 
-I can't help but contrast this to the American Dream, emphasizing opportunity and improvement over wealth and power. Inputs vs. outputs. Systems vs. goals. One is not right or wrong, but their differences can help explain variations in approaches to the same problem. It also reminds me of Scott Adams and this great piece on [Goals vs. Systems](https://blog.dilbert.com/2013/11/18/goals-vs-systems/).
+I can't help but contrast this to the American Dream, emphasizing opportunity and improvement over wealth and power. Inputs vs. outputs. Systems vs. goals. One is not right or wrong, but their differences can help explain variations in approaches to the same problem. It also reminds me of Scott Adams and his great piece on [Goals vs. Systems](https://blog.dilbert.com/2013/11/18/goals-vs-systems/).
 
 # Source
 
