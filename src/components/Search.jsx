@@ -17,6 +17,7 @@ export default class Search extends Component {
     console.log({ results, query })
     return (
       <div>
+        Search:{' '}
         <input type="text" value={this.state.query} onChange={this.search} />
         <ul>
           {this.state.results &&
