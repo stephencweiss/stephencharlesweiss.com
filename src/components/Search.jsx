@@ -17,8 +17,22 @@ export default class Search extends Component {
     console.log({ results, query })
     return (
       <div>
-        Search:{' '}
-        <input type="text" value={this.state.query} onChange={this.search} />
+        <div
+          style={{
+            display: 'flex',
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          Search:{' '}
+          <input
+            style={{ width: '100%' }}
+            type="text"
+            value={this.state.query}
+            onChange={this.search}
+          />
+        </div>
         <ul>
           {this.state.results &&
             this.state.results.map(page => (
