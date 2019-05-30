@@ -12,6 +12,9 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+    const isBrowser = () => typeof window !== 'undefined'
+    const isAuthenticated =
+      isBrowser() && window.localStorage.getItem('authenticated')
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -19,8 +22,7 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-
-        <Header />
+        {isAuthenticated && <Header />}
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
