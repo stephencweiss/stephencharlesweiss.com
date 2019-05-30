@@ -5,7 +5,7 @@ category: ['musings']
 tags: ['@work', 'learning', 'career', 'fear']
 ---
 
-I brought pomodori back this week after listening to the podcast episode with [Productivity with Mani Vaya](bear://x-callback-url/open-note?id=9FE26BFA-FACD-47E6-8C7F-A89B44A31DDA-49107-0000223A932F0A4A). Mani won me over early in the interview by citing Cal Newport as an influence and specifically Deep Work. I would have thought that Deep Work and pomodori wouldn’t be very compatible, since the latter creates disruptions every 25 minutes taking you out of the flow.
+I brought pomodori back this week after listening to the podcast episode with [Productivity with Mani Vaya](https://overcast.fm/+B1THOPAVc). Mani won me over early in the interview by citing Cal Newport as an influence and specifically Deep Work. I would have thought that Deep Work and pomodori wouldn’t be very compatible, since the latter creates disruptions every 25 minutes taking you out of the flow.
 
 After buying a pomodoro timer for myself (~\$8 to get it to sync between my laptop and my phone), I find that there are really two major reasons why this concern is unfounded:
 
