@@ -1,7 +1,7 @@
 ---
 title: 'Adding Words To The MacOS Dictionary'
 date: '2019-05-27'
-category: ['living']
+category: ['computers']
 tags: ['macos', 'dictionary', 'how to']
 ---
 
