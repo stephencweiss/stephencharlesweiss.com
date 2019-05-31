@@ -1,6 +1,5 @@
 ---
 title: 'Using Variables To Make Interchangeable React Components'
-path: 'variables-interchangeable-react-components'
 date: '2019-05-31'
 category: ['programming']
 tags: ['react', 'components', 'design patterns']

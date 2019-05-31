@@ -1,6 +1,5 @@
 ---
 title: 'Printing The Directory Tree'
-path: 'print-the-directory-tree'
 date: '2019-05-31'
 category: ['computers']
 tags: ['unix', 'homebrew', 'tree', 'cli']
