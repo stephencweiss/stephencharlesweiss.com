@@ -34,11 +34,11 @@ You may need an appropriate loader to handle this file type.
  @ multi ./node_modules/@storybook/core/dist/server/common/polyfills.js ./node_modules/@storybook/core/dist/server/preview/globals.js ./.storybook/config.js (webpack)-hot-middleware/client.js?reload=true
 ```
 
-![](&&&SFLOCALFILEPATH&&&AD40EC1D-A89A-4DB5-8F77-9F0B13DAB1DA.png)
+![](./storybook-error.png)
 
 Just above where the Storybook team talks about the support for static files, they note that they use Webpack to serve and load the JS. They also included the default Webpack config file when you use Storybook with the `create-react-app`.
 
-![](&&&SFLOCALFILEPATH&&&Screen%20Shot%202019-05-02%20at%209.50.59%20AM.png)
+![](./webpack-config-storybook.png)
 
 The critical line for me was about halfway down in the `modules` section:
 
