@@ -1,6 +1,6 @@
 ---
 title: 'Git Stash With A Message'
-date: '2019-06-08'
+date: '2019-06-09'
 category: ['programming']
 tags: ['git', 'git stash', 'git stash push']
 ---
