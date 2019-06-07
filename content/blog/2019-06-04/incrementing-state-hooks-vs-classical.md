@@ -90,5 +90,5 @@ function handleBack() {
 
 # Resources:
 
-[How to use the increment operator in React | Stack Overflow](https://stackoverflow.com/questions/39316376/how-to-use-the-increment-operator-in-react)
+[How to use the increment operator in React | Stack Overflow](https://stackoverflow.com/questions/39316376/how-to-use-the-increment-operator-in-react) <br/>
 [Stepper React component | Material-UI](https://material-ui.com/components/steppers/#horizontal-linear)
