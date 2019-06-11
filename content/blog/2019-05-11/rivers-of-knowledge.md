@@ -1,7 +1,7 @@
 ---
 title: 'Rivers Of Knowledge'
 date: '2019-05-11'
-category: ['musings']
+category: ['code comments']
 tags: ['knowledge', 'communication', 'influence']
 ---
 

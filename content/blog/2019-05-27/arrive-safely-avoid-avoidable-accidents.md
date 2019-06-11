@@ -1,7 +1,7 @@
 ---
 title: 'Arrive Safely And Avoid (Avoidable) Accidents'
 date: '2019-05-27'
-category: ['musings']
+category: ['code comments']
 tags: ['performance', 'sleep', 'speed', 'outcomes']
 ---
 

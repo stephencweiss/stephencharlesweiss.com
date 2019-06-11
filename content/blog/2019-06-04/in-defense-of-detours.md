@@ -1,7 +1,7 @@
 ---
 title: 'In Defense Of Detours'
 date: '2019-06-04'
-category: ['reflections']
+category: ['code comments']
 tags:
   ['detours', 'shoshin', 'beginner mind', 'zen buddhism', 'ralph waldo emerson']
 ---
