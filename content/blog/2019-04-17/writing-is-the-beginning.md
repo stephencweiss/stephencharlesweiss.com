@@ -1,7 +1,7 @@
 ---
 title: 'Writing Is Just The Beginning: The Tradeoff Between Clarity And Exploration With Writing And Conversing'
 date: '2019-04-17'
-category: ['musings']
+category: ['code comments']
 tags: ['writing', 'communication', 'ezra klein', 'compassion']
 ---
 

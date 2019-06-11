@@ -1,7 +1,7 @@
 ---
 title: 'The Purposeful Pause Practice'
 date: '2019-04-23'
-category: ['musings']
+category: ['code comments']
 tags: ['mindfulness', 'purposeful pause', 'intention']
 ---
 

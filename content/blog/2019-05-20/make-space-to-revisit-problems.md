@@ -1,7 +1,7 @@
 ---
 title: 'Make Space To Revisit Problems'
 date: '2019-05-20'
-category: ['musings']
+category: ['code comments']
 tags: ['learning', 'growth', 'pragmatism']
 ---
 
