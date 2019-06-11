@@ -1,8 +1,8 @@
+---
 title: 'Adding Comments to a SQL statement'
 date: '2019-06-12'
 category: ['programming']
 tags: ['postgres', 'sql', 'comments']
-
 ---
 
 There are two ways to add a comment to a SQL query - using `/* */` and `--`. The differences are as follows:
