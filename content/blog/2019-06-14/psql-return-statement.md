@@ -31,7 +31,7 @@ async proposeChange({id, details}) {
       t.id = proposed_vals.id
     ;
   `);
-  await this._pool.query(updateQuery);
+  await db.query(updateQuery);
 
   //Construct a second query to get pertinent details back and validate change
   const returnQuery = SQL(`
@@ -39,7 +39,7 @@ async proposeChange({id, details}) {
     FROM target_table
     WHERE id in (${id})`);
 
-  const data = await this._pool.query(returnQuery);
+  const data = await db.query(returnQuery);
   return { data };
 }
 ```
@@ -62,7 +62,7 @@ async proposeChange({id, details}) {
     RETURNING t.id, t.details
     ;
   `);
-  const data = await this._pool.query(updateQuery);
+  const data = await db.query(updateQuery);
   return { data };
 }
 ```
