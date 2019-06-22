@@ -37,7 +37,7 @@ The three main features of the API are:
 <h1>How To Expand Your Content</h1>
 <p>Wrap what you want to expand in a Details tags</p>
 
-<code> Even includ code blocks</code>
+<code> Even include code blocks</code>
 
 </details>
 
@@ -53,6 +53,10 @@ The implementation is relatively straightforward - requiring only a few lines of
   <code> Even includ code blocks</code>
 </details>
 ```
+
+# Adoption
+
+It’s worth noting that the `<details>` tag is _not_ supported in Internet Explorer or Edge.
 
 # Resources:
 
