@@ -17,12 +17,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: 'pixel id here',
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/assets`,
@@ -72,18 +66,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `/* Code Comments */`,
-        short_name: `{IS}`,
+        short_name: `{CC}`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
