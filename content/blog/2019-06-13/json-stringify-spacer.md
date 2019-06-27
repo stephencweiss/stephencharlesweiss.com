@@ -1,5 +1,5 @@
 ---
-title: 'Optional Params with JSON Stringify'
+title: 'Optional Params With JSON Stringify'
 date: '2019-06-13'
 category: ['programming']
 tags: ['json', 'stringify', 'spacer', 'console', 'tips']

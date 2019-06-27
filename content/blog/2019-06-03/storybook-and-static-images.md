@@ -1,5 +1,5 @@
 ---
-title: 'Storybook.js and static image files.'
+title: 'Storybook.js And Static Image Files'
 date: '2019-06-03'
 category: ['programming']
 tags: ['storybook', 'javascript', 'webpack', 'config', 'static images']

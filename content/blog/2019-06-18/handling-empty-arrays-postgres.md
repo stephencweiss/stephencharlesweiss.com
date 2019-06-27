@@ -1,5 +1,5 @@
 ---
-title: 'Handling Empty Arrays with Postgres'
+title: 'Handling Empty Arrays With Postgres'
 date: '2019-06-18'
 category: ['programming']
 tags: ['postgres', 'sql', 'return', 'error handling']

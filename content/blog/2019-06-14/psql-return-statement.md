@@ -1,5 +1,5 @@
 ---
-title: 'Postgres `RETURNING` statement'
+title: 'Postgres `RETURNING` Statement'
 date: '2019-06-14'
 category: ['programming']
 tags: ['postgres', 'sql', 'return']
