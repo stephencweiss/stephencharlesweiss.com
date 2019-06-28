@@ -1,5 +1,5 @@
 ---
-title: 'In Defense of Pen & Paper'
+title: 'In Defense Of Pen & Paper'
 date: '2019-06-19'
 category: ['code comments']
 tags: ['life', 'reading', 'pace', 'constraints']

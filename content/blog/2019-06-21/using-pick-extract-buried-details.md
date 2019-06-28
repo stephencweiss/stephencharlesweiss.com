@@ -1,5 +1,5 @@
 ---
-title: 'Using `_.pick` to extract relevant details from objects'
+title: 'Using `_.pick` To Extract Relevant Details From Objects'
 date: '2019-06-21'
 category: ['programming']
 tags: ['lodash', 'pick', 'iteratee', 'learning']
