@@ -1,5 +1,5 @@
 ---
-title: 'Adding Comments to a SQL statement'
+title: 'Adding Comments To A SQL Statement'
 date: '2019-06-12'
 category: ['programming']
 tags: ['postgres', 'sql', 'comments']
