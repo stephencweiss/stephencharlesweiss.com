@@ -1,5 +1,5 @@
 ---
-title: 'Create a Spinner + Add A Loader In React'
+title: 'Create A Spinner & Add A Loader In React'
 date: '2019-05-23'
 category: ['programming']
 tags: ['react', 'spinner', 'react-image', 'styled-components']

@@ -1,5 +1,5 @@
 ---
-title: 'More Uses of `_.groupBy`'
+title: 'More Uses Of `_.groupBy`'
 date: '2019-06-20'
 category: ['programming']
 tags: ['lodash', 'groupby', 'learning', 'iteratee']
