@@ -1,4 +1,9 @@
-# Entity Relationship Diagrams - What The Lines Mean
+---
+title: 'Entity Relationship Diagrams - What The Lines Mean'
+date: '2019-06-29'
+category: ['programming']
+tags: ['design', 'entity relationship', 'entity relationship diagrams']
+---
 
 Yesterday, in talking about [Postgres and Subqueries](../../2019-06-28/postgres-subquery-basics) I was trying to represent a relationship between tables. I knew intuitively what I was trying to communicate, but wasn’t sure about the syntax.
 
