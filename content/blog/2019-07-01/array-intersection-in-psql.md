@@ -11,7 +11,7 @@ The field I was modifying happened to be an array, and I wanted to make sure tha
 
 Each row happened to a pre-defined set of “available” classes — classes that _could_ be enabled or disabled. For example:
 | id | classes_available | classes_enabled |
-| --- | --- | --- |
+| -- | ----------------- | --------------- |
 | 1 | { a, b, c} | {a} |
 | 2 | { a, c, d } | { a, b, c} |
 | 3 | { a, b, c, d, e} | { a } |

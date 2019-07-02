@@ -13,12 +13,17 @@ Since, I didn’t have a master list for what’s available, and so the data det
 
 For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:
 
-| id  | classes_available | classes_enabled |
-| --- | ----------------- | --------------- |
-| 1   | { a, b, c}        | {a}             |
-| 2   | { a, c, d }       | { a, b, c}      |
-| 3   | { a, b, c, d, e}  | { a }           |
-| 4   | { a, b}           | { b }           |
++-----+-------------------+-----------------+
+| id | classes_available | classes_enabled |
++=====+===================+=================+
+| 1 | { a, b, c} | {a} |
++-----+-------------------+-----------------+
+| 2 | { a, c, d } | { a, b, c} |
++-----+-------------------+-----------------+
+| 3 | { a, b, c, d, e} | { a } |
++-----+-------------------+-----------------+
+| 4 | { a, b} | { b } |
++-----+-------------------+-----------------+
 
 What I was looking for was the value 5 - the number of columns (`{a,b,c,d,e}`) present in the row, `id = 3`.
 
