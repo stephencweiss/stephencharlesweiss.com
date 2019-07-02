@@ -29,10 +29,10 @@ In this case, I’ve created a `HOST` variable so that I can easily switch betwe
 # Using Variables
 
 Once a variable’s been saved, it can be included in the path bar - I did below for the `HOST`.
-![](use-environment-variable.png)
+![](./use-environment-variable.png)
 
 It can also be used in a Param or Header section.
-![](variable-tool-tip.png)
+![](./variable-tool-tip.png)
 
 # Conclusion
 
