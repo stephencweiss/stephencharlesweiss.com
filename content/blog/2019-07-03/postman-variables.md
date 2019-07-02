@@ -1,4 +1,9 @@
-# Variables in Postman
+---
+title: 'Variables in Postman'
+date: '2019-07-03'
+category: ['programming']
+tags: ['postman', 'variables', 'api']
+---
 
 I’ve written in the past about why I like testing my [APIs with Postman](../../2019-04-13/testing-api-with-curl-and-postman). Today, I learned that they have yet another feature that makes my life easier — Environment Variables.¹
 
