@@ -5,7 +5,7 @@ category: ['computers']
 tags: ['macos', 'homebrew', 'upgrade', 'cleanup']
 ---
 
-In the same vein as cleaning up my git branches, today I recalled that I can easily update my Homebrew formulae with the command `brew upgrade`.
+In the same vein as [cleaning up my git branches](../../2019-05-26/local-git-stale-branch-cleanup), today I recalled that I can easily update my Homebrew formulae with the command `brew upgrade`.
 
 This kicks off the process which may take a minute or two depending on how long it’s been since your last upgrade and how many formulae you have.
 
