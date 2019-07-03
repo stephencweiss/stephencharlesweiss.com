@@ -45,7 +45,7 @@ FROM my_table
 Will return:<br/>
 
 +-----+------------------+-----------------+-----------------+
-| id | classes_available | classes_enabled | array_length |
+| id | `classes_available` | `classes_enabled` | `array_length` |
 +=====+==================+=================+=================+
 | 1 | { a, b, c} | {a} | 3 |
 +-----+------------------+-----------------+-----------------+
@@ -69,7 +69,7 @@ ORDER BY array_length(groups_reso, 1) DESC;
 This returns:<br/>
 
 +-----+------------------+-----------------+-----------------+
-| id | classes_available | classes_enabled | array_length |
+| id | `classes_available` | `classes_enabled` | `array_length` |
 +=====+==================+=================+=================+
 | 3 | { a, b, c, d, e} | { a } | 5 |
 +-----+------------------+-----------------+-----------------+
@@ -92,11 +92,14 @@ LIMIT 1;
 ```
 
 To get:<br/>
+
+```
 +-----------------+
-| array_length |
+| `array_length`  |
 +=================+
-| 5 |
+|       5         |
 +-----------------+
+```
 
 ## Array Dimensions
 
