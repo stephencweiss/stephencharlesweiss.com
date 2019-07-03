@@ -13,17 +13,12 @@ Since, I didn’t have a master list for what’s available, and so the data det
 
 For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:
 
-+-----+------------------+-----------------+
-| id | classes_available | classes_enabled |
-+=====+==================+=================+
-| 1 | { a, b, c} | {a} |
-+-----+------------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} |
-+-----+------------------+-----------------+
-| 3 | { a, b, c, d, e} | { a } |
-+-----+------------------+-----------------+
-| 4 | { a, b} | { b } |
-+-----+------------------+-----------------+
+| id  | classes_available | classes_enabled |
+| --- | ----------------- | --------------- |
+| 1   | { a, b, c}        | {a}             |
+| 2   | { a, c, d }       | { a, b, c}      |
+| 3   | { a, b, c, d, e}  | { a }           |
+| 4   | { a, b}           | { b }           |
 
 What I was looking for was the value 5 - the number of columns (`{a,b,c,d,e}`) present in the row, `id = 3`.
 
@@ -43,17 +38,13 @@ FROM my_table
 ```
 
 Will return:
-+-----+------------------+-----------------+--------------+
-| id | classes_available | classes_enabled | array_length |
-+=====+==================+=================+==============+
-| 1 | { a, b, c} | {a} | 3 |
-+-----+------------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} | 3|
-+-----+------------------+-----------------+
-| 3 | { a, b, c, d, e} | { a } | 5 |
-+-----+------------------+-----------------+
-| 4 | { a, b} | { b } | 2 |
-+-----+------------------+-----------------+
+
+| id  | classes_available | classes_enabled | array_length |
+| --- | ----------------- | --------------- | ------------ |
+| 1   | { a, b, c}        | {a}             | 3            |
+| 2   | { a, c, d }       | { a, b, c}      | 3            |
+| 3   | { a, b, c, d, e}  | { a }           | 5            |
+| 4   | { a, b}           | { b }           | 2            |
 
 ## Using `Array_Length()` In The Order Position
 
@@ -66,17 +57,13 @@ ORDER BY array_length(groups_reso, 1) DESC;
 ```
 
 This returns:
-+-----+------------------+-----------------+--------------+
-| id | classes_available | classes_enabled | array_length |
-+=====+==================+=================+==============+
-| 3 | { a, b, c, d, e} | { a } | 5 |
-+-----+------------------+-----------------+
-| 1 | { a, b, c} | {a} | 3 |
-+-----+------------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} | 3|
-+-----+------------------+-----------------+
-| 4 | { a, b} | { b } | 2 |
-+-----+------------------+-----------------+
+
+| id  | classes_available | classes_enabled | array_length |
+| --- | ----------------- | --------------- | ------------ |
+| 3   | { a, b, c, d, e}  | { a }           | 5            |
+| 1   | { a, b, c}        | {a}             | 3            |
+| 2   | { a, c, d }       | { a, b, c}      | 3            |
+| 4   | { a, b}           | { b }           | 2            |
 
 ## Returning Max Only
 
@@ -90,11 +77,10 @@ LIMIT 1;
 ```
 
 To get:
-+--------------+
+
 | array_length |
-+==============+
-| 5 |
-+--------------+
+| ------------ |
+| 5            |
 
 ## Array Dimensions
 

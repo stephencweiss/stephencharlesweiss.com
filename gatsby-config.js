@@ -28,6 +28,16 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -49,16 +59,7 @@ module.exports = {
               noIframeBorder: true,
             },
           },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
-            },
-          },
+          `gatsby-remark-autolink-headers`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
