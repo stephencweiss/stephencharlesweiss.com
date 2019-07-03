@@ -10,6 +10,7 @@ Recently, I was building an API to modify the data in a database.
 The field I was modifying happened to be an array, and I wanted to make sure that what the client was suggesting be added to the database was a valid value.
 
 Each row happened to a pre-defined set of “available” classes — classes that _could_ be enabled or disabled. For example:
+
 +-----+------------------+-----------------+
 | id | classes_available | classes_enabled |
 +=====+==================+=================+
