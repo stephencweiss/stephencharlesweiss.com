@@ -6,7 +6,7 @@
   "author": "Stephen Weiss <stephen.c.weiss@gmail.com>",
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.2.1",
-    "gatsby": "^2.12.0",
+    "gatsby": "^2.13.2",
     "gatsby-image": "^2.0.22",
     "gatsby-plugin-feed": "^2.0.8",
     "gatsby-plugin-manifest": "^2.0.5",

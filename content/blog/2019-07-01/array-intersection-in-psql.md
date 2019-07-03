@@ -11,17 +11,17 @@ The field I was modifying happened to be an array, and I wanted to make sure tha
 
 Each row happened to a pre-defined set of “available” classes — classes that _could_ be enabled or disabled. For example:
 
-+-----+-------------------+-----------------+
-| id  | classes_available | classes_enabled |
-+=====+===================+=================+
-| 1   | { a, b, c}        | {a}             |
-+-----+-------------------+-----------------+
-| 2   | { a, c, d }       | { a, b, c}      |
-+-----+-------------------+-----------------+
-| 3   | { a, b, c, d, e}  | { a }           |
-+-----+-------------------+-----------------+
-| 4   | { a, b }          | { b }           |
-+-----+-------------------+-----------------+
++-----+------------------+-----------------+
+| id | classes_available | classes_enabled |
++=====+==================+=================+
+| 1 | { a, b, c} | {a} |
++-----+------------------+-----------------+
+| 2 | { a, c, d } | { a, b, c} |
++-----+------------------+-----------------+
+| 3 | { a, b, c, d, e} | { a } |
++-----+------------------+-----------------+
+| 4 | { a, b} | { b } |
++-----+------------------+-----------------+
 
 This was good news: I had the data readily available. The question was _how do I make use of it_? What I wanted to do was throw an error if the client tried to enable a class of `d` on any of the rows or even a class `c` on row ID 4.
 
