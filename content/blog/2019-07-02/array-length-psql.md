@@ -11,7 +11,7 @@ In my case, this was relevant because the largest number would dictate the numbe
 
 Since, I didn’t have a master list for what’s available, and so the data determined what would be shown.
 
-For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:
+For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:<br/>
 
 +-----+------------------+-----------------+
 | id | classes_available | classes_enabled |
@@ -42,7 +42,7 @@ SELECT id, classes_available, classes_enabled, array_length(classes_available, 1
 FROM my_table
 ```
 
-Will return:
+Will return:<br/>
 
 +-----+------------------+-----------------+-----------------+
 | id | classes_available | classes_enabled | array_length |
@@ -66,7 +66,7 @@ FROM my_table
 ORDER BY array_length(groups_reso, 1) DESC;
 ```
 
-This returns:
+This returns:<br/>
 
 +-----+------------------+-----------------+-----------------+
 | id | classes_available | classes_enabled | array_length |
@@ -91,7 +91,7 @@ ORDER BY array_length(groups_reso, 1) DESC
 LIMIT 1;
 ```
 
-To get:
+To get:<br/>
 +-----------------+
 | array_length |
 +=================+
