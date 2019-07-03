@@ -11,21 +11,14 @@ In my case, this was relevant because the largest number would dictate the numbe
 
 Since, I didn’t have a master list for what’s available, and so the data determined what would be shown.
 
-For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:<br/>
+For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:
 
-//TEST - just `+---+`
-
-+-----+------------------+-----------------+
-| id | classes_available | classes_enabled |
-+-----+------------------+-----------------+
-| 1 | { a, b, c} | {a} |
-+-----+------------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} |
-+-----+------------------+-----------------+
-| 3 | { a, b, c, d, e} | { a } |
-+-----+------------------+-----------------+
-| 4 | { a, b} | { b } |
-+-----+------------------+-----------------+
+| id  | classes_available | classes_enabled |
+| --- | ----------------- | --------------- |
+| 1   | { a, b, c}        | {a}             |
+| 2   | { a, c, d }       | { a, b, c}      |
+| 3   | { a, b, c, d, e}  | { a }           |
+| 4   | { a, b}           | { b }           |
 
 What I was looking for was the value 5 - the number of columns (`{a,b,c,d,e}`) present in the row, `id = 3`.
 
@@ -46,21 +39,12 @@ FROM my_table
 
 Will return:
 
-//TEST - just spaceing + `+---+`
-
-+-----+-------------------+-----------------+-----------------+
-| id | classes_available | classes_enabled | array_length |
-+-----+-------------------+-----------------+-----------------+
-| 1 | { a, b, c} | {a} | 3 |
-+-----+-------------------+-----------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} | 3 |
-+-----+-------------------+-----------------+-----------------+
-| 3 | { a, b, c, d, e} | { a } | 5 |
-+-----+-------------------+-----------------+-----------------+
-| 4 | { a, b} | { b } | 2 |
-+-----+-------------------+-----------------+-----------------+
-
-````
+| id  | classes_available | classes_enabled | array_length |
+| --- | ----------------- | --------------- | ------------ |
+| 1   | { a, b, c}        | {a}             | 3            |
+| 2   | { a, c, d }       | { a, b, c}      | 3            |
+| 3   | { a, b, c, d, e}  | { a }           | 5            |
+| 4   | { a, b}           | { b }           | 2            |
 
 ## Using `Array_Length()` In The Order Position
 
@@ -70,23 +54,16 @@ And as a result, you can order the results as well. For example:
 SELECT id, classes_enabled, array_length(groups_reso, 1)
 FROM my_table
 ORDER BY array_length(groups_reso, 1) DESC;
-````
+```
 
 This returns:
 
-//TEST - just spaceing
-
-+-----+-------------------+-----------------+-----------------+
-| id | classes_available | classes_enabled | array_length |
-+=====+===================+=================+=================+
-| 3 | { a, b, c, d, e} | { a } | 5 |
-+-----+-------------------+-----------------+-----------------+
-| 1 | { a, b, c} | {a} | 3 |
-+-----+-------------------+-----------------+-----------------+
-| 2 | { a, c, d } | { a, b, c} | 3 |
-+-----+-------------------+-----------------+-----------------+
-| 4 | { a, b} | { b } | 2 |
-+-----+-------------------+-----------------+-----------------+
+| id  | classes_available | classes_enabled | array_length |
+| --- | ----------------- | --------------- | ------------ |
+| 3   | { a, b, c, d, e}  | { a }           | 5            |
+| 1   | { a, b, c}        | {a}             | 3            |
+| 2   | { a, c, d }       | { a, b, c}      | 3            |
+| 4   | { a, b}           | { b }           | 2            |
 
 ## Returning Max Only
 
@@ -99,15 +76,11 @@ ORDER BY array_length(groups_reso, 1) DESC
 LIMIT 1;
 ```
 
-To get:<br/>
+To get:
 
-// TEST abridged --
-
-+---+
 | array_length |
-+===+
-| 5 |
-+---+
+| ------------ |
+| 5            |
 
 ## Array Dimensions
 
