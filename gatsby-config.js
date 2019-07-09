@@ -44,6 +44,18 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-plugin-facebook-pixel`,
+            options: {
+              pixelId: 'pixel id here',
+            },
+          },
+          {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              //trackingId: `ADD YOUR TRACKING ID HERE`,
+            },
+          },
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
@@ -142,7 +154,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [`title`, `tags`, `category`, `html`],
+        fields: [`title`, `tags`, `category`],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
@@ -151,7 +163,7 @@ module.exports = {
             category: node => node.frontmatter.category,
             tags: node => node.frontmatter.tags,
             path: node => node.fields.slug,
-            html: node => node.internal.content,
+
           },
         },
       },
