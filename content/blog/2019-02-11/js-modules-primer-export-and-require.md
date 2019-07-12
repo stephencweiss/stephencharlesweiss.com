@@ -24,7 +24,7 @@ Modules have several advantages:
 # So How Do We Use Modules In Node.js?
 The most common (pun intended) way I’ve found to import a module is with the CommonJS approach. This is where Javascript *exports module* objects which are then accessible for other modules to *require*.
 
-ES6 added import / export statements as well. This standard was set without native support in Javascript engines and so tools like Babel would transpire an `import` into a `require` statement.
+ES6 added import / export statements as well. This standard was set without native support in Javascript engines and so tools like Babel would transpile an `import` into a `require` statement.
 
 To use modules natively in Node.js, we have several options (as explained by [Axel Rauschmayer](http://2ality.com/2018/12/nodejs-esm-phases.html)) at the end of 2018:
 1. Use the `esm` library by John-David Dalton
