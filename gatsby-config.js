@@ -32,9 +32,9 @@ module.exports = {
             options: {
               classPrefix: 'language-',
               inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: false,
+              aliases: {bash: 'zsh'},
+              showLineNumbers: false,
+              noInlineHighlight: true,
             },
           },
           {
