@@ -16,7 +16,7 @@ UPDATE `table_name` SET
 
 The full set of options :
 
-```psql
+```sql
 [ WITH [ RECURSIVE ] with_query [, …] ]
 UPDATE [ ONLY ] table_name [ * ] [ [ AS ] alias ]
     SET { column_name = { expression | DEFAULT } |

@@ -40,7 +40,7 @@ console.log(`proposal: standard -->\n`, { proposal })
 
 This, however, leads to the common problem where Objects are obfuscated.
 
-```sh
+```shell-session
 proposal: standard -->
  { proposal:
    { resourceName: 'Property',
@@ -59,7 +59,7 @@ console.log(`proposal: json -->\n`, JSON.stringify(proposal))
 
 This, however, leaves much to be desired from a readability perspective. Since the entire object is collapsed to a single string, as the object grows in size, this will become unwieldly
 
-```sh
+```shell-session
 proposal: json -->
 {"resourceName":"Property","proposedFields":[{"id":"100311","classesEnabled":["RESI"]},{"id":"100820","classesEnabled":["RESI","RLSE"]}]}
 ```
@@ -79,7 +79,7 @@ console.log(
 
 This prints a readable version with all of the details spelled out.
 
-```sh
+```shell-session
 proposal: json + spacer -->
 {
     "resourceName": "Property",
@@ -114,7 +114,7 @@ console.log(
 
 Becomes :
 
-```sh
+```shell-session
 proposal: json + spacer -->
 {
 --"resourceName": "Property",

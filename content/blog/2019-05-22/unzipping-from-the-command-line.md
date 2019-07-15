@@ -44,7 +44,7 @@ The key part for me was that the .zip file was in my Downloads and I wanted to u
 
 For this, use the `-d` flag.
 
-```sh
+```shell-session
 $ unzip --man
 UnZip 6.00 of 20 April 2009, by Info-ZIP.  Maintained by C. Spieler.  Send
 bug reports using http://www.info-zip.org/zip-bug.html; see README for details.
@@ -76,7 +76,7 @@ See "unzip -hh" or unzip.txt for more help.  Examples:
 
 You should be greeted by a log of contents unzipping.
 
-```sh
+```shell-session
 $ unzip ~/Downloads/js-recent-parts.zip -d .
 Archive:  /Users/stephen/Downloads/js-recent-parts.zip
    creating: ./destructuring/
@@ -101,7 +101,7 @@ Archive:  /Users/stephen/Downloads/js-recent-parts.zip
 
 You can then verify that all of the contents are where you expect, with `ls`:
 
-```sh
+```shell-session
 $ ls -lah
 total 0
 drwxr-xr-x  8 stephen  staff   256B May 22 08:18 .

@@ -25,7 +25,7 @@ While I try to help myself by naming branches in an intelligent way (.e.g., `fea
 
 So, here’s where I was when I started the house cleaning today:
 
-```zsh
+```shell-session
 $ git branch | wc - l
   26
 $ git branch -a | wc -l
@@ -44,7 +44,7 @@ The `git-gc` utility within git is all about clean-up. From the manual:
 >
 > Users are encouraged to run this task on a regular basis within each repository to maintain good disk space utilization and good operating performance.
 
-```zsh
+```shell-session
 $ git gc
 Enumerating objects: 32360, done.
 Counting objects: 100% (32360/32360), done.
@@ -115,7 +115,7 @@ The verbose flag has two levels within `git branch`. If you repeat it (i.e., `gi
 
 This is extra helpful because of a few pieces of information that comes along for the ride - notably “gone” and “behind”.
 
-```sh
+```shell-session
 $ gb -vv
   bug/jump-to-menu-stepper-index                          c881290e [origin/bug/jump-to-menu-stepper-index: gone] Label is optional now
   ...
@@ -133,7 +133,7 @@ If you’re following along at home, we’re now at `git branch -vv | grep '[ori
 
 Next up is the `awk '{print $1}'` which prints the first field for each line passed to it.
 
-```sh
+```shell-session
 $ gb -vv | awk '{print $1}'
   bug/jump-to-menu-stepper-index
   ...
@@ -163,7 +163,7 @@ In our case that means it reads the newline delimited branch names that are pipe
 
 The longer you allow branches to remain stale locally, the greater the chance that your branches will have conflicts with `master`. This is important to remember, because even if you’ve merged the branch into master, git may tell you that your branch hasn’t been fully merged and so will reject the deletion request unless forced.
 
-```sh
+```shell-session
 $ git branch -vv | grep '[origin/.*: gone]' | awk '{print $1}' | xargs git branch -d
 error: The branch 'bug/jump-to-menu-stepper-index' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D bug/jump-to-menu-stepper-index'.

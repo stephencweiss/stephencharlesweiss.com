@@ -13,7 +13,7 @@ Before you can go back to master, pull down the most recent files, however, you 
 
 `git stash push <path/to/file>`
 
-```zsh
+```shell-session
 $ git status
 On branch feature/doing-things
 Your branch is up to date with 'origin/feature/doing-things'.
@@ -30,7 +30,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Okay, so I have changed files, but I want to only stash the `src/App/MyComponent.js`.
 
-```zsh
+```shell-session
 $ git stash push src
 Saved working directory and index state WIP on feature/3207-tracks-to-favorites-map-changes: 7316117cf5 Removed consoles.
 
