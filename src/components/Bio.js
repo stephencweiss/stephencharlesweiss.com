@@ -9,7 +9,7 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata
+        const { author } = data.site.siteMetadata
         return (
           <div
             style={{
@@ -28,12 +28,12 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives in Chicago with his wife, Kate, and dog, Finn.
+              Thanks for reading! My name's  <strong>{author}</strong>. I live in Chicago with my wife, Kate, and dog, Finn.
+              <br/>
               {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Follow him on Twitter
+              <a href={`https://tinyletter.com/stephencharlesweiss/archive`}>
+                Click here to see the archives of my weeks in review and sign up yourself!
               </a>
-              !
             </p>
           </div>
         )
