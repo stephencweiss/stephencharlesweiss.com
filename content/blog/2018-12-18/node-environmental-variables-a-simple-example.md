@@ -10,7 +10,7 @@ This is not going to be a deep dive into Node's environmental variables, but rat
 
 In my server file, `index.js`, I defined my port as: `const port = process.argv[2] || 8081`. This says that if I fail to pass an explicit port, I will use the default 8081. However, I can also pass in a variable _after_ node (process.argv[0]), the file node is running (process.argv[1]) and it will be mapped to my port variable.
 
-```shell-session
+```bash
 # In one terminal window
 $ node server/index.js 8082
 listening on port 8082

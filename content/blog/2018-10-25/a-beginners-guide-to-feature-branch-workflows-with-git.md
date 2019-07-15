@@ -36,7 +36,7 @@ There are seven (give or take) steps to the Feature Branch workflow, though step
 
 ## Start with master branch
 Get the most up to date master branch.
-```shell-session
+```bash
 git checkout master
 git fetch origin
 git reset --hard origin/master

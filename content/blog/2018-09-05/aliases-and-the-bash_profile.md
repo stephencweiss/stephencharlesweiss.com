@@ -22,7 +22,7 @@ Extending beyond the `.gitconfig`, I moved to my .bash_profile and added some mo
 I decided to dedicate my g-key to git and added several additional keyboard shortcuts that I’ve found myself using even more frequently than the aliases in my `.gitconfig` file.
 
 My current set up is:
-```shell-session
+```bash
 #Git Shortcuts
 alias gs='git status '
 alias ga='git add '
@@ -40,7 +40,7 @@ Note: the aliases for `got` and `get` are just common typos for `git`, so it’s
 # Navigation Shortcuts
 As I get comfortable with the terminal, the hardest part for me is navigating through my directory tree. Since I had some pretty common destinations, I decided to make shortcuts using an alias. I updated my `~/.bash_profile` file to include the following Directory shortcuts.
 
-```shell-session
+```bash
 #Directory Shortcuts
 alias goHome='cd ~/' #Home directory
 alias goDocs=' cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents' #iCloud Documents
@@ -58,7 +58,7 @@ Since any time you make a change to your `.bash_profile`, in order for those cha
 
 To help me with the following, I added a `bashReload` command in a `#Command Shortcuts` section of the `~/.bash_profile` file:
 
-```shell-session
+```bash
 alias bashReload=' . ~/.bash_profile'
 ```
 
@@ -66,14 +66,14 @@ alias bashReload=' . ~/.bash_profile'
 Your `.bash_profile` file is located in your user’s directory, but as the `.` indicates, it’s hidden.
 
 To find and edit it, you can use the following three commands:
-```shell-session
+```bash
 $ cd ~/ # This takes you to your user's home directory (in case you were currently located
 $ ls -a # Lists all of the contents within the directory; the -a option means that it will not ignore entries starting with .
 $ open .bash_profile # Opens the file using the default application for text documents
 ```
 
 When you run the `$ ls -a` command, you may see multiple different bash files. For example, I see the following:
-```shell-session
+```bash
 .bash_history
 .bash_profile
 .bash_profile-anaconda.bak

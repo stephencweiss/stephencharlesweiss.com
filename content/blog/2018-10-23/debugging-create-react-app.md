@@ -13,7 +13,7 @@ I was in the setup of the tutorial when I got my first error message in response
 # Creating a React App
 
 Creating a brand new React app is supposed to be easy. The React team has [step-by-step instructions](https://reactjs.org/docs/create-a-new-react-app.html) and a tool chain that’s supposed to make this painless. Apparently, I’m a glutton for pain, because I didn’t get a success message. Instead, I received this lovely novel-length error message:
-```shell-session
+```bash
 Stephens-MBP:new-tic-tac-toe Stephen$ npm start
 
 > new-tic-tac-toe@0.1.0 start /Users/Stephen/Documents/_coding/reactTicTacToe/new-tic-tac-toe
@@ -83,7 +83,7 @@ For brevity’s sake, I will skip over steps 1-5 as they were not my actual prob
 
 The first place where I actually seemed to have an issue was with step 6. `Babel-loader` was installed globally.
 
-```shell-session
+```bash
   6. Check if /Users/Stephen/node_modules/babel-loader is outside your project directory.
      For example, you might have accidentally installed something in your home folder.
 ```
@@ -107,7 +107,7 @@ Again, returning to Stack Overflow for guidance, I found [this discussion](https
 
 To see which modules are available for uninstall, I used the command: `$ nvm use system && npm ls -g --depth=0`. The first half of the command was to see if `babel-loader` was pre-installed with my version of node (it wasn’t).
 
-```shell-session
+```bash
 $ nvm use system && npm ls -g --depth=0
 
 Now using system version of node: v8.12.0 (npm v6.4.1)
@@ -131,7 +131,7 @@ Since `npm uninstall` didn’t have access to `babel-loader` (or user error prev
 I removed the `babel-loader` directory from my `User/Stephen/node_module` directory (`$ rm -rf babel-loader`).
 
 When I ran `npm start` again I was greeted by success!
-```shell-session
+```bash
 $ npm start
 
 Compiled successfully!

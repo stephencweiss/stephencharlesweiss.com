@@ -11,7 +11,7 @@ I’m still making tweaks to the Stepper project I wrote about previously ([here
 
 For context, here’s the relevant portion of the folder structure.
 
-```shell-session
+```bash
 $ tree -L 1
 .
 ├── Stepper.styled.js

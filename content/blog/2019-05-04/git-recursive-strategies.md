@@ -6,7 +6,7 @@ tags: ['git', 'merge','recursive']
 ---
 Often when I get a merge conflict, what I really want to do is defer to the master branch, so, if I’m on a branch and I want to merge in the master but suppress conflicts by deferring to the master branch, the way I could do that is:
 
-```shell-session
+```bash
 $ git check out <branch>
 $ git merge master -s recursive -X theirs
 ```
@@ -14,7 +14,7 @@ $ git merge master -s recursive -X theirs
 The `-s` is a flag for `strategies` and the `-X` is a “sub-flag” for the selected strategy (in the example above, that’s `recursive`). In our case, since I want to defer to `master`, I select `theirs`.
 
 The inverse of `theirs` is `ours` and is also possible:
-```shell-session
+```bash
 $ git check out <branch>
 $ git merge master -s recursive -X ours
 ```

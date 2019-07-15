@@ -11,7 +11,7 @@ As I’d written about in the past, I [prefer using SSH](../../2018-08-30/git-cl
 
 But, suddenly, when I tried to push, I was being prompted to do _exactly_ that — submit my username and password. What’s worse — my combinations _weren’t_ accepted! I’d been locked out and I didn’t know why.
 
-```shell-session
+```bash
 $ git push
 Username for ‘https://github.com':
 ```
@@ -34,7 +34,7 @@ In my case, I should have noticed immediately that I was on HTTPS because I was 
 
 A cleaner way to confirm is to check where your remote repository is located:
 
-```shell-session
+```bash
 $ git remote -v
 origin	https://github.com/<username>/<repo name>.git (fetch)
 origin	https://github.com/<username>/<repo name>.git (push)
@@ -46,7 +46,7 @@ Changing your remotes is probably not something you do every day, so it’s easy
 
 The commands are actually straightforward and the key is that the URL is _different_ for SSH than HTTPS — again, this makes sense if you step back and think about it, but normally it _just works_ so we don’t spend any time thinking about it.
 
-```shell-session
+```bash
 $ ➾ git remote set-url origin git@github.com:stephencweiss/personal-blog.git
 stephen /Users/stephen/_coding/personal/blog ➾ git remote -v
 origin	git@github.com:stephencweiss/personal-blog.git (fetch)
@@ -59,7 +59,7 @@ The quick and easy way to test your SSH connection is to use the terminal comman
 
 [Testing your SSH on GitHub](https://help.github.com/en/articles/testing-your-ssh-connection) looks like:
 
-```shell-session
+```bash
 $ ssh -T git@github.com
 Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
 ```

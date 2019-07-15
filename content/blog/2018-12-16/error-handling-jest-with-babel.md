@@ -38,7 +38,7 @@ Instead of forcing all package maintainers that used Babel as a peer dependency 
 
 # Stack Trace
 
-```shell-session
+```bash
 FAIL  jestTests/app.test.js
   ● Test suite failed to run
 
