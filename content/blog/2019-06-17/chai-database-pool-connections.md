@@ -13,7 +13,7 @@ Unfortunately, I’d also lumped my database connection in and was creating a ne
 
 The result was that my tests didn’t seem to run.
 
-```sh
+```bash
 $ npm run test
   Test Suite - Description of the test suite
     ✓ should do something when something happens (501ms)
@@ -90,7 +90,7 @@ describe("Test Suite - Description of the test suite", () => {
 
 Voila - all the tests now pass!
 
-```sh
+```bash
 $ npm run test
   Test Suite - Description of the test suite
     ✓ should do something when something happens (501ms)

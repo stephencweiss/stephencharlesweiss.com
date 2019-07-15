@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['babel','error handling','jest']
 ---
 
-Trying to run tests with Jest, I got the following error: `Requires Babel "^7.0.0-0", but was loaded with "6.26.3"...` 
+Trying to run tests with Jest, I got the following error: `Requires Babel "^7.0.0-0", but was loaded with "6.26.3"...`
 
 Looking at the stack trace (in full at the end of this post), however, there were _only_ mentions of `@babel/core` and `babel-core`.
 
@@ -13,17 +13,17 @@ That though, turns out to have been the problem and it's a known problem.
 
 The Jest Team actually addresses this specific problem in their Getting Started documentation for [using Babel](https://jestjs.io/docs/en/getting-started.html#using-babel).
 
-In a big yellow attention box, they write: 
+In a big yellow attention box, they write:
 
-> Note: If you are using Babel version 7 then you need to install babel-jest, babel-core@^7.0.0-bridge.0 and @babel/core with the following command: 
-> 
-> `yarn add --dev babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime` 
-> 
+> Note: If you are using Babel version 7 then you need to install babel-jest, babel-core@^7.0.0-bridge.0 and @babel/core with the following command:
+>
+> `yarn add --dev babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime`
+>
 > You will need to use babel.config.js in order to transpile node_modules. See https://babeljs.io/docs/en/next/config-files for more information.
-> 
-> You can also see the example in the Jest repository: https://github.com/facebook/jest/tree/master/examples/babel-7 
+>
+> You can also see the example in the Jest repository: https://github.com/facebook/jest/tree/master/examples/babel-7
 
-Another reason to start with the official docs. They often hold the answers! 
+Another reason to start with the official docs. They often hold the answers!
 
 # Why The Error Happens
 Okay, so the Jest team is aware of the problem, but what is actually happening and what is `babel-core@^7.0.0-bridge.0`?
@@ -34,12 +34,11 @@ This meant that every package that used `babel` as a peer dependency would be fo
 
 The Babel team created the problem with their name change. They also created a fix. That's what `babel-core@^7.0.0-bridge.0` does.
 
-Instead of forcing all package maintainers that used Babel as a peer dependency to update their package, the bridge allows them to keep using Babel without pushing a breaking change. 
+Instead of forcing all package maintainers that used Babel as a peer dependency to update their package, the bridge allows them to keep using Babel without pushing a breaking change.
 
 # Stack Trace
 
-```shell
-// sh
+```bash
 FAIL  jestTests/app.test.js
   ● Test suite failed to run
 

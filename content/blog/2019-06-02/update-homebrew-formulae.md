@@ -17,7 +17,7 @@ The upgrade process will:
 4. Upgrade outdated packages
 5. Run `brew cleanup` if it’s been 30+ days
 
-```zsh
+```bash
 $ brew upgrade
 Updating Homebrew...
 ==> Auto-updated Homebrew!

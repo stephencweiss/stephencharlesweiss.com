@@ -6,14 +6,14 @@ tags: ['debugging', 'node', 'npm', 'react']
 ---
 In an effort to learn React, I pulled up [React’s introductory tutorial](https://reactjs.org/tutorial/tutorial.html). Almost immediately I hit turbulence.
 
-![](./turbulence.gif) 
+![](./turbulence.gif)
 
-I was in the setup of the tutorial when I got my first error message in response to executing the `npm start` command. 
+I was in the setup of the tutorial when I got my first error message in response to executing the `npm start` command.
 
 # Creating a React App
 
 Creating a brand new React app is supposed to be easy. The React team has [step-by-step instructions](https://reactjs.org/docs/create-a-new-react-app.html) and a tool chain that’s supposed to make this painless. Apparently, I’m a glutton for pain, because I didn’t get a success message. Instead, I received this lovely novel-length error message:
-```shell
+```bash
 Stephens-MBP:new-tic-tac-toe Stephen$ npm start
 
 > new-tic-tac-toe@0.1.0 start /Users/Stephen/Documents/_coding/reactTicTacToe/new-tic-tac-toe
@@ -70,29 +70,29 @@ npm ERR! This is probably not a problem with npm. There is likely additional log
 npm ERR! A complete log of this run can be found in:
 npm ERR! /Users/Stephen/.npm/_logs/2018-10-18T14_51_23_773Z-debug.log
 ```
-My favorite part? 
+My favorite part?
 
-> P.S. We know this message is long but please read the steps above :-) We hope you find them helpful! 
+> P.S. We know this message is long but please read the steps above :-) We hope you find them helpful!
 
-It’s simple, but this sort of human touch absolutely makes a difference. On to the debugging! 
+It’s simple, but this sort of human touch absolutely makes a difference. On to the debugging!
 
-For brevity’s sake, I will skip over steps 1-5 as they were not my actual problem. 
+For brevity’s sake, I will skip over steps 1-5 as they were not my actual problem.
 
 # Issue 1
 ## Babel-Loader was globally installed
 
-The first place where I actually seemed to have an issue was with step 6. `Babel-loader` was installed globally. 
+The first place where I actually seemed to have an issue was with step 6. `Babel-loader` was installed globally.
 
-```shell
+```bash
   6. Check if /Users/Stephen/node_modules/babel-loader is outside your project directory.
      For example, you might have accidentally installed something in your home folder.
 ```
 
 Uninstalling node packages is not something I do every day, so I found this [StackOverflow discussion](https://stackoverflow.com/questions/13066532/how-to-uninstall-npm-modules-in-node-js/13066677) on the topic helpful.
 
-Returning to my bash terminal, I entered `$ npm -g uninstall babel-loader —save` and received back `up to date in .04s`. Success! Almost... `babel-loader` was still there in my global node_modules! 
+Returning to my bash terminal, I entered `$ npm -g uninstall babel-loader —save` and received back `up to date in .04s`. Success! Almost... `babel-loader` was still there in my global node_modules!
 
-(I used `$ npm -g ls` to see all globally installed modules.) 
+(I used `$ npm -g ls` to see all globally installed modules.)
 
 # Issue 2
 ## Uninstall didn’t error, but also didn’t remove the module
@@ -101,13 +101,13 @@ It appears that only node packages that are at a depth of 0 can be uninstalled u
 
 Lucky me - `babel-loader` wasn’t at that depth.
 
-Again, returning to Stack Overflow for guidance, I found [this discussion](https://stackoverflow.com/questions/47763783/cant-uninstall-global-npm-packages-after-installing-nvm) helpful. 
+Again, returning to Stack Overflow for guidance, I found [this discussion](https://stackoverflow.com/questions/47763783/cant-uninstall-global-npm-packages-after-installing-nvm) helpful.
 
-> The list of things that you can npm uninstall -g is available at npm ls -g --depth=0 
+> The list of things that you can npm uninstall -g is available at npm ls -g --depth=0
 
 To see which modules are available for uninstall, I used the command: `$ nvm use system && npm ls -g --depth=0`. The first half of the command was to see if `babel-loader` was pre-installed with my version of node (it wasn’t).
 
-```shell
+```bash
 $ nvm use system && npm ls -g --depth=0
 
 Now using system version of node: v8.12.0 (npm v6.4.1)
@@ -131,7 +131,7 @@ Since `npm uninstall` didn’t have access to `babel-loader` (or user error prev
 I removed the `babel-loader` directory from my `User/Stephen/node_module` directory (`$ rm -rf babel-loader`).
 
 When I ran `npm start` again I was greeted by success!
-```shell
+```bash
 $ npm start
 
 Compiled successfully!
@@ -146,8 +146,8 @@ To create a production build, use yarn build.
 ```
 | ![](./react-success.png) |
 |:---:|
-| *What success looks like!* | 
+| *What success looks like!* |
 
-Time to celebrate! 
+Time to celebrate!
 
 ![](./glitter.gif)

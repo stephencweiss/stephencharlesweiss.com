@@ -4,10 +4,10 @@ date: '2018-11-22'
 category: ['programming']
 tags: ['benchmarks', 'databases', 'indexes', 'postgresql']
 ---
-A short review of when and how to index a Postgres database. 
+A short review of when and how to index a Postgres database.
 
 # Common Commands
-```PostgreSQL
+```sql
 CREATE INDEX <index_name> ON <table_name> (<field(s)>) # Add an index
 DROP INDEX index_name; # Drop an index
 \d <table_name>; # See all indexes on a table
@@ -15,16 +15,16 @@ DROP INDEX index_name; # Drop an index
 ```
 # Why Index Your Postgres Table
 
-The two most common reasons to index a database are: 
-1. A table is large and queries take a long time 
-2. A program consistently searches the same attribute 
+The two most common reasons to index a database are:
+1. A table is large and queries take a long time
+2. A program consistently searches the same attribute
 
 ## Speed Benefits - A Practical Example
 
 The easier of the two to see is time to execute a query.
 
 Situation: I have a product descriptions table with 10m+ records. In order to serve my website, I need to find and retrieve descriptions for a specific description quickly.
-```PostgreSQL
+```sql
 //psql
 sdc=# EXPLAIN ANALYZE SELECT * FROM descriptions WHERE product_id = 98242;
                                                              QUERY PLAN
@@ -40,7 +40,7 @@ sdc=# EXPLAIN ANALYZE SELECT * FROM descriptions WHERE product_id = 98242;
 (8 rows)
 
 sdc=# CREATE INDEX desc_prod_id_index ON descriptions (product_id);
-CREATE 
+CREATE
 
 sdc=# EXPLAIN ANALYZE SELECT * FROM descriptions WHERE product_id = 98242;
                                                         QUERY PLAN
@@ -57,20 +57,20 @@ sdc=# EXPLAIN ANALYZE SELECT * FROM descriptions WHERE product_id = 98242;
 
 Before adding an index, it took `28k+ ms` to find my product. After adding an index, the time to complete the same query fell to `3.579ms`. That's equivalent to 99.99% reduction!
 
-Not bad for a single line of code! 
+Not bad for a single line of code!
 
 # Types Of Indexes
-The default index type for Postgres is the B-tree, which is also the default and well suited for common situations. There are other types available, however, including: 
+The default index type for Postgres is the B-tree, which is also the default and well suited for common situations. There are other types available, however, including:
   * Hash
   * GiST,
   * SP-GiST, and
   * GIN
 
 # The Cost Of Indexing
-While indexing has benefits, it comes with costs too. Specifically, indexing will slow down inserting / updating records on a table. 
+While indexing has benefits, it comes with costs too. Specifically, indexing will slow down inserting / updating records on a table.
 
 # When To Avoid Indexes
-Indexing is not for every situation. Some scenarios in which you should pause before creating an index include: 
+Indexing is not for every situation. Some scenarios in which you should pause before creating an index include:
   * If your table is small
   * Tables that have frequent, large updates / insertions of records
   * On fields where _null_ is a common value
@@ -79,7 +79,7 @@ Indexing is not for every situation. Some scenarios in which you should pause be
 # Other Note Worthy Points Regarding Indexes
 
 ## Implicit Indexes
-Implicit indexes are automatically created by Postgres for fields that have a primary key or unique constraint. 
+Implicit indexes are automatically created by Postgres for fields that have a primary key or unique constraint.
 
 ## Partial Indexes
 Partial indices are built on a subset of a table based on a conditional statement. Therefore, the index only applies to the rows which satisfies the conditional.

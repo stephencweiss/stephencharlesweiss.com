@@ -16,7 +16,7 @@ As always, use the `git stash --help` to see the manual and get more ideas for h
 
 # Here’s what that _might_ look like
 
-```zsh
+```bash
 $ git stash push --message "backend tweak"  api
 Saved working directory and index state On master: backend-tweak
 $ git stash list

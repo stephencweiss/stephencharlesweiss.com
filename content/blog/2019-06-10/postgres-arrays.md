@@ -14,7 +14,7 @@ I didn’t know what the underscore meant, and looking into the data types didn�
 
 Fortunately, I had access to the `create table` script and could eventually confirm my suspicion that it was in fact an Array.
 
-```psql
+```sql
 create table if not exists metadata_fields (
     id text
     ...
@@ -29,7 +29,7 @@ Now, that I had that information, I could think about how to access specific pro
 
 For example, `Property` is always in the first position of a collection if it’s present, so, let’s say I wanted to only select rows which included that property, I would do:
 
-```psql
+```sql
 SELECT id, groups_reso
 FROM public.metadata_fields
 where groups_reso[1] = 'Property';
@@ -37,7 +37,7 @@ where groups_reso[1] = 'Property';
 
 Or, the inverse - all records where the first property is _not_ equal to `Property`:
 
-```psql
+```sql
 SELECT id, groups_reso
 FROM public.metadata_fields
 where groups_reso[1] <> 'Property';
