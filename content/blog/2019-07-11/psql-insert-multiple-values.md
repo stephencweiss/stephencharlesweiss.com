@@ -14,8 +14,8 @@ In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write th
 > `       [ ( *column_name* [, …] ) ]`
 > `       VALUES ( *value* [, …] )`
 >
->  `*table_name*`
-> The `INSERT SQL` command initiates an insertion of data into the table called `*table_name*`.
+>  *`table_name`*
+> The `INSERT SQL` command initiates an insertion of data into the table called *`table_name`*.
 >
 > `(column_name[, …] )`
 > An optional grouped expression which describes the targeted columns for the insertion.
@@ -23,10 +23,10 @@ In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write th
 > `VALUES`
 > The SQL clause which instructs PostgreSQL to expect a grouped expression of values to follow.
 >
-> `(*value*[, …] )`
+> *`(value[, …] )`*
 > The required grouped expression that describes the values to be inserted. There should be one*value*for each specified column, separated by commas. These values may be expressions themselves (e.g., an operation between two values), or constants.
 >
-> Each `*value*` following the `VALUES` clause must be of the same data type as the column it is being inserted into. If the optional column-target expression is omitted, PostgreSQL will expect there to be one value for each column in the literal order of the table’s structure. If there are fewer values to be inserted than columns, PostgreSQL will attempt to insert a default value (or the `NULL` value, if there is no default) for each omitted value.
+> Each *`value`* following the `VALUES` clause must be of the same data type as the column it is being inserted into. If the optional column-target expression is omitted, PostgreSQL will expect there to be one value for each column in the literal order of the table’s structure. If there are fewer values to be inserted than columns, PostgreSQL will attempt to insert a default value (or the `NULL` value, if there is no default) for each omitted value.
 
 The description alludes to the fact that the values can have multiple, but the demonstration doesn’t show how and the examples left me wanting. This is not a knock on the authors. The book’s excellent. It’s more my continuing struggles reading documentation and parsing out what’s _not_ explicit.
 
