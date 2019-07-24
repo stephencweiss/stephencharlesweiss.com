@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: stephencharlesweiss.com
+Token: 9ed985f86a97b9d68aad44e06e4a688fd68c2f2dc7eae09254d40d99d7d9e37d
