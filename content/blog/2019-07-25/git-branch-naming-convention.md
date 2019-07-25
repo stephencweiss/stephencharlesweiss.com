@@ -1,5 +1,5 @@
 ---
-title: 'Git Branch Naming Conventions',
+title: 'Git Branch Naming Conventions'
 date: '2019-07-25'
 tags: ['git', 'error handling']
 category: ['programming']
