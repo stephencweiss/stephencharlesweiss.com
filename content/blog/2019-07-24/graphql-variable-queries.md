@@ -1,5 +1,5 @@
 ---
-title: 'How To Use Variables GraphQL Queries '
+title: 'How To Use Variables GraphQL Queries'
 date: '2019-07-24'
 category: ['programming']
 tags: ['gatsby', 'graphql', 'filesystem', 'configuration']
