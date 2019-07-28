@@ -4,8 +4,6 @@ date: '2019-07-26'
 tags: ['react', 'hooks', 'useState', 'useRef']
 category: ['programming']
 ---
-
-# useRef Vs. useState And Unnecessary Renders
 Today, I found a wonderful side-effect of `useRef`: it doesn’t re-render components when it changes.
 
 This was ideal for my situation because I needed to keep a property around so that I could access it in an API call. Naively, I reached for the tool I know best for this in functional React components,  `useState`.  What I didn’t realize at the time was the cost I was paying in doing so.
