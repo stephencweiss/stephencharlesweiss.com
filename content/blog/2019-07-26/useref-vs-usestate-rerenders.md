@@ -81,6 +81,7 @@ Still, in my case, this is perfectly acceptable and the results speak for themse
 ![`useRef`](https://media.giphy.com/media/ZD8R50KA3GxNtQ3xhm/giphy.gif)
 
 (H/t to Christian Nwamba for a useful writeup on the differences between useState and useRef and getting me started. ² )
+
 ## Resource:
 * ¹ [useRef Hooks API Reference | React](https://reactjs.org/docs/hooks-reference.html#useref)
 * ² [useRef vs useState: Should we re-render or not? | Codebeast](https://www.codebeast.dev/usestate-vs-useref-re-render-or-not/)
