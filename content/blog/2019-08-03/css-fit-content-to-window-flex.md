@@ -1,4 +1,10 @@
-# Trials In CSS: Fit Content To Window
+---
+title: 'Trials In CSS: Fit Content To Window'
+date: '2019-08-03'
+category: ['programming']
+tags: ['css','flex']
+---
+
 One of my ongoing challenges with layouts on the web is the fact that a website does not naturally have an end. Unlike an 8.5”x11” sheet of paper, a website can go on forever.
 
 That was the crux I faced when trying to get a layout to respond to the size of the window _without_ referencing the window or viewport. Basically, I wanted to know if there was a way to style my components in a way that it would appropriately constrain its contents which _wanted_ to grow.
