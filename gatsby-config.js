@@ -34,7 +34,7 @@ module.exports = {
               inlineCodeMarker: null,
               aliases: {bash: 'zsh'},
               showLineNumbers: false,
-              noInlineHighlight: true,
+              noInlineHighlight: false,
             },
           },
           {
