@@ -23,9 +23,9 @@ Flex to rescue. To make sure I understood how, I put together a mockup with JSFi
 
 I pulled together a rough approximation of the layout of my app using basic HTML.
 ```html
-<div class="page-wrapper">
+<div class="wrapper">
   <div class="flexbox-item header"> Nav </div>
-  <div class="component-wrapper">
+  <div class="wrapper">
     <div class="page-header flexbox-item">Page Header</div>
     <div class='table-container fill-area content flexbox-item-grow'>
       <div class='table-body flexbox-item fill-area content'>

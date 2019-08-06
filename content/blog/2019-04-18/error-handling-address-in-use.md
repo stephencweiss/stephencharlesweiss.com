@@ -25,6 +25,8 @@ This returned exactly what I needed:
 Apparently the `node` server hadn’t terminated and was still using the port, but now I knew the PID. This meant I could hop over to Activity Monitor, look it up and kill it.
 ![](./kill-activity.png)
 
+Update: It’s possible to kill the process directly from the shell using the `kill` command, e.g., `kill 5001`.
+
 Now when I restarted the server it worked like a charm.
 
 # Resources
