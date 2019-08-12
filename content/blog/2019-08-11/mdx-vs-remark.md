@@ -9,7 +9,7 @@ Both MDX and Remark are Markdown compilers that will convert valid Markdown into
 
 Since the destination is valid HTML, if you include valid HTML in a `.md` file compiled by Remark, it will be processed as HTML. I use this to my advantage for superscripting my footnotes.<sup>1</sup>
 
-MDXis _very_ similar.<sup>2</sup> It’s also a Markdown compiler and is compatible with all Remark plugins.
+MDX is _very_ similar.<sup>2</sup> It’s also a Markdown compiler and is compatible with all Remark plugins.
 
 So what’s the difference? It allows writing of JSX within the body of a `.md` file and will compile that. Basically, it turns all files into React components that can import and render other components.
 
