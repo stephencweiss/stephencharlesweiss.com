@@ -24,7 +24,7 @@ It turns out, however, that there’s a second argument that can be passed in _a
 I wanted to see what this would look like in a blog post - so, I tried adding the following image in a Gatsby blog: `![hello!](~./images/adam-solomon-hello.jpg~ "adam solomon's hello”)`.
 
 As expected, we see the `alt` and `title` properties present on the `img` tag in the HTML:
-![](&&&SFLOCALFILEPATH&&&Screen%20Shot%202019-08-19%20at%206.17.19%20AM.png)
+![](./hello-title.png)
 
 ```html
 <img
