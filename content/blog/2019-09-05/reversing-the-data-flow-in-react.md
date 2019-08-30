@@ -10,9 +10,9 @@ React’s one way data flow makes it easy to reason through, but sometimes the c
 For example, imagine a form comprised of multiple pieces
 ![](./form-sketch.png)
 
-While form validation is often handled by the enclosing component, in this case, the `<PhoneInput>` component has standardized validation.
+While form validation is often handled by the enclosing component, in this case, the `PhoneInput` component has standardized validation.
 
-Since it’s a shared component, it made sense to not have to repeat it with every instance. 
+Since it’s a shared component, it made sense to not have to repeat it with every instance.
 
 But if the logic for validating the input is _inside_, how do we get it back out? Callbacks.
 
@@ -35,9 +35,9 @@ function FormContainer() {
 }
 ```
 
-To implement the `PhoneInput` itself, we created a wrapper around  the [intl-tel-input](https://github.com/jackocnr/intl-tel-input)library which gave us access to their utility functions, including `isValidNumber`. 
+To implement the `PhoneInput` itself, we created a wrapper around  the `intl-tel-input` library which gave us access to their utility functions, including `isValidNumber`.<sup>1</sup>
 
-To use it, we needed to use refs, which make this a more complicated component, however, below, I’ve tried to focus only on the parts that are relevant: 
+To use it, we needed to use refs, which make this a more complicated component (at least to me), however, below, I’ve tried to focus only on the parts that are relevant:
 ``` javascript
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/js/utils.js';
@@ -68,4 +68,11 @@ export default function PhoneInput({ error, onBlur, onError, options, setValue, 
 
 Here, we can see that the _when_ the `InputWithRef` component emits an `onBlur` event, it will hit the `onBlur` event handler passed down from `FormContainer` if one exists.
 
-In that way, we will be able to control the `<button>` element without wrapping the button within the `PhoneInput` _or_ having the validation logic in the container level. 
+In that way, we will be able to control the `<button>` element without wrapping the button within the `PhoneInput` _or_ having the validation logic in the container level.
+
+For more reading on refs and forwardingRefs see the React docs.<sup>2, 3</sup>
+
+## Footnotes
+* <sup>1</sup> [intl-tel-input | Github](https://github.com/jackocnr/intl-tel-input)
+* <sup>2</sup> [Refs and the DOM | React](https://reactjs.org/docs/refs-and-the-dom.html)
+* <sup>3</sup> [Forwarding Refs | React](https://reactjs.org/docs/forwarding-refs.html)
