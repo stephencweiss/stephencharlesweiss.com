@@ -33,7 +33,7 @@ Make sure the following two lines are present:
 The former simply requires that there is a `.prettierrc` file in the application’s root directory.
 The latter is a preference of mine to apply prettier on save - rather than waiting for a git commit or to run the `format` script.
 
-## Alterntative Formats
+## Alternative Formats
 
 While I prefer to use just a `.prettierrc` file which can be written in YAML or JSON, it's also possible to use `.toml` or `.js`.
 
