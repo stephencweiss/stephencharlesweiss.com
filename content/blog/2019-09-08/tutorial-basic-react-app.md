@@ -1,6 +1,6 @@
 ---
 title: 'Getting a Basic React App Up And Running'
-date: '2019-09-06'
+date: '2019-09-08'
 category: ['programming']
 tags: ['react','tutorial','webpack','babel']
 ---
