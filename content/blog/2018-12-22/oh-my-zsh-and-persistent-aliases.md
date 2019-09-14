@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['aliases','oh-my-zsh','zsh']
 ---
 
-**NB: If you want the quick steps to add aliases to your `zsh`, jump down to the section, "Adding Aliases: The Better Way".**
+**NB: If you want the quick steps to add aliases to your `zsh`, jump down to the section, "[Adding Aliases: The Better Way](#adding-an-alias-the-better-way)".**
 
 First, a little backstory: I’m a big fan of aliases. In fact, when I was learning how to use terminal, they were one of the first things I set up for myself and they changed the way I used git. Every command was so much easier to navigate that I never felt a need to stray away from the command line.
 
@@ -15,7 +15,7 @@ When I decided to move to `zsh`, one of the first things I wanted to do was conf
 
 Still, I had a few navigation aliases I wanted to add.
 
-# Adding An Alias: The Easy Way
+## Adding An Alias: The Easy Way
 
 In hunting for *how* to add an alias, my first Google search suggested using the `alias` command. This was straightforward and seemed to work well enough for a while.
 
@@ -29,7 +29,7 @@ Then, I’d close the close the terminal and come back and I’d get an error: `
 
 What the heck?! Sure enough, when I searched through the aliases (using the `alias` command) `up` wasn't there.
 
-## Finding The Problem
+### Finding The Problem
 When I was adding aliases to bash, I would do so by saving them to the `.bash_profile` file (I hear you can also use the `bashrc` file). It made sense to me then that the aliases I was adding would wind up in the ZSH equivalent - so, I opened `.zshrc` to take a look.
 
 If you're an `oh-my-zsh` user, you may see the following in your config file:
@@ -54,7 +54,7 @@ What I found by navigating through the `oh-my-zsh` directory was that plugins, t
 
 The ZSH shell then was looking through this file to find all of the aliases that were defined and giving me access to them. Armed with a better understanding of *how* `oh-my-zsh` was finding aliases and functions to access from the ZSH shell, I could now (more) comfortably add my own.
 
-# Adding An Alias: The Better Way
+## Adding An Alias: The Better Way
 
 The steps to adding aliases for `oh-my-zsh` is as easy as reading the instructions embedded in the docs provided. But, if you're like me and they weren't immediately clear, here are the five steps you'll need:
 
@@ -71,8 +71,8 @@ alias up='cd ..'
 
 **Voila!** Your new custom aliases will now be available!
 
-## Time Saving Ideas
+### Time Saving Ideas
 
 Looking for inspiration? Check out this thread for a list of great time-saving aliases in bash/zsh:
 
-[Ask HN: Share your favourite bash/zsh aliases](https://news.ycombinator.com/item?id=9869231)
+* [Ask HN: Share your favourite bash/zsh aliases](https://news.ycombinator.com/item?id=9869231)
