@@ -1,6 +1,6 @@
 ---
 title: 'Simulating Slow Network Connections: Firefox vs. Chromium'
-date: '2019-09-08'
+date: '2019-09-06'
 tags: ['devtools','chrome','chromium','firefox','simulated networks','slow3g']
 category: ['programming']
 ---
