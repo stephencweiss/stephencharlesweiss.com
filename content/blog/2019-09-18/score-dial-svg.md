@@ -2,14 +2,14 @@
 title: 'Score Dial'
 date: '2019-09-18'
 category: ['programming']
-tags: ['svg', 'score', 'dial', 'animation', 'trigonometry', 'geometry', 'math',]
+tags: ['svg', 'score', 'dial', 'animation', 'trigonometry', 'geometry', 'math']
 ---
 
 Given a score within a range, how could we visualize that on a dial? That was what I got to work on recently and it turned out to be a ton of fun!
 
 ![score dial](https://media.giphy.com/media/h86hmcE5YC7oNtQXMC/giphy.gif)
 
-(The animation was a late addition and it’s implementation was inspired by my friend Justin who had the insight that to use score to re-render as it increased.)
+(The animation was a late addition, but it really makes a difference. A big thanks to Justin who suggested I could calculate an incrementing score to re-render the element and give the effect of it filling up.)
 
 ## Observations And Lessons
 
