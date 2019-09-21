@@ -7,11 +7,11 @@ date: '2019-09-19'
 
 For accessibility purposes all form inputs should be labelled. How do we apply a label though?
 
-There are multiple ways to add a label, but the two basic approaches are: 
+There are multiple ways to add a label, but the two basic approaches are:
 1. Use a label to wrap the input
 2. Tie the label to the input by associating the label's `for` (or `htmlFor` in React) attribute to the input’s  `id`
 
-In addition, we also have ARIA for more complicated situations where we need multiple relationships. 
+In addition, we also have ARIA for more complicated situations where we need multiple relationships.
 
 ## Labels
 ```html
@@ -39,7 +39,7 @@ Unlike the label which finds the field it's a label for, the ARIA attributes see
 
 `<label for”id”> ` -> `<input>`
 `<p id=“label”>` <- `<input aria-labelledby=“label”>`
-`<p id=“label”>` <- `<input aria-describedby=“description”>` 
+`<p id=“label”>` <- `<input aria-describedby=“description”>`
 
 
 ### ARIA LabelledBy
@@ -69,19 +69,19 @@ One reason to use the `describedBy` attribute is to tie an error state with the 
 
 ### Notes On Using ARIA
 
-I was taught to not use ARIA unless it’s necessary (as in the case of more complicated situations and UI). In those situations, ARIA can be powerful, but understanding the differences between `aria-labelledby` and `describedby` is crucial. 
+I was taught to not use ARIA unless it’s necessary (as in the case of more complicated situations and UI). In those situations, ARIA can be powerful, but understanding the differences between `aria-labelledby` and `describedby` is crucial.
 
-For that, I found this post by Aaron Gustafson informative. He describes the differences in the following way:<sup>1</sup> 
+For that, I found this post by Aaron Gustafson informative. He describes the differences in the following way:<sup>1</sup>
 
-> [`aria-labelledby` and `aria-describedby`] differ in when they are read. The `aria-labelledby` attribute replaces the associated `label` element (which is, of course, associated with the field via the label’s `for` attribute). The `aria-describedby` attribute, on the other hand, is read after the field type is stated.  
+> [`aria-labelledby` and `aria-describedby`] differ in when they are read. The `aria-labelledby` attribute replaces the associated `label` element (which is, of course, associated with the field via the label’s `for` attribute). The `aria-describedby` attribute, on the other hand, is read after the field type is stated.
 
 ## Conclusion
 When it comes to labeling and describing form inputs we have multiple options.
 We can use semantic HTML and use a label - either wrapping an input or tying it to the input through the `for` attribute.
 
-Additionally, we have ARIA labelledby and describedby attributes for situations where there are multiple labels or if we need to augment a label with a description. 
+Additionally, we have ARIA labelledby and describedby attributes for situations where there are multiple labels or if we need to augment a label with a description.
 
-## Resources
+## Footnotes
 * <sup>1</sup> [ARIA Quicktip: Labelledby vs. Describedby](https://codepen.io/aarongustafson/pen/dmuoe/)
 * [Using the aria-labelledby attribute - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 * [Using the aria-describedby attribute - Accessibility | MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)

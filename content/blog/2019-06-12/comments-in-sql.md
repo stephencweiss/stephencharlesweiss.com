@@ -22,6 +22,6 @@ where
                --but not 30 years
 ```
 
-# Resources
+## Footnotes
 
 [Comments | Oracle](https://docs.oracle.com/cd/B12037_01/server.101/b10759/sql_elements006.htm)

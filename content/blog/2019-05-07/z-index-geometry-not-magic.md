@@ -10,11 +10,11 @@ It was one of those light bulb moments when things finally clicked. My colleague
 Organizing elements on the DOM has always been confusing to me - how different elements get pushed aside, stretched, sent to the next line, etc. And, each problem has multiple different strategies - so there’s no _one_ way to get the effect you’re looking for.
 
 In my case, I was working on a menu, that when clicked, would create a popup.
-![](./menu-and-stepper.png)
+![menu with stepper](./menu-and-stepper.png)
 
 The problem was that the elements _behind_ (or what I assumed would be behind) the menu were bleeding through (see the blue dots? Yeah, you’re not supposed to see them).
 
-![](./open-menu-bleed-through.png)
+![error - visible menu](./open-menu-bleed-through.png)
 
 The issue, it turns out was that the popup menu was positioned absolutely within the window (so that it wouldn’t move other things around when it was present), but it was the same Z-index (or lower) than the SVGs that constituted the blue dots. This meant that as far as the browser was concerned, it should show them!
 
@@ -24,7 +24,7 @@ All we’re talking about is stacking different elements in a _predictable_ way.
 
 This is because the Z-index refers to a Z axis!
 
-![](./z-index-visualization.png)
+![z-index](./z-index-visualization.png)
 
 I'd looked at a lot of different pages on Z-index, but for whatever reason, these two concepts never came together to click.
 
@@ -35,6 +35,6 @@ Once I saw Z-index as an axis in a three-dimensional coordinate system, visualiz
 
 Suddenly, the Z-index wasn’t magic. It was geometry. Demystifying it made it a tool I could use with confidence.
 
-# Resources
+## Additional Reading
 
-[z-index - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+- [z-index - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)

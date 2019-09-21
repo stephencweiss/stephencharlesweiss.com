@@ -9,7 +9,7 @@ Recently, I was working on a project where I wanted the scroll event to invoke a
 
 Getting the throttling to actually occur proved to be a challenge. Instead, it was as if my function was being swallowed up and never firing at all. It turns out, it wasn’t — I’d forgotten to call it.
 
-(Side note: I chose to throttle vs debounce because I didn’t want to wait until someone stopped scrolling and restarted before calling it again, but just ensure that I wasn’t calling it _too_ often. For more on the differences, check out the resources below.)
+(Side note: I chose to throttle vs debounce because I didn’t want to wait until someone stopped scrolling and restarted before calling it again, but just ensure that I wasn’t calling it _too_ often.<sup>1, 2</sup>)
 
 Initially, my throttling function looked something like this:
 
@@ -93,7 +93,7 @@ The key point is that in order for the throttling to actually occur, I needed to
 
 Live and learn. Hopefully this serves as a good reminder for things to check when my operations are behaving as expected.
 
-# Resources
+## Footnotes
 
-[StackOverflow: Difference Between Throttling and Debouncing a Function](https://stackoverflow.com/questions/25991367/difference-between-throttling-and-debouncing-a-function)
-[Visualize the difference between Throttle and Debounce](http://demo.nimius.net/debounce_throttle/)
+- <sup>1</sup> [Difference Between Throttling and Debouncing a Function | StackOverflow](https://stackoverflow.com/questions/25991367/difference-between-throttling-and-debouncing-a-function)
+- <sup>2</sup> [Visualize the difference between Throttle and Debounce | Nimius](http://demo.nimius.net/debounce_throttle/)

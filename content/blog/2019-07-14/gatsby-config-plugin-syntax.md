@@ -6,7 +6,7 @@ tags: ['gatsby', 'configuration', 'jason lengstorf',]
 ---
 I often struggle with the syntax of config files. What are resolvers? How do options work? etc.
 
-As a result, while making my way through Jason Lengstorf’s Introduction to Gatsby on Frontend Masters, I found the following interesting¹:
+As a result, while making my way through Jason Lengstorf’s Introduction to Gatsby on Frontend Masters, I found the following interesting<sup>1</sup>:
 
 Within my `gatsby-config.js` file in the root of a Gatsby project, I have two plugins:
 ``` javascript
@@ -50,8 +50,8 @@ module.exports = {
 
 What this is saying is that for any `mdx` files that I load, the files will  be loaded into the layout template I defined in our `src/components/layout.js`.
 
-There’s still the question of what options the `gatsby-mdx` will accept. For that, the docs are quite helpful in specifying the configuration options.²
+There’s still the question of what options the `gatsby-mdx` will accept. For that, the docs are quite helpful in specifying the configuration options.<sup>2</sup>
 
 Resources:
-* ¹ [Learn Gatsby with Jason Lengstorf | Frontend Masters](https://frontendmasters.com/courses/gatsby/)
-* ² [gatsby-plugin-mdx#configuration | Github](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx#configuration)
+* <sup>1</sup> [Learn Gatsby with Jason Lengstorf | Frontend Masters](https://frontendmasters.com/courses/gatsby/)
+* <sup>2</sup> [gatsby-plugin-mdx#configuration | Github](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx#configuration)

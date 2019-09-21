@@ -71,7 +71,7 @@ Note: The `showCaptions` option will only show either Title _or_ Alt in the body
 
 For additional styling, I also found this blog post by xaprb informative.<sup>3</sup>
 
-# Resources
+## Footnotes
 
 - <sup>1</sup> [Remark Images | Gatsby](https://www.gatsbyjs.org/packages/gatsby-remark-images/)
 - <sup>2</sup> [Markdown Syntax Documentation | Daring Fireball](https://daringfireball.net/projects/markdown/syntax#img)

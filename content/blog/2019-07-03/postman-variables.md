@@ -5,14 +5,14 @@ category: ['programming']
 tags: ['postman', 'variables', 'api']
 ---
 
-I’ve written in the past about why I like testing my [APIs with Postman](../../2019-04-13/testing-api-with-curl-and-postman). Today, I learned that they have yet another feature that makes my life easier — Environment Variables.¹
+I’ve written in the past about why I like testing my [APIs with Postman](../../2019-04-13/testing-api-with-curl-and-postman). Today, I learned that they have yet another feature that makes my life easier — Environment Variables.<sup>1</sup>
 
 Just like using a variable in a codebase to point to a piece of information that you want to reuse multiple places, Postman variables enable reuse without duplication. They create a single point of entry and management (which [I’ve written about as a feature in the past](../../2019-07-01/array-intersection-in-psql/)).
 
 # Managing Scope
 
 ![](./postman-variables-scope.png)
-Postman offers five different levels of scope¹ - which I’m sure will be useful for more power users. For me - the Environment Scope is where I care most — though I can see myself also benefiting from Collections in the future as I work on more and more projects.
+Postman offers five different levels of scope<sup>1</sup> - which I’m sure will be useful for more power users. For me - the Environment Scope is where I care most — though I can see myself also benefiting from Collections in the future as I work on more and more projects.
 
 With environments being the most useful at this time for me, that’s where I’m focusing.
 
@@ -38,6 +38,6 @@ It can also be used in a Param or Header section.
 
 Using variables is easy and makes managing different environments so much easier than what I was doing before - which included a mix of manual management and maintaining multiple APIs with the environment in the label.
 
-# Resources
+## Footnotes
 
-- ¹ [Variables | Postman](https://learning.getpostman.com/docs/postman/environments_and_globals/variables/)
+- <sup>1</sup> [Variables | Postman](https://learning.getpostman.com/docs/postman/environments_and_globals/variables/)

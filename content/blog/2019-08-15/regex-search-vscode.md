@@ -28,5 +28,5 @@ The pattern is specifying a very simple pattern: the strings  `input` and `repai
 
 NB: The Regex option needs to be turned on for this to work (select the  `.*` icon or use the keyboard shortcut `⌥⌘R`)
 
-# Resources
+## Footnotes
 * <sup>1</sup> [Regex: Everything You Need To Know | CodePicky](https://www.codepicky.com/regex/)

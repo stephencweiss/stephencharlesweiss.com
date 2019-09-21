@@ -22,7 +22,7 @@ I was working on a new page in our application that would show a user’s prefer
 
 This particular project is using the new Hooks API within React, and I wanted to follow suit. Whereas I had a pretty good idea of how I might approach this for class components, I had never done any asynchronous work with hooks.
 
-However, having recently thought about the lifecycles in React ¹ and then reading the React team’s docs on hooks, I thought I had a decent framework to think about this. In a class component, I would have put the async call in the `componentDidMount` phase, and the docs showed examples where `useEffect` was used in lieu of the `componentDidMount` - so that’s where I started.²
+However, having recently thought about the lifecycles in React <sup>1</sup> and then reading the React team’s docs on hooks, I thought I had a decent framework to think about this. In a class component, I would have put the async call in the `componentDidMount` phase, and the docs showed examples where `useEffect` was used in lieu of the `componentDidMount` - so that’s where I started.<sup>2</sup>
 
 # The Class Component Approach
 
@@ -61,7 +61,7 @@ class MyComponent {
 
 Given my foundation with class components for asynchronous calls, that’s where I started with my new functional component.
 
-(Actually, this skips the first attempt where I tried the `useEffect` method with `async` — it’s not supported, though Robin Wieruch shows how you might accomplish data fetching with `useEffect` .³)
+(Actually, this skips the first attempt where I tried the `useEffect` method with `async` — it’s not supported, though Robin Wieruch shows how you might accomplish data fetching with `useEffect` .<sup>3</sup>)
 
 Notice, this approach looks very similar to the class approach. I have a local state, I am using `useAsync` which awaits the return of the API call. Then setting state using my `setPhoto` method, I can now use that value in my return which will render to the DOM.
 
@@ -91,7 +91,7 @@ I guess my reliable solution wasn’t so reliable any more.
 
 # New Approaches For New Problems
 
-Before I started working with Hooks, I noticed a lot of people make comments along the lines of “it’s a different way of thinking.” The React team themselves call this out specifically in their introduction to Hooks⁴ :
+Before I started working with Hooks, I noticed a lot of people make comments along the lines of “it’s a different way of thinking.” The React team themselves call this out specifically in their introduction to Hooks<sup>4</sup>> :
 
 > It takes a bit of a mindshift to start “thinking in Hooks.”
 
@@ -123,9 +123,9 @@ While it’s tempting, and I would argue smart, to start a new problem by attemp
 
 You can shoe-horn old solutions into new problems or create new skills and add tools to your tool chest. It takes work and can be frustrating — or fun. The choice is yours.
 
-# Resources
+## Footnotes
 
-¹ [React Lifecycle Methods Primer](https://www.stephencharlesweiss.com/2019-04-04/react-lifecycle-methods/) <br/>
-² [Using the Effect Hook – React](https://reactjs.org/docs/hooks-effect.html) <br/>
-³ [Robin Weiruch on Data Fetching with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/)<br/>
-⁴ [Introduction to Hooks](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy)<br/>
+- <sup>1</sup> [React Lifecycle Methods Primer](https://www.stephencharlesweiss.com/2019-04-04/react-lifecycle-methods/)
+- <sup>2</sup> [Using the Effect Hook | React](https://reactjs.org/docs/hooks-effect.html)
+- <sup>3</sup> [Data Fetching with React Hooks | Robin Weiruch](https://www.robinwieruch.de/react-hooks-fetch-data/)
+- <sup>4</sup> [Introduction to Hooks | React](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy)

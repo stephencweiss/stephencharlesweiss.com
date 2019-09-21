@@ -7,7 +7,7 @@ tags: ['css', 'a11y', 'web accessibility', 'buttons']
 
 When it comes to accessibility (a11y) on the web, one of the best / easiest things you can do is to use _semantic_ HTML.
 
-> Structural, semantic HTML is the key starting point toward good accessibility practices.¹
+> Structural, semantic HTML is the key starting point toward good accessibility practices.<sup>1</sup>
 
 That means, when you want to have something be clickable, use a `<button>`. If it's the top header, use `<h1>`. The next header should be `<h2>`, not `<h3>`, etc.
 
@@ -17,7 +17,7 @@ One easy solution is to simply make a `<div role="button">` with an `onClick` ev
 
 A better solution is create a base button that is “styleless”.
 
-While not a _perfect_ solution (see CSS Tricks for some caveats²), the following is a good start:
+While not a _perfect_ solution (see CSS Tricks for some caveats<sup>2</sup>), the following is a good start:
 
 ```css
 .stylelessButton {
@@ -31,7 +31,7 @@ While not a _perfect_ solution (see CSS Tricks for some caveats²), the followin
 
 This will strip out the majority of the CSS that makes a button look different than what it’s around and can serve as a nice base on which to build.
 
-# Resources
+## Footnotes
 
-¹ [Web Accessibility Guidelines - Semantic HTML | Carnegie Museums](http://web-accessibility.carnegiemuseums.org/foundations/semantic/)
-² [Overriding Default Button Styles | CSS-Tricks](https://css-tricks.com/overriding-default-button-styles/)
+<sup>1</sup> [Web Accessibility Guidelines - Semantic HTML | Carnegie Museums](http://web-accessibility.carnegiemuseums.org/foundations/semantic/)
+<sup>2</sup> [Overriding Default Button Styles | CSS-Tricks](https://css-tricks.com/overriding-default-button-styles/)

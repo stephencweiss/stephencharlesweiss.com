@@ -29,7 +29,7 @@ In that way, names can be used to group like things.
 ```
 Here's a sample codepen<sup>3</sup>
 
-## Resources
+## Footnotes
 * <sup>1</sup> [Web Forms Basics: Labels](../../2019-09-19/a11y-web-forms-basics-labels)
 * <sup>3</sup> [Difference between id and name attributes in HTML | StackOverflow](https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html)
 * <sup>2</sup> [Name vs Id | CodePen](https://codepen.io/stephenweiss/pen/bGbxOzB)

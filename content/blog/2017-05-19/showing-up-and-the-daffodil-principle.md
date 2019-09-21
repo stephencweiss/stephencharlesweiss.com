@@ -8,7 +8,7 @@ There are days when I don't want to show up. Days when I wish I could just jump 
 
 The allure of the quick fix or the easy win is huge. It's why get-rich-quick schemes work so well at attracting new customers. Why toil for years when you can get rich overnight? Why spend a year writing a book when you could finish one in a weekend?
 
-It's worth pointing out that showing up is not actually enough. If you don't actually make progress (which requires understanding what progress looks like - not always a trivial task), then you could be using showing up as a proxy for progress, which is a dangerous game to play.¹
+It's worth pointing out that showing up is not actually enough. If you don't actually make progress (which requires understanding what progress looks like - not always a trivial task), then you could be using showing up as a proxy for progress, which is a dangerous game to play.<sup>1</sup>
 
 Those proxies can provide cheap wins, moments of fleeting satisfaction, but in long run leave you demoralized. That's because while the cheap wins provide a jolts of serotonin that can help you feel like you've accomplished something, but upon review you see you have nothing to show for it and leave you feeling empty.
 
@@ -16,7 +16,7 @@ Avoiding that outcome takes a lot of grit. That's what you see in *The Daffodil 
 
 h/t to Rohan from alearningaday.com for the story. I've included the story below for reference.
 
-> # "The Daffodil Principle"²
+> # "The Daffodil Principle"<sup>2</sup>
 > ## Jaroldeen Asplund Edwards
 >
 > Several times my daughter had telephoned to say, "Mother, you must come to see the daffodils before they are over." I wanted to go, but it was a two-hour drive from Laguna to Lake Arrowhead "I will come next Tuesday", I promised a little reluctantly on her third call.
@@ -49,5 +49,5 @@ h/t to Rohan from alearningaday.com for the story. I've included the story below
 > She was right. It's so pointless to think of the lost hours of yesterdays. The way to make learning a lesson of celebration instead of a cause for regret is to only ask, "How can I put this to use today?"
 
 # Sources
-¹ See Amazon's [Letter to Shareholders](http://phx.corporate-ir.net/External.File?item=UGFyZW50SUQ9NjY2MjA1fENoaWxkSUQ9Mzc0MDUyfFR5cGU9MQ==&t=1) this year for a nice discussion on using proxies inappropriately.
-² Text found at Abundance-and-Happiness.com
+<sup>1</sup> See Amazon's [Letter to Shareholders](http://phx.corporate-ir.net/External.File?item=UGFyZW50SUQ9NjY2MjA1fENoaWxkSUQ9Mzc0MDUyfFR5cGU9MQ==&t=1) this year for a nice discussion on using proxies inappropriately.
+<sup>2</sup> Text found at Abundance-and-Happiness.com

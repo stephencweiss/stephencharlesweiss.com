@@ -16,10 +16,10 @@ Reflecting on the sudden infusion of energy I got from that conversation, I drew
 
 This creates a nice virtuous cycle. I learn new things. I share them. I come away richer and with even more new ideas. Repeat.
 
-The important part then, is that I need to share. It’s why I write - to start conversations.¹ It’s why I call friends even when texting might be easier. It’s not about broadcasting, because it’s not about me. It’s about the exchange of ideas.
+The important part then, is that I need to share. It’s why I write - to start conversations.<sup>1</sup> It’s why I call friends even when texting might be easier. It’s not about broadcasting, because it’s not about me. It’s about the exchange of ideas.
 
 When I talk with others, I get new ideas. It’s why I’ve come to believe that the seed of imagination is not myself - it’s others.
 
 ## Footnotes
-¹ [Writing Is Just The Beginning](https://www.stephencharlesweiss.com/2019-04-17/writing-is-the-beginning/)
+<sup>1</sup> [Writing Is Just The Beginning](https://www.stephencharlesweiss.com/2019-04-17/writing-is-the-beginning/)
 

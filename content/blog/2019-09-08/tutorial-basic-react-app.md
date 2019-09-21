@@ -251,7 +251,7 @@ This full code for this demo can be found on my Github.<sup>5</sup>
 * <sup>4</sup> [Configure Babel | Babel](https://babeljs.io/docs/en/configuration#babelrc)
 * <sup>5</sup> [react-demo | GitHub](https://github.com/stephencweiss/react-demo)
 
-## Resources / Additional Reading
+## Footnotes / Additional Reading
 * [Tutorial: How to set up React, webpack, and Babel 7 from scratch (2019)](https://www.valentinog.com/blog/babel/)
 * [Add React to a Website | React](https://reactjs.org/docs/add-react-to-a-website.html)
 * [Getting Started | webpack](https://webpack.js.org/guides/getting-started/)

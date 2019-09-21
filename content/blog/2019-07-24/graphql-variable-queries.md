@@ -8,7 +8,7 @@ My dive into [Gatsby](../../2019-07-20/gatsby-source-filesystem) continues.
 
 Today, I wanted to better understand how dynamic queries worked in GraphQL.
 
-For example, my blog (which I bootstrapped with Gatsby's official Blog Starter¹) auto generates a new post page for each post I publish.
+For example, my blog (which I bootstrapped with Gatsby's official Blog Starter<sup>1</sup>) auto generates a new post page for each post I publish.
 
 How does it do that and how does GraphQL facilitate it? That's what I wanted to figure out and I started with understanding the GraphQL side.
 
@@ -64,5 +64,5 @@ The `$` is used to differentiate a variable name from a query parameter (which i
 
 `String` indicates the variable’s Type. And the `!` means that it’s not null.
 
-# Resources
-* ¹ [Gatsby Starters](https://www.gatsbyjs.org/starters/?v=2)
+## Footnotes
+* <sup>1</sup> [Gatsby Starters](https://www.gatsbyjs.org/starters/?v=2)

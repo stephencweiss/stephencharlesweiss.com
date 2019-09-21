@@ -5,24 +5,24 @@ category: ['programming']
 tags: ['gatsby', 'graphql','multiple layouts', 'setup']
 ---
 
-When I set up my `gatsby-filesystem` previously, I noted that if there were multiple file systems that I wanted access to, all I need to do was to duplicate that post. 
+When I set up my `gatsby-filesystem` previously, I noted that if there were multiple file systems that I wanted access to, all I need to do was to duplicate that post.
 
 ## Why is that important?
-As a website grows, it’s possible that its scope will expand. What might start as a simple text blog can evolve to have many different types of content. Imagine a site that has 
+As a website grows, it’s possible that its scope will expand. What might start as a simple text blog can evolve to have many different types of content. Imagine a site that has
 * Blog posts,
 * Videos,
-* Recipes, 
+* Recipes,
 * etc.
 
-To accommodate the different types of content, I want a site that looks different _based_ on the type of content. I want to apply a different layout for each type. 
+To accommodate the different types of content, I want a site that looks different _based_ on the type of content. I want to apply a different layout for each type.
 
 ## Steps To Accommodate Multiple Content Types With A Gatsby Site
 
-1. Update `gatsby-config` to have multiple resolvers based on the content type. 
+1. Update `gatsby-config` to have multiple resolvers based on the content type.
 2. Update the GraphQL query to accommodate multiple types of content
 3. Update the `createPage` action to differentiate based on the type of content
 
-Next, I’ll demo stepping through these three steps for two types of content: blogs and videos. 
+Next, I’ll demo stepping through these three steps for two types of content: blogs and videos.
 
 ### Updating Config
 For example, in a project with the following structure:
@@ -84,9 +84,9 @@ query {
   }
 }
 ```
-The key here is that since the queries are _identical_, we need to alias them so that GraphQL knows which is which.¹ 
+The key here is that since the queries are _identical_, we need to alias them so that GraphQL knows which is which.<sup>1</sup>
 
-Also notice that I’m now going through the instance name of -- this is what is configured as the `name` attribute in the filesystem resolver. 
+Also notice that I’m now going through the instance name of -- this is what is configured as the `name` attribute in the filesystem resolver.
 
 ### Updating  Create Page
 ``` javascript
@@ -146,7 +146,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 };
 ```
 
-Now that my query has bene updated to differentiate between posts and videos, I can create pages programmatically for each based on _different_ layouts! 
+Now that my query has bene updated to differentiate between posts and videos, I can create pages programmatically for each based on _different_ layouts!
 
 ## Conclusion
 Refactoring a site to accommodate multiple types of content is three steps:
@@ -154,13 +154,13 @@ Refactoring a site to accommodate multiple types of content is three steps:
 2. Make sure the queries are returning the right data
 3. Sending the data to the right components for layouts
 
-There were two stumbling blocks for me in exploring this space. Though they weren’t major, it’s worth calling out in case it can help someone else in the future (aka me when I come back to look how this is done): 
+There were two stumbling blocks for me in exploring this space. Though they weren’t major, it’s worth calling out in case it can help someone else in the future (aka me when I come back to look how this is done):
 1. The alias replaces the `allFile` key in the results. So, for blogs, I go to `blog` and videos to `video`. After doing this once, it makes sense intuitively — after all, that’s exactly how I’d expect an alias to work.
-2. The other thing that tripped me up was that `nodes` _is_ an array itself. So, I had to start iterating at that level rather than lower down as I had when it was just a single file type and I was querying based on `allMdx` (rather than `allFiles`). 
+2. The other thing that tripped me up was that `nodes` _is_ an array itself. So, I had to start iterating at that level rather than lower down as I had when it was just a single file type and I was querying based on `allMdx` (rather than `allFiles`).
 
 Overall, however the conversion was straightforward and I'm now positioned to have multiple types of content on my site!
 
 ## Footnotes
-* ¹ [Queries and Mutations | GraphQL](https://graphql.org/learn/queries/#aliases)
+* <sup>1</sup> [Queries and Mutations | GraphQL](https://graphql.org/learn/queries/#aliases)
 
 

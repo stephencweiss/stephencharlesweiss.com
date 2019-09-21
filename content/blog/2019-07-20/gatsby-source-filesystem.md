@@ -4,7 +4,7 @@ date: '2019-07-20'
 category: ['programming']
 tags: ['gatsby', 'graphql', 'filesystem', 'configuration']
 ---
-Continuing my learnings in Gatsby and today I found out a few new pieces about the filesystem plugin, `gatsby-source-filesystem`.¹ The filesystem plugin is from Gatsby and allows local files to be used within the Graphql data layer.
+Continuing my learnings in Gatsby and today I found out a few new pieces about the filesystem plugin, `gatsby-source-filesystem`.<sup>1</sup> The filesystem plugin is from Gatsby and allows local files to be used within the Graphql data layer.
 
 ## Configuring Gatsby
 The first thing to do (after installing it with `npm i gatsby-source-filesystem` is to add the plugin within our `gatsby-config.js`:
@@ -80,5 +80,5 @@ module.exports = {
 ```
 
 
-## Resources
-* ¹ [Gatsby Source Filesystem | Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#how-to-use)
+## Footnotes
+* <sup>1</sup> [Gatsby Source Filesystem | Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#how-to-use)
