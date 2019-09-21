@@ -137,6 +137,6 @@ proposal: json + spacer -->
 }
 ```
 
-# Resources
+## Footnotes
 
 - [JSON.stringify() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)

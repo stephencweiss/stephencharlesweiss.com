@@ -9,7 +9,7 @@ Using two libraries, `styled-components` and `react-image`, I learned a new simp
 
 # Create Your Spinner
 
-A spinner is just a component with animation. However, in the process of doing this, I learned about the tagged template literal support for `keyframes` in `styled-components`.
+A spinner is just a component with animation. However, in the process of doing this, I learned about the tagged template literal support for `keyframes` in `styled-components`.<sup>1</sup>
 
 If you’re building out a library of UI components (as I am), this type of abstraction can be really nice.
 
@@ -41,7 +41,7 @@ export default Loader
 
 # Create An Image With A Loader
 
-Now that I have a loader, I can pull it into my ImageComponent and use it while the image is loading thanks to the straightforward API of `react-image`.
+Now that I have a loader, I can pull it into my ImageComponent and use it while the image is loading thanks to the straightforward API of `react-image`.<sup>2</sup>
 
 ```javascript
 import React from 'react'
@@ -60,7 +60,7 @@ function ImageComponent(props) {
 export default ImageComponent
 ```
 
-# Resources
+## Footnotes
 
-1. For more on the `keyframes` tagged template literal: [styled-components: API Reference](https://www.styled-components.com/docs/api)
-2. For more on `react-image` and how to use the `loader`[react-image: React.js <img> tag rendering with multiple fallback & loader support](https://github.com/mbrevda/react-image)
+- <sup>1</sup> [API Reference | styled-components](https://www.styled-components.com/docs/api)
+- <sup>2</sup> [React.js `<img>` tag rendering with multiple fallback & loader support | react-image](https://github.com/mbrevda/react-image)

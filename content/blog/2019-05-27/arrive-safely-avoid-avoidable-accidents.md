@@ -15,15 +15,15 @@ Failing to slow down in our work is the same as speeding. When we don’t get en
 
 Moreover, burn out and exhaustion do not need to be cinematic to do damage. When we’re sleep deprived and exhausted, our attention, working memory, mood, and cognitive function are all affected — and sleep’s the best medicine. As one paper put it:
 
-> Few countermeasures to the neurobehavioral effects of sleep deprivation have been identified, and there is no substitute for sleep when it comes to stable wakefulness. Sleep duration is the best predictor of daily recovery of neurobehavioral functioning.¹
+> Few countermeasures to the neurobehavioral effects of sleep deprivation have been identified, and there is no substitute for sleep when it comes to stable wakefulness. Sleep duration is the best predictor of daily recovery of neurobehavioral functioning.<sup>1</sup>
 
 And another:
 
-> When sleep deprived, the ability to perform tasks that require additional energy is impaired and the ability of the system to overcome the deficiencies caused by sleep loss is limited. Taking on tasks that require effort including school work, meal preparation, pulling off the road to nap when driving drowsy appear to be more challenging during sleep loss. Sleep loss impacts the effort-related choices we make and those choices may influence our health and safety.²
+> When sleep deprived, the ability to perform tasks that require additional energy is impaired and the ability of the system to overcome the deficiencies caused by sleep loss is limited. Taking on tasks that require effort including school work, meal preparation, pulling off the road to nap when driving drowsy appear to be more challenging during sleep loss. Sleep loss impacts the effort-related choices we make and those choices may influence our health and safety.<sup>2</sup>
 
 Racing through life despite the understanding that the faster we go, the more control we surrender and the greater the likelihood for a catastrophic outcome is foolish. It’s a dereliction of our duty to ourselves by failing to avoid the avoidable.
 
-## Resources
+## Footnotes
 
-¹ [Sleep Deprivation: Neurobehavioral Changes](https://www.sciencedirect.com/science/article/pii/B9780080450469000735)
-² [The effects of sleep loss on capacity and effort](https://www.sciencedirect.com/science/article/pii/S1984006314000583)
+- <sup>1</sup> [Sleep Deprivation: Neurobehavioral Changes | ScienceDirect](https://www.sciencedirect.com/science/article/pii/B9780080450469000735)
+- <sup>2</sup> [The effects of sleep loss on capacity and effort | ScienceDirect](https://www.sciencedirect.com/science/article/pii/S1984006314000583)

@@ -21,7 +21,7 @@ As I noted in [Buttons Without Style](../../2019-06-05/styleless-buttons-a11y), 
 
 Other options of course include styling a `<button>`, but in my research, I stumbled upon an HTML tag I’d never used before: the `<details>` tag.
 
-The default may not be as stylish as Julian’s `<div>` but it’s semantic HTML, which makes it attractive to me. The API has three basic parts and the MDN article notes several opportunities with regards to styling that I’ll be experimenting with in the near future. ¹
+The default may not be as stylish as Julian’s `<div>` but it’s semantic HTML, which makes it attractive to me. The API has three basic parts and the MDN article notes several opportunities with regards to styling that I’ll be experimenting with in the near future. <sup>1</sup>
 
 The three main features of the API are:
 
@@ -58,6 +58,6 @@ The implementation is relatively straightforward - requiring only a few lines of
 
 It’s worth noting that the `<details>` tag is _not_ supported in Internet Explorer or Edge.
 
-# Resources:
+## Footnotes:
 
 1.  [Details: The Details disclosure element | MDN`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details)

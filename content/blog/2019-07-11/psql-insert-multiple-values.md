@@ -6,7 +6,7 @@ tags: ['postgres', 'psql', 'insert', 'multiple values','how to']
 ---
 How do you insert _multiple_ values? I always find myself looking this up. I decided I’d jot it down here for future reference. Hopefully it helps you.
 
-In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write the following pertaining inserting values in Postgres:¹
+In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write the following pertaining inserting values in Postgres:<sup>1</sup>
 
 > The following is the syntax of the `INSERT INTO` command, when used to insert new values, which is subsequently described in detail:
 > `sql`
@@ -49,5 +49,5 @@ INSERT INTO sample_table
 
 Punch line: Just as you would to insert _one_ value, you do with multiple, except that they’re comma separated as part of the `VALUES` clause. I put together [SQL Fiddle demonstrating INSERT with multiple values](http://sqlfiddle.com/#!17/c5796/1).
 
-# Resources
-* ¹ [Adding Data with INSERT and COPY - Practical PostgreSQL Book](https://www.oreilly.com/library/view/practical-postgresql/9781449309770/ch04s03.html)
+## Footnotes
+* <sup>1</sup> [Adding Data with INSERT and COPY - Practical PostgreSQL Book](https://www.oreilly.com/library/view/practical-postgresql/9781449309770/ch04s03.html)

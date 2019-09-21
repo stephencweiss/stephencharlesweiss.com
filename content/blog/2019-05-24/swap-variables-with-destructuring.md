@@ -19,7 +19,7 @@ let swap = (i, j) => {
 }
 ```
 
-We used this:¹
+We used this:<sup>1</sup>
 
 ```javascript
 var bitwiseSwap = (x, y) => {
@@ -84,4 +84,4 @@ console.log({ x, z }) // {x: [1, 2, 3], z: 10}
 
 I love examples like this because they’re simple demonstrations of how Javascript is continuing to evolve and how there’s always new stuff to learn.
 
-¹ The function is the same in spirit, though it’s been modified slightly for clarity.
+<sup>1</sup> The function is the same in spirit, though it’s been modified slightly for clarity.

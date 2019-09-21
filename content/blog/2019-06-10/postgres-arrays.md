@@ -6,11 +6,11 @@ tags: ['postgres', 'data types', 'arrays']
 ---
 
 When looking around a table in Postgres today, I noticed a curious looking field. `groups_reso` _looked_ like a collection, but when I looked at the Data Type, it was listed as `_text`.
-![](./groups-reso.png)
+![underscore data type](./groups-reso.png)
 
-I didn’t know what the underscore meant, and looking into the data types didn’t immediately yield the confirmation I sought, so while I felt like it was an Array, I couldn’t be sure.
+I didn’t know what the underscore meant, and looking into the data types didn’t immediately yield the confirmation I sought, so while I felt like it was an Array, I couldn’t be sure.<sup>2</sup>
 
-![](./data-types.png)
+![data types](./data-types.png)
 
 Fortunately, I had access to the `create table` script and could eventually confirm my suspicion that it was in fact an Array.
 
@@ -43,11 +43,11 @@ FROM public.metadata_fields
 where groups_reso[1] <> 'Property';
 ```
 
-Attentive readers may notice that the index used here is `[1]` to refer to the _first_ property. That’s because “[b]y default, PostgreSQL uses one-based numbering for array elements.” ¹
+Attentive readers may notice that the index used here is `[1]` to refer to the _first_ property. That’s because “[b]y default, PostgreSQL uses one-based numbering for array elements.”<sup>1</sup>
 
 Lots more to learn, but at least I can now move forward.
 
-# Resources
+## Footnotes
 
-- ¹ [PostgreSQL Array](http://www.postgresqltutorial.com/postgresql-array/)
-- [PostgreSQL Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)
+- <sup>1</sup> [PostgreSQL Array](http://www.postgresqltutorial.com/postgresql-array/)
+- <sup>2</sup> [PostgreSQL Data Types](http://www.postgresqltutorial.com/postgresql-data-types/)

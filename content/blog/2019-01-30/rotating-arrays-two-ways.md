@@ -5,10 +5,14 @@ category: ['programming']
 tags: ['rotating arrays', 'data structures', 'arrays']
 ---
 
-Given an array and a number of left rotations (each left rotation moves the first element to end and all subsequent elements one place to the left)
+How would you rotate an array's elements if you were given an array and a number of left rotations?
+
+(A left rotation is defined as moving the first element to the last position of the array and shifting all subsequent elements one place to the left.
+
+This post explores two separate approaches and was inspired by a HackerRank challenge.<sup>1</sup>
 
 Example:
-`leftRot([1,2,3,4,5],2) // [3,4,5,1,2]`
+`leftRotate([1,2,3,4,5],2) // [3,4,5,1,2]`
 by way of the following steps:
 `[1,2,3,4,5] -> [2,3,4,5,1] -> [3,4,5,1,2]`
 
@@ -16,7 +20,7 @@ There are a few potential gotchas in how to approach this problem. The biggest o
 
 With that as the case, I wanted to understand what the effective (i.e. the total number of steps that _actually_ needed to happen) number of rotations would be.
 
-For example, if we did `leftRot([1,2,3,4],6)`
+For example, if we did `leftRotate([1,2,3,4],6)`
 We would have:
 
 ```
@@ -98,6 +102,6 @@ Meanwhile, the iterative approach is O(effectiveRotations \* n) because each ele
 
 This is one of the drawbacks of arrays as data structures. Access is fast, but insertion / deletion is not (except at the end and assuming there’s sufficient space).
 
-# Resources
+## Footnotes
 
-[Arrays: Left Rotation | HackerRank](https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) - The inspiration for this post
+- <sup>1</sup> [Arrays: Left Rotation | HackerRank](https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) - The inspiration for this post

@@ -12,7 +12,7 @@ git stash push pacakage-lock.json
 git stash drop 0
 ```
 
-I had been reading a little about bash functions and wanted to see if I couldn't automate the process.
+I had been reading a little about bash functions and wanted to see if I couldn't automate the process.<sup>1</sup>
 
 There are two files in particular that I was running these commands for due to our build process: `pacakge.json` and `package-lock.json`.
 
@@ -36,7 +36,7 @@ This required a function that accepted arguments.
 
 # Parameters And Bash Functions
 
-The first place I looked, of course, was [Stackoverflow](https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function). This conversation was a good introduction of how functions pass parameters.
+The first place I looked, of course, was Stackoverflow.<sup>2</sup> This conversation was a good introduction of how functions pass parameters.
 
 In my case, I only needed to handle a single parameter - so order wasn't important and I could use the `$1` without any type checking.
 
@@ -62,9 +62,7 @@ The next steps would be to handle _multiple_ arguments, so I could pass multiple
 
 This will _not_ affect untracked or ignored files. It will only wipe out changes to files that have been previously tracked or committed.
 
-The reason is that `git stash` does not stash untracked or ignored files by default.
-
-For more on this, see a different conversation on [Stackoverflow](https://stackoverflow.com/questions/835501/how-do-you-stash-an-untracked-file).
+The reason is that `git stash` does not stash untracked or ignored files by default.<sup>3</sup>
 
 # Final Thoughts
 
@@ -72,6 +70,8 @@ Is this the _best_ way to achieve my goal? Probably not, but it’s been w worki
 
 I'd also be very interested if someone knows a good way of handling an unknown number of arguments to create a loop of repeating this process for each file passed into the gsdf function.
 
-# Resources
+## Footnotes
 
-- [Advanced Bash Scripting - Complex Functions](http://tldp.org/LDP/abs/html/complexfunct.html)
+- <sup>1</sup> [Advanced Bash Scripting - Complex Functions | TLDP](http://tldp.org/LDP/abs/html/complexfunct.html)
+- <sup>2</sup> [Passing Parameters To Bash | StackOverflow](https://stackoverflow.com/questions/6212219/passing-parameters-to-a-bash-function)
+- <sup>3</sup> [Stash Untracked Files | StackOverflow](https://stackoverflow.com/questions/835501/how-do-you-stash-an-untracked-file)

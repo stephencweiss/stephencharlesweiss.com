@@ -7,7 +7,7 @@ tags: ['developer experience', 'typescript', 'pick', 'interface', 'DRY']
 
 The short answer: there is _no_ difference.
 
-When investigating, I was steered to the Typescript Handbook¹ which notes:
+When investigating, I was steered to the Typescript Handbook<sup>1</sup> which notes:
 
 > The `ReadonlyArray` type describesArrays that can only be read from. Any variable with a reference to a `ReadonlyArray` can’t add, remove, or replace any elements of the array.
 
@@ -26,5 +26,5 @@ That said, it also introduced to me the concept of the `Readonly` syntax which i
 
 # Source:
 
-- ¹ [TypeScript 3.4 · TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#a-new-syntax-for-readonlyarray)
+- <sup>1</sup> [TypeScript 3.4 · TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#a-new-syntax-for-readonlyarray)
 - [Array<Type> VS Type in Typescript - Stack Overflow](https://stackoverflow.com/questions/36842158/arraytype-vs-type-in-typescript)

@@ -15,7 +15,7 @@ Here are three strategies, that when combined will combat the bloat:
 
 Before copying these into your terminal, however, let’s set some context and then discuss what they’re doing.
 
-(Before continuing, a huge thank you to Erik Aybar for his post on the topic.¹ Of the more than a dozen that I referenced in learning about how to clean up my stale branches, his was the cleanest. He inspired most of what follows.)
+(Before continuing, a huge thank you to Erik Aybar for his post on the topic.<sup>1</sup> Of the more than a dozen that I referenced in learning about how to clean up my stale branches, his was the cleanest. He inspired most of what follows.)
 
 # Background
 
@@ -189,7 +189,7 @@ Adding these three arrows to my quiver won't revolutionize anything, but they wi
 
 ## Tutorials
 
-- ¹ [Git Tip: Deleting Old Local Branches | Erik Aybar](https://erikaybar.name/git-deleting-old-local-branches)
+- <sup>1</sup> [Git Tip: Deleting Old Local Branches | Erik Aybar](https://erikaybar.name/git-deleting-old-local-branches)
 - [Clean up your local branches after merge and delete in GitHub | Fizer Khan](http://www.fizerkhan.com/blog/posts/Clean-up-your-local-branches-after-merge-and-delete-in-GitHub.html)
 - [A simple way to clean up your git project branches | Florent Destremau](https://medium.com/@FlorentDestrema/a-simple-way-to-clean-up-your-git-project-branches-283b87478fbc)
 - [What Is A Stale Branch | StackOverflow](https://stackoverflow.com/questions/29112156/what-is-a-stale-git-branch)

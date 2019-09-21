@@ -19,16 +19,16 @@ It turns out there’s a peculiar limitation of this approach — I can’t go _
 
 If I tried to create a new branch `feature/826/add-edit/dynamic-inputs/config-file/smaller-piece` for example, git would throw an error along the lines of: `fatal: cannot lock ref 'refs/heads/feature/826/.../config-file/smaller-piece': 'refs/heads/feature/826/.../config-file' exists; cannot create 'refs/heads/feature/826/.../config-file/smaller-piece'`
 
-This is a known limitation of git — branches, despite my use of `/` are not directories — and git does not allow sub-branches in this way.¹
+This is a known limitation of git — branches, despite my use of `/` are not directories — and git does not allow sub-branches in this way.<sup>1</sup>
 
-Fortunately, I know how to rename a branch, so if it really mattered - I could have two branches: ²
+Fortunately, I know how to rename a branch, so if it really mattered - I could have two branches: <sup>2</sup>
 
 1. `feature/826/add-edit/dynamic-inputs/config-file/initial`
 2. `feature/826/add-edit/dynamic-inputs/config-file/smaller-piece`
 
 The more you know!
 
-## Resources:
+## Footnotes:
 
-- ¹ [git push: refs/heads/my/subbranch exists, cannot create | Stack Overflow](https://stackoverflow.com/a/22630664/9888057)
-- ² [Git - Renaming A Branch: Locally & Remotely | /_ Code Comments _/](https://www.stephencharlesweiss.com/2019-04-30/git-rename-branch-locally-and-remotely/)
+- <sup>1</sup> [git push: refs/heads/my/subbranch exists, cannot create | Stack Overflow](https://stackoverflow.com/a/22630664/9888057)
+- <sup>2</sup> [Git - Renaming A Branch: Locally & Remotely | /_ Code Comments _/](https://www.stephencharlesweiss.com/2019-04-30/git-rename-branch-locally-and-remotely/)
