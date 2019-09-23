@@ -5,9 +5,9 @@ category: ['programming']
 tags: ['postgres','alter table', 'unique', 'constraint']
 ---
 
-How do you add a unique constraint to a table in Postgres if it’s already been created? 
+How do you add a unique constraint to a table in Postgres if it’s already been created?
 
-Most of the time, we add unique constraints to a table when we create them. Sometimes, we forget or don’t realize we need one until after the fact. 
+Most of the time, we add unique constraints to a table when we create them. Sometimes, we forget or don’t realize we need one until after the fact.
 
 In those cases, we can use the `Alter Table` command to add a constraint. Let’s take a look at how we might do that.
 
@@ -43,9 +43,9 @@ If adding a constraint will result in violations, Postgres demands that the data
 For instance, in the above example, we added a unique constraint on `product_id`. If, prior to adding that constraint, we’d added two records with a `product_id = 2`, then Postgres would reject alter table until the duplicates had been resolved and no violations would occur.
 
 # Summary
-Returning to the original question: How do you add a unique constraint to a table in Postgres if it’s already been created? Using the `ALTER TABLE` command gives us a convenient way as long as we have cleaned up our data in advance to ensure no violations exist to the new constraint. 
+Returning to the original question: How do you add a unique constraint to a table in Postgres if it’s already been created? Using the `ALTER TABLE` command gives us a convenient way as long as we have cleaned up our data in advance to ensure no violations exist to the new constraint.
 
-# Resources
+## Footnotes
 `\h ALTER TABLE` or [Alter Table | Postgres Docs](http://www.postgresql.org/docs/current/static/ddl-alter.html#AEN2303)for more on the Alter Table command.
 
 

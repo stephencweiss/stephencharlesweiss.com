@@ -32,9 +32,9 @@ The same restriction functionality, but much much simpler.
 
 The only thing left is to see if I can _reference_ a list defined elsewhere. Time will tell.
 
-The latter solution was inspired by a lot of digging around the internet and particularly a conversation on StackOverflow.¹
+The latter solution was inspired by a lot of digging around the internet and particularly a conversation on StackOverflow.<sup>1</sup>
 
 My favorite part about learning this was less about the specifics but the fact that it solves a problem elegantly by reframing _how_ I'm thinking about it.
 
-# Resources
-* ¹ [Check if value exists in postgres array | StackOverflow](https://stackoverflow.com/questions/31695205/check-if-value-exists-in-postgres-array-for-partitioning-via-check-constraint)
+## Footnotes
+* <sup>1</sup> [Check if value exists in postgres array | StackOverflow](https://stackoverflow.com/questions/31695205/check-if-value-exists-in-postgres-array-for-partitioning-via-check-constraint)

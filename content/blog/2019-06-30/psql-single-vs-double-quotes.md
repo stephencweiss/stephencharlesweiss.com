@@ -42,11 +42,11 @@ FROM media
 WHERE "MediaCategory" = 'Audio';
 ```
 
-The best summary of the difference I found comes from Reuven Lerner’s blog¹:
+The best summary of the difference I found comes from Reuven Lerner’s blog<sup>1</sup>:
 
 > Single quotes and double quotes in PostgreSQL have completely different jobs, and return completely different data types. Single quotes return text strings. Double quotes return (if you can really think of them as “returning” anything) identifiers, but with the case preserved.
 > — Reuven Lerner
 
 # Read More
 
-- ¹ [Teaching Python and data science around the world — Reuven Lerner](https://lerner.co.il/)
+- <sup>1</sup> [Teaching Python and data science around the world — Reuven Lerner](https://lerner.co.il/)

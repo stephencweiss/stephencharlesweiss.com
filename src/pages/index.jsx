@@ -1,4 +1,5 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import { Link, graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
@@ -21,24 +22,29 @@ class BlogIndex extends React.Component {
         />
 
         <Header />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
+        {posts
+          .filter(({ node }) => {
+            const { publish, date } = node.frontmatter
+            return dayjs().isAfter(publish ? dayjs(publish) : dayjs(date))
+          })
+          .map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <div key={node.fields.slug}>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              </div>
+            )
+          })}
         <Bio />
       </Layout>
     )

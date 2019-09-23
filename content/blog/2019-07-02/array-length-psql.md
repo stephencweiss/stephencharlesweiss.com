@@ -22,11 +22,11 @@ For example, building on yesterday’s example of `classes_enabled`, imagine a t
 
 What I was looking for was the value 5 - the number of columns (`{a,b,c,d,e}`) present in the row, `id = 3`.
 
-(Yet again, Reuven Lerner provided a great write-up to introduce the topic. Highly recommend his post which was my first stop.¹)
+(Yet again, Reuven Lerner provided a great write-up to introduce the topic. Highly recommend his post which was my first stop.<sup>1</sup>)
 
 # PostgreSQL Array Function: `Array_Length()`
 
-On the same page where I found the Array Operators in the Postgres Documentation, they also list Array Functions.² Among the latter is the `array_length( anyarray, int)`. As the name suggests, `array_length` will return the length of the array passed into the first argument position. The integer in the second position defines with dimension is being measured - more on this in a moment.
+On the same page where I found the Array Operators in the Postgres Documentation, they also list Array Functions.<sup>2</sup> Among the latter is the `array_length( anyarray, int)`. As the name suggests, `array_length` will return the length of the array passed into the first argument position. The integer in the second position defines with dimension is being measured - more on this in a moment.
 
 The biggest thing to be aware of when looking at the documentation is that when it says `anyarray` that can include the name of the column.
 
@@ -90,7 +90,7 @@ If the field were not one dimensional, but two, you can use `array_length( array
 
 For example: `array_length( { {a, b, c}, {d, e, f} } , 2)` would return `3`.
 
-# Resources
+## Footnotes
 
-- ¹ [PostgreSQL array indexes and length | Reuven Lerner](https://lerner.co.il/2014/05/20/postgresql-array-indexes-and-length/)
-- ² [Array Functions and Operators | PostgreSQL](https://www.postgresql.org/docs/current/functions-array.html)
+- <sup>1</sup> [PostgreSQL array indexes and length | Reuven Lerner](https://lerner.co.il/2014/05/20/postgresql-array-indexes-and-length/)
+- <sup>2</sup> [Array Functions and Operators | PostgreSQL](https://www.postgresql.org/docs/current/functions-array.html)

@@ -17,7 +17,7 @@ The best solution I’ve found is to cast the array explicitly. For example, if 
 
 When I wrote the original function a few days ago, I mentioned it’d be a good candidate to extract as a helper.
 
-Let’s look at that here and assign a default `arrayType` - but allow it to be flexed based depending on the table / use case.¹
+Let’s look at that here and assign a default `arrayType` - but allow it to be flexed based depending on the table / use case.<sup>1</sup>
 
 ```javascript
 import SQL, { SQLStatement } from "sql-template-strings";
@@ -52,4 +52,4 @@ async proposeChange({id, details}) {
 
 Voila. Edge case handled.
 
-¹ There may be a slight nuance here in how these statements are mapped and joined. In practice, I also used a separate helper for that as well which is abstracted away here.
+<sup>1</sup> There may be a slight nuance here in how these statements are mapped and joined. In practice, I also used a separate helper for that as well which is abstracted away here.

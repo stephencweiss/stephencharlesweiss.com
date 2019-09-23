@@ -9,11 +9,11 @@ Are there areas of life where the costs of efficiency gained outweigh the costs?
 
 It’s just not a question that I ask that frequently about my life - I suspect I’m not alone.
 
-We’re too focused instead on making habits working for us. We know _The Power of Habits_ (by Charles Duhigg) and we strive to turn small _Atomic Habits_ (by James Clear) into the engines that power our lives and enable our achievement of great things!
+We’re too focused instead on making habits working for us. We know _The Power of Habits_ (by Charles Duhigg) and we strive to turn small _Atomic Habits_ (by James Clear) into the engines that power our lives and enable our achievement of great things!<sup>1, 2</sup>
 
 Is it possible that we’ve learned these lessons too well?
 
-In an interview on Software Engineering Daily, Brian McCullough offered an example that demonstrated the potential limits of habits in a discussion of evaluating news.
+In an interview on Software Engineering Daily, Brian McCullough offered an example that demonstrated the potential limits of habits in a discussion of evaluating news.<sup>2</sup>
 
 > I’m in the minority of this. Where people are gnashing their teeth about who can we trust - I think it was a weird world in my childhood where there were venues and you were going to trust CBS for sure and New York Times for sure, because they’re CBS and the New York Times.
 >
@@ -33,7 +33,7 @@ What Brian describes is an active participation in your daily life. No checking 
 
 If you think about the power of information - the way it influences how we interact with and understand the world, this approach makes sense. Delegating our information consumption to habits is dangerous.
 
-I’m reminded of President Kennedy’s speech announcing America’s intention to reach the moon by the end of the decade.
+I’m reminded of President Kennedy’s speech announcing America’s intention to reach the moon by the end of the decade.<sup>4</sup>
 
 > We choose to go to the moon. We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too
 
@@ -41,9 +41,9 @@ We’ve known that there are areas of our lives that we choose to make more chal
 
 For me - it’s also been a reminder about the limits of habits.
 
-# Resources
+## Footnotes
 
-- [Internet History (and Future) with Brian McCullough - Software Engineering Daily](https://softwareengineeringdaily.com/2019/03/01/internet-history-and-future-with-brian-mccullough/)
-- [JFK Rice Moon Speech - Nasa.gov](https://er.jsc.nasa.gov/seh/ricetalk.htm)
-- [The Power of Habit - Charles Duhigg](https://charlesduhigg.com/the-power-of-habit/)
-- [Atomic Habits - James Clear](https://jamesclear.com/atomic-habits)
+- <sup>1</sup> [The Power of Habit - Charles Duhigg](https://charlesduhigg.com/the-power-of-habit/)
+- <sup>2</sup> [Atomic Habits - James Clear](https://jamesclear.com/atomic-habits)
+- <sup>3</sup> [Internet History (and Future) with Brian McCullough - Software Engineering Daily](https://softwareengineeringdaily.com/2019/03/01/internet-history-and-future-with-brian-mccullough/)
+- <sup>4</sup> [JFK Rice Moon Speech - Nasa.gov](https://er.jsc.nasa.gov/seh/ricetalk.htm)

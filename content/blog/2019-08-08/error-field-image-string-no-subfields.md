@@ -6,7 +6,7 @@ tags: ['gatsby', 'error handling', 'sharp', 'gatsby-config']
 ---
 
 I was trying to query an image I’d placed in the frontmatter of a post, when I got the error:
-> Field ‘image’ must not have a selection since type “String” has no subfields  
+> Field ‘image’ must not have a selection since type “String” has no subfields
 
 The query _should_ have worked because `image` in my case, was being transformed by Sharp and so _did_ have children. It would turn out that I was right in theory, but in practice needed to reconfigure a few things to get it to work.
 
@@ -68,7 +68,7 @@ module.exports = {
 ```
 
 
-## Resources
+## Footnotes
 These are two resources I found particularly helpful in debugging this error:
 1. [“Field “image” must not have a selection since type “String” has no subfields.”  · Issue #13469 · gatsbyjs/gatsby · GitHub](https://github.com/gatsbyjs/gatsby/issues/13469)
 2. [Problems with Gatsby Image and their workarounds](https://theleakycauldronblog.com/blog/problems-with-gatsby-image-and-their-workarounds/)

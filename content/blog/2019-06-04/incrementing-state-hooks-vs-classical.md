@@ -6,7 +6,7 @@ tags:
   ['react', 'hooks', 'functional component', 'class component', 'MaterialUI']
 ---
 
-I was recently looking through the [Material UI documentation](https://material-ui.com/components/steppers/#horizontal-linear) for their `<Stepper>` component. In their implementation of the Horizontal Linear Stepper, they used the `useState` React Hook to set the state.
+I was recently trying to understand Material UI's `<Stepper>` component. In looking through their implementation of the Horizontal Linear Stepper, they used the `useState` React Hook to set the state.<sup>1</sup>
 
 The implementation caught my attention because of the use of a parameter, `prevActiveStep`, which wasn’t defined anywhere else.
 
@@ -16,7 +16,7 @@ function handleBack() {
 }
 ```
 
-Digging into it, I realized that the `useState` can behave very similarly to the `setState` method for class components. Whereas both can set the value for a specific element in state, they can also take a function.
+Digging into it, I realized that the `useState` can behave very similarly to the `setState` method for class components. Whereas both can set the value for a specific element in state, they can also take a function.<sup>2</sup>
 
 Here’s what that could look like.
 
@@ -34,13 +34,13 @@ function MyComponent() {
   }
 
   return (
-    ...
+    {/*...*/}
     <div>
       <Button onClick={handleBack} >
         Back
       </Button>
     </div>
-    ...
+    {/*...*/}
 }
 
 export default MyComponent;
@@ -67,13 +67,13 @@ class MyComponent{
   }
 
   return (
-    ...
+    {/*...*/}
     <div>
       <Button onClick={handleBack} >
         Back
       </Button>
     </div>
-    ...
+    {/*...*/}
 }
 
 export default MyComponent;
@@ -88,7 +88,7 @@ function handleBack() {
 }
 ```
 
-# Resources:
+## Footnotes:
 
-[How to use the increment operator in React | Stack Overflow](https://stackoverflow.com/questions/39316376/how-to-use-the-increment-operator-in-react) <br/>
-[Stepper React component | Material-UI](https://material-ui.com/components/steppers/#horizontal-linear)
+- <sup>1</sup> [Stepper React component | Material-UI](https://material-ui.com/components/steppers/#horizontal-linear)
+- <sup>2</sup> [How to use the increment operator in React | StackOverflow](https://stackoverflow.com/questions/39316376/how-to-use-the-increment-operator-in-react) <br/>

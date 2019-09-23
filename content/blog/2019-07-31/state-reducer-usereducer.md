@@ -7,7 +7,7 @@ tags: ['react','redux','reducer','action','payload']
 
 To date, I’ve struggled to understand reducers. Terms like reducers, actions, dispatch, all blurred together and even though I could use, and in some cases, extend the redux store on some projects, I never understood all of the pieces.
 
-Despite reading the hooks documentation on `useReducer`, the pieces didn’t click until I read Robin Wieruch’s two-part tutorial on reducers.¹ ² ³
+Despite reading the hooks documentation on `useReducer`, the pieces didn’t click until I read Robin Wieruch’s two-part tutorial on reducers.<sup>1, 2, 3</sup>
 
 So, what’s exactly going on?
 
@@ -102,7 +102,7 @@ How might we change that?
 Actions are how we change that.
 
 From Redux documentation:
-> Actions are payloads of information that send data from your application to your store. They are the *only* source of information for the store.⁴
+> Actions are payloads of information that send data from your application to your store. They are the *only* source of information for the store.<sup>4</sup>>
 
 Here’s an example using the simplest of actions — again reintroducing our second button:
 ```javascript
@@ -216,8 +216,8 @@ When I came across a project that used Redux or another state management tool, I
 After reading through Robin’s tutorials, I was able to return with fresh eyes and implemented it within my own project. It’s a great feeling when things click! Hopefully this write up will help someone else experience that same feeling.
 
 ## Footnotes
-* ¹ [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#usereducer)
-* ² [What is a reducer (React/Redux) in JavaScript? | RWieruch](https://www.robinwieruch.de/javascript-reducer/)
-* ³ [How to useReducer in React? | RWieruch](https://www.robinwieruch.de/react-usereducer-hook/)
-* ⁴ [Actions | Redux](https://redux.js.org/basics/actions)
+* <sup>1</sup> [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#usereducer)
+* <sup>2</sup> [What is a reducer (React/Redux) in JavaScript? | RWieruch](https://www.robinwieruch.de/javascript-reducer/)
+* <sup>3</sup> [How to useReducer in React? | RWieruch](https://www.robinwieruch.de/react-usereducer-hook/)
+* <sup>4</sup>> [Actions | Redux](https://redux.js.org/basics/actions)
 

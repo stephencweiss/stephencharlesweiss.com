@@ -25,7 +25,7 @@ Property 'props' does not exist on type 'string | number | boolean | {} | ReactE
   Property 'props' does not exist on type 'string'
 ```
 
-The solution is simple: make sure that I’m not dealing with any of those other kinds of nodes _before_ trying to access the title prop. To do this, React provides the top level API `isValidElement` which verifies the object is a React element.¹
+The solution is simple: make sure that I’m not dealing with any of those other kinds of nodes _before_ trying to access the title prop. To do this, React provides the top level API `isValidElement` which verifies the object is a React element.<sup>1</sup>
 
 Updating my conditional, I’m able to only access those elements in my array that _are_ elements and therefore have props.
 ``` typescript
@@ -44,5 +44,5 @@ const titles: JSX.Element[] = nodes.reduce(extractTitles, []);
 I’ve struggled with this problem a number of times before, but never quite grasped what I was looking at. Today, I made the time to dig a little deeper than in the past and it paid off — as it almost always does.
 
 ## Footnotes
-* ¹ [React Top-Level API: isValidElement | React](https://reactjs.org/docs/react-api.html#isvalidelement)
+* <sup>1</sup> [React Top-Level API: isValidElement | React](https://reactjs.org/docs/react-api.html#isvalidelement)
 

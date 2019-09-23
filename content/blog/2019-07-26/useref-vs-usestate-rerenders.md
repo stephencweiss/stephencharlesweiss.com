@@ -43,7 +43,7 @@ function NameInput (props) {
 ## Solving The Problem Through Refs
 The issue is the “unnecessary” re-renders. I’m not actually _showing_ anything different to the user based on what I’m storing in state (the `input` component is managing its own state), so, every time I rerendered the form was unnecessary to communicate the information to the user.
 
-It turns out the `useRef` is ideal for this situation _because_ it doesn’t subscribe to changes. Instead, per the React team: ¹
+It turns out the `useRef` is ideal for this situation _because_ it doesn’t subscribe to changes. Instead, per the React team: <sup>1</sup>
 > `useRef` returns a mutable `ref` object whose `.current` property is initialized to the passed argument (`initialValue`). The returned object will persist for the full lifetime of the component.
 > …
 > Keep in mind that `useRef` *doesn’t*notify you when its content changes. Mutating the `.current` property doesn’t cause a re-render.
@@ -80,9 +80,9 @@ It’s worth noting that I am _mutating_ the value of the ref with each change. 
 Still, in my case, this is perfectly acceptable and the results speak for themselves.
 ![`useRef`](https://media.giphy.com/media/ZD8R50KA3GxNtQ3xhm/giphy.gif)
 
-(H/t to Christian Nwamba for a useful writeup on the differences between useState and useRef and getting me started. ² )
+(H/t to Christian Nwamba for a useful writeup on the differences between useState and useRef and getting me started. <sup>2</sup> )
 
 ## Resource:
-* ¹ [useRef Hooks API Reference | React](https://reactjs.org/docs/hooks-reference.html#useref)
-* ² [useRef vs useState: Should we re-render or not? | Codebeast](https://www.codebeast.dev/usestate-vs-useref-re-render-or-not/)
+* <sup>1</sup> [useRef Hooks API Reference | React](https://reactjs.org/docs/hooks-reference.html#useref)
+* <sup>2</sup> [useRef vs useState: Should we re-render or not? | Codebeast](https://www.codebeast.dev/usestate-vs-useref-re-render-or-not/)
 

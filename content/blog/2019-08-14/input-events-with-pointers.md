@@ -18,7 +18,7 @@ While Pointer Events are not yet supported by all browsers, there is wide adopti
 
 This is a boon as pointer events will make the act of dealing with different input events much simpler.
 
-# Resources:
+## Footnotes:
 * <sup>1</sup> [Pointer Events | W3](https://www.w3.org/TR/pointerevents/)
 * <sup>2</sup> [_ibid._](https://www.w3.org/TR/pointerevents/)
 * <sup>3</sup> [Pointer Events | Can I use…](https://caniuse.com/#search=pointerdown)

@@ -19,7 +19,7 @@ To add to the fun, the page I was working on looked a little like this:
 
 There was a lot more than just a container and a table. So, any solution I came up with had to take all of those pieces into account.
 
-Flex to rescue. To make sure I understood how, I put together a mockup with JSFiddle.¹
+Flex to rescue. To make sure I understood how, I put together a mockup with JSFiddle.<sup>1</sup>
 
 I pulled together a rough approximation of the layout of my app using basic HTML.
 ```html
@@ -39,7 +39,7 @@ I pulled together a rough approximation of the layout of my app using basic HTML
 </div>
 ```
 
-With that in place, it was time to work through the CSS. Fortunately, enough google searches got me a good starting point.²
+With that in place, it was time to work through the CSS. Fortunately, enough google searches got me a good starting point.<sup>2</sup>
 
 In the end, my solution was quite simple:
 ``` css
@@ -61,10 +61,10 @@ When I see it written out like that, it feels like I should have been able to ge
 
 Regardless, I did get to a working solution and I’m pleased with how it turned out!
 
-My thanks to Eric @ Visual Pulse³ whose JSFiddle was the inspiration I needed to get to my own solution and Sung Kim for his eyes and help in refining my early solutions.⁴
+My thanks to Eric @ Visual Pulse<sup>3</sup> whose JSFiddle was the inspiration I needed to get to my own solution and Sung Kim for his eyes and help in refining my early solutions.<sup>4</sup>>
 
 Footnotes:
-* ¹ [Scrollable Internal Content - JSFiddle](https://jsfiddle.net/stephencweiss/zyjwgptr/)
-* ² [Height 100% in Flexbox Item | JSFiddle](https://jsfiddle.net/MadLittleMods/LmYay/)
-* ³ [Eric’s Fiddles | JSFiddle](https://jsfiddle.net/user/MadLittleMods/fiddles/)
-* ⁴ [Sung M. Kim | DEV.to](https://dev.to/dance2die)
+* <sup>1</sup> [Scrollable Internal Content - JSFiddle](https://jsfiddle.net/stephencweiss/zyjwgptr/)
+* <sup>2</sup> [Height 100% in Flexbox Item | JSFiddle](https://jsfiddle.net/MadLittleMods/LmYay/)
+* <sup>3</sup> [Eric’s Fiddles | JSFiddle](https://jsfiddle.net/user/MadLittleMods/fiddles/)
+* <sup>4</sup>> [Sung M. Kim | DEV.to](https://dev.to/dance2die)
