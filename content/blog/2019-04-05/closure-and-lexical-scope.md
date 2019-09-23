@@ -61,7 +61,7 @@ currentPlace() // 3
 
 Here’s a video of it in practice and debugging with Chrome Dev Tools
 
-Will Sentance, a founder of CodeSmiths, refers to a lexical scope as a function’s backpack (rather than the more colloquial “closure”).
+Will Sentance, a founder of CodeSmiths, refers to a lexical scope as a function’s backpack (rather than the more colloquial "closure").
 
 I like this for two reasons:
 

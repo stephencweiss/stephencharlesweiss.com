@@ -50,7 +50,7 @@ What started as passing along just the `icon` prop had now added a `disableRippl
 
 # Create A Mask
 
-Wanting to find a better way, I found that creating what I’m calling a “mask” worked quite well.
+Wanting to find a better way, I found that creating what I’m calling a "mask" worked quite well.
 
 By mask, all I mean is that my `LabelPosition` is the outward appearance for any of my actual components, which are still controlled by the same switch logic.
 

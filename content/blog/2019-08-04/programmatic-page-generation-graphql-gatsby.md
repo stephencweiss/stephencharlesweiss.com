@@ -96,7 +96,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
         {`posted by ${frontmatter.author}`}
       </p>
       <MDXRenderer>{code.body}</MDXRenderer>
-      <Link to=“/“>Return to home</Link>
+      <Link to="/">Return to home</Link>
     </Layout>
   );
 };
@@ -216,7 +216,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
         {`posted by ${frontmatter.author}`}
       </p>
       <MDXRenderer>{code.body}</MDXRenderer>
-      <Link to=“/“>Return to home</Link>
+      <Link to="/">Return to home</Link>
     </Layout>
   );
 };

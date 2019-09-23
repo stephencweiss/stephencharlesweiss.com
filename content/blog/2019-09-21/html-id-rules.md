@@ -15,7 +15,7 @@ From the spec itself:<sup>2</sup>
 
 The rules used to be more specific. In HTML4<sup>3</sup>:
 
-> **ID** and **NAME** tokens must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens (“-“), underscores (“\_”), colons (“:”), and periods (“.”).
+> **ID** and **NAME** tokens must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits ([0-9]), hyphens ("-"), underscores ("\_"), colons (":"), and periods (".").
 
 Note the restrictions as well as the fact that the id _had_ to start with a letter.
 

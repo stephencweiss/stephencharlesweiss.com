@@ -29,8 +29,8 @@ Before going in and changing a function definition, however, you may want to kno
 The `whence` builtin is one way to accomplish this with the `-c` and the `-f` options.
 
 According to the [manual](http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html):
-* the `c` option prints “the results in a*csh*-like format. This takes precedence over-v.”
-* The `f` option “causes the contents of a shell function to be displayed, which would otherwise not happen unless the -c flag were used.”
+* the `c` option prints "the results in a*csh*-like format. This takes precedence over-v."
+* The `f` option "causes the contents of a shell function to be displayed, which would otherwise not happen unless the -c flag were used."
 
 The commands would look like `whence -c [function]` or `whence -f [function]`.
 

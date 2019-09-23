@@ -54,7 +54,7 @@ function MyComponent() {
 
 # Conclusion
 
-What I like about this is how easy it is to understand what’s happening and the absence of any if / else blocks or ternary logic in the return block. While it does “violate” the Single Return Statement law, this feels to me like an appropriate early escape.
+What I like about this is how easy it is to understand what’s happening and the absence of any if / else blocks or ternary logic in the return block. While it does "violate" the Single Return Statement law, this feels to me like an appropriate early escape.
 
 That was actually my approach _before_ I’d found this pattern, and while it works, it doesn’t make it any easier for the next person coming along to understand what’s going on — and arguably, it’s much more difficult.
 

@@ -11,7 +11,7 @@ I was using this to programmatically create posts.
 
 In returning to that post later, however, I noticed that I actually forgot a relevant detail: how to test it in GraphiQL, the playground Gatsby provides.
 
-Continuing with the same example we used last time, you can see at the bottom left of the screen a “Query Variables” option.
+Continuing with the same example we used last time, you can see at the bottom left of the screen a "Query Variables" option.
 
 Clicking on it exposes an input window.
 
@@ -21,7 +21,7 @@ In my case, my only variable is a string for the argument `$slug`. To pass an op
 
 For example:
 ```javascript
-{“slug”: “hello-world”
+{"slug": "hello-world"}
 ```
 
 Note: It’s important to put quotes around Slug or it will error.

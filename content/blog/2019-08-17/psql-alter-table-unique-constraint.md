@@ -13,7 +13,7 @@ In those cases, we can use the `Alter Table` command to add a constraint. Let’
 
 # Commands
 `ALTER TABLE <table_name> ADD CONSTRAINT <constraint_name> UNIQUE (<field> [,...]);`
-This will add a unique constraint to the field(s) listed in the parentheses at the end of the command with the “name” of what’s put in the `<constraint_name>` part of the command.
+This will add a unique constraint to the field(s) listed in the parentheses at the end of the command with the "name" of what’s put in the `<constraint_name>` part of the command.
 
 ## Example
 ```psql

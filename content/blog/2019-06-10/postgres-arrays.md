@@ -43,7 +43,7 @@ FROM public.metadata_fields
 where groups_reso[1] <> 'Property';
 ```
 
-Attentive readers may notice that the index used here is `[1]` to refer to the _first_ property. That’s because “[b]y default, PostgreSQL uses one-based numbering for array elements.”<sup>1</sup>
+Attentive readers may notice that the index used here is `[1]` to refer to the _first_ property. That’s because "[b]y default, PostgreSQL uses one-based numbering for array elements."<sup>1</sup>
 
 Lots more to learn, but at least I can now move forward.
 

@@ -9,7 +9,7 @@ Recently, I was building an API to modify the data in a database.
 
 The field I was modifying happened to be an array, and I wanted to make sure that what the client was suggesting be added to the database was a valid value.
 
-Each row happened to a pre-defined set of “available” classes — classes that _could_ be enabled or disabled. For example:
+Each row happened to a pre-defined set of "available" classes — classes that _could_ be enabled or disabled. For example:
 
 | id  | classes_available | classes_enabled |
 | --- | ----------------- | --------------- |
@@ -22,7 +22,7 @@ This was good news: I had the data readily available. The question was _how do I
 
 Fortunately, PostgreSQL has a concept of array intersection built into the API for Array Operators<sup>1</sup>.
 
-The constraint formulation used the “contains” syntax (`@>`), though reversing the order I could easily have used the “is contained by” (`<@`).
+The constraint formulation used the "contains" syntax (`@>`), though reversing the order I could easily have used the "is contained by" (`<@`).
 
 To add the constraint, I added the `CONSTRAINT` to the DDL file for the table using the array operator.<sup>2</sup>
 

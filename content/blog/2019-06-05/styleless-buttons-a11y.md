@@ -15,7 +15,7 @@ Buttons, however, often pose a problem. They’re the best way to indicate inter
 
 One easy solution is to simply make a `<div role="button">` with an `onClick` event handler.
 
-A better solution is create a base button that is “styleless”.
+A better solution is create a base button that is "styleless".
 
 While not a _perfect_ solution (see CSS Tricks for some caveats<sup>2</sup>), the following is a good start:
 

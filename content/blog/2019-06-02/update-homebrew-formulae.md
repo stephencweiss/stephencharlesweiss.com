@@ -32,6 +32,6 @@ imageoptim-cli ✔                 fn                               mame        
 node ✔                           fobis                            mat2                             rebar3
 ```
 
-While this is easy enough to do every few weeks (and I’ve set a reminder in my Things list, right next to sharpen my kitchen knives), my next challenge is to schedule it using a “chron job” — something I’ve never done before!
+While this is easy enough to do every few weeks (and I’ve set a reminder in my Things list, right next to sharpen my kitchen knives), my next challenge is to schedule it using a "chron job" — something I’ve never done before!
 
 Also worth noting, if there’s a specific formula you want to upgrade, you can use `brew upgrade <formula>` (which you may notice is out of date by checking the version (`brew <formula> -v`).

@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['javascript', 'functional programming', 'currying']
 ---
 
-For a long time, I hated seeing functions like this: `const someFn = a => b => a + b;`. I thought this was just “code golf” (the idea of reducing a function to its _shortest_ incarnation) without concern for how it would be received by the _reader_ of the code later.
+For a long time, I hated seeing functions like this: `const someFn = a => b => a + b;`. I thought this was just "code golf" (the idea of reducing a function to its _shortest_ incarnation) without concern for how it would be received by the _reader_ of the code later.
 
 This can definitely be true and I’m still generally opposed to golf for the sake of itself. But, what I missed was that writing functions in this way, that is - using currying, can actually be really helpful.
 

@@ -19,7 +19,7 @@ Dan Abramov recently wrote about [React As A UI Runtime](https://overreacted.io/
 
 > Comparing the element type at the same position in the tree is usually enough to decide whether to reuse or re-create the corresponding host instance.
 >
-> But this only works well if child positions are static and don’t re-order. In our example above, even though message could be a “hole”, we still knew that the input goes after the message, and there are no other children.
+> But this only works well if child positions are static and don’t re-order. In our example above, even though message could be a "hole", we still knew that the input goes after the message, and there are no other children.
 >
 > With dynamic lists, we can’t be sure the order is ever the same.
 >
@@ -80,7 +80,7 @@ Don't do this. React will yell at you. Rightfully so. You'll
 # Index As Key
 
 What if we use an index for the key?
-When we modify our list and drop Lucy, the key that doesn’t get passed down to the children would be “2”. That key, however, referred to Nimbus - which is where React would focus its updating efforts. That’s definitely not what we want.
+When we modify our list and drop Lucy, the key that doesn’t get passed down to the children would be "2". That key, however, referred to Nimbus - which is where React would focus its updating efforts. That’s definitely not what we want.
 
 ```javascript
 render() {
@@ -177,11 +177,11 @@ becomes ...
 <Details key="id-2">{animal}</Details>
 ```
 
-It’s readily apparent that `“id-1"` is what disappeared!
+It’s readily apparent that `"id-1"` is what disappeared!
 
 # Conclusion
 
-> What’s a good value for a key? An easy way to answer this is to ask:**when would** _you_ **say an item is the “same” even if the order changed?** > \- Dan Abramov
+> What’s a good value for a key? An easy way to answer this is to ask:**when would** _you_ **say an item is the "same" even if the order changed?** > \- Dan Abramov
 
 The problem with using the index then is not that they are not unique. They are. Reliably so. It is that they are not reliably attached to the same element - so if an array shifts, the index will shift what it's pointing to.
 

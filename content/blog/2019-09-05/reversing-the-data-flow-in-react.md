@@ -2,7 +2,7 @@
 title: 'Using Callbacks To Reverse Data Flow In React'
 date: '2019-09-05'
 category: ['programming']
-tags: ['react','forms','validation','controller-presentation']
+tags: ['react', 'forms', 'validation', 'controller-presentation']
 ---
 
 React’s one way data flow makes it easy to reason through, but sometimes the controlling component needs to know what’s going on inside.
@@ -18,7 +18,7 @@ But if the logic for validating the input is _inside_, how do we get it back out
 
 Imagine a `FormContainer` even simpler than the drawing above. It’s just a phone number and a submit. We don’t want to be able to submit the form if the phone number is invalid (according _to_ the `PhoneInput` itself.
 
-``` javascript
+```javascript
 function FormContainer() {
   const [value, setValue] = useState(‘’);
   const [isInvalid, setIsInvalid] = useState(false);
@@ -35,10 +35,11 @@ function FormContainer() {
 }
 ```
 
-To implement the `PhoneInput` itself, we created a wrapper around  the `intl-tel-input` library which gave us access to their utility functions, including `isValidNumber`.<sup>1</sup>
+To implement the `PhoneInput` itself, we created a wrapper around the `intl-tel-input` library which gave us access to their utility functions, including `isValidNumber`.<sup>1</sup>
 
 To use it, we needed to use refs, which make this a more complicated component (at least to me), however, below, I’ve tried to focus only on the parts that are relevant:
-``` javascript
+
+```javascript
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/js/utils.js';
 import React, { useRef, forwardRef } from 'react';
@@ -56,11 +57,11 @@ export default function PhoneInput({ error, onBlur, onError, options, setValue, 
 
   return (
     <InputWithRef
-      as=“input”
+      as="input"
       error={error}
       onBlur={handleBlur}
       ref={refContainer}
-      type=“text”
+      type="text"
       {...rest}
       />
     );
@@ -73,6 +74,7 @@ In that way, we will be able to control the `<button>` element without wrapping 
 For more reading on refs and forwardingRefs see the React docs.<sup>2, 3</sup>
 
 ## Footnotes
-* <sup>1</sup> [intl-tel-input | Github](https://github.com/jackocnr/intl-tel-input)
-* <sup>2</sup> [Refs and the DOM | React](https://reactjs.org/docs/refs-and-the-dom.html)
-* <sup>3</sup> [Forwarding Refs | React](https://reactjs.org/docs/forwarding-refs.html)
+
+- <sup>1</sup> [intl-tel-input | Github](https://github.com/jackocnr/intl-tel-input)
+- <sup>2</sup> [Refs and the DOM | React](https://reactjs.org/docs/refs-and-the-dom.html)
+- <sup>3</sup> [Forwarding Refs | React](https://reactjs.org/docs/forwarding-refs.html)

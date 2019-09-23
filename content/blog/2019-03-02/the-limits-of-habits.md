@@ -17,9 +17,9 @@ In an interview on Software Engineering Daily, Brian McCullough offered an examp
 
 > I’m in the minority of this. Where people are gnashing their teeth about who can we trust - I think it was a weird world in my childhood where there were venues and you were going to trust CBS for sure and New York Times for sure, because they’re CBS and the New York Times.
 >
-> That’s a passive sort of lemming state of affairs that everyones like, “Oh, the current universe in which anyone can have a megaphone, there’s no editors, there’s no validation, there’s no verification [is problematic].”
+> That’s a passive sort of lemming state of affairs that everyones like, "Oh, the current universe in which anyone can have a megaphone, there’s no editors, there’s no validation, there’s no verification [is problematic]."
 >
-> I’d rather live in this new world, because that old world is a passive media relationship. That’s a passive populace. Now, the problem is that, because for several generations we’ve been taught to be passive media consumers, it’s not easy to just turn the switch and say “Listen, now you have to be an actively discerning consumer of media.”
+> I’d rather live in this new world, because that old world is a passive media relationship. That’s a passive populace. Now, the problem is that, because for several generations we’ve been taught to be passive media consumers, it’s not easy to just turn the switch and say "Listen, now you have to be an actively discerning consumer of media."
 >
 > I love Joe Rogen. I listen to the Joe Rogen podcast every single week. I love that fact that he seems to be an intellectually curious, genuinely curious guy. He’s a seeker. But just because I love Joe and he’s proven himself to me doesn’t mean I should ever shut off. I should always be skeptical.
 >

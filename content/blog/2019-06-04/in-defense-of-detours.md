@@ -14,7 +14,7 @@ For the sake of argument, I’m defining a detour as any path other than the mos
 
 Most of our daily life is routine. This routine engenders a sense of comfort and allows moments of reverie, such as during a commute or while washing dishes. When we’re thrust into an unfamiliar setting, however, our attention is drawn to the present moment. Forced to be present, we have the opportunity to evaluate the situation dispassionately, question the assumptions that allowed the shock, and consciously decide on our course of action.
 
-A natural product of detours, this presence is akin to aspirational component of Zen Buddhism. Referred to as _Shoshin_, or “Beginner’s Mind”, it is an attitude of “openness, eagerness, and a lack of preconceptions” - in other words, behaving like a beginner. The beauty of this is that as beginner’s our ability to absorb new information is at its greatest. We’re sponges and can grow quickly.
+A natural product of detours, this presence is akin to aspirational component of Zen Buddhism. Referred to as _Shoshin_, or "Beginner’s Mind", it is an attitude of "openness, eagerness, and a lack of preconceptions" - in other words, behaving like a beginner. The beauty of this is that as beginner’s our ability to absorb new information is at its greatest. We’re sponges and can grow quickly.
 
 When you’re driving down an unfamiliar road, you process information your mind typically filters out. Suddenly you _see_ road signs, store fronts, and people. The world is a richer place. Detours provide that gift.
 
@@ -22,7 +22,7 @@ Being in an unfamiliar place, we’re also less likely to feel confident. This c
 
 While the rule of detours is that they add time and distance, there is a huge range. Some detours are minor. Others take years to fully resolve.
 
-To put this in personal terms, I could argue that I’ve been on a nearly decade long detour. Before my 30th birthday, I’ve had 5 jobs in 4 industries. I have made many stops along the way, very few of which were expected or planned. In the beginning, I actively resisted the turns and suffered from anxiety as I resisted the diversion from my desired path - which I believed was the “right path.”
+To put this in personal terms, I could argue that I’ve been on a nearly decade long detour. Before my 30th birthday, I’ve had 5 jobs in 4 industries. I have made many stops along the way, very few of which were expected or planned. In the beginning, I actively resisted the turns and suffered from anxiety as I resisted the diversion from my desired path - which I believed was the "right path."
 
 I’m sensitive to using my experience to prove a point as it may suggest a) that I’ve arrived and b) that I’ve somehow _found the answer_. I don’t believe either to be the case. What I do believe, however, is that welcoming, not resisting, the detours of life has made me a happier person.
 

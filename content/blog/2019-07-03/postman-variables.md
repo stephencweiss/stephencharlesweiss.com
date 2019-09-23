@@ -18,7 +18,7 @@ With environments being the most useful at this time for me, that’s where I’
 
 # Managing Environments
 
-To create an Environment, select the Gear icon in the top right of your Postman window and click on “Manage Environments”
+To create an Environment, select the Gear icon in the top right of your Postman window and click on "Manage Environments"
 ![](./manage-environments.png)
 
 From here, you can manage a single environment (or multiple).

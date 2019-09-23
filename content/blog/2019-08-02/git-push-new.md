@@ -13,7 +13,7 @@ To push the current branch and set the remote as upstream, use
   git push —set-upstream origin feature/813/feature-description
 ```
 
-Taking a page from “Manual Work is a Bug” I decided that this time, I’d figure out how to fix it.<sup>1</sup>
+Taking a page from "Manual Work is a Bug" I decided that this time, I’d figure out how to fix it.<sup>1</sup>
 
 ## Summarizing The Problem
 Before I could figure out a solution, I needed to make sure I understood the problem.

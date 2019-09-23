@@ -31,7 +31,7 @@ My issue with the heroic consistency approach is the inclusion of heroism. The i
 
 My qualm is that we’re still striving to be heroes.
 
-As Brad notes, heroic efforts “take a huge toll emotionally, physically, and cognitively. Not a sustainable thing to strive for.”
+As Brad notes, heroic efforts "take a huge toll emotionally, physically, and cognitively. Not a sustainable thing to strive for."
 
 That may be true for heroic efforts, but I have found it’s also true for heroic consistency because the emotional, physical, and cognitive toll comes from trying to be a hero.
 
@@ -49,7 +49,7 @@ If the Middle Way is my goal, I needed a strategy for achieving it.
 
 # Wu-Wei
 
-_Wu Wei_ is what Benjamin Hoff describes as “Taoism-in-action” in _The Tao of Pooh_ and translates literally to “without doing, causing, or making”.
+_Wu Wei_ is what Benjamin Hoff describes as "Taoism-in-action" in _The Tao of Pooh_ and translates literally to "without doing, causing, or making".
 
 To illustrate the practice, Hoff cites Chuang-Tse’s writing.
 
@@ -57,9 +57,9 @@ To illustrate the practice, Hoff cites Chuang-Tse’s writing.
 >
 > One day, K’ung Fu-tse was standing at a distance from the pool’s edge, when he saw an old man being tossed about in the turbulent water. He called to his disciples, and together they ran to rescue the victim. By the time they reached the water, the old man had climbed out onto the bank and was walking along, singing to himself.
 >
-> K’ung Fu-tse hurried up to him. “You would have to be a ghost to survive that,” he said, “but you seem to be a man, instead. What secret power do you have?”
+> K’ung Fu-tse hurried up to him. "You would have to be a ghost to survive that," he said, "but you seem to be a man, instead. What secret power do you have?"
 >
-> “Nothing special,” the old man replied. “I began to learn while very young, and grew up practicing it. Now I am certain of success. I go down with the water and come up with the water. I follow it and forget myself. I survive because I don’t struggle against the water’s superior power. That’s all.”
+> "Nothing special," the old man replied. "I began to learn while very young, and grew up practicing it. Now I am certain of success. I go down with the water and come up with the water. I follow it and forget myself. I survive because I don’t struggle against the water’s superior power. That’s all."
 
 Unlike the old man in Chuang-Tse’s tale, I would have perished at the Gorge of Lu. In my pursuit of heroic consistency, I would have been unable to not try to affect my outcome - assuring my failure in a struggle against a force far greater than myself.
 

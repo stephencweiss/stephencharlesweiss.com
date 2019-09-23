@@ -23,7 +23,7 @@ Multiple parameters has been the much more common scenario in my experience to d
 
 // Build the query string
 let reqName = `John`, reqAge = `23`;
-const queryString = “name=“+reqName+”&age=“+reqAge
+const queryString = "name="+reqName+"&age="+reqAge
 
 // Make the AJAX request ...
 ```
@@ -45,7 +45,7 @@ let queryString = ‘’;
 for(name in reqNames) {
   queryString += `&names[]=${reqNames[name]}`;
 };
-// queryString === “&names[]=John&names[]=James”
+// queryString === "&names[]=John&names[]=James"
 
 // before submitting, the leading `&` will need to be trimmed
 queryString = queryString.substring(1);
@@ -72,7 +72,7 @@ for(name in reqNames) {
   queryString += `&names[]=${reqNames[name]}`;
 };
 
-// queryString === “age=23&names[]=John&names[]=James”
+// queryString === "age=23&names[]=John&names[]=James"
 // Unlike above, since the names are not the first element, we do not need to trim the leading `&`
 
 // Make the AJAX request ...

@@ -11,14 +11,14 @@ I knew that there was more out there, however, I didn’t have a great framework
 
 To appreciate _why_ lifecycle methods are different, more special than, other methods - look no further than the React docs:
 
-> Each component has several “lifecycle methods” that you can override to run code at particular times in the process.
+> Each component has several "lifecycle methods" that you can override to run code at particular times in the process.
 
 Let’s break that down:
-“Each component has several ‘lifecycle methods’” means that React will be looking for these methods at different stages in the building, updating, and tearing down a component on the DOM.
+"Each component has several ‘lifecycle methods’" means that React will be looking for these methods at different stages in the building, updating, and tearing down a component on the DOM.
 
-“…that you can override” means that when you define them in your component, you’re telling React what to do when we get to that stage. Think about a `render` method. By defining `render`, we describe _what_ we want to render — React manages the _when_.
+"…that you can override" means that when you define them in your component, you’re telling React what to do when we get to that stage. Think about a `render` method. By defining `render`, we describe _what_ we want to render — React manages the _when_.
 
-“…at particular times in the process” refers to the different stages of the life cycle, of which there are four: Mounting, Updating, Unmounting, and Error Handling.
+"…at particular times in the process" refers to the different stages of the life cycle, of which there are four: Mounting, Updating, Unmounting, and Error Handling.
 
 So, by defining the different methods in our component, we can tell React what we want to do at certain points.
 

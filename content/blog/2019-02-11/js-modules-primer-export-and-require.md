@@ -33,7 +33,7 @@ To use modules natively in Node.js, we have several options (as explained by [Ax
 **The short answer then is: If you’re not transpiling with Babel or Webpack, using the `esm` library or the `--experimental-modules` flag, you *need* to use `require` statements.**
 
 # Modules In Node.js: Exports & Require
-In the Node.js context, we have a few different ways to “bundle” a module together to be reference-able by other modules.
+In the Node.js context, we have a few different ways to "bundle" a module together to be reference-able by other modules.
 * Named exports
 * Default Exports
 

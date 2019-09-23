@@ -54,7 +54,7 @@ ADD COLUMN customer_name VARCHAR NOT NULL
 ```
 If we do _just_ this, we’ll get the error discussed above:
 ```sql
-ERROR:column “contact_name” contains null values
+ERROR:column "contact_name" contains null values
 ```
 
 ### Option 1: Add constraint _after_ updating data

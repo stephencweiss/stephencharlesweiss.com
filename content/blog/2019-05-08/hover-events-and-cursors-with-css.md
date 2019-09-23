@@ -9,7 +9,7 @@ More CSS fun today!
 
 One way to visually indicate that an element is clickable is by changing the cursor to a
 
-If a data element is supposed to be clickable, you may want to change the cursor to indicate that the behavior is available. You can do this with pseudo-selectors in your CSS and the attribute “cursor”.
+If a data element is supposed to be clickable, you may want to change the cursor to indicate that the behavior is available. You can do this with pseudo-selectors in your CSS and the attribute "cursor".
 
 ```css
 .my-class-name {

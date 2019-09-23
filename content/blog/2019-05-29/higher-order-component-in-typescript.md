@@ -5,9 +5,9 @@ category: ['programming']
 tags: ['javascript', 'typescript', 'higher order components']
 ---
 
-Imagine you have a prop that you want to be passed all the way through to the DOM. If you try and pass through a prop that isn’t semantically correct (i.e. doesn’t use “kebab-case”), React will yell at you.
+Imagine you have a prop that you want to be passed all the way through to the DOM. If you try and pass through a prop that isn’t semantically correct (i.e. doesn’t use "kebab-case"), React will yell at you.
 
-One way to handle that is to use a Higher Order Component (HOC). HOCs are components that return a component. Another way to think about them are as “wrappers” - so that’s what I’m going to call mine here.
+One way to handle that is to use a Higher Order Component (HOC). HOCs are components that return a component. Another way to think about them are as "wrappers" - so that’s what I’m going to call mine here.
 
 Let’s look at an example where we use an HOC, `Wrapper`, to look at the props being passed in and determine what to do.
 

@@ -13,9 +13,9 @@ Sometimes, you use the same words over and over and you don’t want to fight yo
 
 Here’s how to do that on MacOS:
 
-1. Either right click in the body of the document you’re typing or look for the “Edit” menu in the top bar.
+1. Either right click in the body of the document you’re typing or look for the "Edit" menu in the top bar.
 2. Kick things off with running the spell check (`⌘ + ;`)
-3. Then open up the spell checker window with “Show Spelling & Grammar” (`⌘ + :`)
-4. Make sure you’ve spelled it the way you want it, then click “Learn”
+3. Then open up the spell checker window with "Show Spelling & Grammar" (`⌘ + :`)
+4. Make sure you’ve spelled it the way you want it, then click "Learn"
 
 That’s it! Now, not only will there be no red squiggly line, but auto-correct won’t jump in to change your sentence!

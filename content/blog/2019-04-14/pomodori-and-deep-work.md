@@ -14,4 +14,4 @@ After buying a pomodoro timer for myself (~\$8 to get it to sync between my lapt
 
 It took me a few days to actually add an intention for my pomodori, but since doing it, I’ve found them to be even more motivating. I _really_ want to finish the task in that 25 minutes - even though I know that I could just do another one after the break.
 
-The final point here is that Mani has a “pomodoro challenge” he talked about - 200 minutes of pomodori before noon. That’s “just” eight pomodori. With breaks, it would mean you need to start around 7am in order to hit it. I didn’t. But, I did consistently hit a goal of 10 / day this week. We’ll see if I keep it going, but so far, am a big fan of how it keeps me focused and engaged.
+The final point here is that Mani has a "pomodoro challenge" he talked about - 200 minutes of pomodori before noon. That’s "just" eight pomodori. With breaks, it would mean you need to start around 7am in order to hit it. I didn’t. But, I did consistently hit a goal of 10 / day this week. We’ll see if I keep it going, but so far, am a big fan of how it keeps me focused and engaged.

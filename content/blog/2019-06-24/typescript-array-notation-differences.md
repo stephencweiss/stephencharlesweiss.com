@@ -14,7 +14,7 @@ When investigating, I was steered to the Typescript Handbook<sup>1</sup> which n
 ```typescript
 function foo(arr: ReadonlyArray<string>) {
     arr.slice();        // okay
-    arr.push(“hello!”); // error!
+    arr.push("hello!"); // error!
 }
 ```
 

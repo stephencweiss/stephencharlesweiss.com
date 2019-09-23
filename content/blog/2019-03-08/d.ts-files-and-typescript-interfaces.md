@@ -49,4 +49,4 @@ export interface UserPreferences {
 }
 ```
 
-StackOverflow on the topic: [About “\*.d.ts” in TypeScript](https://stackoverflow.com/questions/21247278/about-d-ts-in-typescript)
+StackOverflow on the topic: [About "\*.d.ts" in TypeScript](https://stackoverflow.com/questions/21247278/about-d-ts-in-typescript)
