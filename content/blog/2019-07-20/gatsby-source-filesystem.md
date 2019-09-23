@@ -4,11 +4,14 @@ date: '2019-07-20'
 category: ['programming']
 tags: ['gatsby', 'graphql', 'filesystem', 'configuration']
 ---
+
 Continuing my learnings in Gatsby and today I found out a few new pieces about the filesystem plugin, `gatsby-source-filesystem`.<sup>1</sup> The filesystem plugin is from Gatsby and allows local files to be used within the Graphql data layer.
 
 ## Configuring Gatsby
+
 The first thing to do (after installing it with `npm i gatsby-source-filesystem` is to add the plugin within our `gatsby-config.js`:
-``` javascript
+
+```javascript
 // gatsby-config.js
 module.exports = {
 ...
@@ -24,8 +27,10 @@ module.exports = {
 ...
 }
 ```
+
 Notice that the configuration gives it a name (optional) and a path. The path is just `posts` in this case because I’m only trying to resolve the directory in the root _also_ named `posts`.
-```zsh
+
+```shell
 .
 ├── LICENSE
 ├── README.md
@@ -41,6 +46,7 @@ Notice that the configuration gives it a name (optional) and a path. The path is
 ```
 
 ## Using The Filesystem
+
 Now that the filesystem is linked up, let’s see what it looks like by exploring the graphql data layer.
 
 Run the Gatsby in development (`npm run develop` ). Assuming the build goes well, you should have a GraphQL Playground at `http://localhost:8000/___graphql`.
@@ -52,10 +58,12 @@ The files returned match those that I currently have in my posts directory.
 ![](./gatsby-project-directory.png)
 
 ## Multiple Paths
+
 One of the immediate questions I had when I learned about the filesystem plugin was what to do in the event of multiple directories. The configuration didn’t immediately shout out how I’d be able to set up more than one path for access by the graphql data layer.
 
 Fortunately, it’s both very simple, and one of the first questions the docs answer for us: add another entry in your plugins with the new path desired. Repeat as necessary. For example:
-``` javascript
+
+```javascript
 // gatsby-config.js
 module.exports = {
 ...
@@ -79,6 +87,6 @@ module.exports = {
 }
 ```
 
-
 ## Footnotes
-* <sup>1</sup> [Gatsby Source Filesystem | Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#how-to-use)
+
+- <sup>1</sup> [Gatsby Source Filesystem | Gatsby](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#how-to-use)
