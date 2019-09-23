@@ -19,8 +19,6 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
-                date
-                publish
               }
             }
           }
@@ -37,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
-      console.log(JSON.stringify({ post }, null, 2))
+
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
