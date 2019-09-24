@@ -22,6 +22,6 @@ Through trial and error, it turns out this is a Regex pattern that you can use t
 
 So, if you name all feature branches `feature/xxx` then, you could use that, or `bugs/yyy` if they have a different set of checks / requirements.
 
-This is really handy - unfortunately, I didn’t read closely enough and I thought it was just a label for my rule because it kept not saving. My first few attempts were “Netlify Rule” or something like it, which is not a valid git branch name and so Github simply rejected the rule.
+This is really handy - unfortunately, I didn’t read closely enough and I thought it was just a label for my rule because it kept not saving. My first few attempts were "Netlify Rule" or something like it, which is not a valid git branch name and so Github simply rejected the rule.
 
 The more you know!

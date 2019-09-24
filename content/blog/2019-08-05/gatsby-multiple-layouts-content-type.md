@@ -94,7 +94,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // In node (which this is), graphql is a function that takes a string.
   const result = await graphql(`
     query {
-      blog: allFile(filter: { sourceInstanceName: { eq: “blog” } }) {
+      blog: allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
         nodes {
           childMdx {
             frontmatter {
@@ -103,7 +103,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-      video: allFile(filter: { sourceInstanceName: { eq: “video” } }) {
+      video: allFile(filter: { sourceInstanceName: { eq: "video" } }) {
         nodes {
           childMdx {
             frontmatter {

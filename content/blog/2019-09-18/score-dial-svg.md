@@ -24,7 +24,7 @@ Two resources in particular I used heavily:
 - Triangle Calculator: [Triangle Calculator](https://www.calculator.net/triangle-calculator.html)
 - Degrees to Radians Calculator: [Degrees to Radians conversion](https://www.rapidtables.com/convert/number/degrees-to-radians.html)
 
-Third, a lot of the implementation required understanding _where_ on the edge of the circle I was given the score. I ended up calculating that thanks to the “parametric equation” for a circle which I found, as usual via StackOverflow<sup>1</sup>
+Third, a lot of the implementation required understanding _where_ on the edge of the circle I was given the score. I ended up calculating that thanks to the "parametric equation" for a circle which I found, as usual via StackOverflow<sup>1</sup>
 
 The one part of magic that I never quite understood was _why_ I reversed the sign on the Y coordinate. I'm sure it has something to do with the direction of rotation and where I'm starting from, but still, I couldn't quite work through it.
 

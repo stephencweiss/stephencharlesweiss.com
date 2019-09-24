@@ -5,9 +5,9 @@ category: ['musings']
 tags: ['donald glover', 'thank you note']
 ---
 
-Dear Donald, 
+Dear Donald,
 
-Four years ago, you told me to “[Learn To Code](https://www.thehunt.com/the-hunt/XWvoQ4-childish-gambino-learn-to-code-sweatshirt).” This month I will be taking the next step in that journey as I start a full-time program to transition into software engineering.
+Four years ago, you told me to "[Learn To Code](https://www.thehunt.com/the-hunt/XWvoQ4-childish-gambino-learn-to-code-sweatshirt)." This month I will be taking the next step in that journey as I start a full-time program to transition into software engineering.
 
 I wanted to take a moment and express my gratitude for you. I don’t think it’s a stretch to say that you have changed my life for the better.
 

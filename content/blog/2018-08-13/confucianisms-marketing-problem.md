@@ -5,9 +5,9 @@ category: ['philosophy']
 tags: ['categorical imperative', 'christine gross-loh', 'confucius', 'immanuel kant', 'marketplace of ideas', 'michael puett']
 ---
 
-I’m currently reading *[The Path](https://smile.amazon.com/Path-Chinese-Philosophers-Teach-About/dp/1476777845?sa-no-redirect=1)* by Michael Puett and Christine Gross-Loh. 
+I’m currently reading *[The Path](https://smile.amazon.com/Path-Chinese-Philosophers-Teach-About/dp/1476777845?sa-no-redirect=1)* by Michael Puett and Christine Gross-Loh.
 
-Puett and Gross-Loh contrast Confuscius to Kant and the modern “Trolley Problem.” Kant is famous for his “[Categorial Imperative](https://en.wikipedia.org/wiki/Categorical_imperative)” which I found compelling for its simplicity even while my classmates gravitated toward’s Mill’s Utilitarian approach.
+Puett and Gross-Loh contrast Confuscius to Kant and the modern "Trolley Problem." Kant is famous for his "[Categorial Imperative](https://en.wikipedia.org/wiki/Categorical_imperative)" which I found compelling for its simplicity even while my classmates gravitated toward’s Mill’s Utilitarian approach.
 
 *The Path* argues that Kant, who they use as a stand-in for Western philosophers more generally, seeks to strip out context from a decision to get to ground truth. That’s why it is *never* appropriate to lie, even to prevent murderer from finding a victim. When judging the behavior, the surrounding context of that activity is ignored.
 

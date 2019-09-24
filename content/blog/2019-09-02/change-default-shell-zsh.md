@@ -30,7 +30,7 @@ $ cat /etc/shells
 ## Change Shells
 Using the Change Shell and Which programs, you can change the default with a one line command:`$ chsh -s $(which zsh)`
 
-The `-s` flag “Attempt[s] to change the user's shell to newshell.”
+The `-s` flag "Attempt[s] to change the user's shell to newshell."
 
 With this done - restart the terminal and you should be in the new shell.
 

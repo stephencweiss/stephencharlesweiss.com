@@ -2,39 +2,41 @@
 title: Adding Indexes To Mongo + A Case Study
 date: '2018-11-30'
 category: ['programming']
-tags: ['benchmarks','databases','indexes','mongodb','time complexity']
+tags: ['benchmarks', 'databases', 'indexes', 'javascript', 'time complexity']
 ---
 
-I've been working on projects with larger data sets recently and have begun to notice that not *all* queries resolve in one or two milliseconds. 
+I've been working on projects with larger data sets recently and have begun to notice that not _all_ queries resolve in one or two milliseconds.
 
 As I wrote in [Indexing Databases - A Postgres Example](../../2018-11-22/indexing-databases-a-postgres-example), adding indexes can speed up queries, but come at a cost of inserting / updating times.
 
-This time around, I was working with MongoDB and wanted to understand how indexing worked. While the principles hold, the details vary.
+This time around, I was working with javascript and wanted to understand how indexing worked. While the principles hold, the details vary.
 
 Still - the conclusion's the same: if you're reading more than you're writing and can come up with a sound index target, it can be a valuable tool in your tool belt.
 
-Let's dig in. 
+Let's dig in.
 
 # Common Commands
 
 The three most useful beginner commands I found were create, get, and drop.
-```mongodb
+
+```javascript
 //mongo sh
 db.collection.createIndex()
 db.collection.getIndexes()
-db.collection.dropIndexes(["<index_name>"])
+db.collection.dropIndexes(['<index_name>'])
 ```
+
 ## Create an Index
 
-`db.collection.createIndex( { <field_name> : <order> [, <field_name> : <order> ...] } )` 
+`db.collection.createIndex( { <field_name> : <order> [, <field_name> : <order> ...] } )`
 
 When creating an index - you can specify the field(s) and the order.
 
 The order is `1` for ascending and `-1` for descending.
 
-The ordering is done sequentially, so the first field listed is sorted first, then the second, and so on. 
+The ordering is done sequentially, so the first field listed is sorted first, then the second, and so on.
 
-```mongodb
+```javascript
 //mongo sh
 > db.descriptions.createIndex( { productId: 1 } )
 {
@@ -44,15 +46,16 @@ The ordering is done sequentially, so the first field listed is sorted first, th
   "ok" : 1
 }
 ```
+
 ## Review Indexes
 
-`db.collection.getIndexes()` 
+`db.collection.getIndexes()`
 
 To see the indexes on a collection, use the `getIndexes()` method.
 
-This is helpful when confirming the index is on the expected attribute of the document and to see which queries have been optimized. 
+This is helpful when confirming the index is on the expected attribute of the document and to see which queries have been optimized.
 
-```mongodb
+```javascript
 // mongo sh
 > db.descriptions.getIndexes()
 [
@@ -77,9 +80,9 @@ This is helpful when confirming the index is on the expected attribute of the do
 
 ## Drop Indexes
 
-`db.collection.dropIndexes(["<index_name>"])` If you want to remove an index, you can use the `dropIndexes()` method. The optional parameter allows for specifying *_*which*_* index should be dropped. The name can be retrieved using the `getIndexes()` method. If no name is specified, all *non*-`_id` indexes will be dropped. 
+`db.collection.dropIndexes(["<index_name>"])` If you want to remove an index, you can use the `dropIndexes()` method. The optional parameter allows for specifying *\_*which*\_* index should be dropped. The name can be retrieved using the `getIndexes()` method. If no name is specified, all _non_-`_id` indexes will be dropped.
 
-```mongodb
+```javascript
 // mongo sh
 > db.descriptions.dropIndex("product_id_1")
 { "nIndexesWas" : 2, "ok" : 1 }
@@ -94,19 +97,19 @@ This is helpful when confirming the index is on the expected attribute of the do
 
 # Case Study
 
-So what do indexes actually get us? 
+So what do indexes actually get us?
 
-To test this, I created a sample database (`trailblazers`) and collection (`descriptions`) and generated 10m rows of data. 
+To test this, I created a sample database (`trailblazers`) and collection (`descriptions`) and generated 10m rows of data.
 
-I then compared the performance of the same lookup query on the database pre- and post-index. This is not a scientific study, but at least when querying on the indexed attribute, query times fell 99.99% from 15000+ ms to ~1 ms. 
+I then compared the performance of the same lookup query on the database pre- and post-index. This is not a scientific study, but at least when querying on the indexed attribute, query times fell 99.99% from 15000+ ms to ~1 ms.
 
 Let's take a look.
 
-These times were found using the `.explain(“executionStats”)` method. 
+These times were found using the `.explain("executionStats")` method.
 
 ## Without An Index
 
-```mongodb
+```javascript
 //mongo sh
 db.descriptions.find( {productId: {$gt : 9999990 } } ).explain("executionStats")
 {
@@ -132,7 +135,7 @@ db.descriptions.find( {productId: {$gt : 9999990 } } ).explain("executionStats")
 
 ## With An Index
 
-```mongodb
+```javascript
 //mongo sh
 db.descriptions.find( {productId: {$gt : 9999990 } } ).explain("executionStats")
 {
@@ -159,16 +162,16 @@ db.descriptions.find( {productId: {$gt : 9999990 } } ).explain("executionStats")
 
 ## Conclusion
 
-The index created a much more efficient query because Mongo knew exactly where to go to find the documents in question. 
+The index created a much more efficient query because Mongo knew exactly where to go to find the documents in question.
 
-Without the index, the query reviewed all 10 million + documents. With the index, that number was cut to 10. 
+Without the index, the query reviewed all 10 million + documents. With the index, that number was cut to 10.
 
 Another way to think about this is that the index changed the time complexity of the query from linear to constant.
 
 As the database continues to grow, indexed fields can be found in constant time because the index offers a pointer.
 
-That direction comes at a cost of a slower insert / update time, but if the database has more reads than writes, that trade off can be worth it quickly. 
+That direction comes at a cost of a slower insert / update time, but if the database has more reads than writes, that trade off can be worth it quickly.
 
 # Further Reading
 
-[MongoDB docs](https://docs.mongodb.com/manual/indexes/#create-an-index)
+[javascript docs](https://docs.javascript.com/manual/indexes/#create-an-index)

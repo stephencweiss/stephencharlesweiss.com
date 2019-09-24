@@ -13,7 +13,7 @@ I knew that _shouldn’t_ have been the case because I had only one application 
 
 Still, killing the process multiple times from the console didn’t work, so I went in search of the process ID (PID) to kill it specifically.
 
-There are multiple ways to do this, but the one that worked for me out of the box (on Mac) was `lsof` which is the “list open files” program.<sup>1</sup>
+There are multiple ways to do this, but the one that worked for me out of the box (on Mac) was `lsof` which is the "list open files" program.<sup>1</sup>
 
 The `-i` flag allows for inclusion of specific ports.
 

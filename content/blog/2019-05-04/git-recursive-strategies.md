@@ -11,7 +11,7 @@ $ git check out <branch>
 $ git merge master -s recursive -X theirs
 ```
 
-The `-s` is a flag for `strategies` and the `-X` is a “sub-flag” for the selected strategy (in the example above, that’s `recursive`). In our case, since I want to defer to `master`, I select `theirs`.
+The `-s` is a flag for `strategies` and the `-X` is a "sub-flag" for the selected strategy (in the example above, that’s `recursive`). In our case, since I want to defer to `master`, I select `theirs`.
 
 The inverse of `theirs` is `ours` and is also possible:
 ```bash

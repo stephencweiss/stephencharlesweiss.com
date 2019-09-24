@@ -58,13 +58,13 @@ While this does optimize the repository’s storage, it doesn’t address the br
 
 # Step Two: Pruning Dead References
 
-I’d heard a lot about “pruning”, so that was where I started. However, the manual page for `git prun` begins with the following note:
+I’d heard a lot about "pruning", so that was where I started. However, the manual page for `git prun` begins with the following note:
 
 > In most cases, users should run `git gc`, which calls `git prune`
 
 Having started with `git gc` then, you can appreciate my confusion that. I still had all of my branches.
 
-Beginning to despair and believe that “pruning” meant something fundamentally different in `git` from gardening. The branches didn’t get cut! Turns out I was just hasty. The idea behind pruning _is_ what we’re looking for aftterall - it’s just where we prune that matters.
+Beginning to despair and believe that "pruning" meant something fundamentally different in `git` from gardening. The branches didn’t get cut! Turns out I was just hasty. The idea behind pruning _is_ what we’re looking for aftterall - it’s just where we prune that matters.
 
 Instead of `git prune`, we want to remove the references we have locally that no longer exist on the remote branch. To do that, we use `git fetch --prune <name>`
 
@@ -72,7 +72,7 @@ Caveat from the manual:
 
 > The pruning feature doesn’t actually care about branches, instead it’ll prune local↔︎remote-references as a function of the refspec of the remote (see `<refspec>` and [CONFIGURED REMOTE-TRACKING BRANCHES](https://git-scm.com/docs/git-fetch#CRTB) above).
 >
-> Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch —prune <name> “refs/tags/*:refs/tags/*”` it won’t be stale remote tracking branches that are deleted, but any local tag that doesn’t exist on the remote.
+> Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch —prune <name> "refs/tags/*:refs/tags/*"` it won’t be stale remote tracking branches that are deleted, but any local tag that doesn’t exist on the remote.
 >
 > This might not be what you expect, i.e. you want to prune remote `<name>`, but also explicitly fetch tags from it, so when you fetch from it you delete all your local tags, most of which may not have come from the `<name>` remote in the first place.
 
@@ -113,7 +113,7 @@ The commands we’ll combining for this are: `git branch -vv | grep '[origin/.*:
 
 The verbose flag has two levels within `git branch`. If you repeat it (i.e., `git branch -vv`) , git will print the name of the upstream branch in addition to the the SHA hash and the commit message for the branch HEAD.
 
-This is extra helpful because of a few pieces of information that comes along for the ride - notably “gone” and “behind”.
+This is extra helpful because of a few pieces of information that comes along for the ride - notably "gone" and "behind".
 
 ```bash
 $ gb -vv
@@ -127,9 +127,9 @@ In the above, my local branch for `bug/jump-to-menu-stepper-index` was associate
 
 Similarly, we can see that while my `/grid` branch is up to date, my `master` is behind by 28 commits.
 
-In our case, we want to delete those that don’t have an upstream reference. We can use the `grep` program to filter the results from `git branch -vv` to get only those that are “gone” with a pipe.
+In our case, we want to delete those that don’t have an upstream reference. We can use the `grep` program to filter the results from `git branch -vv` to get only those that are "gone" with a pipe.
 
-If you’re following along at home, we’re now at `git branch -vv | grep '[origin/.*: gone]'`. The `grep` utility “searches any given input files, selecting lines that match one or more patterns.” Therefore, the output of the `grep` is only the branches where the output matches the pattern `[origin/.*: gone]`. (It’s worth that the pattern does not need to be the beginning or end, just that it exist. The `*` is a wildcard.)
+If you’re following along at home, we’re now at `git branch -vv | grep '[origin/.*: gone]'`. The `grep` utility "searches any given input files, selecting lines that match one or more patterns." Therefore, the output of the `grep` is only the branches where the output matches the pattern `[origin/.*: gone]`. (It’s worth that the pattern does not need to be the beginning or end, just that it exist. The `*` is a wildcard.)
 
 Next up is the `awk '{print $1}'` which prints the first field for each line passed to it.
 
@@ -155,7 +155,7 @@ Now, that we have a list of branches we want to delete from the `awk` printout, 
 
 This is our final command in `git branch -vv | grep '[origin/.*: gone]' | awk '{print $1}' | xargs git branch -d`.
 
-The `xargs` utility works by reading “space, tab, newline and end-of-file delimited strings from the standard input” and executing a utility with the strings as arguments.
+The `xargs` utility works by reading "space, tab, newline and end-of-file delimited strings from the standard input" and executing a utility with the strings as arguments.
 
 In our case that means it reads the newline delimited branch names that are piped from the `awk` utility and passes them as arguments to `git branch -d`, our utility.
 

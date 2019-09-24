@@ -1,26 +1,26 @@
 ---
-title: "Error Handling: Uncaught TypeError: this.searchDB is not a function"
+title: 'Error Handling: Uncaught TypeError: this.searchDB is not a function'
 date: '2018-12-12'
 category: ['programming']
-tags: ['bind','error handling','react', 'this']
+tags: ['bind', 'error handling', 'react', 'this']
 ---
 
 While working on a React project, I came across the following error: `Uncaught TypeError: this.searchDB is not a function`
 
 `searchDB` is a method on my component that is called when certain buttons are clicked.
 
-In retrospect, this is a common issue that comes from a failure to appropriately supply context. 
+In retrospect, this is a common issue that comes from a failure to appropriately supply context.
 
-```React
+```javascript
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
     }
-    this.searchDB = this.searchDB.bind(this); 
+    this.searchDB = this.searchDB.bind(this);
     this.handleClick = this.handleClick.bind(this); // This was the missing critical line
   }
-  
+
   handleClick (type, param) {
     if (type === "Search") {
       this.searchDB(param);
@@ -36,7 +36,8 @@ class App extends React.Component {
   }
 }
 ```
-Since the `searchDB` method was being called *when* a button was clicked, the context was set by the handleClick, which was the window -- *not* the component itself.
+
+Since the `searchDB` method was being called _when_ a button was clicked, the context was set by the handleClick, which was the window -- _not_ the component itself.
 
 The window does not have a function `searchDB`, however, so the fact that it is not defined is not at all surprising.
 

@@ -11,7 +11,7 @@ tags: ['learning', 'growth', 'pragmatism']
 
 This maxim screams pragmatism. Don’t optimize too early. Get something working. Then, and only then, make it better. It’s also not my natural inclination. If I had my druthers, I would much rather do it _right_ the first time.
 
-The challenge, of course, is that I don’t know _how_ to do it “right.” At least not at first.
+The challenge, of course, is that I don’t know _how_ to do it "right." At least not at first.
 
 I sit down, plan my approach, trying to anticipate problems and how I’d solve them all in vain. Until I dive in and begin work, I don’t know everything. I can’t know everything.
 
@@ -19,7 +19,7 @@ There are known unknowns. Those are the ones I have contingencies for. Then, the
 
 Then there’s the problem of what to do _next_. This is particularly acute at the moment that we’ve achieved a working solution. Suddenly the strongest forces point in one direction: toward the next challenge that needs tackling, the next problem that needs solving. These forces come from well-intentioned managers, project deadlines, and even the more ephemeral cultural and societal expectations for constant, unyielding, progress toward something _better_.
 
-There are some countervailing winds - calls to pause, reflect and revisit - but support is scarce. A recent Wall Street Journal report concluded that only 27% of companies have a defined post-mortem process and 94% of those were only set to occur after significant _failures_.<sup>3</sup> Different project methodologies (e.g., Agile and Scrum) bake in “retrospectives”, but their popularity is in constant flux and adherence is at the discretion of project managers (who have deadlines and delivery schedules they need to meet).
+There are some countervailing winds - calls to pause, reflect and revisit - but support is scarce. A recent Wall Street Journal report concluded that only 27% of companies have a defined post-mortem process and 94% of those were only set to occur after significant _failures_.<sup>3</sup> Different project methodologies (e.g., Agile and Scrum) bake in "retrospectives", but their popularity is in constant flux and adherence is at the discretion of project managers (who have deadlines and delivery schedules they need to meet).
 
 Make space to revisit problems - whether the role we’re inhabiting is an individual contributor, a member of a team, or as a leader. Do it quickly and do it often. Do it for ourselves and do it for our team. Resist the pressure to move onto what’s next. Pause, reflect, and importantly, _revisit_ because these activities pay dividends! If done quickly enough, revisiting a problem can pay down a debt incurred by implementing a working, but suboptimal, solution _before_ it has a chance to accumulate. And regardless of when it’s done, the process will cement lessons learned through the process - preparing us for the _next_ problem or challenge.
 
@@ -55,7 +55,7 @@ At least now I knew _what_ smelled and could direct my efforts toward fixing it!
 
 Once we have a working solution, it can be difficult to justify spending _more_ time on it, but that’s because it’s often difficult to see how interconnected problems are. If every problem were solved in a vacuum, then it wouldn’t matter if a solution were complicated or not as long as it worked. The reality, however, is that most systems are in fact tightly coupled - from the climate<sup>7</sup> to the human body, and from helicopters to software.
 
-This issue is particularly pernicious in software which has the allusion of mutability. When Marc Andreessen says “software is eating the world” I took it as assumed that part of the reason was the ease with which it could evolve and change.<sup>8</sup> This mutability is a law as Moore’s Law is a law - that is, it does not occur naturally but only through the hard work of individuals striving to make it so.
+This issue is particularly pernicious in software which has the allusion of mutability. When Marc Andreessen says "software is eating the world" I took it as assumed that part of the reason was the ease with which it could evolve and change.<sup>8</sup> This mutability is a law as Moore’s Law is a law - that is, it does not occur naturally but only through the hard work of individuals striving to make it so.
 
 > There’s nothing more permanent, than a temporary hack.
 > — Unknown, via Kyle Simpson
@@ -88,7 +88,7 @@ By revisiting problems and making growth more tangible, we acknowledge we are no
 
 Making space to revisit problems is an investment. While it’s sticker-price may seem high, the time it takes to revisit a problem and ask probing questions about what lessons were learned, what went well, and what could have gone better will seem like a pittance when compared against the time saved in the future.
 
-For me, while my natural inclination may still be “do it right the first time” - the process of recognizing the value in revisiting problems has demonstrated that it’s not only an impractical aspiration, but short-sighted. Doing it right the first time implies an absence of potential lessons and leaves me fixed. Challenging myself to document what I learned reinforces the fact that I’m a work in progress. In other words, I’m human.
+For me, while my natural inclination may still be "do it right the first time" - the process of recognizing the value in revisiting problems has demonstrated that it’s not only an impractical aspiration, but short-sighted. Doing it right the first time implies an absence of potential lessons and leaves me fixed. Challenging myself to document what I learned reinforces the fact that I’m a work in progress. In other words, I’m human.
 
 ## Footnotes
 

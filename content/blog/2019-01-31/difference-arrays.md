@@ -7,7 +7,7 @@ tags: ['difference arrays', 'data structures', 'arrays']
 
 # Difference Arrays
 
-Imagine you’re given a problem that says for each “query” in the format `[a,b,k]` add `k` to all elements of an array of zeros with a length of `n`, between indices `a` and `b` inclusive.<sup>1</sup>
+Imagine you’re given a problem that says for each "query" in the format `[a,b,k]` add `k` to all elements of an array of zeros with a length of `n`, between indices `a` and `b` inclusive.<sup>1</sup>
 
 # Initial Construction
 

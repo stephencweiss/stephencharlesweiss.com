@@ -4,7 +4,7 @@ date: '2019-07-21'
 category: ['musings']
 tags: ['habit', 'behavior change', 'rohan rajiv', 'willpower']
 ---
-The past few weeks I’ve felt like I’ve been saying “no” to more things. Specifically, I’ve said “no” to caffeine. “No” to bagels and muffins. “No” (loosely) to alcohol.
+The past few weeks I’ve felt like I’ve been saying "no" to more things. Specifically, I’ve said "no" to caffeine. "No" to bagels and muffins. "No" (loosely) to alcohol.
 
 Suddenly, I was living a very restricted life. I had multiple people reach out to suggest alternatives so that I wouldn’t need to restrict myself and keep saying no.
 

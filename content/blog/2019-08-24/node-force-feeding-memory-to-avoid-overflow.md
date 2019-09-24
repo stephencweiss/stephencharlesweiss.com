@@ -49,19 +49,21 @@ This is where the option `max_old_space_size` comes in handy. From the command l
 If you want to persist this change, you might modify the `package.json` directly:
 
 For example, if we’re using `npm run start`, we can modify it to be:
+
 ```json
-“scripts”: {
-  “start”: “node --max_old_space_size=4096 app.js”,
+"scripts": {
+  "start": "node --max_old_space_size=4096 app.js",
 }
 ```
 
-This will allocate ~4gb (4096 mb) to the process, but there’s nothing magical about 4096. It’s just a “round” number. It can also be set to 5000, 8000, etc. though the amount of RAM on your machine is the limiting factor.
+This will allocate ~4gb (4096 mb) to the process, but there’s nothing magical about 4096. It’s just a "round" number. It can also be set to 5000, 8000, etc. though the amount of RAM on your machine is the limiting factor.
 
-At this point, hopefully we’ve allocated enough memory to run without issues. But what exactly _is_ “old space” anyway? I found
+At this point, hopefully we’ve allocated enough memory to run without issues. But what exactly _is_ "old space" anyway? I found
 Matt Tejom’s explanation really interesting <sup>2</sup>:
+
 > There are two spaces for memory, old space and new space. New space is made of two parts, to and from. Scavenge garbage collection happens in the young space and uses Cheneys algorithm. Mark-sweep runs in old space. Mark-sweep and compacting on old space pause the javascript vm. When v8 can’t allocate any more memory in the young space all objects are moved to the to space. Then the only objects still in use are moved back to the from space. Young space will be cleared of unused objects and compacted. Objects that survive two rounds of scavenge [garbage collection] are moved to old space. Large objects can be allocated and never go to young space.
 
 # Footnotes
-* <sup>1</sup> [Memory LImit in Node.js | Stackoverflow](https://stackoverflow.com/questions/7193959/memory-limit-in-node-js-and-chrome-v8)
-* <sup>2</sup> [Nodejs and V8: Getting Started with Memory and Performance | Matt Tejom](https://tejom.github.io/general/nodejs/v8/debugging/2017/01/16/nodejs-and-v8.html)
 
+- <sup>1</sup> [Memory LImit in Node.js | Stackoverflow](https://stackoverflow.com/questions/7193959/memory-limit-in-node-js-and-chrome-v8)
+- <sup>2</sup> [Nodejs and V8: Getting Started with Memory and Performance | Matt Tejom](https://tejom.github.io/general/nodejs/v8/debugging/2017/01/16/nodejs-and-v8.html)

@@ -59,7 +59,7 @@ functionalCar2.greet() // 'Hi, I am a Ford Fiesta.'
 
 This is pretty straight forward. Except for naming the function with a capital letter (to indicate it’s a class), this looks very similar to any function.
 
-The functional instantiation pattern returns an object with attributes that are stored on it - these can be passed into the constructor (like our make, model, and year), or part of the “prototype” (like wheels, trunk, door, and the method, greet).
+The functional instantiation pattern returns an object with attributes that are stored on it - these can be passed into the constructor (like our make, model, and year), or part of the "prototype" (like wheels, trunk, door, and the method, greet).
 
 The good news: Functional instantiation is really simple and easy to follow.
 

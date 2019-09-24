@@ -5,7 +5,7 @@ category: ['programming', 'tips']
 tags: ['chrome', 'firefox', 'printing', 'safari']
 ---
 
-There are more free resources out there today than ever before. For a student, it’s a glorious time. 
+There are more free resources out there today than ever before. For a student, it’s a glorious time.
 
 Despite the rise of great annotating tools ([Instapaper](https://www.instapaper.com/u), [Highly.co](https://www.highly.co/) \- both of which I use regularly), I still find it helpful to read and annotate on paper depending on the content.
 
@@ -17,7 +17,7 @@ Medium’s not alone. Try printing just about any website using `Ctrl+P` or `Cmd
 
 I came across a pretty simple solution though: the reader view. Reader view comes built into Safari, Firefox. On Chrome, you will need an extension - I’ve been using [Reader View](https://chrome.google.com/webstore/detail/reader-view/ecabifbgmdmgdllomnfinbmaellmclnh/related?hl=en) and enjoy it so far.
 
-By stripping away “clutter”, these methods create clean webpages that are much simpler to print, emphasize the text, not the page styling. It also means a much nicer layout for printing - wider margins, readable font sizes (because you don't need to resize the page), etc. 
+By stripping away "clutter", these methods create clean webpages that are much simpler to print, emphasize the text, not the page styling. It also means a much nicer layout for printing - wider margins, readable font sizes (because you don't need to resize the page), etc.
 
 # The steps:
 
@@ -26,5 +26,5 @@ By stripping away “clutter”, these methods create clean webpages that are mu
   3. Enjoy reading again.
 
 # A video tutorial
-I put together this 3 minute video showing how to use the Reader View in Chrome and Safari and highlighting the difference it makes for several websites. 
+I put together this 3 minute video showing how to use the Reader View in Chrome and Safari and highlighting the difference it makes for several websites.
 `youtube: aAlZVcbNYUo`

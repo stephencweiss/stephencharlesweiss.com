@@ -22,7 +22,7 @@ Let’s look at that here and assign a default `arrayType` - but allow it to be 
 ```javascript
 import SQL, { SQLStatement } from "sql-template-strings";
 
-const arrayHelper = (statements: any[], arrayType: string = “text”): SQLStatement => {
+const arrayHelper = (statements: any[], arrayType: string = "text"): SQLStatement => {
     const result =
         statements.length > 0
             ? SQL`Array[ `.append(statements.map(element => SQL`${element}`)).append(` ] `)

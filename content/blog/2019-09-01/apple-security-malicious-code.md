@@ -8,7 +8,7 @@ tags: ['security', 'malicious code', 'apple']
 Recently upgraded an application and got this warning
 ![](./error-cannot-be-opened.png)
 
-In the past, I used to be able to “right” click on the app, but Apple’s UI makes it so easy to use Launchpad instead of going into the applications folder.
+In the past, I used to be able to "right" click on the app, but Apple’s UI makes it so easy to use Launchpad instead of going into the applications folder.
 
 Since there’s no way to override the setting from that window, to actually be able to open the application we need to allow it in System preferences: Security & Privacy > General
 

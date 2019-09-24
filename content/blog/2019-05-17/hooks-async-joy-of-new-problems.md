@@ -91,9 +91,9 @@ I guess my reliable solution wasn’t so reliable any more.
 
 # New Approaches For New Problems
 
-Before I started working with Hooks, I noticed a lot of people make comments along the lines of “it’s a different way of thinking.” The React team themselves call this out specifically in their introduction to Hooks<sup>4</sup>> :
+Before I started working with Hooks, I noticed a lot of people make comments along the lines of "it’s a different way of thinking." The React team themselves call this out specifically in their introduction to Hooks<sup>4</sup>> :
 
-> It takes a bit of a mindshift to start “thinking in Hooks.”
+> It takes a bit of a mindshift to start "thinking in Hooks."
 
 When refactoring to hooks, we actually don’t need to use state at all. Instead, the `useAsync` method returns a promise which has a `loading` attribute and once it’s resolved a `value`.
 

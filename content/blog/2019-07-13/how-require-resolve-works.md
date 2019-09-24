@@ -37,7 +37,7 @@ var path = require("path");
 console.log( fs.readFileSync (path.join( __dirname, "module-i-am-looking-for.js") ) );
 ```
 
-There’s an alternative, however. It’s the `require.resolve` API. According to the Node documentation), the `require.resolve` “use(es) the internal `require()` machinery to look up the location of a module, but rather than loading the module, just return(s) the resolved filename.” <sup>2</sup>
+There’s an alternative, however. It’s the `require.resolve` API. According to the Node documentation), the `require.resolve` "use(es) the internal `require()` machinery to look up the location of a module, but rather than loading the module, just return(s) the resolved filename." <sup>2</sup>
 
 ```javascript
 var fs = require('fs');

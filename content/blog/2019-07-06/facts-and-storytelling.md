@@ -5,7 +5,7 @@ category: ['musings']
 tags: ['jerry seinfeld', 'storytelling', 'habits']
 ---
 # Don’t Let Facts Get In The Way Of A Good Story
-The first time I heard about Jerry Seinfeld’s “Productivity System” was 2013.<sup>1</sup> <sup>2</sup> The system is simple:
+The first time I heard about Jerry Seinfeld’s "Productivity System" was 2013.<sup>1</sup> <sup>2</sup> The system is simple:
 
 1. Get a big wall calendar
 2. Draw a big red *X* on each day you complete your task (e.g., writing)
