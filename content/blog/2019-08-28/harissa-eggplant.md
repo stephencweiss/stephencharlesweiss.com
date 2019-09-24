@@ -4,9 +4,9 @@ date: '2019-08-28'
 category: ['recipes']
 tags: ['eggplant', 'goop', 'harissa']
 ---
-One of our family’s favorite recipes is a Harissa Grilled Eggplant from Goop.<sup>1</sup>
+One of our family's favorite recipes is a Harissa Grilled Eggplant from Goop.<sup>1</sup>
 
-It’s quick, full of flavor, and relatively healthy.
+It's quick, full of flavor, and relatively healthy.
 
 Where the recipe calls for equal parts olive oil and harissa, we adjust to a 1.5:1 to 2:1 ratio in favor of olive oil. More harissa than that is just more heat than we need.
 

@@ -45,14 +45,14 @@ To handle this situation, two good options are available:
 1. Add the column, update our records, and then _add_ the constraint
 2. Add the column with the constraint and a default, update the records to replace all of the defaults
 
-Personally - I prefer the former approach because it will be more clear whether the updates were sufficient, since Postgres will reject the constraint if they weren’t.
+Personally - I prefer the former approach because it will be more clear whether the updates were sufficient, since Postgres will reject the constraint if they weren't.
 
 For example:
 ```sql
 ALTER TABLE customers
 ADD COLUMN customer_name VARCHAR NOT NULL
 ```
-If we do _just_ this, we’ll get the error discussed above:
+If we do _just_ this, we'll get the error discussed above:
 ```sql
 ERROR:column “contact_name” contains null values
 ```
@@ -63,12 +63,12 @@ ALTER TABLE customers
 ADD COLUMN customer_name VARCHAR NOT NULL
 
 UPDATE customers
-SET contact_name = ‘John Doe’
+SET contact_name = ‘John Doe'
 WHERE
 ID = 1;
 
 UPDATE customers
-SET contact_name = ‘Mary Doe’
+SET contact_name = ‘Mary Doe'
 WHERE
 ID = 2;
 
@@ -80,15 +80,15 @@ ALTER COLUMN contact_name SET NOT NULL;
 ### Option 1: Add default
 ```sql
 ALTER TABLE customers
-ADD COLUMN customer_name VARCHAR NOT NULL DEFAULT ‘UNKNOWN’
+ADD COLUMN customer_name VARCHAR NOT NULL DEFAULT ‘UNKNOWN'
 
 UPDATE customers
-SET contact_name = ‘John Doe’
+SET contact_name = ‘John Doe'
 WHERE
 ID = 1;
 
 UPDATE customers
-SET contact_name = ‘Mary Doe’
+SET contact_name = ‘Mary Doe'
 WHERE
 ID = 2;
 

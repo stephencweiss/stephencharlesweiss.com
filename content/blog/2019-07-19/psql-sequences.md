@@ -20,7 +20,7 @@ Imagine you have a standard database table that you roll out to all of your clie
 | '3' | 'Ford'     | false     |
 | '4' | 'Chrysler' | false     |
 
-When a user gets their hands on the table, they’re not satisfied with only four options and want to add a new row.
+When a user gets their hands on the table, they're not satisfied with only four options and want to add a new row.
 
 Rather than use a `MAX` statement to get the current max and increment the value, maintaining a sequence enables Postgres to manage that on our behalf.
 
@@ -41,7 +41,7 @@ VALUES
 ;
 ```
 
-This will add a new row to the database exactly where you’d like it:
+This will add a new row to the database exactly where you'd like it:
 
 | id  | make        | is_custom |
 | --- | ----------- | --------- |
@@ -51,11 +51,11 @@ This will add a new row to the database exactly where you’d like it:
 | '4' | 'Chrysler'  | false     |
 | '5' | 'Batmobile' | true      |
 
-The biggest lesson I had in learning about Sequences is: if you choose to use a sequence - it’s better to _always_ use it. By creating a Sequence, Postgres keeps track of where I am — but in order for that to work as expected, I shouldn’t do math that’s hidden from Postgres.
+The biggest lesson I had in learning about Sequences is: if you choose to use a sequence - it's better to _always_ use it. By creating a Sequence, Postgres keeps track of where I am — but in order for that to work as expected, I shouldn't do math that's hidden from Postgres.
 
-For example - I thought that I could just insert records into the table and Postgres would pick up where I left off — this wasn’t the case (which makes sense). That’s why the initial load of the table should use the sequence, just like all future `INSERT` calls.
+For example - I thought that I could just insert records into the table and Postgres would pick up where I left off — this wasn't the case (which makes sense). That's why the initial load of the table should use the sequence, just like all future `INSERT` calls.
 
-I’ve also put together a DB-Fiddle to show how it works.<sup>3</sup>
+I've also put together a DB-Fiddle to show how it works.<sup>3</sup>
 
 ## Footnotes
 

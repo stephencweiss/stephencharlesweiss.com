@@ -30,7 +30,7 @@ Make sure the following two lines are present:
 "editor.formatOnSave": true,
 ```
 
-The former simply requires that there is a `.prettierrc` file in the application’s root directory.
+The former simply requires that there is a `.prettierrc` file in the application's root directory.
 The latter is a preference of mine to apply prettier on save - rather than waiting for a git commit or to run the `format` script.
 
 ## Alternative Formats

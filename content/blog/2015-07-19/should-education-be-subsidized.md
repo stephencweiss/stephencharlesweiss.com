@@ -47,7 +47,7 @@ Said another way - the abilities of someone with a degree and someone without a
 
 This is the signaling story. While Mr. Foley elaborates later in the piece on how education benefits the community as a whole, it is telling that the first benefit named is that having a college degree automatically places the recipient in a smaller pool. How does signaling create a negative externality? For every additional year of education that I attain, I make it more difficult for someone who is smarter to differentiate his/herself. By going to school for more education, I impose a cost on my neighbor who must now also get another year of education to maintain his/her distinction, fueling an arms race amongst candidates.
 
-## Conclusion: It’s all about the magnitudes
+## Conclusion: It's all about the magnitudes
 
 The question of whether or not education has externalities seems to be well established on both sides. Social costs, positive and negative, are outlined above. In order to determine whether or not education should be subsidized, it is a question of which effect is larger. That will be a question for another time.
 
@@ -64,10 +64,10 @@ The return on a subsidy is determined by the elasticity of the supply or the dem
 | *On the left, is an inelastic demand curve. To move from Q1 to the new equilibrium at P2, requires a subsidy on the magnitude of the difference between supply pre-subsidy and supply post subsidy. On the right, you can see how the story changes in terms of additional supply when the demand is elastic.*<sup>9</sup> |
 
 ## Education versus years of schooling
-It’s worth noting that any subsidy of education cannot be directly applied to the good education. Due to variations among teachers and the lack of visibility into which teachers are effective, any subsidies of education are actually for years of schooling, a proxy at best.
+It's worth noting that any subsidy of education cannot be directly applied to the good education. Due to variations among teachers and the lack of visibility into which teachers are effective, any subsidies of education are actually for years of schooling, a proxy at best.
 
 ## Subsidies and Elasticity: A look at the economics
-Generically, subsidies are cash transfers to a supplier to encourage production of a good. Typically, these transfers come from governments or employers to encourage goods considered advantageous to the public or employees.<sup>10</sup> The extent of a subsidy’s effect will be determined by the elasticity of both the supply and demand curves by affecting the new equilibrium.
+Generically, subsidies are cash transfers to a supplier to encourage production of a good. Typically, these transfers come from governments or employers to encourage goods considered advantageous to the public or employees.<sup>10</sup> The extent of a subsidy's effect will be determined by the elasticity of both the supply and demand curves by affecting the new equilibrium.
 
 In the public space, a subsidy is a mechanism way for a government to encourage more of something that benefits society at large. To fund subsidies a government would rely on taxation typically, while a private employer would decrease profits to provide the benefit it deems beneficial.
 
@@ -93,7 +93,7 @@ If the supply curve is relatively elastic, a small subsidy will increase the sup
 * <sup>1</sup> [Good Will Hunting](http://amzn.to/1SurAxK)
 * <sup>2</sup> Vaccines.gov – [Community Immunity](http://www.vaccines.gov/basics/protection/)
 * <sup>3</sup> Arnold Kling – [Public Goods, Externalities, and Education](http://econlog.econlib.org/archives/2008/08/public_goods_ex.html)
-* <sup>4</sup> Times Higher Education – [Higher education: It’s good for you (and society)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCUQFjABahUKEwjt5ufcn-bGAhWM1IAKHXV0DcY&url=https%3A%2F%2Fwww.timeshighereducation.co.uk%2Fnews%2Fhigher-education-its-good-for-you-and-society%2F2008681.article&ei=1BirVe2sBIypgwT16LWwDA&usg=AFQjCNFE8PPbAeLtBnI_JzOPvoTFoNSzCQ&sig2=vDq8X7ym0Xek_KkPszJlWQ&bvm=bv.98197061,d.eXY&cad=rja)
+* <sup>4</sup> Times Higher Education – [Higher education: It's good for you (and society)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCUQFjABahUKEwjt5ufcn-bGAhWM1IAKHXV0DcY&url=https%3A%2F%2Fwww.timeshighereducation.co.uk%2Fnews%2Fhigher-education-its-good-for-you-and-society%2F2008681.article&ei=1BirVe2sBIypgwT16LWwDA&usg=AFQjCNFE8PPbAeLtBnI_JzOPvoTFoNSzCQ&sig2=vDq8X7ym0Xek_KkPszJlWQ&bvm=bv.98197061,d.eXY&cad=rja)
 * <sup>5</sup> Economic Policy Institute – [A Well-Educated Workforce Is Key to State Prosperity](http://www.epi.org/publication/states-education-productivity-growth-foundations/)
 * <sup>6</sup> Mapping Ignorance – [Evidence of education as a signal](http://mappingignorance.org/2013/10/25/evidence-of-education-as-a-signal/#note-1027-2)
 * <sup>7</sup> JP Foley – [Everyone benefits from an educated citizenry](http://www.bizjournals.com/albuquerque/stories/2004/03/15/focus1.html)
@@ -107,15 +107,15 @@ If the supply curve is relatively elastic, a small subsidy will increase the sup
 # Further reading
 
 1. EconTalk – [Bryan Caplan on College, Signaling, and Human Capital](http://www.econtalk.org/archives/2014/04/bryan_caplan_on.html)
-  * The inspiration for today’s, at the end of the interview Russ and Bryan discuss the arms race created by signaling education.
+  * The inspiration for today's, at the end of the interview Russ and Bryan discuss the arms race created by signaling education.
 2. Bryan Caplan – [Mixed signals](http://econlog.econlib.org/archives/2006/02/mixed_signals.html)
 3. Right Brained Math – [Furthering education: Signal or human capital?](http://rightbrainedmath.com/2014/07/15/furthering-education-signal-or-human-capital/#comments)
-  * Brandon over at Right Brained Math had the same idea when listening to Russ and Bryan talk on EconTalk leading him to write this piece. It’s a good read.
+  * Brandon over at Right Brained Math had the same idea when listening to Russ and Bryan talk on EconTalk leading him to write this piece. It's a good read.
 4. Eric A. Hanushek – [Valuing teachers: How much is a good teacher worth?](http://hanushek.stanford.edu/publications/valuing-teachers-how-much-good-teacher-worth)
 5. Jim Kjelland – [Economic returns to higher education: Signaling v. human capital theory an analysis of competing theories](https://www.iwu.edu/economics/PPE16/PPE2008-7.pdf)
 6. Center for Public Education – [Teach quality and student achievement: Research review](http://www.centerforpubliceducation.org/Main-Menu/Staffingstudents/Teacher-quality-and-student-achievement-At-a-glance/Teacher-quality-and-student-achievement-Research-review.html)
 7. Julia Pointer Putnam – [Another education is happening](http://monthlyreview.org/2011/07/01/another-education-is-happening/)
-8. Verdict – [An Educated Population Is Essential to a Nation’s Prosperity, yet Some Politicians Are Demonizing Our Educational System for Political Advantage](https://verdict.justia.com/2012/03/29/an-educated-population-is-essential-to-a-nations-prosperity-yet-some-politicians-are-demonizing-our-educational-system-for-political-advantage)
+8. Verdict – [An Educated Population Is Essential to a Nation's Prosperity, yet Some Politicians Are Demonizing Our Educational System for Political Advantage](https://verdict.justia.com/2012/03/29/an-educated-population-is-essential-to-a-nations-prosperity-yet-some-politicians-are-demonizing-our-educational-system-for-political-advantage)
 9. Insight News – [Pushing children out of school—A new American value?](http://insightnews.com/commentary/9345-pushing-children-out-of-schoola-new-american-value)
 10. Michael Spence – [Job Market Signaling](http://www.econ.yale.edu/~dirkb/teach/pdf/spence/1973%20job%20market%20signalling.pdf)
 11. Helen Li – [The Rising Cost of Higher Education: A Supply and Demand Analysis](http://www.stern.nyu.edu/sites/default/files/assets/documents/con_042986.pdf)

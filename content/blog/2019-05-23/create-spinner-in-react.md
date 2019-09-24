@@ -11,9 +11,9 @@ Using two libraries, `styled-components` and `react-image`, I learned a new simp
 
 A spinner is just a component with animation. However, in the process of doing this, I learned about the tagged template literal support for `keyframes` in `styled-components`.<sup>1</sup>
 
-If you’re building out a library of UI components (as I am), this type of abstraction can be really nice.
+If you're building out a library of UI components (as I am), this type of abstraction can be really nice.
 
-Here’s an example `Loader` component.
+Here's an example `Loader` component.
 
 ```javascript
 import styled, { keyframes } from 'styled-components'

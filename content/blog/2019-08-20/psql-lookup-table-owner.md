@@ -14,10 +14,10 @@ SELECT t.table_name, t.table_type, c.relname, c.relowner, u.usename
 FROM information_schema.tables t
 JOIN pg_catalog.pg_class c ON (t.table_name = c.relname)
 JOIN pg_catalog.pg_user u ON (c.relowner = u.usesysid)
-WHERE t.table_schema=‘public’;
+WHERE t.table_schema=‘public';
 ```
 
-The internet’s a beautiful place.
+The internet's a beautiful place.
 
 The results, however, were a little bit peculiar and while the table I was interested _was_ displayed, many of the others in our database were not present.
 
@@ -25,7 +25,7 @@ The issue was that joins.
 
 Interestingly, the solution was quite simple:
 ```sql
-select tablename, tableowner from pg_catalog.pg_tables where schemaname = ‘public’ ;
+select tablename, tableowner from pg_catalog.pg_tables where schemaname = ‘public' ;
 ```
 
 All of the schemas in our db are the default `public`, so to eliminate some of the tables Postgres provides, I included that filter. Other than that - the details I needed were present in the `table owner` column.

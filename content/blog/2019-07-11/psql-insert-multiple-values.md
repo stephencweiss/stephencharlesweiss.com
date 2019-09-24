@@ -4,7 +4,7 @@ date: '2019-07-11'
 category: ['programming']
 tags: ['postgres', 'psql', 'insert', 'multiple values','how to']
 ---
-How do you insert _multiple_ values? I always find myself looking this up. I decided I’d jot it down here for future reference. Hopefully it helps you.
+How do you insert _multiple_ values? I always find myself looking this up. I decided I'd jot it down here for future reference. Hopefully it helps you.
 
 In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write the following pertaining inserting values in Postgres:<sup>1</sup>
 
@@ -26,9 +26,9 @@ In their book Practical PostgreSQL, John C. Worsley and Joshua D. Drake write th
 > *`(value[, …] )`*
 > The required grouped expression that describes the values to be inserted. There should be one*value*for each specified column, separated by commas. These values may be expressions themselves (e.g., an operation between two values), or constants.
 >
-> Each *`value`* following the `VALUES` clause must be of the same data type as the column it is being inserted into. If the optional column-target expression is omitted, PostgreSQL will expect there to be one value for each column in the literal order of the table’s structure. If there are fewer values to be inserted than columns, PostgreSQL will attempt to insert a default value (or the `NULL` value, if there is no default) for each omitted value.
+> Each *`value`* following the `VALUES` clause must be of the same data type as the column it is being inserted into. If the optional column-target expression is omitted, PostgreSQL will expect there to be one value for each column in the literal order of the table's structure. If there are fewer values to be inserted than columns, PostgreSQL will attempt to insert a default value (or the `NULL` value, if there is no default) for each omitted value.
 
-The description alludes to the fact that the values can have multiple, but the demonstration doesn’t show how and the examples left me wanting. This is not a knock on the authors. The book’s excellent. It’s more my continuing struggles reading documentation and parsing out what’s _not_ explicit.
+The description alludes to the fact that the values can have multiple, but the demonstration doesn't show how and the examples left me wanting. This is not a knock on the authors. The book's excellent. It's more my continuing struggles reading documentation and parsing out what's _not_ explicit.
 
 So, as I tend to do, I came up with the following example to make it painfully obvious:
 ```sql
@@ -47,7 +47,7 @@ INSERT INTO sample_table
   ('bernard', 'yellow', 40);
 ```
 
-Punch line: Just as you would to insert _one_ value, you do with multiple, except that they’re comma separated as part of the `VALUES` clause. I put together [SQL Fiddle demonstrating INSERT with multiple values](http://sqlfiddle.com/#!17/c5796/1).
+Punch line: Just as you would to insert _one_ value, you do with multiple, except that they're comma separated as part of the `VALUES` clause. I put together [SQL Fiddle demonstrating INSERT with multiple values](http://sqlfiddle.com/#!17/c5796/1).
 
 ## Footnotes
 * <sup>1</sup> [Adding Data with INSERT and COPY - Practical PostgreSQL Book](https://www.oreilly.com/library/view/practical-postgresql/9781449309770/ch04s03.html)

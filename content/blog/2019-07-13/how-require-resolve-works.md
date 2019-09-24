@@ -16,7 +16,7 @@ import { Link } from 'gatsby'; // a named exported module from a library
 import Layout from '../components/Layout'; // a local default exported module
 ```
 
-As I noted previously in my primer for imports / exports, these will all need to be transpiled as no JS engine yet supports imports (but that’s what Babel, Webpack, etc. are for). <sup>1</sup>
+As I noted previously in my primer for imports / exports, these will all need to be transpiled as no JS engine yet supports imports (but that's what Babel, Webpack, etc. are for). <sup>1</sup>
 
 Alternatively, we could write the following:
 ```javascript
@@ -27,7 +27,7 @@ var { Link } = require('gatsby')
 var Layout = require('../components/Layout')
 ```
 
-Sometimes, however, we just want the path to a file.  This is more commonly the case on the server side. In the past, I’ve used `path.join(__dirname, "module-i-am-looking-for")` to get the path using node’s `path` module.
+Sometimes, however, we just want the path to a file.  This is more commonly the case on the server side. In the past, I've used `path.join(__dirname, "module-i-am-looking-for")` to get the path using node's `path` module.
 
 ```javascript
 var fs = require('fs');
@@ -37,7 +37,7 @@ var path = require("path");
 console.log( fs.readFileSync (path.join( __dirname, "module-i-am-looking-for.js") ) );
 ```
 
-There’s an alternative, however. It’s the `require.resolve` API. According to the Node documentation), the `require.resolve` “use(es) the internal `require()` machinery to look up the location of a module, but rather than loading the module, just return(s) the resolved filename.” <sup>2</sup>
+There's an alternative, however. It's the `require.resolve` API. According to the Node documentation), the `require.resolve` “use(es) the internal `require()` machinery to look up the location of a module, but rather than loading the module, just return(s) the resolved filename.” <sup>2</sup>
 
 ```javascript
 var fs = require('fs');
@@ -46,7 +46,7 @@ var fs = require('fs');
 console.log( fs.readFileSync (require.resolve("module-i-am-looking-for.js") ) );
 ```
 
-As Ben Nadel notes, there’s inherently more overhead in this approach, but from a readability perspective, there are some significant wins here.<sup>3</sup>
+As Ben Nadel notes, there's inherently more overhead in this approach, but from a readability perspective, there are some significant wins here.<sup>3</sup>
 
 ## Footnotes
 * <sup>1</sup> [JS Modules Primer: Export & Require | /* Code Comments */](https://www.stephencharlesweiss.com/2019-02-11/js-modules-primer-export-and-require/)

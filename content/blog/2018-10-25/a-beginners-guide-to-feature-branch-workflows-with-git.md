@@ -66,7 +66,7 @@ Work on your code as you would to build out the new feature.
 
 ## Push feature branch to remote
 
-Because you’re working in a branch, you can push your code to a centralized repository without worry of conflict.
+Because you're working in a branch, you can push your code to a centralized repository without worry of conflict.
 
 `git push -u origin my-new-feature`
 
@@ -84,7 +84,7 @@ If you receive feedback, you can edit your code locally (returning to step 3. an
 
 ## Merge your pull request
 
-Once all feedback has been resolved, you’re ready to merge your feature into the main branch.
+Once all feedback has been resolved, you're ready to merge your feature into the main branch.
 
 During this process, you may have to resolve merge conflicts with the master branch. Since the goal is to always have a functioning master branch, this step is crucial to the continuity of the application.
 

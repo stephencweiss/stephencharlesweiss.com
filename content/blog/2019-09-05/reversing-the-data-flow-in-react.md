@@ -5,22 +5,22 @@ category: ['programming']
 tags: ['react','forms','validation','controller-presentation']
 ---
 
-React’s one way data flow makes it easy to reason through, but sometimes the controlling component needs to know what’s going on inside.
+React's one way data flow makes it easy to reason through, but sometimes the controlling component needs to know what's going on inside.
 
 For example, imagine a form comprised of multiple pieces
 ![](./form-sketch.png)
 
 While form validation is often handled by the enclosing component, in this case, the `PhoneInput` component has standardized validation.
 
-Since it’s a shared component, it made sense to not have to repeat it with every instance.
+Since it's a shared component, it made sense to not have to repeat it with every instance.
 
 But if the logic for validating the input is _inside_, how do we get it back out? Callbacks.
 
-Imagine a `FormContainer` even simpler than the drawing above. It’s just a phone number and a submit. We don’t want to be able to submit the form if the phone number is invalid (according _to_ the `PhoneInput` itself.
+Imagine a `FormContainer` even simpler than the drawing above. It's just a phone number and a submit. We don't want to be able to submit the form if the phone number is invalid (according _to_ the `PhoneInput` itself.
 
 ``` javascript
 function FormContainer() {
-  const [value, setValue] = useState(‘’);
+  const [value, setValue] = useState(‘');
   const [isInvalid, setIsInvalid] = useState(false);
 
   const handleBlur = (e, isValid) => {
@@ -37,7 +37,7 @@ function FormContainer() {
 
 To implement the `PhoneInput` itself, we created a wrapper around  the `intl-tel-input` library which gave us access to their utility functions, including `isValidNumber`.<sup>1</sup>
 
-To use it, we needed to use refs, which make this a more complicated component (at least to me), however, below, I’ve tried to focus only on the parts that are relevant:
+To use it, we needed to use refs, which make this a more complicated component (at least to me), however, below, I've tried to focus only on the parts that are relevant:
 ``` javascript
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/js/utils.js';

@@ -50,7 +50,7 @@ gsdf() {
 }
 ```
 
-It’s simple, but it does work as expected.
+It's simple, but it does work as expected.
 
 If I run `gsdf package.json` the file will be added to the stash (if there have been changes) and then dropped - letting me move on in peace.
 
@@ -66,7 +66,7 @@ The reason is that `git stash` does not stash untracked or ignored files by defa
 
 # Final Thoughts
 
-Is this the _best_ way to achieve my goal? Probably not, but it’s been w working for me and I understand it. If you can point me to a more common pattern with git for this, I’m all ears.
+Is this the _best_ way to achieve my goal? Probably not, but it's been w working for me and I understand it. If you can point me to a more common pattern with git for this, I'm all ears.
 
 I'd also be very interested if someone knows a good way of handling an unknown number of arguments to create a loop of repeating this process for each file passed into the gsdf function.
 

@@ -30,9 +30,9 @@ How I read this command:
 # What Are Sequences?
 Sequences are useful for auto-incrementing fields and use `bigint` arithmetic by default. However, sequences are not fields, but are actually special, [single-row tables](https://www.postgresql.org/docs/current/sql-createsequence.html).
 
-As a table, access to the sequences’ functions can require explicit permission depending on the user.
+As a table, access to the sequences' functions can require explicit permission depending on the user.
 
-That was the issue in my case. Even though my user, `sdc`, could modify / retrieve / delete rows that already existed in the table - it couldn’t add a new row because it didn’t have access to the Sequence functions.
+That was the issue in my case. Even though my user, `sdc`, could modify / retrieve / delete rows that already existed in the table - it couldn't add a new row because it didn't have access to the Sequence functions.
 
 # Background Details
 I have a bias against using super users wherever possible, so before starting, I created a new user `sdc`, and granted access to my database and tables: Here's `sdc`'s access to the database using the `\l` list command with in `psql` shell.

@@ -5,9 +5,9 @@ category: ['programming']
 tags: ['lodash', 'groupBy', 'learning']
 ---
 
-Yesterday, I wrote about using [Lodash’s `pickBy`](https://www.stephencharlesweiss.com/2019-05-02/objects-undefined-values-and-lodash-pickby-identity/) to solve a problem.
+Yesterday, I wrote about using [Lodash's `pickBy`](https://www.stephencharlesweiss.com/2019-05-02/objects-undefined-values-and-lodash-pickby-identity/) to solve a problem.
 
-The issue was that that wasn’t the _first_ time Lodash proved helpful. My first taste of reinventing the wheel instead of thinking first that Lodash might have an answer came a few weeks before when I was trying to massage an object into a very different shape.
+The issue was that that wasn't the _first_ time Lodash proved helpful. My first taste of reinventing the wheel instead of thinking first that Lodash might have an answer came a few weeks before when I was trying to massage an object into a very different shape.
 
 The rationale was that with a little preprocessing, I could save time later with more a more appropriate lookup.
 
@@ -77,7 +77,7 @@ return consolidatedNotes;
 
 Now, I should note — this _works_. It worked like a charm actually.
 
-But, Lodash had already implemented this and it’s called `groupBy`. Moreover, they’ve tested and optimized their code. And, since we already use Lodash I wasn’t adding to the bundle size by reaching for it (which, in any case, can be [mitigated with smarter imports](https://www.stephencharlesweiss.com/2019-04-26/minimizing-bundle-size-by-restructuring-imports/)).
+But, Lodash had already implemented this and it's called `groupBy`. Moreover, they've tested and optimized their code. And, since we already use Lodash I wasn't adding to the bundle size by reaching for it (which, in any case, can be [mitigated with smarter imports](https://www.stephencharlesweiss.com/2019-04-26/minimizing-bundle-size-by-restructuring-imports/)).
 
 ThisI could remove the entire helper function and replace it with one line of code, turning the above into the following:
 
@@ -94,7 +94,7 @@ return consolidatedNotes;
 
 Voila — same result. Significantly less code to read, understand or maintain.
 
-One of my first projects to learn how to code was to reimplement large portions of Underscore, so it’s not like these concepts or libraries are new to me. I just haven’t quite gotten used to reaching for the tools at hand. I suppose that’s one of the marks of experience — when you know when to build a new tool vs. knowing that there’s a suitable one already out there that can be picked up easily.
+One of my first projects to learn how to code was to reimplement large portions of Underscore, so it's not like these concepts or libraries are new to me. I just haven't quite gotten used to reaching for the tools at hand. I suppose that's one of the marks of experience — when you know when to build a new tool vs. knowing that there's a suitable one already out there that can be picked up easily.
 
 // ORIGINAL - DO NOT POST
 

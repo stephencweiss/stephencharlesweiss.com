@@ -24,7 +24,7 @@ module.exports = {
 ...
 }
 ```
-Notice that the configuration gives it a name (optional) and a path. The path is just `posts` in this case because I’m only trying to resolve the directory in the root _also_ named `posts`.
+Notice that the configuration gives it a name (optional) and a path. The path is just `posts` in this case because I'm only trying to resolve the directory in the root _also_ named `posts`.
 ```zsh
 .
 ├── LICENSE
@@ -41,7 +41,7 @@ Notice that the configuration gives it a name (optional) and a path. The path is
 ```
 
 ## Using The Filesystem
-Now that the filesystem is linked up, let’s see what it looks like by exploring the graphql data layer.
+Now that the filesystem is linked up, let's see what it looks like by exploring the graphql data layer.
 
 Run the Gatsby in development (`npm run develop` ). Assuming the build goes well, you should have a GraphQL Playground at `http://localhost:8000/___graphql`.
 
@@ -52,9 +52,9 @@ The files returned match those that I currently have in my posts directory.
 ![](./gatsby-project-directory.png)
 
 ## Multiple Paths
-One of the immediate questions I had when I learned about the filesystem plugin was what to do in the event of multiple directories. The configuration didn’t immediately shout out how I’d be able to set up more than one path for access by the graphql data layer.
+One of the immediate questions I had when I learned about the filesystem plugin was what to do in the event of multiple directories. The configuration didn't immediately shout out how I'd be able to set up more than one path for access by the graphql data layer.
 
-Fortunately, it’s both very simple, and one of the first questions the docs answer for us: add another entry in your plugins with the new path desired. Repeat as necessary. For example:
+Fortunately, it's both very simple, and one of the first questions the docs answer for us: add another entry in your plugins with the new path desired. Repeat as necessary. For example:
 ``` javascript
 // gatsby-config.js
 module.exports = {

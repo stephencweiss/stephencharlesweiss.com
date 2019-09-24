@@ -9,7 +9,7 @@ While working on a React project, I came across the following error: `Uncaught T
 
 `searchDB` is a method on my component that is called when certain buttons are clicked.
 
-In retrospect, this is a common issue that comes from a failure to appropriately supply context. 
+In retrospect, this is a common issue that comes from a failure to appropriately supply context.
 
 ```React
 class App extends React.Component {
@@ -17,10 +17,10 @@ class App extends React.Component {
     super(props);
     this.state = {
     }
-    this.searchDB = this.searchDB.bind(this); 
+    this.searchDB = this.searchDB.bind(this);
     this.handleClick = this.handleClick.bind(this); // This was the missing critical line
   }
-  
+
   handleClick (type, param) {
     if (type === "Search") {
       this.searchDB(param);
@@ -40,7 +40,7 @@ Since the `searchDB` method was being called *when* a button was clicked, the co
 
 The window does not have a function `searchDB`, however, so the fact that it is not defined is not at all surprising.
 
-The handleClick method wasn’t bound to the current context and so when it invoked `this.searchDB()` it was in fact not defined as a function.
+The handleClick method wasn't bound to the current context and so when it invoked `this.searchDB()` it was in fact not defined as a function.
 
 This is a great example of why looking at the stacktrace is helpful. I was initially focused on the `searchDB` method and trying to understand if I had a typo. The problem, however, lay in what was invoking the searchDB. I needed to trace back to find and resolve the issue.
 

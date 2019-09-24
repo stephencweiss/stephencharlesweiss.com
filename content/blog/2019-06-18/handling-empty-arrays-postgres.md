@@ -9,15 +9,15 @@ A few days ago, I wrote about handling arrays from [Javascript to SQL](../../201
 
 Turns out, I missed an edge case - empty arrays.
 
-If you try to set an array to be empty in Postgres without casting its type, you’ll receive an error:
+If you try to set an array to be empty in Postgres without casting its type, you'll receive an error:
 
 > error: cannot determine type of **empty array** at character xx...
 
-The best solution I’ve found is to cast the array explicitly. For example, if the field is an array of strings normally, set the value equal to `Array[]::text[]`.
+The best solution I've found is to cast the array explicitly. For example, if the field is an array of strings normally, set the value equal to `Array[]::text[]`.
 
-When I wrote the original function a few days ago, I mentioned it’d be a good candidate to extract as a helper.
+When I wrote the original function a few days ago, I mentioned it'd be a good candidate to extract as a helper.
 
-Let’s look at that here and assign a default `arrayType` - but allow it to be flexed based depending on the table / use case.<sup>1</sup>
+Let's look at that here and assign a default `arrayType` - but allow it to be flexed based depending on the table / use case.<sup>1</sup>
 
 ```javascript
 import SQL, { SQLStatement } from "sql-template-strings";

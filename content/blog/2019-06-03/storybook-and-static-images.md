@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['storybook', 'javascript', 'webpack', 'config', 'static images']
 ---
 
-[Storybook supports static files](https://storybook.js.org/docs/configurations/default-config/#image-and-static-file-support), like images. But it wasn’t working for me.
+[Storybook supports static files](https://storybook.js.org/docs/configurations/default-config/#image-and-static-file-support), like images. But it wasn't working for me.
 
 In fact, the way to make a story with a static file is really straightforward. From the docs:
 
@@ -20,7 +20,7 @@ storiesOf('<img />', module).add('with a image', () => (
 ))
 ```
 
-Unfortunately, when I ran `npm run storybook` I was greeted by several Webpack errors which meant that the whole storybook wouldn’t load.
+Unfortunately, when I ran `npm run storybook` I was greeted by several Webpack errors which meant that the whole storybook wouldn't load.
 
 ```
 ERROR in ./src/assets/remineFavicon.ico 1:0
@@ -44,8 +44,8 @@ The critical line for me was about halfway down in the `modules` section:
 
 ```javascript
       { test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
-        loader: ‘./node_modules/file-loader/dist/cjs.js’,
-        query: { name: ‘static/media/[name].[hash:8].[ext]’ },
+        loader: ‘./node_modules/file-loader/dist/cjs.js',
+        query: { name: ‘static/media/[name].[hash:8].[ext]' },
       },
 ```
 

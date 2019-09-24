@@ -27,7 +27,7 @@ Consumer reports may be a good alternative to the industry source, however, whil
 
 ![](./bed.jpg)
 
-In contrast, the International Sleep Products Association started the Better Sleep Council "devoted to educating the public about the critical relationship between sleep, good health and quality of life, as well as the value of the mattress and sleep environment in the pursuit of a good night’s sleep." The BSC is also the source of the recommended replacement rate for mattresses - [though the BSC's is actually seven to ten years](http://bettersleep.org/mattress-education/replacing-a-mattress/). Turns out, [not everyone buys that advice](http://restonic.com/blog/mattress-myths-4876).
+In contrast, the International Sleep Products Association started the Better Sleep Council "devoted to educating the public about the critical relationship between sleep, good health and quality of life, as well as the value of the mattress and sleep environment in the pursuit of a good night's sleep." The BSC is also the source of the recommended replacement rate for mattresses - [though the BSC's is actually seven to ten years](http://bettersleep.org/mattress-education/replacing-a-mattress/). Turns out, [not everyone buys that advice](http://restonic.com/blog/mattress-myths-4876).
 
 So, while the mattress industry may be best situated to know what a mattress's useful life is on average, it's not guaranteed that the industry won't abuse that trust to encourage sales. Proceed with caution.
 

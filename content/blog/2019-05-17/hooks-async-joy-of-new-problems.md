@@ -7,8 +7,8 @@ tags: ['react', 'hooks', 'async']
 
 > When all you have is a hammer, every problem looks like a nail.
 
-When approaching new problems, it’s easy to fall into old ways of doing things - at least at first.
-There’s an efficiency argument to be made for this. If we have reliable solutions to solving certain problems, it doesn’t make a ton of sense to look for alternatives unnecessarily.
+When approaching new problems, it's easy to fall into old ways of doing things - at least at first.
+There's an efficiency argument to be made for this. If we have reliable solutions to solving certain problems, it doesn't make a ton of sense to look for alternatives unnecessarily.
 
 New problems, by definition, are unfamiliar territory - so the old solutions _may_ be extendable (with our without any need for modification). To know, we have to start working on the problem and starting with what we know is a reasonable place.
 
@@ -16,13 +16,13 @@ That approach is how I found myself starting at an error screen having triggered
 
 # The Context
 
-I was working on a new page in our application that would show a user’s preferred photo. User photos are stored on a database, which meant that I would need to make a database call and wait while that resolved.
+I was working on a new page in our application that would show a user's preferred photo. User photos are stored on a database, which meant that I would need to make a database call and wait while that resolved.
 
 # The Wrinkle
 
 This particular project is using the new Hooks API within React, and I wanted to follow suit. Whereas I had a pretty good idea of how I might approach this for class components, I had never done any asynchronous work with hooks.
 
-However, having recently thought about the lifecycles in React <sup>1</sup> and then reading the React team’s docs on hooks, I thought I had a decent framework to think about this. In a class component, I would have put the async call in the `componentDidMount` phase, and the docs showed examples where `useEffect` was used in lieu of the `componentDidMount` - so that’s where I started.<sup>2</sup>
+However, having recently thought about the lifecycles in React <sup>1</sup> and then reading the React team's docs on hooks, I thought I had a decent framework to think about this. In a class component, I would have put the async call in the `componentDidMount` phase, and the docs showed examples where `useEffect` was used in lieu of the `componentDidMount` - so that's where I started.<sup>2</sup>
 
 # The Class Component Approach
 
@@ -59,9 +59,9 @@ class MyComponent {
 
 # Old Paradigms; New Problems
 
-Given my foundation with class components for asynchronous calls, that’s where I started with my new functional component.
+Given my foundation with class components for asynchronous calls, that's where I started with my new functional component.
 
-(Actually, this skips the first attempt where I tried the `useEffect` method with `async` — it’s not supported, though Robin Wieruch shows how you might accomplish data fetching with `useEffect` .<sup>3</sup>)
+(Actually, this skips the first attempt where I tried the `useEffect` method with `async` — it's not supported, though Robin Wieruch shows how you might accomplish data fetching with `useEffect` .<sup>3</sup>)
 
 Notice, this approach looks very similar to the class approach. I have a local state, I am using `useAsync` which awaits the return of the API call. Then setting state using my `setPhoto` method, I can now use that value in my return which will render to the DOM.
 
@@ -83,19 +83,19 @@ function myComponent(props) {
 };
 ```
 
-There’s only one problem: this creates an infinite loop.
+There's only one problem: this creates an infinite loop.
 
 I only call `useAsync` when the value of `photo` changes (notice the `[photo]` in the second argument position for `useAsync`), but I set that value each time it returns, which means I can call it again, and again, and again…
 
-I guess my reliable solution wasn’t so reliable any more.
+I guess my reliable solution wasn't so reliable any more.
 
 # New Approaches For New Problems
 
-Before I started working with Hooks, I noticed a lot of people make comments along the lines of “it’s a different way of thinking.” The React team themselves call this out specifically in their introduction to Hooks<sup>4</sup>> :
+Before I started working with Hooks, I noticed a lot of people make comments along the lines of “it's a different way of thinking.” The React team themselves call this out specifically in their introduction to Hooks<sup>4</sup>> :
 
 > It takes a bit of a mindshift to start “thinking in Hooks.”
 
-When refactoring to hooks, we actually don’t need to use state at all. Instead, the `useAsync` method returns a promise which has a `loading` attribute and once it’s resolved a `value`.
+When refactoring to hooks, we actually don't need to use state at all. Instead, the `useAsync` method returns a promise which has a `loading` attribute and once it's resolved a `value`.
 
 This makes our new code succinct and very readable.
 
@@ -119,7 +119,7 @@ function myComponent(props) {
 
 # Conclusion
 
-While it’s tempting, and I would argue smart, to start a new problem by attempting to reuse old knowledge - sometimes it doesn’t work out. The problems can be fundamentally different in ways you couldn’t have anticipated. The new problem can also offer new opportunities, different approaches, and surprising lessons.
+While it's tempting, and I would argue smart, to start a new problem by attempting to reuse old knowledge - sometimes it doesn't work out. The problems can be fundamentally different in ways you couldn't have anticipated. The new problem can also offer new opportunities, different approaches, and surprising lessons.
 
 You can shoe-horn old solutions into new problems or create new skills and add tools to your tool chest. It takes work and can be frustrating — or fun. The choice is yours.
 

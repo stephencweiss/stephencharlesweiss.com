@@ -9,6 +9,6 @@ I've been trying to pick up more of the cooking duties in our home and I've noti
 
 Most of the time this seems to *imply* that the difference will be time that can be used doing other things. Though that's not always the case, my favorite recipes are those where the "cook" time is passive.
 
-Take a cake for example - there’s the prep time. This will include mixing, blending, pouring, etc. Then there’s the cook time. The cake's in the oven and it just needs time. In fact, opening the door is counter productive.
+Take a cake for example - there's the prep time. This will include mixing, blending, pouring, etc. Then there's the cook time. The cake's in the oven and it just needs time. In fact, opening the door is counter productive.
 
 That's my kind of recipe. To get the final product that you want, you *need* to step away. It also means that you're now free to do other things.

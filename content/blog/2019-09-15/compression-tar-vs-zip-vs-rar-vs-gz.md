@@ -7,7 +7,7 @@ category: ['programming']
 
 What are the differences between a `.zip`, `.tar`, `.gz`., and `.rar`?
 
-It turns out it’s both a lot and a little.
+It turns out it's both a lot and a little.
 
 Some basics:
 
@@ -25,7 +25,7 @@ As far as I can tell, the differences are largely the method of compression with
 
 Gzip is one of the more popular methods for compression in the Unix ecosystem as the Zip protocol was hindered by copyright limitations early on.
 
-To create a gzip from the terminal, use the `tar` command. For example, to create gzip of a directory’s `.jpg` files:
+To create a gzip from the terminal, use the `tar` command. For example, to create gzip of a directory's `.jpg` files:
 
 ```shell
 $ tar -cvzf <name-of-tar>.tar.gz /path/to/directory/*.jpg
@@ -48,7 +48,7 @@ This example uses several flags in quick succession. Their definitions from the 
 	Read the archive from or write the archive to the specified file.  The filename can be - for standard input or standard output.  The default varies by system; on FreeBSD, the default is /dev/sa0; on Linux, the default is /dev/st0.
 ```
 
-If we did _not_ include the `-z` flag, we would not have compressed the files, but still would have created the `.tar`. In that way, we’d be able to consolidate a group of files to easily identify them, but would have saved minimally on storage as they would not have been compressed.
+If we did _not_ include the `-z` flag, we would not have compressed the files, but still would have created the `.tar`. In that way, we'd be able to consolidate a group of files to easily identify them, but would have saved minimally on storage as they would not have been compressed.
 
 ### Creating A Zip
 
@@ -61,7 +61,7 @@ The difference between the two examples is that the first will archive and compr
 
 ### Creating A Rar
 
-While other options exist, if you’re so inclined so as to want a `.rar` archive, you can do it through the use of the `.rar` cask formula on Homebrew.
+While other options exist, if you're so inclined so as to want a `.rar` archive, you can do it through the use of the `.rar` cask formula on Homebrew.
 
 ```shell
 $ brew cask install rar
@@ -124,5 +124,5 @@ The good news is that while I focused on the MacOS variant of a Unix system, mos
 
 - <sup>1</sup> [LZ77 and LZ78 | Wikipedia](https://en.wikipedia.org/wiki/LZ77_and_LZ78)
 - <sup>2</sup> [Tar Vs Zip Vs Gz : Difference And Efficiency](https://itsfoss.com/tar-vs-zip-vs-gz/)
-- <sup>3</sup> [What’s The Difference Between Zip Rar Deb and Tar Files | Quora](https://www.quora.com/What-is-difference-between-zip-rar-deb-and-tar-files)
+- <sup>3</sup> [What's The Difference Between Zip Rar Deb and Tar Files | Quora](https://www.quora.com/What-is-difference-between-zip-rar-deb-and-tar-files)
 - <sup>4</sup> [unrar — Homebrew Formulae](https://formulae.brew.sh/formula/unrar)

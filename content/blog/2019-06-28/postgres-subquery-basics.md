@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['postgres', 'subquery', 'entity relationship']
 ---
 
-I wanted to be able to retrieve a set of records from a database along with specific details from a related table. I knew SQL could accommodate this use-case, but I’d never actually done it — so, today I learned.
+I wanted to be able to retrieve a set of records from a database along with specific details from a related table. I knew SQL could accommodate this use-case, but I'd never actually done it — so, today I learned.
 
 Imagine the following situation. Two tables, `my_table`, and `my_related_table`, are related through a foreign-key relationship (whether formal or not is not relevant here).
 ![](./erd-my-table.png)

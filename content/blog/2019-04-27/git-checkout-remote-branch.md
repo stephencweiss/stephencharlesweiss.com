@@ -31,9 +31,9 @@ git checkout -t <name of remote>/test
 `git checkout -t origin/feature/123-do-something-awesome`
 
 ## Manual Definitions
-I often find it helpful to look up *what* these flags and options are doing — in this particular case, we’re taking advantage of the `-b` and `-t` flags.
+I often find it helpful to look up *what* these flags and options are doing — in this particular case, we're taking advantage of the `-b` and `-t` flags.
 
-Before looking this process up, I wasn’t aware that `-b` took an optional second parameter, `<start point>` which in our case *is* the `remote/branch-name`.
+Before looking this process up, I wasn't aware that `-b` took an optional second parameter, `<start point>` which in our case *is* the `remote/branch-name`.
 
 The `-t` option works similarly, but we *only* specify the upstream and allowing Git to derive the branch name.
 > If no -b option is given, the name of the new branch will be derived from the remote-tracking branch

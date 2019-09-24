@@ -33,7 +33,7 @@ We would have:
 6) [3,4,1,2]
 ```
 
-But steps 1 and 5, 2 and 6 are the same! That’s because `6 % 4 = 2`, so the effective number of rotations is actually only two.
+But steps 1 and 5, 2 and 6 are the same! That's because `6 % 4 = 2`, so the effective number of rotations is actually only two.
 
 Knowing this, we can reduce the number of steps dramatically. In our small example we had a 66% decline in the number of steps.
 
@@ -94,13 +94,13 @@ function rotLeft(a, d) {
 
 # Conclusion
 
-Though it’s still O(n), the loop-less approach is almost always going to be _more_ efficient than the iterative approach.
+Though it's still O(n), the loop-less approach is almost always going to be _more_ efficient than the iterative approach.
 
 Though they both have a time complexity of O(n). The loop-less approach has three methods that are all O(n), and as such is ~3n.
 
 Meanwhile, the iterative approach is O(effectiveRotations \* n) because each element in the array has to shift to the left for each effective iteration.
 
-This is one of the drawbacks of arrays as data structures. Access is fast, but insertion / deletion is not (except at the end and assuming there’s sufficient space).
+This is one of the drawbacks of arrays as data structures. Access is fast, but insertion / deletion is not (except at the end and assuming there's sufficient space).
 
 ## Footnotes
 

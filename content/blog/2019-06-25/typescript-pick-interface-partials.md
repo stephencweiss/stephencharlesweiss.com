@@ -1,5 +1,5 @@
 ---
-title: 'Using Typescript’s `Pick` To Improve Communication And Decrease Maintenance'
+title: 'Using Typescript's `Pick` To Improve Communication And Decrease Maintenance'
 date: '2019-06-25'
 category: ['programming']
 tags: ['developer experience', 'typescript', 'pick', 'interface', 'DRY']
@@ -11,7 +11,7 @@ Situation: I want to be able to propose changes to a table — but only to two f
 
 Imagine I want to create a method that will make changes to a table - but instead of opening up the _entire_ record for modification, I want to limit _which_ attributes to just two (`is_enabled` and `display_order`).
 
-However, the original table has more fields than that. Here’s an interface for demonstration purposes:
+However, the original table has more fields than that. Here's an interface for demonstration purposes:
 
 ```typescript
 interface IMyTable {
@@ -44,11 +44,11 @@ async changeMyTable(proposal: Partial<IMyTable[]>): Promise<...> { /* ... */ }
 ```
 
 This has the benefit of keeping the management of interfaces down, but introduces several new issues.
-Namely - I could pass _any_ of the fields on the table and my method would either need to handle them or alert the user if not. Also, partials don’t give me the opportunity to require any fields. So, imagine `id` is necessary to find the correct record, but it’s not passed — the changes _should_ fail.
+Namely - I could pass _any_ of the fields on the table and my method would either need to handle them or alert the user if not. Also, partials don't give me the opportunity to require any fields. So, imagine `id` is necessary to find the correct record, but it's not passed — the changes _should_ fail.
 
 Going this route sets me up to have to handle a number of additional fail states or fail silently — creating a lot more work for me or a poor user experience. Not great options.
 
-A _better_ approach would be to create a separate interface to communicate clearly to the user what you’re expecting and, therefore, what’s handled. That interface could look like this:
+A _better_ approach would be to create a separate interface to communicate clearly to the user what you're expecting and, therefore, what's handled. That interface could look like this:
 
 ```typescript
 interface IMyTableProposal {
@@ -78,7 +78,7 @@ async changeMyTable(proposal: MyTableProposal): Promise<...> { /* ... */ }
 The API requires two features:
 
 1. The Base Interface (i.e. what is being picked _from_)
-2. The Select(ed) Attributes (i.e. which of the base interface’s characteristics should be included in the type)
+2. The Select(ed) Attributes (i.e. which of the base interface's characteristics should be included in the type)
 
 ## Perks of `Pick`
 
@@ -86,7 +86,7 @@ A few of the perks that come with `Pick` include:
 
 1. If the interface `IMyTable` changes later, it will flow through automatically to the `type`
 2. The interface is shown in IntelliSense as is expected (i.e. only the picked fields)
-3. I only have to maintain _one_ interface (unless I want to change which cases are handled, in which case it makes sense I’d need to update the `type` anyway).
+3. I only have to maintain _one_ interface (unless I want to change which cases are handled, in which case it makes sense I'd need to update the `type` anyway).
 
 ![](./pick-type-my-table.png)
 

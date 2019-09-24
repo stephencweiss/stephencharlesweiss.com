@@ -6,7 +6,7 @@ tags: ['gatsby', 'configuration', 'jason lengstorf',]
 ---
 I often struggle with the syntax of config files. What are resolvers? How do options work? etc.
 
-As a result, while making my way through Jason Lengstorf’s Introduction to Gatsby on Frontend Masters, I found the following interesting<sup>1</sup>:
+As a result, while making my way through Jason Lengstorf's Introduction to Gatsby on Frontend Masters, I found the following interesting<sup>1</sup>:
 
 Within my `gatsby-config.js` file in the root of a Gatsby project, I have two plugins:
 ``` javascript
@@ -26,7 +26,7 @@ module.exports = {
 }
 ```
 
-The former is just shorthand because for those, I didn’t need to add any configuration. What happens if I install a plugin that _does_ require more detail about how it will be used? That’s where the fact that writing just `gatsby-plugin-emotion` is shorthand for an object starts to matter.
+The former is just shorthand because for those, I didn't need to add any configuration. What happens if I install a plugin that _does_ require more detail about how it will be used? That's where the fact that writing just `gatsby-plugin-emotion` is shorthand for an object starts to matter.
 
 Using the `gatsby-mdx` as an example, we can see this in practice:
 
@@ -50,7 +50,7 @@ module.exports = {
 
 What this is saying is that for any `mdx` files that I load, the files will  be loaded into the layout template I defined in our `src/components/layout.js`.
 
-There’s still the question of what options the `gatsby-mdx` will accept. For that, the docs are quite helpful in specifying the configuration options.<sup>2</sup>
+There's still the question of what options the `gatsby-mdx` will accept. For that, the docs are quite helpful in specifying the configuration options.<sup>2</sup>
 
 Resources:
 * <sup>1</sup> [Learn Gatsby with Jason Lengstorf | Frontend Masters](https://frontendmasters.com/courses/gatsby/)

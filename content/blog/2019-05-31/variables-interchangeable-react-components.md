@@ -7,9 +7,9 @@ tags: ['react', 'components', 'design patterns']
 
 # Using Variables To Make Interchangeable React Components
 
-I’m still making tweaks to the Stepper project I wrote about previously ([here](https://www.stephencharlesweiss.com/2019-05-26/local-git-stale-branch-cleanup/) and [here](https://www.stephencharlesweiss.com/2019-05-07/z-index-geometry-not-magic/)) and the lessons keep coming. Today, the challenge was simplifying the logic surrounding applying styles based on props being passed to the parent component.
+I'm still making tweaks to the Stepper project I wrote about previously ([here](https://www.stephencharlesweiss.com/2019-05-26/local-git-stale-branch-cleanup/) and [here](https://www.stephencharlesweiss.com/2019-05-07/z-index-geometry-not-magic/)) and the lessons keep coming. Today, the challenge was simplifying the logic surrounding applying styles based on props being passed to the parent component.
 
-For context, here’s the relevant portion of the folder structure.
+For context, here's the relevant portion of the folder structure.
 
 ```bash
 $ tree -L 1
@@ -50,7 +50,7 @@ What started as passing along just the `icon` prop had now added a `disableRippl
 
 # Create A Mask
 
-Wanting to find a better way, I found that creating what I’m calling a “mask” worked quite well.
+Wanting to find a better way, I found that creating what I'm calling a “mask” worked quite well.
 
 By mask, all I mean is that my `LabelPosition` is the outward appearance for any of my actual components, which are still controlled by the same switch logic.
 
@@ -83,7 +83,7 @@ One line I went back and forth on was whether or not to include the logic for th
 Also playing the position of the `else` position, I could eliminate this without affecting the result. I decided to keep it in, however, for three reasons:
 
 1. It communicates the situation that we _expect_ it to be called,
-2. It allows the logic to change (maybe in the future we’ll have a third prop that affects the situation), and
+2. It allows the logic to change (maybe in the future we'll have a third prop that affects the situation), and
 3. It allows a different fallback to be used in the future.
 
 # Conclusion

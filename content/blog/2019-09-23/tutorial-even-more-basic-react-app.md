@@ -7,7 +7,7 @@ tags: ['react', 'tutorial', 'frontend masters', 'brian holt']
 
 Recently, I walked through building a basic React App.<sup>1</sup> In retrospect, I could make it _even more_ basic by removing _any_ package managers, bundlers, or other tooling.
 
-NB: This exercise is adapted from Brian Holt’s Frontend Masters course (which is also where I borrowed the styling from). He’s posted all of the course notes on Github too.<sup>2</sup>
+NB: This exercise is adapted from Brian Holt's Frontend Masters course (which is also where I borrowed the styling from). He's posted all of the course notes on Github too.<sup>2</sup>
 
 To get started, all we need is an `index.html` and a `style.css`.
 
@@ -41,7 +41,7 @@ Want to see an entire React app in one file?
     <script>
       const App = () =>
         React.createElement(
-          'div', // the element that’s rendered
+          'div', // the element that's rendered
           { id: `main-div` }, // the props that are passed to the rendered element
           React.createElement('h1', {}, 'Adopt Me!') // the children of our element
         ) // our current entire app
@@ -55,7 +55,7 @@ Voilá. We have our app rendering!
 
 ![](./rendering.png)
 
-So, what’s actually happening here? We’re using pure React with the `createElement` method featured prominently. In fact, we use it three times:
+So, what's actually happening here? We're using pure React with the `createElement` method featured prominently. In fact, we use it three times:
 
 1. To create the `App` component
 2. To create a `div`
@@ -69,9 +69,9 @@ So, what’s actually happening here? We’re using pure React with the `createE
 
 ## Passing A Sub Component
 
-So far, we don’t have a very _interesting_ application however. How could we extend it?
+So far, we don't have a very _interesting_ application however. How could we extend it?
 
-Let’s start with a child that actually receives props.
+Let's start with a child that actually receives props.
 
 ```javascript
 <script>
@@ -87,7 +87,7 @@ Let’s start with a child that actually receives props.
 </script>
 ```
 
-What’s interesting here is to see _how_ we simply repeat the pattern, though this time, the composite component, `Header` is receiving props (`value:1`) which we see in the console.
+What's interesting here is to see _how_ we simply repeat the pattern, though this time, the composite component, `Header` is receiving props (`value:1`) which we see in the console.
 
 ![](./header-with-props.png)
 
@@ -118,7 +118,7 @@ Since a div can have multiple children, if we want to pass more than one, just l
 
 ## Extracting React From The HTML
 
-This isn’t very easy to manage, however. Let’s pull these pieces apart so we’re not writing Javascript directly in our HTML.
+This isn't very easy to manage, however. Let's pull these pieces apart so we're not writing Javascript directly in our HTML.
 
 We can start by adding an `App.js` file to the `src` directory.
 
@@ -139,9 +139,9 @@ Update the `<script>` tag to reference the `App.js` as its source.
 <script src="./App.js"></script>
 ```
 
-That’s it. We’ve now rendered a React App without `npm`, without `webpack`, and without embedding the Javascript in the HTML.
+That's it. We've now rendered a React App without `npm`, without `webpack`, and without embedding the Javascript in the HTML.
 
-At this point we’ve written a _pure_ React app. No tools. No npm. No bundles. We could keep going like this too. Though, I find the tools helpful. For more on that see my other walkthrough, Getting A Basic React App Up and Running<sup>1</sup>.
+At this point we've written a _pure_ React app. No tools. No npm. No bundles. We could keep going like this too. Though, I find the tools helpful. For more on that see my other walkthrough, Getting A Basic React App Up and Running<sup>1</sup>.
 
 # Resources
 

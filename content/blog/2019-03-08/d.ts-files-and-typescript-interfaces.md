@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['typescript', 'error handling', 'declaration files']
 ---
 
-The `.d` file is a declaration file. In this case, it’s a declaration file for Typescript files.
+The `.d` file is a declaration file. In this case, it's a declaration file for Typescript files.
 
 What does that actually mean though? The declaration file acts as an interface with other Javascript files so that they do not _need_ to be re-written in typescript while still getting the benefits of having _some_ parts of the code base be typed.
 
@@ -24,7 +24,7 @@ export const updateUserPreferences = async (userId: string, preferences: UserPre
 
 ![](./unknown-property-error.png)
 
-When I tried to access a field that _didn’t_ exist in the entity, however, Typescript alerted me. Even more to the point, this is a fatal error and the code will not compile correctly until this is addressed.
+When I tried to access a field that _didn't_ exist in the entity, however, Typescript alerted me. Even more to the point, this is a fatal error and the code will not compile correctly until this is addressed.
 
 Fortunately, defining the entity is pretty straightforward:
 

@@ -7,7 +7,7 @@ tags: ['lodash', 'groupby', 'learning', 'iteratee']
 
 As I [wrote previously](../../2019-05-03/lodash-groupby-vs-custom-helpers), the `_.groupBy` method of Lodash can be really useful.
 
-My original use case for `_.groupBy` was for one big object, but of course, those principles extend into the case where it’s an array of objects (or object of objects).
+My original use case for `_.groupBy` was for one big object, but of course, those principles extend into the case where it's an array of objects (or object of objects).
 
 For example - imagine an array like so:
 
@@ -24,9 +24,9 @@ let grouped = _.groupBy(objArr, el => el.id)
 console.log({ grouped })
 ```
 
-Now, imagine that the goal is to group by the `id` within object. Since `id` isn’t key of the `objArr` (i.e. the index of the array), I needed to specify more precisely _what_ I wanted to group by. `groupBy` allows this through its iteratee parameter. In this case, it meant evaluating the `id` key of the element, but it could also be an evaluation.
+Now, imagine that the goal is to group by the `id` within object. Since `id` isn't key of the `objArr` (i.e. the index of the array), I needed to specify more precisely _what_ I wanted to group by. `groupBy` allows this through its iteratee parameter. In this case, it meant evaluating the `id` key of the element, but it could also be an evaluation.
 
-Imagine we wanted to group by folks by age and sort them into buckets. For demonstration purposes, we’ll look at above / below 30.
+Imagine we wanted to group by folks by age and sort them into buckets. For demonstration purposes, we'll look at above / below 30.
 
 ```javascript
 function evaluateAge(person) {
@@ -43,6 +43,6 @@ let groupedAge = _.groupBy(objArr, evaluateAge)
 console.log({ groupedAge })
 ```
 
-_NB_: I could also have done `el => evaluateAge(el)`, however, [currying](../../2019-04-13/currying-an-introduction-with-function-declarations-and-expressions) means that’s not necessary.
+_NB_: I could also have done `el => evaluateAge(el)`, however, [currying](../../2019-04-13/currying-an-introduction-with-function-declarations-and-expressions) means that's not necessary.
 
 This should have been obvious, but actually took me a bit to wrap my head around.

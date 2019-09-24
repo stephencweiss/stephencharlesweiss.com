@@ -4,10 +4,10 @@ date: '2019-04-28'
 category: ['living']
 tags: ['emoji', 'keyboard', 'shortcuts']
 ---
-On Macs there is a Emoji & Symbols keyboard.  You’ve probably seen it on your phone, but desktops and laptops have it too.
+On Macs there is a Emoji & Symbols keyboard.  You've probably seen it on your phone, but desktops and laptops have it too.
 
 To launch it, go to Settings > Keyboard  and select “Show keyboard and emoji viewers in menu bar.”
-Then in your menu bar, you’ll be able to select the Emojis and Symbols which will open the viewer.
+Then in your menu bar, you'll be able to select the Emojis and Symbols which will open the viewer.
 
 Or, you can quick launch it with your keyboard using the keyboard shortcut  `⌃ + ⌘ + ␣`.
 

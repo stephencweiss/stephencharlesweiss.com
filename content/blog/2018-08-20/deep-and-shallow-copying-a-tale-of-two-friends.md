@@ -17,17 +17,17 @@ Friend A is trendy. She sets the standard. Friend B is lazy, but wants to be coo
 
 # Deep Copying - The art of method acting
 
-When Friend B decides to Deep Copy, it’s like a method actor who immerses themselves so deeply in the concept of what it was to live in a particular period that they come to represent that period in their own way when they act. It means that they know the material so intimately that even if it were to change, they would be able to pick and choose what to replicate. But, because they know the topic as well as they do, they have agency. It’s not a blind copying because they actually understand the difference.
+When Friend B decides to Deep Copy, it's like a method actor who immerses themselves so deeply in the concept of what it was to live in a particular period that they come to represent that period in their own way when they act. It means that they know the material so intimately that even if it were to change, they would be able to pick and choose what to replicate. But, because they know the topic as well as they do, they have agency. It's not a blind copying because they actually understand the difference.
 
-Effectively, when Friend B deeply copies Friend A, it is a perfect replica. The upside is that with a deep copy, Friend A and Friend B can diverge. Once the copy is complete, Friend B is no longer reliant or tied to Friend A’s image of the world.
+Effectively, when Friend B deeply copies Friend A, it is a perfect replica. The upside is that with a deep copy, Friend A and Friend B can diverge. Once the copy is complete, Friend B is no longer reliant or tied to Friend A's image of the world.
 
-The downside of this approach is that we’ve duplicated efforts. Because Friend B is a perfect replica, they’ve had to literally re-learn all of the information that goes into being Friend A and store that in their mind. That is, there’s a memory space cost.
+The downside of this approach is that we've duplicated efforts. Because Friend B is a perfect replica, they've had to literally re-learn all of the information that goes into being Friend A and store that in their mind. That is, there's a memory space cost.
 
 # Shallow Copy - The superficial reflection
 
-A Shallow Copy approach addresses this memory space concern, but comes with its own costs - namely that it’s a purely superficial copy.
+A Shallow Copy approach addresses this memory space concern, but comes with its own costs - namely that it's a purely superficial copy.
 
-When Friend B decides to shallow copy Friend A, they’re deferring their agency in pursuit of efficiency. If Friend A changes, Friend B changes because Friend B’s understanding of the world is derived from the same place in a collective memory that Friend A stores their information. In this way a shallow copy acts more like a mirror than a true replica.
+When Friend B decides to shallow copy Friend A, they're deferring their agency in pursuit of efficiency. If Friend A changes, Friend B changes because Friend B's understanding of the world is derived from the same place in a collective memory that Friend A stores their information. In this way a shallow copy acts more like a mirror than a true replica.
 
 # Bringing this back to code - a caution and gotcha
 

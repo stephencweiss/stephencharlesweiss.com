@@ -5,11 +5,11 @@ category: ['programming']
 tags: ['node','import','require', 'best practices']
 ---
 
-I’ve developed a peculiar habit. I knew I’d developed it, but didn’t know it was peculiar until my lead asked me about it this morning.
+I've developed a peculiar habit. I knew I'd developed it, but didn't know it was peculiar until my lead asked me about it this morning.
 
-When organizing my files, I’m quick to add a subdirectory to house even a single module.
+When organizing my files, I'm quick to add a subdirectory to house even a single module.
 
-Here’s an example of a folder structure for my `Property` directory. It’s a fairly typical example of this habit: 
+Here's an example of a folder structure for my `Property` directory. It's a fairly typical example of this habit:
 ```
 $ tree
 .
@@ -33,18 +33,18 @@ $ tree
     └── index.tsx
 ```
 
-My reasoning for this structure was two-fold: 
-1. Don’t house logic in an `index` file since I find them difficult to locate later (searching `index` in an IDE can yield a _lot_ of files if components are written this way)
+My reasoning for this structure was two-fold:
+1. Don't house logic in an `index` file since I find them difficult to locate later (searching `index` in an IDE can yield a _lot_ of files if components are written this way)
 2. Related: Avoid import statements that look like: `import Lot from “./Property/Lot/Lot”`
 
 # Prettier Imports
-In my aim to organize my code, I’d created a lot of overhead and extra files. Directories that didn’t need to exist and two line index files: For example, `./Location/index.tsx` is a typical example:
+In my aim to organize my code, I'd created a lot of overhead and extra files. Directories that didn't need to exist and two line index files: For example, `./Location/index.tsx` is a typical example:
 ``` javascript
 import Location from “./Location”;
 export default Location;
 ```
 
-I’d gotten in this habit because of how _nice_ it made my import statements.
+I'd gotten in this habit because of how _nice_ it made my import statements.
 ```javascript
 import Location from "./Property/Location”;
 import Lot from “./Property/Lot”;
@@ -53,10 +53,10 @@ import Structure from “./Property/Structure”;
 import InteriorFeatures from “./Property/InteriorFeatures”;
 ```
 
-See? Pretty. 
+See? Pretty.
 
 # Pretty Imports Without The Cruft
-After discussing the topic for a few minutes, my lead shared the Node documentation on Modules. It wasn’t my first time looking, but it’s always informative. 
+After discussing the topic for a few minutes, my lead shared the Node documentation on Modules. It wasn't my first time looking, but it's always informative.
 
 This time, I started stepping through the Pseudocode the Node team provided on how `require` works: <sup>1</sup>
 ``` javascript
@@ -120,7 +120,7 @@ Since my imports are relative, they fall under step 3:
    b. LOAD_AS_DIRECTORY(Y + X)
 ```
 
-If _all_ I did was delete the `index` file, but retain the directory structure, the app wouldn’t be able to compile because it would try to import as an entire file. 
+If _all_ I did was delete the `index` file, but retain the directory structure, the app wouldn't be able to compile because it would try to import as an entire file.
 
 For example - a refactored `InteriorFeatures`:
 ```
@@ -132,10 +132,10 @@ $ tree
 ```
 Followed by:
 ```javascript
-import InteriorFeatures from ‘./Property/InteriorFeatures’;
+import InteriorFeatures from ‘./Property/InteriorFeatures';
 ```
 
-Going through our Pseudocode, we’d end up in `LOAD_AS_FILE` with X as the value of `Property/InteriorFeatures/InteriorFeatures` — this _is_ a `.js` (`.tsx` compiles to `.js`), so we know we’d load it as JavasScript text. 
+Going through our Pseudocode, we'd end up in `LOAD_AS_FILE` with X as the value of `Property/InteriorFeatures/InteriorFeatures` — this _is_ a `.js` (`.tsx` compiles to `.js`), so we know we'd load it as JavasScript text.
 
 ```
 LOAD_AS_FILE(X)
@@ -147,7 +147,7 @@ LOAD_AS_FILE(X)
 
 What I really want is to import the file and then _use_ the default export within it.
 
-So, deleting  the `index.tsx` and calling it a day won’t work. But, I _can_ lift the files out of the subdirectory altogether and _delete_ the extra folder, which, after all, serves no real purpose since the folder isn’t actually organizing anything for all of these modules (with the exception of `Rooms`).
+So, deleting  the `index.tsx` and calling it a day won't work. But, I _can_ lift the files out of the subdirectory altogether and _delete_ the extra folder, which, after all, serves no real purpose since the folder isn't actually organizing anything for all of these modules (with the exception of `Rooms`).
 
 Understanding this, my new folder structure is as follows:
 ```
@@ -165,10 +165,10 @@ $ tree
 └── Structure.tsx
 ```
 
-My import statements _remain_ pretty, but without the extra cruft of unnecessary directories or `index` files. 
+My import statements _remain_ pretty, but without the extra cruft of unnecessary directories or `index` files.
 
 # Conclusion
-Understanding _how_ require (and import) work allow for more intuitive grouping of modules and can avoid unnecessary clutter. Using this understanding, I’m avoiding housing logic within `index` files which are predominantly reserved for routing, maintaining streamlined import statements, _and_ eliminating excess files. 
+Understanding _how_ require (and import) work allow for more intuitive grouping of modules and can avoid unnecessary clutter. Using this understanding, I'm avoiding housing logic within `index` files which are predominantly reserved for routing, maintaining streamlined import statements, _and_ eliminating excess files.
 
 ## Footnotes
 *  <sup>1</sup> [Modules Documentation v12.8.0 | Node](https://nodejs.org/api/modules.html#modules_all_together)

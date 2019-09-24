@@ -7,7 +7,7 @@ tags: ['react', 'useRef', 'refs', 'state']
 
 I was working on a project recently which was using Refs in order to integrate with a third-party library.
 
-My mental model for refs are that they allow you to view into the internal state of a component _without_ tracking it explicitly. In that way, you can use it for calculations and without the overhead of making a component stateful that otherwise doesn’t require state.
+My mental model for refs are that they allow you to view into the internal state of a component _without_ tracking it explicitly. In that way, you can use it for calculations and without the overhead of making a component stateful that otherwise doesn't require state.
 
 My scenario looked something like this:
 ![Sketch example](./ref-container.png)
@@ -16,12 +16,12 @@ A stateful container with a component that stored business logic wrapping an inp
 
 The goal was to find a way to lift the value of the input up to the top level container _after_ processing it in a wrapper that contained business logic and _without_ storing it in the wrapper as state. I also needed to be able to update the value of the input in certain situations based on business logic considerations.
 
-Here’s a simplified version of what I came up with:
+Here's a simplified version of what I came up with:
 
 ```javascript
-import React, { Component } from ‘react’;
-import { render } from ‘react-dom’;
-import ‘./style.css’;
+import React, { Component } from ‘react';
+import { render } from ‘react-dom';
+import ‘./style.css';
 
 const WrapperComponent = props => {
   const refContainer = React.useRef({});
@@ -56,12 +56,12 @@ const App = () => {
 
 }
 
-render(<App />, document.getElementById(‘root’));
+render(<App />, document.getElementById(‘root'));
 ```
 
 Inspecting the console, we can see that this works!
 
-My `input` has a value. My wrapper applies business logic and then passes it through to the container’s `onChange` method.
+My `input` has a value. My wrapper applies business logic and then passes it through to the container's `onChange` method.
 
 I can also format the value inside the input and change it when I need — as I did here when I reach a valid 10-digit phone number.
 
@@ -69,13 +69,13 @@ I can also format the value inside the input and change it when I need — as I 
 
 ## Conclusion
 
-I don’t expect to use refs frequently. The React team discourages the practice for one except in certain circumstances (like working with 3rd Party Libraries which was the impetus to this exercise).<sup>1</sup>
+I don't expect to use refs frequently. The React team discourages the practice for one except in certain circumstances (like working with 3rd Party Libraries which was the impetus to this exercise).<sup>1</sup>
 
 Still, learning _how_ I can use them to manage state without re-rendering a component when it changes can be useful, which is exactly what I did here.
 
 Refs also allow you to reach _up_ in React, at least if viewed from a certain perspective, and knowing about that is handy.
 
-NB: I also put this into a Stackblitz if you’re interested in playing around<sup>2</sup>
+NB: I also put this into a Stackblitz if you're interested in playing around<sup>2</sup>
 
 ## Resources
 

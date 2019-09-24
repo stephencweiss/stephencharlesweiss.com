@@ -32,7 +32,7 @@ But, all we really needed to send across the wire was the `id` and the `keyProp`
 
 1. Iterate over the array
 2. Look at the element (an object)
-3. Return a _new_ object (or mutate the original, though that won’t be our approach) with _just_ the `id` and `keyProp`
+3. Return a _new_ object (or mutate the original, though that won't be our approach) with _just_ the `id` and `keyProp`
 
 Using vanilla Javascript, we could do this with a `.map` and custom function to construct the new object (since `.map` returns a new array, we would use the value to construct a new object).
 
@@ -50,17 +50,17 @@ const newObjArr = myArrOfObj.map(el => {
 })
 ```
 
-While this works, it’s a bit cumbersome.
+While this works, it's a bit cumbersome.
 
-Lodash offers a method in `pick` to do this with relative ease. We still need the map (since we’re picking from the objects elements of the array, not the array itself.
+Lodash offers a method in `pick` to do this with relative ease. We still need the map (since we're picking from the objects elements of the array, not the array itself.
 
-Pick, however, has a very declarative API indicating exactly what you’re trying to do - whereas with the example above, you need to read the code to see what’s happening.
+Pick, however, has a very declarative API indicating exactly what you're trying to do - whereas with the example above, you need to read the code to see what's happening.
 
 ```javascript
 const myArrOfObj = [{id:"abc123", keyProp: "yippee", ...}, ... ]
 const picked = myArrOfObj.map(val => _.pick(val, ["id", "val"]))
 ```
 
-Two comparable ways to do the same thing. The benefit of the Lodash method in this case is that it makes it clear what is being accomplished. Reaching for a library is not always helpful - particularly if there’s a native way to achieve the same objective (as I did here), however, I gladly do it when it means that the program is more readable / declarative.
+Two comparable ways to do the same thing. The benefit of the Lodash method in this case is that it makes it clear what is being accomplished. Reaching for a library is not always helpful - particularly if there's a native way to achieve the same objective (as I did here), however, I gladly do it when it means that the program is more readable / declarative.
 
 Note: Thank you Kyle Simpson for giving me the language to speak about this (imperative vs declarative code).

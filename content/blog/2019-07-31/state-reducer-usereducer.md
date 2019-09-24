@@ -5,11 +5,11 @@ category: ['programming']
 tags: ['react','redux','reducer','action','payload']
 ---
 
-To date, I’ve struggled to understand reducers. Terms like reducers, actions, dispatch, all blurred together and even though I could use, and in some cases, extend the redux store on some projects, I never understood all of the pieces.
+To date, I've struggled to understand reducers. Terms like reducers, actions, dispatch, all blurred together and even though I could use, and in some cases, extend the redux store on some projects, I never understood all of the pieces.
 
-Despite reading the hooks documentation on `useReducer`, the pieces didn’t click until I read Robin Wieruch’s two-part tutorial on reducers.<sup>1, 2, 3</sup>
+Despite reading the hooks documentation on `useReducer`, the pieces didn't click until I read Robin Wieruch's two-part tutorial on reducers.<sup>1, 2, 3</sup>
 
-So, what’s exactly going on?
+So, what's exactly going on?
 
 ## useReducer
 The `useReducer` returns a tuple `[state, dispatch]` and takes three arguments, `reducer`, `initialArg`, and `init`. Note: `init` is optional and used for lazy initialization - more on that in a minute.
@@ -46,7 +46,7 @@ function FunctionalComponent() => {
 
 In fact, even if `initialValue` is something more exotic than a `boolean` or `string`, we can still use `useState`. We would just need to use the functional update syntax.
 
-For example, adapting the React team’s example:
+For example, adapting the React team's example:
 ```javascript
 const initialValues = {
   buttonOne: 0,
@@ -65,7 +65,7 @@ function Counter() {
   );
 }
 ```
-This example isn’t very useful as the two values can only go in opposite directions, but it illustrates how we can use `useState` to manage more complicated state objects.
+This example isn't very useful as the two values can only go in opposite directions, but it illustrates how we can use `useState` to manage more complicated state objects.
 
 ## Why useReducer?
 Since we can manage state with `useState`, why do we need `useReducer` at all? Per the React team:
@@ -75,7 +75,7 @@ Since we can manage state with `useState`, why do we need `useReducer` at all? P
 ## Using Reducers
 `useReducer` accepts a `reducer`, a function in the form of `(state, action) => newState`.
 
-Let’s simplify our example for the moment and _just_ add numbers, but use `useReducer`:
+Let's simplify our example for the moment and _just_ add numbers, but use `useReducer`:
 ```javascript
 const initialValues = 0;
 
@@ -94,7 +94,7 @@ function Counter() {
 }
 ```
 
-The reason we _only_ add numbers here, is because our `reducer` doesn’t _use_ the second argument, `action`. It’s fixed.
+The reason we _only_ add numbers here, is because our `reducer` doesn't _use_ the second argument, `action`. It's fixed.
 
 How might we change that?
 
@@ -104,7 +104,7 @@ Actions are how we change that.
 From Redux documentation:
 > Actions are payloads of information that send data from your application to your store. They are the *only* source of information for the store.<sup>4</sup>>
 
-Here’s an example using the simplest of actions — again reintroducing our second button:
+Here's an example using the simplest of actions — again reintroducing our second button:
 ```javascript
 const initialValues = 0;
 
@@ -131,9 +131,9 @@ function Counter() {
 When we hit the `+` we dispatch the action to increment while the `-` dispatches an action. Those actions are evaluated by our reducer and return a new state.
 
 ### Payload
-The convention for writing an Action is to have both a `type` and a `payload` key. While the `type` is the _what_, the `payload` is the _how_. It doesn’t make much sense in this case since the state we’ve been using is just an integer, but what would happen if it were something more complicated? How might we change it then?
+The convention for writing an Action is to have both a `type` and a `payload` key. While the `type` is the _what_, the `payload` is the _how_. It doesn't make much sense in this case since the state we've been using is just an integer, but what would happen if it were something more complicated? How might we change it then?
 
-Let’s imagine a state object that has both our count _and_ a person attribute.
+Let's imagine a state object that has both our count _and_ a person attribute.
 ```javascript
 const initialValues = {
   count: 0,
@@ -165,7 +165,7 @@ function Counter() {
   );
 }
 ```
-NB:  In this case, we _spread_ the state object before modifying the `count` attribute so that we don’t overwrite the whole object _and_ avoid having our new value for the count be overwritten (order matters).
+NB:  In this case, we _spread_ the state object before modifying the `count` attribute so that we don't overwrite the whole object _and_ avoid having our new value for the count be overwritten (order matters).
 
 ### Lazy Initialization
 Now that we know how to use actions, we can pull it all together to see how we would use a lazy initialization.
@@ -213,7 +213,7 @@ This is often used in an example like the above where we want to extract the abi
 ## Conclusion
 When I came across a project that used Redux or another state management tool, I never really understood how it all worked. I could use it, butt I never felt comfortable.
 
-After reading through Robin’s tutorials, I was able to return with fresh eyes and implemented it within my own project. It’s a great feeling when things click! Hopefully this write up will help someone else experience that same feeling.
+After reading through Robin's tutorials, I was able to return with fresh eyes and implemented it within my own project. It's a great feeling when things click! Hopefully this write up will help someone else experience that same feeling.
 
 ## Footnotes
 * <sup>1</sup> [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#usereducer)

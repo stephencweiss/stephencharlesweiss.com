@@ -16,7 +16,7 @@ The terminal, however, does not have these advantages. It is not interactive and
 
 `JSON.Stringify` addresses these shortcomings by exposing the details of the objects without relying on interactivity or a manual destructuring.
 
-Let’s look at an example of stringify’ing a `proposal`. The `proposal`’s shape will be:
+Let's look at an example of stringify'ing a `proposal`. The `proposal`'s shape will be:
 
 ```javascript
 `{
@@ -47,7 +47,7 @@ proposal: standard -->
      proposedFields: [ [Object], [Object] ] } }
 ```
 
-And since the terminal isn’t interactive, there is no simple recourse… enter `JSON.Stringify`.
+And since the terminal isn't interactive, there is no simple recourse… enter `JSON.Stringify`.
 
 # With `JSON.Stringify`
 
@@ -66,7 +66,7 @@ proposal: json -->
 
 # With `JSON.Stringify` and Spacer
 
-Fortunately, tackling legibility is as easy as using the optional `spacer` parameter that’s part of the `JSON.Stringify` API. The `spacer` parameter is in the third position (second position is for an optional `replacer` function or array) and takes a string or number.
+Fortunately, tackling legibility is as easy as using the optional `spacer` parameter that's part of the `JSON.Stringify` API. The `spacer` parameter is in the third position (second position is for an optional `replacer` function or array) and takes a string or number.
 
 The number refers to the number of leading space characters.
 

@@ -13,7 +13,7 @@ This got me wondering whether or not I'd be able to simply rename while destruct
 
 Turns out you can.
 
-Imagine the following: 
+Imagine the following:
 
 ```javascript
 const me = {
@@ -30,7 +30,7 @@ const me = {
 }
 ```
 
-So, I want to be able to access my name, my wife’s name, and my dog’s name.
+So, I want to be able to access my name, my wife's name, and my dog's name.
 
 I can do that with destructuring, like so:
 
@@ -40,9 +40,9 @@ const { name: wife } = me.family.wife
 const { name: dog } = me.family.dog
 ```
 
-The only thing that I really wish this could do that it *can’t* is allow additional restructuring *within* the object and combine this into one line. That is, the following will *not* work:
+The only thing that I really wish this could do that it *can't* is allow additional restructuring *within* the object and combine this into one line. That is, the following will *not* work:
 `const {name, family.wife.name: wife, family.dog.name: dog} = me`
 
-Oh well. 
+Oh well.
 
-[Wes Bos](https://wesbos.com/destructuring-renaming/) has a helpful post on the topic. Check it out. 
+[Wes Bos](https://wesbos.com/destructuring-renaming/) has a helpful post on the topic. Check it out.

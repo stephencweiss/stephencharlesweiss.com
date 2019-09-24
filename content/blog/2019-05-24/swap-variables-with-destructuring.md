@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['javascript', 'destructuring']
 ---
 
-I’ve been learning about some of the ways you can use destructuring to make my Javascript more declarative and communicate my intent more clearly.
+I've been learning about some of the ways you can use destructuring to make my Javascript more declarative and communicate my intent more clearly.
 
 One of the ways that I discovered was applying destructuring to swapping variables. This jumped out because last year I learned about [bitwise operators and how to use them to swap variables without using temporary variables](https://www.stephencharlesweiss.com/2018-10-21/swapping-and-bitwise-operators/).
 
@@ -44,7 +44,7 @@ Destructuring offers an even simpler and more powerful approach to swapping vari
 
 # How To Use Destructuring To Swap Variables
 
-To do the same thing with destructuring, it’s one line. No need for a swap function at all.
+To do the same thing with destructuring, it's one line. No need for a swap function at all.
 
 ```javascript
 var x = 10
@@ -53,9 +53,9 @@ var y = 20
 console.log({ x, y }) // {x: 20, y: 10}
 ```
 
-So what’s actually going on behind the scenes?
+So what's actually going on behind the scenes?
 
-We’re declaring that we’d like to assign to x and y (the left hand side targets, `[x, y] =`) the values of the array with y in the 0th index position and x in the 1st index position (`[y, x]`) .
+We're declaring that we'd like to assign to x and y (the left hand side targets, `[x, y] =`) the values of the array with y in the 0th index position and x in the 1st index position (`[y, x]`) .
 
 Javascript will execute the code and make the assignments.
 
@@ -65,7 +65,7 @@ Whereas bitwise operators are effective for integers, they will fall short with 
 
 Imagine, instead of swapping 10 and 20, we wanted to swap an integer with an array (or two arrays, or arrays and objects, etc.) .
 
-We would not be able to use our bitwise operators in this case. Here’s an example:
+We would not be able to use our bitwise operators in this case. Here's an example:
 
 ```javascript
 var x = 10
@@ -82,6 +82,6 @@ var z = [1, 2, 3]
 console.log({ x, z }) // {x: [1, 2, 3], z: 10}
 ```
 
-I love examples like this because they’re simple demonstrations of how Javascript is continuing to evolve and how there’s always new stuff to learn.
+I love examples like this because they're simple demonstrations of how Javascript is continuing to evolve and how there's always new stuff to learn.
 
-<sup>1</sup> The function is the same in spirit, though it’s been modified slightly for clarity.
+<sup>1</sup> The function is the same in spirit, though it's been modified slightly for clarity.

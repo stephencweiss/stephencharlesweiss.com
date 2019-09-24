@@ -8,7 +8,7 @@ tags:
 
 I was recently trying to understand Material UI's `<Stepper>` component. In looking through their implementation of the Horizontal Linear Stepper, they used the `useState` React Hook to set the state.<sup>1</sup>
 
-The implementation caught my attention because of the use of a parameter, `prevActiveStep`, which wasn’t defined anywhere else.
+The implementation caught my attention because of the use of a parameter, `prevActiveStep`, which wasn't defined anywhere else.
 
 ```javascript
 function handleBack() {
@@ -18,12 +18,12 @@ function handleBack() {
 
 Digging into it, I realized that the `useState` can behave very similarly to the `setState` method for class components. Whereas both can set the value for a specific element in state, they can also take a function.<sup>2</sup>
 
-Here’s what that could look like.
+Here's what that could look like.
 
 # React Hooks Version
 
 ```javascript
-import React, { useState } from ‘react’;
+import React, { useState } from ‘react';
 
 function MyComponent() {
 
@@ -49,10 +49,10 @@ export default MyComponent;
 
 # React Class Component Version
 
-To put this in perspective, let’s look at how this looks with a class component.
+To put this in perspective, let's look at how this looks with a class component.
 
 ```javascript
-import React, { useState } from ‘react’;
+import React, { useState } from ‘react';
 
 class MyComponent{
   constructor(props) {

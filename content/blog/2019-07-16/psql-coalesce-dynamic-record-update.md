@@ -7,11 +7,11 @@ tags: ['postgres', 'coalesce', 'dynamic update', 'update with']
 
 I wanted to update multiple fields on multiple records and handle the case that _not all_ of the information is present in the update for each record.
 
-Basically, I want to `patch` not `put` and when it gets to Postgres, I don’t want those empty values to be set to `null`.
+Basically, I want to `patch` not `put` and when it gets to Postgres, I don't want those empty values to be set to `null`.
 
 A regular `UPDATE`, however, would do exactly that - overwrite my values with null if I didn't supply them. Fortunately, Postgres comes with `COALESCE` which can accommodate this sort of situation. Let's take a look.
 
-I’ll use the same example as I did [Using Typescript’s `Pick` to Improve Communication and Decrease Maintenance](../../2019-06-25/typescript-pick-interface-partials/)
+I'll use the same example as I did [Using Typescript's `Pick` to Improve Communication and Decrease Maintenance](../../2019-06-25/typescript-pick-interface-partials/)
 
 A refresher, the table is defined as:
 
@@ -35,7 +35,7 @@ interface IMyTable {
 }
 ```
 
-The columns I’m looking to update again are `is_enabled` and `display_order`
+The columns I'm looking to update again are `is_enabled` and `display_order`
 
 An example request body for the `patch` might be:
 
@@ -90,9 +90,9 @@ async changeMyTable(proposal: readonly MyTableProposal): Promise<...> {
 
 So, how could this work with multiple records?
 
-With multiple records, I’m using the `update...with` syntax:
+With multiple records, I'm using the `update...with` syntax:
 
-This is where the `COALESCE` statement comes in. Instead of having to understand _in advance_ if the element is present, we can use the initial value as a fail-safe. If the field is _not_ present, we will use the value that’s in place.
+This is where the `COALESCE` statement comes in. Instead of having to understand _in advance_ if the element is present, we can use the initial value as a fail-safe. If the field is _not_ present, we will use the value that's in place.
 
 My initial attempt to use `COALESCE` led to:
 
@@ -120,7 +120,7 @@ async changeMyTable(proposal: readonly MyTableProposal[]): Promise<...> {
 
 This, however, threw the error: `500 COALESCE types text and boolean cannot be matched`.
 
-Researching, I found that I could get past this problem with a `CAST` to ensure the type. I felt comfortable doing this because I knew my proposal was typed appropriately and I’d built the table.
+Researching, I found that I could get past this problem with a `CAST` to ensure the type. I felt comfortable doing this because I knew my proposal was typed appropriately and I'd built the table.
 
 ```javascript
 async changeMyTable(proposal: readonly MyTableProposal[]): Promise<...> {

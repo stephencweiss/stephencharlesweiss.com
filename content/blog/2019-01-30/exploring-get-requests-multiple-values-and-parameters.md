@@ -9,9 +9,9 @@ The ease of writing GET requests varies with the clarity of the supporting docum
 
 _How_ to submit such a request, however, was not immediately clear from the documentation.
 
-After more time than I’d like to admit, I found the solution while working with peers. To avoid that pain for myself in the future - I’ve written up some lessons to hopefully make it clear what you’d an expect.
+After more time than I'd like to admit, I found the solution while working with peers. To avoid that pain for myself in the future - I've written up some lessons to hopefully make it clear what you'd an expect.
 
-Below we’ll work through three scenarios:
+Below we'll work through three scenarios:
 1. **Multiple Parameters, Single Value**: A request for information about two parameters, names and ages, with a single value for each, e.g., John and 23
 2. **Single Parameter, Multiple Values**: A request for information about a single parameter, names, with two distinct values, e.g., John and James
 3. **Multiple Values, Multiple Parameters**: A request for information about multiple parameters, names and ages, with multiple values for names, e.g., John and James and 23
@@ -33,15 +33,15 @@ This results in a query string (post encoding) where each variable is separated 
 ## Single Parameter, Multiple Values
 What happens though when we want to look at multiple values of a single parameters?
 
-**BN**: The only time I’ve come across this, the API was specifically designed to accommodate multiple values with certain parameters. That said, the following will be implementation dependent.
+**BN**: The only time I've come across this, the API was specifically designed to accommodate multiple values with certain parameters. That said, the following will be implementation dependent.
 
-Let’s imagine the following scenario: An API has two parameters `name` and `names[]`. The former we discussed above, but the latter is specifically designed to allow for multiple values be queried.
+Let's imagine the following scenario: An API has two parameters `name` and `names[]`. The former we discussed above, but the latter is specifically designed to allow for multiple values be queried.
 
 If we think about the set that the response will include, instead of an intersection of values, we will get the union.
 
 ```js
-let reqNames = [‘John’, ‘James’];
-let queryString = ‘’;
+let reqNames = [‘John', ‘James'];
+let queryString = ‘';
 for(name in reqNames) {
   queryString += `&names[]=${reqNames[name]}`;
 };
@@ -55,7 +55,7 @@ queryString = queryString.substring(1);
 
 **Take away**: The way to submit multiple parameter values is _repeat_ the parameter in the query string for each sought after value.
 
-**Side note**: If you’re worried about running out of space in your query string, don’t. The smallest limit for a URL is ~2000 characters (IE) and most other browsers can handle much longer strings [Relevant StackOverflow thread](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers) and the primary [research](https://www.boutell.com/newfaq/misc/urllength.html) (from 2006).
+**Side note**: If you're worried about running out of space in your query string, don't. The smallest limit for a URL is ~2000 characters (IE) and most other browsers can handle much longer strings [Relevant StackOverflow thread](https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers) and the primary [research](https://www.boutell.com/newfaq/misc/urllength.html) (from 2006).
 
 ##  Multiple Parameters, Multiple Values
 If we combine these two approaches, what can we expect?
@@ -66,7 +66,7 @@ How might we write this query?
 
 ```js
 
-let reqNames = [‘John’, ‘James’], reqAge = 23;
+let reqNames = [‘John', ‘James'], reqAge = 23;
 let queryString += `age=`+reqAge;
 for(name in reqNames) {
   queryString += `&names[]=${reqNames[name]}`;
@@ -84,7 +84,7 @@ Certain APIs will allow for the submission of multiple values of a single parame
 
 Knowing this is available, and how to take advantage of the capability, can reduce the number of requests needed to retrieve the information you need.
 
-Since network requests are orders of magnitude slower than local computation, eliminating unnecessary API requests will have an immediate effect on your application’s performance.
+Since network requests are orders of magnitude slower than local computation, eliminating unnecessary API requests will have an immediate effect on your application's performance.
 
 # Further Exploration
 To see this in action, take a look at the Array Of Things program in the city of Chicago. [Array of Things HTTP API](https://arrayofthings.docs.apiary.io/#reference/0/observations-endpoint/list-the-observations)

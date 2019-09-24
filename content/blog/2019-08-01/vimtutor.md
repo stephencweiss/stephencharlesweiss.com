@@ -10,7 +10,7 @@ To launch `vimtutor`, open your shell and type in the command `$ vimtutor`.
 
 ![](./vimtutor-welcome-screen.png)
 
-It’s a very accessible tutorial, yet teaches the hardest thing to learn almost right away — how to quit!
+It's a very accessible tutorial, yet teaches the hardest thing to learn almost right away — how to quit!
 
 Noting this because googling “vim tutorial” yields many sites with their own, but `vimtutor` is always with me - so why not take advantage?
 

@@ -5,13 +5,13 @@ category: ['programming']
 tags: ['chai', 'testing', 'pool', 'postgres']
 ---
 
-I’m writing some integration tests for an app that is confirming database queries are working the way I’m expecting.
+I'm writing some integration tests for an app that is confirming database queries are working the way I'm expecting.
 
-In order to prep the database and not corrupt the environment, I’m creating test rows, testing those rows, and then deleting them before and after each tests.
+In order to prep the database and not corrupt the environment, I'm creating test rows, testing those rows, and then deleting them before and after each tests.
 
-Unfortunately, I’d also lumped my database connection in and was creating a new pool with each test.
+Unfortunately, I'd also lumped my database connection in and was creating a new pool with each test.
 
-The result was that my tests didn’t seem to run.
+The result was that my tests didn't seem to run.
 
 ```bash
 $ npm run test
@@ -99,4 +99,4 @@ $ npm run test
 $
 ```
 
-Bottom line, if using database connections in your tests and you’re finding that not all of your tests are running - try refactoring so that you only have one connection per group.
+Bottom line, if using database connections in your tests and you're finding that not all of your tests are running - try refactoring so that you only have one connection per group.

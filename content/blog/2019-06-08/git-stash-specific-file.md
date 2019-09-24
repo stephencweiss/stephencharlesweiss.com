@@ -7,7 +7,7 @@ tags: ['git', 'git stash', 'git stash push']
 
 Sometimes you only want to stash a few files at a time.
 
-Maybe in the course of your work, the files you were changing revealed a bigger, more urgent problem. You don’t want to lose your work, but you want to be able to cut a new branchy off of master to address the new problem.
+Maybe in the course of your work, the files you were changing revealed a bigger, more urgent problem. You don't want to lose your work, but you want to be able to cut a new branchy off of master to address the new problem.
 
 Before you can go back to master, pull down the most recent files, however, you need to clear your git log. `git stash` is a great way to do that.
 
@@ -41,8 +41,8 @@ $ git stash show 0
 
 # Things to note
 
-1. There’s no options flag for `push`
-2. The file does not need to be the _full_ path, just enough to distinguish what you’re looking to add (e.g., `git stash push src` was enough to distinguish that I didn’t want to stash my `package-lock.json` file)
+1. There's no options flag for `push`
+2. The file does not need to be the _full_ path, just enough to distinguish what you're looking to add (e.g., `git stash push src` was enough to distinguish that I didn't want to stash my `package-lock.json` file)
 
 # Relevant discussion
 

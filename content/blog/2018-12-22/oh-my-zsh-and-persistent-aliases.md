@@ -7,7 +7,7 @@ tags: ['aliases','oh-my-zsh','zsh']
 
 **NB: If you want the quick steps to add aliases to your `zsh`, jump down to the section, "[Adding Aliases: The Better Way](#adding-an-alias-the-better-way)".**
 
-First, a little backstory: I’m a big fan of aliases. In fact, when I was learning how to use terminal, they were one of the first things I set up for myself and they changed the way I used git. Every command was so much easier to navigate that I never felt a need to stray away from the command line.
+First, a little backstory: I'm a big fan of aliases. In fact, when I was learning how to use terminal, they were one of the first things I set up for myself and they changed the way I used git. Every command was so much easier to navigate that I never felt a need to stray away from the command line.
 
 When I decided to move to `zsh`, one of the first things I wanted to do was configure my aliases. `oh-my-zsh` comes with a whole suite of aliases, which are viewable through the `alias` command. There are some great defaults, particularly for navigation and `git`.
 
@@ -19,13 +19,13 @@ Still, I had a few navigation aliases I wanted to add.
 
 In hunting for *how* to add an alias, my first Google search suggested using the `alias` command. This was straightforward and seemed to work well enough for a while.
 
-`$ alias up=‘cd ..’`
+`$ alias up=‘cd ..'`
 
 ![](./shot2.png)
 
 Woot! It worked!
 
-Then, I’d close the close the terminal and come back and I’d get an error: `zsh: command not found: up`.
+Then, I'd close the close the terminal and come back and I'd get an error: `zsh: command not found: up`.
 
 What the heck?! Sure enough, when I searched through the aliases (using the `alias` command) `up` wasn't there.
 

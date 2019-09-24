@@ -11,7 +11,7 @@ Turns out, the rules in HTML5 are pretty permissive: unique, at least one charac
 
 From the spec itself:<sup>2</sup>
 
-> When specified on [HTML elements](https://html.spec.whatwg.org/multipage/infrastructure.html#html-elements) , the [id](https://html.spec.whatwg.org/multipage/dom.html#the-id-attribute) attribute value must be unique amongst all the [IDs](https://dom.spec.whatwg.org/#concept-id) in the element’s [tree](https://dom.spec.whatwg.org/#concept-tree) and must contain at least one character. The value must not contain any [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
+> When specified on [HTML elements](https://html.spec.whatwg.org/multipage/infrastructure.html#html-elements) , the [id](https://html.spec.whatwg.org/multipage/dom.html#the-id-attribute) attribute value must be unique amongst all the [IDs](https://dom.spec.whatwg.org/#concept-id) in the element's [tree](https://dom.spec.whatwg.org/#concept-tree) and must contain at least one character. The value must not contain any [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace).
 
 The rules used to be more specific. In HTML4<sup>3</sup>:
 

@@ -7,13 +7,13 @@ tags: ['javascript', 'functional programming', 'currying']
 
 For a long time, I hated seeing functions like this: `const someFn = a => b => a + b;`. I thought this was just “code golf” (the idea of reducing a function to its _shortest_ incarnation) without concern for how it would be received by the _reader_ of the code later.
 
-This can definitely be true and I’m still generally opposed to golf for the sake of itself. But, what I missed was that writing functions in this way, that is - using currying, can actually be really helpful.
+This can definitely be true and I'm still generally opposed to golf for the sake of itself. But, what I missed was that writing functions in this way, that is - using currying, can actually be really helpful.
 
-Currying enables a greater control over _what_ a function is doing (by reducing each function’s scope) by leveraging the composability of functions.
+Currying enables a greater control over _what_ a function is doing (by reducing each function's scope) by leveraging the composability of functions.
 
-Let’s start with an example of addition with function declarations. Later, we’ll move into ES6 and function expressions.
+Let's start with an example of addition with function declarations. Later, we'll move into ES6 and function expressions.
 
-The function’s purpose is trivial, but it was this example that helped me see _how_ currying worked!
+The function's purpose is trivial, but it was this example that helped me see _how_ currying worked!
 
 ```javascript
 function addOne(a) {
@@ -45,7 +45,7 @@ console.log(
 ) // The typeof addByTwo and addByThree --> function function
 ```
 
-It’s important to note that at the point of assignment, `addByTwo` and `addByThree` are _functions_.
+It's important to note that at the point of assignment, `addByTwo` and `addByThree` are _functions_.
 
 This is great because it means that we invoke them! We can see this by hopping back into our console and testing it:
 
@@ -63,7 +63,7 @@ addByTwo(3) // 5
 addByThree(3) // 6
 ```
 
-Okay, now let’s transition to function expressions and ES6 (for ease of comparison, I’m assuming we’re in a totally new global scope, so we won’t have any name collision issues or previously assigned `const` variables):
+Okay, now let's transition to function expressions and ES6 (for ease of comparison, I'm assuming we're in a totally new global scope, so we won't have any name collision issues or previously assigned `const` variables):
 
 ```javascript
 const addOne = a => a + 1
@@ -76,7 +76,7 @@ Wait, what?
 `AddNumsCurried` takes advantage of two syntactic sugar features that arrow functions provide:
 
 1. If there is only one parameter, parentheses (`()`) are optional
-2. If the return statement is only one line, there’s an implicit return and braces (`{}`) are not necessary
+2. If the return statement is only one line, there's an implicit return and braces (`{}`) are not necessary
 
 That means `addNumsCurried` could alternatively be written as:
 
@@ -88,7 +88,7 @@ const addNumsCurriedAlt = (a) => {
 }
 ```
 
-This looks pretty similar to how we had it with function declarations. That’s the point!
+This looks pretty similar to how we had it with function declarations. That's the point!
 
 What if we take it one step further and use our new adding prowess to the elements of an array?
 
@@ -98,11 +98,11 @@ const addOneToEachCompartmentalized = ar => ar.map(num => addOne(num))
 const addOneCurried = ar => ar.map(addOne)
 ```
 
-Personally, the difference between `addOneToEachComparatmentalized` and `addOneCurried` is when the light bulb when off! I’d run into this issue a _ton_ with `.reduce` where I wanted to separate my reducer and define it separately, but I always ran into trouble!
+Personally, the difference between `addOneToEachComparatmentalized` and `addOneCurried` is when the light bulb when off! I'd run into this issue a _ton_ with `.reduce` where I wanted to separate my reducer and define it separately, but I always ran into trouble!
 
-It wasn’t until I saw these two side by side producing the same results that I got a better understanding of _what_ was happening.
+It wasn't until I saw these two side by side producing the same results that I got a better understanding of _what_ was happening.
 
-Let’s throw in a wrinkle: Our array is full of numbers, but they can be represented as strings _or_ numbers (but always one or the other). To check we can use a ternary to check the type. We’ll assign the anonymous function to the variable `ensureNum`.
+Let's throw in a wrinkle: Our array is full of numbers, but they can be represented as strings _or_ numbers (but always one or the other). To check we can use a ternary to check the type. We'll assign the anonymous function to the variable `ensureNum`.
 
 ```javascript
 // add type checking to make sure everything is a number
@@ -117,7 +117,7 @@ const addOneToEachWithType = ar => ar.map(ensureNum).map(num => num + 1)
 const addOneToEachWithTypeAndCurry = ar => ar.map(ensureNum).map(addOne)
 ```
 
-Last step: Let’s now say we want to not just add by one, but any number. We can use our same currying techniques from function declarations to write the function expression in the following way.
+Last step: Let's now say we want to not just add by one, but any number. We can use our same currying techniques from function declarations to write the function expression in the following way.
 
 ```javascript
 const addByToEachWithType = (ar, by) =>

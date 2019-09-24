@@ -7,11 +7,11 @@ tags: ['postgres', 'array', 'length']
 
 Yesterday, I wrote about the [intersecting of Arrays in Postgres](../../2019-07-01/array-intersection-in-psql). Today, I wanted to go a step further and think about finding the maximum number of elements in an array for a table.
 
-In my case, this was relevant because the largest number would dictate the number of columns I’d display client-side. Rather than fixing the number of columns, if a user only had three columns possible, I’d only show three. On the other hand, if they had 10, they could see up to ten.
+In my case, this was relevant because the largest number would dictate the number of columns I'd display client-side. Rather than fixing the number of columns, if a user only had three columns possible, I'd only show three. On the other hand, if they had 10, they could see up to ten.
 
-Since, I didn’t have a master list for what’s available, and so the data determined what would be shown.
+Since, I didn't have a master list for what's available, and so the data determined what would be shown.
 
-For example, building on yesterday’s example of `classes_enabled`, imagine a table with the following data:
+For example, building on yesterday's example of `classes_enabled`, imagine a table with the following data:
 
 | id  | classes_available | classes_enabled |
 | --- | ----------------- | --------------- |
@@ -84,7 +84,7 @@ To get:
 
 ## Array Dimensions
 
-Though, not relevant in my case, if you’re analyzing a multi-dimensional array, the support within Postgres may be useful.
+Though, not relevant in my case, if you're analyzing a multi-dimensional array, the support within Postgres may be useful.
 
 If the field were not one dimensional, but two, you can use `array_length( array, 2)` to see the length.
 

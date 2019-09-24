@@ -15,28 +15,28 @@ Ideally, it would be much simpler:
 ```javascript
 import Component from “Shared/Component”;
 ```
-Shared communicates immediately that it’s a locally defined component.
+Shared communicates immediately that it's a locally defined component.
 
 I found a great step-by-step tutorial from Jan Hrubý @ Mrozilla which walked me through the steps.<sup>1</sup>
 
-Jan’s tutorial walks through configuring Gatsby’s Webpack (at least as much as we’re able to since Gatsby doesn’t expose the config file for changes), ESlint, and VSCode’s auto complete.
+Jan's tutorial walks through configuring Gatsby's Webpack (at least as much as we're able to since Gatsby doesn't expose the config file for changes), ESlint, and VSCode's auto complete.
 
-I didn’t have his issues with ESlint, so I was able to skip that step. 
+I didn't have his issues with ESlint, so I was able to skip that step.
 
-# Configuring Gatsby’s Webpack
-While Gatsby doesn’t expose its Webpack configuration, they do provide an `onCreateWebpackConfig` hook that can be customized within `gatsby-node.js`. 
+# Configuring Gatsby's Webpack
+While Gatsby doesn't expose its Webpack configuration, they do provide an `onCreateWebpackConfig` hook that can be customized within `gatsby-node.js`.
 
-Using the hook, we can add a resolver object, just as we would within a `webpack.config.js`. 
+Using the hook, we can add a resolver object, just as we would within a `webpack.config.js`.
 
-For example, here’s a `webpack.config.js` file I have from another project:
+For example, here's a `webpack.config.js` file I have from another project:
 ```javascript
-Const path = require(‘path’);
+Const path = require(‘path');
 
 module.exports = {
     commonResolve: {
         alias: {
             /* [...] */
-            Shared: path.resolve(__dirname, ‘src/Shared’),
+            Shared: path.resolve(__dirname, ‘src/Shared'),
             /* [...] */
 ```
 
@@ -54,7 +54,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   });
 };
 ```
- 
+
 The Gatsby docs also note other ways you may want to modify the Webpack config.<sup>2</sup>
 
 

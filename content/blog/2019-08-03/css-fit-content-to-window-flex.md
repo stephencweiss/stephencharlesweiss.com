@@ -9,10 +9,10 @@ One of my ongoing challenges with layouts on the web is the fact that a website 
 
 That was the crux I faced when trying to get a layout to respond to the size of the window _without_ referencing the window or viewport. Basically, I wanted to know if there was a way to style my components in a way that it would appropriately constrain its contents which _wanted_ to grow.
 
-What do I mean? This video shows how the table _wants_ to grow, but if `internalScroll` is `true` it will collapse to only fill what’s available.
+What do I mean? This video shows how the table _wants_ to grow, but if `internalScroll` is `true` it will collapse to only fill what's available.
 ![Table grows to fit container](https://media.giphy.com/media/fxBhkyHhjEGpd3DXhd/giphy.gif)
 
-That’s a good start - but did you notice the `containerSize` prop that’s acting as the constraint? Since the screen size and resolution a user could be using can vary dramatically, I wanted a dynamic solution. That meant that while the `internalScroll` would be useful, it was only half of the equation. I also needed the container size.
+That's a good start - but did you notice the `containerSize` prop that's acting as the constraint? Since the screen size and resolution a user could be using can vary dramatically, I wanted a dynamic solution. That meant that while the `internalScroll` would be useful, it was only half of the equation. I also needed the container size.
 
 To add to the fun, the page I was working on looked a little like this:
 ![](./sketch.JPG)
@@ -59,12 +59,12 @@ In the end, my solution was quite simple:
 
 When I see it written out like that, it feels like I should have been able to get to a solution much faster!
 
-Regardless, I did get to a working solution and I’m pleased with how it turned out!
+Regardless, I did get to a working solution and I'm pleased with how it turned out!
 
 My thanks to Eric @ Visual Pulse<sup>3</sup> whose JSFiddle was the inspiration I needed to get to my own solution and Sung Kim for his eyes and help in refining my early solutions.<sup>4</sup>>
 
 Footnotes:
 * <sup>1</sup> [Scrollable Internal Content - JSFiddle](https://jsfiddle.net/stephencweiss/zyjwgptr/)
 * <sup>2</sup> [Height 100% in Flexbox Item | JSFiddle](https://jsfiddle.net/MadLittleMods/LmYay/)
-* <sup>3</sup> [Eric’s Fiddles | JSFiddle](https://jsfiddle.net/user/MadLittleMods/fiddles/)
+* <sup>3</sup> [Eric's Fiddles | JSFiddle](https://jsfiddle.net/user/MadLittleMods/fiddles/)
 * <sup>4</sup>> [Sung M. Kim | DEV.to](https://dev.to/dance2die)

@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['zsh','built-ins', 'shell functions']
 ---
 
-I recently figured out how to write a shell function. The problem is that pretty quickly I’d forgotten *which* functions I’d written, or fi I had a general name, I couldn’t remember what they did exactly.
+I recently figured out how to write a shell function. The problem is that pretty quickly I'd forgotten *which* functions I'd written, or fi I had a general name, I couldn't remember what they did exactly.
 
 So, I wanted to figure out a few things:
 1. Figure out *which* functions are defined
@@ -36,4 +36,4 @@ The commands would look like `whence -c [function]` or `whence -f [function]`.
 
 ![](./whence-define.png)
 
-It’s worth noting that the [Stackoverflow conversation](https://stackoverflow.com/questions/11478673/how-to-show-zsh-function-definition-like-bash-type-myfunc) on the topic notes several other approaches, however, `whence` performed accomplished my use case nicely and I didn’t feel the need to explore much further at this time.
+It's worth noting that the [Stackoverflow conversation](https://stackoverflow.com/questions/11478673/how-to-show-zsh-function-definition-like-bash-type-myfunc) on the topic notes several other approaches, however, `whence` performed accomplished my use case nicely and I didn't feel the need to explore much further at this time.

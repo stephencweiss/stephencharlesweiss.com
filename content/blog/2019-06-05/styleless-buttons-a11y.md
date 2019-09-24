@@ -11,7 +11,7 @@ When it comes to accessibility (a11y) on the web, one of the best / easiest thin
 
 That means, when you want to have something be clickable, use a `<button>`. If it's the top header, use `<h1>`. The next header should be `<h2>`, not `<h3>`, etc.
 
-Buttons, however, often pose a problem. They’re the best way to indicate interactivity, but they come with a lot of built-in styling that may not be aligned with the style of your website.
+Buttons, however, often pose a problem. They're the best way to indicate interactivity, but they come with a lot of built-in styling that may not be aligned with the style of your website.
 
 One easy solution is to simply make a `<div role="button">` with an `onClick` event handler.
 
@@ -29,7 +29,7 @@ While not a _perfect_ solution (see CSS Tricks for some caveats<sup>2</sup>), th
 }
 ```
 
-This will strip out the majority of the CSS that makes a button look different than what it’s around and can serve as a nice base on which to build.
+This will strip out the majority of the CSS that makes a button look different than what it's around and can serve as a nice base on which to build.
 
 ## Footnotes
 

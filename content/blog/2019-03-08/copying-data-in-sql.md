@@ -7,7 +7,7 @@ tags: ['mysql', 'postgres', 'queries', 'common commands']
 
 If you need to copy all data from one column to another column in SQL, use the `UPDATE` method.
 
-If it’s a simple copy for copy, without conditionals, across tables, etc., the query is simply:
+If it's a simple copy for copy, without conditionals, across tables, etc., the query is simply:
 
 ```sql
 UPDATE `table_name` SET

@@ -4,9 +4,9 @@ date: '2019-07-16'
 category: ['programming']
 tags: ['postgres', 'exist', 'duplicates', 'commands']
 ---
-Before I write to a database, I want to make sure that I don’t create a duplicate record based on the name and parent record id.
+Before I write to a database, I want to make sure that I don't create a duplicate record based on the name and parent record id.
 
-To accomplish that, I want to abort early and alert the client if the name they’ve provided is a duplicate.
+To accomplish that, I want to abort early and alert the client if the name they've provided is a duplicate.
 
 The pseudocode looks something like:
 ```javascript
@@ -21,8 +21,8 @@ const data = await this.pool.query(SQL`
 return data.rows;
 ```
 
-I’ve written previously about [how to insert values into tables with Postgres](../../2019-07-11/psql-insert-multiple-values/), but what I wasn’t sure about was how to write a query that would return a boolean value for duplicates (i.e. SQL query to use in `checkForDupcliate`)
-(Note: I’m writing in Javascript and interpolating SQL statements using `sql-template-string`)
+I've written previously about [how to insert values into tables with Postgres](../../2019-07-11/psql-insert-multiple-values/), but what I wasn't sure about was how to write a query that would return a boolean value for duplicates (i.e. SQL query to use in `checkForDupcliate`)
+(Note: I'm writing in Javascript and interpolating SQL statements using `sql-template-string`)
 
 ## Start With COUNT(*)
 One way to figure out if any records exist would be to count the total that meet a condition using `COUNT(*)`.
@@ -33,7 +33,7 @@ SELECT COUNT(*) FROM my_table
   WHERE parent_id = ${parent_id}
   AND name ILIKE ${name};
 ```
-This _is_ asking a different question, however. Instead of asking a true/false question, I’m now asking how many.
+This _is_ asking a different question, however. Instead of asking a true/false question, I'm now asking how many.
 My conditional in Javascript would no longer be `if (duplicate)` but more reasonably `if (count > 0)`.
 
 From a purely computational perspective, counting is more expensive than checking for the existence of something.
@@ -51,7 +51,7 @@ END
 
 Great, but what is my condition?
 
-In this case, all I care about is if something exists… which is convenient, because [Postgres’ EXIST](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) checks for exactly that.
+In this case, all I care about is if something exists… which is convenient, because [Postgres' EXIST](https://www.postgresql.org/docs/current/functions-subquery.html#FUNCTIONS-SUBQUERY-EXISTS) checks for exactly that.
 
 `EXIST` is one of several subquery expressions (similar to `IN`, `NOT IN`, `ALL`, etc.).
 
@@ -69,7 +69,7 @@ END `;
 ```
 
 ## Refactoring Time: Dropping Case
-This `CASE` approach works. But, it’s unnecessary. If I wanted to return something _other_ than a boolean I could use `CASE`. E.g.,
+This `CASE` approach works. But, it's unnecessary. If I wanted to return something _other_ than a boolean I could use `CASE`. E.g.,
 ``` sql
 SELECT CASE WHEN EXISTS (
   SELECT * FROM my_table
@@ -80,7 +80,7 @@ SELECT CASE WHEN EXISTS (
 END `;
 ```
 
-But that’s not what I’m looking for. I just need `TRUE`/`FALSE` which is what the `EXIST` returns natively.
+But that's not what I'm looking for. I just need `TRUE`/`FALSE` which is what the `EXIST` returns natively.
 
 As a result, I simplified the query to the following:
 ```sql

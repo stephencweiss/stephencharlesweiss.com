@@ -12,7 +12,7 @@ For example, my blog (which I bootstrapped with Gatsby's official Blog Starter<s
 
 How does it do that and how does GraphQL facilitate it? That's what I wanted to figure out and I started with understanding the GraphQL side.
 
-First, let’s look at how we might look up a specific post based on its slug. Here’s an example from my blog for the very first post I wrote:
+First, let's look at how we might look up a specific post based on its slug. Here's an example from my blog for the very first post I wrote:
 ```graphql
 query hardCodedQuery {
   markdownRemark(fields: {slug: {eq: "/2015-07-18/starting-with-a-question/"}}) {
@@ -26,7 +26,7 @@ query hardCodedQuery {
 }
 ```
 
-This is saying that I want to query my `markdownRemark` (note that this is not `allMarkdownRemark`, but just an individual record) where the field’s slug is equal to `/2015-07-18/starting-with-a-question/`. Since my slug is unique, it returns only the information pertaining to that one post:
+This is saying that I want to query my `markdownRemark` (note that this is not `allMarkdownRemark`, but just an individual record) where the field's slug is equal to `/2015-07-18/starting-with-a-question/`. Since my slug is unique, it returns only the information pertaining to that one post:
 ```json
 {
   "data": {
@@ -62,7 +62,7 @@ query variableBasedQuery($slug: String!) {
 
 The `$` is used to differentiate a variable name from a query parameter (which is how GraphQL is able to parse `{slug: eq: $slug}}` appropriately.
 
-`String` indicates the variable’s Type. And the `!` means that it’s not null.
+`String` indicates the variable's Type. And the `!` means that it's not null.
 
 ## Footnotes
 * <sup>1</sup> [Gatsby Starters](https://www.gatsbyjs.org/starters/?v=2)

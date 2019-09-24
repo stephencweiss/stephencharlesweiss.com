@@ -5,13 +5,13 @@ category: ['programming']
 tags: ['chart.js','color conversion','color theory']
 ---
 
-> Charts are the black hole of programming. 
+> Charts are the black hole of programming.
 
-I was warned, but I wanted to tackle charts anyway. That was my first mistake. Humans tend to understand graphical information better than text on average. But presenting information visually in a *compelling* way is not only *not* easy. It’s **hard**. If I wasn't convinced, my recent experience left me with little doubt. The process of adding simple charts took me down a number of rabbit holes to explore… and get lost in. 
+I was warned, but I wanted to tackle charts anyway. That was my first mistake. Humans tend to understand graphical information better than text on average. But presenting information visually in a *compelling* way is not only *not* easy. It's **hard**. If I wasn't convinced, my recent experience left me with little doubt. The process of adding simple charts took me down a number of rabbit holes to explore… and get lost in.
 
 ![](./alice.gif)
 
-This post is intended to document three major takeaways from the process: 
+This post is intended to document three major takeaways from the process:
 
   1. Charts are hard; budget your time accordingly
   2. Purely random colors can be jarring; complementary colors can be derived using the Golden Ratio
@@ -19,17 +19,17 @@ This post is intended to document three major takeaways from the process:
 
 # Drawing Charts
 
-To draw my charts in my app, I used [chart.js](https://www.chartjs.org/). I’m building a React app, and there *is* [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2), a `chart.js` package for React. However, I ran into some strange errors trying to incorporate it into the project, so I went with the MVP approach and used the basic package. I plan to refactor in the future to use the React version as it seems to have better support for components, but in the mean time, I got it working. 
+To draw my charts in my app, I used [chart.js](https://www.chartjs.org/). I'm building a React app, and there *is* [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2), a `chart.js` package for React. However, I ran into some strange errors trying to incorporate it into the project, so I went with the MVP approach and used the basic package. I plan to refactor in the future to use the React version as it seems to have better support for components, but in the mean time, I got it working.
 
 | ![](./doughnut-chart.png) |
 |:---:|
 | *One of the charts I eventually was able to render.* |
 
-I used the [patternomaly](https://github.com/ashiguruma/patternomaly) package which helps to address accessibility concerns by including patterns on charts. 
+I used the [patternomaly](https://github.com/ashiguruma/patternomaly) package which helps to address accessibility concerns by including patterns on charts.
 
 # Randomizing Colors
 
-At this point, I don’t have a designer helping me with the app. Nor do I have a style guide that can support dozens of colors. With that being the case, I should have just done the easiest thing possible to randomize colors for my chart. That would have looked something like: 
+At this point, I don't have a designer helping me with the app. Nor do I have a style guide that can support dozens of colors. With that being the case, I should have just done the easiest thing possible to randomize colors for my chart. That would have looked something like:
 
 ```javascript
 const red = Math.rand() * 255
@@ -54,15 +54,15 @@ gen_html {
 }
 ```
 
-Okay, now we’re getting places! The problem was that function `hsv_to_rgb()`. How did it work? Queue rabbit hole number two. 
+Okay, now we're getting places! The problem was that function `hsv_to_rgb()`. How did it work? Queue rabbit hole number two.
 
 ## HSV, HSL, and RGB
 
-When it comes to computers, colors are just numbers. But which numbers we use and how they relate was a source of hours of learning this week. Starting with the the wikipedia page on [HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) and branching out from there. Now that I had a bit of background on how the different color systems related, I needed to be able to go from one to the next. Two resources were intensely valuable on this front: 
+When it comes to computers, colors are just numbers. But which numbers we use and how they relate was a source of hours of learning this week. Starting with the the wikipedia page on [HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV) and branching out from there. Now that I had a bit of background on how the different color systems related, I needed to be able to go from one to the next. Two resources were intensely valuable on this front:
 
   1. The [Converting To RGB](https://en.wikipedia.org/wiki/HSL_and_HSV#Converting_to_RGB) section on the Wikipedia page
   2. [RapidTables](https://www.rapidtables.com/) is a site that will convert these numbers for you one at a time. They also include the derivations on their page for the interested parties (like me!).
-With those references, I was able to write my own `hsv_to_rgb` (as well as several others - see my full list at the end of the post) — and understand _why_ it worked the way it did. At least for the most part! 
+With those references, I was able to write my own `hsv_to_rgb` (as well as several others - see my full list at the end of the post) — and understand _why_ it worked the way it did. At least for the most part!
 
 ## Putting Complements Into practice
 
@@ -70,7 +70,7 @@ Now that I had a my own color conversion functions, I could write a function tha
 ```javascript
 function generateComplementaryColors ( numberToGenerate ) {
   /**
-   * I: Three arguments are the number of complementary colors to generate (integer > 0), 
+   * I: Three arguments are the number of complementary colors to generate (integer > 0),
    * O: A set of color and pattern
    * Credit for the inspiration to use the golden ratio goes to Martin Ankerl who wrote:
    *  https://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/
@@ -112,7 +112,7 @@ Going back and forth between different color types is something that comes up wi
   *   4) rgbFromHSL
   *   5) hexFromRGB
   *   6) rgbFromHex
-  * 
+  *
   * The primary inspiration for this was the work done by https://gist.github.com/mjackson/5311256
   * Source I found helpful for understanding the details and deriving the values include:
   * [Wikipedia: HSL and HSV](https://en.wikipedia.org/wiki/HSL_and_HSV)
@@ -128,12 +128,12 @@ function hsvFromRGB(r, g, b) {
    * O: An array of three elements hue (h) ∈ [0, 360], and saturation (s) and value (v) which are both ∈ [0, 1]
    */
   r /= 255, g /= 255, b /= 255;
-  
+
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
   const diff = max - min;
   let h, s;
-  
+
   // Value
   const v = max;
 
@@ -145,7 +145,7 @@ function hsvFromRGB(r, g, b) {
     h = 0;
   } else {
     // 1/6 is equivalent to 60 degrees
-    if (max === r) { h = 1/6 * (0 + ((g - b) / diff)) }; 
+    if (max === r) { h = 1/6 * (0 + ((g - b) / diff)) };
     if (max === g) { h = 1/6 * (2 + ((b - r) / diff)) };
     if (max === b) { h = 1/6 * (4 + ((r - g) / diff)) };
   }
@@ -162,7 +162,7 @@ function rgbFromHSV(h, s, v) {
 
   hprime = h / 60;
   const c = v * s;
-  const x = c * (1 - Math.abs(hprime % 2 - 1)); 
+  const x = c * (1 - Math.abs(hprime % 2 - 1));
   const m = v - c;
   let rPrime, gPrime, bPrime;
   if (!hprime) {rPrime = 0; gPrime = 0; bPrime = 0; }
@@ -172,7 +172,7 @@ function rgbFromHSV(h, s, v) {
   if (hprime >= 3 && hprime < 4) { rPrime = 0; gPrime = x; bPrime = c}
   if (hprime >= 4 && hprime < 5) { rPrime = x; gPrime = 0; bPrime = c}
   if (hprime >= 5 && hprime < 6) { rPrime = c; gPrime = 0; bPrime = x}
-  
+
   const r = Math.round( (rPrime + m)* 255);
   const g = Math.round( (gPrime + m)* 255);
   const b = Math.round( (bPrime + m)* 255);
@@ -187,7 +187,7 @@ function rgbFromHSL(h, s, l) {
    */
   const hprime = h / 60;
   const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs((hprime % 2) - 1)); 
+  const x = c * (1 - Math.abs((hprime % 2) - 1));
   const m = l - (c / 2);
   let rPrime, gPrime, bPrime;
   if (h >= 0 && h < 60) { rPrime = c; gPrime = x; bPrime = 0}
@@ -196,7 +196,7 @@ function rgbFromHSL(h, s, l) {
   if (h >= 180 && h < 240) { rPrime = 0; gPrime = x; bPrime = c}
   if (h >= 240 && h < 300) { rPrime = x; gPrime = 0; bPrime = c}
   if (h >= 300 && h < 360) { rPrime = c; gPrime = 0; bPrime = x}
-  
+
   const r = Math.round( (rPrime + m)* 255);
   const g = Math.round( (gPrime + m)* 255);
   const b = Math.round( (bPrime + m)* 255);
@@ -209,14 +209,14 @@ function hslFromRGB(r, g, b) {
    * I: Three arguments, red (r), green (g), blue (b), all ∈ [0, 255]
    * O: An array of three elements hue (h) ∈ [0, 360], and saturation (s) and lightness (l) which are both ∈ [0, 1]
    */
-  
+
   r /= 255, g /= 255, b /= 255;
-  
+
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
   const diff = max - min;
   let h, s;
-  
+
   //Lightness
   const l = (max + min) / 2;
 
@@ -228,7 +228,7 @@ function hslFromRGB(r, g, b) {
     h = 0;
   } else {
     // 1/6 is equivalent to 60 degrees
-    if (max === r) { h = 1/6 * (0 + ((g - b) / diff)) }; 
+    if (max === r) { h = 1/6 * (0 + ((g - b) / diff)) };
     if (max === g) { h = 1/6 * (2 + ((b - r) / diff)) };
     if (max === b) { h = 1/6 * (4 + ((r - g) / diff)) };
   }
@@ -249,7 +249,7 @@ function baseTenToHex(c) {
 function hexFromRGB(r, g, b) {
   /**
    * I: Three arguments, red (r), green (g), blue (b), all ∈ [0, 255]
-   * O: A hexidecimal representation of the three numbers, concatenated as one string. 
+   * O: A hexidecimal representation of the three numbers, concatenated as one string.
    */
   return "#" + baseTenToHex(r) + baseTenToHex(g) + baseTenToHex(b);
 }
@@ -259,7 +259,7 @@ function baseHexToTen(c) {
    * I: A string of a number in base 16
    * O: A number representation of the string in base 10
    */
-  return parseInt(c, 16) 
+  return parseInt(c, 16)
 }
 
 function rgbFromHex(hexValue) {

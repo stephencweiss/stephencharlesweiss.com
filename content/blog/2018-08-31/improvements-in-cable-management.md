@@ -13,6 +13,6 @@ I don't know how I found these [Velcro One-Wrap Ties](https://www.amazon.com/dp/
 
 I was prepared to use zip-ties, but the thing about this Velcro version is that they're so easily adjustable that you can use them to wrap up cords for storage.
 
-It may not be quite as successful as Velcro's Hook and Loop product (See a message from the Velcro lawyers here: [Don’t Say Velcro](https://www.youtube.com/watch?v=rRi8LptvFZY)), but it sure is a nice sustaining innovation.
+It may not be quite as successful as Velcro's Hook and Loop product (See a message from the Velcro lawyers here: [Don't Say Velcro](https://www.youtube.com/watch?v=rRi8LptvFZY)), but it sure is a nice sustaining innovation.
 
 Also, this morning I found a follow up to the great Don't Say Velcro video where the Velcro lawyers are back to say,[Thank You For Your Feedback](https://www.youtube.com/watch?v=ZLWMQLMiTPk).

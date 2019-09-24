@@ -6,15 +6,15 @@ tags: ['unix', 'homebrew', 'tree', 'cli']
 ---
 
 I wanted to be able to print cool trees of my directories to help show my folder structure.
-At first, I thought it was simply using standard keys, but it’s more than that.
+At first, I thought it was simply using standard keys, but it's more than that.
 
-The good people at Indiana State created a project to help. It’s called Tree.
+The good people at Indiana State created a project to help. It's called Tree.
 
 The home page: [The Tree Command for Linux Homepage](http://mama.indstate.edu/users/ice/tree/)
 
 For Homebrew users, you can install it from your terminal with: `brew install tree`
 
-Once you confirm it’s installed, we can see the options
+Once you confirm it's installed, we can see the options
 
 Once installed, check out the options:
 
@@ -77,7 +77,7 @@ $ tree --help
   --            Options processing terminator.
 ```
 
-Now let’s use it!
+Now let's use it!
 
 Example in a node app:
 

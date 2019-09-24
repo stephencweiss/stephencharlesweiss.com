@@ -5,15 +5,15 @@ category: ['programming']
 tags: ['html', 'web forms', 'id', 'name']
 ---
 
-In looking into labels for web forms recently, I stumbled on a question I really didn’t know the answer to: What’s the difference between a name and an id attribute in HTML?<sup>1</sup>
+In looking into labels for web forms recently, I stumbled on a question I really didn't know the answer to: What's the difference between a name and an id attribute in HTML?<sup>1</sup>
 
-After some research, the way I’m thinking about it is: Names are used for naming a thing (duh). But like a name for a person, it doesn’t have to be unique. IDs, on the other hand, _should_ be unique.
+After some research, the way I'm thinking about it is: Names are used for naming a thing (duh). But like a name for a person, it doesn't have to be unique. IDs, on the other hand, _should_ be unique.
 
 This was greatly informed by the discussion on StackOverflow.<sup>2</sup>
 
-There’s no relationship implied between a name and an id. The fact that many examples across the web have the same name and id is an artifact of the example. It’s not required.
+There's no relationship implied between a name and an id. The fact that many examples across the web have the same name and id is an artifact of the example. It's not required.
 
-Consider a form to determine a user’s favorite color via radio buttons. Only one radio can be selected at a time, but each element would refer to the favorite color on submission. So the `name = "favorite"` while the `id` is unique.
+Consider a form to determine a user's favorite color via radio buttons. Only one radio can be selected at a time, but each element would refer to the favorite color on submission. So the `name = "favorite"` while the `id` is unique.
 
 In that way, names can be used to group like things.
 

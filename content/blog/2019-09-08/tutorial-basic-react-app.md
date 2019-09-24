@@ -8,9 +8,9 @@ tags: ['react', 'tutorial', 'webpack', 'babel']
 
 > Update: I've now found an even more basic way to write a React app and I put together a tutorial in a post, [An Even More Basic React App Tutorial](../../2019-09-23/tutorial-even-more-basic-react-app)
 
-At this point, I feel fairly comfortable with React, but when I had to go back to the basics and get an app up and running this weekend, I found I’d forgotten more than I thought.
+At this point, I feel fairly comfortable with React, but when I had to go back to the basics and get an app up and running this weekend, I found I'd forgotten more than I thought.
 
-Since I’m stubborn (stupid?) and didn’t want to use `npx create-react-app` to bootstrap, I had to look up a few things.<sup>1</sup> Below are my notes on what I learned when it comes to getting a basic React app up and running.
+Since I'm stubborn (stupid?) and didn't want to use `npx create-react-app` to bootstrap, I had to look up a few things.<sup>1</sup> Below are my notes on what I learned when it comes to getting a basic React app up and running.
 
 A quick preview on what you can expect to learn by reading on:
 
@@ -22,12 +22,12 @@ A quick preview on what you can expect to learn by reading on:
 
 The React team has a great page on getting React into an existing website quickly.<sup>2</sup> Unfortunately, in my case, I had nothing going, so I needed to start even farther upstream than that.
 
-Let’s start with the absolute basics:
+Let's start with the absolute basics:
 
 1. Make a directory for your project, `mkdir <the-name-of-my-project>`
 2. Navigate into it, `cd <the-name-of-my-project>`
 3. Initialize the repo with `git` and `npm` (`git init` and `npm init`).
-4. Scaffold a basic app structure with some files and folders. Here’s what mine looked like
+4. Scaffold a basic app structure with some files and folders. Here's what mine looked like
 
 ```shell
 .
@@ -66,15 +66,15 @@ I deviated ever-so-slightly for purposes of explicitness (which will become more
 
 With our HTML ready, we now need an actual React component.
 
-(We’ll also come back to the `<script>` tag.)
+(We'll also come back to the `<script>` tag.)
 
 ### Our First React Component
 
 This is what I put into `src/index.js`
 
 ```javascript
-import ReactDOM from ‘react-dom’;
-import React from ‘react’;
+import ReactDOM from ‘react-dom';
+import React from ‘react';
 
 const HelloWorld = () => {
   return (
@@ -85,13 +85,13 @@ const HelloWorld = () => {
 };
 
 ReactDOM.render(
-  <HelloWorld/>, document.getElementById(‘React-App’)
+  <HelloWorld/>, document.getElementById(‘React-App')
 )
 ```
 
-From this, it’s easy to see how ReactDOM renders the `HelloWorld` component — it _replaces_ what’s in the document (`index.html`) at the location of the Id, `’React-App’`.
+From this, it's easy to see how ReactDOM renders the `HelloWorld` component — it _replaces_ what's in the document (`index.html`) at the location of the Id, `'React-App'`.
 
-If at this point, we tried to open the `index.html` in our browser, we’d see a blank screen. This is because even though React replaced the `div` in the DOM, it can’t be interpreted.
+If at this point, we tried to open the `index.html` in our browser, we'd see a blank screen. This is because even though React replaced the `div` in the DOM, it can't be interpreted.
 
 We need to build our app and create the bundle.
 
@@ -104,29 +104,29 @@ Babel is a Javascript compiler — an application that converts code written in 
 > - Source code transformations (codemods)
 > - And more! (check out these [videos](https://babeljs.io/videos.html) for inspiration)
 
-This is accomplished through a variety of plugins and ladders, but what should be clear is that it’s both _very_ easy to setup and _very_ powerful.
+This is accomplished through a variety of plugins and ladders, but what should be clear is that it's both _very_ easy to setup and _very_ powerful.
 
-Webpack uses Babel (in our case) to coordinate the whole process and create a bundle by using it as a loader and specifying certain options. Another convention (similar to `id="app"` for React) is to call the output of Webpack `bundle`. You can name it whatever you want and specify it within the webpack configurations. It should also be noted that Webpack is _much_ more powerful than what I’m demo-ing here which is meant only to to illustrate how to compile Javascript and JSX files for use in our demo app.
+Webpack uses Babel (in our case) to coordinate the whole process and create a bundle by using it as a loader and specifying certain options. Another convention (similar to `id="app"` for React) is to call the output of Webpack `bundle`. You can name it whatever you want and specify it within the webpack configurations. It should also be noted that Webpack is _much_ more powerful than what I'm demo-ing here which is meant only to to illustrate how to compile Javascript and JSX files for use in our demo app.
 
 In the root directory, our `webpack.config.js` file has the following setup:
 
 ```javascript
-const path = require(‘path’)
+const path = require(‘path')
 
 module.exports = {
-  entry: ‘./src/index.js’,
+  entry: ‘./src/index.js',
   output: {
-    filename: ‘bundle.js’,
-    path: path.resolve(__dirname, ‘dist’)
+    filename: ‘bundle.js',
+    path: path.resolve(__dirname, ‘dist')
   },
   module: {
     rules: [
       {
         test: [/\.js$/, /\.jsx?$/],
         exclude: /node_modules/,
-        loader: 'babel-loader’,
+        loader: 'babel-loader',
         options: {
-          presets: [‘@babel/env’, ‘@babel/react’, ]
+          presets: [‘@babel/env', ‘@babel/react', ]
         }
       },
     ],
@@ -137,14 +137,14 @@ module.exports = {
 Things to note:
 
 - Entry point - this is what Webpack is looking to bundle
-- Output - this is where the product of that bundling process will go (and you can see we’ve named int `bundle.js`).
+- Output - this is where the product of that bundling process will go (and you can see we've named int `bundle.js`).
 - Modules - these are the tools to use in the effort of bundling
 
-The way I’ve set this up to name the presets within the options of the `webpack.config.js` means that I do _not_ need a `.bablerc` file<sup>4</sup>
+The way I've set this up to name the presets within the options of the `webpack.config.js` means that I do _not_ need a `.bablerc` file<sup>4</sup>
 
 ### Dependencies
 
-We’re using quite a few dependencies here, so it’s worth looking at the `package.json`
+We're using quite a few dependencies here, so it's worth looking at the `package.json`
 
 ```json
 {
@@ -178,17 +178,17 @@ We’re using quite a few dependencies here, so it’s worth looking at the `pac
 
 ### Launching The App
 
-Now that the app is configured, we have a React Component, and we’ve set up our Webpack, we’re ready to build.
+Now that the app is configured, we have a React Component, and we've set up our Webpack, we're ready to build.
 
-In the shell, run our script `npm run build` (`npx webpack —config webpack.config.js` also works if you don’t want to install `webpack` as a dependency).
+In the shell, run our script `npm run build` (`npx webpack —config webpack.config.js` also works if you don't want to install `webpack` as a dependency).
 
-Once that’s done, you should see a new file, `dist/bundle.js`.
+Once that's done, you should see a new file, `dist/bundle.js`.
 
 And now, when you open / refresh your application in the browser, it should display our `HelloWorld` component.
 
 ![](./hello-world.png)
 
-I promised I’d come back to `<script>` tag: This is the only reason that the app loads. Without it, we’d have a bundle of Javascript, but nothing invoking it. As a result, even though we’ve compiled our app, the client would never have a reason to call it and so would not display our React app.
+I promised I'd come back to `<script>` tag: This is the only reason that the app loads. Without it, we'd have a bundle of Javascript, but nothing invoking it. As a result, even though we've compiled our app, the client would never have a reason to call it and so would not display our React app.
 
 ## Adding A Second React Component
 
@@ -200,11 +200,11 @@ To add a second React component and blend that into an existing website, we need
 
 ### Part Deux: A New React Component
 
-In the `src` directory, I added an `index2.js` (not a great name, but it’ll do):
+In the `src` directory, I added an `index2.js` (not a great name, but it'll do):
 
 ```javascript
-import ReactDOM from ‘react-dom’;
-import React from ‘react’;
+import ReactDOM from ‘react-dom';
+import React from ‘react';
 
 const PartDeux = () => {
   return (
@@ -215,21 +215,21 @@ const PartDeux = () => {
 };
 
 ReactDOM.render(
-  <PartDeux/>, document.getElementById(‘React-App-2’)
+  <PartDeux/>, document.getElementById(‘React-App-2')
 )
 ```
 
-It’s another very simple React component that will mount to the `div` with the id `React-App-2` in our `index.html`.
+It's another very simple React component that will mount to the `div` with the id `React-App-2` in our `index.html`.
 
 ### Modifying Webpack
 
 The `webpack.config.js` file remains large the same with the exception of the `entry` key:
 
 ```javascript
-const path = require(‘path’)
+const path = require(‘path')
 
 module.exports = {
-  entry: [‘./src/index.js’, ‘./src/index2.js’, ],
+  entry: [‘./src/index.js', ‘./src/index2.js', ],
   ...
 }
 ```
@@ -249,10 +249,10 @@ Finally, update the HTML to indicate _where_ the second component will go:
   </head>
   <body>
     <h1>
-      Here’s my first react entry point
+      Here's my first react entry point
     </h1>
     <div id="React-App"></div>
-    <h1>Here’s my second react entry point</h1>
+    <h1>Here's my second react entry point</h1>
     <div id="React-App-2"></div>
     <script src="bundle.js"></script>
   </body>

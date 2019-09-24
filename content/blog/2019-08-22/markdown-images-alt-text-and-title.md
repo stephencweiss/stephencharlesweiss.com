@@ -7,15 +7,15 @@ tags: ['markdown', 'syntax', 'gatsby', 'remark']
 
 I continue to be impressed by the simplicity and power of Markdown.
 
-Today, while exploring the API for Gatsby’s Remark Images, I noticed the option: `showCaptions`. <sup>1</sup>
+Today, while exploring the API for Gatsby's Remark Images, I noticed the option: `showCaptions`. <sup>1</sup>
 
-> Add a caption to each image with the contents of the title attribute, when this is not empty. If the title attribute is empty but the alt attribute is not, it will be used instead. Set this option to true to enable this behavior. You can also pass an array instead to specify which value should be used for the caption — for example, passing `[‘alt’, ‘title’]` would use the alt attribute first, and then the title. When this is set to `true` it is the same as passing `[‘title’, ‘alt’]`. If you just want to use the title (and omit captions for images that have alt attributes but no title), pass `[‘title’]`.
+> Add a caption to each image with the contents of the title attribute, when this is not empty. If the title attribute is empty but the alt attribute is not, it will be used instead. Set this option to true to enable this behavior. You can also pass an array instead to specify which value should be used for the caption — for example, passing `[‘alt', ‘title']` would use the alt attribute first, and then the title. When this is set to `true` it is the same as passing `[‘title', ‘alt']`. If you just want to use the title (and omit captions for images that have alt attributes but no title), pass `[‘title']`.
 
-It was the inclusion of “Title” that caught me off guard. I’d never seen / used that before.
+It was the inclusion of “Title” that caught me off guard. I'd never seen / used that before.
 
-I’d always imported my images as: `![Alt](/path/to/img.jpg)`.
+I'd always imported my images as: `![Alt](/path/to/img.jpg)`.
 
-It turns out, however, that there’s a second argument that can be passed in _after_ the path: the title.<sup>2</sup>
+It turns out, however, that there's a second argument that can be passed in _after_ the path: the title.<sup>2</sup>
 
 `![Alt](/path/to/img.jpg “image title”)`.
 
@@ -35,29 +35,29 @@ As expected, we see the `alt` and `title` properties present on the `img` tag in
 />
 ```
 
-Here’s the relevant `gatsby-config` — the images are a plugin as a part of the options for `gatsby-plugin-mdx` — which is what I’m using to compile the Markdown into HTML.
+Here's the relevant `gatsby-config` — the images are a plugin as a part of the options for `gatsby-plugin-mdx` — which is what I'm using to compile the Markdown into HTML.
 
 ```javascript
 module.exports = {
   plugins: [
-    ‘gatsby-plugin-sharp’,
-    ‘gatsby-transformer-sharp’,
+    ‘gatsby-plugin-sharp',
+    ‘gatsby-transformer-sharp',
     {
-      resolve: ‘gatsby-plugin-mdx’,
+      resolve: ‘gatsby-plugin-mdx',
       options: {
-        extensions: [‘.mdx’, ‘.md’],
+        extensions: [‘.mdx', ‘.md'],
         defaultLayouts: {
-          default: require.resolve(‘./src/components/layout.js’),
+          default: require.resolve(‘./src/components/layout.js'),
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: ‘gatsby-remark-images’,
+            resolve: ‘gatsby-remark-images',
             options: {
               markdownCaptions: true,
               linkImagesToOriginal: false,
-              showCaptions: [‘title’, ‘alt’],
+              showCaptions: [‘title', ‘alt'],
               withWebp: true,
-              tracedSVG: { color: ‘#F00’, turnPolicy: ‘TURNPOLICY_MAJORITY’ },
+              tracedSVG: { color: ‘#F00', turnPolicy: ‘TURNPOLICY_MAJORITY' },
             },
           },
         ],

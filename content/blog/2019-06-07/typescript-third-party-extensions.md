@@ -36,11 +36,11 @@ function Published(props: IPublishedProps & InjectedIntlProps) {
 export default injectIntl(Published)
 ```
 
-The initial approach used `react-intl`’s HOC `injectIntl` to provide access to methods like `formatDate` and `formatTime`. I however, was more interested in a standard reusable component that would abstract away much of the logic and provide a set of sensible defaults.
+The initial approach used `react-intl`'s HOC `injectIntl` to provide access to methods like `formatDate` and `formatTime`. I however, was more interested in a standard reusable component that would abstract away much of the logic and provide a set of sensible defaults.
 
-Since I was essentially trying to replicate the logic of `intl.formatDate`, I looked into it’s type definition where I noticed two things:
+Since I was essentially trying to replicate the logic of `intl.formatDate`, I looked into it's type definition where I noticed two things:
 
-1. The `formatDate` method I’d been using on `intl` referenced a class `FormattedDate`
+1. The `formatDate` method I'd been using on `intl` referenced a class `FormattedDate`
 2. Whereas `intl.formatDate` takes a second parameter, `options`, `FormattedDate` has no such prop.
 
 From the type definition file of `react-intl`, we see:
@@ -73,9 +73,9 @@ namespace FormattedDate {
 class FormattedDate extends React.Component<FormattedDate.Props> { }
 ```
 
-Let’s follow this crumb trail and see where it leads:
+Let's follow this crumb trail and see where it leads:
 
-- The `FormattedDate`’s props, `Props`, extends `PropsBase`.
+- The `FormattedDate`'s props, `Props`, extends `PropsBase`.
 - `PropsBase`is assigned to `IntlComponent.DateTimeFormatProps`.
 - `DateTimeFormatProps` extends `Intl.DateTimeFormatOptions`.
 - Finally, we arrive at the end of the trail where we find `DateTimeFormatOptions` is defined as:
@@ -100,7 +100,7 @@ interface DateTimeFormatOptions {
 
 Pulling all of these details together, I was able to construct an `<IntlDate>` and `<IntlTime>` component that would default my initial configuration, while allowing customization should it be desired.
 
-Here’s what that looked like for `<IntlDate>`:
+Here's what that looked like for `<IntlDate>`:
 
 ```typescript
 import React, { FunctionComponent } from 'react'
@@ -139,7 +139,7 @@ const propsAreEqual = (prevProps: IDateProps, nextProps: IDateProps): boolean =>
 export default React.memo(IntlDate, propsAreEqual)
 ```
 
-The lesson for me was the interface. Since `<FormattedDate>` didn’t have an `options` prop, but was an extension of an extension of an extension - ultimately, the way I would use it is by passing in those props from the `DateTimeFormatOptions` directly.
+The lesson for me was the interface. Since `<FormattedDate>` didn't have an `options` prop, but was an extension of an extension of an extension - ultimately, the way I would use it is by passing in those props from the `DateTimeFormatOptions` directly.
 
 Using them became a matter of importing and simply passing in the date.
 

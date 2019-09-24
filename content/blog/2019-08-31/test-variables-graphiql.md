@@ -24,7 +24,7 @@ For example:
 {“slug”: “hello-world”
 ```
 
-Note: It’s important to put quotes around Slug or it will error.
+Note: It's important to put quotes around Slug or it will error.
 
 ![](./error-expected-string.png)
 

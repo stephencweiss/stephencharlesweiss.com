@@ -19,7 +19,7 @@ Extending beyond the `.gitconfig`, I moved to my .bash_profile and added some mo
 
 `$ git ci` and `$git st` are nice ways to commit and check the status of my Git repo based on aliases I defined in my `.gitconfig` file, but I was curious if I could go even faster.
 
-I decided to dedicate my g-key to git and added several additional keyboard shortcuts that I’ve found myself using even more frequently than the aliases in my `.gitconfig` file.
+I decided to dedicate my g-key to git and added several additional keyboard shortcuts that I've found myself using even more frequently than the aliases in my `.gitconfig` file.
 
 My current set up is:
 ```bash
@@ -35,7 +35,7 @@ alias gk='gitk --all&'
 alias got='git '
 alias get='git '
 ```
-Note: the aliases for `got` and `get` are just common typos for `git`, so it’s just a little guard rail for me. (I find I am more prone to make these errors if I’m saying the command in my head…)
+Note: the aliases for `got` and `get` are just common typos for `git`, so it's just a little guard rail for me. (I find I am more prone to make these errors if I'm saying the command in my head…)
 
 # Navigation Shortcuts
 As I get comfortable with the terminal, the hardest part for me is navigating through my directory tree. Since I had some pretty common destinations, I decided to make shortcuts using an alias. I updated my `~/.bash_profile` file to include the following Directory shortcuts.
@@ -63,7 +63,7 @@ alias bashReload=' . ~/.bash_profile'
 ```
 
 # Notes about .bash_profile and Mac
-Your `.bash_profile` file is located in your user’s directory, but as the `.` indicates, it’s hidden.
+Your `.bash_profile` file is located in your user's directory, but as the `.` indicates, it's hidden.
 
 To find and edit it, you can use the following three commands:
 ```bash
@@ -82,7 +82,7 @@ When you run the `$ ls -a` command, you may see multiple different bash files. F
 .bashrc
 ```
 
-It appears that I have separate profiles for anaconda, which is a program for python and pysave. Then there’s `.bashrc`. I found [Josh Staiger’s](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html) write up on the difference between `.bash_profile` and `bashrc` to be really easy to follow.
+It appears that I have separate profiles for anaconda, which is a program for python and pysave. Then there's `.bashrc`. I found [Josh Staiger's](http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html) write up on the difference between `.bash_profile` and `bashrc` to be really easy to follow.
 
 Quoting from the [bash manual](https://linux.die.net/man/1/bash) page:
 
@@ -94,4 +94,4 @@ Quoting from the [bash manual](https://linux.die.net/man/1/bash) page:
 
 As Josh notes, however, MacOS defaults to a login shell by default, and therefore first looks at `.bash_profile`.
 
-All of this means that I might optimize later, should I use Linux, by migrating my config commands to `.bashrc`, but for now, `.bash_profile` works well because I’m on a Mac.
+All of this means that I might optimize later, should I use Linux, by migrating my config commands to `.bashrc`, but for now, `.bash_profile` works well because I'm on a Mac.
