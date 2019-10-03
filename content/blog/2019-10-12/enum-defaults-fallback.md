@@ -54,7 +54,7 @@ Two complicating factors:
 1. The `status` was actually set within an array of elements that was being passed to the component at the top level. I.e., there’s another level above this and we get to step only _after_ mapping over the steps.
 2. The number of props involved is larger than the two demonstrated above, and destructuring, even to spread most of them, felt less than ideal.
 
-Okay, so a default value isn’t tenable, or at least not attractive. What about a fallback?
+Okay, so a default value in the signature isn’t tenable, or at least not attractive. What about through destructuring?
 
 That’s exactly what I did.
 
@@ -63,16 +63,10 @@ interface IMenu {
   steps: IStep[]
 }
 
-const Menu = (props: IMenu) => {
-  const { steps } = props
-  return (
-    <>
-      {steps.map((step, index) => {
-        if (!step.status) step.status = StepStatusTypes.INCOMPLETE
-        return <Step step={step} />
-      })}
-    </>
-  )
+const Step = (props: IStep) => {
+  const { step /* ... */ } = props
+  const { id, status = StepStatusTypes.INCOMPLETE } = step
+  /*...*/
 }
 ```
 
