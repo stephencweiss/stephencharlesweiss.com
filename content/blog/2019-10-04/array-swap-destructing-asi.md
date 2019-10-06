@@ -48,8 +48,9 @@ There’s no `;` to end the definition of the array. This is _not_ a case where 
 > ```
 
 ```javascript
-const arr = ([1, 2, 3, 4, 5]
-[(arr[0], arr[3])] = [arr[3], arr[0]])
+const arr = [1, 2, 3, 4, 5]
+[arr[0], arr[3]] = [arr[3], arr[0]]
+
 console.log(arr) // [4, 2, 3, 1, 5]
 ```
 
