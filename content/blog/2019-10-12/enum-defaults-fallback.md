@@ -27,7 +27,7 @@ const Step = (props: IStep) => {
 }
 ```
 
-In normal circumstances, this could be simplified and we could get rid of the `IStep` interface altogether.<sup>1</sup>
+In normal circumstances, this could be simplified and we could get rid of the `IStep` interface altogether.<sup>[1](#fn1)</sup><a id="sup1"></a>
 
 ```typescript
 export enum StatusTypes {
@@ -74,4 +74,4 @@ The important part is that you can’t just set `step.status` to `"INCOMPLETE"` 
 
 ## Footnotes
 
-- <sup>1</sup> I got inspiration for this approach from this conversation about [typescript enum default value](https://stackoverflow.com/questions/45363572/typescript-enum-default-value) on Stack Overflow.
+- <sup>[1](#sup1)</sup><a id="fn1"></a> I got inspiration for this approach from this conversation about [typescript enum default value](https://stackoverflow.com/questions/45363572/typescript-enum-default-value) on Stack Overflow.
