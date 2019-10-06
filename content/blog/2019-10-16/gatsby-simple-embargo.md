@@ -19,11 +19,9 @@ A quick review: when you type in the domain to go to this website (www.stephench
 
 Once you have the location for the servers for this site, your computer (the client) will communicate directly with the server that hosts the information for this site to retrieve the contents (HTML, CSS, and JS):
 
-| ![classic-web-app-communication-model](./classic-web-app-communication-model.jpg) |
-| :-------------------------------------------------------------------------------: |
-
-
-| A diagram of the classic web application communication model<sup>[2](#fn2)</sup><a id="sup2"></a>
+|         ![classic-web-app-communication-model](./classic-web-app-communication-model.jpg)         |
+| :-----------------------------------------------------------------------------------------------: |
+| A diagram of the classic web application communication model<sup>[2](#fn2)</sup><a id="sup2"></a> |
 
 ## Static Sites
 
@@ -60,7 +58,9 @@ My [initial approach](https://github.com/stephencweiss/personal-blog/pull/136/co
 
 I spent longer than I care to admit trying to get this to work before putting two and two together: Gatsby is a _static_ site generator. The server code is run _once_, at build time, and then never again.
 
-![](gatsby-build-process.png)
+|               ![gatsby build process](./gatsby-build-process.png)               |
+| :-----------------------------------------------------------------------------: |
+| The basics of the Gatsby build process that I was dealing with for the process. |
 
 That means, even if I passed in a variable for the current date and time, the result would be that I would filter out all posts that weren’t published at the time of build… and then they would _stay_ excluded until the next build.
 
@@ -77,9 +77,9 @@ Simply put, I sent the _entire_ site to the client, and then when painting the D
 This approach has two very real drawbacks:
 
 1. If you subscribe to the RSS feed for my site, you get posts when the site is built, _even if you don’t see them on the main page_.
-   ![](Screen%20Shot%202019-10-06%20at%202.09.54%20PM.png)
+   ![rss-feed-with-posts-ahead-of-build](./rss-feed-with-posts-ahead-of-build.png)
 2. If you were to look in the data you received during the initial load of the site, you’d see _extra_ pages that weren’t rendered.
-   ![](Screen%20Shot%202019-10-06%20at%202.10.30%20PM.png)
+   ![network-request-includes-future-posts](./network-request-includes-future-posts.png)
 
 ## Conclusion <a id="my-anchor"></a>
 
