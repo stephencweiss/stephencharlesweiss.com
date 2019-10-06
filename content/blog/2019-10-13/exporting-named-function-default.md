@@ -40,7 +40,7 @@ export default MyComponent = props => {
 
 Here you’ll get “MyComponent is not defined.”
 
-The answer is fairly straight forward - use a (named<sup>1</sup>) function declaration
+The answer is fairly straight forward - use a (named<sup>[1](#fn1)</sup><a id="sup1"></a>) function declaration
 
 ```javascript
 export default function MyComponent(props) {
@@ -52,4 +52,4 @@ Voilá. All very straight forward if I just spent
 
 ## Footnotes
 
-- <sup>1</sup> Naming the function will make it easier for debugging purposes by assigning a name in the stack trace (as opposed to “anonymous”).
+- <sup>[1](#sup1)</sup><a id="fn1"></a> Naming the function will make it easier for debugging purposes by assigning a name in the stack trace (as opposed to “anonymous”).
