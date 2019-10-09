@@ -5,9 +5,9 @@ category: ['musings']
 tags: ['benedict evans', 'artificial intelligence', 'machine learning']
 ---
 
-I first came across Benedict Evans through a fascinating interview he did with Russ Roberts on EconTalk to discuss the future of cars.<sup>1</sup> The depth with which he’d considered the space and his ability to make compelling arguments for second and third order effects (such as the potential devastation to the market for mechanics as electric vehicles break a lot less than internal combustion engines) struck me and he’s been someone I’ve been trying to follow ever since.
+I first came across Benedict Evans through a fascinating interview he did with Russ Roberts on EconTalk to discuss the future of cars.<sup>[1](#fn1)</sup><a id="sup1"></a>  The depth with which he’d considered the space and his ability to make compelling arguments for second and third order effects (such as the potential devastation to the market for mechanics as electric vehicles break a lot less than internal combustion engines) struck me and he’s been someone I’ve been trying to follow ever since.
 
-Over the past few months Evans has written about AI several times. I found his posts on bias in and the ethics of AI particularly balanced, considered, and cogent.<sup>2, 3</sup>
+Over the past few months Evans has written about AI several times. I found his posts on bias in and the ethics of AI particularly balanced, considered, and cogent.<sup>[2](#fn2), [3](#fn3)</sup><a id="sup2"></a> <a id="sup3"></a>
 
 On bias within of AI, Evans writes:
 
@@ -33,6 +33,6 @@ When it comes to AI I’m fairly skeptical about many of the claims being made t
 
 ## Footnotes
 
-- <sup>1</sup> The interview: [Benedict Evans on the Future of Cars | Econlib](https://www.econtalk.org/benedict-evans-on-the-future-of-cars/). This blog post argues that while Evans may be right long term, the market has ["jumped the gun" on Electric Vehicles](https://lt3000.blogspot.com/2019/08/investing-in-low-conviction-stocks.html). Consequently, conclusions about the imminent collapse of internal combustion market should be reevaluated.
-- <sup>2</sup> [Notes on AI Bias | Benedict Evans](https://www.ben-evans.com/benedictevans/2019/4/15/notes-on-ai-bias)
-- <sup>3</sup> [Face recognition and the ethics of AI | Benedict Evans](https://www.ben-evans.com/benedictevans/2019/9/6/face-recognition)
+- <sup>[1](#sup1)</sup><a id="fn1"></a> The interview: [Benedict Evans on the Future of Cars | Econlib](https://www.econtalk.org/benedict-evans-on-the-future-of-cars/). This blog post argues that while Evans may be right long term, the market has ["jumped the gun" on Electric Vehicles](https://lt3000.blogspot.com/2019/08/investing-in-low-conviction-stocks.html). Consequently, conclusions about the imminent collapse of internal combustion market should be reevaluated.
+- <sup>[2](#sup2)</sup><a id="fn2"></a> [Notes on AI Bias | Benedict Evans](https://www.ben-evans.com/benedictevans/2019/4/15/notes-on-ai-bias)
+- <sup>[3](#sup3)</sup><a id="fn3"></a> [Face recognition and the ethics of AI | Benedict Evans](https://www.ben-evans.com/benedictevans/2019/9/6/face-recognition)

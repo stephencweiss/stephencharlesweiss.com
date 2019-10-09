@@ -29,7 +29,7 @@ Did you catch the error?
 
 …
 
-There’s no `;` to end the definition of the array. This is _not_ a case where Javascript’s Automatic Semicolon Insertion (ASI) will add one either.<sup>1</sup> Instead, if you tried to run this code, you’d get an error similar to:
+There’s no `;` to end the definition of the array. This is _not_ a case where Javascript’s Automatic Semicolon Insertion (ASI) will add one either.<sup>[1](#fn1)</sup><a id="sup1"></a> Instead, if you tried to run this code, you’d get an error similar to:
 
 > ```shell
 > ~/Users/Stephen/Desktop/scratch.js:15~
@@ -72,4 +72,4 @@ function swap(list, x, y) {
 
 ## Footnotes
 
-- <sup>1</sup> [ASI | EcmaScript](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-rules-of-automatic-semicolon-insertion) The EcmaScript official spec as it relates to ASI.
+- <sup>[1](#sup1)</sup><a id="fn1"></a> [ASI | EcmaScript](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-rules-of-automatic-semicolon-insertion) The EcmaScript official spec as it relates to ASI.
