@@ -15,13 +15,13 @@ Before we get into _how_ I embargo content on my website, let’s get establish 
 
 ## Client-Server & HTTP
 
-A quick review: when you type in the domain to go to this website (www.stephencharlesweiss.com) into your browser, the first thing that happens is to resolve the location via the domain name servers (assuming your browser doesn’t have it in cache).<sup>[1](#fn1)</sup><a id="sup1"></a>
+A quick review: when you type in the domain to go to this website (www.stephencharlesweiss.com) into your browser, the first thing that happens is to resolve the location via the domain name servers (assuming your browser doesn’t have it in cache).<sup>[1](#footnotes)</sup><a id="sup1"></a>
 
 Once you have the location for the servers for this site, your computer (the client) will communicate directly with the server that hosts the information for this site to retrieve the contents (HTML, CSS, and JS):
 
-|         ![classic-web-app-communication-model](./classic-web-app-communication-model.jpg)         |
-| :-----------------------------------------------------------------------------------------------: |
-| A diagram of the classic web application communication model<sup>[2](#fn2)</sup><a id="sup2"></a> |
+|            ![classic-web-app-communication-model](./classic-web-app-communication-model.jpg)            |
+| :-----------------------------------------------------------------------------------------------------: |
+| A diagram of the classic web application communication model<sup>[2](#footnotes)</sup><a id="sup2"></a> |
 
 ## Static Sites
 
@@ -45,10 +45,10 @@ With this backdrop, I started investigating if there was a way to embargo my con
 I came up with a few different approaches:
 
 1. Separate my database from my build process. This would mean that when the page is loading, it would hit a separate server to get the content.
-2. Schedule a daily build using a "cron" job.<sup>[3](#fn3)</sup><a id="sup3"></a>
+2. Schedule a daily build using a "cron" job.<sup>[3](#footnotes)</sup><a id="sup3"></a>
 3. Filter the data on the client side.
 
-The third route was by far the simplest way I could come up with that would achieve my desired affect — if you visited my site, you would only _see_ the published articles.<sup>[4](#fn4)</sup><a id="sup4"></a>
+The third route was by far the simplest way I could come up with that would achieve my desired affect — if you visited my site, you would only _see_ the published articles.<sup>[4](#footnotes)</sup><a id="sup4"></a>
 
 ## Gatsby’s Build Process
 
