@@ -1,5 +1,5 @@
 ---
-title: 'Typescript’s `Omit`: `Pick`’s Mirror'
+title: 'Typescript’s Omit: Pick’s Mirror'
 date: '2019-10-18'
 category: ['programming']
 tags: ['typescript', 'pick', 'omit']
