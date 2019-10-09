@@ -65,7 +65,7 @@ There are two problems:
 1. We’re firing `handleClick` for _any_ keyup. We only want it to happen on `Enter`.
 2. The form currently has no validation, so even if the form had errors, by pressing a key (or ‘Enter’ if the above is addressed), we’d try to submit.
 
-For the former, we should add a condition to our `handleSubmit` to only fire if we press the `Enter` key<sup>2</sup>, for example:
+For the former, we should add a condition to our `handleSubmit` to only fire if we press the `Enter` key <sup>[1](#fn1)</sup><a id="sup1"></a> , for example:
 
 ```javascript
   function handleClick(e) {
@@ -78,7 +78,7 @@ For the former, we should add a condition to our `handleSubmit` to only fire if 
 
 ```
 
-Remember how I said I like React? This same thing in react would just be:
+Remember how I said I like React? This same thing in react would just be: <sup>[2](#fn2)</sup><a id="sup2"></a>
 
 ```javascript
 function handleClick(e) {
@@ -113,5 +113,5 @@ Now, I can just check to make sure there are no errors in my form and if everyth
 
 ## Footnotes
 
-- Since v0.11, React supports event normalization. Instead of having to type in the key id, you can say `event.key === ‘Enter’` or `enter.key === ‘ArrowLeft’`, etc. [React v0.11 – React Blog](https://reactjs.org/blog/2014/07/17/react-v0.11.html#improved-keyboard-event-normalization)
-- <sup>2</sup> Each key has a code. Enter happens to be number 13 in Javascript. [Javascript Char Codes (Key Codes) | Cambia Research](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
+- <sup>[1](#sup1)</sup><a id="fn1"></a> Each key has a code. Enter happens to be number 13 in Javascript. [Javascript Char Codes (Key Codes) | Cambia Research](https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
+- <sup>[2](#sup2)</sup><a id="fn2"></a> Since v0.11, React supports event normalization. Instead of having to type in the key id, you can say `event.key === ‘Enter’` or `enter.key === ‘ArrowLeft’`, etc. [React v0.11 – React Blog](https://reactjs.org/blog/2014/07/17/react-v0.11.html#improved-keyboard-event-normalization)
