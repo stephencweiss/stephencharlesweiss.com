@@ -20,7 +20,8 @@ With Array Destructuring, Javascript now allows you to do this without relying o
 For example to swap the first and fourth element, you might do the following:
 
 ```javascript
-const arr = ([1, 2, 3, 4, 5][(arr[0], arr[3])] = [arr[3], arr[0]])
+const arr = [1, 2, 3, 4, 5]
+[(arr[0], arr[3])] = [arr[3], arr[0]]
 ```
 
 Did you catch the error?
@@ -47,10 +48,10 @@ There’s no `;` to end the definition of the array. This is _not_ a case where 
 >     at bootstrapNodeJSCore (internal/bootstrap/node.js:739:3)
 > ```
 
+We can fix it with a well-placed `;`:
 ```javascript
-const arr = [1, 2, 3, 4, 5]
-[arr[0], arr[3]] = [arr[3], arr[0]]
-
+const arr = [1, 2, 3, 4, 5];
+[(arr[0], arr[3])] = [arr[3], arr[0]]
 console.log(arr) // [4, 2, 3, 1, 5]
 ```
 
