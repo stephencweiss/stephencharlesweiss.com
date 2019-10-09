@@ -24,9 +24,9 @@ Since I could still get formatting to work by running prettier in the command li
 
 Apparently, this is a known issue and has to do with how ESLint and Prettier interact.
 
-There are threads for similar issues for Atom<sup>1</sup>, VSCode<sup>2</sup>, and Prettier<sup>3</sup>. I’m sure there are others.
+There are threads for similar issues for Atom<sup>[1](#fn)</sup><a id="sup1"></a>, VSCode<sup>[2](#fn2)</sup><a id="sup2"></a>, and Prettier<sup>[3](#fn3)</sup><a id="sup3"></a>. I’m sure there are others.
 
-Reading through the threads, I found a solution that works at least for VSCode, per [@2Color](https://github.com/2color):<sup>4</sup>
+Reading through the threads, I found a solution that works at least for VSCode, per [@2Color](https://github.com/2color):<sup>[4](#fn4)</sup><a id="sup4"></a>
 
 > Try changing
 > `"prettier.eslintIntegration": true`
@@ -43,7 +43,7 @@ I’ll be keeping an eye on this, but if nothing else, at least I have a working
 
 ## Footnotes
 
-- <sup>1</sup> [Failed to load plugin ‘prettier’ declared in ‘CLIOptions’: Cannot find module ‘eslint-plugin-prettier’ · Issue #505 · prettier/prettier-atom | GitHub](https://github.com/prettier/prettier-atom/issues/505)
-- <sup>2</sup> [ESLint fails to load plugins when using ESLint 6.x · Issue #696 · microsoft/vscode-eslint | GitHub](https://github.com/microsoft/vscode-eslint/issues/696)
-- <sup>3</sup> [Cannot find module ‘../ast-utils’ when formating · Issue #672 · prettier/prettier-vscode · GitHub](https://github.com/prettier/prettier-vscode/issues/672)
-- <sup>4</sup> [@2Color’s solution](https://github.com/microsoft/vscode-eslint/issues/696#issuecomment-528305585) was the first that worked for me.
+- <sup>[1](#sup1)</sup><a id="fn1"></a> [Failed to load plugin ‘prettier’ declared in ‘CLIOptions’: Cannot find module ‘eslint-plugin-prettier’ · Issue #505 · prettier/prettier-atom | GitHub](https://github.com/prettier/prettier-atom/issues/505)
+- <sup>[2](#sup2)</sup><a id="fn2"></a> [ESLint fails to load plugins when using ESLint 6.x · Issue #696 · microsoft/vscode-eslint | GitHub](https://github.com/microsoft/vscode-eslint/issues/696)
+- <sup>[3](#sup3)</sup><a id="fn3"></a> [Cannot find module ‘../ast-utils’ when formating · Issue #672 · prettier/prettier-vscode · GitHub](https://github.com/prettier/prettier-vscode/issues/672)
+- <sup>[4](#sup4)</sup><a id="fn4"></a> [@2Color’s solution](https://github.com/microsoft/vscode-eslint/issues/696#issuecomment-528305585) was the first that worked for me.
