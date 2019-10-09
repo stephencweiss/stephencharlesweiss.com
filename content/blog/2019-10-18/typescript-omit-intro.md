@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['typescript', 'pick', 'omit']
 ---
 
-I’ve written in the past about the [benefits of `Pick` in writing better interfaces with Typescript](https://www.stephencharlesweiss.com/2019-06-25/typescript-pick-interface-partials/).
+I’ve written in the past about the [benefits of `Pick` in writing better interfaces with Typescript](../../2019-06-25/typescript-pick-interface-partials/).
 
 Today, I found out about `Pick`’s mirror: `Omit`.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 Quick refresher: `Pick` is useful for maintaining the type checking when we only want a select number of properties from an existing interface (as opposed to `Partial`). `Omit` behaves similarly, but in the inverse: we use it where we want to _keep_ all, but a select number of properties from an interface.
