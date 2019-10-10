@@ -1,5 +1,5 @@
 ---
-title: 'Using Typescript’s `Pick` To Improve Communication And Decrease Maintenance'
+title: 'Using Typescript’s Pick To Improve Communication And Decrease Maintenance'
 date: '2019-06-25'
 category: ['programming']
 tags: ['developer experience', 'typescript', 'pick', 'interface', 'DRY']
