@@ -5,6 +5,8 @@ category: ['programming']
 tags: ['node', 'npm', 'npmrc']
 ---
 
+# Dealing With NPM Config Files
+
 When things that used to work break, I want to understand why. That was the situation recently with `npm`, the reliable workhorse behind node projects.
 
 The issue, it turned out had to do with my `.npmrc`, a file I didn’t even know existed.
@@ -21,13 +23,25 @@ This was the first time I realized the role the `.npmrc` plays and I set about f
 
 First of all - worth mentioning: You can have a global `.npmrc` which comes with all of the same warnings that having global _anything_ comes with. And/or you can have a separate `.npmrc` for each project.
 
-To override any global settings, all you need is an _empty_ `.npmrc` in the root directory of the project. Adding this to my project (and replacing the `package-lock.json`) was all I needed to get things working.
+To override any global settings, all you need to do is create a _more_ local `.npmrc` with the values that you want in the root of the project (i.e. a sibling to the `package.json` and `node_modules`).<sup>[1](#footnotes)</sup><a id="fn1"></a>
+
+Let’s say you want to override the global registry configured in your `.npmrc`. The steps you’d need are:
+
+1. Create a more local `.npmrc` with the value you do want:
+
+```
+// .npmrc
+registry="https://registry.npmjs.org/"
+```
+
+2. Delete the `package-lock` and `node_modules` (which retain references to the old registry)
+3. Reinstall (`npm install`)
 
 ## Configuring Defaults
 
 The experience with the global `.npmrc` did pique my interest, however, and I wondered what else you can do with the `.npmrc` file.
 
-Turns out - quite a bit!<sup>[1](#footnotes)</sup><a id="fn1"></a>
+Turns out - quite a bit!<sup>[2](#footnotes)</sup><a id="fn2"></a>
 
 I’d already found that you can point to an alternative registry, but you can also set defaults.
 
@@ -59,11 +73,13 @@ npm config set registry “https://custom-registry.jfrog.io”
 
 If using a private repository, you’ll likely also need auth. Look at the documentation for the registry for how to configure that. For JFrog, it includes adding an `_auth` property to the `.npmrc`
 
-To reset you can either create a more local `.npmrc` or return to the default:
+To reset you can either create a more local `.npmrc` (see above) or return to the default:
 
 ```shell
 npm config set registry “http://registry.npmjs.com/“
 ```
+
+Note: the `npm config` command will set the _global_ config file.
 
 ## Conclusion
 
@@ -71,4 +87,5 @@ I’m sure there’s much more to learn about the `.npmrc` and I’m excited to 
 
 ## Footnotes
 
-- <sup>[1](#fn1)</sup> When it comes to configuring the `.npmrc`, I found this article by Tierney Cyren on [Configuring Your `.npmrc` for an Optimal Node.js Environment”](https://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/) particularly useful.
+- <sup>[1](#fn1)</sup> For more about per-project configuration, see [NPM’s documentation on the topic](https://docs.npmjs.com/files/npmrc#per-project-config-file).
+- <sup>[2](#fn2)</sup> When it comes to configuring the `.npmrc`, I found this article by Tierney Cyren on [Configuring Your `.npmrc` for an Optimal Node.js Environment”](https://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/) particularly useful.
