@@ -75,6 +75,7 @@ If using a private repository, you’ll likely also need auth. Look at the docum
 
 To reset you can either create a more local `.npmrc` (see above) or return to the default:
 
+
 ```shell
 npm config set registry “http://registry.npmjs.com/“
 ```
@@ -89,3 +90,4 @@ I’m sure there’s much more to learn about the `.npmrc` and I’m excited to 
 
 - <sup>[1](#fn1)</sup> For more about per-project configuration, see [NPM’s documentation on the topic](https://docs.npmjs.com/files/npmrc#per-project-config-file).
 - <sup>[2](#fn2)</sup> When it comes to configuring the `.npmrc`, I found this article by Tierney Cyren on [Configuring Your `.npmrc` for an Optimal Node.js Environment”](https://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/) particularly useful.
+
