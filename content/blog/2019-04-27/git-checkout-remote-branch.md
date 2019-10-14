@@ -5,40 +5,49 @@ category: ['programming']
 tags: ['git', 'remotes', 'checkout']
 ---
 
-Earlier this week, I pulled down a colleagues work to test it locally. Unfortunately, the steps I followed ended up merging the new feature branch into my local master - unbeknownst to me. Then, when I pushed my work up for review, suddenly, I was carrying along all of his work too (since I merged my local master in to make sure I handled conflicts).
+Earlier this week, I pulled down a colleague's work to test it locally. Unfortunately, the steps I followed ended up merging the new feature branch into my local master - unbeknownst to me. Then, when I pushed my work up for review, suddenly, I was carrying along all of his work too (since I merged my local master in to make sure I handled conflicts).
 
-So, if you want to run a feature branch locally, how exactly *do* you pull a branch from a remote repository *without* merging it into an existing local branch?
+So, if you want to run a feature branch locally, how exactly _do_ you pull a branch from a remote repository _without_ merging it into an existing local branch?
 
-StackOverflow to the rescue!
+StackOverflow to the rescue!<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 # Git Commands
+
 ## With A Single Remote Repository
+
 As of Git version ^1.6.6
-```
-git fetch
-git checkout test
+
+```shell
+$ git fetch
+$ git checkout test
 ```
 
 ## Multiple Remote Repositories / Extra Explicit Approach
-```
-git checkout -b test <name of remote>/test
-or the shorthand
-git checkout -t <name of remote>/test
+
+```shell
+$ git checkout -b test <name of remote>/test
+# or the shorthand
+$ git checkout -t <name of remote>/test
 ```
 
 ## Examples:
-`git checkout -b feature/123-do-something-awesome origin/feature/123-do-something-awesome`
-`git checkout -t origin/feature/123-do-something-awesome`
+
+```shell
+$ git checkout -b feature/123-do-something-awesome origin/feature/123-do-something-awesome
+$ git checkout -t origin/feature/123-do-something-awesome
+```
 
 ## Manual Definitions
-I often find it helpful to look up *what* these flags and options are doing — in this particular case, we’re taking advantage of the `-b` and `-t` flags.
 
-Before looking this process up, I wasn’t aware that `-b` took an optional second parameter, `<start point>` which in our case *is* the `remote/branch-name`.
+I often find it helpful to look up _what_ these flags and options are doing — in this particular case, we’re taking advantage of the `-b` and `-t` flags.
 
-The `-t` option works similarly, but we *only* specify the upstream and allowing Git to derive the branch name.
+Before looking this process up, I wasn’t aware that `-b` took an optional second parameter, `<start point>` which in our case _is_ the `remote/branch-name`.
+
+The `-t` option works similarly, but we _only_ specify the upstream and allowing Git to derive the branch name.
+
 > If no -b option is given, the name of the new branch will be derived from the remote-tracking branch
 
-```
+```shell
 git checkout -b|-B <new_branch> [<start point>]
            Specifying -b causes a new branch to be created as if git-branch(1)
            were called and then checked out. In this case you can use the
@@ -70,5 +79,6 @@ git checkout -b|-B <new_branch> [<start point>]
            You can explicitly give a name with -b in such a case.
 ```
 
-Resources:
-[git checkout - How do I check out a remote Git branch? - Stack Overflow](https://stackoverflow.com/a/1783426/9888057)
+## Footnotes
+
+- <sup>[1](#fn1)</sup> [git checkout - How do I check out a remote Git branch? - Stack Overflow](https://stackoverflow.com/a/1783426/9888057)
