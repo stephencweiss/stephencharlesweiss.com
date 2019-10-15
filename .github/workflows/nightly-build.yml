@@ -1,7 +1,7 @@
 name: Daily Build
   on:
     schedule:
-    - cron: '0 8 * * *' # 0 minute, 8th hour, every day, every month, every year (UTC)
+    - cron: '0 8 * * *' # 0 minute, 8th hour, every day of the month, every month, every day of the week (UTC)
   jobs:
     build:
       runs-on: ubuntu-latest
