@@ -5,7 +5,7 @@ category: ['programming']
 tags: ['react-text-mask', 'masking', 'css', 'styled-components', 'ref']
 ---
 
-In learning about [[Auto-Complete In HTML Forms]], I discovered that the `type` of an `<input>` makes can make a significant difference in how they are presented to users. The differences, however, are browser specific.
+In learning about [Auto-Complete In HTML Forms](../../2019-10-07/auto-complete-forms), I discovered that the `type` of an `<input>` makes can make a significant difference in how they are presented to users. The differences, however, are browser specific.
 
 Take `type="date"` for example. Chromium browsers supply quite a bit of styling for free. Safari adds nothing.
 
