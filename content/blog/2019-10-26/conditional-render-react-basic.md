@@ -18,7 +18,7 @@ When we’re within the return statement of a React component (this is true for 
 
 This means that we have access to the full power of the language with the notable exception of variable assignment.
 
-It also proves to be fertile ground for ternaries.<sup>1</sup>
+It also proves to be fertile ground for ternaries.<sup>[1](#Footnotes)</sup><a id="fn1"></a>
 
 For example, let’s look at a React component that will show a form when the user clicks on a button (and presumably hides it if a different button is clicked within the form):
 
@@ -116,9 +116,9 @@ const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
 ```
 
-The `return` statement is now much simpler and it's possible to extract the defintiions of our different components into other files to clean this up further and make it easier to read.<sup>2</sup>
+The `return` statement is now much simpler and it's possible to extract the defintiions of our different components into other files to clean this up further and make it easier to read.<sup>[2](#Footnotes)</sup><a id="fn2"></a>
 
 ## Footnotes
 
-- <sup>1</sup> Ternaries are the terse if/then/else that take the format of `<boolean evaluation> ? <if true> : <if false>`.
-- <sup>2</sup> I put together a CodeSandbox to demonstrate this final state of [conditional rendering](https://codesandbox.io/s/conditional-rendering-n9thg). Check it out!
+- <sup>[1](#fn1)</sup> Ternaries are the terse if/then/else that take the format of `<boolean evaluation> ? <if true> : <if false>`.
+- <sup>[2](#fn2)</sup> I put together a CodeSandbox to demonstrate this final state of [conditional rendering](https://codesandbox.io/s/conditional-rendering-n9thg). Check it out!
