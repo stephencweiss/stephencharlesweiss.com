@@ -121,4 +121,4 @@ The `return` statement is now much simpler and it's possible to extract the defi
 ## Footnotes
 
 - <sup>[1](#fn1)</sup> Ternaries are the terse if/then/else that take the format of `<boolean evaluation> ? <if true> : <if false>`.
-- <sup>[2](#fn2)</sup> I put together a CodeSandbox to demonstrate this final state of [conditional rendering](https://codesandbox.io/s/conditional-rendering-n9thg). Check it out!
+- <sup>[2](#fn2)</sup> I put together a CodeSandbox to demonstrate this final state of [conditional rendering](https://codesandbox.io/s/conditional-rendering-n9thg). Check it out! I also refactored it after writing about setting state in different component types. I now have all three component types [side-by-side for comparison](https://codesandbox.io/s/conditional-rendering-three-ways-0neld).
