@@ -1,6 +1,7 @@
 ---
 title: 'How to quickly / safely keep my project up to date with branches (and avoid avoidable problems)'
 date: '2018-08-26'
+updated: '2019-10-17'
 category: ['programming']
 tags: ['git', 'git-branch', 'git-merge', 'git-pull', 'tutorial']
 ---
@@ -24,7 +25,7 @@ Here are the steps:
 1. Create a new branch for the new feature that I want to work on
 
 ```shell
-$ git checkout [new branch name]
+$ git checkout <new branch name>
 ```
 
 2. Make your changes to the branch
@@ -40,7 +41,7 @@ $ git checkout [new branch name]
 $ git pull origin master
 ```
 
-5. Merge the new branch into the `master` with `$ git merge [new branch name]`
+5. Merge the new branch into the `master` with `$ git merge <new branch name>`
 
 6. Now that the files are merged, you can delete old branches. One quick way to see what’s already been merged (and therefore ready to be deleted is `$ git branch --merged`.
    ![confirm merged and unmerged branches](./img3.png)
