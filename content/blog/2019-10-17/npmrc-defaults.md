@@ -48,11 +48,11 @@ I’d already found that you can point to an alternative registry, but you can a
 Customizing your `.npmrc` can speed up the `npm init` process with some decent defaults. Here are some example
 
 ```shell
-$ npm config set init.author.name “Stephen Weiss”
-$ npm config set init.author.email “stephencweiss@gmail.com”
-$ npm config set init.author.url “https://stephencharlesweiss.com”
-$ npm config set init.license “MIT”
-$ npm config set init.version “0.0.1”
+$ npm config set init.author.name "Stephen Weiss"
+$ npm config set init.author.email "stephencweiss@gmail.com"
+$ npm config set init.author.url "https://stephencharlesweiss.com"
+$ npm config set init.license "MIT"
+$ npm config set init.version "0.0.1"
 ```
 
 My favorite is the last one - the initial version. NPM defaults to 1.0.0, but when I’m starting from scratch, it’s rare that my first commit will be to a fully working project. By setting my default to 0.0.1, I’m able to indicate much more clearly what the expectations should be for anyone who uses the project.
@@ -68,16 +68,15 @@ For example, if you’re working on a team and you want to privately host packag
 To point to JFrog, use the `npm config set registry` command, like so:
 
 ```shell
-npm config set registry “https://custom-registry.jfrog.io”
+npm config set registry "https://custom-registry.jfrog.io"
 ```
 
 If using a private repository, you’ll likely also need auth. Look at the documentation for the registry for how to configure that. For JFrog, it includes adding an `_auth` property to the `.npmrc`
 
 To reset you can either create a more local `.npmrc` (see above) or return to the default:
 
-
 ```shell
-npm config set registry “http://registry.npmjs.com/“
+npm config set registry "http://registry.npmjs.com/"
 ```
 
 Note: the `npm config` command will set the _global_ config file.
@@ -90,4 +89,3 @@ I’m sure there’s much more to learn about the `.npmrc` and I’m excited to 
 
 - <sup>[1](#fn1)</sup> For more about per-project configuration, see [NPM’s documentation on the topic](https://docs.npmjs.com/files/npmrc#per-project-config-file).
 - <sup>[2](#fn2)</sup> When it comes to configuring the `.npmrc`, I found this article by Tierney Cyren on [Configuring Your `.npmrc` for an Optimal Node.js Environment”](https://nodesource.com/blog/configuring-your-npmrc-for-an-optimal-node-js-environment/) particularly useful.
-
