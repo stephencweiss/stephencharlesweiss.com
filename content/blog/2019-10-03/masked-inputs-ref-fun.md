@@ -40,7 +40,7 @@ From the docs:
 
 > For example, to use with styled-components, [which requires an innerRef](https://www.styled-components.com/docs/advanced#refs):
 >
-> ```javscript
+> ```javascript
 > <MaskedInput
 >   mask={[‘(‘, /[1-9]/, /\d/, /\d/, ‘)’, ‘ ‘, /\d/, /\d/, /\d/, ‘-‘, /\d/, /\d/, /\d/, /\d/]}
 >   placeholder="Enter a phone number"
