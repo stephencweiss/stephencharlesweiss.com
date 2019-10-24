@@ -20,4 +20,5 @@ The `/` is labeled on the screen as entering the search window, which I love and
 Here they are in action.
 
 ![Storybook Demo](https://media.giphy.com/media/ZDtCYOGenwJGwDWAQN/giphy.gif)
+
 I also found that the comma (`,`) will go to the `about` page for Storybook.
