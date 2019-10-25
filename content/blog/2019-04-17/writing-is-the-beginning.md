@@ -1,6 +1,8 @@
 ---
 title: 'Writing Is Just The Beginning: The Tradeoff Between Clarity And Exploration With Writing And Conversing'
 date: '2019-04-17'
+publish: '2019-04-17'
+updated: '2019-10-24'
 category: ['code comments']
 tags: ['writing', 'communication', 'ezra klein', 'compassion']
 ---
@@ -28,3 +30,9 @@ This is one of writing’s superpowers: it’s asynchronicity, which means that 
 The issue then, as far as there is one, is that, as readers, we forget this. We forget that writers are participants in a conversation. They are either the entrant, putting an idea out into the world, or a respondent, taking a previously proposed notion to which they add nuance or take aim at troublesome part(s).
 
 We may not want to write _while_ we think, but that doesn’t mean that writing doesn’t offer similar avenues for exploration of ideas as a conversation. Writers know this - readers would be well served to remember it.
+
+Update: I recently came across this quote that I felt was quite relevant and I didn't want to lose track of it:
+
+> It is a most wonderful comfort to sit alone beneath a lamp, book spread before you, and commune with someone from the past whom you have never met.
+>
+> — Yoshida Kenko, _Essays In Idleness_
