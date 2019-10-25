@@ -96,4 +96,4 @@ If you’re using Typescript, you will need to confirm that your `.tsconfig` has
 ## Footnotes
 
 - <sup>1</sup> The [MDN Page on Object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) states: "Object.fromEntries() performs the reverse of [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) ."
-- <sup>2</sup> Marius Schulz put together a fantastic post explaining the `—downlevelIteration` flag in Typescript and it’s role in `for…of` loops
+- <sup>2</sup> Marius Schulz put together a fantastic post explaining the `--downlevelIteration` flag in Typescript and it’s role in `for…of` loops
