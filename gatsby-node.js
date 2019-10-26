@@ -42,11 +42,16 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+      const { publish, date } = post.node.frontmatter
+      const component = BUILD_TIME.isAfter(
+        publish ? dayjs(publish) : dayjs(date)
+      )
+        ? blogPost
+        : unpublishedPost
+
       createPage({
         path: post.node.fields.slug,
-        component: BUILD_TIME.isAfter(publish ? publish : date)
-          ? unpublishedPost
-          : blogPost,
+        component,
         context: {
           slug: post.node.fields.slug,
           previous,
