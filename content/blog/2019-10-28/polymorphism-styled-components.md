@@ -1,6 +1,7 @@
 ---
 title: 'Polymorphic Presentations With Styled-Components '
 date: '2019-10-28'
+publish: '2019-10-28'
 category: ['programming']
 tags: ['polymorphism', 'styled-components', 'react']
 ---

@@ -1,10 +1,14 @@
 const path = require(`path`)
+const dayjs = require('dayjs')
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
+const BUILD_TIME = dayjs()
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const unpublishedPost = path.resolve(`./src/templates/unpublished-post.js`)
   return graphql(
     `
       {
@@ -19,6 +23,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                date
+                publish
               }
             }
           }
@@ -36,9 +42,16 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+      const { publish, date } = post.node.frontmatter
+      const component = BUILD_TIME.isAfter(
+        publish ? dayjs(publish) : dayjs(date)
+      )
+        ? blogPost
+        : unpublishedPost
+
       createPage({
         path: post.node.fields.slug,
-        component: blogPost,
+        component,
         context: {
           slug: post.node.fields.slug,
           previous,
