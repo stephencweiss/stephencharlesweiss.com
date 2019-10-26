@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import { rhythm, scale } from '../utils/typography'
 
 function UnpublishedPost(props) {
+  const post = props.data.markdownRemark
+  const siteTitle = props.data.site.siteMetadata.title
+  const { previous, next } = props.pageContext
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <h1>{post.frontmatter.title}</h1>
@@ -20,7 +23,10 @@ function UnpublishedPost(props) {
         {post.frontmatter.date}
       </p>
       <div>
-        Whoops! Looks like you've landed on an unpublished page. Come back soon!
+        <p>
+          Whoops! You've stumbled into the future and found an unpublished page.
+        </p>
+        <p> Come back soon!</p>
       </div>
       <hr
         style={{
