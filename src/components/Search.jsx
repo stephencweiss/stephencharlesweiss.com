@@ -1,91 +1,80 @@
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { Index } from 'elasticlunr'
+import { useDebounce } from 'use-debounce'
 
 function getBlurb(page) {
-  return page.html.slice(0, 500).concat('...')
+  return page.content.slice(0, 500).concat('...')
 }
 
-// Search component
-export default class Search extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      query: ``,
-      results: [],
+function Search(props) {
+  const [query, setQuery] = useState('')
+  const [searchValue] = useDebounce(query, 1000)
+  const [results, setResults] = useState([])
+  const [index, setIndex] = useState()
+
+  useEffect(() => {
+    const index = Index.load(props.searchIndex)
+    setIndex(index)
+  }, [props.searchIndex])
+
+  useEffect(() => {
+    if (index) {
+      const searchResults = index
+        .search(searchValue, { expand: true })
+        .map(({ ref }) => index.documentStore.getDoc(ref))
+      setResults(searchResults)
     }
-  }
+  }, [index, searchValue])
 
-  getOrCreateIndex = () =>
-    this.index
-      ? this.index
-      : // Create an elastic lunr index and hydrate with graphql query results
-        Index.load(this.props.searchIndex)
-
-  search = e => {
-    const query = e.target.value
-    this.index = this.getOrCreateIndex()
-
-    this.setState({
-      query,
-      // Query the index with search string to get an [] of IDs
-      results: this.index
-        .search(query, { expand: true })
-        // Map over each ID and return the full document
-        .map(({ ref }) => this.index.documentStore.getDoc(ref)),
-    })
-  }
-
-  handleQuery = e => {
-    this.search(e)
-  }
-  render() {
-    return (
-      <div>
-        <div
-          style={{
-            display: 'flex',
-            flex: 1,
-            flexDirection: 'row',
-            alignItems: 'center',
-          }}
-        >
-          Search:{' '}
-          <input
-            style={{ width: '100%' }}
-            type="text"
-            value={this.state.query}
-            onChange={this.handleQuery}
-          />
-        </div>
-        <ul>
-          {this.state.results &&
-            this.state.results.map(page => {
-              const blurb = getBlurb(page)
-              return (
-                <li key={page.id}>
+  const handleQuery = event => setQuery(event.target.value)
+  return (
+    <div>
+      <div
+        style={{
+          display: 'flex',
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        Search:{' '}
+        <input
+          style={{ width: '100%' }}
+          type="text"
+          value={query}
+          onChange={handleQuery}
+        />
+      </div>
+      <ul>
+        {results &&
+          results.map(page => {
+            const blurb = getBlurb(page)
+            return (
+              <li key={page.id}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                  }}
+                >
+                  <Link to={'/' + page.path}>{page.title}</Link>
                   <div
                     style={{
-                      display: 'flex',
-                      flexDirection: 'column',
+                      background: 'rgba(0,0,0,.1)',
+                      marginLeft: '1em',
                     }}
                   >
-                    <Link to={'/' + page.path}>{page.title}</Link>
-                    <div
-                      style={{
-                        background: 'rgba(0,0,0,.1)',
-                        marginLeft: '1em',
-                      }}
-                    >
-                      {page.tags && ' Tags: ' + page.tags.join(`, `)}
-                    </div>
-                    <div style={{ marginLeft: '1em' }}>{blurb && blurb}</div>
+                    {page.tags && ' Tags: ' + page.tags.join(`, `)}
                   </div>
-                </li>
-              )
-            })}
-        </ul>
-      </div>
-    )
-  }
+                  <div style={{ marginLeft: '1em' }}>{blurb && blurb}</div>
+                </div>
+              </li>
+            )
+          })}
+      </ul>
+    </div>
+  )
 }
+
+export default Search
