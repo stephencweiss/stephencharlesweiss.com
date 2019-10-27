@@ -32,7 +32,7 @@ module.exports = {
             options: {
               classPrefix: 'language-',
               inlineCodeMarker: null,
-              aliases: {bash: 'zsh'},
+              aliases: { bash: 'zsh' },
               showLineNumbers: false,
               noInlineHighlight: false,
             },
@@ -154,7 +154,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [`title`, `tags`, `category`, `html`],
+        fields: [{name: `title`, store: true, attributes: {boost: 20}}, `tags`, `category`, `content`, `date`, `publish`],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
@@ -163,7 +163,9 @@ module.exports = {
             category: node => node.frontmatter.category,
             tags: node => node.frontmatter.tags,
             path: node => node.fields.slug,
-            html: node => node.internal.content,
+            content: node => node.internal.content,
+            date: node => node.frontmatter.date,
+            publish: node => node.frontmatter.publish,
           },
         },
       },
@@ -175,7 +177,7 @@ module.exports = {
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: 'static',
-      }
-    }
+      },
+    },
   ],
 }
