@@ -79,7 +79,7 @@ const gap = Object.fromEntries(
 )
 ```
 
-This was my first interaction with `Object.fromEntries`, but as MDN mentions, it’s really just the inverse of `Object.entries`.</sup>1</sup> When you think about it, that makes a lot of sense. Instead of destructuring an object into an array of tuples, the `Object.fromEntries` creates a new object from an array of tuples.
+This was my first interaction with `Object.fromEntries`, but as MDN mentions, it’s really just the inverse of `Object.entries`.<sup>[1](#footnotes)</sup><a id="fn1"></a> When you think about it, that makes a lot of sense. Instead of destructuring an object into an array of tuples, the `Object.fromEntries` creates a new object from an array of tuples.
 
 To make sure that our our new `gap` has the same shape as the `universe`, but only with the elements we want, we _first_ map over the `allNames` Set (which first is converted into an Array) and _then_ create the tuple `[name, universe[name]]`, which will finally be used to create the key:value pair in our new `gap` object.
 
@@ -91,9 +91,9 @@ What are you learning today?
 
 ## Typescript Notice
 
-If you’re using Typescript, you will need to confirm that your `.tsconfig` has the `downLevelIteration` set to `true`.<sup>2</sup> You will also likely need to import some of the more modern libs (e.g., `esnext` as `Object.fromEntries` and `for ... of` loops are relatively recent additions. Alternatively, you could replace these with `subsets.forEach(/* ... */)` and `Array.from(allNames)`.
+If you’re using Typescript, you will need to confirm that your `.tsconfig` has the `downLevelIteration` set to `true`.<sup>[2](#footnotes)</sup><a id="fn2"></a> You will also likely need to import some of the more modern libs (e.g., `esnext` as `Object.fromEntries` and `for ... of` loops are relatively recent additions. Alternatively, you could replace these with `subsets.forEach(/* ... */)` and `Array.from(allNames)`.
 
 ## Footnotes
 
-- <sup>1</sup> The [MDN Page on Object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) states: "Object.fromEntries() performs the reverse of [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) ."
-- <sup>2</sup> Marius Schulz put together a fantastic post explaining the `--downlevelIteration` flag in Typescript and it’s role in `for…of` loops
+- <sup>[1](#fn1)</sup> The [MDN Page on Object.fromEntries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries) states: "Object.fromEntries() performs the reverse of [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) ."
+- <sup>[2](#fn2)</sup> Marius Schulz put together a fantastic post explaining the `--downlevelIteration` flag in Typescript and it’s role in `for…of` loops
