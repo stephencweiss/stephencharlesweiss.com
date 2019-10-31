@@ -6,9 +6,7 @@ category: ['programming']
 tags: ['oop', 'classes', 'javascript', 'prototype', 'inheritance']
 ---
 
-When we define a class component as a derivation of a base class, this gives us access to all of the base class’s public (and protected, though not private) methods.
-
-It also means that calling the super’s constructor (the super being the class from which our class is being derived) before accessing `this`.
+# Aha Moments With Class Components
 
 ```javascript
 class Base {
@@ -33,6 +31,10 @@ base.print();
 example.print();
 
 ```
+
+When we define a class component as a derivation of a base class, this gives us access to all of the base class’s public (and protected, though not private) methods.
+
+It also means that calling the super’s constructor (the super being the class from which our class is being derived) before accessing `this`.
 
 In the above example, `Extension` will error because we're trying to access `this` in the `print` method but we do not call pass the props (which is the only named argument) to the `super`.
 
@@ -96,9 +98,9 @@ class MyClass extends React.Component {
 }
 ```
 
-The difference this time was that I realized _what_ I was doing by deriving `MyClass` from `React.Component` and how `super` played a role in it.
+The difference this time was that I realized _what_ I was doing by deriving `MyClass` from `React.Component` and the role `super` played in passing the props along to React.
 
-I don't know how many times I've written this without really considering what it meant. The [React docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class) try to call it out:
+I don't know how many times I've written this without really considering what it meant even though the [React docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class) try to call it out:
 
 > ```javascript
 > class Clock extends React.Component {
@@ -128,6 +130,14 @@ I don't know how many times I've written this without really considering what it
 > ```
 
 But without a good understanding of _how_ classes worked, this went over my head.
+
+I probably would have missed it again this time had it not been for Brian Holt. In his Intro to React course on Frontend Masters, he said what I've heard so many times before:
+
+> And the constructor will take the props... and you have to say `super(props)`. This is just an odd ritual that you kind of have to do... If you don't do this, React will yell at you, so get used to doing it.
+
+But in between he added color that I’d never heard or really thought about before.
+
+> It [the class] is going to be constructed with properties and you have to hand those properties up to React. Right? So that's what this does. This `super(props)` says hey call the constructor on my parent class which is a `React.Component`.
 
 There’s definitely still a lot for me to learn here... and I think that's just awesome.
 
