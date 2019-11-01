@@ -6,7 +6,9 @@ category: ['programming']
 tags: ['oop', 'classes', 'javascript', 'prototype', 'inheritance']
 ---
 
-# Aha Moments With Class Components
+When we define a class component as a derivation of a base class, this gives us access to all of the base class’s public (and protected, though not private) methods.
+
+It also means that calling the super’s constructor (the super being the class from which our class is being derived) before accessing `this`.
 
 ```javascript
 class Base {
@@ -31,10 +33,6 @@ base.print();
 example.print();
 
 ```
-
-When we define a class component as a derivation of a base class, this gives us access to all of the base class’s public (and protected, though not private) methods.
-
-It also means that calling the super’s constructor (the super being the class from which our class is being derived) before accessing `this`.
 
 In the above example, `Extension` will error because we're trying to access `this` in the `print` method but we do not call pass the props (which is the only named argument) to the `super`.
 
