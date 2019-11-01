@@ -46,7 +46,7 @@ Two ways to solve it:
 1. Bind the function to the class to persist the context
 2. Convert the function to an arrow function to take advantage of the runtime context
 
-# Bind The Function
+## Bind The Function
 
 Binding functions is the original way to address the problem that the `handleClick` has a own execution context.
 
@@ -73,7 +73,7 @@ The reason _this_ works is that the `this` inside of the `bind` (and actually th
 
 Said another way: the `this` in the constructor is the class while the `this` within the `handleClick` is the function.
 
-# Arrow Functions
+## Arrow Functions
 
 Arrow functions make the binding of functions _to_ the class unnecessary because arrow functions take on the `this` of the enclosing lexical scope.<sup>1</sup>
 
@@ -92,6 +92,10 @@ class MyComponent extends React.Component {
   /* ... */
 }
 ```
+
+## In Summary
+
+With arrow functions (function expressions), `this` is defined when it’s written whereas with a function declaration, `this` is defined at time of execution, though we can explicitly set the `this` value through `.bind`.
 
 ## Footnotes & Additional Reading
 
