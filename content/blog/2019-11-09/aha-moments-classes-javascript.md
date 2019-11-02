@@ -10,6 +10,7 @@ When we define a class component as a derivation of a base class, this gives us 
 
 It also means that calling the super’s constructor (the super being the class from which our class is being derived) before accessing `this`.
 
+
 ```javascript
 class Base {
     constructor(props) {
