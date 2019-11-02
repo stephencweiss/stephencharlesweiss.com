@@ -33,7 +33,7 @@ I started by reviewing my code to make sure I hadn’t missed anything. Once I�
 
 It turns out that many others had run into this same problem - and they’d fixed it using Babel.
 
-Unfortunately, I’m not using Babel, at least not directly. That is, I don’t have a `.babelrc` file where I”m configuring my plugins and presets.
+Unfortunately, I’m not using Babel, at least not directly. That is, I don’t have a `.babelrc` file where I'm configuring my plugins and presets.
 
 So, I needed to do it directly in Webpack (this is what I meant about how I get to just keep learning more about Webpack).
 
