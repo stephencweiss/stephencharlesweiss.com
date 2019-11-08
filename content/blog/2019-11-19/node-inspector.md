@@ -30,7 +30,8 @@ You should now see a screen that looks like this:
 
 3. Click “inspect” and it will open a DevTools window.
 
-Note - you _may_ need to manually add the filesystem (go to Source and select “Add folder to workspace”).
+Note - you _may_ need to manually add the filesystem. Go to Source and select “Add folder to workspace”.
+The indication that it wasn't working for me was the error: `Unable to add filesystem permission denied`.
 
 Once your files are loaded, however, you have full debugging features available.
 
