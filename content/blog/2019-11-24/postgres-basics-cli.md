@@ -65,7 +65,7 @@ The `--pwprompt` is to secure the new user with a password.
 ### Roles And Permissions
 
 At this point, you should be able to see your new role using the `\du` command within the `psql` shell:
-![](./roles-and-permissions.png)
+![Roles & Permissions](./roles-and-permissions.png)
 
 The thing to notice is that this does not apply a role to the user - which will limit the ability for them to do much within the database once they login.
 
@@ -82,11 +82,17 @@ From within the Postgres shell, we can use the `ALTER ROLE` command:<sup>4</sup>
 <database_name>=# alter role onething_admin createrole;
 ```
 
-![](./alter-role.png)
+![Alter role](./alter-role.png)
 
 ## Wrap Up
 
-Okay - we’re ready to go! Let’s get started with Postgres!
+Confirm that your new user is created as expected by logging into them.
+
+Exit the Postgres shell and try logging in as your new user.
+
+If the command prompt is `<database_name>=>` - terminating with an `>` instead of the `#`, then you know you’re not signed in as a super user.
+
+![Regular user prompt](./regular-user-prompt.png)
 
 ## Footnotes
 
