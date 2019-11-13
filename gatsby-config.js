@@ -110,6 +110,7 @@ module.exports = {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   publish: edge.node.frontmatter.publish,
+                  updated: edge.node.frontmatter.updated,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
@@ -132,6 +133,7 @@ module.exports = {
                         title
                         date
                         publish
+                        updated
                       }
                     }
                   }
@@ -156,7 +158,7 @@ module.exports = {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         // Fields to index
-        fields: [{name: `title`, store: true, attributes: {boost: 20}}, `tags`, `category`, `content`, `date`, `publish`],
+        fields: [{name: `title`, store: true, attributes: {boost: 20}}, `tags`, `category`, `content`, `date`, `publish`, `updated`],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
@@ -168,6 +170,7 @@ module.exports = {
             content: node => node.internal.content,
             date: node => node.frontmatter.date,
             publish: node => node.frontmatter.publish,
+            updated: node => node.frontmatter.updated,
           },
         },
       },
