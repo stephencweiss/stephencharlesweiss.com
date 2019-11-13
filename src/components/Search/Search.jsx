@@ -28,7 +28,7 @@ function getBlurb(page) {
     <p>
       {page.content.slice(0, 200)}
       <br />
-      <Link to={'/' + page.path}>&#10149;{`Read more`}</Link>
+      <Link to={`/${page.path}`}>&#10149;{`Read more`}</Link>
     </p>
   )
 }
