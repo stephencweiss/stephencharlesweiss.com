@@ -28,11 +28,12 @@ class BlogIndex extends React.Component {
             return dayjs().isAfter(publish ? dayjs(publish) : dayjs(date))
           })
           .map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
+            const { date, publish, title } = node.frontmatter
+            const { slug } = node.fields
             return (
-              <div key={node.fields.slug}>
-                <PostLink slug={node.fields.slug} title={title} />
-                <small>{node.frontmatter.date}</small>
+              <div key={slug}>
+                <PostLink slug={slug} title={title} />
+                <small>{publish ? publish : date}</small>
                 <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               </div>
             )
@@ -61,6 +62,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            publish(formatString: "MMMM DD, YYYY")
             title
           }
         }
