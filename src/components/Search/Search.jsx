@@ -4,8 +4,9 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
+import { PostHeader } from '../PostLink'
 
-const SearchWrapper = styled.div`
+const SearchItemWrapper = styled.div`
   display: flex;
   flex: 1;
   flex-direction: row;
@@ -14,21 +15,22 @@ const SearchWrapper = styled.div`
 
 const SearchInput = styled.input`
   width: 100%;
-`;
+`
 
-
-const ItemBlurb = styled.div`
-  margin-left: 1em;
-  padding-left .5em;
+const SearchContainer = styled.ul`
+  border: 2px solid black;
+  padding: 0 .5em;
+  margin: 0;
 `
 
 function getBlurb(page) {
   return (
-    <ItemBlurb>
-    {page.content.slice(0, 200)}<br/>
-    <Link to={'/' + page.path} >&#10149;{`Read more`}</Link>
-    </ItemBlurb>
-    )
+    <p>
+      {page.content.slice(0, 200)}
+      <br />
+      <Link to={'/' + page.path}>&#10149;{`Read more`}</Link>
+    </p>
+  )
 }
 
 function Search(props) {
@@ -54,21 +56,18 @@ function Search(props) {
   const handleQuery = event => setQuery(event.target.value)
   return (
     <div>
-      <SearchWrapper >
-        Search:{' '}
-        <SearchInput
-          type="text"
-          value={query}
-          onChange={handleQuery}
-        />
-        </SearchWrapper>
-      <ul>
-        {results &&
-          results.map(page => {
+      <SearchItemWrapper>
+        Search: <SearchInput type="text" value={query} onChange={handleQuery} />
+      </SearchItemWrapper>
+      {results.length > 0 && <PostHeader>Results</PostHeader>}
+      {results.length > 0 && (
+        <SearchContainer>
+          {results.map(page => {
             const blurb = getBlurb(page)
             return <SearchResult page={page} blurb={blurb} />
           })}
-      </ul>
+        </SearchContainer>
+      )}
     </div>
   )
 }
