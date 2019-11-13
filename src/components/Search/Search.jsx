@@ -1,10 +1,34 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
 import { Index } from 'elasticlunr'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 import { useDebounce } from 'use-debounce'
+import SearchResult from './SearchResult'
+
+const SearchWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+`
+
+const SearchInput = styled.input`
+  width: 100%;
+`;
+
+
+const ItemBlurb = styled.div`
+  margin-left: 1em;
+  padding-left .5em;
+`
 
 function getBlurb(page) {
-  return page.content.slice(0, 500).concat('...')
+  return (
+    <ItemBlurb>
+    {page.content.slice(0, 200)}<br/>
+    <Link to={'/' + page.path} >&#10149;{`Read more`}</Link>
+    </ItemBlurb>
+    )
 }
 
 function Search(props) {
@@ -30,47 +54,19 @@ function Search(props) {
   const handleQuery = event => setQuery(event.target.value)
   return (
     <div>
-      <div
-        style={{
-          display: 'flex',
-          flex: 1,
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}
-      >
+      <SearchWrapper >
         Search:{' '}
-        <input
-          style={{ width: '100%' }}
+        <SearchInput
           type="text"
           value={query}
           onChange={handleQuery}
         />
-      </div>
+        </SearchWrapper>
       <ul>
         {results &&
           results.map(page => {
             const blurb = getBlurb(page)
-            return (
-              <li key={page.id}>
-                <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}
-                >
-                  <Link to={'/' + page.path}>{page.title}</Link>
-                  <div
-                    style={{
-                      background: 'rgba(0,0,0,.1)',
-                      marginLeft: '1em',
-                    }}
-                  >
-                    {page.tags && ' Tags: ' + page.tags.join(`, `)}
-                  </div>
-                  <div style={{ marginLeft: '1em' }}>{blurb && blurb}</div>
-                </div>
-              </li>
-            )
+            return <SearchResult page={page} blurb={blurb} />
           })}
       </ul>
     </div>
