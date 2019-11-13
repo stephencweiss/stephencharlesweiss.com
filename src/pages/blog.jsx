@@ -4,7 +4,6 @@ import PostLink from '../components/PostLink'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 
-
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props

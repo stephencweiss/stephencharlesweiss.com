@@ -19,7 +19,7 @@ const SearchInput = styled.input`
 
 const SearchContainer = styled.ul`
   border: 2px solid black;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   margin: 0;
 `
 
