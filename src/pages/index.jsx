@@ -1,24 +1,13 @@
 import React from 'react'
-import dayjs from 'dayjs'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
 import PostLink from '../components/PostLink'
+import sortPosts from '../utils/sortPosts'
 
-function sortPosts( a, b) {
-  const {publish: aPublish, date: aDate} = a.node.frontmatter
-  const {publish: bPublish, date: bDate} = b.node.frontmatter
-  let aCompDate = aPublish ? aPublish : aDate
-  let bCompDate = bPublish ? bPublish : bDate
-  if (!aCompDate || !bCompDate) {
-    console.error(`Check frontmatter!`)
-    return -1
-  }
-  return dayjs(aCompDate).isAfter(dayjs(bCompDate)) ? -1 : 1;
-}
 
 class BlogIndex extends React.Component {
   render() {
@@ -31,20 +20,20 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-
         <Header />
-        {posts
-          .map(({ node }) => {
-            const { date, publish, title } = node.frontmatter
-            const { slug } = node.fields
-            return (
-              <div key={slug}>
-                <PostLink slug={slug} title={title} />
-                <small>{publish ? publish : date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
-            )
-          })}
+        {posts.map(({ node }) => {
+          const { date, publish, title } = node.frontmatter
+          const { slug } = node.fields
+          return (
+            <div key={slug}>
+              <PostLink slug={slug} title={title} />
+              <small>{publish ? publish : date}</small>
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <br />
+              <Link to={`/${slug}`}>&#10149;{`Read more`}</Link>
+            </div>
+          )
+        })}
         <Bio />
       </Layout>
     )
@@ -60,11 +49,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: {fields: {isPublished: {eq: true}}}) {
+    allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {
       edges {
         node {
-          excerpt(format:HTML)
+          excerpt(format: HTML)
           fields {
             slug
           }
