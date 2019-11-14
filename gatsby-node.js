@@ -1,8 +1,6 @@
 const path = require(`path`)
-const dayjs = require('dayjs')
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
-const BUILD_TIME = dayjs()
+const { isPublished } = require('./src/utils/isPublished')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -11,25 +9,23 @@ exports.createPages = ({ graphql, actions }) => {
   const unpublishedPost = path.resolve(`./src/templates/unpublished-post.js`)
   return graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date
-                publish
-              }
+    {
+      allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fields: {isPublished: {eq: true}}}, limit: 1000) {
+        edges {
+          node {
+            fields {
+              slug
+              isPublished
+            }
+            frontmatter {
+              title
+              date
+              publish
             }
           }
         }
       }
+    }
     `
   ).then(result => {
     if (result.errors) {
@@ -42,16 +38,9 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
-      const { publish, date } = post.node.frontmatter
-      const component = BUILD_TIME.isAfter(
-        publish ? dayjs(publish) : dayjs(date)
-      )
-        ? blogPost
-        : unpublishedPost
-
       createPage({
         path: post.node.fields.slug,
-        component,
+        component: blogPost,
         context: {
           slug: post.node.fields.slug,
           previous,
@@ -66,11 +55,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
+    const isPublishedVal = isPublished(node)
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
       value,
     })
+    createNodeField({name: 'isPublished', node, value: isPublishedVal})
   }
 }

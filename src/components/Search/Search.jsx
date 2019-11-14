@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Index } from 'elasticlunr'
-import { Link } from 'gatsby'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
 import { PostHeader } from '../PostLink'
@@ -9,16 +8,7 @@ import {
   SearchInput,
   SearchItemWrapper,
 } from './Search.styled'
-
-function getBlurb(page) {
-  return (
-    <p>
-      {page.content.slice(0, 200)}
-      <br />
-      <Link to={`/${page.path}`}>&#10149;{`Read more`}</Link>
-    </p>
-  )
-}
+import getBlurb from '../../utils/getBlurb'
 
 function Search(props) {
   const [query, setQuery] = useState('')
