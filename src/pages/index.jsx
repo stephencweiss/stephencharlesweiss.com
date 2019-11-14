@@ -8,12 +8,23 @@ import SEO from '../components/SEO'
 import Header from '../components/Header'
 import PostLink from '../components/PostLink'
 
+function sortPosts( a, b) {
+  const {publish: aPublish, date: aDate} = a.node.frontmatter
+  const {publish: bPublish, date: bDate} = b.node.frontmatter
+  let aCompDate = aPublish ? aPublish : aDate
+  let bCompDate = bPublish ? bPublish : bDate
+  if (!aCompDate || !bCompDate) {
+    console.error(`Check frontmatter!`)
+    return -1
+  }
+  return dayjs(aCompDate).isAfter(dayjs(bCompDate)) ? -1 : 1;
+}
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
+    const posts = data.allMarkdownRemark.edges.sort(sortPosts)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -23,10 +34,6 @@ class BlogIndex extends React.Component {
 
         <Header />
         {posts
-          .filter(({ node }) => {
-            const { publish, date } = node.frontmatter
-            return dayjs().isAfter(publish ? dayjs(publish) : dayjs(date))
-          })
           .map(({ node }) => {
             const { date, publish, title } = node.frontmatter
             const { slug } = node.fields
@@ -53,10 +60,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: {fields: {isPublished: {eq: true}}}) {
       edges {
         node {
-          excerpt
+          excerpt(format:HTML)
           fields {
             slug
           }
