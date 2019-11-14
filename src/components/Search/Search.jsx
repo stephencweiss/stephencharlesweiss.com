@@ -19,7 +19,7 @@ const SearchInput = styled.input`
 
 const SearchContainer = styled.ul`
   border: 2px solid black;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   margin: 0;
 `
 
@@ -28,7 +28,7 @@ function getBlurb(page) {
     <p>
       {page.content.slice(0, 200)}
       <br />
-      <Link to={'/' + page.path}>&#10149;{`Read more`}</Link>
+      <Link to={`/${page.path}`}>&#10149;{`Read more`}</Link>
     </p>
   )
 }

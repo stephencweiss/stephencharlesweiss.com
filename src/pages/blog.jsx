@@ -1,10 +1,8 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-
+import { graphql } from 'gatsby'
+import PostLink from '../components/PostLink'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,19 +13,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+          const { date, publish, title } = node.frontmatter
+          const { slug } = node.fields
           return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
+            <div key={slug}>
+              <PostLink slug={slug} title={title} />
+              <small>{publish ? publish : date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )
@@ -56,6 +47,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
+            publish(formatString: "MMMM DD, YYYY")
             title
           }
         }
