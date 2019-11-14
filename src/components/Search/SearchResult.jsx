@@ -1,27 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Item, ItemBlurb, ItemHighlight, ListItem } from './Search.styled'
 
 import PostLink from '../PostLink'
-
-const Item = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const ItemHighlight = styled.small`
-  background: rgba(0, 0, 0, 0.1);
-  margin-left: 1em;
-  padding-left: 0.5em;
-`
-
-const ItemBlurb = styled.div`
-  margin-left: 1em;
-  padding-left .5em;
-`
-
-const ListItem = styled.li`
-  list-style: none;
-`
 
 function SearchResult({ page, blurb }) {
   return (
