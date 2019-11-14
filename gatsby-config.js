@@ -1,4 +1,4 @@
-const isPublished = require('./src/utils/isPublished')
+const { isPublished } = require('./src/utils/isPublished')
 
 module.exports = {
   siteMetadata: {
