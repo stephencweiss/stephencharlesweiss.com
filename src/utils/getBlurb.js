@@ -1,11 +1,11 @@
+import React from 'react'
 import { Link } from 'gatsby'
 
-export default function getBlurb(page) {
+export default function getBlurb({content, path}) {
   return (
-    <p>
-      {page.content.slice(0, 200)}
-      <br />
-      <Link to={`/${page.path}`}>&#10149;{`Read more`}</Link>
-    </p>
+    <React.Fragment>
+      <p>{content.length > 200 ? content.slice(0, 200).concat(' ...') : content}</p>
+      <Link to={`/${path}`}>&#10149;{`Read more`}</Link>
+    </React.Fragment>
   )
 }
