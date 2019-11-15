@@ -22,13 +22,14 @@ export const ListItem = styled.li`
 
 export const SearchItemWrapper = styled.div`
   display: flex;
-  flex: 1;
+  width: 100%;
   flex-direction: row;
   align-items: center;
 `
 
 export const SearchInput = styled.input`
-  width: 100%;
+  flex: 1;
+  margin-left: 0.5em;
 `
 
 export const SearchContainer = styled.ul`
