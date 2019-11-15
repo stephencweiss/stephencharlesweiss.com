@@ -28,8 +28,9 @@ export const SearchItemWrapper = styled.div`
 `
 
 export const SearchInput = styled.input`
-  flex: 1;
-  margin-left: 0.5em;
+  flex: 1 !important;
+  width: 100% !important;
+  margin-left: 0.5em !important;
 `
 
 export const SearchContainer = styled.ul`
