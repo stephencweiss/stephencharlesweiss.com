@@ -52,7 +52,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {
       edges {
         node {
-          excerpt(format: HTML)
+          excerpt(format: MARKDOWN)
           fields {
             slug
           }
