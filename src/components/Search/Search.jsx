@@ -41,7 +41,7 @@ function Search(props) {
       {results.length > 0 && (
         <SearchContainer>
           {results.map(page => {
-            const blurb = getBlurb(page)
+            const blurb = getBlurb({content: page.content, path: page.path })
             return <SearchResult page={page} blurb={blurb} />
           })}
         </SearchContainer>

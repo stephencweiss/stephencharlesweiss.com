@@ -7,6 +7,7 @@ import SEO from '../components/SEO'
 import Header from '../components/Header'
 import PostLink from '../components/PostLink'
 import sortPosts from '../utils/sortPosts'
+import getBlurb from '../utils/getBlurb'
 
 
 class BlogIndex extends React.Component {
@@ -28,9 +29,7 @@ class BlogIndex extends React.Component {
             <div key={slug}>
               <PostLink slug={slug} title={title} />
               <small>{publish ? publish : date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              <br />
-              <Link to={`/${slug}`}>&#10149;{`Read more`}</Link>
+              {getBlurb({content: node.excerpt, path: slug})}
             </div>
           )
         })}
