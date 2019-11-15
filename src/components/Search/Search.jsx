@@ -1,37 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Index } from 'elasticlunr'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
 import { PostHeader } from '../PostLink'
-
-const SearchItemWrapper = styled.div`
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  align-items: center;
-`
-
-const SearchInput = styled.input`
-  width: 100%;
-`
-
-const SearchContainer = styled.ul`
-  border: 2px solid black;
-  padding: 0 0.5em;
-  margin: 0;
-`
-
-function getBlurb(page) {
-  return (
-    <p>
-      {page.content.slice(0, 200)}
-      <br />
-      <Link to={`/${page.path}`}>&#10149;{`Read more`}</Link>
-    </p>
-  )
-}
+import {
+  SearchContainer,
+  SearchInput,
+  SearchItemWrapper,
+} from './Search.styled'
+import getBlurb from '../../utils/getBlurb'
 
 function Search(props) {
   const [query, setQuery] = useState('')
@@ -49,6 +26,7 @@ function Search(props) {
       const searchResults = index
         .search(searchValue, { expand: true })
         .map(({ ref }) => index.documentStore.getDoc(ref))
+      //TODO: Reduce searchResults duplicates based on slug (which should be unique)
       setResults(searchResults)
     }
   }, [index, searchValue])

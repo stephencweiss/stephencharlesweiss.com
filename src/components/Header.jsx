@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, Link } from 'gatsby'
 import { graphql } from 'gatsby'
 
-import {Search} from './Search'
+import { Search } from './Search'
 
 const Header = () => (
   <StaticQuery

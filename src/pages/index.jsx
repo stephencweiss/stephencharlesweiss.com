@@ -1,43 +1,39 @@
 import React from 'react'
-import dayjs from 'dayjs'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
 import PostLink from '../components/PostLink'
+import sortPosts from '../utils/sortPosts'
+
 
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
+    const posts = data.allMarkdownRemark.edges.sort(sortPosts)
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-
         <Header />
-        {posts
-          .filter(({ node }) => {
-            const { publish, date } = node.frontmatter
-            return dayjs().isAfter(publish ? dayjs(publish) : dayjs(date))
-          })
-          .map(({ node }) => {
-            const { date, publish, title } = node.frontmatter
-            const { slug } = node.fields
-            return (
-              <div key={slug}>
-                <PostLink slug={slug} title={title} />
-                <small>{publish ? publish : date}</small>
-                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-              </div>
-            )
-          })}
+        {posts.map(({ node }) => {
+          const { date, publish, title } = node.frontmatter
+          const { slug } = node.fields
+          return (
+            <div key={slug}>
+              <PostLink slug={slug} title={title} />
+              <small>{publish ? publish : date}</small>
+              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <br />
+              <Link to={`/${slug}`}>&#10149;{`Read more`}</Link>
+            </div>
+          )
+        })}
         <Bio />
       </Layout>
     )
@@ -53,10 +49,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {
       edges {
         node {
-          excerpt
+          excerpt(format: MARKDOWN)
           fields {
             slug
           }
