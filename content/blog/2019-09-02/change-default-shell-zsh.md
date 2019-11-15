@@ -1,6 +1,7 @@
 ---
 title: 'Changing the default shell to zsh'
 date: '2019-09-02'
+updated: '2019-12-03'
 category: ['programming']
 tags: ['shell', 'unix', 'macos', 'zsh', 'bash']
 ---
@@ -33,6 +34,8 @@ Using the Change Shell and Which programs, you can change the default with a one
 The `-s` flag "Attempt[s] to change the user's shell to newshell."
 
 With this done - restart the terminal and you should be in the new shell.
+
+**Update** To confirm the change was effective, you can [check your active shell](../../2019-12-03/check-active-shell) using the `ps` utility.
 
 ## Homebrew specifics
 If you use `homebrew` (like I do) you’ll need to take a few extra steps.
