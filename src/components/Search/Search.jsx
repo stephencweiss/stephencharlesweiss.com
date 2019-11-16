@@ -5,8 +5,8 @@ import SearchResult from './SearchResult'
 import { PostHeader } from '../PostLink'
 import {
   SearchContainer,
-  SearchInput,
-  SearchItemWrapper,
+  // SearchInput,
+  // SearchItemWrapper,
 } from './Search.styled'
 import getBlurb from '../../utils/getBlurb'
 
@@ -34,9 +34,9 @@ function Search(props) {
   const handleQuery = event => setQuery(event.target.value)
   return (
     <React.Fragment>
-      <SearchItemWrapper>
-        Search: <SearchInput type="text" value={query} onChange={handleQuery} />
-      </SearchItemWrapper>
+      <div style={{display: 'flex', flexDirection: 'row', width: 100%}}>
+        Search: <input style={{width: '100%', flex: 1}} type="text" value={query} onChange={handleQuery} />
+      </div>
       {results.length > 0 && <PostHeader>Results</PostHeader>}
       {results.length > 0 && (
         <SearchContainer>
