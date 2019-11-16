@@ -20,13 +20,13 @@ export const ListItem = styled.li`
   list-style: none;
 `
 
-export const SearchItemWrapper2 = styled.div`
+export const SearchItemWrapper = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
 `
 
-export const SearchInput2 = styled.input`
+export const SearchInput = styled.input`
   flex: 1;
   width: 100%;
   margin-left: 0.5em;
