@@ -5,10 +5,24 @@ import SearchResult from './SearchResult'
 import { PostHeader } from '../PostLink'
 import {
   SearchContainer,
-  // SearchInput,
-  // SearchItemWrapper,
+  SearchInput2,
+  SearchItemWrapper2,
 } from './Search.styled'
+
+import styled from 'styled-components'
 import getBlurb from '../../utils/getBlurb'
+
+export const SearchItemWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+`
+
+export const SearchInput = styled.input`
+  flex: 1;
+  width: 100%;
+  margin-left: 0.5em;
+`
 
 function Search(props) {
   const [query, setQuery] = useState('')
@@ -34,8 +48,17 @@ function Search(props) {
   const handleQuery = event => setQuery(event.target.value)
   return (
     <React.Fragment>
+      <p>search bar with imported styled components</p>
+      <SearchItemWrapper2 >
+        Search: <SearchInput2 type="text" value={query} onChange={handleQuery} />
+      </SearchItemWrapper2>
+      <p>search bar with styled components</p>
+      <SearchItemWrapper >
+        Search: <SearchInput type="text" value={query} onChange={handleQuery} />
+      </SearchItemWrapper>
+      <p>semantic html with inline styles</p>
       <div style={{display: 'flex', flexDirection: 'row', width: '100%'}}>
-        Search: <input style={{width: '100%', flex: 1}} type="text" value={query} onChange={handleQuery} />
+        Search: <input style={{width: '100%', flex: 1, margineLeft: '0.5em'}} type="text" value={query} onChange={handleQuery} />
       </div>
       {results.length > 0 && <PostHeader>Results</PostHeader>}
       {results.length > 0 && (

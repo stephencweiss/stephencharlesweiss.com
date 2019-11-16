@@ -20,18 +20,18 @@ export const ListItem = styled.li`
   list-style: none;
 `
 
-// export const SearchItemWrapper = styled.div`
-//   display: flex;
-//   width: 100%;
-//   flex-direction: row;
-//   align-items: center;
-// `
+export const SearchItemWrapper2 = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+`
 
-// export const SearchInput = styled.input`
-//   flex: 1;
-//   width: 100%;
-//   margin-left: 0.5em;
-// `
+export const SearchInput2 = styled.input`
+  flex: 1;
+  width: 100%;
+  margin-left: 0.5em;
+`
 
 export const SearchContainer = styled.ul`
   border: 2px solid black;
