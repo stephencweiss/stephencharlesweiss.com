@@ -34,7 +34,7 @@ function Search(props) {
   const handleQuery = event => setQuery(event.target.value)
   return (
     <React.Fragment>
-      <div style={{display: 'flex', flexDirection: 'row', width: 100%}}>
+      <div style={{display: 'flex', flexDirection: 'row', width: '100%'}}>
         Search: <input style={{width: '100%', flex: 1}} type="text" value={query} onChange={handleQuery} />
       </div>
       {results.length > 0 && <PostHeader>Results</PostHeader>}
