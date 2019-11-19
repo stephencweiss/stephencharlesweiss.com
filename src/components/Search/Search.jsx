@@ -33,7 +33,7 @@ function Search(props) {
 
   const handleQuery = event => setQuery(event.target.value)
   return (
-    <div>
+    <React.Fragment>
       <SearchItemWrapper>
         Search: <SearchInput type="text" value={query} onChange={handleQuery} />
       </SearchItemWrapper>
@@ -41,12 +41,12 @@ function Search(props) {
       {results.length > 0 && (
         <SearchContainer>
           {results.map(page => {
-            const blurb = getBlurb({content: page.content, path: page.path })
+            const blurb = getBlurb({ content: page.content, path: page.path })
             return <SearchResult page={page} blurb={blurb} />
           })}
         </SearchContainer>
       )}
-    </div>
+    </React.Fragment>
   )
 }
 
