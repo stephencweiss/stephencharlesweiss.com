@@ -3,7 +3,7 @@ title: 'Shell Scripts: How To Run Them'
 date: '2019-11-12'
 publish: '2019-11-27'
 category: ['programming']
-tags: ['bash','zsh','shell script']
+tags: ['bash','zsh','shell script','bash scripting']
 ---
 
 I am constantly striving to improve my understanding and comfort interacting with my terminal. I remember how excited I was when I first started to understand how to [change my shell from bash to zsh](https://www.stephencharlesweiss.com/2019-09-02/change-default-shell-zsh/), [create persistent aliases](https://www.stephencharlesweiss.com/2018-12-22/oh-my-zsh-and-persistent-aliases/), and even begin [writing my own functions](https://www.stephencharlesweiss.com/2019-02-13/next-level-shell-aliases-and-functions/).
@@ -36,5 +36,5 @@ In this example, I’m already in the directory where setup lives - but you can 
 $ ./scripts/setup.sh
 ```
 
-You don’t need to preface it with anything (as in the `node` example) because the shell knows how to execute the shell script! 
+You don’t need to preface it with anything (as in the `node` example) because the shell knows how to execute the shell script!
 
