@@ -5,13 +5,17 @@ publish: '2019-12-08'
 tags: ['git','cherry-pick','reflog']
 category: ['programming']
 ---
-Recently, I talked about how you could pull a single file from another branch.
+Yesterday, I wrote about [how to pull a specific files from another branch into your branch](../../2019-12-07/git-copy-files-between-branches).
 
-But what if you want to pull in all of the changes from a commit? Instead of checking out all of the files changed within that commit (which would bring over not just what changed in that commit, but also everything else that happened before), we can use the [cherry pick](https://git-scm.com/docs/git-cherry-pick) option.
+But what if you want to pull in all of the changes from a commit? That's what happened to me today!
 
-I think of cherry picking as a mini-merge.
+Instead of checking out all of the files I was interested in - and therefore bringing over not just what changed in the latest commit, but also everything else that happened before, we can use the [cherry pick](https://git-scm.com/docs/git-cherry-pick) option.
 
-Instead of trying to merge an entire branch into your current branch, it picks a single commit and attempts to bring that over. I say attempt, because just like a merge, cherry picking can end up in conflicts, which will require resolution.
+Cherry picking is like a mini-merge. Instead of trying to merge an entire branch into your current branch, it picks a single commit and attempts to bring that over.
+
+And just like merges, cherry picking can end up in conflicts, which requires resolution.
+
+Example time!
 
 Let’s say I want to make a detour based on work I was doing on a feature branch, I’ll call it `feature-a`. I don’t want to just cut another branch _from_ `feature-a`, because then I’d be carrying all of the previous commits I’d made on that branch with me.
 
@@ -24,14 +28,14 @@ Steps to do this
 
 Creating the new branch can happen based on master, no matter which branch we’re currently on, by setting its target:
 ```shell
-$ git checkout -b based-on-master master
+$ git checkout -b detour-b master
 ```
 
 Then, we can use `git reflow` to see the latest actions and their respective hashes within `git`:
 ```shell
 $ git reflog
-17114a0e (HEAD -> master, tag: v4.0.49, origin/master, origin/HEAD) HEAD@{1}: checkout: moving from bug/tsc-fixes to based-on-master
-481ad9a8 (origin/bug/tsc-fixes, bug/tsc-fixes) HEAD@{14}: commit: Fixing build time errors
+17114a0e (HEAD -> master, tag: v4.0.49, origin/master, origin/HEAD) HEAD@{1}: checkout: moving from feature-a to detour-b
+481ad9a8 (origin/feature-a, feature-a) HEAD@{14}: commit: Fixing build time errors
 ```
 
 Now, to cherry pick that latest commit, I can do:
