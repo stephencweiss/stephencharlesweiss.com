@@ -5,6 +5,9 @@ const BUILD_TIME = dayjs()
 module.exports = {
   isPublished: node => {
     const { publish, date } = node.frontmatter
+    if (process.env.nofilter) {
+      return true
+    }
     return BUILD_TIME.isAfter(publish ? dayjs(publish) : dayjs(date))
   },
 }
