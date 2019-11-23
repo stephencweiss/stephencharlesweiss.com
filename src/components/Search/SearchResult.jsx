@@ -1,17 +1,29 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import { Item, ItemBlurb, ItemHighlight, ListItem } from './Search.styled'
 
 import PostLink from '../PostLink'
 
-function createLinks(item, index, array, setQuery){
-  const includeComma = array.length - index > 1
-  return <Link key={index} onClick={() => setQuery(item)}>{item}{includeComma ? ', ':''}</Link>
+function createLinks(type, elements, setQuery) {
+  if (!elements) return null
+  return (
+    <React.Fragment>
+      {`${type}: `}
+      {elements.map((item, index, array) => {
+        const includeComma = array.length - index > 1
+        return (<Link key={index} onClick={() => setQuery(item)}>
+          {index === 0 ? ' ' : ''}
+          {item}
+          {includeComma ? ', ' : ''}
+        </Link>)
+      })}
+    </React.Fragment>
+  )
 }
 
 function SearchResult({ page, blurb, setQuery }) {
-
-  const linkedTags = page.tags && page.tags.map((item, index, array) => createLinks(item, index, array, setQuery))
+  const linkedTags = createLinks('Tags', page.tags, setQuery)
+  const linkedCategories = createLinks('Category', page.category, setQuery)
 
   return (
     <ListItem key={page.id}>
@@ -26,13 +38,8 @@ function SearchResult({ page, blurb, setQuery }) {
         <ItemHighlight>
           {page.updated && `Upated: ${page.updated}`}
         </ItemHighlight>
-        <ItemHighlight>
-          {page.category && ' Category: ' + page.category.join(`, `)}
-        </ItemHighlight>
-        <ItemHighlight>
-          {' Tags: '}
-          {linkedTags && linkedTags.map(el =>el)}
-        </ItemHighlight>
+        <ItemHighlight>{linkedCategories}</ItemHighlight>
+        <ItemHighlight>{linkedTags}</ItemHighlight>
         <ItemBlurb>{blurb && blurb}</ItemBlurb>
       </Item>
     </ListItem>
