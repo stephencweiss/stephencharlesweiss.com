@@ -81,7 +81,7 @@ Note: the `npm config` command will set the _global_ config file.
 
 ## Conclusion
 
-I’m sure there’s much more to learn about the `.npmrc` and I’m excited to continue to explore, but I hav found understanding these basics has helped me immensely in speeding up my own work and being able to debug problems when they do arise.
+I’m sure there’s much more to learn about the `.npmrc` and I’m excited to continue to explore, but I haev found understanding these basics has helped me immensely in speeding up my own work and being able to debug problems when they do arise.
 
 ## Footnotes
 
