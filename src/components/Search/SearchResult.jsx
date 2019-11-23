@@ -11,7 +11,7 @@ function createLinks(type, elements, setQuery) {
       {`${type}: `}
       {elements.map((item, index, array) => {
         const includeComma = array.length - index > 1
-        return (<Link key={index} onClick={() => setQuery(item)}>
+        return (<Link key={item} onClick={() => setQuery(item)}>
           {index === 0 ? ' ' : ''}
           {item}
           {includeComma ? ', ' : ''}
