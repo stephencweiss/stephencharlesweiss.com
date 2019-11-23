@@ -5,8 +5,6 @@ category: ['programming']
 tags: ['node', 'npm', 'npmrc']
 ---
 
-# Dealing With NPM Config Files
-
 When things that used to work break, I want to understand why. That was the situation recently with `npm`, the reliable workhorse behind node projects.
 
 The issue, it turned out had to do with my `.npmrc`, a file I didn’t even know existed.
