@@ -4,48 +4,36 @@ import { graphql, Link } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Header from '../components/Header'
-import PostLink from '../components/PostLink'
-import sortPosts from '../utils/sortPosts'
-import getBlurb from '../utils/getBlurb'
+import Blog  from './blog'
 
-
-class BlogIndex extends React.Component {
+class MainIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges.sort(sortPosts)
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Code Comments"
+          description={data.site.siteMetadata.description}
+          keywords={data.site.siteMetadata.keywords}
         />
-        <Header />
-        {posts.map(({ node }) => {
-          const { date, publish, title } = node.frontmatter
-          const { slug } = node.fields
-          return (
-            <div key={slug}>
-              <PostLink slug={slug} title={title} />
-              <small>{publish ? publish : date}</small>
-              {getBlurb({content: node.excerpt, path: slug})}
-            </div>
-          )
-        })}
+        <Link to={'/blog'}>Blog</Link>
         <Bio />
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default MainIndex
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
+        description
+        keywords
       }
     }
     allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {

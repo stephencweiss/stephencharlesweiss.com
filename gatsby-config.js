@@ -5,6 +5,7 @@ module.exports = {
     title: `/* Code Comments */`,
     author: `Stephen Weiss`,
     description: `Notes on software and life.`,
+    keywords: ['software development', 'gatsby', 'graphql', 'economics', 'life', 'advice', 'musings', 'ramblings'],
     siteUrl: `https://stephencharlesweiss.com/`,
     social: {
       twitter: `stephencweiss`,
@@ -24,6 +25,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/templates`,
+        name: `templates`,
       },
     },
     {
