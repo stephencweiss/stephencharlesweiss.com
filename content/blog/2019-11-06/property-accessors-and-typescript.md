@@ -3,7 +3,7 @@ title: 'Property Accessors And Typescript'
 date: '2019-10-28'
 publish: '2019-11-06'
 tags: ['typescript', 'javascript', 'property accessors', 'static type checking']
-categories: ['programming']
+category: ['programming']
 ---
 
 Came across an interesting example of a rarely used feature (at least for me) in Javascript creating unexpected results with Typescript: dynamic property accessors.
