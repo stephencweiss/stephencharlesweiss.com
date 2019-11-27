@@ -15,12 +15,9 @@ exports.createPages = ({ graphql, actions }) => {
           node {
             fields {
               slug
-              isPublished
             }
             frontmatter {
               title
-              date
-              publish
             }
           }
         }
