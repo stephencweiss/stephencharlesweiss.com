@@ -1,19 +1,19 @@
 # Books & Reading List
 
 ## Active
-- _Range_ by David Epstein
-- _Richest Man in Babylon_ by George Samuel Clason
+- _The Joy of Living_ by Yongey Mingyur Rinpoche
 - _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
-
 - _Quiet_ by Susan Cain
 - _Don Quixote_ by Cervantes
 
 ## Finished
 ### 2019
-Total: 30
+Total: 32
 ### _November 2019_
+- _Range_ by David Epstein
+- _Richest Man in Babylon_ by George Samuel Clason
 - _Shape Up_ by Ryan Singer
 - _How To Change Your Mind_ by Michael Pollan
 ### _October 2019_
