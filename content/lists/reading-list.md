@@ -1,11 +1,10 @@
 ---
-title: 'Books & Reading List'
+
 category: ['reading list']
 ---
 
-# Book Shelf
-
-## Active
+# Reading List
+## Actively Reading
 - _The Joy of Living_ by Yongey Mingyur Rinpoche
 - _Everything Curl_ by Daniel Stenberg
 
@@ -61,6 +60,7 @@ Total: 32
 - _The Color Purple_ by Alice Walker
 
 ## Bookshelf
+Some books I plan to read in the future.
 1. [_Infinite Powers: How Calculus Reveals the Secrets of the Universe_](https://www.goodreads.com/en/book/show/40796176-infinite-powers) by Steven H. Strogatz
 1. _Infinite Jest_ by David Foster Wallace
 1. _Poor Charlie's Almanack - Wit and Wisdom of Charles T. Munger_ by Charles T. Mungewr
