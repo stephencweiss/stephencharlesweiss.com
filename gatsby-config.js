@@ -2,7 +2,7 @@ const { isPublished } = require('./src/utils/isPublished')
 
 module.exports = {
   siteMetadata: {
-    title: `/* Code Comments */`,
+    title: `/* Code-Comments */`,
     author: `Stephen Weiss`,
     description: `Notes on software and life.`,
     siteUrl: `https://stephencharlesweiss.com/`,
@@ -17,6 +17,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/lists`,
+        name: `lists`,
       },
     },
     {
