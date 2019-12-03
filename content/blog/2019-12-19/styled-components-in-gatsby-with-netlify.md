@@ -3,7 +3,7 @@ title: 'Styled-Components, Gatsby, Plugins, And Deploying Via Netlify'
 category: ['programming']
 tags: ['netlify','gatsby','styled-components','plugins','config','deployment','build']
 date: '2019-11-18'
-publish: '2019-12-05'
+publish: '2019-12-19'
 ---
 
 Recently, I decided to remove most of the inline styling I have on my website and use `styled-components` - a library I’ve grown very fond of.
