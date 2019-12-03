@@ -54,7 +54,7 @@ This is the signaling story. While Mr. Foley elaborates later in the piece on h
 
 The question of whether or not education has externalities seems to be well established on both sides. Social costs, positive and negative, are outlined above. In order to determine whether or not education should be subsidized, it is a question of which effect is larger. That will be a question for another time.
 
-* * *
+---
 
 # Appendix
 

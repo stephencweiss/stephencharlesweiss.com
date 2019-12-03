@@ -8,9 +8,9 @@ tags: ['git', 'github', 'learning to code', 'tutorial', 'version control']
 # Git Clone, Pull, and Push
 
 Continuing my learnings re: [Git](../../2018-08-22/learning-git-from-the-ground-up-another-git-tutorial). I wanted to better understand the use cases for three Git commands:
-1.  Clone
-2.  Pull (or Fetch and Merge)
-3.  Push
+1\.  Clone
+2\.  Pull (or Fetch and Merge)
+3\.  Push
 
 Thinking in terms of use cases helped me separate these different commands.
 
@@ -52,8 +52,8 @@ Here’s where `$ git push` comes in handy.
 
 # Further reading:
 
--   [Git - git-clone Documentation](https://git-scm.com/docs/git-clone)
--   [Git - git-pull Documentation](https://git-scm.com/docs/git-pull)
-    -   [Merge Strategies for Git Pull](https://git-scm.com/docs/git-pull#_merge_strategies)
--   [Git - git-push Documentation](https://git-scm.com/docs/git-push)
--   [What is the difference between pull and clone in git? - Stack Overflow](https://stackoverflow.com/questions/3620633/what-is-the-difference-between-pull-and-clone-in-git)
+-   [git-clone Documentation | Git](https://git-scm.com/docs/git-clone)
+-   [git-pull Documentation | Git](https://git-scm.com/docs/git-pull)
+    -   [Merge Strategies for Git Pull | Git](https://git-scm.com/docs/git-pull#_merge_strategies)
+-   [git-push Documentation | Git](https://git-scm.com/docs/git-push)
+-   [What is the difference between pull and clone in git? | Stack Overflow](https://stackoverflow.com/questions/3620633/what-is-the-difference-between-pull-and-clone-in-git)
