@@ -6,8 +6,6 @@ category: ['gatsby']
 tags: ['error handling','video','embed','plugin']
 ---
 
-# Trouble Shooting Embedding Video In A Gatsby Site
-
 One of the great parts about Gatsby is its plugin ecosystem. As of this writing, there are ~1500 different plugins offering easy integrations with dozens of services and tools to build a website.
 
 I noticed recently that one of mine, the `gatsby-remark-embed-video` plugin had stopped working -- or maybe it never worked. Either way, I wanted to get it working, so I started with the [documentation on Github](https://github.com/borgfriend/gatsby-remark-embed-video).
