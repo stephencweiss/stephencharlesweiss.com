@@ -1,7 +1,7 @@
 ---
 title: 'Redirection In Unix - AKA Angled Brackets'
 date: '2019-11-15'
-publish: '2019-12-04'
+publish: '2019-12-20'
 category: ['programming']
 tags: ['bash scripting','shell scripting','zsh','redirect','append','stdin','stdout']
 ---
