@@ -1,13 +1,13 @@
 ---
 title: Should education be subsidized?
 date: '2015-07-19'
-category:
-tags:
+category: ['musings']
+tags: ['education','economics']
 ---
 
 Beyond my health, education is probably the single greatest gift I have ever received. I am eternally grateful to my parents, my teachers, and my peers for always pushing me further and encouraging me. It is important to recognize that learning is different than spending time in school. Good Will Hunting provides a wonderful launching point for this conversation on the merits of education.
 
-[embed]https://youtu.be/GEFGy-5yr8Y?t=2m41s[/embed]
+`youtube:https://www.youtube.com/watch?v=hIdsjNGCGz4?t=186`
 
 > "Yeah, but I will have a degree, and you'll be serving my kids fries at a drive-thru on our way to a skiing trip."<sup>1</sup>
 
