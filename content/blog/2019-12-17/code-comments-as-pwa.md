@@ -35,11 +35,12 @@ Which creates a nice little container for my site.
 
 ![](./opened-pwa.png)
 
-Since my site is one of my primary reference documents, I find this really handy! Best of all, it comes out of the box with Gatsby.
+Since my site is one of my primary reference documents, I find this really handy! Best of all, it's part of the default config for a new Gatsby site thanks to the `gatsby-plugin-manifest` plugin.
 
 For more information on PWAs and installing them, check out these resources:
 
-1.  [Gatsby Docs on Progressive Web Apps (PWA)](https://www.gatsbyjs.org/docs/progressive-web-app/)
-2.  [How to Geek on Installing PWAs](https://www.howtogeek.com/fyi/how-to-install-progressive-web-apps-pwas-in-chrome/)
+1.  [Gatsby Offline](https://gatsby.dev/offline)
+2.  [Gatsby Docs on Progressive Web Apps (PWA)](https://www.gatsbyjs.org/docs/progressive-web-app/)
+3.  [How to Geek on Installing PWAs](https://www.howtogeek.com/fyi/how-to-install-progressive-web-apps-pwas-in-chrome/)
 
 I've also got a ticket to add additional PWA features on my site in the near future. Looking forward to digging in to make it even better (and learn a thing or two along the way!)
