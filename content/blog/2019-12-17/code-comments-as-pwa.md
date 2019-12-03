@@ -8,8 +8,8 @@ tags: ['pwa', 'progressive web app']
 
 There's a lot to learn in terms of taking advantage of all of the features included in Progressive Web Apps (PWAs), but as it relates to Code Comments (this blog), there are two I find particularly intriguing:
 
-1. Interactivity even with spotty connections
-2. "Native" feeling and "installability"
+1.  Interactivity even with spotty connections
+2.  "Native" feeling and "installability"
 
 The blog is pretty bare-bones. State management is minimal. Authentication is non-existant. None the less, it can be useful to have the blog as a PWA.
 
@@ -39,7 +39,7 @@ Since my site is one of my primary reference documents, I find this really handy
 
 For more information on PWAs and installing them, check out these resources:
 
-1. [Gatsby Docs on Progressive Web Apps (PWA)](https://www.gatsbyjs.org/docs/progressive-web-app/)
-2. [How to Geek on Installing PWAs](https://www.howtogeek.com/fyi/how-to-install-progressive-web-apps-pwas-in-chrome/)
+1.  [Gatsby Docs on Progressive Web Apps (PWA)](https://www.gatsbyjs.org/docs/progressive-web-app/)
+2.  [How to Geek on Installing PWAs](https://www.howtogeek.com/fyi/how-to-install-progressive-web-apps-pwas-in-chrome/)
 
 I've also got a ticket to add additional PWA features on my site in the near future. Looking forward to digging in to make it even better (and learn a thing or two along the way!)
