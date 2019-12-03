@@ -7,6 +7,7 @@ tags: ['pwa', 'progressive web app']
 ---
 
 There's a lot to learn in terms of taking advantage of all of the features included in Progressive Web Apps (PWAs), but as it relates to Code Comments (this blog), there are two I find particularly intriguing:
+
 1. Interactivity even with spotty connections
 2. "Native" feeling and "installability"
 
@@ -35,7 +36,6 @@ Which creates a nice little container for my site.
 ![](./opened-pwa.png)
 
 Since my site is one of my primary reference documents, I find this really handy! Best of all, it comes out of the box with Gatsby.
-
 
 For more information on PWAs and installing them, check out these resources:
 
