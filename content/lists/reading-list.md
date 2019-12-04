@@ -183,3 +183,5 @@ Some books I plan to read in the future.
 1\. _These Truths_ by Jill Lepore
 1\. _The Half-Life of Facts_ by Arbesman
 1\. _The Road to Serfdom_ by FA Hayek
+1\. _Superforecasters_ by Phillip Tetlock
+1\. _The Hedgehog And The Fox_ by Isaiah Berlin
