@@ -7,6 +7,7 @@ category: ['reading list']
 ## Actively Reading
 
 -   _The Joy of Living_ by Yongey Mingyur Rinpoche
+-   _Anna Karenina_ by Leo Tolstoy
 -   _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
@@ -87,7 +88,6 @@ Some books I plan to read in the future.
 1\. _A Culture of Growth: The Origins of the Modern Economy_ by Joel Mokyr
 1\. _The Gifts of Athena: Historical Origins of the Knowledge Economy_ by Joel Mokyr
 1\. _The Enlightened Economy: An Economic History of Britain 1700-1850_ by Joel Mokyr
-1\. _Anna Karenina_ by Leo Tolstoy
 1\. _The Death of Ivan Ilych_ Leo Tolstoy
 1\. _The Brothers Karamazov_ by Fyodor Dostoevsky
 1\. _Notes from the Underground_ by Fyodor Dostoevsky
