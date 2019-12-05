@@ -17,4 +17,5 @@ Next time you need to discuss status of a project... describe the phase of a moo
 ![harvey balls svg](https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Harveyballs.v2.svg/1280px-Harveyballs.v2.svg.png)
 
 ## Resources
-- [Harvey Balls | Wikipedia](https://en.wikipedia.org/wiki/Harvey_balls)
+
+-   [Harvey Balls | Wikipedia](https://en.wikipedia.org/wiki/Harvey_balls)
