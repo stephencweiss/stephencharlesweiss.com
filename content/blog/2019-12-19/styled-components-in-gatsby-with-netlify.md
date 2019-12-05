@@ -3,7 +3,7 @@ title: 'Styled-Components, Gatsby, Plugins, And Deploying Via Netlify'
 category: ['programming']
 tags: ['netlify','gatsby','styled-components','plugins','config','deployment','build']
 date: '2019-11-18'
-publish: '2019-12-05'
+publish: '2019-12-19'
 ---
 
 Recently, I decided to remove most of the inline styling I have on my website and use `styled-components` - a library I’ve grown very fond of.
@@ -16,10 +16,10 @@ Specifically - while classes were being applied, if the module was imported, the
 
 To try to narrow down the problem, I ran a few experiments:
 
-1. [Three different styling paradigms](https://github.com/stephencweiss/personal-blog/pull/229/commits/750a8b918f97f8c730b43e6612bf537ae539b1ac) - inline, styled components defined in the same file, and imported styled components.
-2. Deploying to [Netlify](https://5dd07e816260e80008cb4c9d--sad-darwin-8bd7fc.netlify.com/) vs Gatsby Cloud.
+1.  [Three different styling paradigms](https://github.com/stephencweiss/personal-blog/pull/229/commits/750a8b918f97f8c730b43e6612bf537ae539b1ac) - inline, styled components defined in the same file, and imported styled components.
+2.  Deploying to [Netlify](https://5dd07e816260e80008cb4c9d--sad-darwin-8bd7fc.netlify.com/) vs Gatsby Cloud.
 
-|                                           ![A side-by-side view of styled components](./styled-components-side-by-side.png 'A side-by-side view of styled components')                                           |
+|                                           ![A side-by-side view of styled components](./styled-components-side-by-side.png "A side-by-side view of styled components")                                           |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | _A side by side comparison mid-trouble shooting. On the left, the styles were not applied when the components were imported. On the right, behaving as expected, even **without** the Gatsby plugin configured._ |
 
