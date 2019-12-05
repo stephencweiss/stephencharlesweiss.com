@@ -10,7 +10,7 @@ I'm a big fan of Storybook JS. It makes sharing what's possible with a React com
 
 There is a potential problem though: when components take a huge number of props, the Information Pane (specifically the Knobs tab) can become overwhelming.
 
-I recently came across an elegant solution to the problem written by my colleague, Matteo Stahlman.
+I recently came across an elegant solution to the problem written by my colleague, [Matteo Stohlman](https://github.com/MatteoStohlman).
 
 Before getting to the solution, let's see _why_ this can be a problem with an example.
 
