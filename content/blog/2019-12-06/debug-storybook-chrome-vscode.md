@@ -99,3 +99,11 @@ The solution is to use the `breakOnLoad` flag in the configuration (which I've i
 `breakOnLoad` is an experimental feature and can have performance implications. That said, I like it for ensuring that my debugging behaves as expected and I don't run around in circles trying to figure out why it's not stopping at breakpoints.
 
 Given that I don't debug that often, when I do, I want it to work, and I'll take the performance hit (which I'll note has not been noticeable so far).
+
+## Alternative Options
+
+While the VSCode approach worked for me, another option to investigate is the Storbyook add-on for [Console](https://github.com/storybookjs/storybook-addon-console).
+
+Even beyond the debugging requirements I had, this is useful if you don't want to keep a console window open at all times.
+
+Storbyook has provided a [live demo](https://storybookjs.github.io/storybook-addon-console/?path=/story/*) as well.
