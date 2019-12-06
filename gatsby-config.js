@@ -2,7 +2,7 @@ const { isPublished } = require('./src/utils/isPublished')
 
 module.exports = {
   siteMetadata: {
-    title: `/* Code Comments */`,
+    title: `/* Code-Comments */`,
     author: `Stephen Weiss`,
     description: `Notes on software and life.`,
     siteUrl: `https://stephencharlesweiss.com/`,
@@ -22,6 +22,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/lists`,
+        name: `lists`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
@@ -30,6 +37,20 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          {
+            // Using gatsby-remark-embed-video before gatsby-remark-images & gatsby-remark-responsive-iframe plugins.
+            resolve: `gatsby-remark-embed-video`,
+            options: {
+              maxWidth: 800,
+              ratio: 1.77,
+              height: 400,
+              related: false,
+              noIframerder: true,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -38,12 +59,6 @@ module.exports = {
               aliases: { bash: 'zsh' },
               showLineNumbers: false,
               noInlineHighlight: false,
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
             },
           },
           {
@@ -59,24 +74,17 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-embed-video`,
-            options: {
-              width: 800,
-              ratio: 1.77,
-              height: 400,
-              related: false,
-              noIframeBorder: true,
-            },
-          },
-          `gatsby-remark-autolink-headers`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
