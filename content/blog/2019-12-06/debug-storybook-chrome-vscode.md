@@ -22,13 +22,13 @@ In this case, we'll be using the Debugger for Chrome, so that's our first step.
 
 If it's not already installed, head over to the Extensions pane (`Cmd ⌘ + Shift ⇧ + X`) and download it now by searching for "Chrome":
 
-![](./debugger-chrome-extension.png)
+![chrome debugger extension](./debugger-chrome-extension.png)
 
 Once that's done, we can open the `launch.json`. This can be done using the Command Palette (`Cmd ⌘ + Shift ⇧ + P`), by searching for `launch`:
-![](./command-palette-debug.jpg)
+![command palette search](./command-palette-debug.jpg)
 
 Alternatively, in the Debugger pane (`Cmd ⌘ + Shift ⇧ + D`), click on the "Gear" icon:
-![](./debug-gear.png)
+![debugger gear](./debug-gear.png)
 
 Now that the `launch.json` should be open, we can add a configuration object to the `"configurations"` array:
 
@@ -76,11 +76,11 @@ Once Storybook is running, go into VSCode to the Debugger pane, select the `Stor
 ![storybook debugger](./launch-debugger.png)
 
 Once it's up and running, you should be able to:
-1. Pause on Breakpoints
-2. See see your source map in Chrome
-3. See the output in the Debug Console
+1\. Pause on Breakpoints
+2\. See see your source map in Chrome
+3\. See the output in the Debug Console
 
-![](./running-debugger.png)
+![running the debugger](./running-debugger.png)
 
 ## Known Issues (And Solutions)
 
@@ -92,7 +92,7 @@ The workaround is simply to allow the app to load the first time with the debugg
 
 > If your breakpoints aren't hit, it's most likely a sourcemapping issue or because you are having breakpoints in immediately executed code. If you for example have a breakpoint in a render function that runs on page load, sometimes our debugger might not be attached to Chrome before the code has been executed. This means that you will have to refresh the page in Chrome after we have attached from VS Code to hit your breakpoint.
 >
-> Source: https://github.com/Microsoft/vscode-chrome-debug#my-breakpoints-arent-hit-whats-wrong
+> Source: <https://github.com/Microsoft/vscode-chrome-debug#my-breakpoints-arent-hit-whats-wrong>
 
 The solution is to use the `breakOnLoad` flag in the configuration (which I've included in the above example).
 
