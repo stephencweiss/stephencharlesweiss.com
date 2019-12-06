@@ -99,7 +99,7 @@ Some books I plan to read in the future.
 1\. [_Program or Be Programmed: Ten Commands for a Digital Age_ by Douglas Rushkoff](https://www.amazon.com/dp/159376426X/ref=cm_sw_r_oth_tai_DK3KAbVSF2Z2B?sa-no-redirect=1&pldnSite=1)
 1\. [_Life Inc: How Corporatism Conquered the World, and How We Can Take It Back_ by Douglas Rushkoff](https://www.amazon.com/dp/0812978501/ref=cm_sw_r_oth_tai_jL3KAbHYRQNQ3)
 1\. [_Present Shock: When Everything Happens Now_ by Douglas Rushkoff](https://www.amazon.com/dp/1617230103/ref=cm_sw_r_oth_tai_bM3KAbW2T5F35)
-1\. [_The Neuroscientist Who Lost Her Mind: My Tale of Madness and Recovery_ by Barbara K. Lipska, Elaine McArdle | Publishers Lunch Bookateria](http://bookateria.publishersmarketplace.com/books/9781328787309/?the-neuroscientist-who-lost-her-mind-my-tale-of-madness-and-recovery-by-barbara-k-lipska--elaine-mcardle)
+1\. [_The Neuroscientist Who Lost Her Mind: My Tale of Madness and Recovery_ by Barbara K. Lipska, Elaine McArdle](http://bookateria.publishersmarketplace.com/books/9781328787309/?the-neuroscientist-who-lost-her-mind-my-tale-of-madness-and-recovery-by-barbara-k-lipska--elaine-mcardle)
 1\. _The Efficiency Paradox_ by Edward Tanner
 1\. _Bad Feminist_ by Roxanne Gay
 1\. _Not That Bad_ by Roxanne Gay
@@ -185,3 +185,4 @@ Some books I plan to read in the future.
 1\. _The Road to Serfdom_ by FA Hayek
 1\. _Superforecasters_ by Phillip Tetlock
 1\. _The Hedgehog And The Fox_ by Isaiah Berlin
+1\. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_  by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
