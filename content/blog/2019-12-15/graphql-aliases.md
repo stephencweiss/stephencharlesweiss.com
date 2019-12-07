@@ -8,7 +8,7 @@ tags: ['gatsby', 'aliases']
 
 For a long time, my site has been fueled by a single graphql query. The site is a single page that is a running list of all my blog posts.
 
-The more I write, the more unweildly the site becomes. While adding search helped, I've got plans to add pagination and other pages in the future.
+The more I write, the more unwieldy the site becomes. While adding search helped, I've got plans to add pagination and other pages in the future.
 
 Before that could become a reality, I needed a way to pull back different data in different contexts.
 
