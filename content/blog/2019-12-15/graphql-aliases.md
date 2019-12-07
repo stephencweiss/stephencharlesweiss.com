@@ -64,7 +64,7 @@ The results of this query are a series of edges, like so:
             }
           }
         },
-        ...
+        // ...
       ]
     }
   }
