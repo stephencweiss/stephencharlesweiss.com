@@ -7,7 +7,7 @@ category: ['reading list']
 ## Actively Reading
 
 -   _The Joy of Living_ by Yongey Mingyur Rinpoche
--   _Anna Karenina_ by Leo Tolstoy
+-   _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 -   _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
@@ -89,6 +89,7 @@ Some books I plan to read in the future.
 1\. _The Gifts of Athena: Historical Origins of the Knowledge Economy_ by Joel Mokyr
 1\. _The Enlightened Economy: An Economic History of Britain 1700-1850_ by Joel Mokyr
 1\. _The Death of Ivan Ilych_ Leo Tolstoy
+1\. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
 1\. _The Brothers Karamazov_ by Fyodor Dostoevsky
 1\. _Notes from the Underground_ by Fyodor Dostoevsky
 1\. _The Gambler_ by Fyodor Dostoevsky
@@ -186,3 +187,4 @@ Some books I plan to read in the future.
 1\. _Superforecasters_ by Phillip Tetlock
 1\. _The Hedgehog And The Fox_ by Isaiah Berlin
 1\. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_  by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
+1\. [_Old School_ by Tobias Wolff](https://smile.amazon.com/School-Vintage-Contemporaries-Tobias-Wolff-ebook/dp/B000FC28A8/ref=sr_1_1?crid=2C5BSQR6T2POL&keywords=old+school+wolff&qid=1575749992&sprefix=old+school+wolf%2Caps%2C147&sr=8-1)
