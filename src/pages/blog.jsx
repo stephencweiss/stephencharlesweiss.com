@@ -1,47 +1,56 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import PostLink from '../components/PostLink'
+import { graphql, Link } from 'gatsby'
+
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+import Header from '../components/Header'
+import PostLink from '../components/PostLink'
+import sortPosts from '../utils/sortPosts'
+import getBlurb from '../utils/getBlurb'
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        {posts.map(({ node }) => {
-          const { date, publish, title } = node.frontmatter
-          const { slug } = node.fields
-          return (
-            <div key={slug}>
-              <PostLink slug={slug} title={title} />
-              <small>{publish ? publish : date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
-        <Bio />
-      </Layout>
-    )
-  }
+function BlogIndex(props) {
+  const { data } = props
+  const { title } = useSiteMetadata()
+
+  const posts = data.allMarkdownRemark.edges.sort(sortPosts)
+  return (
+    <Layout location={props.location} title={title}>
+      <SEO
+        title="All posts"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <Header />
+      {posts.map(({ node }) => {
+        const { date, publish, title } = node.frontmatter
+        const { slug } = node.fields
+        return (
+          <div key={slug}>
+            <PostLink slug={slug} title={title} />
+            <small>{publish ? publish : date}</small>
+            {getBlurb({ content: node.excerpt, path: slug })}
+          </div>
+        )
+      })}
+      <Bio />
+    </Layout>
+  )
 }
 
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
+  query getBlogData {
+    allMarkdownRemark(
+      filter: {
+        fields: { isPublished: { eq: true }, file_type: { eq: "blog" } }
       }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    ) {
       edges {
         node {
-          excerpt
+          excerpt(format: MARKDOWN)
           fields {
             slug
           }
