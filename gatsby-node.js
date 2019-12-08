@@ -53,7 +53,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const isPublishedVal = isPublished(node)
-    const value = createFilePath({ node, getNode })
+    const parentNode = getNode(node.parent)
+
+    const fileInstance = parentNode.sourceInstanceName
+    const filePath = createFilePath({ node, getNode })
+    const value = fileInstance+filePath
+
+
+    createNodeField({
+      name: 'file-type',
+      node,
+      value: fileInstance
+    })
+
     createNodeField({
       name: `slug`,
       node,
