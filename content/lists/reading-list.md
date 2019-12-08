@@ -1,8 +1,7 @@
 ---
-category: ['reading list']
+type: 'list'
+title: 'Reading List'
 ---
-
-# Reading List
 
 ## Actively Reading
 
