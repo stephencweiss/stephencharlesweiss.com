@@ -45,7 +45,7 @@ export const pageQuery = graphql`
   query getBlogData {
     allMarkdownRemark(
       filter: {
-        fields: { isPublished: { eq: true }, file_type: { eq: "blog" } }
+        fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
     ) {
       edges {
