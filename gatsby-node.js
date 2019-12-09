@@ -56,7 +56,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     const sourceInstance = getNode(node.parent).sourceInstanceName
     const filePath = createFilePath({ node, getNode })
-    const slug = fileInstance+filePath
+    const slug = sourceInstance+filePath
 
     createNodeField({
       name: 'sourceInstance',
