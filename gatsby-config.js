@@ -118,7 +118,6 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-
                   date: edge.node.frontmatter.date,
                   publish: edge.node.frontmatter.publish,
                   updated: edge.node.frontmatter.updated,
@@ -134,7 +133,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {frontmatter: { fields: { isPublished: { eq: true } } }}
+                  filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}
                 ) {
                   edges {
                     node {
@@ -197,7 +196,7 @@ module.exports = {
         filter: node => {
           if (
             !node.internal.type === 'MarkdownRemark' ||
-            !node.frontmatter.type === 'list'
+            !node.fields.sourceInstance === 'blog'
           )
             return false
           return isPublished(node)
