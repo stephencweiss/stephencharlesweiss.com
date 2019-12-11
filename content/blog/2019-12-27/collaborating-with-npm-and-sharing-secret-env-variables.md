@@ -260,8 +260,8 @@ That's all for now. Hope you enjoyed the trip!
 
 ## Photo Credits
 
-- Photo by Kristina Flour on Unsplash
-- [A country scene of a gravel road cutting through a soybean field with a lone oak tree just beside it on a sunny day.](https://unsplash.com/photos/WEfsBSEd_LE) by [Clint Patterson](https://unsplash.com/@cbpsc1) on Unsplash
-- [A beautiful pathway of village, Punjab Pakistan](https://unsplash.com/photos/1fiuRIvsgZM) by [Ahsan S.](https://unsplash.com/@ahsan19) on Unsplash
-- [Speedlight](https://unsplash.com/photos/F7Rl02ir0Gg) by [Florian Steciuk](https://unsplash.com/@flo_stk) on Unsplash
-- [Ride Off Into The Sunset](https://unsplash.com/photos/tre7Jxi4f94) by [Mohamed Nohassi](https://unsplash.com/@coopery) on Unsplash
+- [Secret](https://unsplash.com/photos/BcjdbyKWquw) by [Kristina Flour](https://unsplash.com/@tinaflour)
+- [A country scene of a gravel road cutting through a soybean field with a lone oak tree just beside it on a sunny day](https://unsplash.com/photos/WEfsBSEd_LE) by [Clint Patterson](https://unsplash.com/@cbpsc1)
+- [A beautiful pathway of village, Punjab Pakistan](https://unsplash.com/photos/1fiuRIvsgZM) by [Ahsan S.](https://unsplash.com/@ahsan19)
+- [Speedlight](https://unsplash.com/photos/F7Rl02ir0Gg) by [Florian Steciuk](https://unsplash.com/@flo_stk)
+- [Ride Off Into The Sunset](https://unsplash.com/photos/tre7Jxi4f94) by [Mohamed Nohassi](https://unsplash.com/@coopery)
