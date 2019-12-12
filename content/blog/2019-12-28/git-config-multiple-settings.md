@@ -1,10 +1,11 @@
 ---
-title: "Managing Multiple Git Configurations"
+title: 'Managing Multiple Git Configurations'
 date: '2019-12-11'
 publish: '2019-12-28'
 category: ['programming']
-tags: ['git','include','includeif','.gitconfig']
+tags: ['git', 'include', 'includeif', '.gitconfig']
 ---
+
 I recently made a [small contribution to a VSCode extension on Github](https://github.com/microsoft/vscode-chrome-debug/pull/960). In addition to evaluating the code, the maintainer, [@roblourens](https://github.com/roblourens), went above and beyond to ensure that I was credited with the contribution.
 
 It turns out I wouldn't have been because my git config on the machine I made the commit had a different email from the one attached to my Github account.
@@ -16,8 +17,9 @@ In the process of reading about [setting up your commit email address](https://h
 For example, if I'm working on a personal project, I want the commit to be from `stephen@personal.tld`, but if I'm working on a project at work, it should be `stephen@work.tld`.
 
 Not only is it possible, there are multiple ways to achieve it:
-1. [Ad Hoc](#ad-hoc-local-configuration): Create a local `.gitconfig` in each directory with desired configuration
-2. [Group Approach](#group-approach-to-git-configuration): At a directory level, set a configuration to apply to all projects within it.
+
+1.  [Ad Hoc](#ad-hoc-local-configuration): Create a local `.gitconfig` in each directory with desired configuration
+2.  [Group Approach](#group-approach-to-git-configuration): At a directory level, set a configuration to apply to all projects within it.
 
 At the most basic level, these strategies work because of the specificity rules for Git. Similar to CSS, the "closest" configuration to the code is the one that will be applied.
 
@@ -42,10 +44,10 @@ There are two directories which house our personal and work projects and a `.git
 
 In our global `.gitconfig` we have:
 
-```
-[user]
-  name = Stephen
-  email = stephen@personal.tld
+```shell
+    [user]
+        name = Stephen
+        email = stephen@personal.tld
 ```
 
 That means that by default commits will look something like this by default:
@@ -82,9 +84,10 @@ The easiest way to create an ad hoc change to your git config is to create a new
 ```
 
 Now, in the `~/work/work-project-1/.gitconfig` we can define a new user email:
-```
-[user]
-  email = stephen@work.tld
+
+```shell
+    [user]
+        email = stephen@work.tld
 ```
 
 A prerequisite step si that the `work-project-1` has initialized git:
@@ -99,8 +102,8 @@ This creates a `.git` directory with a `config` file within it.
 
 Now that that's done, we can add the new email:
 
-```
-$ git config --add user.email "stephen@work.tld"
+```shell
+    $ git config --add user.email "stephen@work.tld"
 ```
 
 ### Verify New Git Email
@@ -120,8 +123,9 @@ user.email=stephen@work.tld
 ```
 
 Notice two things:
-1. The list option will concatenate all of the configs that are applied to the repository. In our case, that's the global and local variant
-2. Duplicates can occur. In our case we have _two_ emails.
+
+1.  The list option will concatenate all of the configs that are applied to the repository. In our case, that's the global and local variant
+2.  Duplicates can occur. In our case we have _two_ emails.
 
 So, how are duplicates resolved? For a simple rule of thumb, I'm going with my specificity analogy to CSS, but for the specific answer (since there are more options than just global and local, [refer to the docs](https://git-scm.com/docs/git-config#FILES)).
 
@@ -193,9 +197,10 @@ Notice that at this point, if we tried to make a commit in `work-project-n`, it 
 We need to tell git that for all directories within work, we should look at the file `~/work/.git/config`
 
 For this step, I manually edited the `~/.gitconfig` to include the following section:
-```
-[includeIf "gitdir:~/work/"]
-    path = ~/work/.git/config
+
+```shell
+    [includeIf "gitdir:~/work/"]
+        path = ~/work/.git/config
 ```
 
 That should be it! Let's test to confirm.
@@ -214,8 +219,8 @@ $ git config --list
 user.name=Stephen
 user.email=stephen@remine.com
 includeif.gitdir:~/work/.path=~/work/.git/config
-
 ```
+
 There's only one email! This makes sense because we never set an email for the config in `work-project-n`, but, we also have the `includeif` line.
 
 Let's repeat our test for `work-project-n` that we did with `work-project-1`:
@@ -241,8 +246,8 @@ Et voilà!
 There are any number of settings that you may want to specify at a directory or project level. Hopefully this post demonstrated a few ways you might tacklet that from the ad hoc to the group and global level!
 
 ## Footnotes
-*  <sup>1</sup> I found this option thanks to [this answer on Stack Overflow](https://stackoverflow.com/a/43654115/9888057) to answer the question of setting multiple users in .gitconfig, which coincidentally was my question and inspiration for this post.
-*  <sup>2</sup> I'm not convinced that it is strictly necessary to initialize git. Based on the example in the Stack Overflow conversation and in the docs, it appears that you can manually  create a `.gitconfig` and reference that file in the `includeIf` of the global `.gitconfig`.
+
+-   <sup>1</sup> I found this option thanks to [this answer on Stack Overflow](https://stackoverflow.com/a/43654115/9888057) to answer the question of setting multiple users in .gitconfig, which coincidentally was my question and inspiration for this post.
+-   <sup>2</sup> I'm not convinced that it is strictly necessary to initialize git. Based on the example in the Stack Overflow conversation and in the docs, it appears that you can manually create a `.gitconfig` and reference that file in the `includeIf` of the global `.gitconfig`.
 
 When commiting code in `work-project-1` now, credit will be attributed to the work email.
-
