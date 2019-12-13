@@ -12,17 +12,17 @@ Before I three things onto the DOM, however, I wanted to make sure that the deta
 My first attempt looked a bit like this.
 
 ```javascript
-function removeUndefined(object){
-  const newCollection = {};
-  const createTupleCollection = Object.entries(object);
-  const strippedCollection = createTupleCollection.filter(item => item[1]);
-  strippedCollection.forEach(item => newCollection[item[0]]= item[1])
-  return newCollection;
+function removeUndefined(object) {
+  const newCollection = {}
+  const createTupleCollection = Object.entries(object)
+  const strippedCollection = createTupleCollection.filter(item => item[1])
+  strippedCollection.forEach(item => (newCollection[item[0]] = item[1]))
+  return newCollection
 }
 
-var object = { 'a': 1, 'b': undefined, 'c': 3, 'd': 'alabama', 'e': 0 };
-var dataToSend = removeUndefined(object);
-console.log(dataToSend); // {a: 1, c: 3, d: "alabama"}*
+var object = { a: 1, b: undefined, c: 3, d: 'alabama', e: 0 }
+var dataToSend = removeUndefined(object)
+console.log(dataToSend) // {a: 1, c: 3, d: "alabama"}*
 ```
 
 The `Object.entries` creates a convenient tuple of `[key, value]` that I then use to in my filter to remove any where the second item (index 1) evaluates to false within the filter.
@@ -34,9 +34,9 @@ It's also a lot of code and isn't particularly clear in what / why it's doing wh
 We use Lodash and a colleague refactored the code down to something much simpler - akin to
 
 ```javascript
-var object = { 'a': 1, 'b': undefined, 'c': 3, 'd': 'alabama', 'e': 0 };
+var object = { a: 1, b: undefined, c: 3, d: 'alabama', e: 0 }
 var dataToSend = _.pickBy(object, _.identity)
-console.log(dataToSend); // {a: 1, c: 3, d: "alabama"}*
+console.log(dataToSend) // {a: 1, c: 3, d: "alabama"}*
 ```
 
 Progress! It's certainly simpler and even semantically, it's somewhat intuitive (even if I didn't have all the details about _how_ `pickBy` worked or what `identity` did). My `dataToSend` will be from picking the object by the identity.
@@ -46,36 +46,48 @@ So, the first thing I wanted to know was _why_ did it work and I suspected it wa
 So, I started running some tests.
 
 ```javascript
-var object = { 'a': 1, 'b': undefined, 'c': 3, 'd': 'alabama', 'e': 0 };
+var object = { a: 1, b: undefined, c: 3, d: 'alabama', e: 0 }
 
-function myIdentity(x) {return x}
-function returnUndefined(){return undefined}
+function myIdentity(x) {
+  return x
+}
+function returnUndefined() {
+  return undefined
+}
 
 var predicateIsNumber = _.pickBy(object, _.isNumber)
 var predicateIdentity = _.pickBy(object, _.identity)
 var predicateMyIdentity = _.pickBy(object, myIdentity)
 var predicateDefault = _.pickBy(object) // _.identity is the default iteratee
 
-
-console.log(`statement 1 --> `, {object, predicateIsNumber, predicateIdentity, predicateMyIdentity, predicateDefault})
-    // statement 1 -->
-    // object: {a: 1, b: undefined, c: 3, d: "alabama", e: 0}
-    // predicateDefault: {a: 1, c: 3, d: "alabama"}
-    // predicateIdentity: {a: 1, c: 3, d: "alabama"}
-    // predicateMyIdentity: {a: 1, c: 3, d: "alabama"}
-    // predicateIsNumber: {a: 1, c: 3}
+console.log(`statement 1 --> `, {
+  object,
+  predicateIsNumber,
+  predicateIdentity,
+  predicateMyIdentity,
+  predicateDefault,
+})
+// statement 1 -->
+// object: {a: 1, b: undefined, c: 3, d: "alabama", e: 0}
+// predicateDefault: {a: 1, c: 3, d: "alabama"}
+// predicateIdentity: {a: 1, c: 3, d: "alabama"}
+// predicateMyIdentity: {a: 1, c: 3, d: "alabama"}
+// predicateIsNumber: {a: 1, c: 3}
 
 console.log(`statement 2 --> `, _.identity(undefined) === undefined)
-    // statement 2 -->  true
+// statement 2 -->  true
 
-console.log(`statement 3 --> `, _.identity(undefined) , myIdentity(undefined))
-    // statement 3 -->  undefined undefined
+console.log(`statement 3 --> `, _.identity(undefined), myIdentity(undefined))
+// statement 3 -->  undefined undefined
 
-console.log(`statement 4 --> calling myIdentity without an argument...`, myIdentity())
-    // statement 4 --> calling myIdentity without an argument... undefined
+console.log(
+  `statement 4 --> calling myIdentity without an argument...`,
+  myIdentity()
+)
+// statement 4 --> calling myIdentity without an argument... undefined
 
-console.log(`statement 5 --> `,returnUndefined())
-    // statement 5 --> undefined
+console.log(`statement 5 --> `, returnUndefined())
+// statement 5 --> undefined
 ```
 
 I'll be honest - not what I was expecting! It turns out `undefined` satisfies the identity principle! So does `null` by the way.
