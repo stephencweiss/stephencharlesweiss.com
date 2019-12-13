@@ -6,7 +6,6 @@ category: ['reading list']
 
 ## Actively Reading
 
--   _The Joy of Living_ by Yongey Mingyur Rinpoche
 -   _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 -   _Everything Curl_ by Daniel Stenberg
 
@@ -19,7 +18,11 @@ category: ['reading list']
 
 ### 2019
 
-Total: 32
+Total: 33
+
+### _December 2019_
+
+-   _The Joy of Living_ by Yongey Mingyur Rinpoche
 
 ### _November 2019_
 
@@ -27,42 +30,62 @@ Total: 32
 -   _Richest Man in Babylon_ by George Samuel Clason
 -   _Shape Up_ by Ryan Singer
 -   _How To Change Your Mind_ by Michael Pollan
-    ### _October 2019_
+
+### _October 2019_
+
 -   _Letters from A Stoic_ by Seneca
-    ### _September 2019_
+
+### _September 2019_
+
 -   _Obelisk Gate_ by NK Jemisin
 -   _Meditations_ by Marcus Aurelius (Hays translation)
 -   _The Manual_ by Epictetus (Torde translation)
 -   _What Unites Us_ by Dan Rather
 -   _Tao Te Ching_ by Lao Tzu (Ursula K. Leguin translation)
-    ### _August 2019_
+
+### _August 2019_
+
 -   _Fifth Season_ by NK Jemisin
 -   _Algebra of Happiness_ by Scott Galloway
 -   _The Stone Sky_ by NK Jemisin
-    ### _July 2019_
+
+### _July 2019_
+
 -   _Tao Te Ching_ by Lao Tzu (Charles Johnston translation)
 -   _The Years of Lyndon Johnson: The Path to Power_ by Robert Caro
 -   _Upstream_ by Mary Oliver
 -   _Dog Song_ by Mary Oliver
-    ### _June 2019_
+
+### _June 2019_
+
 -   _This America_ by Jill Lepore
 -   _The Pragmatic Programmer_ by Andrew Hunt & David Thomas
 -   _Thinking in Bets_ by Annie Duke
-    ### _May 2019_
+
+### _May 2019_
+
 -   _Working_ by Robert Caro
-    ### _April 2019_
+
+### _April 2019_
+
 -   _The World As I See It_ by Albert Einstein
-    ### _March 2019_
+
+### _March 2019_
+
 -   _The Broken Kingdoms_ by NK Jemisin
 -   _The Kingdom of Gods_ by NK Jemisin
 -   _The Awakened Kingdom_ by NK Jemisin
 -   _Consider The Lobster_ by David Foster Wallace
 -   _This Is Water_ by David Foster Wallace
-    ### _February 2019_
+
+### _February 2019_
+
 -   _The Lacuna_ by Barbara Kingsolver
 -   _The Tao of Pooh_ by Benjamin Hoff
 -   _The Hundred Thousand Kingdoms_ by NK Jemisin
-    ### _January 2019_
+
+### _January 2019_
+
 -   _Death's End_ by Cixin Liu
 -   _The Color Purple_ by Alice Walker
 
@@ -186,5 +209,5 @@ Some books I plan to read in the future.
 1. _The Road to Serfdom_ by FA Hayek
 1. _Superforecasters_ by Phillip Tetlock
 1. _The Hedgehog And The Fox_ by Isaiah Berlin
-1. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_  by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
+1. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_ by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
 1. [_Old School_ by Tobias Wolff](https://smile.amazon.com/School-Vintage-Contemporaries-Tobias-Wolff-ebook/dp/B000FC28A8/ref=sr_1_1?crid=2C5BSQR6T2POL&keywords=old+school+wolff&qid=1575749992&sprefix=old+school+wolf%2Caps%2C147&sr=8-1)
