@@ -152,5 +152,5 @@ My journey with Typescript still feels like it's in its infancy. Writing this ho
 
 ## Footnotes
 
--   <sup>1</sup> This is a stylized exmaple. In actual use, I used more of the functions and state returned by the hook, though it is accurate that I called the hook without passing in any of the optional parameters.
--   <sup>2</sup> One of my colleagues noted that this is a limitation of Typescript's inference model due to the constraints (or really, lack thereof) imposed by Javascript. Simply put, because of Javascript's dynamism, type checking in Typescript is at the function level. Consequently, type checking occurs much earlier than in more functional languages like Haskell.
+- <sup>1</sup> This is a stylized exmaple. In actual use, I used more of the functions and state returned by the hook, though it is accurate that I called the hook without passing in any of the optional parameters.
+- <sup>2</sup> One of my colleagues noted that this is a limitation of Typescript's inference model due to the constraints (or really, lack thereof) imposed by Javascript. Simply put, because of Javascript's dynamism, type checking in Typescript is at the function level. Consequently, type checking occurs much earlier than in more functional languages like Haskell.
