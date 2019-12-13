@@ -57,6 +57,8 @@ In the UNIX tradition, it does _one thing_. From the manual page:
 $ clear
 ```
 
+![](./clear-util.gif)
+
 ## New Preference For Clear
 
 I decided to try `clear` and found I actually prefer it. Why? Because while it _does_ provide the same clean terminal feel as "Clear to start", it does so _without_ clearing history.
