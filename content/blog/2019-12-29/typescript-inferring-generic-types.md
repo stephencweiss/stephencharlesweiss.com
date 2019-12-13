@@ -3,7 +3,7 @@ title: 'Inferring Generics With Typescript'
 date: '2019-12-12'
 publish: '2019-12-29'
 category: ['typescript']
-tags: ['generics','types','react','hooks']
+tags: ['generics', 'types', 'react', 'hooks']
 ---
 
 Recently, I needed the ability to track which items within a collection had been selected. As I thought about the problem, it felt like a great candidate for a custom hook. The specifics of the _type_ of item didn't matter, I just wanted to know which ones had been selected by the client (via a check box, drag and drop, etc.).
@@ -33,7 +33,7 @@ function useSelected<T>(items?: T[], key?: keyof T) {
 When it came time to actually use it, I invoked the hook in the following way<sup>1</sup>:
 
 ```javascript
-const { resetAllItems } = useSelected();
+const { resetAllItems } = useSelected()
 ```
 
 This approach, however, results in errors:
@@ -57,25 +57,29 @@ With the problem diagnosed, I now needed to figure out hwo to fix it!
 
 I've found three different solutions to this problem of varying complexity.
 
-1. Pass arguments and allow Typescript to infer the types
-2. Declare the type of the generic up front
-3. Reassign the generic within the code
+1.  Pass arguments and allow Typescript to infer the types
+2.  Declare the type of the generic up front
+3.  Reassign the generic within the code
 
 ### Passing Props
 
 Definitely the easiest way to get around this problem is to stop it before it starts. The hook takes two optional parameters, which if supplied, provide Typescript sufficient information to complete the inference.
 
 What that means is ... replace:
+
 ```javascript
-const { resetAllItems } = useSelected();
+const { resetAllItems } = useSelected()
 ```
 
 with:
 
 ```javascript
-const list = [{key: 'abc', val: 123}, {key: 'def', val: 456}];
-const keyLabel = 'key';
-const { resetAllItems } = useSelected(list, keyLabel);
+const list = [
+  { key: 'abc', val: 123 },
+  { key: 'def', val: 456 },
+]
+const keyLabel = 'key'
+const { resetAllItems } = useSelected(list, keyLabel)
 ```
 
 Voilà - errors begone! Typescript now knows what `T` is by looking at the shape of an individual item in `list` and the `key` since it's supplied as `keyLabel`.
@@ -95,7 +99,6 @@ function useSelected<T>(items?: T[], key?: keyof T) {
 So, when it's called, even if no values are passed, it's possible to declare `<T>` like so:
 
 ```javascript
-
 interface IItem {
     key: string,
     val: number
@@ -148,5 +151,6 @@ So on, and so forth. In my case, this approach required more refactoring than I 
 My journey with Typescript still feels like it's in its infancy. Writing this hook was the first time that I reached for a generic type intentionally and could even conceive of _why_ it would be useful. Of course, once I did so, I uncovered an entirely new class of issues requiring consideration and new patterns for solving them!
 
 ## Footnotes
-* <sup>1</sup> This is a stylized exmaple. In actual use, I used more of the functions and state returned by the hook, though it is accurate that I called the hook without passing in any of the optional parameters.
-* <sup>2</sup> One of my colleagues noted that this is a limitation of Typescript's inference model due to the constraints (or really, lack thereof) imposed by Javascript. Simply put, because of Javascript's dynamism, type checking in Typescript is at the function level. Consequently, type checking occurs much earlier than in more functional languages like Haskell.
+
+-   <sup>1</sup> This is a stylized exmaple. In actual use, I used more of the functions and state returned by the hook, though it is accurate that I called the hook without passing in any of the optional parameters.
+-   <sup>2</sup> One of my colleagues noted that this is a limitation of Typescript's inference model due to the constraints (or really, lack thereof) imposed by Javascript. Simply put, because of Javascript's dynamism, type checking in Typescript is at the function level. Consequently, type checking occurs much earlier than in more functional languages like Haskell.
