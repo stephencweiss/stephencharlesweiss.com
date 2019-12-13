@@ -2,6 +2,7 @@
 title: 'Managing Multiple Git Configurations'
 date: '2019-12-11'
 publish: '2019-12-28'
+updated: '2019-12-12'
 category: ['programming']
 tags: ['git', 'include', 'includeif', '.gitconfig']
 ---
@@ -248,6 +249,4 @@ There are any number of settings that you may want to specify at a directory or 
 ## Footnotes
 
 -   <sup>1</sup> I found this option thanks to [this answer on Stack Overflow](https://stackoverflow.com/a/43654115/9888057) to answer the question of setting multiple users in .gitconfig, which coincidentally was my question and inspiration for this post.
--   <sup>2</sup> I'm not convinced that it is strictly necessary to initialize git. Based on the example in the Stack Overflow conversation and in the docs, it appears that you can manually create a `.gitconfig` and reference that file in the `includeIf` of the global `.gitconfig`.
-
-When commiting code in `work-project-1` now, credit will be attributed to the work email.
+-   <sup>2</sup> Alternatively, you can manually create a file manually named anything (though `.gitconfig` is a reasonable choice) and then reference it in the `includeIf` section of the global config file. The reason I used `.git/config` was simply because I wanted to use the `git` API to modify the user. When I repeated the process a second time, I opted out of initializing git for the parent repo since I didn't intend to actually track changes.
