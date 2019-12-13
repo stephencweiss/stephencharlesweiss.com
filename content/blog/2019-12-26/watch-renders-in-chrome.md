@@ -3,7 +3,7 @@ title: 'Highlight Changes In Chrome'
 publish: '2019-12-26'
 date: '2019-12-07'
 category: ['programming']
-tags: ['chrome','dev tools','react dev tools', 'react',]
+tags: ['chrome','dev tools','react dev tools', 'react']
 ---
 
 When React Dev Tools v4 landed the feature to highlight updated components disappeared.
@@ -19,14 +19,14 @@ In looking for an alternative, I discovered that the Chrome dev tools actually h
 Quick steps to use turn it on:
 
 ![](./command-palette.png)
-1\. Open your dev tools (`⌥ Alt + ⌘ Cmd + I`)
-1\. Open the Command Palette (`⌘ Cmd + ⇧ Shift+P`) in the dev tools.
-1\. Turn on "Show Rendering"
+1. Open your dev tools (`⌥ Alt + ⌘ Cmd + I`)
+2. Open the Command Palette (`⌘ Cmd + ⇧ Shift+P`) in the dev tools.
+3. Turn on "Show Rendering"
 
 ![](./rendering-options.png)
-4\. Select the options you want
+4. Select the options you want
 
 ![](./rendering-in-action.png)
-4\. Update the page and watch it paint live.
+5. Update the page and watch it paint live.
 
 (Update Highlights were brought back in [React Dev Tools v4.2](https://github.com/facebook/react/pull/16989). Woohoo!🎉)
