@@ -1,8 +1,8 @@
 ---
-title: 'Objects, Undefined values, and Lodash's `_.pickBy` and `_.identity`'
+title: "Objects, Undefined values, and Lodash's `_.pickBy` and `_.identity`"
 date: '2019-05-01'
 category: ['programming']
-tags: ['lodash','pickBy','identity','learning']
+tags: ['lodash', 'pickBy', 'identity', 'learning']
 ---
 
 Let's start with the basics. I was in an oh-so-common situation recently where I was building a component that would visualize the details of an object.
