@@ -58,7 +58,7 @@ type NewTableProps = Omit<IMyTable, 'foreign_id' | 'is_custom'>
 
 Just like `Pick` is useful when you want to keep the benefits of type checking and increase the specificity of the interface when all you need is a few attributes, `Omit` serves a similar role when you want to exclude a few.
 
-I found this particularly useful when dealing with intrinsic HTML elements. For example, `Omit<JSX.IntrinsicElements['button'], 'css'>`.
+I found this particularly useful when dealing with intrinsic HTML elements with hundreds of properties. Instead of listing out which ones I want to keep, I can simply omit the ones I don't. For example, `Omit<JSX.IntrinsicElements['button'], 'css'>`.
 
 ## Footnotes
 
