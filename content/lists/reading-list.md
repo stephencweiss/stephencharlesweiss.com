@@ -7,6 +7,7 @@ category: ['reading list']
 ## Actively Reading
 
 -   _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
+-   [_Justice: What's The Right Thing To Do?_ by Michael J. Sandel](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508?sa-no-redirect=1&pldnSite=1)
 -   _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
