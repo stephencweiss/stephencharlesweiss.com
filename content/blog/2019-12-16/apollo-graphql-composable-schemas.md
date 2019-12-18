@@ -1,20 +1,18 @@
 ---
-title: 'Extending Schema Definitions with Apollo'
+title: 'Extending GraphQL Schema Definitions with Apollo'
 date: '2019-11-28'
 publish: '2019-12-16'
 category: ['graphql']
-tags: ['apollo','composable','schema']
+tags: ['apollo', 'composable', 'schema']
 ---
 
 When defining a GraphQL schema, it can be useful to define it in multiple files to keep it manageable.
 
 ```javascript
-
 import { buildSchema } from 'graphql'
 import { schemaToTemplateContext } from 'graphql-codegen-core'
 import { loadTypeSchema } from '../../../utils/schema'
 import { mockServer } from 'graphql-tools'
-
 
 const root = `
   schema {
@@ -50,12 +48,12 @@ export const loadTypeSchema = type =>
       resolve(schema)
     })
   })
-
 ```
 
 So, zooming in for a moment on the `product` schema, we can understand how this works.
 
-Here's a file `product.gql`: 
+Here's a file `product.gql`:
+
 ```graphql
 enum ProductType {
   GAMING_PC
@@ -71,47 +69,47 @@ enum BikeType {
 }
 
 type Product {
-  name: String!,
-  price: Float!,
-  image: String!,
-  type: ProductType!,
-  description: String,
-  liquidCooled: Boolean,
-  bikeType: BikeType,
-  range: String,
+  name: String!
+  price: Float!
+  image: String!
+  type: ProductType!
+  description: String
+  liquidCooled: Boolean
+  bikeType: BikeType
+  range: String
   createdBy: User!
 }
 
 input NewProductInput {
-  name: String!,
-  price: Float!,
-  image: String!,
-  type: ProductType!,
-  description: String,
-  liquidCooled: Boolean,
-  bikeType: BikeType,
-  range: String,
+  name: String!
+  price: Float!
+  image: String!
+  type: ProductType!
+  description: String
+  liquidCooled: Boolean
+  bikeType: BikeType
+  range: String
 }
 
 input UpdateProductInput {
-  name: String,
-  price: Float,
-  image: String,
-  description: String,
-  liquidCooled: Boolean,
-  bikeType: BikeType,
-  range: String,
+  name: String
+  price: Float
+  image: String
+  description: String
+  liquidCooled: Boolean
+  bikeType: BikeType
+  range: String
 }
 
 extend type Query {
-  product (id: ID!): Product
+  product(id: ID!): Product
   products: [Product]
 }
 
 extend type Mutation {
-  newProduct (input: NewProductInput): Product,
-  updateProduct(id: ID, input: UpdateProductInput): Product,
-  removeProduct (id: ID, input: UpdateProductInput): Product
+  newProduct(input: NewProductInput): Product
+  updateProduct(id: ID, input: UpdateProductInput): Product
+  removeProduct(id: ID, input: UpdateProductInput): Product
 }
 ```
 
@@ -123,7 +121,7 @@ Then, by mapping over our array of strings, we load the schemas for each of the 
 
 Each of these `.gql` files is then appended to the `root` which is then passed into the `buildSchema` function that is imported from `graphql`
 
-The important part here is that because we're pulling multiple `.gql` files together, if they include new `Query` or `Mutation` objects, we need to `extend` them. If we don't, we'll get a syntax error as we try to overwrite the `Query` and `Mutation` objects. 
+The important part here is that because we're pulling multiple `.gql` files together, if they include new `Query` or `Mutation` objects, we need to `extend` them. If we don't, we'll get a syntax error as we try to overwrite the `Query` and `Mutation` objects.
 
 ```shell
       at syntaxError (node_modules/graphql/error/syntaxError.js:15:10)
@@ -138,4 +136,3 @@ The important part here is that because we're pulling multiple `.gql` files toge
 ```
 
 So, while this approach requires a little more setup up front, it has the benefit of enabling composable grpahql schemas.
-
