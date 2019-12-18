@@ -18,7 +18,7 @@ title: 'Reading List'
 
 ### 2019
 
-Total: 33
+Total: 35
 
 ### _December 2019_
 
@@ -81,12 +81,14 @@ Total: 33
 ### _February 2019_
 
 -   _The Lacuna_ by Barbara Kingsolver
+-   _Digital Minimalism_ by Cal Newport
 -   _The Tao of Pooh_ by Benjamin Hoff
 -   _The Hundred Thousand Kingdoms_ by NK Jemisin
 
 ### _January 2019_
 
 -   _Death's End_ by Cixin Liu
+-   _Atomic Habits_ by James Clear
 -   _The Color Purple_ by Alice Walker
 
 ## Bookshelf
