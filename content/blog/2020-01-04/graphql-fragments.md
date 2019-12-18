@@ -55,4 +55,4 @@ Plenty more to learn about _how_ to best use Fragments, but at least I now know 
 
 ## Resources
 
-*  [Apollo Docs on Using Fragments](https://www.apollographql.com/docs/react/data/fragments/)
+-   [Apollo Docs on Using Fragments](https://www.apollographql.com/docs/react/data/fragments/)
