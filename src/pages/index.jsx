@@ -42,8 +42,12 @@ function BlogIndex(props) {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {
+  query indexBlogQuery {
+    allMarkdownRemark(
+      filter: {
+        fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
+      }
+    ) {
       edges {
         node {
           excerpt(format: MARKDOWN)

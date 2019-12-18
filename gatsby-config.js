@@ -119,10 +119,10 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   publish: edge.node.frontmatter.publish,
                   updated: edge.node.frontmatter.updated,
+                  draft: edge.node.frontmatter.draft,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': edge.node.html }],
@@ -134,7 +134,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: {frontmatter: { draft: { ne: true } }}
+                  filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}
                 ) {
                   edges {
                     node {
@@ -172,29 +172,34 @@ module.exports = {
         // Fields to index
         fields: [
           { name: `title`, store: true, attributes: { boost: 20 } },
-          `tags`,
           `category`,
           `content`,
           `date`,
           `publish`,
+          `tags`,
+          `title`,
           `updated`,
         ],
         // How to resolve each field`s value for a supported node type
         resolvers: {
           // For any node of type MarkdownRemark, list how to resolve the fields` values
           MarkdownRemark: {
-            title: node => node.frontmatter.title,
             category: node => node.frontmatter.category,
-            tags: node => node.frontmatter.tags,
-            path: node => node.fields.slug,
             content: node => node.internal.content,
             date: node => node.frontmatter.date,
+            path: node => node.fields.slug,
             publish: node => node.frontmatter.publish,
+            tags: node => node.frontmatter.tags,
+            title: node => node.frontmatter.title,
             updated: node => node.frontmatter.updated,
           },
         },
         filter: node => {
-          if (!node.internal.type === 'MarkdownRemark') return false
+          if (
+            !node.internal.type === 'MarkdownRemark' ||
+            (node && node.fields && !node.fields.sourceInstance === 'blog')
+          )
+            return false
           return isPublished(node)
         },
       },
