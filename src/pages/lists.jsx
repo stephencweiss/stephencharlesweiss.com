@@ -4,14 +4,12 @@ import PostLink from '../components/PostLink'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import Header from '../components/Header'
+import sortTitles from '../utils/sortTitles'
 
 function ReadingList(props) {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
-  const list = data.readingList.edges
-
-  console.log({ list })
+  const list = data.readingList.edges.sort(sortTitles)
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -41,7 +39,7 @@ export const pageQuery = graphql`
       }
     }
     readingList: allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "list" } } }
+      filter: { fields: { sourceInstance: { eq: "lists" } } }
     ) {
       edges {
         node {
