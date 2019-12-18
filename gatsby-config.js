@@ -90,7 +90,53 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+            {
+                serialize: ({ query: { site, allMarkdownRemark } }) => {
+                  return allMarkdownRemark.edges.map(edge => {
+                    return Object.assign({}, edge.node.frontmatter, {
+                      date: edge.node.frontmatter.date,
+                      publish: edge.node.frontmatter.publish,
+                      updated: edge.node.frontmatter.updated,
+                      draft: edge.node.frontmatter.draft,
+                      url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                      guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                      custom_elements: [{ 'content:encoded': edge.node.html }],
+                    })
+                  })
+                },
+                query: `
+                  {
+                    allMarkdownRemark(
+                      limit: 1000,
+                      sort: { order: DESC, fields: [fields___publishDate] },
+                      filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}
+                    ) {
+                      edges {
+                        node {
+                          excerpt
+                          html
+                          fields { slug }
+                          frontmatter {
+                            title
+                            date
+                            publish
+                            updated
+                          }
+                        }
+                      }
+                    }
+                  }
+                `,
+                output: '/rss.xml',
+                title: 'Code-Comments RSS Feed',
+              },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
