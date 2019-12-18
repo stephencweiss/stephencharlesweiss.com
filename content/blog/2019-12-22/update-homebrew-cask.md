@@ -1,4 +1,10 @@
-# Updating A Homebrew Cask
+---
+title: 'Updating A Homebrew Cask'
+date: '2019-12-13'
+publish: '2019-12-22'
+category: ['programming']
+tags: ['homebrew', 'fsnotes']
+---
 
 I recently started using [FSNotes](https://github.com/glushchenko/fsnotes), an open source notes manager for MacOS and iOS.
 
@@ -11,6 +17,7 @@ Updating the cask on Homebrew, however, is not an automated process, so it's pos
 That said, updating the cask is simple and the very first section of [Homebrew's guide on contributing](https://github.com/Homebrew/homebrew-cask/blob/master/CONTRIBUTING.md#updating-a-cask):
 
 > # Updating a Cask
+>
 > Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a script that will ask for the new version number, and take care of updating the Cask file and submitting a pull request to us:
 >
 > ```shell
@@ -21,11 +28,12 @@ That said, updating the cask is simple and the very first section of [Homebrew's
 > # use to update <outdated_cask>
 > cask-repair <outdated_cask>
 > ```
+>
 > If there is a more complicated change, or there is a case where cask-repair fails (for example, where a Cask uses a url do block or the language stanza), you can also follow the steps in Adding a Cask to do the same thing manually. Remember to update the version and shasum values.
 
 Maybe one day I'll need to actually add a cask to the registry, but in the mean time, it's good to know how I can help keep things up to date!
 
-Update: I [updated my very first cask](https://github.com/Homebrew/homebrew-cask/pull/73769)! Though it had already been updated, I ran into a [checksum error(https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) when trying to upgrade it locally, so decided to try my hand at updating the cask myself. It worked!
+Update: I [updated my very first cask](https://github.com/Homebrew/homebrew-cask/pull/73769)! Though it had already been updated, I ran into a \[checksum error(<https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md>) when trying to upgrade it locally, so decided to try my hand at updating the cask myself. It worked!
 
 ```shell
 $ brew cask upgrade
