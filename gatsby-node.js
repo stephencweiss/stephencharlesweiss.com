@@ -1,6 +1,10 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { isPublished } = require('./src/utils/isPublished')
+const {
+  isPublished,
+  listDate,
+  publishDate,
+} = require('./src/utils/dateFns')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -9,33 +13,48 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(
     `
-    query allBlogQuery {
-      list: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "lists"}}}) {
-        edges {
-          node {
-            fields {
-              slug
+      query allBlogQuery {
+        list: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: {
+            fields: {
+              isPublished: { eq: true }
+              sourceInstance: { eq: "lists" }
             }
-            frontmatter {
-              title
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        blog: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: {
+            fields: {
+              isPublished: { eq: true }
+              sourceInstance: { eq: "blog" }
+            }
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
             }
           }
         }
       }
-      blog: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-            }
-          }
-        }
-      }
-    }
-
     `
   ).then(result => {
     if (result.errors) {
@@ -45,19 +64,18 @@ exports.createPages = ({ graphql, actions }) => {
     // Create blog posts pages.
     const posts = result.data.blog.edges
     posts.forEach((post, index) => {
-        const previous = index === posts.length - 1 ? null : posts[index + 1].node
-        const next = index === 0 ? null : posts[index - 1].node
-
-        createPage({
-            path: post.node.fields.slug,
-            component: blogPost,
-            context: {
-                slug: post.node.fields.slug,
-                previous,
-                next,
-              },
-            })
-          })
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+      createPage({
+        path: post.node.fields.slug,
+        component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
 
     // Create list pages.
     const lists = result.data.list.edges
@@ -82,16 +100,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const isPublishedVal = isPublished(node)
-
     const sourceInstance = getNode(node.parent).sourceInstanceName
     const filePath = createFilePath({ node, getNode })
-    const slug = sourceInstance+filePath
+    const slug = sourceInstance + filePath
 
     createNodeField({
       name: 'sourceInstance',
       node,
-      value: sourceInstance
+      value: sourceInstance,
     })
 
     createNodeField({
@@ -100,6 +116,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: slug,
     })
 
-    createNodeField({name: 'isPublished', node, value: isPublishedVal})
+    createNodeField({ name: 'isPublished', node, value: isPublished(node) })
+    createNodeField({ name: 'listDate', node, value: listDate(node) })
+    createNodeField({ name: 'publishDate', node, value: publishDate(node) })
   }
 }

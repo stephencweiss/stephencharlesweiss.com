@@ -1,4 +1,4 @@
-const { isPublished } = require('./src/utils/isPublished')
+const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
   siteMetadata: {
@@ -140,7 +140,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `/* Code Comments */`,
+        name: `/* Code-Comments */`,
         short_name: `{CC}`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -179,7 +179,7 @@ module.exports = {
               {
                 allMarkdownRemark(
                   limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { order: DESC, fields: [fields___publishDate] },
                   filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}
                 ) {
                   edges {
