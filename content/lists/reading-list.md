@@ -19,7 +19,7 @@ category: ['reading list']
 
 ### 2019
 
-Total: 33
+Total: 35
 
 ### _December 2019_
 
