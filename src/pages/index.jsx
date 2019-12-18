@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
@@ -24,12 +24,12 @@ function BlogIndex(props) {
       />
       <Header />
       {posts.map(({ node }) => {
-        const { date, publish, title } = node.frontmatter
-        const { slug } = node.fields
+        const { title } = node.frontmatter
+        const { listDate, slug } = node.fields
         return (
           <div key={slug}>
             <PostLink slug={slug} title={title} />
-            <small>{publish ? publish : date}</small>
+            <small>{listDate}</small>
             {getBlurb({ content: node.excerpt, path: slug })}
           </div>
         )
@@ -53,10 +53,9 @@ export const pageQuery = graphql`
           excerpt(format: MARKDOWN)
           fields {
             slug
+            listDate(formatString: "MMMM DD, YYYY")
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            publish(formatString: "MMMM DD, YYYY")
             title
           }
         }
