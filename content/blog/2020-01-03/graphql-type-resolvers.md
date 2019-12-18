@@ -1,7 +1,7 @@
 ---
 title: 'GraphQL Resolvers: Resolving Types All The Way Down'
 date: '2019-12-18'
-publish: '2019-01-03'
+publish: '2020-01-03'
 category: ['graphql']
 tags: ['resolvers']
 ---

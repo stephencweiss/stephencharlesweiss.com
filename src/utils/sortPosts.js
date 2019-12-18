@@ -1,17 +1,22 @@
-import dayjs from 'dayjs';
+import dayjs from 'dayjs'
 
-export default function sortPosts(a, b, order = 'asc') {
-  const { publish: aPublish, date: aDate } = a.node.frontmatter
-  const { publish: bPublish, date: bDate } = b.node.frontmatter
-  let aCompDate = aPublish ? aPublish : aDate
-  let bCompDate = bPublish ? bPublish : bDate
-  if (!aCompDate || !bCompDate) {
-    console.error(`Check frontmatter!`)
-    return -1
+export default function sortPosts(a, b, order = 'DESC') {
+  const { listDate: aDate } = a.node.fields
+  const { listDate: bDate } = b.node.fields
+
+  if (!aDate || !bDate) {
+    throw new Error(
+      `sortPosts is broken! Check frontmatter for missing date fields! ${JSON.stringify(
+        { a, b },
+        null,
+        4
+      )}`
+    )
   }
-  if (order === 'asc') {
-    return dayjs(aCompDate).isAfter(dayjs(bCompDate)) ? -1 : 1
-  } else if (order === 'desc') {
-    return dayjs(aCompDate).isAfter(dayjs(bCompDate)) ? 1 : -1
+
+  if (order === 'ASC') {
+    return dayjs(aDate).isBefore(dayjs(bDate)) ? -1 : 1
+  } else if (order === 'DESC') {
+    return dayjs(aDate).isBefore(dayjs(bDate)) ? 1 : -1
   }
 }

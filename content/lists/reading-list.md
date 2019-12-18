@@ -1,5 +1,4 @@
 ---
-type: 'list'
 title: 'Reading List'
 ---
 
