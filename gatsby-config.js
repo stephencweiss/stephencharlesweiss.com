@@ -13,6 +13,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
+      resolve: 'gatsby-plugin-netlify-cache',
+      options: {
+          cachePublic: true,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
