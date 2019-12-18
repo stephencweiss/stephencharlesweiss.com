@@ -1,5 +1,5 @@
 ---
-title: '# Collaboration, Local Development, (Secret) Environment Variables, and NPM'
+title: 'Collaboration, Local Development, (Secret) Environment Variables, and NPM'
 date: '2019-12-11'
 publish: '2019-12-27'
 category: ['programming']
@@ -25,10 +25,10 @@ Specifically, I needed a solution for _local_ development (deployment was handle
 
 At a high level, my aims were:
 
-1. Effectively distribute the `_authToken` to all of the engineers who need it _without_ committing it to our repository,<sup>[2](#footnotes)</sup><a id="fn2"></a>
-2. Mitigate any communication burden related to _how_ to collaborate
-3. Minimally disrupt the development experience of collaborating
-4. Establish a repeatable procedure for other projects that may use the pro packages.
+1.  Effectively distribute the `_authToken` to all of the engineers who need it _without_ committing it to our repository,<sup>[2](#footnotes)</sup><a id="fn2"></a>
+2.  Mitigate any communication burden related to _how_ to collaborate
+3.  Minimally disrupt the development experience of collaborating
+4.  Establish a repeatable procedure for other projects that may use the pro packages.
 
 This doesn't feel like a unique problem, and yet, when I searched for an established best practice or pattern, I came up empty.
 
@@ -70,13 +70,13 @@ These options can work quite well.
 
 For example, if we have a `.bash_profile` with the line:
 
-```
+```shell
 export FONTAWESOME_NPM_AUTH_TOKEN='abc123'
 ```
 
 Then we would be able to add a `.npmrc` file to the root directory that referenced that variable:
 
-```
+```shell
 @fortawesome:registry=https://npm.fontawesome.com/
 //npm.fontawesome.com/:_authToken=${FONTAWESOME_NPM_AUTH_TOKEN}
 ```
@@ -133,15 +133,15 @@ I thought of this as a tree-lined road. In many ways, it's a normal road, but th
 
 To get there I would need to change the order of operations a bit. Instead of:
 
-1. Manually define a variable and `.npmrc`
-2. Replace the variable with one pulled from `vault`
-3. Run install
+1.  Manually define a variable and `.npmrc`
+2.  Replace the variable with one pulled from `vault`
+3.  Run install
 
 We would:
 
-1. Pull a variable from `vault` and make it available for `.npmrc`
-2. Generate an `.npmrc` programattically
-3. Run Install
+1.  Pull a variable from `vault` and make it available for `.npmrc`
+2.  Generate an `.npmrc` programattically
+3.  Run Install
 
 And, the key: do it all with one script, `npm install`.
 
@@ -182,9 +182,9 @@ Since the `.npmrc` is _only_ needed for installation, this is a reasonable solut
 
 How did this actually perform against the goals I'd established?
 
-1. Create a variable that’s accessible for use in the `.npmrc` - ✅ The `faauthtoken` is available throughout the entire installation process. (This is confirmed by the `postinstall` hook where it is echoed out.)
-2. Create an `.npmrc` _after_ the variable is set - ✅ The `setup.sh` script writes the actual variable to the `.npmrc` (instead of trying to replace it again in the future, thereby removing any loss of context between scripts)
-3. Install packages using that context - ❌ I alluded to this before in [Flat Tire: Missing Variables](#flat-tire-missing-variables), but it appears to be the case that `npm` locks down its context when running a script. This includes the `.npmrc` file. So, while the `.npmrc` _is_ updated as we expected, `npm` doesn't see the changes during the installation process and the initial installation fails. In support of this analysis - if we remove the `postinstall` hook and run `npm install` a second time (with `.npmrc` now having the `_authToken` defined), installation succeeds.
+1.  Create a variable that’s accessible for use in the `.npmrc` - ✅ The `faauthtoken` is available throughout the entire installation process. (This is confirmed by the `postinstall` hook where it is echoed out.)
+2.  Create an `.npmrc` _after_ the variable is set - ✅ The `setup.sh` script writes the actual variable to the `.npmrc` (instead of trying to replace it again in the future, thereby removing any loss of context between scripts)
+3.  Install packages using that context - ❌ I alluded to this before in [Flat Tire: Missing Variables](#flat-tire-missing-variables), but it appears to be the case that `npm` locks down its context when running a script. This includes the `.npmrc` file. So, while the `.npmrc` _is_ updated as we expected, `npm` doesn't see the changes during the installation process and the initial installation fails. In support of this analysis - if we remove the `postinstall` hook and run `npm install` a second time (with `.npmrc` now having the `_authToken` defined), installation succeeds.
 
 Tree lined roads are pleasant to drive until one of the trees falls and blocks the road, stopping all traffic. When that happens, you might regret taking the scenic route. And having a predictable disruption like a failed install is hardly the pleasant trip we wanted to provide to collaborators.
 
@@ -231,7 +231,7 @@ fi
 
 Then, because the highway's new, we needed to add some signage (AKA updating the README).
 
-Once that was done, however, an engineer who wanted to work on `repaint`  became aware of the new highway all they had to do was get on (run the `pre-install` script the first time to create a local `.npmrc`) and they were off to the races.
+Once that was done, however, an engineer who wanted to work on `repaint` became aware of the new highway all they had to do was get on (run the `pre-install` script the first time to create a local `.npmrc`) and they were off to the races.
 
 Everything else is handled for them and it's done in a way that eliminates any need for storing sensitive API keys locally or manually typing them in.
 
