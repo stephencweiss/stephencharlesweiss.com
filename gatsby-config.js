@@ -196,7 +196,7 @@ module.exports = {
         filter: node => {
           if (
             !node.internal.type === 'MarkdownRemark' ||
-            !node.fields.sourceInstance === 'blog'
+            (node && node.fields && !node.fields.sourceInstance === 'blog')
           )
             return false
           return isPublished(node)
