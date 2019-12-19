@@ -17,7 +17,6 @@ exports.createPages = ({ graphql, actions }) => {
           sort: { fields: [fields___publishDate], order: DESC }
           filter: {
             fields: {
-              isPublished: { eq: true }
               sourceInstance: { eq: "list" }
             }
           }
