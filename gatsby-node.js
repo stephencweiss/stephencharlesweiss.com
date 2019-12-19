@@ -5,11 +5,10 @@ const {
   listDate,
   publishDate,
 } = require('./src/utils/dateFns')
+const entryTemplate = path.resolve(`./src/templates/entry.js`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
   return graphql(
     `
@@ -19,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
           filter: {
             fields: {
               isPublished: { eq: true }
-              sourceInstance: { eq: "lists" }
+              sourceInstance: { eq: "list" }
             }
           }
         ) {
@@ -68,7 +67,7 @@ exports.createPages = ({ graphql, actions }) => {
       const next = index === 0 ? null : posts[index - 1].node
       createPage({
         path: post.node.fields.slug,
-        component: blogPost,
+        component: entryTemplate,
         context: {
           slug: post.node.fields.slug,
           previous,
@@ -85,7 +84,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: list.node.fields.slug,
-        component: blogPost,
+        component: entryTemplate,
         context: {
           slug: list.node.fields.slug,
           previous,

@@ -41,8 +41,6 @@
     "typeface-montserrat": "0.0.43",
     "typography": "^0.16.18",
     "typography-theme-github": "^0.16.18",
-    "typography-theme-noriega": "^0.16.18",
-    "typography-theme-wordpress-2016": "^0.15.10",
     "use-debounce": "^3.1.0"
   },
   "devDependencies": {
