@@ -4,17 +4,19 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 import { rhythm, scale } from '../utils/typography'
 
-function BlogPostTemplate(props) {
-  const post = props.data.markdownRemark
-  const siteTitle = props.data.site.siteMetadata.title
+function EntryTemplate(props) {
+
+  const entry = props.data.markdownRemark
+  const { title: siteTitle } = useSiteMetadata()
   const { previous, next } = props.pageContext
-  const { date, publish, title } = post.frontmatter
+  const { date, publish, title } = entry.frontmatter
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={title} description={post.excerpt} />
+      <SEO title={title} description={entry.excerpt} />
       <h1>{title}</h1>
       <p
         style={{
@@ -26,7 +28,7 @@ function BlogPostTemplate(props) {
       >
         {publish ? publish : date}
       </p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div dangerouslySetInnerHTML={{ __html: entry.html }} />
       <hr
         style={{
           marginBottom: rhythm(1),
@@ -62,10 +64,10 @@ function BlogPostTemplate(props) {
   )
 }
 
-export default BlogPostTemplate
+export default EntryTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query EntryBySlug($slug: String!) {
     site {
       siteMetadata {
         title
