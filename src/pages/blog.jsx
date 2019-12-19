@@ -6,18 +6,18 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
 import PostLink from '../components/PostLink'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 import sortPosts from '../utils/sortPosts'
 import getBlurb from '../utils/getBlurb'
 
-import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function BlogIndex(props) {
   const { data } = props
-  const { title } = useSiteMetadata()
+  const { title: siteTitle } = useSiteMetadata()
 
   const posts = data.allMarkdownRemark.edges.sort(sortPosts)
   return (
-    <Layout location={props.location} title={title}>
+    <Layout location={props.location} title={siteTitle}>
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
