@@ -5,8 +5,8 @@ import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import useSiteMetadata from '../hooks/useSiteMetadata'
-import { rhythm, scale } from '../utils/typography'
-
+// import { rhythm, scale } from '../utils/typography'
+// TODO: Style
 function EntryTemplate(props) {
 
   const entry = props.data.markdownRemark
@@ -20,10 +20,10 @@ function EntryTemplate(props) {
       <h1>{title}</h1>
       <p
         style={{
-          ...scale(-1 / 5),
+        //   ...scale(-1 / 5),
           display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(0),
+        //   marginBottom: rhythm(1),
+        //   marginTop: rhythm(0),
         }}
       >
         {publish ? publish : date}
@@ -31,7 +31,7 @@ function EntryTemplate(props) {
       <div dangerouslySetInnerHTML={{ __html: entry.html }} />
       <hr
         style={{
-          marginBottom: rhythm(1),
+        //   marginBottom: rhythm(1),
         }}
       />
       <Bio />
