@@ -175,7 +175,9 @@ This is that list. I keep it for myself and never really imagined I'd share it.
 * 2019/07/27 - Listening to this while cooking with Kate, she got sentimental and teared up.
 
     > what’s better than eating? /
+    >
     > cooking for fam
+    >
     > — Chance the Rapper
 
 * 2019/07/26 - Went swimming on my own at the club. Was much more successful and fun than my previous attempt. It’s awesome to learn. As I told Sam, it’s peaceful because it demands all of my attention.
@@ -367,7 +369,7 @@ This is that list. I keep it for myself and never really imagined I'd share it.
 * 2019/02/09 - Went to the Open Source Jamfest and just really enjoyed meeting folks; also debugged PSQL for Matilda which was fun as it was something I hadn’t had to do in a while. Nacho’s birthday party was a lot of fun - Gaby is great.
 
     > No matter how far down the wrong path you’ve gone, turn back now.
-    > - Turkish proverb
+    > — Turkish proverb
 
 * 2019/02/08 - Had a great day at Rowing. Did an interval workout with Mo. My splits were at ~1:50 for most of the workout, though I couldn’t quite sustain it through the whole thing. Still, I hadn’t gotten under 2:00 before then. Having an offer in hand starting to feel great.
 * 2019/02/07 - I got an offer! West Monroe Partners wants to make an offer; Bombed my Google interview though, which overshadowed it honestly.
