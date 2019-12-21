@@ -50,7 +50,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(format: MARKDOWN)
+          excerpt(format: PLAIN)
           fields {
             slug
             listDate(formatString: "MMMM DD, YYYY")

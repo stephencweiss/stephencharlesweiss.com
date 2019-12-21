@@ -39,7 +39,6 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(format: MARKDOWN)
           id
           html
           fields {
