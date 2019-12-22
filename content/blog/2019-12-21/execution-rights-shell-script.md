@@ -3,7 +3,7 @@ title: 'Shell Scripting & Execution Rights'
 date: '2019-11-19'
 publish: '2019-12-21'
 category: ['programming']
-tags: ['bash scripting','shell script','execution rights','chmod']
+tags: ['bash scripting', 'shell script', 'execution rights', 'chmod']
 ---
 
 I was writing a small bash script the other day when I wanted to test it.
@@ -32,7 +32,7 @@ $ ls -la
 
 ## Footnotes
 
--   <sup>1</sup> While I used the `-x` flag only, there are [other flags](https://www.poftut.com/chmod-x-command-linux-unix/). The flags are: user (`u`), group (`g`), other (`o`), and all (`a`). For example, to change the execution rights for only users, you could do:
+- <sup>1</sup> While I used the `-x` flag only, there are [other flags](https://www.poftut.com/chmod-x-command-linux-unix/). The flags are: user (`u`), group (`g`), other (`o`), and all (`a`). For example, to change the execution rights for only users, you could do:
 
 ```shell
 $ chmod u+x setup.sh
