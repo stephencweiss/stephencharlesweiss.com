@@ -6,7 +6,7 @@ category: ['react']
 tags: ['storybook','conditional','knobs']
 ---
 
-I'm a big fan of Storybook JS. It makes sharing what's possible with a React component trivial.<sup>1</sup>
+I'm a big fan of Storybook JS. It makes sharing what's possible with a React component trivial.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 There is a potential problem though: when components take a huge number of props, the Information Pane (specifically the Knobs tab) can become overwhelming.
 
@@ -105,4 +105,4 @@ Using a conditional flag like the `WITH ICON` in our example above can dramatica
 
 ## Footnotes
 
-<sup>1</sup> Apparently Storybook has extended beyond just supporting React. Great news should I ever venture out since I love the tool for its ability to communicate what's possible.
+<sup>[1](#fn1)</sup> Apparently Storybook has extended beyond just supporting React. Great news should I ever venture out since I love the tool for its ability to communicate what's possible.
