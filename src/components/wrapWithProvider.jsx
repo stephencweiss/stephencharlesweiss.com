@@ -1,11 +1,11 @@
 import React from 'react'
-import GlobalStyle from '../styles/GlobalStyle'
+import { GlobalStyle } from '../theme'
 
 export default ({ element }) => {
-    return (
-        <React.Fragment>
-            <GlobalStyle />
-            {element}
-        </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <GlobalStyle />
+      {element}
+    </React.Fragment>
+  )
 }
