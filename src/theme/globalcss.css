@@ -206,7 +206,8 @@ ol,
 dl,
 blockquote,
 img {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
+  line-height: 1.25em;
 }
 
 abbr {
@@ -308,44 +309,6 @@ h6 {
   margin: 0 0 1.5em;
 }
 
-code {
-  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #c7254e;
-  background-color: #f9f2f4;
-  border-radius: 4px;
-}
-
-pre code {
-  font-size: 0.9375em;
-  line-height: 1.265662em;
-  padding: 0;
-  -webkit-font-smoothing: subpixel-antialiased;
-  color: #333;
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: block;
-  word-wrap: normal;
-  background-color: transparent;
-  border-radius: 0;
-}
-
-pre {
-  display: block;
-  padding: 0.75em;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: rgb(90, 90, 90);
-  margin-bottom: 1.5em;
-  line-height: 1em;
-  white-space: pre;
-  overflow-x: auto;
-}
-
 img {
   margin: 0.5em auto 1.5em auto;
   display: block;
@@ -400,7 +363,7 @@ a:hover {
     TABLES
   --------------------------------------------- */
 
-  table {
+table {
   margin: 0 0 0.8125em;
   padding: 0;
   font-size: 1em;
@@ -452,4 +415,105 @@ th:first-child {
   a[href^='#']:after {
     content: '';
   }
+}
+
+/*
+    CUSTOM CLASSES
+  --------------------------------------------- */
+.gatsby-code-title {
+  margin-bottom: -0.6rem;
+  padding: 0.5em 1em;
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  z-index: 0;
+}
+
+.gatsby-highlight-code-line {
+  background-color: #feb;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+/**
+ * Add back the container background-color, border-radius, padding, margin
+ * and overflow that we removed from <pre>.
+ */
+.gatsby-highlight {
+  background-color: #fdf6e3;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+/**
+* Remove the default PrismJS theme background-color, border-radius, margin,
+* padding and overflow.
+* 1. Make the element just wide enough to fit its content.
+* 2. Always fill the visible space in .gatsby-highlight.
+* 3. Adjust the position of the line numbers
+*/
+.gatsby-highlight pre[class*='language-'] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+
+/**
+ * If you already use line highlighting
+ */
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+   * If you only want to use line numbering
+   */
+
+.gatsby-highlight {
+  background-color: #fdf6e3;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+
+.command-line-prompt > span:before {
+  color: #999;
+  content: ' ';
+  display: block;
+  padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt > span[data-user]:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] $';
+}
+
+/* Prompt for root */
+.command-line-prompt > span[data-user='root']:before {
+  content: '[' attr(data-user) '@' attr(data-host) '] #';
+}
+
+.command-line-prompt > span[data-prompt]:before {
+  content: attr(data-prompt);
 }
