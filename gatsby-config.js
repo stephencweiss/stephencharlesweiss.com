@@ -43,7 +43,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `auto-link`,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -58,12 +63,20 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'code-title',
+            },
+          },
+          {
+            resolve: `gatsby-remark-embed-snippet`,
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
               inlineCodeMarker: null,
-              aliases: { bash: 'zsh' },
-              showLineNumbers: false,
+              aliases: { zsh: 'shell' },
               noInlineHighlight: false,
             },
           },
