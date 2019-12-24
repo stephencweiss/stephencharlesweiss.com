@@ -116,6 +116,19 @@ b {
   font-weight: bold;
 }
 
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
 i,
 em,
 blockquote {
@@ -131,6 +144,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow-y: scroll;
+  font-size: 100%;
 }
 
 img {
@@ -152,44 +166,20 @@ video {
   SELECTIONS
 --------------------------------------------- */
 
-::-moz-selection {
-    background: rgba(255,109,91,0.99) none;
-    text-shadow: none;
-    color: #fff;
-    }
+img::selection {
+  background: transparent;
+}
 
-  ::selection {
-    background: rgba(255,109,91,0.99) none;
-    text-shadow: none;
-    color: #fff;
-
-    }
-
-    /* Not totally sure what this one does yet, so leaving it for now. */
-  ::selection:window-inactive {
-    background: rgb(220,220,220);
-    color: rgb(50,50,50);
-    }
-
-  img::selection {
-    background: transparent;
-    }
-
-  img::-moz-selection {
-    background: transparent;
-    }
-
+img::-moz-selection {
+  background: transparent;
+}
 
 /*
     BASE TYPOGRAPHY
   --------------------------------------------- */
 
 body {
-  font: 75%/1.5em 'PTSerifCustom', Georgia, serif;
-  max-width: 40.49984em;
   margin: 0 auto;
-  /* color: rgb(0, 0, 0); */
-  /* padding: 1em; */
 }
 
 .ie body {
@@ -215,11 +205,8 @@ ul,
 ol,
 dl,
 blockquote,
-.content img {
+img {
   margin-bottom: 1.5em;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
 }
 
 abbr {
@@ -231,24 +218,30 @@ abbr {
 
 sub,
 sup {
-  vertical-align: baseline;
   position: relative;
+  padding: 0.125em;
   font-size: 65%;
   line-height: 0;
 }
 
 sub {
-  bottom: -0.25em;
+  vertical-align: sub;
 }
 
 sup {
-  top: -0.5em;
+  vertical-align: super;
 }
 
 blockquote {
   margin: 1.5em 0 1.5em 1.80203em;
   color: rgb(90, 90, 90);
   position: relative;
+  padding: 0 0.5em;
+  border-left: 0.25em solid rgb(90, 90, 90);
+}
+
+blockquote h1 {
+  font-size: 2em;
 }
 
 blockquote:before {
@@ -259,7 +252,7 @@ blockquote:before {
   font-style: italic;
   content: '\201C';
   line-height: 1em;
-  left: -0.6018em;
+  left: -0.75em;
   top: 0;
 }
 
@@ -268,21 +261,16 @@ ol {
   margin-left: 1.5em;
 }
 
-ul {
-  list-style-type: circle;
-}
-
 ol {
   list-style-type: lower-roman;
 }
 
 h1 {
-  margin: 1em 0 0.46981em;
-  font: italic 2em/1.125em 'Hoefler Text', Baskerville, 'PT Serif', Georgia,
-    Times, 'Times New Roman', serif;
-  margin: 0.97em 0 0.5em;
   line-height: 1.125em;
   font-size: 2em;
+  padding-bottom: 0.5em;
+  margin: 0.75em 0 0.125em;
+  font-weight: 600;
 }
 
 .ie h1 {
@@ -293,10 +281,6 @@ h2 {
   line-height: 1.77777em;
   margin-bottom: 1em;
   font-size: 1.2em;
-}
-
-h2.toc {
-  border-bottom: 1px solid black;
 }
 
 h3 {
@@ -332,6 +316,7 @@ code {
   background-color: #f9f2f4;
   border-radius: 4px;
 }
+
 pre code {
   font-size: 0.9375em;
   line-height: 1.265662em;
@@ -374,28 +359,80 @@ img {
   padding: 0 0.2em;
 }
 
+header {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    'Helvetica', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
+}
+
 /*
     LINKS
   --------------------------------------------- */
 
 a {
-  border-bottom: 1px solid rgb(200, 200, 200);
+  color: #4078c0;
   text-decoration: none;
-  color: rgb(80, 80, 80);
 }
 
-a:hover {
-  border-bottom: 1px solid rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.05);
-  color: rgb(0, 0, 0);
+sup a {
+  text-decoration: none;
 }
 
 a:active {
   outline: none;
 }
 
-sup a {
-  text-decoration: none;
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+    TABLES
+  --------------------------------------------- */
+
+  table {
+  margin: 0 0 0.8125em;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.625em;
+  width: 100%;
+  display: table;
+}
+
+thead {
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+td,
+th {
+  text-align: left;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  -ms-font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
+  padding: 0.8125em 1.08333em calc(0.8125em - 1px);
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
 }
 
 /*
@@ -415,177 +452,4 @@ sup a {
   a[href^='#']:after {
     content: '';
   }
-}
-
-/*
-    MIN-WIDTH: 15.652em
-  --------------------------------------------- */
-
-@media screen and (min-width: 15.652em) {
-  body {
-    font-size: 87.5%;
-  }
-
-  h2 {
-    font-size: 1.26562em;
-  }
-
-  h3 {
-    font-size: 1.5em;
-  }
-
-  h4 {
-    font-size: 1.26562em;
-  }
-}
-
-/*
-    MIN-WIDTH: 19.9375em
-  --------------------------------------------- */
-
-@media screen and (min-width: 19.9375em) {
-  body {
-    font-size: 100%;
-    /* padding: 1.5em; */
-  }
-
-  h1 {
-    font-size: 3em;
-  }
-
-  .dropcap:first-letter {
-    font: 3.32956em/0.7em Georgia, serif;
-    -webkit-font-smoothing: antialiased;
-    margin: 0.2em 0.15em 0.1em 0;
-    float: left;
-  }
-
-  .ie9 .dropcap:first-letter {
-    margin: 0.2em 0.45em 0 0;
-    line-height: 0.9em;
-  }
-
-  li {
-    line-height: 1.8em !important;
-  }
-}
-
-/*
-    MIN-WIDTH: 29.9375em
-  --------------------------------------------- */
-
-@media screen and (min-width: 29.9375em) {
-  body {
-    /* padding: 1.5em 3em; */
-    max-width: 34.3em;
-  }
-
-  ul,
-  ol {
-    margin-left: 0;
-  }
-
-  sup.indent {
-    margin-left: -1.5em;
-  }
-}
-
-/*
-    MIN-WIDTH: 38em
-  --------------------------------------------- */
-
-@media screen and (min-width: 38em) {
-  html {
-    /* background: url('../img/grid.gif') repeat; */
-  }
-
-  body {
-    /* padding: 4.5em 3em 7.59372em; */
-  }
-
-  h1 {
-    margin: 0.97em 0 0.8em;
-    font-size: 4em;
-  }
-}
-
-/*
-    MIN-WIDTH: 99.9375em
-  --------------------------------------------- */
-
-@media screen and (min-width: 99.9375em) {
-  body {
-    max-width: 34.43736em;
-    line-height: 1.75em;
-    font-size: 112.5%;
-  }
-}
-
-
-/*
-  Custom styles from
-  https://github.com/shapeshed/shapeshed-minimal/blob/master/static/css/styles.css
-  --------------------------------------------- */
-.date {
-  color: #999;
-  float: left;
-  clear: left;
-}
-.twitter {
-  float: right;
-}
-
-h1 {
-  clear: left;
-}
-
-p.meta {
-  color: #666;
-  font-style: italic;
-  clear: left;
-}
-
-ul.primary {
-  margin-left: 0;
-  float: left;
-  list-style: none;
-}
-
-ul.primary li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.mugshot {
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 15px;
-}
-.p-paging {
-  float: left;
-  width: 100%;
-  margin-bottom: 1.42382em;
-}
-
-.p-paging ul {
-  list-style: none;
-  width: 100%;
-}
-.p-paging ul li {
-  display: inline;
-}
-
-.p-paging ul li.next {
-  float: right;
-}
-.p-paging ul li.previous {
-  float: left;
-}
-
-footer {
-  clear: both;
-}
-
-footer h2 {
-  border-bottom: 1px solid black;
 }
