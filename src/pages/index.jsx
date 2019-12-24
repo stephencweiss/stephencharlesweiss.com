@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
+import { Search } from '../components/Search'
 import SEO from '../components/SEO'
 import PostLink from '../components/PostLink'
 import sortPosts from '../utils/sortPosts'
