@@ -45,11 +45,6 @@ export default theme('mode', {
         color: ${base00};
     }
 
-    pre[class*='language-'] {
-        border-radius: 0.5em;
-        box-shadow: 1px 1px 0.5em ${base2} inset;
-    }
-
     :not(pre) > code[class*='language-'] {
         background-color: ${reddish};
         color: ${whiteish};
@@ -173,16 +168,16 @@ export default theme('mode', {
     pre[class*='language-'] {
         border-radius: 0.5em;
         background: ${base03};
-        border: 0.3em solid ${base02};
-        box-shadow: 1px 1px 0.5em ${base02} inset;
+        // border: 0.3em solid ${base02};
+        // box-shadow: 1px 1px 0.5em ${base02} inset;
         border-radius: 0em;
     }
 
     /* Inline */
     :not(pre) > code[class*='language-'] {
         background: ${base03};
-        border: 0.13em solid ${base02};
-        box-shadow: 1px 1px 0.3em -0.1em ${base02} inset;
+        // border: 0.13em solid ${base02};
+        // box-shadow: 1px 1px 0.3em -0.1em ${base02} inset;
       }
 
     .token.comment,
