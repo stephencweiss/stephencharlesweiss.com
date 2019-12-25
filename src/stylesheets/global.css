@@ -446,13 +446,13 @@ th:first-child {
  * Add back the container background-color, border-radius, padding, margin
  * and overflow that we removed from <pre>.
  */
-.gatsby-highlight {
+/* .gatsby-highlight {
   background-color: #fdf6e3;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;
   overflow: auto;
-}
+} */
 
 /**
 * Remove the default PrismJS theme background-color, border-radius, margin,
@@ -461,14 +461,14 @@ th:first-child {
 * 2. Always fill the visible space in .gatsby-highlight.
 * 3. Adjust the position of the line numbers
 */
-.gatsby-highlight pre[class*='language-'] {
+/* .gatsby-highlight pre[class*='language-'] {
   background-color: transparent;
   margin: 0;
   padding: 0;
   overflow: initial;
   float: left; /* 1 */
-  min-width: 100%; /* 2 */
-}
+  /* min-width: 100%;*/ /* 2 */
+/* } */
 
 /**
  * If you already use line highlighting
@@ -483,13 +483,13 @@ th:first-child {
    * If you only want to use line numbering
    */
 
-.gatsby-highlight {
+/* .gatsby-highlight {
   background-color: #fdf6e3;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;
   overflow: auto;
-}
+} */
 
 .gatsby-highlight pre[class*='language-'].line-numbers {
   padding: 0;
@@ -516,4 +516,10 @@ th:first-child {
 
 .command-line-prompt > span[data-prompt]:before {
   content: attr(data-prompt);
+}
+
+/* Overwriting PrismJS's Theme */
+
+code[class*="language-"], pre[class*="language-"] {
+    white-space: pre-wrap !important;
 }
