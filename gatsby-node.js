@@ -4,7 +4,10 @@ const {
   isPublished,
   listDate,
   publishDate,
+  publishMonth,
+  publishYear,
 } = require('./src/utils/dateFns')
+const dayjs = require('dayjs')
 const entryTemplate = path.resolve(`./src/templates/entry.js`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -15,11 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
       query allBlogQuery {
         list: allMarkdownRemark(
           sort: { fields: [fields___publishDate], order: DESC }
-          filter: {
-            fields: {
-              sourceInstance: { eq: "list" }
-            }
-          }
+          filter: { fields: { sourceInstance: { eq: "list" } } }
         ) {
           edges {
             node {
@@ -52,6 +51,21 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        annualreviews: allMarkdownRemark(
+            sort: { fields: [fields___publishDate], order: DESC }
+            filter: { fields: { sourceInstance: { eq: "annual-review" } } }
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
       }
     `
   ).then(result => {
@@ -91,6 +105,23 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+    // Create annual review pages.
+    const annualReviews = result.data.annualreviews.edges
+    annualReviews.forEach((review, index) => {
+      const previous = index === annualReviews.length - 1 ? null : annualReviews[index + 1].node
+      const next = index === 0 ? null : annualReviews[index - 1].node
+
+      createPage({
+        path: review.node.fields.slug,
+        component: entryTemplate,
+        context: {
+          slug: review.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
   })
 }
 
@@ -117,5 +148,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({ name: 'isPublished', node, value: isPublished(node) })
     createNodeField({ name: 'listDate', node, value: listDate(node) })
     createNodeField({ name: 'publishDate', node, value: publishDate(node) })
+    createNodeField({ name: 'publishMonth', node, value: publishMonth(node) })
+    createNodeField({ name: 'publishYear', node, value: publishYear(node) })
   }
 }
