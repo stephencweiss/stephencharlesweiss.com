@@ -2,6 +2,8 @@
 title: 'Fixing My Embargo: Setting up a Cron Job'
 date: '2019-12-27'
 publish: '2020-01-10'
+category: ['programming']
+tags: ['ci/cd','cron','github actions','netlify']
 ---
 
 I wrote previously about [setting up a simple embargo](../../2019-10-16/gatsby-simple-embargo) on my Gatsby site in the past. Even when I first implemented it, however, I knew that there'd be a better solution in the future.
