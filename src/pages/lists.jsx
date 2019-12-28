@@ -7,11 +7,11 @@ import SEO from '../components/SEO'
 import sortTitles from '../utils/sortTitles'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
-function ReadingList(props) {
+function Lists(props) {
   const { data } = props
   const { title: siteTitle } = useSiteMetadata()
 
-  const list = data.readingList.edges.sort(sortTitles)
+  const list = data.lists.edges.sort(sortTitles)
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Lists" keywords={['reading', 'books']} />
@@ -30,11 +30,11 @@ function ReadingList(props) {
   )
 }
 
-export default ReadingList
+export default Lists
 
 export const pageQuery = graphql`
   query {
-    readingList: allMarkdownRemark(
+    lists: allMarkdownRemark(
       filter: { fields: { sourceInstance: { eq: "list" } } }
     ) {
       edges {
