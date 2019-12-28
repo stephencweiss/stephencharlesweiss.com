@@ -1,12 +1,18 @@
-Useful Tools For Colors
+---
+title: 'Useful Tools For Colors'
+date: '2019-12-26'
+publish: '2020-01-08'
+category: ['tools']
+tags: ['design', 'colors','sung m kim','dance2die']
+---
 
-I've been working on putting together a new theme for my website. In the process, I decided that I wanted to avoid the edges of the color box (i.e. no pure white or black) while supporting a light mode and a dark mode. 
+I've been working on putting together a new theme for my website. In the process, I decided that I wanted to avoid the edges of the color box (i.e. no pure white or black) while supporting a light mode and a dark mode.
 
-That meant I needed a way to come up with complementary colors as well as the inverse. 
+That meant I needed a way to come up with complementary colors as well as the inverse.
 
-While sites like coolors.co are great for coming up with a nice set of colors, they're less helpful when you have a specific color and you're looking for it's inverse. 
+While sites like coolors.co are great for coming up with a nice set of colors, they're less helpful when you have a specific color and you're looking for it's inverse.
 
-[Pinetools.com](https://pinetools.com/c-colors/), on the other hand, has a bunch of tools for exactly these types of purposes. The color tools include: 
+[Pinetools.com](https://pinetools.com/c-colors/), on the other hand, has a bunch of tools for exactly these types of purposes. The color tools include:
 
 * Lighten Color
 * Darken Color
