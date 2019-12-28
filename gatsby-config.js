@@ -285,5 +285,6 @@ module.exports = {
         analyzerMode: 'static',
       },
     },
+    { resolve: 'gatsby-plugin-use-dark-mode' },
   ],
 }

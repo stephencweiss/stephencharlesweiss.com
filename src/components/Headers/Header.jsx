@@ -2,6 +2,7 @@ import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
 import { space } from 'styled-system'
 import styled from 'styled-components'
+import { Toggle } from '.'
 
 const StyledHeader = styled.div`
   ${space}
@@ -19,14 +20,23 @@ const Link = styled(GatsbyLink)`
   }
 `
 
-function Header(props) {
-  const { title, root } = props
-  const type = root ? 'h1' : 'h3'
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+`
 
+function Header(props) {
+  const { darkMode, root, title } = props
+  const type = root ? 'h1' : 'h3'
+    console.log(`Header --> `, {darkMode})
   return (
-    <StyledHeader as={type} root={root}>
-      <Link to={`/`}>{title}</Link>
-    </StyledHeader>
+    <HeaderContainer>
+      <StyledHeader as={type} root={root}>
+        <Link to={`/`}>{title}</Link>
+      </StyledHeader>
+      <Toggle darkMode={darkMode} />
+    </HeaderContainer>
   )
 }
 

@@ -26,7 +26,7 @@ const cyan = '#2aa198'
 const green = '#859900'
 
 export default theme('mode', {
-  light: css`
+  "light-mode": css`
     background-color: ${whiteish};
     color: ${blackish};
     * + ::selection {
@@ -131,7 +131,7 @@ export default theme('mode', {
     }
   }
   `,
-  dark: css`
+  "dark-mode": css`
     background-color: ${blackish};
     color: ${whiteish};
 
