@@ -21,7 +21,7 @@ Total: 35
 
 ### _December 2019_
 
--   _The Joy of Living_ by Yongey Mingyur Rinpoche
+-   [_The Joy of Living_ by Yongey Mingyur Rinpoche](../../../books/reading-notes-joy-of-living)
 
 ### _November 2019_
 
