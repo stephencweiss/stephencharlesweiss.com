@@ -15,8 +15,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-netlify-cache',
       options: {
-          cachePublic: true,
-      }
+        cachePublic: true,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -50,7 +50,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `auto-link`,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
@@ -65,12 +70,20 @@ module.exports = {
             },
           },
           {
+            resolve: 'gatsby-remark-code-titles',
+            options: {
+              className: 'code-title',
+            },
+          },
+          {
+            resolve: `gatsby-remark-embed-snippet`,
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: { bash: 'zsh' },
-              showLineNumbers: false,
+              inlineCodeMarker: '>',
+              aliases: { zsh: 'shell' },
               noInlineHighlight: false,
             },
           },
@@ -107,21 +120,21 @@ module.exports = {
       resolve: `gatsby-plugin-feed`,
       options: {
         feeds: [
-            {
-                serialize: ({ query: { site, allMarkdownRemark } }) => {
-                  return allMarkdownRemark.edges.map(edge => {
-                    return Object.assign({}, edge.node.frontmatter, {
-                      date: edge.node.frontmatter.date,
-                      publish: edge.node.frontmatter.publish,
-                      updated: edge.node.frontmatter.updated,
-                      draft: edge.node.frontmatter.draft,
-                      url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                      guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                      custom_elements: [{ 'content:encoded': edge.node.html }],
-                    })
-                  })
-                },
-                query: `
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  date: edge.node.frontmatter.date,
+                  publish: edge.node.frontmatter.publish,
+                  updated: edge.node.frontmatter.updated,
+                  draft: edge.node.frontmatter.draft,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ 'content:encoded': edge.node.html }],
+                })
+              })
+            },
+            query: `
                   {
                     allMarkdownRemark(
                       limit: 1000,
@@ -144,9 +157,9 @@ module.exports = {
                     }
                   }
                 `,
-                output: '/rss.xml',
-                title: 'Code-Comments RSS Feed',
-              },
+            output: '/rss.xml',
+            title: 'Code-Comments RSS Feed',
+          },
         ],
       },
     },
@@ -217,14 +230,14 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        displayName: true,
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
