@@ -15,11 +15,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(
     `
-      query allBlogQuery {
-        list: allMarkdownRemark(
-          sort: { fields: [fields___publishDate], order: DESC }
-          filter: { fields: { sourceInstance: { eq: "list" } } }
-        ) {
+    query allBlogQuery {
+        annualreviews: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "annual-review"}}}) {
           edges {
             node {
               fields {
@@ -31,15 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        blog: allMarkdownRemark(
-          sort: { fields: [fields___publishDate], order: DESC }
-          filter: {
-            fields: {
-              isPublished: { eq: true }
-              sourceInstance: { eq: "blog" }
-            }
-          }
-        ) {
+        blog: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}) {
           edges {
             node {
               fields {
@@ -51,26 +40,49 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        annualreviews: allMarkdownRemark(
-            sort: { fields: [fields___publishDate], order: DESC }
-            filter: { fields: { sourceInstance: { eq: "annual-review" } } }
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
+        books: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "books"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
               }
             }
           }
+        }
+        list: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "list"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        other: allMarkdownRemark( filter: {fields: {sourceInstance: {nin: ["annual-review","blog","books", "list"]}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     `
   ).then(result => {
-    if (result.errors) {
+    if (result.errors ) {
       throw result.errors
+    } else if ( result.data.other.edges.length > 0) {
+        throw new Error('posts included in "other" category - check to make sure all sources are accounted for')
     }
 
     // Create blog posts pages.
@@ -109,7 +121,10 @@ exports.createPages = ({ graphql, actions }) => {
     // Create annual review pages.
     const annualReviews = result.data.annualreviews.edges
     annualReviews.forEach((review, index) => {
-      const previous = index === annualReviews.length - 1 ? null : annualReviews[index + 1].node
+      const previous =
+        index === annualReviews.length - 1
+          ? null
+          : annualReviews[index + 1].node
       const next = index === 0 ? null : annualReviews[index - 1].node
 
       createPage({
@@ -117,6 +132,23 @@ exports.createPages = ({ graphql, actions }) => {
         component: entryTemplate,
         context: {
           slug: review.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create book pages.
+    const books = result.data.books.edges
+    books.forEach((book, index) => {
+      const previous = index === books.length - 1 ? null : books[index + 1].node
+      const next = index === 0 ? null : books[index - 1].node
+
+      createPage({
+        path: book.node.fields.slug,
+        component: entryTemplate,
+        context: {
+          slug: book.node.fields.slug,
           previous,
           next,
         },
