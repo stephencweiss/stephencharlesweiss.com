@@ -7,7 +7,6 @@ const {
   publishMonth,
   publishYear,
 } = require('./src/utils/dateFns')
-const dayjs = require('dayjs')
 const entryTemplate = path.resolve(`./src/templates/entry.js`)
 
 exports.createPages = ({ graphql, actions }) => {
