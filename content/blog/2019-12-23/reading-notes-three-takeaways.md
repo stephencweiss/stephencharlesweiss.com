@@ -2,13 +2,14 @@
 title: 'Top Three Takeaways: Lessons From Reading'
 date: '2019-12-07'
 publish: '2019-12-23'
+updated: '2019-12-27'
 category: ['musings']
-tags: ['ryan holiday','farnam street','reading notes','stephen zerfas','read to lead']
+tags: ['reading notes', 'ryan holiday','farnam street','reading notes','stephen zerfas','read to lead']
 ---
 
 Reading is a very active process for me - it's not just taking the words on the page and passing them through to my brain. I take notes, lots of notes. What happens to those notes when I'm done reading, however, has been a source of constant experimentation and more than a little stress.
 
-I've tried [Ryan Holiday's Notecard System](https://ryanholiday.net/the-notecard-system-the-key-for-remembering-organizing-and-using-everything-you-read/). I also gave [Jeremy Duval's note taking system](https://zapier.com/blog/best-book-note-taking-system/) a go. More recently a friend recommended [Farnam Street's How To Read A Book: The Ultimate Guide by Mortimer Adler](https://fs.blog/how-to-read-a-book/).
+I've tried [Maria Popova's Index Method](../../blog/2016-02-10/brief-thoughts-on-reading-and-note-taking/). I've tried [Ryan Holiday's Notecard System](https://ryanholiday.net/the-notecard-system-the-key-for-remembering-organizing-and-using-everything-you-read/). I also gave [Jeremy Duval's note taking system](https://zapier.com/blog/best-book-note-taking-system/) a go. More recently a friend recommended [Farnam Street's How To Read A Book: The Ultimate Guide by Mortimer Adler](https://fs.blog/how-to-read-a-book/).
 
 I like all of the guides and would recommend them, however, I seem to get tripped up at the last step. Specifically, when I'm _done_ reading a book, the process of copying down notes as Ryan and Jeremy recommend takes me _hours_. Adler's Analytical Reading seems to fit better with how I read and my goals for reading (i.e., to _learn_).
 

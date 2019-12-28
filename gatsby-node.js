@@ -52,6 +52,25 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        books: allMarkdownRemark(
+            sort: { fields: [fields___publishDate], order: DESC }
+            filter: {
+              fields: {
+                sourceInstance: { eq: "books" }
+              }
+            }
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
       }
     `
   ).then(result => {
@@ -86,6 +105,22 @@ exports.createPages = ({ graphql, actions }) => {
         component: entryTemplate,
         context: {
           slug: list.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+    // Create book pages.
+    const books = result.data.books.edges
+    books.forEach((book, index) => {
+      const previous = index === books.length - 1 ? null : books[index + 1].node
+      const next = index === 0 ? null : books[index - 1].node
+
+      createPage({
+        path: book.node.fields.slug,
+        component: entryTemplate,
+        context: {
+          slug: book.node.fields.slug,
           previous,
           next,
         },
