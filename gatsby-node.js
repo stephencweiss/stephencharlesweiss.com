@@ -4,6 +4,8 @@ const {
   isPublished,
   listDate,
   publishDate,
+  publishMonth,
+  publishYear,
 } = require('./src/utils/dateFns')
 const entryTemplate = path.resolve(`./src/templates/entry.js`)
 
@@ -12,15 +14,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   return graphql(
     `
-      query allBlogQuery {
-        list: allMarkdownRemark(
-          sort: { fields: [fields___publishDate], order: DESC }
-          filter: {
-            fields: {
-              sourceInstance: { eq: "list" }
-            }
-          }
-        ) {
+    query allBlogQuery {
+        annualreviews: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "annual-review"}}}) {
           edges {
             node {
               fields {
@@ -32,15 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        blog: allMarkdownRemark(
-          sort: { fields: [fields___publishDate], order: DESC }
-          filter: {
-            fields: {
-              isPublished: { eq: true }
-              sourceInstance: { eq: "blog" }
-            }
-          }
-        ) {
+        blog: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}) {
           edges {
             node {
               fields {
@@ -52,30 +39,49 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        books: allMarkdownRemark(
-            sort: { fields: [fields___publishDate], order: DESC }
-            filter: {
-              fields: {
-                sourceInstance: { eq: "books" }
+        books: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "books"}}}) {
+          edges {
+            node {
+              fields {
+                slug
               }
-            }
-          ) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                }
+              frontmatter {
+                title
               }
             }
           }
+        }
+        list: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "list"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        other: allMarkdownRemark( filter: {fields: {sourceInstance: {nin: ["annual-review","blog","books", "list"]}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     `
   ).then(result => {
-    if (result.errors) {
+    if (result.errors ) {
       throw result.errors
+    } else if ( result.data.other.edges.length > 0) {
+        throw new Error('posts included in "other" category - check to make sure all sources are accounted for')
     }
 
     // Create blog posts pages.
@@ -110,6 +116,27 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+
+    // Create annual review pages.
+    const annualReviews = result.data.annualreviews.edges
+    annualReviews.forEach((review, index) => {
+      const previous =
+        index === annualReviews.length - 1
+          ? null
+          : annualReviews[index + 1].node
+      const next = index === 0 ? null : annualReviews[index - 1].node
+
+      createPage({
+        path: review.node.fields.slug,
+        component: entryTemplate,
+        context: {
+          slug: review.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
     // Create book pages.
     const books = result.data.books.edges
     books.forEach((book, index) => {
@@ -152,5 +179,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({ name: 'isPublished', node, value: isPublished(node) })
     createNodeField({ name: 'listDate', node, value: listDate(node) })
     createNodeField({ name: 'publishDate', node, value: publishDate(node) })
+    createNodeField({ name: 'publishMonth', node, value: publishMonth(node) })
+    createNodeField({ name: 'publishYear', node, value: publishYear(node) })
   }
 }

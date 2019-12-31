@@ -14,10 +14,23 @@ function publishDate(node) {
   return publish ? publish : date
 }
 
+function publishMonth(node) {
+  return dayjs(publishDate(node))
+    .set('date', 1)
+    .format('YYYY-MM-DD')
+}
+
+function publishYear(node) {
+  return dayjs(publishDate(node))
+    .set('date', 1)
+    .set('month', 1)
+    .format('YYYY-MM-DD')
+}
+
 function listDate(node) {
-    const { updated } = node.frontmatter
-    if (updated && BUILD_TIME.isAfter(dayjs(updated))) return updated
-    return publishDate(node)
+  const { updated } = node.frontmatter
+  if (updated && BUILD_TIME.isAfter(dayjs(updated))) return updated
+  return publishDate(node)
 }
 
 // Need to use module.exports because this is used in node, not just frontend
@@ -25,4 +38,6 @@ module.exports = {
   isPublished,
   listDate,
   publishDate,
+  publishMonth,
+  publishYear,
 }
