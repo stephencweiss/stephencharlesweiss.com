@@ -5,7 +5,7 @@ title: 'Reading List'
 ## Actively Reading
 
 -   _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
--   [_Justice: What's The Right Thing To Do?_ by Michael J. Sandel](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508?sa-no-redirect=1&pldnSite=1)
+-   _Silence Is The Way_ by Ryan Holiday
 -   _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
@@ -212,3 +212,5 @@ Some books I plan to read in the future.
 1. _The Hedgehog And The Fox_ by Isaiah Berlin
 1. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_ by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
 1. [_Old School_ by Tobias Wolff](https://smile.amazon.com/School-Vintage-Contemporaries-Tobias-Wolff-ebook/dp/B000FC28A8/ref=sr_1_1?crid=2C5BSQR6T2POL&keywords=old+school+wolff&qid=1575749992&sprefix=old+school+wolf%2Caps%2C147&sr=8-1)
+1. [_The Power of Bad: How the Negativity Effect Rules Us and How We Can Rule It_ by John Tierney and Roy F. Baumeister](https://www.penguinrandomhouse.com/books/313665/the-power-of-bad-by-john-tierney-and-roy-f-baumeister/)
+1. [_Justice: What's The Right Thing To Do?_ by Michael J. Sandel](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508?sa-no-redirect=1&pldnSite=1)
