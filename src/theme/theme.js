@@ -2,8 +2,8 @@ import { css } from 'styled-components'
 import theme from 'styled-theming'
 
 const whiteish = `#F6F7EB`
-const solarized = `#fdf6e3`
-const solarHighlighted = `#feb`
+const solarized = `#FDF6E3`
+const solarHighlighted = `#FEB`
 const blackish = `#090314`
 const reddish = `rgba(255, 109, 91, 0.99)`
 
