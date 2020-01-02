@@ -1,0 +1,14 @@
+{
+    "quote1": {
+        "text": "Yes and no.\nBoth are choices. Only yes is an obligation.",
+        "source": "https://jamesclear.com/2018-annual-review",
+        "notes": "A variant of James Clear's 'No is a decision. Yes is a responsibility' from his 2018 Annual Review",
+        "tags": ["obligations", "time","responsibility", "decision", "prioritization" ]
+    },
+    "quote2": {
+        "text":"A wealth of information creates a poverty of attention.",
+        "source": "Stillness Is The Key",
+        "attribution": "Herbert Simon",
+        "tags": ["attention", "focus", "abundancy"]
+    }
+}
