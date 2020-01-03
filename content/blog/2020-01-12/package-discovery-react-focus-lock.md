@@ -153,7 +153,9 @@ To see this in practice, we can see a modal in action.
 
 ## Conclusion
 
-Making the internet accessible to all is something I'm passionate about, but that doesn't mean it's easy. Modals and dialog boxes often fall short when it comes to accessibility. While `react-focus-lock` is not a panacea (scroll lock and text-to-speech lock are notably _not_ addressed), it does address one of the more common issues with dialogs with an accessible API. I'm excited to continue to explore the problem space and find new ways to improve in the future.
+Making the internet accessible to all is something I'm passionate about, but that doesn't mean it's easy. Modals and dialog boxes often fall short when it comes to accessibility.
+
+While `react-focus-lock` is not a panacea (scroll lock and text-to-speech lock are notably _not_ addressed), it does address one of the more common issues with dialogs with an accessible API. I'm excited to continue to explore the problem space and find new ways to improve in the future.
 
 ## Footnotes
 
