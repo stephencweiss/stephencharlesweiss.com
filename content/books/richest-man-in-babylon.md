@@ -4,6 +4,7 @@ author: 'George S. Clason'
 bookTitle: 'The Richest Man In Babylon'
 date: '2020-01-02'
 category: ['reading notes']
+rating: 3
 tags: ['george s clason', 'richest man in babylon','finance','frugality', 'thrift']
 ---
 
@@ -33,6 +34,3 @@ That said, many of the lessons _do_ seem reasonable and relevant. So, don't dism
 
 > And when youth comes to age for advice he receives the wisdom of years. But too often does youth think that age knows only the wisdom of days that are gone, and therefore profits not.
 > -- George S. Clason, Pg. 25
-
-## Rating
-3 - Read Someday

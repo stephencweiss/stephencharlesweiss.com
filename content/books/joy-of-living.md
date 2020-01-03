@@ -5,6 +5,7 @@ bookTitle: 'The Joy of Living'
 date: '2019-12-27'
 publish: '2020-01-09'
 category: ['reading notes']
+rating: 3
 tags: ['yongey mingyur rinpoche','joy of living','meditation','buddhism']
 ---
 
@@ -35,7 +36,3 @@ Mingyur Rinpoche refers to the tyranny of time because of its potential to domin
 One of the most powerful parables in the book was describing a monk who lived a life time in a single tea ceremony.
 
 When we recognize that time is merely an idea, we can set ourselves free from its tyranny.
-
-## Rating
-
-3 - Read Someday.

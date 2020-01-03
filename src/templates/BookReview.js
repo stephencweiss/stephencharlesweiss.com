@@ -23,25 +23,43 @@ const Entry = styled.div`
     list-style: none;
   }
 `
+const ratings = {
+  1: '1 - Read Now!',
+  2: '2 - Read Soon.',
+  3: '3 - Read Someday.',
+  4: '4 - Read Maybe.',
+  5: '5 - Pass.',
+}
 
-function Rankings() {
-    return (<>
-    Categories:
-1 - Read Now!
-2 - Read Soon.
-3 - Read Someday.
-4 - Read Maybe.
-5 - Pass
+function Rankings(props) {
+  const { rating } = props
 
-    </>)
+  return (
+    <>
+      <h2>Rating</h2>
+      {rating && (
+        <p>
+          <b>My Rating:</b>&nbsp;{ratings[rating]}
+        </p>
+      )}
+      <p>
+        <b>Categories:</b>
+        <ul>
+          {Object.values(ratings).map(rating => (
+            <li>{rating}</li>
+          ))}
+        </ul>
+      </p>
+    </>
+  )
 }
 
 function BookEntry(props) {
   const entry = props.data.markdownRemark
   const { title: siteTitle } = useSiteMetadata()
   const { previous, next } = props.pageContext
-  const { date, publish, title } = entry.frontmatter
-
+  const { date, publish, title, rating } = entry.frontmatter
+  console.log({ entry, rating })
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
@@ -51,7 +69,7 @@ function BookEntry(props) {
         className={'entry'}
         dangerouslySetInnerHTML={{ __html: entry.html }}
       />
-      <Rankings />
+      <Rankings rating={rating} />
       <hr />
       <Bio />
       <PostNavigation previous={previous} next={next} />
@@ -79,6 +97,7 @@ export const pageQuery = graphql`
         bookTitle
         date(formatString: "MMMM DD, YYYY")
         publish(formatString: "MMMM DD, YYYY")
+        rating
       }
     }
   }
