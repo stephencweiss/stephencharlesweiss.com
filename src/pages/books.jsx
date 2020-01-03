@@ -10,17 +10,16 @@ import useSiteMetadata from '../hooks/useSiteMetadata'
 function Books(props) {
   const { data } = props
   const { title: siteTitle } = useSiteMetadata()
-    console.log({data})
   const books = data.books.edges.sort(sortTitles)
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Books" keywords={['reading', 'notes', 'books']} />
       {books.map(({ node }) => {
-        const { title } = node.frontmatter
+        const { author, bookTitle } = node.frontmatter
         const { slug } = node.fields
         return (
           <div key={slug}>
-            <PostLink slug={slug} title={title} />
+            <PostLink slug={slug} title={`${bookTitle} by ${author}`} />
           </div>
         )
       })}
@@ -46,6 +45,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            author
+            bookTitle
           }
         }
       }
