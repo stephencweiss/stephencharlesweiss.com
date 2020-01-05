@@ -42,5 +42,173 @@
             "indignation",
             "moral superiority",
         ]
+    },
+    {
+        "text":"A part of all you earn is yours to keep.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 33",
+        "tags":["finance","wealth accumulation","prudence","frugality"]
+    },
+    {
+        "text":"And when youth comes to age for advice he receives the wisdom of years. But too often does youth think that age knows only the wisdom of days that are gone, and therefore profits not.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 25",
+        "tags":["advice","wisdom","youth","arrogance"]
+    },
+    {
+        "text":"It costs nothing to ask wise advice from a good friend.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 19",
+        "tags":["advice","friendship", "pride"]
+    },
+    {
+        "text":"Advice is one thing that is freely given away, but watch that you take only what is worth having.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 27",
+        "tags":["advice"]
+    },
+    {
+        "text":"We mortals are changeable. Alas, I must say more apt to change our minds when right than wrong. Wrong, we are stubborn indeed. Right, we are prone to vacillate and let opportunity escape.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 67",
+        "tags":["stubborn","change","learning","evolution"]
+    },
+    {
+        "text":"The Five Laws Of Gold:\nI. Gold cometh gladly and in increasing quantity to any man who will put by not less than one-tenth of his earnings to create an estate for his future and that of his family.\nII. Gold laboreth diligently and contentedly for the wise owner who finds for it profitable employment, multiplying even as the flocks fo the field.\nIII. Gold clingeth to the protection of the cautious owner who invests it under the advice of men wise in its handling.\nIV. Gold slippeth away from the man who invests it in businesses or purposes with which he is not familiar or which are not approved by those skilled in its keep.\nV. Gold flees the man who would force it to impossible earnings or who followeth the alluring advice of tricksters and schemers or who trusts it to his own inexperience and romantic desires in investment.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_",
+        "tags":["advice","wealth","frugality", "prudence"]
+    },
+    {
+        "text":"Better a little caution than a great regret.",
+        "attribution":"George S. Clason",
+        "source":"_The Richest Man In Babylon_, pg. 100",
+        "tags":["advice","wealth","frugality", "prudence"]
+    },
+    {
+        "text":"My default perspective is that of the philosophical materialist, who believes that matter is the fundamental substance of the world and the physical laws it obeys should be able to explain everything that happens. I start from the assumption that nature is all that there is and gravitate toward scientific explanations of phenomena.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 12",
+        "tags":["philosophy","philosophical materialism","perspective", "faith", "science"]
+    },
+    {
+        "text":"Habits are undeniably useful tools, relieving us of the need to run a complex mental operation every time we're confronted with a new task or situation. Yet they also relieve us of the need to stay awake to the world: to attend, feel, think, and then act in a deliberate manner.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 16",
+        "tags":["habits"]
+    },
+    {
+        "text":"Mysticism is the antidote to fundamentalism.",
+        "attribution":"Rick Doblin",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 37",
+        "tags":["mysticism", "fundamentalism","beliefs"]
+    },
+    {
+        "text":"\"But to go from being very sure that the opposite is true\"--that consciousness is the product of our gray matter--\"to be unsure is an immense shift.\" I asked him if he agreed with something I'd read the Dalai Lama had said, that the idea that brains create consciousness--an idea accepted without question by most scientists--\"is a metaphysical assumption, not a scientific fact.\"",
+        "attribution":"Rick Doblin",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 41",
+        "tags":["beliefs","consciousness"]
+    },
+    {
+        "text":"Descriptions of such experiences always sound a little thin, at least when compared with the emotional impact people are trying to convey; for a life-transforming event, the words can seem paltry. When I mentioned this to Richards, he smiled. \"you have to image a caveman transported into the middle of Manhattan. He sees buses, cell phones, skyscrapers, airplanes. Then zap him back to his cave. What does he say about the experience? 'It was big, it was impressive, it was loud.' He doesn't have the vocabulary for 'skyscraper, 'elevator,' 'cell phone.' Maybe he has an intuitive sense there was some sort of significance or order to the scene. But there are words we need that don't yet exist. We've got five crayons when we need fifty thousand different shades.\"",
+        "attribution":"Bill Richards",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 54",
+        "tags":["limits of imagination","experience","ineffable"]
+    },
+    {
+        "text":"You go deep enough or far out enough in consciousness and you will bump into the sacred. It's not something we generate; it's something out there waiting to be discovered.",
+        "attribution":"Bill Richards",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 55",
+        "tags":["sacred","discoverable","consciousness"]
+    },
+    {
+        "text":"That says something important about how reluctant cultures are to expose themselves to the changes these kinds of compounds can occasion. There is so much authority that comes out of the primary mystical experience that it can be threatening to existing hierarchical structures.",
+        "attribution":"Roland Griffiths",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 59",
+        "tags":["mystical experiences","power","authority"]
+    },
+    {
+        "text":"The true method of knowledge is experiment.",
+        "attribution":"William Blake",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 83",
+        "tags":["experiment","knowledge"]
+    },
+    {
+        "text":"The Nahuatl word for mushrooms--flesh of the gods--must have sounded to Spanish ears like a direct challenge to the Christiaan Sacrament.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 109",
+        "tags":["authority", "power", "colonization"]
+    },
+    {
+        "text":"I had always assumed access to a spiritual dimension hinged on one's acceptance of the supernatural--of God, of a Beyond--but now I'm not so sure.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_",
+        "tags":["spirituality","divine"]
+    },
+    {
+        "text":"Unlike the work of scientists, who can simplify the problems they work on, \"problem solving in engineering always involves irreducible complexity. You're always balancing complex variables you can never get perfect, so you're desperately searching to find patterns. LSD shows you patterns.\"",
+        "attribution":"Peter Schartz",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 182",
+        "tags":["problem solving","lsd", "pattern recognition"]
+    },
+    {
+        "text":"It is one of the many paradoxes of psychedelics that these drugs can sponsor an ego-dissolving experience that in some people quickly leads to massive ego inflation.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 193",
+        "tags":["psychedelics","lsd", "ego"]
+    },
+    {
+        "text":"It's often said that a political scandal is what happens when someone in power speaks the truth.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 213",
+        "tags":["politics","scandal", "truth", "power"]
+    },
+    {
+        "text":"It was one thing to use these drugs to treat the ill and maladjusted--society will indulge any effort to help the wayward individual conform to its norms--but it is quite another to use them to treat society itself as if it were sick and to turn the ostensibly healthy into wayward individuals.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 214",
+        "tags":["society", "norms", "status quo", "power"]
+    },
+    {
+        "text":"Normally, rites of passage help knit societies together as the young cross over hurdles and through gates erected and maintained by the elders, coming out on the other side to take their place in the community of adults. Not so with the psychedelic journey in the 1960s, which at its conclusion dropped its young travelers onto a psychic landscape unrecognizable to their parents. That this won't ever happen again is reason to hope that the next chapter in psychedelic history won't be quite so divisive.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 216",
+        "tags":["society", "norms","rite of passage", "status quo", "power"]
+    },
+    {
+        "text":"There are three things people are afraid of: death, other people, and their own minds.",
+        "attribution":"R.D. Laing",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_",
+        "tags":["fear","humanity","death"]
+    },
+    {
+        "text":"These medicines have shown me that something quote-unquote impossible exists. But I don't think it's magic or supernatural. It's a technology of consciousness we don't understand yet.",
+        "attribution":"Fritz",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 239",
+        "tags":["psychedelics","techonolgy","consciousness"]
+    },
+    {
+        "text":"A platitude is precisely what is left of a truth after it has been drained of all emotion. To resaturate that dried husk with feeling is to see it again for what it is: the loveliest and most deeply rooted of truths, hidden in plain sight.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 251",
+        "tags":["platitude", "emotion", "truth"]
+    },
+    {
+        "text":"To put words to an experience that was in fact ineffable at the time, and then to shape them into sentences and then a story, is inevitably to do it a kind of violence. But the alternative is, literally, unthinkable.",
+        "attribution":"Michael Pollan",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 271",
+        "tags":["writing", "storytelling", "violence", "ineffable"]
+    },
+    {
+        "text":"A wandering mind is an unhappy mind",
+        "attribution":"",
+        "source":"_How To Change Your Mind: What The New Science Of Psychedelics Teaches Us About Consciousness, Dying, Addiction, Depression, And Transcendence_, pg. 304",
+        "tags":["default mode network", "happiness"]
+    },
+    {
+        "text":"",
+        "attribution":"",
+        "source":"",
+        "tags":[]
     }
 ]
