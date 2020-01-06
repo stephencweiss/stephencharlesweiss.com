@@ -7,7 +7,8 @@ const {
   publishMonth,
   publishYear,
 } = require('./src/utils/dateFns')
-const entryTemplate = path.resolve(`./src/templates/entry.js`)
+const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
+const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -145,7 +146,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: book.node.fields.slug,
-        component: entryTemplate,
+        component: bookTemplate,
         context: {
           slug: book.node.fields.slug,
           previous,

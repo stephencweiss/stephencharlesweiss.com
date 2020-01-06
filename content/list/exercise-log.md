@@ -30,13 +30,14 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 | September | 7    | 3   | 5     | 15    |
 | October   | 8    | 1   | 0     | 9     |
 | November  | 7    | 4   | 0     | 11    |
-| December  | 3    | 3   | 1     | 6     |
-| Totals    | 49   | 61  | 23    | 133   |
+| December  | 4    | 3   | 1     | 8     |
+| Totals    | 50   | 61  | 23    | 135   |
 
 ### December 2019
 
-**Summary:** 7 workouts, 3 swimming, 3 rowing, 1 yoga
+**Summary:** 8 workouts, 4 swimming, 3 rowing, 1 yoga
 
+- 2019/12/31 - swimming
 - 2019/12/20 - rowing
 - 2019/12/19 - swimming
 - 2019/12/17 - rowing & yoga
