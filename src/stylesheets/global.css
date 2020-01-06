@@ -105,8 +105,8 @@ ol,
 dl,
 blockquote,
 img {
-  margin-bottom: 1.125em;
-  line-height: 1.25em;
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
 }
 
 abbr {
@@ -151,7 +151,7 @@ blockquote:before {
   position: absolute;
   font-style: italic;
   content: '\201C';
-  line-height: 1em;
+  line-height: .75em;
   left: -0.75em;
   top: 0;
 }
