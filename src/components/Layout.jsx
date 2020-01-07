@@ -6,6 +6,7 @@ import theme  from "../theme"
 
 const Paper = styled.div`
   ${theme}
+  min-height: 100vh;
 `
 const Wrapper = styled.div`
     max-width: 40em;
