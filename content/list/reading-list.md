@@ -165,12 +165,15 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Centennial_ by James Michener
 1. _Hawaii_ by James Michener
 1. _Space_ by James Michener
-1. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
+1. _Nome Trilogy, Book I: Truckers_ by Terry Pratchett
+1. _Nome Trilogy, Book II: Diggers_ by Terry Pratchett
+1. _Nome Trilogy, Book III: Wings_ by Terry Pratchett
+1. _Atlas Shrugged_ by Ayn Rand
+1. _The Fountainhead_ by Ayn Rand
 1. _The Devil's Disciple_ by Bernard Shaw
 1. _Pygmalion_ by Bernard Shaw
 1. _Saint Joan_ by Bernard Shaw
-1. _The Fountainhead_ by Ayn Rand
-1. _Atlas Shrugged_ by Ayn Rand
+1. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
 1. _Infinite Jest_ by David Foster Wallace
 1. _Ben-Hur: A Tale of the Christ_ by Lew Wallace
 1. [_Old School_ by Tobias Wolff](https://smile.amazon.com/School-Vintage-Contemporaries-Tobias-Wolff-ebook/dp/B000FC28A8/ref=sr_1_1?crid=2C5BSQR6T2POL&keywords=old+school+wolff&qid=1575749992&sprefix=old+school+wolf%2Caps%2C147&sr=8-1)
