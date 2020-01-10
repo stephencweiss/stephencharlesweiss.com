@@ -179,12 +179,13 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Business
 
 1. _Inspired: How to Create Tech Products Customers Love_ by Marty Cagan
-1. [_Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page](https://www.amazon.com/gp/product/0525536221/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=stuhac-20&creative=9325&linkCode=as2&creativeASIN=0525536221&linkId=caf73180b879d7dca4cb4465b584a52a)
+1. _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 1. _The Effective Executive_ by Peter Drucker
 1. _Getting To Yes_ by Fisher, Ury and Patton
-1. [_Lost and Founder: A Painfully Honest Field Guide to the Startup World_ by Rand Fishkin](https://www.amazon.com/Lost-Founder-Painfully-Honest-Startup/dp/0735213321)
+1. _Lost and Founder: A Painfully Honest Field Guide to the Startup World_ by Rand Fishkin
 1. _The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you_ by Rob Fitzpatrick
 1. _The Four_ by Scott Galloway
+1. _The Toyota Way: 14 Management Principles from the World's Greatest Manufacturer_ by Jeffrey Liker
 1. _The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Readically Successful Businesses_ by Eric Ries
 1. _Radical Candor_ by Kim Scott
 
