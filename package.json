@@ -62,16 +62,17 @@
     "license": "MIT",
     "main": "n/a",
     "scripts": {
+        "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
+        "build": "gatsby build",
         "dev": "gatsby develop",
+        "develop": "npm run dev",
+        "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
+        "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
         "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
         "lint:css": "stylelint './src/**/*.jsx?'",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-        "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-        "develop": "npm run dev",
         "nofilter": "nofilter='true' npm run dev",
+        "preview": "npm run nofilter",
         "start": "npm run develop",
-        "build": "gatsby build",
-        "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-        "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build"
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
     }
 }
