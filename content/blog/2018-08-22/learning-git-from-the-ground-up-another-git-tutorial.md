@@ -1,6 +1,7 @@
 ---
 title: 'Learning Git from the ground up - another Git tutorial'
 date: '2018-08-22'
+update: '2020-01-19'
 category: ['programming']
 tags: ['git', 'learning to code', 'tutorial', 'version control']
 ---
@@ -69,6 +70,8 @@ Commits are fine, but they’re only really useful because Git will track all of
 
 ## Revert vs Reset
 
+> Update: For even simpler uses of reset, check out my new post: [Git Tips: Undo & Clean](../../2020-01-19/git-undo-and-clean)
+
 Revert will reverse the changes from a commitment and is used mostly to undo faulty commits. This means that you can revert specific commits without affecting others. Revert works by making a new commit with the changes removed. You can revert any past commit. This can be the last commit, `$ git revert HEAD`.
 
 Or `$ git revert -n master~5..master~2` which will revert the changes done by commits from the fifth last commit in master (included) to the third last commit in master (included), but do not create any commit with the reverted changes. The revert only modifies the working tree and the index. This example came from <https://git-scm.com/docs/git-revert> and helps show the different options associated with reverting.
@@ -86,7 +89,7 @@ Branching gives you a flexibility to experiment and try to build new features wi
 When you create a branch, it’s similar to creating an alternate universe. In the branch, you can edit, tweak, and modify the program in any way you see fit.
 
 This enables experimentation without affecting the core product. Ultimately, if those experiments are successful, you’ll want to bring them back into the `master` branch.
-
+ca
 To create a branch, use the `$ git checkout -b [branch name]` command.
 
 This is short hand for:
