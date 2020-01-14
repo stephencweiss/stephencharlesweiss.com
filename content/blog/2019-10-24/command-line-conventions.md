@@ -2,7 +2,7 @@
 title: 'Conventions For The Command Line'
 date: '2019-10-24'
 category: ['programming']
-tags: ['cli', 'command line', 'syntax']
+tags: ['cli', 'command line', 'syntax', 'posix']
 ---
 
 The goal of most writing is to communicate a point to the reader.
@@ -15,12 +15,12 @@ I would go a step further and say that ignorance of the rules is no excuse. We s
 
 When writing how to utilize a command line utility, we have the standards set forth by the Open Group (and adopted widely, including by Microsoft).<sup>[2](#footnotes)</sup><a id="fn2"></a> Some of the more common syntax is summarized below:
 
-| Symbol | Meaning |
-| ————— | ——————————————————————— |
-| `<parameter_name>` or `<parameter name>` | Names of parameters that require substitution by actual values. |
-| `[ ]` | The square brackets mean that the argument is optional and can be omitted. |
-| `|` | Arguments separated by the `|` (vertical bar or pipe) are mutually exclusive
-| `(…)` | Ellipses are used to denote that one or more occurrences of an operand are allowed. |
+| Symbol                                   | Meaning                                                                             |
+| ---------------------------------------- | ----------------------------------------------------------------------------------- |
+| `<parameter_name>` or `<parameter name>` | Names of parameters that require substitution by actual values.                     |
+| `[ ]`                                    | The square brackets mean that the argument is optional and can be omitted.          |
+| `|`                                      | Arguments separated by the `|` (vertical bar or pipe) are mutually exclusive        |
+| `(…)`                                    | Ellipses are used to denote that one or more occurrences of an operand are allowed. |
 
 _Personal aside_: It’s interesting to see the evolution in my own blog as I began to intuit these rules through exposure. One of my very first posts which made use of code blocks covered the use of git branches. I wrote:
 
