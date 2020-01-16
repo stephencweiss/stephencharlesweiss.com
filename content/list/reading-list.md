@@ -18,7 +18,7 @@ title: 'Reading List'
 Total: 1
 
 ### _January 2020_
-- _Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell
+- [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
 
 ### 2019
 
