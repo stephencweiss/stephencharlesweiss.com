@@ -14,10 +14,13 @@ title: 'Reading List'
 - _Don Quixote_ by Cervantes
 
 ## Finished
+
 ### 2020
+
 Total: 1
 
 ### _January 2020_
+
 - [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
 
 ### 2019
@@ -214,6 +217,10 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _The Four Agreements_ by Don Miguel Ruiz
 1. _Justice: What's The Right Thing To Do?_ by Michael J. Sandel
 1. _Every Tool's A Hammer_ by Adam Savage
+
+### Tech
+
+1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
 
 ### Other
 
