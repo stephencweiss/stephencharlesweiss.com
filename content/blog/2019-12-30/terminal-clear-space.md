@@ -18,7 +18,7 @@ There are a few different ways to do this:
 
 This is the easiest solution. When the terminal window gets full, just press enter or `CTRL (⌃) + C` (exiting the process, even if there is not one running), until the previous print out is above the fold.
 
-![](/i/95af6595-8be8-4707-b08e-1ea6aae9ef4e.jpg)
+![](./clear-manual.jpg)
 
 ## Run Built-In Clear Commands
 

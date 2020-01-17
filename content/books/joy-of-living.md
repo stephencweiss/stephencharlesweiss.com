@@ -1,6 +1,7 @@
 ---
 title: "Three Takeaways From Yongey Mingyur Rinpoche's The Joy Of Living"
 author: 'Yongey Mingyur Rinpoche'
+authorLast: 'Mingyur'
 bookTitle: 'The Joy of Living'
 date: '2019-12-27'
 publish: '2020-01-09'

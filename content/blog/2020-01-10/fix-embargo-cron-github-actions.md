@@ -46,11 +46,11 @@ To add a build hook, we log into Netlify, select the site and choose Settings.
 
 Then, on the left, select "Build & Deploy" and scroll down to "Build Hooks". Select "Add build hook". From here, we can name the hook.
 
-![](./build-hooks-configure.png)
+![](./build-hook-configure.png)
 
 Once saved, Netlify will produce a token we can use to trigger a build. The token should be considered sensitive and should be kept private (similar to an API key).
 
-![](./build-hooks-result.png)
+![](./build-hook-result.png)
 
 Now that we have a build hook, we need to schedule the invocation of it. For that, we'll use a cron job via GitHub Actions.
 

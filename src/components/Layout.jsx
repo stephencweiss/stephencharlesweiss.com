@@ -31,8 +31,8 @@ function Layout(props) {
       <Paper>
           <Wrapper>
 
-          <Header title={title} root={location.pathname === rootPath} />
           <button onClick={handleClick}>{mode}</button>
+          <Header title={title} root={location.pathname === rootPath} />
           {children}
           <footer>
             © {new Date().getFullYear()}, Built with ❤️ using

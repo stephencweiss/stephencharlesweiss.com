@@ -2,8 +2,9 @@
 title: 'Styling Markdown Code Snippets With PrismJS'
 date: '2019-12-24'
 publish: '2020-01-15'
+update: '2020-01-15'
 category: ['programming']
-tags: ['prismjs','javascript','gatsby','styling','css']
+tags: ['prismjs', 'javascript', 'gatsby', 'styling', 'css']
 ---
 
 There are a number of different syntax highlighters for Javascript, but the one I've been using lately is PrismJS (due in large part to its great Gatsby support).
@@ -23,6 +24,7 @@ Some of the features I've explored so far include:
 3. Line Highlighting
 4. Line Numbering
 5. Inline Code Styling
+6. Diff Highlighting
 
 ## Code Titles
 
@@ -166,6 +168,26 @@ Alternatively, javascript can be done with "js> const variable = 42;", like so: 
 One thing I noticed while playing with the inline code styles is the styles will be applied similarly as to a fenced code block.
 
 Specifically, I noticed this because of the `white-space` attribute in the `solarized-light` theme is `css> white-space: pre`. This was different behavior than my standard `html> <p>` tag. Refer to [MDN for more on the `white-space` attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space).
+
+## Diff Highlighting
+
+This is more calling out that `diff` is a language in PrismJS and can be used to notate changes between snippets.
+
+```diff
+{
+-    resolve: `old-plugin`,
++    resolve: `gatsby-remark-prismjs`,
+    options: {
+        inlineCodeMarker: '>',
+    },
+}
+```
+
+Normally, PrismJS also enables several other features such as language specific diffs (instead of just `diff`, it's `diff-javascript` for example), and diff highlighting.
+
+See the [PrismJS page](https://prismjs.com/plugins/diff-highlight/#example) for more specifics.
+
+I plan on investigating these further in the future to see what CSS I'm missing with my Gatsby site that is preventing this styling.
 
 ## Resources
 

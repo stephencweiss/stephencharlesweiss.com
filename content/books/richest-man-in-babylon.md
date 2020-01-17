@@ -1,6 +1,7 @@
 ---
 title: "Three Takeaways From George S. Clason's The Richest Man In Babylon"
 author: 'George S. Clason'
+authorLast: 'Clason'
 bookTitle: 'The Richest Man In Babylon'
 date: '2020-01-02'
 category: ['reading notes']

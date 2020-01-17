@@ -15,18 +15,26 @@ title: 'Reading List'
 
 ## Finished
 
+### 2020
+
+Total: 1
+
+### _January 2020_
+
+- [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
+
 ### 2019
 
 Total: 35
 
 ### _December 2019_
 
-- [_The Joy of Living_ by Yongey Mingyur Rinpoche](../../../books/reading-notes-joy-of-living)
+- [_The Joy of Living_ by Yongey Mingyur Rinpoche](../../../books/joy-of-living)
 
 ### _November 2019_
 
 - _Range_ by David Epstein
-- _Richest Man in Babylon_ by George Samuel Clason
+- [_Richest Man in Babylon_ by George Samuel Clason](../../../books/richest-man-in-babylon)
 - _Shape Up_ by Ryan Singer
 - _How To Change Your Mind_ by Michael Pollan
 
@@ -114,14 +122,14 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 ### "Pop" and not so pop-Sci
 
-1. [_This Idea Is Brilliant_ Edited By John Brockman](https://www.edge.org/conversation/john_brockman-this-idea-is-brilliant)
+1. _This Idea Is Brilliant_ Edited By John Brockman
 1. _Peak: Secrets from the New Science of Expertise_ by K. Anders Ericsson, Robert Pool
 1. _The Half-Life of Facts_ by Arbesman
 1. _Smarter, Faster, Better_ by Charles Duhigg
 1. _Chaos_ by James Gleick
-1. [_Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_ by Daniel Goleman & Richard J. Davidson](https://www.amazon.com/Altered-Traits-Science-Reveals-Meditation/dp/0399184392?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-brave-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=0399184392&sa-no-redirect=1&pldnSite=1)
+1. _Altered Traits: Science Reveals How Meditation Changes Your Mind, Brain, and Body_ by Daniel Goleman & Richard J. Davidson
 1. _The Undercover Economist_ by Tim Harford
-1. [_The Neuroscientist Who Lost Her Mind: My Tale of Madness and Recovery_ by Barbara K. Lipska, Elaine McArdle](http://bookateria.publishersmarketplace.com/books/9781328787309/?the-neuroscientist-who-lost-her-mind-my-tale-of-madness-and-recovery-by-barbara-k-lipska--elaine-mcardle)
+1. _The Neuroscientist Who Lost Her Mind: My Tale of Madness and Recovery_ by Barbara K. Lipska, Elaine McArdle
 1. _Kluge - The Haphazard Evolution of the Human Mind_ by Gary Marcus
 1. _The Success Equation: Untangle Skill and Luck in Business, Sports, and Investing_ by Michael Mauboussin
 1. _The Lever of the Riches: Technological Creativity and Economic Progress_ by Joel Mokyr
@@ -133,14 +141,14 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Theory of Games and Economic Behavior_ by John von Neumann and Oskar Morgenstern
 1. _Drive: The Surprising Truth About What Motivates Us_ by Daniel H. Pink
 1. _When: The Scientific Secrets of Perfect Timing_ by Dan Pink
-1. [_The Rational Optimist: How Prosperity Evolves (P.s.)_ by Matt Ridley](https://www.amazon.com/gp/aw/d/0061452068/ref=mp_s_a_1_1?ie=UTF8&qid=1523398870&sr=8-1&pi=AC_SX236_SY340_QL65&keywords=matt+ridley&dpPl=1&dpID=41MLwBkcIKL&ref=plSrch)
+1. _The Rational Optimist: How Prosperity Evolves (P.s.)_ by Matt Ridley
 1. _Why Zebras Don't Get Ulcers_ by Sapolsky
 1. _The Believing Brain_ by Michael Shermer
-1. [_Infinite Powers: How Calculus Reveals the Secrets of the Universe_](https://www.goodreads.com/en/book/show/40796176-infinite-powers) by Steven H. Strogatz
+1. _Infinite Powers: How Calculus Reveals the Secrets of the Universe_ by Steven H. Strogatz
 1. _Alchemy_ by Rory Sutherland
 1. _The Efficiency Paradox_ by Edward Tanner
 1. _Superforecasters_ by Phillip Tetlock
-1. [_The Power of Bad: How the Negativity Effect Rules Us and How We Can Rule It_ by John Tierney and Roy F. Baumeister](https://www.penguinrandomhouse.com/books/313665/the-power-of-bad-by-john-tierney-and-roy-f-baumeister/)
+1. _The Power of Bad: How the Negativity Effect Rules Us and How We Can Rule It_ by John Tierney and Roy F. Baumeister
 1. _Ultra Learners_ by Scott Young
 
 ### Fiction
@@ -176,7 +184,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
 1. _Infinite Jest_ by David Foster Wallace
 1. _Ben-Hur: A Tale of the Christ_ by Lew Wallace
-1. [_Old School_ by Tobias Wolff](https://smile.amazon.com/School-Vintage-Contemporaries-Tobias-Wolff-ebook/dp/B000FC28A8/ref=sr_1_1?crid=2C5BSQR6T2POL&keywords=old+school+wolff&qid=1575749992&sprefix=old+school+wolf%2Caps%2C147&sr=8-1)
+1. _Old School_ by Tobias Wolff
 1. _Mrs. Dalloway_ by Virginia Woolf
 
 ### Business
@@ -184,10 +192,12 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Inspired: How to Create Tech Products Customers Love_ by Marty Cagan
 1. _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 1. _The Effective Executive_ by Peter Drucker
+1. _Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It_ by April Dunford
 1. _Getting To Yes_ by Fisher, Ury and Patton
 1. _Lost and Founder: A Painfully Honest Field Guide to the Startup World_ by Rand Fishkin
 1. _The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you_ by Rob Fitzpatrick
 1. _The Four_ by Scott Galloway
+1. _The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company_ by Bob Iger
 1. _The Toyota Way: 14 Management Principles from the World's Greatest Manufacturer_ by Jeffrey Liker
 1. _The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Readically Successful Businesses_ by Eric Ries
 1. _Radical Candor_ by Kim Scott
@@ -209,34 +219,38 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Zen and The Art of Motorcycle Maintenance_ by Pirsig
 1. _In Praise of Forgetting_ by David Rieff
 1. _The Four Agreements_ by Don Miguel Ruiz
-1. [_Justice: What's The Right Thing To Do?_ by Michael J. Sandel](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508?sa-no-redirect=1&pldnSite=1)
+1. _Justice: What's The Right Thing To Do?_ by Michael J. Sandel
 1. _Every Tool's A Hammer_ by Adam Savage
+
+### Tech
+
+1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
 
 ### Other
 
 1. _Democracy for Realists: Why Elections Do Not Produce Responsive Government_ by Achen, C. and Bartels, L.
 1. _#Girlboss_ by Sophia Amoruso
-1. [_Does Science Advance One Funeral at a Time?_ by Pierre Azoulay, Christian Fons-Rosen, Joshua S. Graff Zivin](http://www.nber.org/papers/w21788.pdf)
+1. _Does Science Advance One Funeral at a Time?_ by Pierre Azoulay, Christian Fons-Rosen, Joshua S. Graff Zivin
 1. _After Picketty_ - Boushey et al
 1. _The Road to Character_ by David Brooks
 1. _How To Win Friends And Influence People_ by Dale Carnegie
 1. _The World Beyond Your Head: On Becoming an Individual in an Age of Distraction_ by Matthew B. Crawford
 1. _The Beginning of Infinity: Explanations That Transform the World_ by David Deutsch
 1. _How Not To Be Wrong: The Power of Mathematical Thinking_ by Jordan Ellenberg
-1. [_Collaborative Circles: Friendship Dynamics and Creative Work_ by Michael P Farrell](https://www.amazon.com/dp/0226238679/?tag=thneyo0f-20)
+1. _Collaborative Circles: Friendship Dynamics and Creative Work_ by Michael P Farrell
 1. _Bad Feminist_ by Roxanne Gay
 1. _Hunger_ by Roxanne Gay
 1. _Not That Bad_ by Roxanne Gay
 1. _Ordeal of Change_ by Eric Hoffer
-1. [_Tribe: On Homecoming and Belonging_ by Sebastian Junger](https://www.amazon.com/gp/product/1455566381/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=stuhac-20&creative=9325&linkCode=as2&creativeASIN=1455566381&linkId=fdb6575b03bfc9b0d79536032445c6c0)
+1. _Tribe: On Homecoming and Belonging_ by Sebastian Junger
 1. _Interpreter of Maladies_ by Jhumpa Lahiri
 1. _The Namesake_ by Jhumpa Lahiri
 1. _Amusing Ourselves to Death_ by Neil Postman
-1. [_Life Inc: How Corporatism Conquered the World, and How We Can Take It Back_ by Douglas Rushkoff](https://www.amazon.com/dp/0812978501/ref=cm_sw_r_oth_tai_jL3KAbHYRQNQ3)
-1. [_Present Shock: When Everything Happens Now_ by Douglas Rushkoff](https://www.amazon.com/dp/1617230103/ref=cm_sw_r_oth_tai_bM3KAbW2T5F35)
-1. [_Program or Be Programmed: Ten Commands for a Digital Age_ by Douglas Rushkoff](https://www.amazon.com/dp/159376426X/ref=cm_sw_r_oth_tai_DK3KAbVSF2Z2B?sa-no-redirect=1&pldnSite=1)
-1. [_Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity_ by Douglas Rushkoff](https://www.amazon.com/gp/product/014313129X/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=stuhac-20&creative=9325&linkCode=as2&creativeASIN=014313129X&linkId=741cae12ca970e4c38126d0fc972ebb3)
+1. _Life Inc: How Corporatism Conquered the World, and How We Can Take It Back_ by Douglas Rushkoff
+1. _Present Shock: When Everything Happens Now_ by Douglas Rushkoff
+1. _Program or Be Programmed: Ten Commands for a Digital Age_ by Douglas Rushkoff
+1. _Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity_ by Douglas Rushkoff
 1. _Revenge of Analog_ by David Sax
-1. [_Powers of Two: The Essence of Innovation in Creative Pairs_ by Joshua Wolk Shenk](https://www.amazon.com/dp/1848545924/?tag=thneyo0f-20)
+1. _Powers of Two: The Essence of Innovation in Creative Pairs_ by Joshua Wolk Shenk
 1. _Sex Object_ by Jessica Valenti
-1. [_The XX Factor: How the Rise of Working Women Has Created a Far Less Equal World_ by Alison Wolf, Chrystia Freeland](https://www.amazon.com/XX-Factor-Working-Women-Created/dp/1510718389/ref=nodl_)
+1. _The XX Factor: How the Rise of Working Women Has Created a Far Less Equal World_ by Alison Wolf, Chrystia Freeland
