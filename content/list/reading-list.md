@@ -173,12 +173,15 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Centennial_ by James Michener
 1. _Hawaii_ by James Michener
 1. _Space_ by James Michener
-1. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
+1. _Nome Trilogy, Book I: Truckers_ by Terry Pratchett
+1. _Nome Trilogy, Book II: Diggers_ by Terry Pratchett
+1. _Nome Trilogy, Book III: Wings_ by Terry Pratchett
+1. _Atlas Shrugged_ by Ayn Rand
+1. _The Fountainhead_ by Ayn Rand
 1. _The Devil's Disciple_ by Bernard Shaw
 1. _Pygmalion_ by Bernard Shaw
 1. _Saint Joan_ by Bernard Shaw
-1. _The Fountainhead_ by Ayn Rand
-1. _Atlas Shrugged_ by Ayn Rand
+1. _Anna Karenina_ by Leo Tolstoy (Garnett translation)
 1. _Infinite Jest_ by David Foster Wallace
 1. _Ben-Hur: A Tale of the Christ_ by Lew Wallace
 1. _Old School_ by Tobias Wolff
@@ -195,6 +198,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _The Mom Test: How to talk to customers & learn if your business is a good idea when everyone is lying to you_ by Rob Fitzpatrick
 1. _The Four_ by Scott Galloway
 1. _The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company_ by Bob Iger
+1. _The Toyota Way: 14 Management Principles from the World's Greatest Manufacturer_ by Jeffrey Liker
 1. _The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Readically Successful Businesses_ by Eric Ries
 1. _Radical Candor_ by Kim Scott
 

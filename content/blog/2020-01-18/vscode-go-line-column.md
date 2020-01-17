@@ -1,5 +1,5 @@
 ---
-title: VSCode: 'Go To & Column Numbers'
+title: 'VSCode: Go To & Column Numbers'
 date: '2020-01-07'
 publish: '2020-01-18'
 category: ['programming']
