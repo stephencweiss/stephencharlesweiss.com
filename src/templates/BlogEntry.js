@@ -9,13 +9,12 @@ import PostNavigation from '../components/PostNavigation'
 
 const Date = styled.p`
     color: #999;
-    float: left;
-    clear: left;
-    display: block;
+    margin-bottom: 0;
   }`
 
 const Title = styled.h1`
-  display: block;
+  display: flex;
+  justify-content: flex-start;
 `
 const Entry = styled.div`
   #resources + ul > li,
@@ -33,8 +32,11 @@ function EntryTemplate(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+
       <Date>{publish ? publish : date}</Date>
       <Title>{title}</Title>
+      </div>
       <Entry
         className={'entry'}
         dangerouslySetInnerHTML={{ __html: entry.html }}
