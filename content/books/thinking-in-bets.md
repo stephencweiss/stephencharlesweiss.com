@@ -1,6 +1,7 @@
 ---
-title: `Notes from Annie Duke's "Thinking In Bets"`
+title: 'Notes from "Thinking In Bets" by Annie Duke'
 author: 'Annie Duke'
+authorLast: 'Duke'
 bookTitle: 'Thinking In Bets'
 date: '2020-01-16'
 category: ['reading notes']

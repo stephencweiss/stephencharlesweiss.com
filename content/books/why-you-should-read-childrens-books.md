@@ -1,6 +1,7 @@
 ---
 title: "Takeaways from Katherine Rundell's Why You Should Reach Children's Books, Even Though You Are So Old and Wise"
 author: 'Katherine Rundell'
+authorLast: 'Rundell'
 bookTitle: "Why You Should Reach Children's Books, Even Though You Are So Old and Wise"
 date: '2020-01-16'
 publish: '2020-01-16'
