@@ -4,13 +4,13 @@ import PostLink from '../components/PostLink'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import sortTitles from '../utils/sortTitles'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function Books(props) {
   const { data } = props
   const { title: siteTitle } = useSiteMetadata()
-  const books = data.books.edges.sort(sortTitles)
+  const books = data.books.edges
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Books" keywords={['reading', 'notes', 'books']} />
@@ -35,6 +35,7 @@ export const pageQuery = graphql`
   query {
     books: allMarkdownRemark(
       filter: { fields: { sourceInstance: { eq: "books" } } }
+      sort: { order: ASC, fields: [frontmatter___authorLast, frontmatter___author, frontmatter___bookTitle] }
     ) {
       edges {
         node {
