@@ -1,7 +1,8 @@
 [
     {
         "text": "Yes and no.\nBoth are choices. Only yes is an obligation.",
-        "source": "[James Clear: 2018 Annual Review](https://jamesclear.com/2018-annual-review)",
+        "source": "James Clear: 2018 Annual Review",
+        "url": "https://jamesclear.com/2018-annual-review",
         "notes": "A variant of James Clear's 'No is a decision. Yes is a responsibility' from his 2018 Annual Review",
         "tags": [
             "obligations",
@@ -23,7 +24,8 @@
     },
     {
         "text": "You don't just race onward to whatever comes next, you bring the past with you.",
-        "source": "[Command Line Heroes: The Infrastructure Effect: COBOL and Go](https://www.redhat.com/en/command-line-heroes/season-3/the-infrastructure-effect)",
+        "source": "Command Line Heroes: The Infrastructure Effect: COBOL and Go",
+        "url":"https://www.redhat.com/en/command-line-heroes/season-3/the-infrastructure-effect",
         "attribution": "Saron Yitbarek",
         "tags": [
             "future",
@@ -35,7 +37,8 @@
     {
         "text": "Moral indignation is a technique used to endow an idiot with dignity",
         "attribution": "Marshall McLuhan",
-        "source": "[An Optimistic History of the Next Decade](https://www.nytimes.com/2020/01/02/opinion/2020s-decade.html)",
+        "source": "An Optimistic History of the Next Decade",
+        "url":"https://www.nytimes.com/2020/01/02/opinion/2020s-decade.html",
         "tags": [
             "dignity",
             "idiot",
@@ -320,7 +323,8 @@
     {
         "text": "If you want to reach (and potentially help) a lot of people, putting text on the internet and giving it away works pretty well, but monetization for that works poorly.",
         "attribution": "Dan Luu",
-        "source": "https://danluu.com/algorithms-interviews/",
+        "source": "Algorithms Interview: Theory vs. Practice",
+        "url": "https://danluu.com/algorithms-interviews/",
         "tags": [
             "value",
             "monetization"
@@ -452,6 +456,16 @@
         "tags": [
             "childhood",
             "childishness"
+        ]
+    },
+    {
+        "text": "When one teaches, two learn.",
+        "attribution": "Robert Heinlein",
+        "source": "James Clear",
+        "tags": [
+            "teaching",
+            "learning",
+            "mentorship"
         ]
     },
     {
