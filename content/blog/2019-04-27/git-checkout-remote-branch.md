@@ -1,7 +1,7 @@
 ---
 title: 'Git - Checking Out Remote Branches'
 date: '2019-04-27'
-update: '2020-01-22'
+updated: ['2020-01-22']
 category: ['programming']
 tags: ['git', 'remotes', 'checkout']
 ---

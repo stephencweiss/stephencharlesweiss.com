@@ -27,9 +27,18 @@ function publishYear(node) {
     .format('YYYY-MM-DD')
 }
 
+const reducerToMostRecentDateBeforeBuild = (accumulator, curVal) => {
+  return curVal && dayjs(curVal).isAfter(dayjs(accumulator)) && BUILD_TIME.isAfter(curVal)
+    ? curVal
+    : accumulator
+}
+
 function listDate(node) {
-  const { updated } = node.frontmatter
-  if (updated && BUILD_TIME.isAfter(dayjs(updated))) return updated
+  const { updated, publish, date } = node.frontmatter
+  const allDates = [...updated, publish, date].filter(val => val)
+  const listDate = allDates.reduce(reducerToMostRecentDateBeforeBuild)
+
+  if (listDate) return listDate
   return publishDate(node)
 }
 

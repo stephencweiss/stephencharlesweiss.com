@@ -1,7 +1,7 @@
 ---
 title: 'Showing up and the Daffodil Principle'
 date: '2017-05-19'
-updated: '2019-09-29'
+updated: ['2019-09-29']
 category: ['musings']
 tags: ['daffodil principle', 'grit', 'proxy']
 ---
