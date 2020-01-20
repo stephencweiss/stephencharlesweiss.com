@@ -3,8 +3,6 @@ title: 'Reading List'
 ---
 
 ## Actively Reading
-
-- _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 - _Silence Is The Key_ by Ryan Holiday
 - _Everything Curl_ by Daniel Stenberg
 
@@ -17,10 +15,11 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 1
+Total: 2
 
 ### _January 2020_
 
+- _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 - [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
 
 ### 2019
