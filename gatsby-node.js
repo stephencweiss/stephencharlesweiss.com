@@ -9,14 +9,19 @@ const {
 } = require('./src/utils/dateFns')
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
+const entryList = path.resolve(`./src/templates/BlogList.js`)
+const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(
     `
-    query allBlogQuery {
-        annualreviews: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "annual-review"}}}) {
+      query allBlogQuery {
+        annualreviews: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "annual-review" } } }
+        ) {
           edges {
             node {
               fields {
@@ -28,7 +33,15 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        blog: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}) {
+        blog: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: {
+            fields: {
+              isPublished: { eq: true }
+              sourceInstance: { eq: "blog" }
+            }
+          }
+        ) {
           edges {
             node {
               fields {
@@ -40,7 +53,10 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        books: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "books"}}}) {
+        books: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "books" } } }
+        ) {
           edges {
             node {
               fields {
@@ -52,7 +68,10 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        list: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "list"}}}) {
+        list: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "list" } } }
+        ) {
           edges {
             node {
               fields {
@@ -64,7 +83,15 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        other: allMarkdownRemark( filter: {fields: {sourceInstance: {nin: ["annual-review","blog","books", "list"]}}}) {
+        other: allMarkdownRemark(
+          filter: {
+            fields: {
+              sourceInstance: {
+                nin: ["annual-review", "blog", "books", "list"]
+              }
+            }
+          }
+        ) {
           edges {
             node {
               fields {
@@ -79,14 +106,18 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
-    if (result.errors ) {
+    if (result.errors) {
       throw result.errors
-    } else if ( result.data.other.edges.length > 0) {
-        throw new Error('posts included in "other" category - check to make sure all sources are accounted for')
+    } else if (result.data.other.edges.length > 0) {
+      throw new Error(
+        'posts included in "other" category - check to make sure all sources are accounted for'
+      )
     }
 
-    // Create blog posts pages.
+    // Blog ------------------------------------------->
     const posts = result.data.blog.edges
+
+    // Create blog posts pages.
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
@@ -101,8 +132,14 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create list pages.
+    /**
+     * Lists ------------------------------------------->
+     */
     const lists = result.data.list.edges
+
+    /**
+     *  Create list pages
+     */
     lists.forEach((list, index) => {
       const previous = index === lists.length - 1 ? null : lists[index + 1].node
       const next = index === 0 ? null : lists[index - 1].node
@@ -118,8 +155,12 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create annual review pages.
+    /**
+     * Reviews  ------------------------------------------->
+     */
     const annualReviews = result.data.annualreviews.edges
+
+    // Create annual review pages.
     annualReviews.forEach((review, index) => {
       const previous =
         index === annualReviews.length - 1
@@ -138,8 +179,12 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create book pages.
+    /**
+     * Books ------------------------------------------->
+     */
     const books = result.data.books.edges
+
+    // Create book pages.
     books.forEach((book, index) => {
       const previous = index === books.length - 1 ? null : books[index + 1].node
       const next = index === 0 ? null : books[index - 1].node
