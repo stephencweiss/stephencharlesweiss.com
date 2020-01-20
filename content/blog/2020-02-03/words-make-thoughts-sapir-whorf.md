@@ -1,7 +1,7 @@
 ---
 title: 'Words Make Thoughts, Or Influence Them At Least: An Introduction To The Sapir-Whorf Hypothesis'
 date: '2020-01-17'
-publish: '2020-02-02'
+publish: '2020-02-03'
 category: ['musings']
 tags: ['sapir-whorf','untranslatable']
 ---
