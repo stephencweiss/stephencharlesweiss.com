@@ -241,6 +241,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Bad Feminist_ by Roxanne Gay
 1. _Hunger_ by Roxanne Gay
 1. _Not That Bad_ by Roxanne Gay
+1. _Winners Take All: The Elite Charade of Changing the World_ by Anand Giridharadas
 1. _Ordeal of Change_ by Eric Hoffer
 1. _Tribe: On Homecoming and Belonging_ by Sebastian Junger
 1. _Interpreter of Maladies_ by Jhumpa Lahiri
