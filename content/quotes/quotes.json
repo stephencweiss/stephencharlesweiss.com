@@ -39,7 +39,7 @@
     {
         "text": "You don't just race onward to whatever comes next, you bring the past with you.",
         "source": "Command Line Heroes: The Infrastructure Effect: COBOL and Go",
-        "url":"https://www.redhat.com/en/command-line-heroes/season-3/the-infrastructure-effect",
+        "url": "https://www.redhat.com/en/command-line-heroes/season-3/the-infrastructure-effect",
         "attribution": "Saron Yitbarek",
         "tags": [
             "future",
@@ -52,7 +52,7 @@
         "text": "Moral indignation is a technique used to endow an idiot with dignity",
         "attribution": "Marshall McLuhan",
         "source": "An Optimistic History of the Next Decade",
-        "url":"https://www.nytimes.com/2020/01/02/opinion/2020s-decade.html",
+        "url": "https://www.nytimes.com/2020/01/02/opinion/2020s-decade.html",
         "tags": [
             "dignity",
             "idiot",
@@ -544,6 +544,76 @@
             "teaching",
             "learning",
             "mentorship"
+        ]
+    },
+    {
+        "text": "Injustice anywhere is a threat to justice everywhere. We are caught in an inescapable network of mutuality, tied in a single garmet of destiny. Whatever affects one directionly affects all indirectly.",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "humanity",
+            "interconnectedness",
+            "oneness",
+            "justice",
+            "injustice"
+        ]
+    },
+    {
+        "text": "The answer is found in the fact that there are two types of laws: there are just laws, and there are unjust laws. I would agree with St. Augustine that \"An unjust law is no law at all.\"",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "st. augustine",
+            "morality",
+            "justice",
+            "laws",
+            "injustice"
+        ]
+    },
+    {
+        "text": "We can never forget that everything Hitler did in Germany was \"legal\" and everything the Hungarian freedom fighters did in Hungary was \"illegal.\" It was \"illegal\" to aid and comfort a Jew in Hitler's German. But I am sure that if i had lived in Germany during that time, I would have aided and comforted my Jewish brothers even though it was illegal. If I lived in a Communist country today where certain principles dear to the Christian faith are suppressed, I believe I would openly advocate disobeying these anti-religious laws.",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "legal vs illegal",
+            "justice",
+            "rightness",
+            "morality",
+            "laws"
+        ]
+    },
+    {
+        "text": "All that is said here grows out of a tragic misconception of time. It is the strangely irrational notion that there is something in the very flow of time that will inevitably cure all ills. Actually, time is neutral. It can be used either destructively or constructively. I am coming to feel that the people of ill will have used time much more effectively than the people of good will. We  will have to repent in this generation not merely for the vitriolic words and actions of the bad people but for the appalling silence of the good people. We must come to see that human progress never rolls in on wheels of inevitability. It comes through the tireless efforts and persistent work of men willing to be coworkers with God, and without this hard work time itself becomes an ally of the forces of social stagnation.",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "time",
+            "long arc of time",
+            "morality",
+            "neutrality",
+            "inevitability"
+        ]
+    },
+    {
+        "text": "There was a time when the church was very powerful. It was during that period that the early Christians rejoiced when they were deemed worthy to suffer for what they believed. In those days the church was not merely a thermometer that recorded the ideas and principles of popular opinion; it was the thermostat that transformed the mores of society.",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "themostat vs thermometer",
+            "society",
+            "popular opinion",
+        ]
+    },
+    {
+        "text": "Over the last few years I have consistently preached that nonviolence demands that the means we use must be as pure as the ends we seek. So I have tried to make it clear that it is wrong to use immoral means to attain moral ends. But now I must affirm that it is just as wrong, or even more, to use moral means to preserve immoral ends.",
+        "attribution": "Martin Luther King, Jr.",
+        "source": "Letter from Birmingham Jail",
+        "tags": [
+            "utilitarianism",
+            "justice",
+            "nonviolence",
+            "morality",
+            "means and ends"
         ]
     },
     {
