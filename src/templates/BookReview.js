@@ -1,11 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import useSiteMetadata from '../hooks/useSiteMetadata'
-import PostNavigation from '../components/PostNavigation'
+import { useSiteMetadata } from '../hooks'
+import { Bio, Layout, PostNavigation, SEO } from '../components'
 
 const Date = styled.p`
     color: #999;
@@ -59,7 +56,7 @@ function BookEntry(props) {
   const { title: siteTitle } = useSiteMetadata()
   const { previous, next } = props.pageContext
   const { date, publish, title, rating } = entry.frontmatter
-  console.log({ entry, rating })
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
