@@ -1,7 +1,7 @@
 ---
 title: 'Seeing People'
 date: '2019-12-28'
-publish: '2020-01-20'
+publish: '2020-02-02'
 category: ['aphorisms']
 tags: ['wsj','gratitude','values','thankful']
 ---
