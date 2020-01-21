@@ -10,7 +10,9 @@ When I was first learning about Javascript (so, several months ago), I found thi
 
 More recently, however, I found an blog post from [Tsh.io highlighting several of the features that landed with Node v12](https://tsh.io/blog/new-node-js-features/). Among the list was private class fields and methods.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
-Private class fields are a Stage 3 proposal from TC39, however:
+Private class fields are a [Stage 3 proposal from TC39](https://github.com/tc39/proposal-class-fields#private-fields), which means they're still experimental.
+
+However:
 
 1. Node has support as of v12
 2. Babel has plugin support<sup>[2](#footnotes)</sup><a id="fn2"></a>
