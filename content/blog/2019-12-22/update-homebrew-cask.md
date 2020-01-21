@@ -2,6 +2,7 @@
 title: 'Updating A Homebrew Cask'
 date: '2019-12-13'
 publish: '2019-12-22'
+updated: '2020-01-21'
 category: ['programming']
 tags: ['homebrew', 'fsnotes']
 ---
@@ -33,7 +34,7 @@ That said, updating the cask is simple and the very first section of [Homebrew's
 
 Maybe one day I'll need to actually add a cask to the registry, but in the mean time, it's good to know how I can help keep things up to date!
 
-Update: I [updated my very first cask](https://github.com/Homebrew/homebrew-cask/pull/73769)! Though it had already been updated, I ran into a \[checksum error(<https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md>) when trying to upgrade it locally, so decided to try my hand at updating the cask myself. It worked!
+Update: I [updated my very first cask](https://github.com/Homebrew/homebrew-cask/pull/73769)! Though it had already been updated, I ran into a [checksum error](<https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md>) when trying to upgrade it locally, so decided to try my hand at updating the cask myself. It worked!
 
 ```shell
 $ brew cask upgrade
