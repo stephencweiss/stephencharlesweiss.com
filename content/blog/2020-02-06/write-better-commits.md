@@ -41,7 +41,7 @@ What do they mean?
 3. _Why_ the change was made
 4. (Optional) Discussion of alternative approaches evaluated
 
-**Revising history before sharing** was probably the most eye opening for me. It was an argument for using `get rebase --interactive` in a way to help organize commits to tell a story. If the point of the commit is to communicate to a future developer _what_ happend and _why_, then eliminating noise of commits like `fix typo` and `linting` makes that easier.
+**Revising history before sharing** was probably the most eye opening for me. It was an argument for using `git rebase --interactive` in a way to help organize commits to tell a story. If the point of the commit is to communicate to a future developer _what_ happend and _why_, then eliminating noise of commits like `fix typo` and `linting` makes that easier.
 
 While these are trivial examples, Joel provided really interesting ones - like reorganizing the order of commits and merging them to be more complete units (e.g., combining a change with the test case written to cover it rather than leaving those as two separate commits).
 
