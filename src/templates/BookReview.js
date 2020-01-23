@@ -59,7 +59,7 @@ function BookEntry(props) {
   const { title: siteTitle } = useSiteMetadata()
   const { previous, next } = props.pageContext
   const { date, publish, title, rating } = entry.frontmatter
-  console.log({ entry, rating })
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />

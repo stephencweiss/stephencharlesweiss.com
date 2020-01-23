@@ -4,7 +4,6 @@ title: 'Reading List'
 
 ## Actively Reading
 
-- _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 - _Silence Is The Key_ by Ryan Holiday
 - _Everything Curl_ by Daniel Stenberg
 
@@ -17,10 +16,11 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 1
+Total: 2
 
 ### _January 2020_
 
+- _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 - [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
 
 ### 2019
@@ -163,6 +163,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _A Farewell to Arms_ by Ernest Hemingway
 1. _One Flew Over The Cuckoo's Nest_ by Kesey
 1. _The Unbearable Lightness of Being_ by Mila Kundera
+1. _Pachinko_ by Min Jin Lee
 1. _Paper Menagerie_ by Ken Liu
 1. _Circé_ by Miller
 1. _The Death of Ivan Ilych_ Leo Tolstoy
@@ -225,6 +226,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Tech
 
 1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
+1. _Refactoring UI_ by Adam Watham & Steve Shoger
 
 ### Other
 
