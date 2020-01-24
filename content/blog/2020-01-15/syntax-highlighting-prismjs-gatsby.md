@@ -2,7 +2,7 @@
 title: 'Styling Markdown Code Snippets With PrismJS'
 date: '2019-12-24'
 publish: '2020-01-15'
-update: '2020-01-15'
+updated: '2020-01-15'
 category: ['programming']
 tags: ['prismjs', 'javascript', 'gatsby', 'styling', 'css']
 ---

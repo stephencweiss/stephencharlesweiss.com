@@ -31,8 +31,8 @@ The issue then, as far as there is one, is that, as readers, we forget this. We 
 
 We may not want to write _while_ we think, but that doesn’t mean that writing doesn’t offer similar avenues for exploration of ideas as a conversation. Writers know this - readers would be well served to remember it.
 
-Update: I recently came across this quote that I felt was quite relevant and I didn't want to lose track of it:
-
-> It is a most wonderful comfort to sit alone beneath a lamp, book spread before you, and commune with someone from the past whom you have never met.
+> **Update:** I recently came across this quote that I felt was quite relevant and I didn't want to lose track of it:
 >
-> — Yoshida Kenko, _Essays In Idleness_
+>  > It is a most wonderful comfort to sit alone beneath a lamp, book spread before you, and commune with someone from the past whom you have never met.
+>  >
+>  > — Yoshida Kenko, _Essays In Idleness_
