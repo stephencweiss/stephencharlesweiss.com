@@ -8,24 +8,23 @@ import { Title } from '../components/Headers'
 
 export function XKCDGallery(props) {
   const { title } = useSiteMetadata()
-  const xkcdComics = useAsync(() => {
-    return useXkcd({ comicQty: 5 }).then(res => Promise.all(res))
-  }, [])
 
-  if (xkcdComics.loading) {
-    return <div>loading...</div>
-  }
-  if (xkcdComics.error) {
+  const { isLoading, isError, xkcdComics } = useXkcd({ comicQty: 5 })
+
+  if (isError) {
     return <div>eek! an error!</div>
   }
   return (
     <Layout location={props.location} title={title}>
       <Title> XKCD Daily Digest </Title>
-      <ImageCarousel images={xkcdComics.value} />
+      {isLoading ? (
+        <CenteredLoader />
+      ) : (
+        <ImageCarousel images={xkcdComics} />
+      )}
       <p>
         <em>Why this page exists</em>
       </p>
-
       <p>
         I love Randall Munroe's XKCD comic. Maybe too much. If I go to xkcd.com,
         I can blink and an hour will have passed. This page is intended to allow

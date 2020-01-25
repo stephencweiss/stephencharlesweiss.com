@@ -1,9 +1,8 @@
+import { useAsync } from 'react-use'
 import { boundedHash } from '../utils/hashFn'
 import { proxiedGet } from '../utils/proxiedrequest'
 import { TODAY } from '../constants'
-
 /**
- * Using a proxy for XKCD:  https://github.com/mrmartineau/xkcd-api
  * Details re: XKCD's JSON: https://xkcd.com/json.html
  *  */
 export function useXkcd({ comicQty }) {
@@ -38,5 +37,9 @@ export function useXkcd({ comicQty }) {
       .catch(error => console.error(`fetchComics --> `, error))
   }
 
-  return fetchRequestedImages(comicQty)
+  const { loading, error, value } = useAsync(() => {
+    return fetchRequestedImages(comicQty).then(res => Promise.all(res))
+  }, [])
+
+  return { isLoading: loading, isError: error, xkcdComics: value }
 }
