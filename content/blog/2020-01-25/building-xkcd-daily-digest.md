@@ -6,7 +6,7 @@ category: ['programming']
 tags: ['gatsby','nicolas marcora','cors','cors-anywhere', 'xkcd','randall munroe', 'sung m. kim', 'lee warrick']
 ---
 
-I love Randal Munroe's XKCD, but going to his site every day is potentially problematic because it's so easy to get sucked down the rabbit hole of clicking "random" over and over and over.
+I love [Randall Munroe's XKCD](https://www.xkcd.com), but going to his site every day is potentially problematic because it's so easy to get sucked down the rabbit hole of clicking "random" over and over and over.
 
 At the same time, he's been writing comics for years and I haven't kept up. I wondered if there wasn't some way that I could pull five, _just five_ images into my site every day for a digest of sorts.
 
@@ -60,14 +60,13 @@ Returned the console error:
 
 I tried multiple different configurations on my request call. I tried JSONP. Nothing seemed to work.
 
-Based on everything I read, in order for this to work, I'd need access to Randall Munroe's servers to white list my IP or allow cross origin requests.
+Based on everything I read, in order for this to work, I'd need access to XKCD's servers to white list my IP or allow cross origin requests.
 
 Since _that_ wasn't going to happen, I needed an alternative solution. This is where [Nicolas Marcora](https://twitter.com/NicolasMarcora) jumped in to save the day and pointed me to [`cors-anywhere`](https://www.npmjs.com/package/cors-anywhere).
 
 _A_ solution is to simply use the demo<sup>[1](#footnotes)</sup><a id="fn1"></a>:
 
 ```javascript:title="/pages/xkcd.jsx"
-
 function XKCDGallery() {
   const proxyUrl = 'https://cors-anywhere.herokuapp.com'
 
@@ -149,7 +148,7 @@ At this point, I have all the pieces I need to actually retrieve a number of ima
 
 Normally best practice is to extract reusuable hooks and it's _very_ unlikely that I will reuse this hook elsewhere. However, I decided to extract it anyway. Why? Because it keeps my view component logic _very_ simple.
 
-```javascript:title="/hooks/useXkcd"
+```javascript:title="/hooks/useXkcd.jsx"
 import {useAsync} from 'react-use'
 import { boundedHash } from '../utils/hashFn'
 import { proxiedGet } from '../utils/proxiedrequest'
