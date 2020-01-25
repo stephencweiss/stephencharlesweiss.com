@@ -32,7 +32,7 @@ The [XKCD site has a page dedicated to programmatic access](https://xkcd.com/jso
 
 Seems straightforward enough. I tested the end point in Postman.
 
-![](/i/Screen%20Shot%202020-01-25%20at%207.35.29%20AM.png)
+![](./xkcd-postman.png)
 
 Voila.
 
