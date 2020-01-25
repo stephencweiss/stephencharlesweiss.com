@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     margin: auto;
 `
 
-function Layout(props) {
+export function Layout(props) {
   const [mode, setMode] = useState('light')
   const { location, title, children } = props
   const rootPath = `${__PATH_PREFIX__}/`

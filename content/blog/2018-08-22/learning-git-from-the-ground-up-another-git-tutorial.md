@@ -1,7 +1,7 @@
 ---
 title: 'Learning Git from the ground up - another Git tutorial'
 date: '2018-08-22'
-update: '2020-01-19'
+updated: '2020-01-19'
 category: ['programming']
 tags: ['git', 'learning to code', 'tutorial', 'version control']
 ---

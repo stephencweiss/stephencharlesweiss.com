@@ -1,12 +1,12 @@
 ---
 title: 'Git - Checking Out Remote Branches'
 date: '2019-04-27'
-update: '2020-01-22'
+updated: '2020-01-22'
 category: ['programming']
 tags: ['git', 'remotes', 'checkout']
 ---
 
-> Update: I kept using this approach and recently found an even simpler way to checkout remote branches.
+> **Update:** I kept using this approach and recently found an even simpler way to checkout remote branches.
 > `shell> $ git checkout -t $(git branch -a | grep <target-branch>)`
 >
 > I wrote more about it in [Git - Checking Out Remote Branches, Revisted](../../2020-01-22/git-checkout-remote-revisited)
