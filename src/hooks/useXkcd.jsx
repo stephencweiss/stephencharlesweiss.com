@@ -13,15 +13,18 @@ export function useXkcd({ comicQty }) {
   }
 
   async function fetchRequestedImages(comicQty) {
-    const maxComic = await latestComicNumber()
+    const comicIdUpperBound = await latestComicNumber()
     const images = []
-
-    for (let i = 0; i < qty; i += 1) {
-      hashes.push(boundedHash(i + TODAY, maxComic))
+    images.push(fetchComic()) // get the current comic
+    for (let i = 0; i < comicQty; i += 1) {
+      // A hash of 0 would error. Avoid it. Without nuance.
+      const hash =
+        boundedHash(i + TODAY, comicIdUpperBound) === 0
+          ? Math.max(boundedHash(i + comicQty + TODAY, comicIdUpperBound),1)
+          : boundedHash(i + TODAY, comicIdUpperBound)
       const img = fetchComic(hash)
       images.push(img)
     }
-
     return images
   }
 
