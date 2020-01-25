@@ -2,7 +2,7 @@ import React from 'react'
 import { useXkcd } from '../hooks/useXkcd'
 import { ImageCarousel } from '../components/ImageCarousel'
 import Layout from '../components/Layout'
-import { useAsync } from 'react-use'
+import { CenteredLoader } from '../components/Loader'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { Title } from '../components/Headers'
 
