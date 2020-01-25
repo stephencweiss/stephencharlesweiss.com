@@ -6,10 +6,14 @@ import { TODAY } from '../constants'
  * Details re: XKCD's JSON: https://xkcd.com/json.html
  *  */
 export function useXkcd({ comicQty }) {
+  let currentId
   async function latestComicNumber() {
     return await proxiedGet('http://xkcd.com/info.0.json')
       .then(res => res.json())
-      .then(res => res.num)
+      .then(res => {
+        currentId = res.num
+        return res.num
+      })
   }
 
   async function fetchRequestedImages(comicQty) {
@@ -34,7 +38,7 @@ export function useXkcd({ comicQty }) {
     )
       .then(res => res.json())
       .then(res => {
-        res.link = `http://xkcd.com/${comicId}` // Want to be sure to provide a way back to xkcd
+        res.link = `http://xkcd.com/${comicId ? comicId : currentId}` // Want to be sure to provide a way back to xkcd
         return res
       })
       .catch(error => console.error(`fetchComics --> `, error))
