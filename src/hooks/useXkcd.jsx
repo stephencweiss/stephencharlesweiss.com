@@ -20,7 +20,7 @@ export function useXkcd({ comicQty }) {
       // A hash of 0 would error. Avoid it. Without nuance.
       const hash =
         boundedHash(i + TODAY, comicIdUpperBound) === 0
-          ? Math.max(boundedHash(i + comicQty + TODAY, comicIdUpperBound),1)
+          ? Math.max(boundedHash(i + comicQty + TODAY, comicIdUpperBound), 1)
           : boundedHash(i + TODAY, comicIdUpperBound)
       const img = fetchComic(hash)
       images.push(img)
