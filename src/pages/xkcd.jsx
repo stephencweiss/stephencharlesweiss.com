@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { useXkcd } from '../hooks/useXkcd'
 import { ImageCarousel } from '../components/ImageCarousel'
 import Layout from '../components/Layout'
@@ -16,12 +17,10 @@ export function XKCDGallery(props) {
   }
   return (
     <Layout location={props.location} title={title}>
-      <Title> XKCD Daily Digest </Title>
-      {isLoading ? (
-        <CenteredLoader />
-      ) : (
-        <ImageCarousel images={xkcdComics} />
-      )}
+      <Title>
+        XKCD Daily Digest<sup>1</sup>
+      </Title>
+      {isLoading ? <CenteredLoader /> : <ImageCarousel images={xkcdComics} />}
       <p>
         <em>Why this page exists</em>
       </p>
@@ -43,6 +42,19 @@ export function XKCDGallery(props) {
           Keyboard Controls
         </a>
       </p>
+      <footer>
+        <h2>Footnotes</h2>
+        <ul>
+          <li>
+            <p>
+              <sup>1</sup>I wrote about building this page on my blog. You can
+              find it&nbsp;
+              <Link to="/blog/2020-01-25/building-xkcd-daily-digest">here</Link>
+              .
+            </p>
+          </li>
+        </ul>
+      </footer>
     </Layout>
   )
 }
