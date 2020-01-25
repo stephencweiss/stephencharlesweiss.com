@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import { Title } from '../components/Headers'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import PostNavigation from '../components/PostNavigation'
 
@@ -12,10 +13,6 @@ const Date = styled.p`
     margin-bottom: 0;
   }`
 
-const Title = styled.h1`
-  display: flex;
-  justify-content: flex-start;
-`
 const Entry = styled.div`
   #resources + ul > li,
   #footnotes + ul > li {
@@ -32,10 +29,9 @@ function EntryTemplate(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
-      <div style={{display: 'flex', flexDirection: 'column'}}>
-
-      <Date>{publish ? publish : date}</Date>
-      <Title>{title}</Title>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Date>{publish ? publish : date}</Date>
+        <Title>{title}</Title>
       </div>
       <Entry
         className={'entry'}
