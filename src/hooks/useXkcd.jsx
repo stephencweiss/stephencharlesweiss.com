@@ -7,8 +7,8 @@ import { TODAY } from '../constants'
  *  */
 export function useXkcd({ comicQty }) {
   let currentId
-  async function latestComicNumber() {
-    return await proxiedGet('http://xkcd.com/info.0.json')
+  function latestComicNumber() {
+    return proxiedGet('https://xkcd.com/info.0.json')
       .then(res => res.json())
       .then(res => {
         currentId = res.num
@@ -32,9 +32,9 @@ export function useXkcd({ comicQty }) {
     return images
   }
 
-  async function fetchComic(comicId) {
+  function fetchComic(comicId) {
     return proxiedGet(
-      `http://xkcd.com/${comicId ? `${comicId}/` : ``}info.0.json`
+      `https://xkcd.com/${comicId ? `${comicId}/` : ``}info.0.json`
     )
       .then(res => res.json())
       .then(res => {
