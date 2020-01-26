@@ -1,21 +1,22 @@
 /**
- * This works by using a demo `cors-anywhere` server hosted on heroku.
- * All requests are routed through that server
- * TODO: Migrate to a server hosted by me so that I don't use up the bandwidth on someone else's hosted server
+ * This PROXY_URL is an AWS Lamda function that is used to avoid CORS limitations of client side requests
  */
-const PROXY_URL = 'https://cors-anywhere.herokuapp.com'
+const PROXY_URL =
+  'https://0yglv2r21e.execute-api.us-east-2.amazonaws.com/default/xkcd_request_comics'
 
-const proxiedRequest = (url, options = {}) =>
-  fetch(`${PROXY_URL}/${url}`, {
+const proxiedRequest = (url, options = {}) => {
+  if (!url) return
+  console.log({PROXY_URL})
+  return fetch(`${PROXY_URL}?url=${url}`, {
     ...options,
     headers: {
       ...options.headers,
-      'X-Requested-With': 'wololo',
     },
   })
     .then(resp => resp)
     .catch(error => console.error(`oh no --> `, error))
+}
 
 const proxiedGet = url => proxiedRequest(url)
 
-module.exports = { proxiedGet, proxiedRequest}
+module.exports = { proxiedGet, proxiedRequest }
