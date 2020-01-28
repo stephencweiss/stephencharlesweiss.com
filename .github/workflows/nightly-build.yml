@@ -10,3 +10,7 @@ jobs:
         run: curl -s -X POST -d {} "https://api.netlify.com/build_hooks/${TOKEN}"
         env:
           TOKEN: ${{ secrets.NETLIFY_DAILY_CRON_HOOK }}
+      - name: Trigger GatsbyJS Build Hook
+        run: curl -s -X POST -d {} "https://webhook.gatsbyjs.com/hooks/data_source/publish/${TOKEN}"
+        env:
+          TOKEN: ${{ secrets.GATSBY_DAILY_CRON_HOOK }}
