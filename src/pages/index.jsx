@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       filter: {
         fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
-      limit: 6 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
+      limit: 5 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
     ) {
       edges {
         node {

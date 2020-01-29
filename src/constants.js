@@ -1,6 +1,6 @@
 const dayjs = require(`dayjs`)
 
-const ENTRIES_PER_PAGE = 6
+const ENTRIES_PER_PAGE = 5
 const BUILD_TIME = dayjs()
 const FAKE_START = dayjs('1900-01-01')
 const TODAY = dayjs()
