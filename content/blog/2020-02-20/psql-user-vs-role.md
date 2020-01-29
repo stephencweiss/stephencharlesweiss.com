@@ -1,7 +1,7 @@
 ---
 title: 'PostgreSQL: User vs Role'
 date: '2020-01-09'
-publish: '2020-01-25'
+publish: '2020-02-20'
 category: ['postgres']
 tags: ['psql','user','role','group']
 ---

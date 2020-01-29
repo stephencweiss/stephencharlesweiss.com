@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Bio, Layout, PageNavigation, SEO } from '../components'
+import { Bio, Layout, PageNavigation, SEO, Title } from '../components'
 import { useSiteMetadata } from '../hooks'
 
 const Date = styled.p`
@@ -9,10 +9,6 @@ const Date = styled.p`
     margin-bottom: 0;
   }`
 
-const Title = styled.h1`
-  display: flex;
-  justify-content: flex-start;
-`
 const Entry = styled.div`
   #resources + ul > li,
   #footnotes + ul > li {
