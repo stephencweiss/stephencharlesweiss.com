@@ -2,7 +2,7 @@
 title: 'Updating A Homebrew Cask'
 date: '2019-12-13'
 publish: '2019-12-22'
-updated: '2020-01-21'
+updated: ['2020-01-21']
 category: ['programming']
 tags: ['homebrew', 'fsnotes']
 ---
