@@ -78,7 +78,7 @@ Or `$ git revert -n master~5..master~2` which will revert the changes done by co
 
 Reset, in contrast to Revert, does not create a new commit, but effectively goes back in time to a state in the past and calls that current. This is really helpful if you need to take a new direction in your work and don’t mind discarding the latest commits.
 
-There are a number of options to customize this approach, but the simplest is `$ git reset —-hard [<commit>]` which will discard all changes between the current HEAD and the commit indicated in the command. It’s worth noting that the commit is specified by the Index, which is the number you see when you call the log.
+There are a number of options to customize this approach, but the simplest is `shell> $ git reset —-hard [<commit>]` which will discard all changes between the current HEAD and the commit indicated in the command. It’s worth noting that the commit is specified by the Index, which is the number you see when you call the log.
 
 # Branch
 

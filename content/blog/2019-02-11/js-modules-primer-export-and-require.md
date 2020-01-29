@@ -82,8 +82,8 @@ export { default } from …;
 
 # Named exports
 * Can have multiple per module
-* In ES6 syntax it would be `exports.fn = () => {}`
-* In ES5 and before it would be `export function fn(){}`
+* In ES6 syntax it would be `javascript> exports.fn = () => {}`
+* In ES5 and before it would be `javascript> export function fn(){}`
 * Can also be listed together at the bottom of a file
 
 ## Exporting Functions

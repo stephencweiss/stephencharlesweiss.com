@@ -12,9 +12,9 @@ What follows are the steps I took to resolve it as well as a little background o
 # The Solution
 Let's start with the important stuff. Fixing this is a simple three step process:
 
-  1. Log into the `psql` shell as a superuser (`$ psql postgres`)
-  2. Connect to the database in question (`\connect <database>`)
-  3. Grant privileges on the sequence to the user who needs them. (`<database>=# grant all on sequence <table_name>_id_seq to <user>;`)
+  1. Log into the `psql` shell as a superuser (`shell> $ psql postgres`)
+  2. Connect to the database in question (`sql> \connect <database>`)
+  3. Grant privileges on the sequence to the user who needs them. (`sql> <database>=# grant all on sequence <table_name>_id_seq to <user>;`)
 
 
 ```sql

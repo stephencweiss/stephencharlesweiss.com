@@ -84,7 +84,7 @@ Implicit indexes are automatically created by Postgres for fields that have a pr
 ## Partial Indexes
 Partial indices are built on a subset of a table based on a conditional statement. Therefore, the index only applies to the rows which satisfies the conditional.
 
-To create a partial index, use the following: `CREATE INDEX <index_name> ON <table_name> (<conditional_expression>)`
+To create a partial index, use the following: `sql> CREATE INDEX <index_name> ON <table_name> (<conditional_expression>)`
 
 # Further Reading
 [Postgres Docs](https://www.postgresql.org/docs/9.1/sql-createindex.html)
