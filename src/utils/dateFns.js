@@ -44,8 +44,8 @@ function listDate(node) {
   const maxDate = filteredDates
     .map(day => dayjs(day))
     .reduce(reducerToMostRecentDateBeforeBuild, FAKE_START)
-
-    return maxDate && maxDate.isAfter(FAKE_START) ? maxDate : null
+  const returnedDate = maxDate && maxDate.isAfter(FAKE_START) ? maxDate : null
+  return dayjs(returnedDate).format('YYYY-MM-DD')
 }
 
 // Need to use module.exports because this is used in node, not just frontend
