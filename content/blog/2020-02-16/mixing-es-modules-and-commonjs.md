@@ -1,5 +1,5 @@
 ---
-title: "Mixing ES Modules and CommonJS Modules: Don\'t"
+title: "Mixing ES Modules and CommonJS Modules: Don't"
 date: '2020-01-29'
 publish: '2020-02-16'
 category: ['programming']
