@@ -1,7 +1,7 @@
 ---
 title: 'Reminder: Logging Into Postgres With Shell Commands'
 date: '2019-08-19'
-updated: '2019-12-11'
+updated: ['2019-12-11']
 category: ['programming']
 tags: ['terminal', 'shell', 'psql']
 ---

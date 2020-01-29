@@ -1,7 +1,7 @@
 ---
 title: 'Changing the default shell to zsh'
 date: '2019-09-02'
-updated: '2019-12-03'
+updated: ['2019-12-03']
 category: ['programming']
 tags: ['shell', 'unix', 'macos', 'zsh', 'bash']
 ---

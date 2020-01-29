@@ -16,7 +16,7 @@ That’s it. At this point you have successfully renamed your local and remote G
 
 # A note about the `-m` flag:
 
-Similar to the `mv` command in Bash, the `-m` flag is for moving. Since you’re on a branch, Git infers the branch that’s being moved, however, you can be explicit and consolidate steps 1 and 2 with `git branch -m <oldbranch> <newbranch>`.
+Similar to the `mv` command in Bash, the `-m` flag is for moving. Since you’re on a branch, Git infers the branch that’s being moved, however, you can be explicit and consolidate steps 1 and 2 with `git> git branch -m <oldbranch> <newbranch>`.
 
 # Additional Reading
 

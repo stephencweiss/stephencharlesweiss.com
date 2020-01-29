@@ -1,22 +1,23 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import {
-  EntryCard,
   Bio,
+  EntryCard,
   Layout,
-  Search,
-  SEO,
   PageNavigation,
+  SEO,
+  Search,
 } from '../components'
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import { useSiteMetadata } from '../hooks'
 
-function MainIndex(props) {
+function BlogList(props) {
   const { data } = props
-  const { title } = useSiteMetadata()
-  const posts = data.allMarkdownRemark.edges //.sort(sortPosts)
+  const { previousPage: previous, nextPage: next } = props.pageContext
+  const { title: siteTitle } = useSiteMetadata()
+  const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location} title={title}>
+    <Layout location={props.location} title={siteTitle}>
       <SEO
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -25,21 +26,24 @@ function MainIndex(props) {
       {posts.map(({ node }) => (
         <EntryCard key={node.frontmatter.slug} node={node} />
       ))}
-      <PageNavigation next={`/blog/1`} />
+
+      <PageNavigation previous={previous} next={next} />
       <Bio />
     </Layout>
   )
 }
 
-export default MainIndex
+export default BlogList
 
 export const pageQuery = graphql`
-  query indexBlogQuery {
+  query getPaginatedBlogData($limit: Int!, $skip: Int!) {
     allMarkdownRemark(
       filter: {
         fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
-      limit: 6 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
+      sort: { order: [DESC], fields: [fields___listDate] }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
@@ -50,9 +54,6 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date
-            publish
-            updated
           }
         }
       }

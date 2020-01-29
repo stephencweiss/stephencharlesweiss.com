@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { space } from 'styled-system'
 
 export const PostHeader = styled.h3`
-  margin-bottom: ${space.small};
+  margin-bottom: 0;
 `
 
 function PostLink({ slug, title }) {

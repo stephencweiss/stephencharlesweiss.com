@@ -4,7 +4,6 @@ import { space } from 'styled-system'
 import styled from 'styled-components'
 
 const StyledHeader = styled.div`
-  ${space}
   margin: 0;
   padding-top: ${({ root }) => (root ? '1.5em' : '1em')};
 `

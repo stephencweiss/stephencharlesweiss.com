@@ -66,6 +66,7 @@
     "scripts": {
         "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
         "build": "gatsby build",
+        "clean": "rm -rf .cache && rm -rf public",
         "dev": "gatsby develop",
         "develop": "npm run dev",
         "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",

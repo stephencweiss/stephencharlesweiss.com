@@ -12,8 +12,8 @@ I wanted to understand _where_ my shell was sourcing the variable from, which le
 
 [Stéphane Chazelas provided two solutions](https://unix.stackexchange.com/a/154971) depending on your shell:
 
-- In bash: `PS4='+$BASH_SOURCE> ' BASH_XTRACEFD=7 bash -xl 7>&2`
-- In zsh: `zsh -xl`
+- In bash: `shell> PS4='+$BASH_SOURCE> ' BASH_XTRACEFD=7 bash -xl 7>&2`
+- In zsh: `shell> zsh -xl`
 
 Running Zsh, I proceeded with that. As Stéphane mentions, this "simulates a login shell and show[s] everything that is done [...] along with the name of the file currently being interpreted."
 
@@ -21,7 +21,7 @@ The stream has a lot of very interesting information, however, I was not able to
 
 Therefor, if using it in the future, I will avoid invoking it within a session where I am actively working, and instead open a new session to see how my environment is being booted.
 
-The stream of information that this produces is also quite a bit. To help wade through the deluge of information, another user suggested merging the `stderr` and `stdout` outputs with `zsh -xl 2>&1` to then grep as usual. This _sort of_ works. The way I made it work was, again in a new session, to search for what I was looking for immediately. For example:
+The stream of information that this produces is also quite a bit. To help wade through the deluge of information, another user suggested merging the `stderr` and `stdout` outputs with `shell> zsh -xl 2>&1` to then grep as usual. This _sort of_ works. The way I made it work was, again in a new session, to search for what I was looking for immediately. For example:
 
 ```shell
 $ zsh -xl 2>&1 | grep MY

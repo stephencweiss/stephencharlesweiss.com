@@ -62,7 +62,7 @@ But unless you’re storing that form data somewhere, that redirection means tha
 
 Before we can prevent the redirect, we need a way to *see* it.
 
-Adding `console.log("The path is --> ", window.location.pathname);` to the Javascript on the page will shine a light.
+Adding `javascript> console.log("The path is --> ", window.location.pathname);` to the Javascript on the page will shine a light.
 
 |![console log of default form submission with path logging](./defaultFormNavigationWithPath.png) |
 |:---:|

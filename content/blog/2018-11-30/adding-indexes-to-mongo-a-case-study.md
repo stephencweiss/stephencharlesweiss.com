@@ -28,7 +28,7 @@ db.collection.dropIndexes(['<index_name>'])
 
 ## Create an Index
 
-`db.collection.createIndex( { <field_name> : <order> [, <field_name> : <order> ...] } )`
+`javascript> db.collection.createIndex( { <field_name> : <order> [, <field_name> : <order> ...] } )`
 
 When creating an index - you can specify the field(s) and the order.
 
@@ -80,7 +80,7 @@ This is helpful when confirming the index is on the expected attribute of the do
 
 ## Drop Indexes
 
-`db.collection.dropIndexes(["<index_name>"])` If you want to remove an index, you can use the `dropIndexes()` method. The optional parameter allows for specifying *\_*which*\_* index should be dropped. The name can be retrieved using the `getIndexes()` method. If no name is specified, all _non_-`_id` indexes will be dropped.
+`javascript> db.collection.dropIndexes(["<index_name>"])` If you want to remove an index, you can use the `dropIndexes()` method. The optional parameter allows for specifying *\_*which*\_* index should be dropped. The name can be retrieved using the `getIndexes()` method. If no name is specified, all _non_-`_id` indexes will be dropped.
 
 ```javascript
 // mongo sh

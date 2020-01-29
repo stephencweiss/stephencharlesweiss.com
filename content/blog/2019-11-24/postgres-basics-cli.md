@@ -2,7 +2,7 @@
 title: 'Getting Started With Postgres on OS X with Homebrew'
 date: '2019-11-10'
 publish: '2019-11-24'
-update: '2020-01-09'
+updated: ['2020-01-09']
 category: ['programming']
 tags: ['postgres', 'cli', 'createdb', 'create', 'alter', 'user', 'role']
 ---
