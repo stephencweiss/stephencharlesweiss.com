@@ -1,38 +1,34 @@
 import { css } from 'styled-components'
 import theme from 'styled-theming'
+import {
+  baseBackground,
+  solarized,
+  solarHighlighted,
+  blackish,
+  reddish,
+  base03,
+  base02,
+  base01,
+  base00,
+  base1,
+  base2,
+  yellow,
+  brightYellow,
+  orange,
+  blue,
+  cyan,
+  green,
 
-const whiteish = `#F6F7EB`
-const solarized = `#FDF6E3`
-const solarHighlighted = `#FEB`
-const blackish = `#090314`
-const reddish = `rgba(255, 109, 91, 0.99)`
-
-const base03 = '#002b36'
-const base02 = '#073642'
-const base01 = '#586e75'
-const base00 = '#657b83'
-// const base0 = '#839496'
-const base1 = '#93a1a1'
-const base2 = '#eee8d5'
-const base3 = solarized;
-const yellow = '#b58900'
-const brightYellow = '#F9EE98'
-const orange = '#cb4b16'
-// const red = '#dc322f'
-// const magenta = '#d33682'
-const violet = '#6c71c4'
-const blue = '#268bd2'
-const cyan = '#2aa198'
-const green = '#859900'
+} from './colors'
 
 export default theme('mode', {
   light: css`
-    background-color: ${whiteish};
+    background-color: ${baseBackground};
     color: ${blackish};
     * + ::selection {
       background: ${reddish} none;
       text-shadow: none;
-      color: ${whiteish};
+      color: ${baseBackground};
     }
 
     .gatsby-code-title {
@@ -47,7 +43,7 @@ export default theme('mode', {
 
     :not(pre) > code[class*='language-'] {
         background-color: ${reddish};
-        color: ${whiteish};
+        color: ${baseBackground};
     }
 
 
@@ -133,10 +129,10 @@ export default theme('mode', {
   `,
   dark: css`
     background-color: ${blackish};
-    color: ${whiteish};
+    color: ${baseBackground};
 
     button {
-        color: ${whiteish};
+        color: ${baseBackground};
         background-color: ${blackish};
     }
 
