@@ -12,15 +12,15 @@ How would you rotate an array's elements if you were given an array and a number
 This post explores two separate approaches and was inspired by a HackerRank challenge.<sup>1</sup>
 
 Example:
-`leftRotate([1,2,3,4,5],2) // [3,4,5,1,2]`
+`javascript> leftRotate([1,2,3,4,5],2) // [3,4,5,1,2]`
 by way of the following steps:
-`[1,2,3,4,5] -> [2,3,4,5,1] -> [3,4,5,1,2]`
+`[1,2,3,4,5]` -> `[2,3,4,5,1]` -> `[3,4,5,1,2]`
 
 There are a few potential gotchas in how to approach this problem. The biggest one to me was to realize that `d` can be less than _or_ greater than the total length of the array.
 
 With that as the case, I wanted to understand what the effective (i.e. the total number of steps that _actually_ needed to happen) number of rotations would be.
 
-For example, if we did `leftRotate([1,2,3,4],6)`
+For example, if we did `javascript> leftRotate([1,2,3,4],6)`
 We would have:
 
 ```

@@ -8,7 +8,7 @@ import {
   SearchInput,
   SearchItemWrapper,
 } from './Search.styled'
-import getBlurb from '../../utils/getBlurb'
+import { getBlurb } from '../../utils'
 
 function Search(props) {
   const [query, setQuery] = useState('')

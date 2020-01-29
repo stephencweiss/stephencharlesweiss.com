@@ -2,7 +2,7 @@
 title: 'Managing Multiple Git Configurations'
 date: '2019-12-11'
 publish: '2019-12-28'
-updated: '2019-12-12'
+updated: ['2019-12-12']
 category: ['programming']
 tags: ['git', 'include', 'includeif', '.gitconfig']
 ---

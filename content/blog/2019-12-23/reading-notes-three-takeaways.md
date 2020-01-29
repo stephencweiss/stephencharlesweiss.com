@@ -2,7 +2,7 @@
 title: 'Top Three Takeaways: Lessons From Reading'
 date: '2019-12-07'
 publish: '2019-12-23'
-updated: '2019-12-27'
+updated: ['2019-12-27']
 category: ['musings']
 tags: ['reading notes', 'ryan holiday','farnam street','reading notes','stephen zerfas','read to lead']
 ---

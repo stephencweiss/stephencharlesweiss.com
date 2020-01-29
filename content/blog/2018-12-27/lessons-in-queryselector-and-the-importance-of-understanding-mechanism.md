@@ -41,7 +41,7 @@ div.notes {
 This will return all `<div>` elements with a class name of `notes` while *not* returning other tags (e.g., `<p>` ) with a class of `notes`.
 
 ## Combining Queries
-Another way to use the query selector is to chain them together. Since `querySelector` returns a `NodeList`, which is the same thing we’re querying `let container = document.querySelector("#main")`; `let matches = container.querySelectorAll("div.highlighted > p")`.
+Another way to use the query selector is to chain them together. Since `querySelector` returns a `NodeList`, which is the same thing we’re querying `javascript> let container = document.querySelector("#main")`; `javascript> let matches = container.querySelectorAll("div.highlighted > p")`.
 
 This returns `paragraph` elements where the immediate parent is a `div` with the class name of `highlighted` and within the container defined by the id, `main`.
 

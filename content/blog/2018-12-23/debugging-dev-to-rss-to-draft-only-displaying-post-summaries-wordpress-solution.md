@@ -31,7 +31,7 @@ Let's go through the steps.
 
 Wordpress makes changing your RSS feed settings an easy three-step process.
 
-  1. Go to your admin panel’s reading settings (Dashboard > Settings > Reading) `https://www.<your-blog-here>.com/wp-admin/options-reading.php`
+  1. Go to your admin panel’s reading settings (Dashboard > Settings > Reading) `text> https://www.<your-blog-here>.com/wp-admin/options-reading.php`
   2. Change the setting "For each article in a feed, show" from "Summary" to "Full text"
 
   ![Wordpress RSS Feed Settings](./wordpress-settings.png)

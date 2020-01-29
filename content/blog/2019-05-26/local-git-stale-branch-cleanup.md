@@ -72,7 +72,7 @@ Caveat from the manual:
 
 > The pruning feature doesn’t actually care about branches, instead it’ll prune local↔︎remote-references as a function of the refspec of the remote (see `<refspec>` and [CONFIGURED REMOTE-TRACKING BRANCHES](https://git-scm.com/docs/git-fetch#CRTB) above).
 >
-> Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git fetch —prune <name> "refs/tags/*:refs/tags/*"` it won’t be stale remote tracking branches that are deleted, but any local tag that doesn’t exist on the remote.
+> Therefore if the refspec for the remote includes e.g. `refs/tags/*:refs/tags/*`, or you manually run e.g. `git> git fetch —prune <name> "refs/tags/*:refs/tags/*"` it won’t be stale remote tracking branches that are deleted, but any local tag that doesn’t exist on the remote.
 >
 > This might not be what you expect, i.e. you want to prune remote `<name>`, but also explicitly fetch tags from it, so when you fetch from it you delete all your local tags, most of which may not have come from the `<name>` remote in the first place.
 
