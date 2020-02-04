@@ -50,6 +50,57 @@ Once installed, modify the `package.json` to include a `husky` field:
 Per the guide:
 > Using `commit-msg` gives us exactly what we want: It is executed whenever a new commit is created. Passing husky's `HUSKY_GIT_PARAMS` to `commitlint` via the `-E|--env` flag directs it to the relevant edit file. `-e` would default to `.git/COMMIT_EDITMSG`.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
+## Test The Hook
+
+While it would be nice to start this process at the _beginning_ of a new project. Sometimes, that's not possible.
+
+One of my favorite sayings is: "The best time to start was yesterday. The second best is today."
+
+With that in mind, let's focus on making sure _future_ commits adhere to the Conventional Commit standard.
+
+Here's my first attempt in the format I _used_ to use:
+
+```shell
+$ git commit
+husky > commit-msg (node v12.14.1)
+⧗   input: Draft of adding-commitlint
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+```
+
+Notice that my commit message was very simple. One line with just "Draft of adding-commitlint".
+
+This was rejected by `commitlint` and the commit _exited_.
+
+I can see this by looking at my commit log:
+
+```shellcommit f4aac1ef08e0f6fd3328813681349fcad96e4139 (HEAD -> new-posts-weekof-2020-02-17)
+Author: Stephen
+Date:   Tue Feb 4 09:20:24 2020 -0600
+
+    feat: husky hook for commitlint
+
+    Adding husky allows a hook into commitlint.
+
+    This means that every commit will run through the linter.
+
+    Steps taken from here: https://commitlint.js.org/#/guides-local-setup
+
+commit 8bb7711aea2dfeb1573d2c904932b314e3697325
+Author: Stephen
+Date:   Tue Feb 4 09:12:49 2020 -0600
+
+    feat: add commitlint
+
+    adds commitlint cli and config-conventional packages.
+
+    These packages should make adopting conventional commits easier.
+```
+
+
 
 
 
