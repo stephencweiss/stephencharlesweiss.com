@@ -5,7 +5,7 @@ publish: '2020-01-22'
 category: ['git']
 tags: ['shell','function','git branch','git checkout']
 ---
-Previously, I wrote about how to [checkout branches from a remote when the branch is not present locally](../../2019-04-27/).
+Previously, I wrote about how to [checkout branches from a remote when the branch is not present locally](../../2019-04-27/git-checkout-remote-branch).
 
 Recently, I found a new method that makes this even simpler by combining `git checkout`'s `-t` flag with `git branch`'s `-a` flag.
 
