@@ -1,17 +1,8 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import { Title } from '../components/Headers'
-import useSiteMetadata from '../hooks/useSiteMetadata'
-import PostNavigation from '../components/PostNavigation'
-
-const Date = styled.p`
-    color: #999;
-    margin-bottom: 0;
-  }`
+import { Bio, Layout, PageNavigation, PostDate, SEO, Title } from '../components'
+import { useSiteMetadata } from '../hooks'
 
 const Entry = styled.div`
   #resources + ul > li,
@@ -30,7 +21,7 @@ function EntryTemplate(props) {
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <Date>{publish ? publish : date}</Date>
+        <PostDate>{publish ? publish : date}</PostDate>
         <Title>{title}</Title>
       </div>
       <Entry
@@ -39,7 +30,7 @@ function EntryTemplate(props) {
       />
       <hr />
       <Bio />
-      <PostNavigation previous={previous} next={next} />
+      <PageNavigation previous={previous} next={next} />
     </Layout>
   )
 }

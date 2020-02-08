@@ -1,20 +1,19 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import { Search } from '../components/Search'
-import SEO from '../components/SEO'
-import PostLink from '../components/PostLink'
-import sortPosts from '../utils/sortPosts'
-import getBlurb from '../utils/getBlurb'
-
+import {
+  EntryCard,
+  Bio,
+  Layout,
+  Search,
+  SEO,
+  PageNavigation,
+} from '../components'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function MainIndex(props) {
   const { data } = props
   const { title } = useSiteMetadata()
-  const posts = data.allMarkdownRemark.edges.sort(sortPosts)
+  const posts = data.allMarkdownRemark.edges //.sort(sortPosts)
 
   return (
     <Layout location={props.location} title={title}>
@@ -23,17 +22,10 @@ function MainIndex(props) {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <Search />
-      {posts.map(({ node }) => {
-        const { title } = node.frontmatter
-        const { listDate, slug } = node.fields
-        return (
-          <div key={slug}>
-            <PostLink slug={slug} title={title} />
-            <small>{listDate}</small>
-            {getBlurb({ content: node.excerpt, path: slug })}
-          </div>
-        )
-      })}
+      {posts.map(({ node }) => (
+        <EntryCard key={node.frontmatter.slug} node={node} />
+      ))}
+      <PageNavigation next={`/blog/1`} />
       <Bio />
     </Layout>
   )
@@ -47,16 +39,20 @@ export const pageQuery = graphql`
       filter: {
         fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
+      limit: 5 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
     ) {
       edges {
         node {
           excerpt(format: PLAIN)
           fields {
             slug
-            listDate(formatString: "MMMM DD, YYYY")
+            listDate
           }
           frontmatter {
             title
+            date
+            publish
+            updated
           }
         }
       }

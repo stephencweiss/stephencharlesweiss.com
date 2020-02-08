@@ -1,7 +1,7 @@
 ---
 title: 'Notes On _What Unites Us_'
 date: '2019-10-06'
-updated: '2019-10-08'
+updated: ['2019-10-08']
 category: ['books']
 tags: ['dan rather', 'what unites us']
 ---

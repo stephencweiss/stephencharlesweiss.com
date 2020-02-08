@@ -3,8 +3,8 @@ title: 'Reading List'
 ---
 
 ## Actively Reading
-
-- _Silence Is The Key_ by Ryan Holiday
+- _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
+- _One Flew Over The Cuckoo's Nest_ by Kesey
 - _Everything Curl_ by Daniel Stenberg
 
 ## Started, Not Active
@@ -16,10 +16,11 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 2
+Total: 3
 
 ### _January 2020_
 
+- _Silence Is The Key_ by Ryan Holiday
 - _Anna Karenina_ by Leo Tolstoy (Pevear and Volokhonsky translation)
 - [_Why You Should Read Children's Books, Even Though You Are So Old and Wise_ by Katherine Rundell](../../../books/why-you-should-read-childrens-books)
 
@@ -161,7 +162,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _A Heartbreaking Work of Staggering Genius_ by Dave Eggers
 1. _Madame Bovary_ by Gustav Flaubert
 1. _A Farewell to Arms_ by Ernest Hemingway
-1. _One Flew Over The Cuckoo's Nest_ by Kesey
 1. _The Unbearable Lightness of Being_ by Mila Kundera
 1. _Pachinko_ by Min Jin Lee
 1. _Paper Menagerie_ by Ken Liu
@@ -243,6 +243,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Bad Feminist_ by Roxanne Gay
 1. _Hunger_ by Roxanne Gay
 1. _Not That Bad_ by Roxanne Gay
+1. _Winners Take All: The Elite Charade of Changing the World_ by Anand Giridharadas
 1. _Ordeal of Change_ by Eric Hoffer
 1. _Tribe: On Homecoming and Belonging_ by Sebastian Junger
 1. _Interpreter of Maladies_ by Jhumpa Lahiri

@@ -1,7 +1,7 @@
 ---
 title: 'Exercise Log'
 date: '2019-12-20'
-updated: '2019-12-20'
+updated: ['2019-12-20']
 tags: ['workout', 'exercise', 'gym', 'log']
 ---
 

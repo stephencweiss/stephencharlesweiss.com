@@ -1,7 +1,7 @@
 ---
 title: 'How to quickly / safely keep my project up to date with branches (and avoid avoidable problems)'
 date: '2018-08-26'
-updated: '2019-10-17'
+updated: ['2019-10-17']
 category: ['programming']
 tags: ['git', 'git-branch', 'git-merge', 'git-pull', 'tutorial']
 ---

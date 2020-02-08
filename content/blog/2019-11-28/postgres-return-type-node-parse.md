@@ -30,7 +30,7 @@ pg.types.setTypeParser(1184, (val: string) => {
 
 Note: `1184` is type `timestamptz`
 
-```
+```sql
 <database_name>=> select typname, oid, typarray from pg_type where oid='1184' order by oid;
    typname   | oid  | typarray
 -------------+------+----------

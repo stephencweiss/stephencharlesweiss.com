@@ -8,15 +8,20 @@ const {
   publishYear,
 } = require('./src/utils/dateFns')
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
+const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
+const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return graphql(
     `
-    query allBlogQuery {
-        annualreviews: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "annual-review"}}}) {
+      query allBlogQuery {
+        annualreviews: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "annual-review" } } }
+        ) {
           edges {
             node {
               fields {
@@ -28,7 +33,15 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        blog: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {isPublished: {eq: true}, sourceInstance: {eq: "blog"}}}) {
+        blog: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: {
+            fields: {
+              isPublished: { eq: true }
+              sourceInstance: { eq: "blog" }
+            }
+          }
+        ) {
           edges {
             node {
               fields {
@@ -40,7 +53,10 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        books: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "books"}}}) {
+        books: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "books" } } }
+        ) {
           edges {
             node {
               fields {
@@ -52,7 +68,10 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        list: allMarkdownRemark(sort: {fields: [fields___publishDate], order: DESC}, filter: {fields: {sourceInstance: {eq: "list"}}}) {
+        list: allMarkdownRemark(
+          sort: { fields: [fields___publishDate], order: DESC }
+          filter: { fields: { sourceInstance: { eq: "list" } } }
+        ) {
           edges {
             node {
               fields {
@@ -64,7 +83,15 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
-        other: allMarkdownRemark( filter: {fields: {sourceInstance: {nin: ["annual-review","blog","books", "list"]}}}) {
+        other: allMarkdownRemark(
+          filter: {
+            fields: {
+              sourceInstance: {
+                nin: ["annual-review", "blog", "books", "list"]
+              }
+            }
+          }
+        ) {
           edges {
             node {
               fields {
@@ -79,14 +106,48 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `
   ).then(result => {
-    if (result.errors ) {
+    if (result.errors) {
       throw result.errors
-    } else if ( result.data.other.edges.length > 0) {
-        throw new Error('posts included in "other" category - check to make sure all sources are accounted for')
+    } else if (result.data.other.edges.length > 0) {
+      throw new Error(
+        'posts included in "other" category - check to make sure all sources are accounted for'
+      )
+    }
+
+    // Blog ------------------------------------------->
+    const posts = result.data.blog.edges
+
+    // Create blog list pages
+    const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE)
+    let currentPage = BLOG_PAGE_TOTAL
+    while (currentPage >= 0) {
+      const path = currentPage === 0 ? `/blog` : `/blog/${currentPage}`
+      const previousPage =
+        currentPage === 0
+          ? null
+          : currentPage === 1
+          ? `/blog`
+          : `/blog/${currentPage - 1}`
+      const nextPage =
+        currentPage === BLOG_PAGE_TOTAL ? null : `/blog/${currentPage + 1}`
+
+      createPage({
+        path,
+        component: entryList,
+        context: {
+          limit: ENTRIES_PER_PAGE,
+          skip: currentPage * ENTRIES_PER_PAGE,
+          numPages: BLOG_PAGE_TOTAL,
+          currentPage,
+          previousPage: previousPage,
+          nextPage: nextPage,
+        },
+      })
+
+      currentPage -= 1
     }
 
     // Create blog posts pages.
-    const posts = result.data.blog.edges
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
