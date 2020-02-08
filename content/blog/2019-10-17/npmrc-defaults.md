@@ -5,8 +5,6 @@ category: ['programming']
 tags: ['node', 'npm', 'npmrc']
 ---
 
-# Dealing With NPM Config Files
-
 When things that used to work break, I want to understand why. That was the situation recently with `npm`, the reliable workhorse behind node projects.
 
 The issue, it turned out had to do with my `.npmrc`, a file I didn’t even know existed.
@@ -83,7 +81,7 @@ Note: the `npm config` command will set the _global_ config file.
 
 ## Conclusion
 
-I’m sure there’s much more to learn about the `.npmrc` and I’m excited to continue to explore, but I hav found understanding these basics has helped me immensely in speeding up my own work and being able to debug problems when they do arise.
+I’m sure there’s much more to learn about the `.npmrc` and I’m excited to continue to explore, but I haev found understanding these basics has helped me immensely in speeding up my own work and being able to debug problems when they do arise.
 
 ## Footnotes
 

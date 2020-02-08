@@ -1,52 +1,58 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import {
+  EntryCard,
+  Bio,
+  Layout,
+  Search,
+  SEO,
+  PageNavigation,
+} from '../components'
+import useSiteMetadata from '../hooks/useSiteMetadata'
 
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
-import Blog  from './blog'
+function MainIndex(props) {
+  const { data } = props
+  const { title } = useSiteMetadata()
+  const posts = data.allMarkdownRemark.edges //.sort(sortPosts)
 
-class MainIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title="Code Comments"
-          description={data.site.siteMetadata.description}
-          keywords={data.site.siteMetadata.keywords}
-        />
-        <Link to={'/blog'}>Blog</Link>
-        <Bio />
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={props.location} title={title}>
+      <SEO
+        title="All posts"
+        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <Search />
+      {posts.map(({ node }) => (
+        <EntryCard key={node.frontmatter.slug} node={node} />
+      ))}
+      <PageNavigation next={`/blog/1`} />
+      <Bio />
+    </Layout>
+  )
 }
 
 export default MainIndex
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-        keywords
+  query indexBlogQuery {
+    allMarkdownRemark(
+      filter: {
+        fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
-    }
-    allMarkdownRemark(filter: { fields: { isPublished: { eq: true } } }) {
+      limit: 5 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
+    ) {
       edges {
         node {
-          excerpt(format: MARKDOWN)
+          excerpt(format: PLAIN)
           fields {
             slug
+            listDate
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            publish(formatString: "MMMM DD, YYYY")
             title
+            date
+            publish
+            updated
           }
         }
       }

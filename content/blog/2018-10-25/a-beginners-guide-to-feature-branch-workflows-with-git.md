@@ -11,34 +11,34 @@ Though this is a beginner's guide to the Feature Branch workflow, it does assume
 
 # Pros of the Git Feature Branch Workflow:
 
-- Multiple features can be simultaneously developed
-- Main branch is _never_ broken
-- Pull requests to the main branch initiate discussion and create visibility into changes
-- Can be paired well with other workflows
+-   Multiple features can be simultaneously developed
+-   Main branch is _never_ broken
+-   Pull requests to the main branch initiate discussion and create visibility into changes
+-   Can be paired well with other workflows
 
 # Cons
 
-- Merge conflicts - mitigate this potential problem by keeping your branches small and focused.
+-   Merge conflicts - mitigate this potential problem by keeping your branches small and focused.
 
 # How to use the Git Feature Branch Workflow:
 
 A few rules and guidelines to keep in mind:
 
-1. Never commit changes directly to the master
-2. Create highly focused branches (e.g., a single animated menu or addressing a single issue/ticket)
-3. Since features are isolated on branches, they can be committed to a central repository as a backup without creating conflicts with the main branch.
+1.  Never commit changes directly to the master
+2.  Create highly focused branches (e.g., a single animated menu or addressing a single issue/ticket)
+3.  Since features are isolated on branches, they can be committed to a central repository as a backup without creating conflicts with the main branch.
 
 # High level steps
 
 There are seven (give or take) steps to the Feature Branch workflow, though steps 3-6 can be repeated multiple times for any given branch.
 
-1. Start with the master branch
-2. Create a new branch
-3. Update, add, and commit changes
-4. Push feature branch to remote
-5. Create pull request
-6. Resolve feedback
-7. Merge branch
+1.  Start with the master branch
+2.  Create a new branch
+3.  Update, add, and commit changes
+4.  Push feature branch to remote
+5.  Create pull request
+6.  Resolve feedback
+7.  Merge branch
 
 ## Start with master branch
 
@@ -94,6 +94,6 @@ The Git Feature Branch workflow isn't for every project, but it encourages colla
 
 ## Footnotes
 
-- <sup>1</sup> This post was inspired by Atlassian's Tutorial of the [Git Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
-- <sup>2</sup> I've written about a number of times previously, for example [working with pull and push](/2018/08/30/git-clone-pull-and-push/), but, I also highly recommend the [official documentation](https://git-scm.com/).
-- <sup>3</sup> For additional workflows and comparison, check out [CodingBlocks' episode 90](https://www.codingblocks.net/podcast/comparing-git-workflows/).
+-   <sup>1</sup> This post was inspired by Atlassian's Tutorial of the [Git Feature Branch](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow).
+-   <sup>2</sup> I've written about a number of times previously, for example [working with pull and push](/2018/08/30/git-clone-pull-and-push/), but, I also highly recommend the [official documentation](https://git-scm.com/).
+-   <sup>3</sup> For additional workflows and comparison, check out [CodingBlocks' episode 90](https://www.codingblocks.net/podcast/comparing-git-workflows/).

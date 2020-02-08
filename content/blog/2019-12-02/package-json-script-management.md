@@ -68,7 +68,7 @@ Looking at it in the `package.json` provides a marginal improvement at best.
 
 It's when we print the available scripts to the console, that the benefits become really clear:
 
-```sh
+```shell
 npm run
 Lifecycle scripts included in @revolution/tasks:
   test

@@ -9,7 +9,7 @@ On Macs there is a Emoji & Symbols keyboard.  You’ve probably seen it on your 
 To launch it, go to Settings > Keyboard  and select "Show keyboard and emoji viewers in menu bar."
 Then in your menu bar, you’ll be able to select the Emojis and Symbols which will open the viewer.
 
-Or, you can quick launch it with your keyboard using the keyboard shortcut  `⌃ + ⌘ + ␣`.
+Or, you can quick launch it with your keyboard using the keyboard shortcut  `⌃ + ⌘ + ␣` (`ctrl + cmd + space`).
 
 I found this keyboard shortcut while trying to find the Unicode definitions of special characters like ⌃ and ⌘ which are used to indicate keyboard shortcuts — a little meta.
 

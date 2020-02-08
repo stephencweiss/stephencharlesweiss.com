@@ -1,75 +1,48 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react'
+import { Header } from '../components/Headers'
+import styled, { ThemeProvider } from 'styled-components'
 
-import { rhythm, scale } from '../utils/typography'
+import theme  from "../theme"
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+const Paper = styled.div`
+  ${theme}
+  min-height: 100vh;
+`
+const Wrapper = styled.div`
+    max-width: 40em;
+    margin: auto;
+`
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
+export function Layout(props) {
+  const [mode, setMode] = useState('light')
+  const { location, title, children } = props
+  const rootPath = `${__PATH_PREFIX__}/`
+
+  const handleClick = () => {
+    if (mode === 'light') {
+      setMode('dark')
+    } else if (mode === 'dark') {
+      setMode('light')
     }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with ❤️ using
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    )
   }
+
+  return (
+    <ThemeProvider theme={{ mode }}>
+      <Paper>
+          <Wrapper>
+
+          <button onClick={handleClick}>{mode}</button>
+          <Header title={title} root={location.pathname === rootPath} />
+          {children}
+          <footer>
+            © {new Date().getFullYear()}, Built with ❤️ using
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+          </Wrapper>
+      </Paper>
+    </ThemeProvider>
+  )
 }
 
 export default Layout

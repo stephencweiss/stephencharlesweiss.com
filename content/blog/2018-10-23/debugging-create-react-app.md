@@ -97,7 +97,7 @@ Returning to my bash terminal, I entered `$ npm -g uninstall babel-loader —sav
 # Issue 2
 ## Uninstall didn’t error, but also didn’t remove the module
 
-It appears that only node packages that are at a depth of 0 can be uninstalled using the `$ npm -g uninstall <module_name> —save` command.
+It appears that only node packages that are at a depth of 0 can be uninstalled using the `shell> $ npm -g uninstall <module_name> —save` command.
 
 Lucky me - `babel-loader` wasn’t at that depth.
 

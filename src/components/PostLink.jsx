@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { rhythm } from '../utils/typography'
 import styled from 'styled-components'
+import { space } from 'styled-system'
 
 export const PostHeader = styled.h3`
-  margin-bottom: ${rhythm(1 / 4)};
+  margin-bottom: 0;
 `
 
 function PostLink({ slug, title }) {

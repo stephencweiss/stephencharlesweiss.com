@@ -1,8 +1,25 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import GatsbyImage from 'gatsby-image'
+import styled from 'styled-components'
 
-import { rhythm } from '../utils/typography'
+const Image = styled(GatsbyImage)`
+  margin: 0;
+  margin-right: 0.75em;
+  margin-bottom: 0;
+  min-width: 50;
+  border-radius: 100%;
+  * > img {
+    margin: 0;
+  }
+`
+
+const BioContainer = styled.div`
+  display: flex;
+  margin-bottom: calc(1.25 * 1em * 2.5);
+  margin-top: calc(1.25 * 1em * 2.5);
+`
+// TODO: Style
 
 function Bio() {
   return (
@@ -11,31 +28,22 @@ function Bio() {
       render={data => {
         const { author } = data.site.siteMetadata
         return (
-          <div
+          <BioContainer
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
             }}
           >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-            />
+            <Image fixed={data.avatar.childImageSharp.fixed} alt={author} />
             <p>
-              Thanks for reading! My name's  <strong>{author}</strong>. I live in Chicago with my wife, Kate, and dog, Finn.
-              <br/>
-              {` `}
+              Thanks for reading! My name's <strong>{author}</strong>. I live in
+              Chicago with my wife, Kate, and dog, Finn.
+              <br />
               <a href={`https://tinyletter.com/stephencharlesweiss/archive`}>
-                Click here to see the archives of my weeks in review and sign up yourself!
+                Click here to see the archives of my weeks in review and sign up
+                yourself!
               </a>
             </p>
-          </div>
+          </BioContainer>
         )
       }}
     />
