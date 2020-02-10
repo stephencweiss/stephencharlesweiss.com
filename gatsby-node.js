@@ -11,7 +11,7 @@ const {
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
-// const tagTemplate = path.resolve('./src/templates/tags.js')
+const tagTemplate = path.resolve('./src/templates/Tags.js')
 const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
