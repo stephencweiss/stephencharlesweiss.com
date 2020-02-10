@@ -228,17 +228,17 @@ exports.createPages = ({ graphql, actions }) => {
       })
 
       // Tags ------------------------------------------->
-      const tags = result.data.tagsGroup.group
+    //   const tags = result.data.tagsGroup.group
       // Create tags pages.
-      tags.forEach(tag => {
-        createPage({
-          path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
-          component: tagTemplate,
-          context: {
-            tag: tag.fieldValue,
-          },
-        })
-      })
+    //   tags.forEach(tag => {
+    //     createPage({
+    //       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+    //       component: tagTemplate,
+    //       context: {
+    //         tag: tag.fieldValue,
+    //       },
+    //     })
+    //   })
     })
   })
 }
