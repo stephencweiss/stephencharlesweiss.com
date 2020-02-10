@@ -1,4 +1,5 @@
 const path = require(`path`)
+const _ = require(`lodash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const {
   isPublished,
@@ -10,6 +11,7 @@ const {
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
+const tagTemplate = path.resolve(`./src/templates/TagList.js`)
 const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -103,6 +105,11 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
+        }
       }
     `
   ).then(result => {
@@ -162,8 +169,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create list pages.
+    // Lists------------------------------------------->
     const lists = result.data.list.edges
+    // Create list pages.
     lists.forEach((list, index) => {
       const previous = index === lists.length - 1 ? null : lists[index + 1].node
       const next = index === 0 ? null : lists[index - 1].node
@@ -179,8 +187,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create annual review pages.
+    // Annual Reviews ------------------------------------------->
     const annualReviews = result.data.annualreviews.edges
+    // Create annual review pages.
     annualReviews.forEach((review, index) => {
       const previous =
         index === annualReviews.length - 1
@@ -199,8 +208,9 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
-    // Create book pages.
+    // Books ------------------------------------------->
     const books = result.data.books.edges
+    // Create book pages.
     books.forEach((book, index) => {
       const previous = index === books.length - 1 ? null : books[index + 1].node
       const next = index === 0 ? null : books[index - 1].node
@@ -212,6 +222,19 @@ exports.createPages = ({ graphql, actions }) => {
           slug: book.node.fields.slug,
           previous,
           next,
+        },
+      })
+    })
+
+    // Tags ------------------------------------------->
+    const tags = result.data.tagsGroup.group
+    // Create tags pages.
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
         },
       })
     })
