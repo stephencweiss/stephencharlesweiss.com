@@ -12,7 +12,6 @@ const Card = styled.div`
   border: 2px solid ${({ theme }) => theme.border};
   margin: 1em 0;
   background: ${({ theme }) => {
-    console.log({ theme })
     return theme.border
   }};
 `
@@ -36,7 +35,6 @@ export function EntryCard({ node }) {
   const { listDate, slug } = node.fields
   const { excerpt } = node
   const themeContext = useContext(ThemeContext)
-  console.log({ themeContext })
   return (
     <Card theme={themeContext.mode}>
       <ContentWrapper>
