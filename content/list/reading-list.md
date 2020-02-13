@@ -4,19 +4,22 @@ title: 'Reading List'
 
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
-- _One Flew Over The Cuckoo's Nest_ by Kesey
-- _Everything Curl_ by Daniel Stenberg
+- _Uncanny Valley_ by Anna Wiener
 
 ## Started, Not Active
 
 - _Quiet_ by Susan Cain
 - _Don Quixote_ by Cervantes
+- _Everything Curl_ by Daniel Stenberg
 
 ## Finished
 
 ### 2020
 
-Total: 3
+Total: 4
+
+### _February 2020_
+- _One Flew Over The Cuckoo's Nest_ by Kesey
 
 ### _January 2020_
 
