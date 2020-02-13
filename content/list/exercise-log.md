@@ -13,6 +13,33 @@ As part of that evolution, I kept track of my workouts.
 
 The plan is to keep this list going into 2020 and beyond, though I expect to update it ~semi-annually at most.
 
+## 2020
+
+### January 2020
+
+**Summary:** 18 workouts, 7 swimming, 8 rowing, 3 other
+
+- 2020/01/30 - rowing - 4118m @2:05.6 / 500m, 17:15<sup>1</sup>
+- 2020/01/28 - swimming - 900y
+- 2020/01/26 - rowing - 6000m @2:04.6 / 500m, 24:26
+- 2020/01/25 - swimming - 750y
+- 2020/01/22 - rowing - 5500m @2:05.8 / 500m, 23:04
+- 2020/01/20 - swimming - 1750y
+- 2020/01/18 - rowing - 6000m @2:08.5 / 500m, 25:42
+- 2020/01/16 - swimming - 2050y
+- 2020/01/15 - rowing - 5000m @2:10.7 / 500m, 21:46
+- 2020/01/13 - swimming - 1200y
+- 2020/01/11 - cycling - power - 45 min
+- 2020/01/09 - yoga - heated vinyasa - 75 min
+- 2020/01/09 - rowing - 4000m @2:08.3 / 500m, 17:06
+- 2020/01/07 - swimming - 2000y
+- 2020/01/04 - rowing - 4000m @2:02.2 / 500m, 16:17
+- 2020/01/03 - rowing - 4000m @2:00.9 / 500m, 16:07
+- 2020/01/02 - swimming - 1000y
+- 2020/01/02 - treadmill - 1 mile
+
+<sup>1</sup> Didn't finish the 6000m workout.
+
 ## 2019
 
 ### Year In Review
@@ -123,7 +150,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### July
 
-**Summary:** 18 recorded workouts: 9 Rowing workouts, 2 Yoga, 8 swimming
+**Summary:** 18 workouts: 9 rowing, 2 yoga, 8 swimming
 
 - 2019/07/31 - Swimming
 - 2019/07/29 - swimming - ~40 of lengths. A few laps.
@@ -146,7 +173,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### June
 
-**Summary:** 12 recorded workouts: 11 Rowing workouts, 1 Yoga
+**Summary:** 12 workouts: 11 rowing, 1 yoga
 
 - 2019/06/23 - rowing
 - 2019/06/20 - rowing
@@ -163,7 +190,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### May
 
-**Summary:** 12 recorded workouts: 5 Rowing workouts, 5 Yoga, 1 Basketball, 1 Barre
+**Summary:** 12 workouts: 5 rowing, 7 other
 
 - 2019/05/31 - yoga
 - 2019/05/30 - rowing
@@ -179,7 +206,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### April
 
-**Summary:** 14 recorded workouts: 7 Rowing workouts, 6 Yoga, 1 Basketball
+**Summary:** 14 workouts: 7 rowing, 7 other
 
 - 2019/04/29 - rowing
 - 2019/04/27 - yoga
@@ -198,7 +225,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### March
 
-**Summary:** 11 recorded workouts: 11 Rowing workouts
+**Summary:** 11 workouts: 11 rowing
 
 - 2019/03/24 - rowing
 - 2019/03/18 - rowing
@@ -214,7 +241,7 @@ The plan is to keep this list going into 2020 and beyond, though I expect to upd
 
 ### February
 
-**Summary:** 3 recorded workouts: 3 Rowing workouts
+**Summary:** 3 workouts: 3 rowing
 
 - 2019/02/19 - rowing
 - 2019/02/18 - rowing

@@ -33,15 +33,6 @@ export function XKCDGallery(props) {
         This is a true digest. I cannot press random. There is no refresh to get
         a new set of comics, no infinite scroll, no easy rush of endorphines.
       </p>
-      <p>
-        <a
-          href={
-            'https://github.com/FormidableLabs/nuka-carousel#keyboard-controls'
-          }
-        >
-          Keyboard Controls
-        </a>
-      </p>
       <footer>
         <h2>Footnotes</h2>
         <ul>
