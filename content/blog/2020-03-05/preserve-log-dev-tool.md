@@ -8,7 +8,7 @@ tags: ['chrome','dev tools','preserve log']
 
 Recently, I was working on a project where I needed to connect one web app to another.
 
-I added a button on `AppA` that, on click, gathered up some useful information (e.g., username, session, etc.), and then opened a new window for `AppB` with that information included as a [query parameter in the URL]().
+I added a button on `AppA` that, on click, gathered up some useful information (e.g., username, session, etc.), and then opened a new window for `AppB` with that information included as a [query parameter in the URL](../../2020-03-02/url-components).
 
 From there, `AppB` validated the session information against its database to authenticate and authorize the user.
 
