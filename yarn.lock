@@ -6249,10 +6249,10 @@ gatsby-source-filesystem@^2.1.46:
     valid-url "^1.0.9"
     xstate "^4.7.2"
 
-gatsby-source-xkcd@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-source-xkcd/-/gatsby-source-xkcd-0.0.4.tgz#8c8f425299d67e39a2f5806e27835648a145e911"
-  integrity sha512-5maegxb3x+GqtOgaPBr5MVtxnrVD/s6wBTsNCFRldWtrmhItmzdhIS460HH86DzFx7iNMsTJRnOCuqzs6/YWTQ==
+gatsby-source-xkcd@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-xkcd/-/gatsby-source-xkcd-1.0.0.tgz#7aff2cf8dfece54bbf41cb5e40bb85704496d2af"
+  integrity sha512-532pLSJpifvLn09Ry8zLFE3kMJmVp6fP6mqoyouykKyhuXkpwHuK+fWfufZT5Sc7AQvOBNnPuzXIAJBOFJKO7g==
   dependencies:
     "@babel/cli" "^7.8.4"
     "@babel/core" "^7.8.4"

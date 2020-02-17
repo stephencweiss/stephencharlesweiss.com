@@ -294,10 +294,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-xkcd',
       options: {
-        queries: [
-          { comicQuantity: 5 },
-          { latest: true },
-        ],
+        comicQuantity: 5,
+        latest: true,
       },
     },
   ],
