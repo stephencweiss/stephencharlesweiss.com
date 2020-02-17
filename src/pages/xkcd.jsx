@@ -1,26 +1,23 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { useXkcd } from '../hooks/useXkcd'
-import { ImageCarousel } from '../components/ImageCarousel'
+import { graphql, Link } from 'gatsby'
+
+import { ImageGallery } from '../components/ImageGallery'
 import Layout from '../components/Layout'
-import { CenteredLoader } from '../components/Loader'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 import { Title } from '../components/Headers'
 
 export function XKCDGallery(props) {
   const { title } = useSiteMetadata()
 
-  const { isLoading, isError, xkcdComics } = useXkcd({ comicQty: 5 })
+  const { comicQuantity, latest } = props.data.allXkcd.nodes[0]
+  const xkcdComics = [latest, ...comicQuantity]
 
-  if (isError) {
-    return <div>eek! an error!</div>
-  }
   return (
     <Layout location={props.location} title={title}>
       <Title>
         XKCD Daily Digest<sup>1</sup>
       </Title>
-      {isLoading ? <CenteredLoader /> : <ImageCarousel images={xkcdComics} />}
+      <ImageGallery images={xkcdComics} />
       <p>
         <em>Why this page exists</em>
       </p>
@@ -51,3 +48,39 @@ export function XKCDGallery(props) {
 }
 
 export default XKCDGallery
+
+export const xkcdPageQuery = graphql`
+  query getLatest {
+    allXkcd {
+      nodes {
+        id
+        latest {
+          month
+          num
+          link
+          year
+          news
+          safe_title
+          transcript
+          alt
+          img
+          title
+          day
+        }
+        comicQuantity {
+          month
+          num
+          link
+          year
+          news
+          safe_title
+          transcript
+          alt
+          img
+          title
+          day
+        }
+      }
+    }
+  }
+`
