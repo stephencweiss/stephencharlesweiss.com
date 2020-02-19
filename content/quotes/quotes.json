@@ -646,14 +646,36 @@
         "attribution": "Marc Andreeson",
         "source": "Pmarca Guide to Personal Productivity",
         "url": "https://pmarchive.com/guide_to_personal_productivity.html",
-        "tags": ["say no", "obligations","decision"]
+        "tags": [
+            "say no",
+            "obligations",
+            "decision"
+        ]
     },
     {
         "text": "Assume no knowledge and infinite intelligence",
         "attribution": "Unknown",
         "source": "",
         "url": "",
-        "tags": ["intelligence","assumptions","kindness","writing","teaching"]
+        "tags": [
+            "intelligence",
+            "assumptions",
+            "kindness",
+            "writing",
+            "teaching"
+        ]
+    },
+    {
+        "text": "What if being lost is part of the path? What if we are supposed to tack across the surface of the lake, sailing into the wind instead of wishing it was only at our backs? What if feeling lost, directionless, and uncertain of the progress is an indicator of growth? What if it means you’re exactly where you need to be, on the pathless path?",
+        "attribution": "Jerry Colonna",
+        "source": "Reboot",
+        "url": "https://alearningaday.blog/2020/02/18/being-lost-and-the-path/",
+        "tags": [
+            "journey",
+            "growth",
+            "direction",
+            "progress"
+        ]
     },
     {
         "text": "",
