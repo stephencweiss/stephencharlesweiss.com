@@ -5,6 +5,8 @@ title: 'Reading List'
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
 - _Heavy_ by Kiese Laymon
+- _Clean Code_ by Robert "Uncle Bob" Martin
+- _The Imposter's Handbook_ by Rob Conery
 
 ## Started, Not Active
 
