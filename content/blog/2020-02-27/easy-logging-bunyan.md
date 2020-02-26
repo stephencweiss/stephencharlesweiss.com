@@ -67,7 +67,7 @@ H/t to [Krish Penumarty](http://krishpenumarty.com/) for the initial tip!
 
 ## Footnotes
 
-- <sup>[1](#fn1)</sup> Technically, global install is not required. You could also run it if installed in a project through the `node_modules` directory. This example is covered in the [CLI Usage section of Bunyan's README](https://www.npmjs.com/package/bunyan#cli-usage), but would look like: `shell> $ node index.js | ./node_modules/bin/bunyan`.
+- <sup>[1](#fn1)</sup> Technically, global install is not required. You could also run it if installed in a project through the `node_modules` directory. This example is covered in the [CLI Usage section of Bunyan's README](https://www.npmjs.com/package/bunyan#cli-usage), but would look like: `shell> $ node index.js | ./node_modules/.bin/bunyan`.
 - <sup>[2](#fn2)</sup> This actually started an interesting thread of inquiry for me about the different levels of logging. At first blush, it appears that while there's no universal standard, there is a convention of the following levels:
     ```
     trace
