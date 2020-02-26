@@ -291,5 +291,12 @@ module.exports = {
         analyzerMode: 'static',
       },
     },
+    {
+      resolve: 'gatsby-source-xkcd',
+      options: {
+        comicQuantity: 5,
+        latest: true,
+      },
+    },
   ],
 }
