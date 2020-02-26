@@ -40,6 +40,7 @@ export const pageQuery = graphql`
         fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
       }
       limit: 5 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
+      sort: { order: [DESC], fields: [fields___listDate] }
     ) {
       edges {
         node {
