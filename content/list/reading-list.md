@@ -4,7 +4,6 @@ title: 'Reading List'
 
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
-- _Heavy_ by Kiese Laymon
 - _Clean Code_ by Robert "Uncle Bob" Martin
 - _The Imposter's Handbook_ by Rob Conery
 
@@ -18,9 +17,10 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 5
+Total: 6
 
 ### _February 2020_
+- _Heavy_ by Kiese Laymon
 - _Uncanny Valley_ by Anna Wiener
 - _One Flew Over The Cuckoo's Nest_ by Kesey
 
@@ -235,6 +235,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Tech
 
 1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
+1. _Refactoring_ by Martin Fowler
 1. _Refactoring UI_ by Adam Watham & Steve Shoger
 
 ### Other
