@@ -4,7 +4,9 @@ title: 'Reading List'
 
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
-- _Uncanny Valley_ by Anna Wiener
+- _Heavy_ by Kiese Laymon
+- _Clean Code_ by Robert "Uncle Bob" Martin
+- _The Imposter's Handbook_ by Rob Conery
 
 ## Started, Not Active
 
@@ -16,9 +18,10 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 4
+Total: 5
 
 ### _February 2020_
+- _Uncanny Valley_ by Anna Wiener
 - _One Flew Over The Cuckoo's Nest_ by Kesey
 
 ### _January 2020_
@@ -157,6 +160,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 ### Fiction
 
+1. _The Fall_ by Albert Camus
 1. _Robinson Crusoe_ by Defoe
 1. _The Brothers Karamazov_ by Fyodor Dostoevsky
 1. _Notes from the Underground_ by Fyodor Dostoevsky
@@ -171,6 +175,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Circé_ by Miller
 1. _The Death of Ivan Ilych_ Leo Tolstoy
 1. _Serpico_ by Maas
+1. _The Sculptor_ by Scott McCloud
 1. _Caravans_ by James Michener
 1. _The Covenant_ by James Michener
 1. _The Fires of Spring_ by James Michener
@@ -190,6 +195,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Ben-Hur: A Tale of the Christ_ by Lew Wallace
 1. _Old School_ by Tobias Wolff
 1. _Mrs. Dalloway_ by Virginia Woolf
+1. _Black Boy_ by Richard Wright
 
 ### Business
 
@@ -249,6 +255,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Winners Take All: The Elite Charade of Changing the World_ by Anand Giridharadas
 1. _Ordeal of Change_ by Eric Hoffer
 1. _Tribe: On Homecoming and Belonging_ by Sebastian Junger
+1. _Why We're Polarized_ by Ezra Klein
 1. _Interpreter of Maladies_ by Jhumpa Lahiri
 1. _The Namesake_ by Jhumpa Lahiri
 1. _Amusing Ourselves to Death_ by Neil Postman
