@@ -160,6 +160,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 ### Fiction
 
+1. _Legacy of Orïsha, Book I: Children of Blood and Bone_ by Tomi Adeyemi
 1. _The Fall_ by Albert Camus
 1. _Robinson Crusoe_ by Defoe
 1. _The Brothers Karamazov_ by Fyodor Dostoevsky
@@ -266,5 +267,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity_ by Douglas Rushkoff
 1. _Revenge of Analog_ by David Sax
 1. _Powers of Two: The Essence of Innovation in Creative Pairs_ by Joshua Wolk Shenk
+1. _The Creative Habit: Learn It and Use It for Life_ by Twyla Tharp
 1. _Sex Object_ by Jessica Valenti
 1. _The XX Factor: How the Rise of Working Women Has Created a Far Less Equal World_ by Alison Wolf, Chrystia Freeland
