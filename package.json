@@ -6,6 +6,7 @@
     "author": "Stephen Weiss <stephen.c.weiss@gmail.com>",
     "dependencies": {
         "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.2.1",
+        "cloc": "^2.5.1",
         "dayjs": "^1.8.19",
         "gatsby": "^2.19.7",
         "gatsby-image": "^2.2.39",
@@ -79,6 +80,7 @@
         "nofilter": "nofilter='true' yarn run dev",
         "preview": "yarn run nofilter",
         "start": "yarn run develop",
+        "site-stats": "cloc . --exclude-dir=node_modules --md > ./content/site-stats/current-state.md",
         "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
     },
     "husky": {
