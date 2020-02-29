@@ -1,5 +1,5 @@
 ---
-title: 'Sed: Grep's Successor For Substitution'
+title: "Sed: Grep's Successor For Substitution"
 date: '2020-02-27'
 publish: '2020-03-16'
 category: ['programming']
