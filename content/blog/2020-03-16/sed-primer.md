@@ -6,7 +6,7 @@ category: ['programming']
 tags: ['unix','sed','grep']
 ---
 
-In [[Git Log Archeology/ Digging In With Grep And Pickaxe]], I noted that the `grep` utility is an acronym for "_g_lobally search for a _r_egular _e_pression and _p_rint." This fact helps explain why it is sometimes written as g/re/p.<sup>[1](#footnotes)</sup><a id="fn1"></a>
+In [Git Log Archeology/ Digging In With Grep And Pickaxe](../../2020-02-25/git-commit-archeology), I noted that the `grep` utility is an acronym for "_g_lobally search for a _r_egular _e_pression and _p_rint." This fact helps explain why it is sometimes written as g/re/p.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 Then this morning, I saw a commit which included a Sed command that seemed like magic! I wanted to understand a bit more about it. What's follow is a teaser at best with some basic Sed utilization.
 
