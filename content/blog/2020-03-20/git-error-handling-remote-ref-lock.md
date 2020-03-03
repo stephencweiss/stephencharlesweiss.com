@@ -1,7 +1,7 @@
 ---
 title: 'Error Handling: Git Cannot Lock Ref: Is At X, But Expected Y'
 date: '2020-02-13'
-publish: ''
+publish: '2020-03-20'
 category: ['programming']
 tags: ['git','git gc','git prune', 'stackoverflow','error handling','git ref']
 ---
