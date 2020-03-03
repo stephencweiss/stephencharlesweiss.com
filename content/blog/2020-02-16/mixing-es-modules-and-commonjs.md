@@ -108,4 +108,12 @@ My key takeaway: Don't mix CommonJS and ES Modules within the same file.
 Beyond that, it's just a matter of syntax. Hopefully my enduring this headache and writing about it will help you avoid a similarly painful experience in the future!
 
 ## Footnotes
-- <sup>[1](#fn1)</sup> As a reminder, ES Modules are those that are loaded into a file with syntax like `javascript> import <module> from '<package>'` whereas the same function in CommonJS would be `javascript> const <module> = require('<package>')`. [Flavio Copes](https://flaviocopes.com/es-modules/) has a nice introduction on ES MOdules that's worth a read if you would like more info.
+- <sup>[1](#fn1)</sup> As a reminder, ES Modules are those that are loaded into a file with syntax like:
+```javascript
+import <module> from <package>
+````
+Whereas the same function in CommonJS would be:
+```javascript
+const <module> = require(<package>)
+```
+[Flavio Copes](https://flaviocopes.com/es-modules/) has a nice introduction on ES MOdules that's worth a read if you would like more info.

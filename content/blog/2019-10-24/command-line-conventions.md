@@ -28,10 +28,10 @@ _Personal aside_: It’s interesting to see the evolution in my own blog as I be
 $ git checkout [new branch name]
 ```
 
-But that’s actually syntactically incorrect. I should have used `<>` instead of the `[]` because checking out a branch requires a branch name.<sup>[3](#footnotes)</sup> <a id="fn3"></a>
+But that’s actually syntactically incorrect. I should have used the angled brackets instead of the square brackets because checking out a branch requires a branch name.<sup>[3](#footnotes)</sup> <a id="fn3"></a>
 
 ## Footnotes
 
 - <sup>[1](#fn1)</sup> Variations of this quote are attributed to Pablo Picasso, the Dalai Lama, and others, however, none seem authoritative or confirmed. None the less, it is sound advice and fits nicely in the maxim category.
 - <sup>[2](#fn2)</sup> The full chapter on [Utility Conventions](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html) as described by the Open Group. Microsoft’s version varies and makes use of **bold** and _italics_. You can read more about Microsoft’s approach here: https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc737438(v=ws.10)?redirectedfrom=MSDN#formatting-legend.
-- <sup>[3](#fn3)</sup> I’ve since updated the post to use the more conventional `<>`. I'm sure other examples exist where I've mistyped them. I'll continue to update them as I find them - one of the beautiful features of blogs.
+- <sup>[3](#fn3)</sup> I’ve since updated the post to use the more conventional angled brackets. I'm sure other examples exist where I've mistyped them. I'll continue to update them as I find them - one of the beautiful features of blogs.
