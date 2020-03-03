@@ -1,7 +1,7 @@
 ---
 title: 'How To Execute Node Package CLIs'
 date: '2020-02-12'
-publish: '2020-03-07'
+publish: '2020-03-06'
 category: ['programming']
 tags: ['cli','node','npm','package.json','node_modules','.bin']
 ---

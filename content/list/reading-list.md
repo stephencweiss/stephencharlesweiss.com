@@ -4,9 +4,8 @@ title: 'Reading List'
 
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
-- _Heavy_ by Kiese Laymon
-- _Clean Code_ by Robert "Uncle Bob" Martin
 - _The Imposter's Handbook_ by Rob Conery
+- _Ancillary Justice_ by Ann Leckie
 
 ## Started, Not Active
 
@@ -18,9 +17,13 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 5
+Total: 7
+
+### _March 2020_
+- _Clean Code_ by Robert "Uncle Bob" Martin
 
 ### _February 2020_
+- _Heavy_ by Kiese Laymon
 - _Uncanny Valley_ by Anna Wiener
 - _One Flew Over The Cuckoo's Nest_ by Kesey
 
@@ -160,6 +163,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 ### Fiction
 
+1. _Legacy of Orïsha, Book I: Children of Blood and Bone_ by Tomi Adeyemi
 1. _The Fall_ by Albert Camus
 1. _Robinson Crusoe_ by Defoe
 1. _The Brothers Karamazov_ by Fyodor Dostoevsky
@@ -235,6 +239,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Tech
 
 1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
+1. _Refactoring_ by Martin Fowler
 1. _Refactoring UI_ by Adam Watham & Steve Shoger
 
 ### Other
@@ -265,5 +270,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity_ by Douglas Rushkoff
 1. _Revenge of Analog_ by David Sax
 1. _Powers of Two: The Essence of Innovation in Creative Pairs_ by Joshua Wolk Shenk
+1. _The Creative Habit: Learn It and Use It for Life_ by Twyla Tharp
 1. _Sex Object_ by Jessica Valenti
 1. _The XX Factor: How the Rise of Working Women Has Created a Far Less Equal World_ by Alison Wolf, Chrystia Freeland

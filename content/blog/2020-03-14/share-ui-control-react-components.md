@@ -1,10 +1,13 @@
 ---
 title: 'Sharing Control Of UI With React Components'
 date: '2020-02-24'
-publish: '2020-03-13'
+publish: '2020-03-14'
+updated: ['2020-03-15']
 category: ['programming']
 tags: ['react', 'state', 'useEffect', 'onMount', 'life cycles']
 ---
+
+> Update: I wrote a follow up in which I suggested a more idiomatic approach to this problem through deference of control.
 
 React makes it really easy to control a component's UI. The two most common approaches I've seen are to manage the UI completely from an external component's state via props or self-managed via state.
 
