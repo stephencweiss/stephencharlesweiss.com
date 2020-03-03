@@ -26,6 +26,22 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-page-creator',
+      options: {
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        extensions: ['.md', '.mdx'],
+        defaultLayouts: {
+          blog: require.resolve('./src/components/Layout.jsx'),
+          default: require.resolve('./src/components/Layout.jsx'),
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/list`,
