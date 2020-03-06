@@ -8,14 +8,14 @@ Occam was a 14th century theologian-philosopher who is perhaps best known now fo
 
 This is a story where remembering Occam would have come in handy. Instead, I searched high and low for an explanation other than user error.
 
-Want to jump to the end? The moral of the story is that if you’re using a `content-type` of `application/x-www-form-urlencoded` in an API call, be sure to check for extra spaces or new line characters in the body. Leaving them in creates problems. 
+Want to jump to the end? The moral of the story is that if you’re using a `content-type` of `application/x-www-form-urlencoded` in an API call, be sure to check for extra spaces or new line characters in the body. Leaving them in creates problems.
 
 # Background And How I Initially Suspected URI Encoding
 I use a password manager to create unique passwords for almost every service I use. This greatly simplifies my life without the mental tax of having to remember all of my passwords or reusing passwords across many services. It also means I copy and paste a lot of passwords.
 
 When I signed up to explore the Better Business Bureau’s API recently, that’s exactly what I did. I went to my password manager and asked, "Please, oh please, generate a password I could never remember and which I never want to type!"
 
-Poof. It did its magic and produced a 20+ character password complete with uppercase and lowercase characters, as well as fun special ones like `#`, `$`, and `*`! 
+Poof. It did its magic and produced a 20+ character password complete with uppercase and lowercase characters, as well as fun special ones like `#`, `$`, and `*`!
 
 Now, according to the instructions, all I had to do was send a POST request to get my authentication.
 
@@ -23,7 +23,7 @@ Now, according to the instructions, all I had to do was send a POST request to g
 |:---:|
 | *Authentication instructions* |
 
-I opened up Postman and prepared for success! 
+I opened up Postman and prepared for success!
 
 ![Postman Header Config](./Postman-Header-Config.png)
 
@@ -35,12 +35,12 @@ Instead of starting fresh and typing in my password one character at a time, I *
 
 ![Postman Body Config Success](./Postman-Body-Config-Success.png)
 
-That proved it! The problem was the password! But why? 
+That proved it! The problem was the password! But why?
 
 ## Let The Search For Answers Begin
 I started hunting around for what was different between my new password and my old one. I of course didn’t notice the trailing space and/or think that it could *possibly* be the cause of all my frustration. So, I created a much more complicated theory. I found that URI encoding / decoding has reserved characters. Characters *like* `#`, `$`, and `*`.
 
-So, I laid the blame at the feet of the team which chose to allow these special characters in their passwords when they had the potential to create so much frustration. 
+So, I laid the blame at the feet of the team which chose to allow these special characters in their passwords when they had the potential to create so much frustration.
 
 ## Disproving A Bad Theory
 It was only when I started writing about this experience (initially with the warning to not use reserved characters if you had to encode them) that I figured out that wasn’t the problem.
@@ -51,9 +51,9 @@ Here’s proof that the URL encoding can go both directions. Using [Dan’s Tool
 |:---:|
 | Two way URL Encoding |
 
-If the encoding/decoding process was the culprit, I would not be able to encode a password with reserved characters and then get the same thing back. That, however, is *exactly* what I was able to do. I started by encoding `A*D(S$#dasf1859`. This returns `A%2AD%28S%24%23dasf1859`. I then decode *both* and get `A*D(S$#dasf1859` for both lines. 
+If the encoding/decoding process was the culprit, I would not be able to encode a password with reserved characters and then get the same thing back. That, however, is *exactly* what I was able to do. I started by encoding `A*D(S$#dasf1859`. This returns `A%2AD%28S%24%23dasf1859`. I then decode *both* and get `A*D(S$#dasf1859` for both lines.
 
-Voila. Bad theory banished. 
+Voila. Bad theory banished.
 
 # Conclusion
 

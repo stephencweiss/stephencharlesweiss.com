@@ -27,4 +27,5 @@ By stripping away "clutter", these methods create clean webpages that are much s
 
 # A video tutorial
 I put together this 3 minute video showing how to use the Reader View in Chrome and Safari and highlighting the difference it makes for several websites.
-`youtube: aAlZVcbNYUo`
+
+https://www.youtube.com/watch?v=aAlZVcbNYUo&feature=youtu.be

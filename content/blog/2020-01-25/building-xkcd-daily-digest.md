@@ -241,7 +241,9 @@ There _is_ a lingering bug: the carousel doesn't reserve enough space in the DOM
 |:---:|
 | Current state of the daily digest! |
 
-Whew! That's all I've got for today. It's been a weird, wild ride but wow is it cool that I can wake up with an idea, spend a few hours thinking and tinkering, and [with a little help from my friends](https://www.youtube.com/watch?v=0C58ttB2-Qg) build something that didn't exist before.
+Whew! That's all I've got for today. It's been a weird, wild ride but wow is it cool that I can wake up with an idea, spend a few hours thinking and tinkering, and with a little help from my friends build something that didn't exist before.
+
+https://www.youtube.com/watch?v=0C58ttB2-Qg
 
 ## Footnotes
 - <sup>[1](#fn1)</sup> I'm using the demo proxy for now, however, I plan to migrate to my own version of the cors-anywhere soon using that as a serverless function - that will be a learning experience in its own right! For now, I'm grateful for Rob W, the developer behind `cors-anywhere` and his demo environment.
