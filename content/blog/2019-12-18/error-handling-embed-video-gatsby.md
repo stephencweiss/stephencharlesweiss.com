@@ -2,9 +2,14 @@
 title: 'Trouble Shooting Embedding Video In A Gatsby Site'
 date: '2019-12-03'
 publish: '2019-12-18'
+updated: ['2020-03-03']
 category: ['gatsby']
 tags: ['error handling','video','embed','plugin']
 ---
+
+> Update: I found a more general embedder in the Plugin library: [gatsby-remark-embedder](https://www.gatsbyjs.org/packages/gatsby-remark-embedder/?=spotify)
+> Replacing `gatsby-remark-embed-video` with it worked like a charm - and, at least so far, haven't had any issues with ordering.
+> Here's the PR in which I replaced it.
 
 One of the great parts about Gatsby is its plugin ecosystem. As of this writing, there are ~1500 different plugins offering easy integrations with dozens of services and tools to build a website.
 
@@ -219,4 +224,4 @@ module.exports = {
 
 This _did_ work. And now, I can embed Youtube (or other) videos easily into my website.
 
-`youtube:3GwjfUFyY6M`
+https://www.youtube.com/watch?v=3GwjfUFyY6M&feature=youtu.be

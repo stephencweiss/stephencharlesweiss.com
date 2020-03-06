@@ -129,7 +129,7 @@ Personally, I prefer to be explicit wherever possible, however, it is worth unde
 ## Video Walkthrough
 I put together this video walkthrough to demonstrate all of these details live.
 
-`youtube: mokoauG3BAw`
+https://www.youtube.com/watch?time_continue=1&v=mokoauG3BAw&feature=emb_title
 
 # Further Reading
 

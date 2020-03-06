@@ -7,7 +7,7 @@ tags: ['education','economics']
 
 Beyond my health, education is probably the single greatest gift I have ever received. I am eternally grateful to my parents, my teachers, and my peers for always pushing me further and encouraging me. It is important to recognize that learning is different than spending time in school. Good Will Hunting provides a wonderful launching point for this conversation on the merits of education.
 
-`youtube:https://www.youtube.com/watch?v=hIdsjNGCGz4?t=186`
+https://www.youtube.com/watch?v=hIdsjNGCGz4?t=186
 
 > "Yeah, but I will have a degree, and you'll be serving my kids fries at a drive-thru on our way to a skiing trip."<sup>1</sup>
 

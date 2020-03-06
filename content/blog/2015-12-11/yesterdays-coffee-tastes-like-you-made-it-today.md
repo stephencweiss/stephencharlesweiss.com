@@ -5,7 +5,7 @@ category: []
 tags: []
 ---
 
-`youtube: JgMiS81jFyE`
+https://www.youtube.com/watch?v=JgMiS81jFyE&feature=emb_title
 
 > "For the rest of our lives, we will always be one pot of coffee ahead."
 >
