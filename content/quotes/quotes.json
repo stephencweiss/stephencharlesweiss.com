@@ -646,7 +646,71 @@
         "attribution": "Marc Andreeson",
         "source": "Pmarca Guide to Personal Productivity",
         "url": "https://pmarchive.com/guide_to_personal_productivity.html",
-        "tags": ["say no", "obligations","decision"]
+        "tags": [
+            "say no",
+            "obligations",
+            "decision"
+        ]
+    },
+    {
+        "text": "Assume no knowledge and infinite intelligence",
+        "attribution": "Unknown",
+        "source": "",
+        "url": "",
+        "tags": [
+            "intelligence",
+            "assumptions",
+            "kindness",
+            "writing",
+            "teaching"
+        ]
+    },
+    {
+        "text": "What if being lost is part of the path? What if we are supposed to tack across the surface of the lake, sailing into the wind instead of wishing it was only at our backs? What if feeling lost, directionless, and uncertain of the progress is an indicator of growth? What if it means you’re exactly where you need to be, on the pathless path?",
+        "attribution": "Jerry Colonna",
+        "source": "Reboot",
+        "url": "https://alearningaday.blog/2020/02/18/being-lost-and-the-path/",
+        "tags": [
+            "journey",
+            "growth",
+            "direction",
+            "progress"
+        ]
+    },
+    {
+        "text": "It is difficult to get a man to understand something when his salary depends upon his not understanding it.",
+        "attribution": "Upton Sinclair",
+        "source": "Oakland Tribune, December 11, 1934",
+        "url": "https://reubenlillie.com/comp-496/",
+        "tags": [
+            "justice",
+            "understanding",
+            "ethics"
+        ]
+    },
+    {
+        "text": "The way to right wrongs is to turn the light of truth upon them.",
+        "attribution": "Ida B. Wells",
+        "url": "https://reubenlillie.com/comp-496/",
+        "tags": [
+            "ethics",
+            "rightness",
+            "justice"
+        ]
+    },
+    {
+        "text": "To be a scientist is to be naive. We are so focused on our search for truth, we fail to consider how few actually want us to find it. But it is always there, whether we see it or not, whether we choose to or not. The truth doesn’t care about our needs or wants. It doesn’t care about our governments, our ideologies, our religions. It will lie in wait for all time. And this, at last, is the gift of Chernobyl. Where I once would fear the cost of truth, now I only ask: 'What is the cost of lies?'",
+        "attribution": "Valery Legasov",
+        "source": "Chernobyl (HBO Miniseries)",
+        "url": "https://alearningaday.blog/2020/02/21/chernobyl/",
+        "tags": ["truth","science","naïveté","lies","cost of truth","indifference"]
+    },
+    {
+        "text": "You’re going to find that many of the truths we cling to depend greatly on our own point of view.",
+        "attribution": "Obi-Wan Kenobi",
+        "source": "The Imposter's Handbook",
+        "url": "",
+        "tags": ["truth","perspective"]
     },
     {
         "text": "",

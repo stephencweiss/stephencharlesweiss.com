@@ -49,6 +49,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/stats`,
+        name: `stats`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
@@ -289,6 +296,13 @@ module.exports = {
         disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: 'static',
+      },
+    },
+    {
+      resolve: 'gatsby-source-xkcd',
+      options: {
+        comicQuantity: 5,
+        latest: true,
       },
     },
   ],

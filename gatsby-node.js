@@ -12,6 +12,7 @@ const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
 const tagTemplate = path.resolve(`./src/templates/TagList.js`)
+const statsTemplate = path.resolve(`./src/templates/Stats.jsx`)
 const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -85,11 +86,26 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        stats: allMarkdownRemark(
+            sort: { fields: [fields___publishDate], order: DESC }
+            filter: { fields: { sourceInstance: { eq: "stats" } } }
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
         other: allMarkdownRemark(
           filter: {
             fields: {
               sourceInstance: {
-                nin: ["annual-review", "blog", "books", "list"]
+                nin: ["annual-review", "blog", "books", "list", "stats"]
               }
             }
           }
@@ -204,6 +220,19 @@ exports.createPages = ({ graphql, actions }) => {
           slug: review.node.fields.slug,
           previous,
           next,
+        },
+      })
+    })
+
+    // Site Stats ------------------------------------------->
+    const siteStats = result.data.stats.edges
+    // Create site Stats page(s).
+    siteStats.forEach(stats => {
+      createPage({
+        path: stats.node.fields.slug,
+        component: statsTemplate,
+        context: {
+          slug: stats.node.fields.slug,
         },
       })
     })

@@ -4,19 +4,28 @@ title: 'Reading List'
 
 ## Actively Reading
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
-- _One Flew Over The Cuckoo's Nest_ by Kesey
-- _Everything Curl_ by Daniel Stenberg
+- _The Imposter's Handbook_ by Rob Conery
+- _Ancillary Justice_ by Ann Leckie
 
 ## Started, Not Active
 
 - _Quiet_ by Susan Cain
 - _Don Quixote_ by Cervantes
+- _Everything Curl_ by Daniel Stenberg
 
 ## Finished
 
 ### 2020
 
-Total: 3
+Total: 7
+
+### _March 2020_
+- _Clean Code_ by Robert "Uncle Bob" Martin
+
+### _February 2020_
+- _Heavy_ by Kiese Laymon
+- _Uncanny Valley_ by Anna Wiener
+- _One Flew Over The Cuckoo's Nest_ by Kesey
 
 ### _January 2020_
 
@@ -154,6 +163,8 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 ### Fiction
 
+1. _Legacy of Orïsha, Book I: Children of Blood and Bone_ by Tomi Adeyemi
+1. _The Fall_ by Albert Camus
 1. _Robinson Crusoe_ by Defoe
 1. _The Brothers Karamazov_ by Fyodor Dostoevsky
 1. _Notes from the Underground_ by Fyodor Dostoevsky
@@ -168,6 +179,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Circé_ by Miller
 1. _The Death of Ivan Ilych_ Leo Tolstoy
 1. _Serpico_ by Maas
+1. _The Sculptor_ by Scott McCloud
 1. _Caravans_ by James Michener
 1. _The Covenant_ by James Michener
 1. _The Fires of Spring_ by James Michener
@@ -187,6 +199,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Ben-Hur: A Tale of the Christ_ by Lew Wallace
 1. _Old School_ by Tobias Wolff
 1. _Mrs. Dalloway_ by Virginia Woolf
+1. _Black Boy_ by Richard Wright
 
 ### Business
 
@@ -226,6 +239,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Tech
 
 1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
+1. _Refactoring_ by Martin Fowler
 1. _Refactoring UI_ by Adam Watham & Steve Shoger
 
 ### Other
@@ -246,6 +260,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Winners Take All: The Elite Charade of Changing the World_ by Anand Giridharadas
 1. _Ordeal of Change_ by Eric Hoffer
 1. _Tribe: On Homecoming and Belonging_ by Sebastian Junger
+1. _Why We're Polarized_ by Ezra Klein
 1. _Interpreter of Maladies_ by Jhumpa Lahiri
 1. _The Namesake_ by Jhumpa Lahiri
 1. _Amusing Ourselves to Death_ by Neil Postman
@@ -255,5 +270,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity_ by Douglas Rushkoff
 1. _Revenge of Analog_ by David Sax
 1. _Powers of Two: The Essence of Innovation in Creative Pairs_ by Joshua Wolk Shenk
+1. _The Creative Habit: Learn It and Use It for Life_ by Twyla Tharp
 1. _Sex Object_ by Jessica Valenti
 1. _The XX Factor: How the Rise of Working Women Has Created a Far Less Equal World_ by Alison Wolf, Chrystia Freeland

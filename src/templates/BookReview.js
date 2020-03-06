@@ -5,11 +5,11 @@ import { useSiteMetadata } from '../hooks'
 import { Bio, Layout, PostNavigation, SEO } from '../components'
 
 const Date = styled.p`
-    color: #999;
-    float: left;
-    clear: left;
-    display: block;
-  }`
+  color: #999;
+  float: left;
+  clear: left;
+  display: block;
+`
 
 const Title = styled.h1`
   display: block;
