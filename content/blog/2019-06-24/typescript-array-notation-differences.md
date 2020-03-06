@@ -27,4 +27,4 @@ That said, it also introduced to me the concept of the `Readonly` syntax which i
 # Source:
 
 - <sup>1</sup> [TypeScript 3.4 · TypeScript](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#a-new-syntax-for-readonlyarray)
-- [Array<Type> VS Type in Typescript - Stack Overflow](https://stackoverflow.com/questions/36842158/arraytype-vs-type-in-typescript)
+- [`Array<Type>` VS Type in Typescript - Stack Overflow](https://stackoverflow.com/questions/36842158/arraytype-vs-type-in-typescript)

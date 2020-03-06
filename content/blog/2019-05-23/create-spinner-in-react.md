@@ -63,4 +63,4 @@ export default ImageComponent
 ## Footnotes
 
 - <sup>1</sup> [API Reference | styled-components](https://www.styled-components.com/docs/api)
-- <sup>2</sup> [React.js `<img>` tag rendering with multiple fallback & loader support | react-image](https://github.com/mbrevda/react-image)
+- <sup>2</sup> [React.js `img` tag rendering with multiple fallback & loader support | react-image](https://github.com/mbrevda/react-image)

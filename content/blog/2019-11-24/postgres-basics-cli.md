@@ -42,8 +42,8 @@ $ createdb <database_name>
 
 After we have our first database, we can login and create databases from within the postgres shell, however, the first one needs to happen from the bash shell - or you’ll get the error:
 
-> FATAL: database <user> does not exist
-> psql: FATAL: database <user> does not exist
+> FATAL: database `<user>` does not exist
+> psql: FATAL: database `<user>` does not exist
 
 ## Create The User
 
