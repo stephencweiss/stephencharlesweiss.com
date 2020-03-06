@@ -30,9 +30,9 @@ Before we get into _how_ to use Ligaturizer (spoiler alert: the Readme is incred
 
 Ligatures are symbols that appear when two (or more) characters appear in sequence that is different than how those characters would appear if printed independently.
 
-![](./wiki-ligature.png)
-
-(https://upload.wikimedia.org/wikipedia/commons/5/56/The_Wheel_Taumfel.jpg)
+| ![](./wiki-ligature.png) |
+| :-----------------------: |
+| [Wikipedia Source](https://upload.wikimedia.org/wikipedia/commons/5/56/The_Wheel_Taumfel.jpg)|
 
 As an example, this example from Wikipedia shows how the `Th` and `Wh` combine in unique ways when next to one another.
 
