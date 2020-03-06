@@ -1,6 +1,7 @@
 ---
-title: "VSCode: Adding Ligatures To A Font That Doesn't Have THem"
+title: "VSCode: Adding Ligatures To A Font That Doesn't Have Them"
 date: '2018-12-29'
+updated: ['2020-03-09']
 category: ['programming']
 tags: ['vscode', 'ligatures', 'tips and tools']
 ---
