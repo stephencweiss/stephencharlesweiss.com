@@ -63,7 +63,7 @@ One key difference between the two options and noted in the manual is the scope 
 
 From the manual:
 
-> To illustrate the difference between -S<regex> --pickaxe-regex and -G<regex>, consider a commit with the following diff in the same file:
+> To illustrate the difference between `-S<regex>` --pickaxe-regex and `-G<regex>`, consider a commit with the following diff in the same file:
 >
 > ```diff
 >   +    return !regexec(regexp, two->ptr, 1, &regmatch, 0);

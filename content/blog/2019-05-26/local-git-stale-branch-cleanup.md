@@ -58,7 +58,7 @@ While this does optimize the repository’s storage, it doesn’t address the br
 
 # Step Two: Pruning Dead References
 
-I’d heard a lot about "pruning", so that was where I started. However, the manual page for `git prun` begins with the following note:
+I’d heard a lot about "pruning", so that was where I started. However, the manual page for "git prune" begins with the following note:
 
 > In most cases, users should run `git gc`, which calls `git prune`
 
@@ -78,7 +78,7 @@ Caveat from the manual:
 
 This wasn’t a concern for me… so _snip snip_.
 
-```
+```shell
 $ git fetch --prune
 From git.gitlab.com:org/project
  - [deleted]           (none)     -> origin/16-stuff
@@ -115,7 +115,7 @@ The verbose flag has two levels within `git branch`. If you repeat it (i.e., `gi
 
 This is extra helpful because of a few pieces of information that comes along for the ride - notably "gone" and "behind".
 
-```bash
+```shell
 $ gb -vv
   bug/jump-to-menu-stepper-index                          c881290e [origin/bug/jump-to-menu-stepper-index: gone] Label is optional now
   ...

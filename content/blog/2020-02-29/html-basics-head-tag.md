@@ -111,7 +111,7 @@ For example:
 </html>
 ```
 
-## Aside: Managing The <Head> I React
+## Aside: Managing The Head Tag In React
 
 Managing the `<head>` tag in React is not necessarily straight forward. In standard React applications, however, we can use tools like `react-helmet`. Next.js also offers their own approach with a `<Head>` component.
 
@@ -150,4 +150,4 @@ I do not need to know every API inside and out to be able to build websites and 
 ## Footnotes
 
 <sup>[1](#fn1)</sup> The tutorials were [Getting a Basic React App Up And Running](../../2019-09-08/tutorial-basic-react-app/) which uses Webpack and Babel for bundling and [An Even More Basic React App Tutorial](../../2019-09-23/tutorial-even-more-basic-react-app/) where I used React directly within the HTML instead of bundling.
-<sup>[2](#fn2)</sup> I found the answers to [this question on Quora about the differences between the `<script>` and `<link>` tags](https://www.quora.com/What-is-the-difference-between-script-src-and-link-href?share=1) quite helpful.
+<sup>[2](#fn2)</sup> I found the answers to [this question on Quora about the differences between the `script` and `link` tags](https://www.quora.com/What-is-the-difference-between-script-src-and-link-href?share=1) quite helpful.
