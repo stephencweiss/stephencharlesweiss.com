@@ -1,6 +1,6 @@
 ---
 title: 'Creating Links: Hard vs. Symbolic'
-date: '2020-03-09'
+date: '2020-03-06'
 publish: '2020-03-24'
 category: ['programming']
 tags: ['linux', 'link', 'symlink', 'hard link', 'soft link', 'inode']
