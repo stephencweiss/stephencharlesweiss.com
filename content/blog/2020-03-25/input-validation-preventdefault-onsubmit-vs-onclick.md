@@ -17,7 +17,7 @@ tags:
   ]
 ---
 
-A little over a year ago, I first discovered the power of `Event.preventDefault` and `HTMLFormElement.reset` and wrote about it [here](https://stephencharlesweiss.com/blog/2019-01-04/better-form-submissions-with-event-preventdefault-and-htmlformelement-reset/).
+A little over a year ago, I first discovered the power of `Event.preventDefault` and `HTMLFormElement.reset` and wrote about it [Better Form Submissions with Event.preventDefault and HTMLFormElement.reset](../../2019-01-04/better-form-submissions-with-event-preventdefault-and-htmlformelement-reset/).
 
 Despite having that post as a reference, I found myself struggling to understand why my form wasn't behaving as I expected today.
 
@@ -31,7 +31,7 @@ Per [MDN's page on the `input` element](https://developer.mozilla.org/en-US/docs
 
 This seemed straight forward enough. Add a pattern. Use the title to assist in providing an explanation. No matter what I did though - my pattern didn't seem to be validating! I tried simpler patterns. I opened up code sandboxes and they worked. What was going on?
 
-The issue, it turned out, was where I'd placed the logic. Instead of attaching the form logic to the form's `onSubmit` handler like I had [in my example a year ago](https://stephencharlesweiss.com/blog/2019-01-04/better-form-submissions-with-event-preventdefault-and-htmlformelement-reset/#example-time), I placed it in the form button's `onClick`.
+The issue, it turned out, was where I'd placed the logic. Instead of attaching the form logic to the form's `onSubmit` handler like I had [in my example a year ago](../../2019-01-04/better-form-submissions-with-event-preventdefault-and-htmlformelement-reset/#example-time), I placed it in the form button's `onClick`.
 
 While this works for _most_ basic use cases, the `preventDefault` will _disable_ the native validation when attached to the `onClick` event, but _not_ `onSubmit`.<sup>[2](#footnotes)</sup><a id="fn2"></a>
 
