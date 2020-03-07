@@ -703,14 +703,41 @@
         "attribution": "Valery Legasov",
         "source": "Chernobyl (HBO Miniseries)",
         "url": "https://alearningaday.blog/2020/02/21/chernobyl/",
-        "tags": ["truth","science","naïveté","lies","cost of truth","indifference"]
+        "tags": [
+            "truth",
+            "science",
+            "naïveté",
+            "lies",
+            "cost of truth",
+            "indifference"
+        ]
     },
     {
         "text": "You’re going to find that many of the truths we cling to depend greatly on our own point of view.",
         "attribution": "Obi-Wan Kenobi",
         "source": "The Imposter's Handbook",
         "url": "",
-        "tags": ["truth","perspective"]
+        "tags": [
+            "truth",
+            "perspective"
+        ]
+    },
+    {
+        "text": "'What day is it?' Asked Pooh. 'It's today!' Squeaked Piglet. 'My favorite day,' said Pooh.",
+        "attribution": "A.A. Milne",
+        "source": "_Pooh and the Zen of Happiness_ By Benjamin Hoff",
+        "url": "",
+        "tags": [
+            "happiness",
+            "winnie the pooh"
+        ]
+    },
+    {
+        "text": "Yesterday's choices are tomorrow's consequences",
+        "attribution": "",
+        "source": "",
+        "url": "",
+        "tags": []
     },
     {
         "text": "",
