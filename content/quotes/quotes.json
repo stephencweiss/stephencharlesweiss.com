@@ -737,7 +737,14 @@
         "attribution": "",
         "source": "",
         "url": "",
-        "tags": []
+        "tags": ["choices","consequences"]
+    },
+    {
+        "text": "It's hard enough to find an error in your code when you're looking for it. It's even harder when you've assumed your code is error-free.",
+        "attribution": "Steve McConnell",
+        "source": "freeCodeCamp.org",
+        "url": "",
+        "tags": ["debugging","problem solving","expectations",]
     },
     {
         "text": "",
