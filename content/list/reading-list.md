@@ -3,7 +3,6 @@ title: 'Reading List'
 ---
 
 ## Actively Reading
-- _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
 - _The Imposter's Handbook_ by Rob Conery
 - _Ancillary Justice_ by Ann Leckie
 
@@ -17,9 +16,10 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 7
+Total: 8
 
 ### _March 2020_
+- _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
 - _Clean Code_ by Robert "Uncle Bob" Martin
 
 ### _February 2020_

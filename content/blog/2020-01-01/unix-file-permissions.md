@@ -11,6 +11,7 @@ When I first encountered file permissions in Unix, I was really intimidated. Why
 As with most things, when you are able to break it down into the pieces, it gets much simpler.
 
 The first thing to bear in mind is that each number (0 - 7) refers to a specific level of permission. Those permissions can be summarized in the table:
+
 | Number | Permission Type | Symbol |
 | ------ | ---------- | ------ |
 | 0 | No Permission | --- |

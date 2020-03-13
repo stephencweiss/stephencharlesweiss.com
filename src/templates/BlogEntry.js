@@ -1,7 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Bio, Layout, PageNavigation, PostDate, SEO, Title } from '../components'
+import {
+  Bio,
+  Layout,
+  PageNavigation,
+  PostDate,
+  SEO,
+  Title,
+} from '../components'
 import { useSiteMetadata } from '../hooks'
 
 const Entry = styled.div`

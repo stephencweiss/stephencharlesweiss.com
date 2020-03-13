@@ -18,7 +18,6 @@ import {
   blue,
   cyan,
   green,
-
 } from './colors'
 
 export default theme('mode', {

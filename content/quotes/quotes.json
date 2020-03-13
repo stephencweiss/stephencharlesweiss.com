@@ -703,14 +703,55 @@
         "attribution": "Valery Legasov",
         "source": "Chernobyl (HBO Miniseries)",
         "url": "https://alearningaday.blog/2020/02/21/chernobyl/",
-        "tags": ["truth","science","naïveté","lies","cost of truth","indifference"]
+        "tags": [
+            "truth",
+            "science",
+            "naïveté",
+            "lies",
+            "cost of truth",
+            "indifference"
+        ]
     },
     {
         "text": "You’re going to find that many of the truths we cling to depend greatly on our own point of view.",
         "attribution": "Obi-Wan Kenobi",
         "source": "The Imposter's Handbook",
         "url": "",
-        "tags": ["truth","perspective"]
+        "tags": [
+            "truth",
+            "perspective"
+        ]
+    },
+    {
+        "text": "'What day is it?' Asked Pooh. 'It's today!' Squeaked Piglet. 'My favorite day,' said Pooh.",
+        "attribution": "A.A. Milne",
+        "source": "_Pooh and the Zen of Happiness_ By Benjamin Hoff",
+        "url": "",
+        "tags": [
+            "happiness",
+            "winnie the pooh"
+        ]
+    },
+    {
+        "text": "Yesterday's choices are tomorrow's consequences",
+        "attribution": "",
+        "source": "",
+        "url": "",
+        "tags": ["choices","consequences"]
+    },
+    {
+        "text": "It's hard enough to find an error in your code when you're looking for it. It's even harder when you've assumed your code is error-free.",
+        "attribution": "Steve McConnell",
+        "source": "freeCodeCamp.org",
+        "url": "",
+        "tags": ["debugging","problem solving","expectations",]
+    },
+    {
+        "text": "Violence is what we do when we don’t know what to do with our suffering.",
+        "attribution": "Parker J Palmer",
+        "source": "",
+        "url": "https://alearningaday.blog/2020/03/09/violence-and-suffering/",
+        "tags": ["violence","suffering"]
     },
     {
         "text": "",

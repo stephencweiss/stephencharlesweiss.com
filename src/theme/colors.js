@@ -23,5 +23,5 @@ export const blue = '#268bd2'
 export const cyan = '#2aa198'
 export const green = '#859900'
 
-export const baseBackground= '#FFF8F0';
-export const panelBackground= '#f6f6f6';
+export const baseBackground = '#FFF8F0'
+export const panelBackground = '#f6f6f6'

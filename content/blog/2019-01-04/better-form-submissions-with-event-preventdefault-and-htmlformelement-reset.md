@@ -1,20 +1,31 @@
 ---
-title: Better Form Submissions with Event.preventDefault() and HTMLFormElement.reset()
+title: 'Better Form Submissions with Event.preventDefault and HTMLFormElement.reset'
 date: '2019-01-04'
+updated: ['2020-03-25']
 category: ['programming']
-tags: ['eventHandlers','form submission']
+tags:
+  [
+    'eventHandlers',
+    'form submission',
+    'forms',
+    'html',
+    'preventdefault',
+    'onsubmit',
+  ]
 ---
+
+> Update: I recently revisited this use of `preventDefault` and `reset` in the context of utilizing the _appropriate_ event. Read about it in [Form Validation: preventDefault And onSubmit Vs onClick](../../2020-03-25/input-validation-preventdefault-onsubmit-vs-onclick.md)
 
 Two tools to keep in your tool belt when adding forms to your website should be:
 
-  1. `Event.preventDefault()`
-  2. `HTMLFormElement.reset()`
+1. `Event.preventDefault()`
+2. `HTMLFormElement.reset()`
 
-The reason is that by default, on submission of a form, the page will redirect and refresh. The biggest reason that this becomes a problem is that if you wanted to do anything *with* that information later on, you can’t. The assumption is that the form data is *sent off* and there is no reason to keep it on the client side after submission.
+The reason is that by default, on submission of a form, the page will redirect and refresh. The biggest reason that this becomes a problem is that if you wanted to do anything _with_ that information later on, you can’t. The assumption is that the form data is _sent off_ and there is no reason to keep it on the client side after submission.
 
 That may have been true(r) in the past, but as we move toward more and more client-side work, we don’t want to lose our user data to a refresh.
 
-That’s where `Event.preventDefault()` comes in handy. The `HTMLFormElement.reset()` is much more of a user experience feature in this context. Because we’re not navigating to a new site or refreshing, if we *don’t* use `.reset()` the user is likely to wonder whether or not anything actually happened.
+That’s where `Event.preventDefault()` comes in handy. The `HTMLFormElement.reset()` is much more of a user experience feature in this context. Because we’re not navigating to a new site or refreshing, if we _don’t_ use `.reset()` the user is likely to wonder whether or not anything actually happened.
 
 # Example Time!
 
@@ -52,23 +63,24 @@ formClass.addEventListener('submit', submitForm);
 If we were to open our page now and run our page, on submission, we’d likely see something like the following in our console.
 
 | ![console log of default form submission](./defaultFormNavigation.png) |
-|:---:|
-| *The default form submission* |
+| :--------------------------------------------------------------------: |
+|                     _The default form submission_                      |
 
 Notice that _after_ we submitted the form, we navigated to a new path, and now included more information (`?customer=Stephen`)
 
 ## Use `preventDefault()` To Stop Sending Data / Redirecting
+
 But unless you’re storing that form data somewhere, that redirection means that it’s lost to the ether.
 
-Before we can prevent the redirect, we need a way to *see* it.
+Before we can prevent the redirect, we need a way to _see_ it.
 
 Adding `javascript> console.log("The path is --> ", window.location.pathname);` to the Javascript on the page will shine a light.
 
-|![console log of default form submission with path logging](./defaultFormNavigationWithPath.png) |
-|:---:|
-| *The default form submission with path logging* |
+| ![console log of default form submission with path logging](./defaultFormNavigationWithPath.png) |
+| :----------------------------------------------------------------------------------------------: |
+|                         _The default form submission with path logging_                          |
 
-But, now we actually want to *prevent* the redirect so that we maintain access to the information. We can do this by adding *one* line to our `submitForm` method.
+But, now we actually want to _prevent_ the redirect so that we maintain access to the information. We can do this by adding _one_ line to our `submitForm` method.
 
 ```Javascript
 function submitForm (event) {
@@ -93,7 +105,8 @@ Though, it’s likely the case that `HTMLFormElement.reset()` was envisioned to 
 
 > **Reminder:** The default behavior we prevented is tied to the `submit` event emitted by the form.
 
-To modify our event handler to clear the entries *after* we’ve done what we needed to do, use the `.reset()` method on the form.
+To modify our event handler to clear the entries _after_ we’ve done what we needed to do, use the `.reset()` method on the form.
+
 ```Javascript
 function submitForm (event) {
   event.preventDefault();
@@ -105,11 +118,12 @@ function submitForm (event) {
 }
 ```
 
-The `formClass` variable *is* an HTMLFormElement and therefore has access to the reset method.
+The `formClass` variable _is_ an HTMLFormElement and therefore has access to the reset method.
 
 ![console log of formClass](./formClass.png)
 
 However, this could just as easily be written as
+
 ```JavaScript
 function submitForm (event) {
   event.preventDefault();
@@ -120,6 +134,7 @@ function submitForm (event) {
   this.reset(); // <-- Our *new* money line
 }
 ```
+
 The reason `this` works, is because of the context in which the `submitForm` is invoked.
 
 Recall, it was from an event listener that was attached to the `formClass`. If you look "to the left of the call-time dot" you’ll see that the context in which the `submitForm` function is run _is_ the form.
@@ -127,6 +142,7 @@ Recall, it was from an event listener that was attached to the `formClass`. If y
 Personally, I prefer to be explicit wherever possible, however, it is worth understanding _how_ it works so that you can read someone else’s code if they do not have the same behaviors.
 
 ## Video Walkthrough
+
 I put together this video walkthrough to demonstrate all of these details live.
 
 https://www.youtube.com/watch?time_continue=1&v=mokoauG3BAw&feature=emb_title
