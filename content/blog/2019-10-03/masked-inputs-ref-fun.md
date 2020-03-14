@@ -63,6 +63,8 @@ After all of that, I arrived at a working solution: Masking the input, guiding m
 
 If you’re interested, you can see my prototype in a [Code Sandbox](https://codesandbox.io/s/masked-inputs-z6w7f).
 
+https://codesandbox.io/s/masked-inputs-z6w7f
+
 ## Footnotes
 
 - <sup>1</sup> [Input Masking | CSS-Tricks](https://css-tricks.com/input-masking/) is a great start, and as noted, Estelle Wyel has a React compatible approach, though I ended up using a different library.
