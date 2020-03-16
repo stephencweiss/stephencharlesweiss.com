@@ -1,4 +1,5 @@
 /*
+  Modification to:
    ######   ######     ###    ##       ########
   ##    ## ##    ##   ## ##   ##       ##
   ##       ##        ##   ##  ##       ##
@@ -314,4 +315,12 @@ th:first-child {
   a[href^='#']:after {
     content: '';
   }
+}
+
+/*
+    SELECTION STYLES
+  --------------------------------------------- */
+* + ::selection {
+    background: rgba(255, 109, 91, 0.99);
+    text-shadow: none;
 }

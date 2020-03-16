@@ -2,7 +2,7 @@
 title: 'Styling Markdown Code Snippets With PrismJS'
 date: '2019-12-24'
 publish: '2020-01-15'
-updated: ['2020-01-15']
+updated: ['2020-01-15', '2020-03-15']
 category: ['programming']
 tags: ['prismjs', 'javascript', 'gatsby', 'styling', 'css']
 ---
@@ -133,15 +133,17 @@ For more on adding line numbers, [see the Gatsby plugin docs](https://www.gatsby
 Once all of this is setup, adding line numbers can be done by noting it at the top of the snippet with `{numberLines: true}`. For example:
 
 ````javascript{numberLines: true}
-```javascript{numberLines: true}
+;```javascript{numberLines: true}
 const meaningOfLife = 42;
+```
 ````
 
 Alternatively, you can start at a specified line number (in this case, line 5):
 
 ````javascript{numberLines: 5}
-```javascript{numberLines: 5}
+;```javascript{numberLines: 5}
 const meaningOfLife = 42;
+```
 ````
 
 ## Inline Code
@@ -161,13 +163,40 @@ To do this, set an inlineCodeMarker in your `gatsby-config`:
 
 The recommendation is to use a non-ASCII character, such as the `>` recommended in the plugin (it's useful to use something that's not _too_ esoteric otherwise it will be difficult to actually use).
 
-Once done, you can write an inline code like "css> .some-class { background-color: red }" (but wrapped in ticks) to get it styled as CSS, like so: `css> .some-class { background-color: red }`.
+Once done, you can write an inline code like "css> .some-class { background-color: red }" (using ticks instead of the quotes) to get it styled as CSS, like so: `css> .some-class { background-color: red }`.
 
 Alternatively, javascript can be done with "js> const variable = 42;", like so: `js> const variable = 42;`.
 
-One thing I noticed while playing with the inline code styles is the styles will be applied similarly as to a fenced code block.
+One thing I noticed while playing with the inline code styles is the styles will be applied similarly as to a fenced code block. Specifically, I noticed this because of the `white-space` attribute in the `solarized-light` theme is `css> white-space: pre`.
 
-Specifically, I noticed this because of the `white-space` attribute in the `solarized-light` theme is `css> white-space: pre`. This was different behavior than my standard `html> <p>` tag. Refer to [MDN for more on the `white-space` attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space).
+As a result, if any of the inline block would break on a line, the _entire_ line was moved to the next line. This is different from standard `<p>` tag styling (where each word is treated as an independent token and a new line can occur at any point). Refer to [MDN for more on the `white-space` attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space).
+
+I didn't like this behavior and wanted inline code to behave more like normal text. The fix was a relatively minor CSS adjustment in the end.
+
+The big difference between the code blocks and inline code was the former was wrapped in `<pre>` tags, whereas inline code was not. So, I just needed a specific rule to target this kind of element. Mine looked like:
+
+```css:title="src/stylesheets/code.css"
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+    /*...*/
+    white-space: normal;
+}
+```
+
+With that in place, I made sure that I was importing my `code.css` into my `gatsby-browser` file:
+
+```javascript:title="src/gatsby-browser.js"
+import './src/stylesheets/_reset.css'
+import './src/stylesheets/global.css'
+import './src/stylesheets/code.css'
+
+import 'prismjs/plugins/command-line/prism-command-line.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import 'prismjs/plugins/line-highlight/prism-line-highlight.css'
+import 'prismjs/themes/prism-solarizedlight.css'
+```
+
+With that done, my inline code was once again breaking as expected.
 
 ## Diff Highlighting
 
