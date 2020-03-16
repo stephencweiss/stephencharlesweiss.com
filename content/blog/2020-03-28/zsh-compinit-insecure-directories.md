@@ -1,7 +1,7 @@
 ---
 title: 'Fix For zsh compinit Insecure Directories Error'
 date: '2020-03-12'
-publish: '2020-03'28'
+publish: '2020-03-28'
 category: ['programming']
 tags: ['zsh','compinit','error handling','macos']
 ---
@@ -74,8 +74,8 @@ At this point, we know that the permissions of the directories are problematic -
 
 the manual entry for `chmod` states the following in the `Modes` section:
 
-> Modes may be absolute or symbolic.  
-> […]  
+> Modes may be absolute or symbolic.
+> […]
 > The symbolic mode is described by the following grammar:
 >
 >            mode         ::= clause [, clause ...]

@@ -42,12 +42,12 @@ pushNewBranch() => {
 }
 ```
 
-Fortunately, I’d recently come across _how_ to find my current branch: `git branch --show-current` (in v2.22.0+) or `git branch | grep \* | cut -d ‘ ‘ -f2` for lower versions.
+Fortunately, I’d recently come across _how_ to find my current branch: `git branch --show-current` (in v2.22.0+) or `git branch | grep \* | cut -d ' ' -f2` for lower versions.
 
 At this point, I could pipe my answer into a git push function, or use a subroutine. I opted for the latter and I now have a new alias in my `~/.zshrc` file:
 
 ```shell
-alias gpnew='git push —-set-upstream origin $(git branch --show-current)’
+alias gpnew='git push —-set-upstream origin $(git branch --show-current)'
 ```
 
 This is a _really_ small thing, but it makes the developing experience slightly more enjoyable by eliminating one piece of redundancy.
