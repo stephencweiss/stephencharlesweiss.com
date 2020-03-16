@@ -74,6 +74,11 @@ img::-moz-selection {
   background: transparent;
 }
 
+*::selection {
+    background: rgba(255, 109, 91, 0.99);
+    text-shadow: none;
+}
+
 /*
     BASE TYPOGRAPHY
   --------------------------------------------- */
@@ -317,10 +322,4 @@ th:first-child {
   }
 }
 
-/*
-    SELECTION STYLES
-  --------------------------------------------- */
-* + ::selection {
-    background: rgba(255, 109, 91, 0.99);
-    text-shadow: none;
-}
+
