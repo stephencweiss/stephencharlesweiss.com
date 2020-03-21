@@ -3,8 +3,8 @@ title: 'Reading List'
 ---
 
 ## Actively Reading
-- _The Imposter's Handbook_ by Rob Conery
-- _Ancillary Justice_ by Ann Leckie
+- _REAMDE_ by Neal Stephenson
+- _Joel On Software_ by Joel Spolsky
 
 ## Started, Not Active
 
@@ -16,9 +16,11 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 8
+Total: 10
 
 ### _March 2020_
+- _The Imposter's Handbook_ by Rob Conery
+- _Ancillary Justice_ by Ann Leckie
 - _Peopleware: Productive Projects and Teams_ by Tom DeMarco & Timothy Lister
 - _Clean Code_ by Robert "Uncle Bob" Martin
 
