@@ -32,7 +32,7 @@ function Rankings(props) {
   const { rating } = props
 
   return (
-    <>
+    <React.Fragment>
       <h2>Rating</h2>
       {rating && (
         <p>
@@ -47,7 +47,7 @@ function Rankings(props) {
           ))}
         </ul>
       </p>
-    </>
+    </React.Fragment>
   )
 }
 
