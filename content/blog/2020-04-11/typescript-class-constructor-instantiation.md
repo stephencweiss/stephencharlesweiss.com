@@ -3,7 +3,7 @@ title: 'Instantiate Class In Typescript'
 date: '2020-03-22'
 publish: '2020-04-10'
 category: ['programming']
-tags: ['error handling','typescript','class','constructor','type error']
+tags: ['error handling', 'typescript','class constructor','type error','oop','object oriented programming']
 ---
 Tonight, had a real head scratcher: how to instantiate a class in Typescript that uses a constructor without a compiler error!
 
