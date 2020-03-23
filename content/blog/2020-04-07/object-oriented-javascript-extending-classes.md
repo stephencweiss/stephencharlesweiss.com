@@ -1,14 +1,18 @@
 ---
 title: 'Object Oriented Javascript: Extending Classes'
 date: '2020-03-19'
-publish: '2020-04-07'
-draft: true
+updated: ['2020-04-07']
 category: ['programming']
-tags: ['javascript','oop',
-'object oriented programming',
-'class instantiation',
-'prototype',
-'inheritance',]
+tags:
+  [
+    'oop',
+    'object oriented programming',
+    'javascript',
+    'class instantiation',
+    'prototype',
+    'inheritance',
+    'class constructor',
+  ]
 ---
 
 I’ve written in the past about [OO in Javascript](../../2019-02-18/object-oriented-javascript/), but recently I was working on learning more about heaps and as I pulled together my own implementation of a binary heap, I noticed a gap in my understanding specifically as it relates to extending classes in Javascript.

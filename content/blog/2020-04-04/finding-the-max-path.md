@@ -1,9 +1,9 @@
 ---
 title: 'Recursion: Finding The Max Path'
-tags: ['recursion', 'algorithms']
-category: ['programming']
 date: '2020-03-17'
 publish: '2020-04-04'
+category: ['programming']
+tags: ['recursion', 'algorithms']
 ---
 
 Continuing my toy problem practice, today I worked on a path finding problem.

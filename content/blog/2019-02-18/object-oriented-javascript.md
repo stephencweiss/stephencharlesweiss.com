@@ -4,14 +4,14 @@ date: '2019-02-18'
 updated: ['2020-03-21']
 category: ['programming']
 tags:
-    [
-        'oop',
-        'object oriented programming',
-        'javascript',
-        'class instantiation',
-        'prototype',
-        'inheritance'
-    ]
+  [
+    'oop',
+    'object oriented programming',
+    'javascript',
+    'class instantiation',
+    'prototype',
+    'inheritance',
+  ]
 ---
 
 > Update: I wrote a follow up post on how to [extend classes in Javascript](../../2020-04-07/object-oriented-javascript-extending-classes/).
@@ -43,17 +43,17 @@ This write-up then is a reminder of some of the differences and when/why you mig
 
 ```javascript
 function Car(make, model, year) {
-    const obj = {}
-    obj.make = make
-    obj.model = model
-    obj.year = year
-    obj.wheels = 4
-    obj.trunk = true
-    obj.doors = 4
-    obj.greet = function() {
-        return `Hi, I am a ${this.model} ${this.make}.`
-    }
-    return obj
+  const obj = {}
+  obj.make = make
+  obj.model = model
+  obj.year = year
+  obj.wheels = 4
+  obj.trunk = true
+  obj.doors = 4
+  obj.greet = function() {
+    return `Hi, I am a ${this.model} ${this.make}.`
+  }
+  return obj
 }
 const functionalCar = Car('S', 'Tesla', 2018)
 const functionalCar2 = Car('Fiesta', 'Ford', 2015)
@@ -81,27 +81,27 @@ This addresses the problem by creating a second object which is used to extend t
 
 ```javascript
 function Car(make, model, year) {
-    const obj = {}
-    extend(obj, objShared)
-    obj.make = make
-    obj.model = model
-    obj.year = year
-    return obj
+  const obj = {}
+  extend(obj, objShared)
+  obj.make = make
+  obj.model = model
+  obj.year = year
+  return obj
 }
 
 function extend(obj, methods) {
-    for (let key in methods) {
-        obj[key] = methods[key]
-    }
+  for (let key in methods) {
+    obj[key] = methods[key]
+  }
 }
 
 const objShared = {
-    wheels: 4,
-    trunk: true,
-    doors: 4,
-    greet: function() {
-        return `Hi, I am a ${this.model} ${this.make}.`
-    },
+  wheels: 4,
+  trunk: true,
+  doors: 4,
+  greet: function() {
+    return `Hi, I am a ${this.model} ${this.make}.`
+  },
 }
 const functionalSharedCar = Car('S', 'Tesla', 2018)
 const functionalSharedCar2 = Car('Fiesta', 'Ford', 2015)
@@ -119,7 +119,7 @@ Imagine:
 ```javascript
 // Extending the above example re: functional-shared
 objShared[greet] = function() {
-    return 'Howdy! I am a ${this.model} ${this.make} from ${this.year}!'
+  return 'Howdy! I am a ${this.model} ${this.make} from ${this.year}!'
 }
 const functionalSharedCar3 = Car('Veyron', 'Bugatti', 2019)
 functionalSharedCar3.greet() // 'Howdy! I am a Bugatti Veyron from 2019!'
@@ -188,15 +188,15 @@ Instead of using `Object.create()` to define an intermediate prototype or attach
 
 ```javascript
 function Car(make, model, year) {
-    this.make = make
-    this.model = model
-    this.year = year
+  this.make = make
+  this.model = model
+  this.year = year
 }
 Car.prototype.wheels = 4
 Car.prototype.trunk = true
 Car.prototype.doors = 4
 Car.prototype.greet = function() {
-    return `Hi, I am a ${this.make} ${this.model}`
+  return `Hi, I am a ${this.make} ${this.model}`
 }
 
 const psueodclassicalCar = new Car('S', 'Tesla', 2018)
