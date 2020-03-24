@@ -1,6 +1,7 @@
 ---
 title: '"regeneratorRuntime is not defined"'
 date: '2019-10-20'
+updated: ['2020-03-24']
 category: ['programming']
 tags: ['webpack', 'regeneratorruntime', 'error handling']
 ---
@@ -9,7 +10,7 @@ Deciding to not bootstrap my [React-Playground](https://github.com/stephencweiss
 
 Not only do I have the pleasure of getting to use new technologies of my choosing (today it was authentication with Auth0), but I also get to learn Webpack when something invariably goes wrong.
 
-When I added Toasts I couldn’t load the CSS styles needed for the toasts because I had misconfigured the CSS Loader.
+When I added Toasts I couldn't load the CSS styles needed for the toasts because I had misconfigured the CSS Loader.
 
 Today, it was the `regeneratorRuntime`.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
@@ -29,19 +30,19 @@ Auth0Context.js:145 Uncaught ReferenceError: regeneratorRuntime is not defined
     at performUnitOfWork (react-dom.development.js:24638)
 ```
 
-I started by reviewing my code to make sure I hadn’t missed anything. Once I’d convinced myself that the issue didn’t lay with me, I started looking around for others who had faced similar problems.
+I started by reviewing my code to make sure I hadn't missed anything. Once I'd convinced myself that the issue didn't lay with me, I started looking around for others who had faced similar problems.
 
-It turns out that many others had run into this same problem - and they’d fixed it using Babel.
+It turns out that many others had run into this same problem - and they'd fixed it using Babel.
 
-Unfortunately, I’m not using Babel, at least not directly. That is, I don’t have a `.babelrc` file where I'm configuring my plugins and presets.
+Unfortunately, I'm not using Babel, at least not directly. That is, I don't have a `.babelrc` file where I'm configuring my plugins and presets.
 
 So, I needed to do it directly in Webpack (this is what I meant about how I get to just keep learning more about Webpack).
 
 Fortunately, Webpack had the answer in their docs:<sup>[2](#footnotes)</sup><a id="fn2"></a>
 
 ```javascript
-const path = require(‘path’);
-const webpack = require(‘webpack’);
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   ...
@@ -50,9 +51,9 @@ module.exports = {
       {
         test: [/\.js$/, /\.jsx?$/],
         exclude: /node_modules/,
-        loader: 'babel-loader’,
+        loader: 'babel-loader',
         options: {
-          presets: [‘@babel/env’, ‘@babel/react’],
+          presets: ['@babel/env', '@babel/react'],
           plugins: ['@babel/plugin-transform-runtime'],
         },
       },
@@ -67,7 +68,10 @@ Notice that I only installed `@babel/plugin-transform-runtime` as a dependency (
 
 Once done, and I rebuilt my project, the errors evaporated. Woo!
 
+> Update: Babel has removed these presets and deprecated others. Instead of `@babel/env` we now have `@babel/preset-env`. Instead of `@babel/react`, we now have `@babel/preset-react`.
+> [Jakob Lind](https://blog.jakoblind.no/babel-preset-env/) has a great write up on some of the nuances at play here as they relate to what `babel` is actually doing and how it works. Check it out!
+
 ## Footnotes
 
-- <sup>[1](#fn1)</sup> Side note: The `regeneratorRuntime` is a [library from Facebook](https://github.com/facebook/regenerator/blob/master/packages/regenerator-runtime/runtime.js) that is [needed to transpile generator functions](https://babeljs.io/docs/en/babel-polyfill).
-- <sup>[2](#fn2)</sup> Webpack’s docs on [babel-loader](https://webpack.js.org/loaders/babel-loader/#babel-is-injecting-helpers-into-each-file-and-bloating-my-code) are filled with gems.
+-   <sup>[1](#fn1)</sup> Side note: The `regeneratorRuntime` is a [library from Facebook](https://github.com/facebook/regenerator/blob/master/packages/regenerator-runtime/runtime.js) that is [needed to transpile generator functions](https://babeljs.io/docs/en/babel-polyfill).
+-   <sup>[2](#fn2)</sup> Webpack's docs on [babel-loader](https://webpack.js.org/loaders/babel-loader/#babel-is-injecting-helpers-into-each-file-and-bloating-my-code) are filled with gems.
