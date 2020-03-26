@@ -1,6 +1,7 @@
 ---
 title: 'Compression Basics: Zip, Tar, Rar, and Gz'
 date: '2019-09-15'
+updated: ['2020-03-26']
 tags: ['gzip', '.zip', '.tar', 'homebrew', 'macos', 'unix', 'compression']
 category: ['programming']
 ---
@@ -113,8 +114,10 @@ Even though `.rar` is a Windows format, it is possible to extract it on a Mac us
 
 ```shell
 $ brew install unrar
-$ unrar <filename>.rar
+$ unrar e <filename>.rar
 ```
+
+> Update: In this case, the `e` command "Extract files without archived paths". To see other options, just enter `unrar` into the command line
 
 ## Conclusion
 
