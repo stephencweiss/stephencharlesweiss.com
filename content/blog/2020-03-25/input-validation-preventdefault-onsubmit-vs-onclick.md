@@ -43,7 +43,7 @@ At a high level, my form looked like:
 
 ```javascript
 function MyForm() {
-  const handleClick = () => {
+  const handleClick = (event) => {
     event.preventDefault()
     /* ... */
   }
