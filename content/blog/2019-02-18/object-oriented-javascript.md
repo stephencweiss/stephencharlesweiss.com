@@ -1,9 +1,11 @@
 ---
 title: 'Object Oriented Javascript: Class Instantiation Patterns'
 date: '2019-02-18'
+updated: ['2020-03-21']
 category: ['programming']
 tags:
   [
+    'oop',
     'object oriented programming',
     'javascript',
     'class instantiation',
@@ -11,6 +13,8 @@ tags:
     'inheritance',
   ]
 ---
+
+> Update: I wrote a follow up post on how to [extend classes in Javascript](../../2020-04-07/object-oriented-javascript-extending-classes/).
 
 What are classes anyway?
 A class is an entity that is capable of producing objects (instances) that share common attributes, features, and methods.
@@ -128,7 +132,7 @@ See how this can be confusing?
 
 Before going into the details, it’s worth understanding that Javascript is prototype-based. Per [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain):
 
-> When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its**prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this**prototype chain**.
+> When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its **prototype**. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. By definition, `null` has no prototype, and acts as the final link in this **prototype chain**.
 
 If you aren’t yet sure how Prototypes address the issues noted in the Functional-Shared Instantiation pattern example of a changing method, it’s also worth reading through the MDN page and playing around in the console to see how this approach makes things nice and simple.
 
