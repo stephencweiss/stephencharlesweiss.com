@@ -538,5 +538,11 @@
         "attribution": "Chris Prentiss",
         "source": "_Zen And the Art of Happiness_, pg 26",
         "tags": ["mindfulness", "zen", "acceptance"]
+    },
+    {
+        "text": "De gustibus non est disputandum (In matters of taste, there can be no dispute).",
+        "attribution": "Latin Proverb",
+        "source": "_REAMDE_ by Neal Stephenson",
+        "tags": ["taste", "latin", "dispute"]
     }
 ]
