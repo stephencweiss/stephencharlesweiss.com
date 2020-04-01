@@ -544,5 +544,11 @@
         "attribution": "Latin Proverb",
         "source": "_REAMDE_ by Neal Stephenson",
         "tags": ["taste", "latin", "dispute"]
+    },
+    {
+        "text": "Questions you cannot answer are usually far better for you than answers you cannot question.",
+        "attribution": "Yuval Noah Harari",
+        "url": "https://alearningaday.blog/2020/03/31/questions-you-cannot-answer/",
+        "tags": ["knowledge","questions","answers"]
     }
 ]
