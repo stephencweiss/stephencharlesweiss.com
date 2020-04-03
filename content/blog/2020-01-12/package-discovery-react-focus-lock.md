@@ -16,6 +16,8 @@ tags:
   ]
 ---
 
+Another entry in my [Package Discovery](../../../tags/package-discovery/) series. Today's topic is focus lock using `react-focus-lock`!
+
 When it comes to getting focus on dialog boxes on the internet, there's a lot to get right.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 At Remine, to help us get the details right, we use [`react-focus-lock`](https://www.npmjs.com/package/react-focus-lock).<sup>[2](#footnotes)</sup><a id="fn2"></a>

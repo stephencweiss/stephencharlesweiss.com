@@ -1,7 +1,7 @@
 ---
 title: 'Getting The Go Tour Running Locally'
 date: '2020-04-02'
-publish: '2020-04-22'
+publish: '2020-04-23'
 category: ['programming']
 tags: ['golang', 'tour', 'binaries', 'path', 'beginning']
 ---

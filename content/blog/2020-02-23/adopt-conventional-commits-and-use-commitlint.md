@@ -6,6 +6,8 @@ category: ['programming']
 tags: ['conventional commit', 'commitlint', 'package discovery']
 ---
 
+Today is another entry in my [Package Discovery](../../../tags/package-discovery/) series. The topic is conventional commits with `commitlint`.
+
 Learning about [Conventional Commits](../../2020-02-22/semantic-versioning-and-conventional-commits) recently made me want to actually put it in practice.
 
 As I mentioned at the end of that post, there are tools available to make it simpler to adhere to the rules.
