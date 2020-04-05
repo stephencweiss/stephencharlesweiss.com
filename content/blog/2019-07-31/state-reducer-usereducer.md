@@ -219,5 +219,5 @@ After reading through Robin’s tutorials, I was able to return with fresh eyes 
 * <sup>1</sup> [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#usereducer)
 * <sup>2</sup> [What is a reducer (React/Redux) in JavaScript? | RWieruch](https://www.robinwieruch.de/javascript-reducer/)
 * <sup>3</sup> [How to useReducer in React? | RWieruch](https://www.robinwieruch.de/react-usereducer-hook/)
-* <sup>4</sup>> [Actions | Redux](https://redux.js.org/basics/actions)
+* <sup>4</sup> [Actions | Redux](https://redux.js.org/basics/actions)
 
