@@ -54,8 +54,7 @@ Then when we're fetching the data (with our Query), we look to the global object
 ```javascript:title="resolvers/query.js"
 const Query = {
   dogs: function(parent, args, ctx, info) {
-    global.dogs = global.dogs || []; // in the future, this will be replaced with interfacing with our data layer
-    return global.dogs;
+    return global.dogs || []; // in the future, this will be replaced with interfacing with our data layer
   }
 };
 module.exports = Query;
