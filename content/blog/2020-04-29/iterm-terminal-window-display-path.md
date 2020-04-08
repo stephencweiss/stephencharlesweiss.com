@@ -12,9 +12,9 @@ While you can always find it by printing the working directory, certain terminal
 
 For example, in iTerm, it can be the name of the window.
 
-To set it, I used the `precmd` function in zsh<sup>[1](#footnotes)</sup><a id="fn1"></a>
+To set it, I used the `precmd` function in zsh: <sup>[1](#footnotes)</sup><a id="fn1"></a>
 
-```shell:title="~/.zshrc"
+```shell:title=".\/zshrc"
 # use precmd to name the window:
 # e.g., /Users/stephen/projects/dotfiles -> ~/p/dotfiles
 function precmd() {
