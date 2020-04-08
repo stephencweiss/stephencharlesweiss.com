@@ -1,7 +1,7 @@
 ---
 title: 'Rapid Prototyping GraphQL: Using Memory To Quickly Test Queries And Mutations'
 date: '2020-04-07'
-publish: '2020-04'28'
+publish: '2020-04-28'
 category: ['programming']
 tags: ['graphql','prototyping','queries','mutations','in memory']
 ---
