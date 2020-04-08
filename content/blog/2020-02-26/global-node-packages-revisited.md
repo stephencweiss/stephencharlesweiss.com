@@ -6,8 +6,6 @@ category: ['programming']
 tags: ['npm', 'global', 'nvm']
 ---
 
-Global NPM Package Management - Revisited
-
 I've written in the past about how to [manage globally installed NPM packages](../../2019-11-03/global-node-package-management/). In my previous post I covered how to:
 
 1. See what’s installed (view globally installed node packages)

@@ -2,6 +2,7 @@
 title: 'Extending GraphQL Schema Definitions with Apollo'
 date: '2019-11-28'
 publish: '2019-12-16'
+updated: ['2020-04-03']
 category: ['graphql']
 tags: ['apollo', 'composable', 'schema']
 ---
@@ -22,15 +23,17 @@ const root = `
 `
 
 const typeSchemas = await Promise.all(
-  ['product', 'user', 'coupon'].map(loadTypeSchema)
+  ['product', 'user', 'coupon'].map(loadTypeSchema) //highlight-line
 )
+
 typeDefs = root + typeSchemas.join(' ')
 schema = schemaToTemplateContext(buildSchema(typeDefs))
 ```
+`typeSchemas` is then the resolved promise of passing our three strings `product`, `user`, and `coupon`, into `loadTypeSchema`.
 
 The `loadTypeSchema` is:
 
-```javascript
+```javascript:title="./utils/schema"
 import fs from 'fs'
 import path from 'path'
 
@@ -50,11 +53,11 @@ export const loadTypeSchema = type =>
   })
 ```
 
-So, zooming in for a moment on the `product` schema, we can understand how this works.
+This is a function that takes a type (which is our string), and then uses Node's `fs` module to attempt to read it.
 
-Here's a file `product.gql`:
+Let's look at the `product` schema in more detail to understand how this works.
 
-```graphql
+```graphql:title="product.gql"
 enum ProductType {
   GAMING_PC
   BIKE
@@ -101,12 +104,12 @@ input UpdateProductInput {
   range: String
 }
 
-extend type Query {
+extend type Query {//highlight-line
   product(id: ID!): Product
   products: [Product]
 }
 
-extend type Mutation {
+extend type Mutation {//highlight-line
   newProduct(input: NewProductInput): Product
   updateProduct(id: ID, input: UpdateProductInput): Product
   removeProduct(id: ID, input: UpdateProductInput): Product
@@ -117,11 +120,16 @@ So what's happening?
 
 Starting with our `root`, we scaffold out a schema that includes `Query` and `Mutation` objects, but nothing's defined.
 
-Then, by mapping over our array of strings, we load the schemas for each of the strings thanks to the helper function `loadTypeSchema` which works by resolving files like `product.gql`
+We build up the schema for both `Query` and `Mutation` by mapping over our array of strings.
 
-Each of these `.gql` files is then appended to the `root` which is then passed into the `buildSchema` function that is imported from `graphql`
+Each one has a file like our `products.gql` which is then used to _extend_ the schema thanks to the helper function `loadTypeSchema` (notice that it's `extend type Query`, not `type Query`).
 
-The important part here is that because we're pulling multiple `.gql` files together, if they include new `Query` or `Mutation` objects, we need to `extend` them. If we don't, we'll get a syntax error as we try to overwrite the `Query` and `Mutation` objects.
+Each of these `.gql` files is then appended to the `root` which is then passed into the `buildSchema` function that is imported from `graphql`.
+
+The important part here is that because we're pulling multiple `.gql` files together, if they include new `Query` or `Mutation` objects, we need to `extend` them.
+
+
+If we don't extend, we'll get a syntax error as we try to overwrite the `Query` and `Mutation` objects.
 
 ```shell
       at syntaxError (node_modules/graphql/error/syntaxError.js:15:10)

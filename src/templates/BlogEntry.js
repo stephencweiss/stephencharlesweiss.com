@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import {
   Bio,
   Layout,
-  PageNavigation,
   PostDate,
   SEO,
   Title,
+  PostNavigation,
 } from '../components'
 import { useSiteMetadata } from '../hooks'
 
@@ -23,7 +23,7 @@ function EntryTemplate(props) {
   const { title: siteTitle } = useSiteMetadata()
   const { previous, next } = props.pageContext
   const { date, publish, title } = entry.frontmatter
-
+    console.log({previous, next})
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={title} description={entry.excerpt} />
@@ -37,7 +37,7 @@ function EntryTemplate(props) {
       />
       <hr />
       <Bio />
-      <PageNavigation previous={previous} next={next} />
+      <PostNavigation previous={previous} next={next} />
     </Layout>
   )
 }

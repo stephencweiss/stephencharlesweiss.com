@@ -1,6 +1,7 @@
 ---
 title: 'Adding Prettier To A Project'
 date: '2019-09-07'
+updated: ['2020-04-01']
 category: ['programming']
 tags: ['prettier', 'vscode', 'config']
 ---
@@ -15,18 +16,22 @@ The steps to adding Prettier to a project are very simple:
 
 Within the `package.json`, I tend to add the following scripts:
 
-```JSON
-"scripts": {
-  "format": "prettier --write \"src/**/*.{js, jsx, css, json} \"",
-  "format:check": "prettier --list:different \"src/**/*.{js, jsx, css, json} \""
-},
+```JSON:title="package.json"
+{
+    "scripts": {
+        "lint": "prettier --check src/**/*",
+        "lint:fix": "yarn lint --write"
+    },
+}
 ```
 
-The former can be used _if_ the editor is not configured to format on save. When run, Prettier will look at every file in the `src` directory and every one of the `src` directory's subdirectories. If the file has a `.js`, `.jsx`, `.css`, or `.json` file extension, it will run.
+The latter can be used _if_ the editor is not configured to format on save. When run, Prettier will look at every file in the `src` directory and every one of the `src` directory's subdirectories and run prettier on _all_ files. This can be made more precise with a more nuanced pattern match.
 
 The `--write` makes sure that Prettier actually _modifies_ the files, instead of simply writing the formatted version to the shell.
 
-The second script, `format:check` is something that can be used with a CI tool like Travis / CircleCI to throw an error if the code is _not_ formatted
+Integrating the `lint` script with a CI tool like Travis / CircleCI can be useful to alert if code is trying to be committed that doesn't match the formatting style.
+
+(Another way to manage this, however, would be to not allow unformatted code to be committed in the first place using a [git hooks](../../2020-02-23/adopt-conventional-commits-and-use-commitlint))
 
 ## Preferred Setup In VSCode
 
@@ -41,7 +46,7 @@ Make sure the following two lines are present:
 
 The former simply requires that there is a `.prettierrc` file in the application’s root directory. This is particularly useful in making sure that you don't accidentally modify a project that doesn't have a Prettier configuration set up and change every line in every file.
 
-The latter is a preference of mine to apply prettier on save - rather than waiting for a git commit or to run the `format` script.
+The latter is a preference of mine to apply prettier on save - rather than waiting for a git commit or to run the `format` script (or with [git hooks](../../2020-02-23/adopt-conventional-commits-and-use-commitlint)).
 
 ## Alternative Formats
 
@@ -51,4 +56,4 @@ The Prettier site has a helpful page for how to set these other formats up.<sup>
 
 ## Footnotes
 
-- <sup>1</sup> [Prettier](https://prettier.io/docs/en/configuration.html)
+-   <sup>1</sup> [Prettier](https://prettier.io/docs/en/configuration.html)

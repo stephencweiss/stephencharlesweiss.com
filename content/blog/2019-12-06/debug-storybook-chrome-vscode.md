@@ -3,7 +3,7 @@ title: 'Live Debugging Of Storybook In Chrome With VSCode'
 date: '2019-12-05'
 publish: '2019-12-06'
 category: ['programming']
-tags: ['storybook','vscode','debug']
+tags: ['storybook','vscode','debugging']
 ---
 
 While Storybook is great for communicating the potential of different components, debugging issues with components can be more of a challenge.

@@ -3,8 +3,10 @@ title: 'Easy Logging With Bunyan'
 date: '2020-02-07'
 publish: '2020-02-27'
 category: ['programming']
-tags: ['javascript','node','logging','bunyan']
+tags: ['javascript','node','logging','bunyan', 'package discovery',]
 ---
+
+Another entry in my [Package Discovery](../../../tags/package-discovery/) series. Today, I'm looking at logging with `bunyan`!
 
 Two steps to easily generate more readable logs:
 1. Install [bunyan](https://www.npmjs.com/package/bunyan) globally<sup>[1](#footnotes)</sup><a id="fn1"></a>

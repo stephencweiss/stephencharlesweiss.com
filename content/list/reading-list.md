@@ -5,6 +5,7 @@ title: 'Reading List'
 ## Actively Reading
 - _REAMDE_ by Neal Stephenson
 - _Joel On Software_ by Joel Spolsky
+- [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
 
 ## Started, Not Active
 

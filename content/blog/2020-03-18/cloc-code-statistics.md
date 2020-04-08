@@ -6,6 +6,8 @@ category: ['programming']
 tags: ['npm', 'package discovery', 'counter', 'lines of code']
 ---
 
+Today is another entry in my [Package Discovery](../../../tags/package-discovery/) series. The topic is project statistics with `cloc`.
+
 Software is getting more complex. Look no further than headlines saying that the space shuttle had "only" 400,000 lines of (machine) code compared to 100,000,000 in an "average modern high-end car" ([Source](https://www.visualcapitalist.com/millions-lines-of-code/)).
 
 I always wondered _how_ those numbers were calculated. Today, I found a tool that would make it possible: [`cloc`](https://github.com/AlDanial/cloc). `Cloc` is a "counter" application (of which [there are many alternatives](https://github.com/AlDanial/cloc#other-counters-)). It does what it says it will. It counts the numbers of files, lines of code, comments, and empty lines included in the target.

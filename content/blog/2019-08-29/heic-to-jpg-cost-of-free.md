@@ -6,15 +6,15 @@ category: ['musings']
 tags: ['tools', 'heic', 'jpg', 'file conversion']
 ---
 
-> **Update**: Ramesh over at FreeConvert.com found this post and reached out as a possible alternative to Beamr. 
+> **Update**: Ramesh over at [FreeConvert.com](https://www.freeconvert.com/) found this post and reached out as a possible alternative to Beamr.
 > I took a look and it seems like they offer a comparable service, but with a more consumer friendly Terms of Service (also credit to Ramesh and the team for both the readability of their ToS and responsiveness to feedback!)
-> Definitely check out FreeConvert.com if you need to convert your HEIC to JPEG (or any of the other conversions they offer). 
-> 
+> Definitely check out FreeConvert.com if you need to convert your HEIC to JPEG (or any of the other conversions they offer).
+>
 > From their [ToS](https://www.freeconvert.com/terms) as it relates to file ownership and privacy:
 > > **File ownership and privacy**
-> > 
+> >
 > > When you use our Services, you provide us with Your Files. Your Files are yours. These Terms don’t give us any rights to Your Files except for the limited rights that enable us to offer the Services.
-> > 
+> >
 > > We need your permission to do things like converting Your Files and temporarily storing them (via a private URL that is only available to you for downloading the converted file). To convert and deliver converted files, we need to access and store Your Files. You give us permission to do those things. Please also note than we automatically remove Your Files from our servers within 6 hours of conversion.
 
 Apple’s Live Photos are a fun way to add a little twist to photos you snap on your phone. Empowering this feature is a file format called HEIC — High-Efficiency Image Coding.<sup>1</sup>
