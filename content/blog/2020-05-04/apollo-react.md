@@ -66,6 +66,8 @@ I wanted a bit more, however, so I've added a custom `request` [configuration op
 
 Notice, that's exactly what I've done. The only modification I've made is to _also_ configure `fetchOptions` to include credentials (i.e. any cookie based credentials will be sent along for the ride on a request from the client.
 
+Conceptually, this was described to me as similar to an "express middleware". The big difference, however, is that we're on the client side here. That means that we still have access to all `localStorage`, `cookies`, etc. and what we're doing here is taking an operation and then modifying it. The specific modification in this case is that we're _injecting_ the headers and configuring our `fetchOptions`.
+
 Finally, we use our `config` file to set our URI - in this case, it's pointing to a backend GraphQL server.
 
 ## Connecting To React
