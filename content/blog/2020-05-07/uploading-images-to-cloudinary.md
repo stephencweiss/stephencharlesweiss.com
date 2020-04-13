@@ -185,7 +185,7 @@ We're almost done! When Cloudinary receives a new image (or video), it will save
 
 For example, using the above process, if I sent an image called `test.jpg`, I might get the following back:
 
-```JSON:title="Sample Payload"
+```JSON:title="SamplePayload"
 {
   "public_id": "my_upload_preset/lseu6fakvigm1fyvmine",
   "version": 1586725962,
@@ -252,7 +252,9 @@ This asynchronously processes the response from Cloudinary, converts it to JSON,
 
 At this point, we've set up a form to accept a file, sent that file off to Cloudinary for storage, and then saved the URL to State so that upon form submission, it'll be accessible for saving along with the rest of our profile.
 
-I'd be remiss if I didn't thank Wes Bos and his [Advanced React](https://advancedreact.com/) course for the inspiration of this course. It provided the motivation to dig into Cloudinary, a topic I'd been interested in for a while, and I can't wait to keep going by looking into the SDK and seeing what else Cloudinary offers!
+In the future, I might move a lot of this logic to the backend. The biggest benefit being that I would have greater control over _what_ is saved to Cloudinary and _when_. Right now, the logic is such that any image uploaded is saved to Cloudinary _even if the form is never submitted_.
+
+Finally, I'd be remiss if I didn't thank Wes Bos and his [Advanced React](https://advancedreact.com/) course for the inspiration of this course. It provided the motivation to dig into Cloudinary, a topic I'd been interested in for a while, and I can't wait to keep going by looking into the SDK and seeing what else Cloudinary offers!
 
 ## Footnotes
 
