@@ -9,7 +9,7 @@ In GraphQL if your queries are the same going from the client to the GraphQL ser
 
 For example:
 
-```javascript:title="src\/resolvers\/query.js"
+```javascript:title=src/resolvers/query.js
 const Query = {
   async items(parent, args, ctx, info) {
     const items = await ctx.db.query.items()
@@ -22,7 +22,7 @@ module.exports = Query;
 ```
 
 Can be converted to:
-```javascript:title="src\/resolvers\/query.js"
+```javascript:title=src/resolvers/query.js
 const {forwardTo} = require('prisma-binding')
 
 const Query = {

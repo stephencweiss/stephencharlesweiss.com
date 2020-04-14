@@ -18,7 +18,7 @@ Now, coming back to Next, let's examine the `_app.js` component. This is provide
 
 That's what I'm doing here:
 
-```javascript:title="pages/_app.js"
+```javascript:title=pages/_app.js
 function MyApp({ Component, pageProps }) {
   return (
     <>

@@ -19,7 +19,7 @@ At the end of the day, GraphQL fragments are template literals assigned to a var
 
 For example, the [Apollo](https://www.apollographql.com/docs/react/data/fragments/#reusing-fragments) convention is to place fragments within an object named `[something].fragment`:
 
-```javascript
+```javascript:title=CommentsFragment.js
 import gql from 'graphql-tag';
 
 CommentsPage.fragments = {
@@ -39,7 +39,7 @@ CommentsPage.fragments = {
 
 Then, to use this, would look like:
 
-```javascript
+```javascript:title=UsingFragments.js
 const SUBMIT_COMMENT_MUTATION = gql`
   mutation SubmitComment($repoFullName: String!, $commentContent: String!) {
     submitComment(repoFullName: $repoFullName, commentContent: $commentContent) {
@@ -74,7 +74,7 @@ In the example from the Gatsby docs then, we:
 
 The example (taken from the Gatsby site linked above):
 
-```javascript:title="src/components/IndexPost.jsx"
+```javascript:title=src\/components\/IndexPost.jsx
 import React from "react"
 import { graphql } from "gatsby"
 
@@ -94,7 +94,7 @@ export const query = graphql`
 
 And then used like so:
 
-```javascript:title="src/pages/main.jsx"
+```javascript:title=src/pages/main.jsx
 import React from "react"
 import { graphql } from "gatsby"
 import IndexPost from "../components/IndexPost"
@@ -126,7 +126,7 @@ export const query = graphql`
 As of now, my questions that remain to be tested include:
 1. Why does Apollo require the `${FragmentName}`?
 2. Can I export and use a fragment that's defined as:
-    ```javascript
+    ```javascript:title=siteInfoFragment.js
     export const siteInfoFragment = graphql`
       fragment SiteNformation on Site {
         siteMetadata {
@@ -145,7 +145,7 @@ While researching how to pass fragments around, I also found the answer to a que
 
 I found the answer in the [GraphQL docs](https://graphql.org/learn/queries/#using-variables-inside-fragments), which provide a nice example of how to use variables with fragments. Before looking at their implementation, let's examine a more generic query to see how it compares:
 
-```graphql
+```graphql:title=HeroComparison.gql
 query HeroComparison($first: Int = 3) {
   firstComparison: hero(episode: EMPIRE) {
     name
@@ -176,7 +176,7 @@ In this example, the client would provide a value for the variable `first` (whic
 
 Using Fragments, we can simplify this and reduce the duplicative code while _still_ using variables as we would expect. Here's what the GraphQL docs suggest:
 
-```graphql
+```graphql:title=HeroComparisonWithFragments.gql
 query HeroComparison($first: Int = 3) {
   leftComparison: hero(episode: EMPIRE) {
     ...comparisonFields

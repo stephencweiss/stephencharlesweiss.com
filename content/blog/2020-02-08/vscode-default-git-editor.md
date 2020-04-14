@@ -26,7 +26,7 @@ Pawel notes that the `--wait` flag is to ensure `git` waits until the VSCode win
 
 He also added a second tip related to `diff`s and the `difftool`. To use VSCode for diffs, add the following lines to your `.gitconfig` file<sup>[1](#footnotes)</sup><a id="fn1"></a>:
 
-```shell:title=".gitconfig"
+```shell:title=.gitconfig
 [diff]
     tool = vscode
 [difftool "vscode"]

@@ -12,7 +12,7 @@ Unfortunately, even with NVM, it's easy to use the wrong node version when jumpi
 
 A colleague shared his solution to the problem with me recently:
 
-```shell:title=".bash_profile"
+```shell:title=.bash_profile
 function cd() {
     builtin cd "$@"
     nvm i 2> /dev/null
@@ -29,13 +29,13 @@ It's worth taking a moment to discuss the [`.nvmrc`](https://github.com/nvm-sh/n
 
 So, for example, you could have an `.nvmrc` for a specific version:
 
-```shell:title=".nvmrc"
+```shell:title=.nvmrc
 12
 ```
 
 _Or_ you could default to the latest LTS version:
 
-```shell:title=".nvmrc"
+```shell:title=.nvmrc
 lts/*
 ```
 

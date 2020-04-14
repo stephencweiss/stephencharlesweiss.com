@@ -18,7 +18,7 @@ What to do? Enter globbing. The [gulp.js team explains](https://gulpjs.com/docs/
 
 Globbing's great for going from having a huge list of scripts tied together, like so:
 
-```json:title="package.json"
+```json:title=package.json
 {
     "scripts": {
         "lint:js": "prettier --check \"src/**/*.js\"",
@@ -32,7 +32,7 @@ Globbing's great for going from having a huge list of scripts tied together, lik
 
 You can get it down to _one_ line:
 
-```json:title="package.json"
+```json:title=package.json
 {
     "scripts": {
         "lint": "prettier --check \"src/**/*{.jsx?, .css, .ts}\""

@@ -11,7 +11,7 @@ This is a one line change in the `launch.json` of VSCode.
 
 Where a configuration may have been:
 
-```json:title="launch.json"
+```json:title=launch.json
 {
   // Use IntelliSense to learn about possible attributes.
   // Hover to view descriptions of existing attributes.

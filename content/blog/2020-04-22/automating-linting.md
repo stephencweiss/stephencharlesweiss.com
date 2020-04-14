@@ -18,7 +18,7 @@ Let's take a look.
 
 Assuming we already have [husky](https://github.com/typicode/husky) installed in the project, we can add our lint to the `pre-commit` hook<sup>[1](#footnotes)</sup><a id="fn1"></a>:
 
-```json:title="package.json"
+```json:title=package.json
 {
     "scripts": {
         "lint": "prettier --check \"src/**/*.{css, json, ts, jsx?}\""
@@ -49,7 +49,7 @@ At this point, you have only one choice: conform and format your code.
 
 If, as a team, you'd rather automate the process instead of reminding everyone whenever they try to commit that formatting is hard and it's best to just let the machines do it, try converting the hook from a check into an automatic fix:
 
-```json:title="package.json"
+```json:title=package.json
 {
     "scripts": {
         "lint": "prettier --check \"src/**/*.{css, json, ts, jsx?}\"",

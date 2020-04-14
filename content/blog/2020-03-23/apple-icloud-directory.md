@@ -22,6 +22,6 @@ cd ~/Library/Mobile\ Documents/com~apple~CloudDocs
 
 If you're like me, you might find it useful to create an alias to access this directory quickly:
 
-```shell:title=".bash_profile"
+```shell:title=.bash_profile
 goiCloud='cd /Users/stephen/Library/Mobile\ Documents/com~apple~CloudDocs/Documents'
 ```

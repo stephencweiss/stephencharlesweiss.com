@@ -15,7 +15,7 @@ Today, I'll be exploring both approaches (though I'll still be using hooks for t
 Before diving into the different approaches, let's refresh ourselves on how to configure an Apollo Client and some of the pieces that are consistent between the two.
 
 First, let's create a client and connect it to Apollo:
-``` javascript:title="App.js"
+``` javascript:title=App.js
 import React from "react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
@@ -35,7 +35,7 @@ export default function App() {
 
 The next thing is both approaches need a query to our server. We'll call it `EXCHANGE_RATES` (I'm using the Apollo Code Sandbox which is a GraphQL server that stores data about exchange rates between currencies. It's also what's used in their Getting Started documentation.)
 
-``` javascript:title="query.js"
+``` javascript:title=query.js
 import { gql } from "apollo-boost";
 export const EXCHANGE_RATES = gql`
   {
@@ -60,7 +60,7 @@ The [Apollo docs](https://www.apollographql.com/docs/react/v2.5/essentials/queri
 
 With that in mind, let's craft our component:
 
-```javascript:title="ExchangeRateRenderProps.js"
+```javascript:title=ExchangeRateRenderProps.js
 import React from "react";
 import { Query } from "@apollo/react-components";
 import { EXCHANGE_RATES } from "./query";
@@ -96,7 +96,7 @@ Just like that, we've handled our loading and error state as well as rendering t
 ## Hooks
 The hooks version is arguably even simpler, though also very similar.
 
-```javascript:title="ExchangeRateHooks.js"
+```javascript:title=ExchangeRateHooks.js
 import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { EXCHANGE_RATES } from "./query";
@@ -128,7 +128,7 @@ It's worth noting that unlike `useState`, `useQuery` returns a result _object_, 
 As a final step, let's render these - allowing the user to determine _which_ approach they want. If we did it right, the results _should be the same_.
 
 For this, I created a `Switch` component:
-```diff:title="App.js"
+```diff:title=App.js
 - import React from "react";
 + import React, {useState} from "react";
 //...

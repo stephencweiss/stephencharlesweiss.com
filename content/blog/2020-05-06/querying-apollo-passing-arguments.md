@@ -16,7 +16,7 @@ This is an attempt to fix that and learn a thing or two along the way.
 ## Step One: Configure The Query To Accept Arguments
 The first step is to make sure that our query is set up to accept arguments.
 
-```diff:title="query.js"
+```diff:title=query.js
 import { gql } from "apollo-boost";
 export const EXCHANGE_RATES = gql`
 -  {
@@ -40,7 +40,7 @@ Now that our GraphQL query is set up to take an argument, we just need to tell o
 In this case, we could hard code it again, just to prove to ourselves that the query is receiving the prop, but I've decided to jump straight to passing along a prop.
 ### Render Props Variant
 
-```diff:title="ExchangeRateRenderProps.js"
+```diff:title=ExchangeRateRenderProps.js
 //...
 - export function ExchangeRateRenderProps() {
 + export function ExchangeRateRenderProps(props) {
@@ -55,7 +55,7 @@ In this case, we could hard code it again, just to prove to ourselves that the q
 ```
 
 ### Hooks Variant
-``` diff:title="ExchangeRateHooks.js"
+``` diff:title=ExchangeRateHooks.js
 //...
 - export function ExchangeRatesHooks() {
 + export function ExchangeRatesHooks(props) {
@@ -73,7 +73,7 @@ Once the components have been updated, we just need to pass the data along.
 
 To keep things simple, I just have two buttons to pick from `USD` and `EUR`.
 
-```diff:title="App.js"
+```diff:title=App.js
 - function Switch() {
 + function Switch(props) {
 	//...

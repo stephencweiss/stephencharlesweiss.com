@@ -16,7 +16,7 @@ It's interesting to look back at those posts because in both, there _is_ informa
 
 For example, in one:
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -42,7 +42,7 @@ Simply put, the `<head>` tag is a container into which metadata about your site 
 
 The `<title>` tag, which would live inside the `<head>` serves as the site's title. In a browser, this is most easily seen as the name on the tab.
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <title>My Site!</title>
@@ -54,7 +54,7 @@ The `<title>` tag, which would live inside the `<head>` serves as the site's tit
 
 Since it's possible to style an HTML document directly, this is where the CSS would live. More commonly, however, you would use a link to import the CSS.
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <style>
@@ -72,7 +72,7 @@ A common use case for the `<link>` tag is to load resources _like_ stylesheets.
 
 For example:
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <link rel=“stylesheet” href=“./style.css”/>
@@ -88,7 +88,7 @@ This is, however, how we could load a library like React directly to make it ava
 
 For example:
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <script src=“https://unpkg.com/react@16.8.4/umd/react.development.js”></script>
@@ -102,7 +102,7 @@ This was probably the one with which I was least familiar. It's quite powerful t
 
 For example:
 
-```html:title="index.html"
+```html:title=index.html
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -117,7 +117,7 @@ Managing the `<head>` tag in React is not necessarily straight forward. In stand
 
 An example of the Next approach:
 
-```javascript:title="components/Meta.js"
+```javascript:title=components/Meta.js
 import Head from 'next/head'
 
 function Meta() {

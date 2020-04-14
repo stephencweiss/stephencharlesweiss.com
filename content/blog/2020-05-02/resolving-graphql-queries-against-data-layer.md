@@ -16,7 +16,7 @@ Let's look at what's involved:
 
 
 ## Step 1: Defining our client facing API.
-``` javascript:title="src\/schema.graphql"
+```javascript:title=src/schema.graphql
 # import * from './generated/prisma.graphql'
 
 """
@@ -43,7 +43,7 @@ As I noted above, there are different ways to do this, but I'll demonstrate maki
 
 First, I'll need to establish a connection to the database:
 
-``` javascript:title="src\/db.js"
+```javascript:title=src/db.js
 const { Prisma } = require("prisma-binding");
 
 const db = new Prisma({
@@ -59,7 +59,7 @@ module.exports = db;
 Using `prisma-binding`, I'm generating a new connection to my Prisma database and then exporting that connection.
 
 Next, when I start my GraphQL Yoga server, I'll pass along the database:
-``` javascript:title="src\/createServer.js"
+``` javascript:title=src/createServer.js
 const { GraphQLServer } = require("graphql-yoga");
 const Mutation = require("./resolvers/Mutation");
 const Query = require("./resolvers/Query");
@@ -86,7 +86,7 @@ Now, when our server's running, every time we get a request, we'll attach the da
 ## Putting This To Use
 Now that we have all of our set up out of the way, we're able to actually _use_ the database API within our resolvers to get (in a Query) and post (in a Mutation) directly to our database.
 
-``` javascript:title="src\/resolvers\/Mutation.js"
+``` javascript:title=src/resolvers/Mutation.js
 const Mutations = {
   createItem(parent, args, ctx, info){
     // TODO: Auth check
@@ -101,7 +101,7 @@ module.exports = Mutations;
 
 I know this is what our data layer's expecting by looking at `prisma.graphql` - the CRUD API Prisma generated based on my data model:
 
-```graphql:title="src\/generated\/prisma.graphql"
+```graphql:title=src/generated/prisma.graphql
 type ItemSubscriptionPayload {
   mutation: MutationType!
   node: Item

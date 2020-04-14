@@ -48,7 +48,7 @@ At a high level, we can think about this as three distinct steps:
 
 Let's start at the beginning with a form component:<sup>[4](#footnotes)</sup><a id="fn4"></a>
 
-```javascript:title="CreateItem.js"
+```javascript:title=CreateItem.js
 class CreateItem extends React.Component {
     /*...*/
     handleSubmit = event => (/*...*/)
@@ -143,7 +143,7 @@ So, how can we pull _just_ the file data?
 
 Here's one approach:
 
-```javascript:title="handleImageUpload"
+```javascript:title=handleImageUpload
 handleImageUpload = event => {
     const data = new FormData()
     const { files } = event.target
@@ -162,7 +162,7 @@ With our `FormData` ready, we now have everything we need to directly call Cloud
 
 An example of what that might look like is:
 
-```diff:title="handleImageUpload"
+```diff:title=handleImageUpload
 handleImageUpload = event => {
     const data = new FormData()
     const { files } = event.target
@@ -185,7 +185,7 @@ We're almost done! When Cloudinary receives a new image (or video), it will save
 
 For example, using the above process, if I sent an image called `test.jpg`, I might get the following back:
 
-```JSON:title="SamplePayload"
+```JSON:title=SamplePayload
 {
   "public_id": "my_upload_preset/lseu6fakvigm1fyvmine",
   "version": 1586725962,
@@ -226,7 +226,7 @@ Note: In the JSON above, the `eager` key is a result of Upload Preset configurat
 
 Armed with the knowledge of what's being returned, we can update the component's state to make the image accessible in the future.
 
-```diff:title="handleImageUpload"
+```diff:title=handleImageUpload
 handleImageUpload = event => {
     const data = new FormData()
     const { files } = event.target
@@ -269,7 +269,7 @@ Here's a fully functional class component combining everything from above in a N
 
 It's a slightly different use case. Instead of a profile photo, here we're creating a new item for a store and the image is for the product.
 
-```javascript:title="CreateItemForm.js"
+```javascript:title=CreateItemForm.js
 import React from 'react'
 import { Mutation } from 'react-apollo'
 import Router from 'next/router'

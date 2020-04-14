@@ -72,7 +72,7 @@ What's all this mean? Well, it means that by default, the Go binaries will be sa
 ### Side Note: Simpler Go Execution
 We can make executing Go binaries a much simpler process then by adding this to our [PATH](../../2020-04-15/path-variable-modifying), like so:
 
-```txt:title=".zshrc"
+```txt:title=.zshrc
 ...
 export PATH="$PATH:$HOME/go/bin" # This adds User Installed Go Binaries to PATH
 ```

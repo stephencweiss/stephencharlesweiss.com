@@ -15,7 +15,7 @@ Things we'll be covering:
 
 I'm working in NextJS, so my sample client looks like the following:
 
-```javascript:title="lib/withData.js"
+```javascript:title=lib/withData.js
 import withApollo from 'next-with-apollo'
 import ApolloClient from 'apollo-boost'
 import { endpoint } from '../config'
@@ -76,7 +76,7 @@ According to the [Getting Started](https://www.apollographql.com/docs/react/get-
 
 In my case, it's only _marginally_ more complicated due to the fact I'm using NextJS:
 
-```javascript:title="pages/_app.js"
+```javascript:title=pages/_app.js
 import { Container } from 'next/app'
 import { Page } from '../components'
 import { ApolloProvider } from 'react-apollo'
@@ -110,7 +110,7 @@ That prop is then passed to our `ApolloProvider` as the value for the client.
 
 **Update**: `getInitialProps` was deprecated. It is now recommended to use `getStaticProps` (for statically generation) or `getServerSideProps` (for server side rendering). I'm using `getInitialProps` however because i'm on version 7.0 of NextJS and these new methods are available on 9.3+.
 
-```diff:title="pages/_app.js"
+```diff:title=pages/_app.js
 function App(props) {
 -  const { apollo, Component } = props;
 +  const { apollo, Component, pageProps } = props;
