@@ -1,6 +1,6 @@
 ---
 title: 'Creating A Downloadable File'
-tags: ['javascript', 'html', 'window', 'document', 'download']
+tags: ['javascript', 'html', 'window', 'document', 'download','URL.createObjectURL']
 category: ['programming']
 date: '2019-10-29'
 publish: '2019-11-07'
