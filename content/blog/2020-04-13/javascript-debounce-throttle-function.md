@@ -1,7 +1,7 @@
 ---
 title: 'Implementing Debounce And Throttle With Javascript'
 date: '2020-04-16'
-publish: '2020-05-12'
+publish: '2020-04-13'
 category: ['programming']
 tags:
     [
@@ -24,7 +24,7 @@ Quick aside: It seems like the term _Debounce_ was actually coined by John Hann 
 
 Before getting into the code, let's talk about what Debounce and Throttle are and how they're different. We can do that by going way back: to my childhood.
 
-Growing up, my dad got a lot done around the hosue. He couldn't do everything though. Sometimes he'd ask for help.
+Growing up, my dad got a lot done around the house. He couldn't do everything though. Sometimes he'd ask for help.
 
 Dinners at our home were a special time. The whole family would be around the table and we never knew what dad would whip up, but we knew it'd be delicious.
 
@@ -32,7 +32,7 @@ From time to time, he'd ask me to help gather some of the ingredients. He liked 
 
 If I just responded as the list came in, I'd have been running all over the kitchen. So, I came up with a strategy: I'd _wait_. Not that long, but just long enough that if another item was going to come to mind, he'd have time to think about it.
 
-The result was I avoided a lot of unnecessary work. By giving him a buffer to think of the next item, I often had a full list to work with. I didn't have a term for it at the time, but I was effectively debouncing his reuqests to get a list of ingredients!
+The result was I avoided a lot of unnecessary work. By giving him a buffer to think of the next item, I often had a full list to work with. I didn't have a term for it at the time, but I was effectively debouncing his requests to get a list of ingredients!
 
 In contrast to dinner, once I got old enough, mowing the lawn was my domain. I was a bit of a punk, however, and so I had a rule - I wouldn't do it more than once a week. I'd also never think of it myself - dad had to ask. (Did I mention? Punk.)
 
@@ -277,7 +277,7 @@ So there you have it! The next time your dad comes to tell you to mow the lawn o
 
 Wait, no! That's not the moral of the story!
 
-The point is that both Debouncing and Throttling are really useful tools for managing workloads that need to happen in the future.
+The point is that both debouncing and throttling are really useful tools for managing workloads that need to happen in the future.
 
 Debouncing is great if you don't want to start until you have all of the information available (or it's at least more likely). Throttling is better suited for ensuring that you never do something more frequently than a predefined schedule - like mowing the lawn a maximum of once per week! Any more than that is just a waste of time if you ask me. Not that anyone ever did.
 
