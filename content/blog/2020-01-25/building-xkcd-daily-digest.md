@@ -40,7 +40,7 @@ Unfortunately, this site is built on Gatsby, a statically site generator. One co
 
 This is problematic only in that when I tried to make the same API call from the client, I received a CORS error.
 
-```javascript:title="/pages/xkcd.jsx"
+```javascript:title=./pages/xkcd.jsx
 function XKCDGallery() {
   fetch(`https://xkcd.com/info.0.json`)
     .then(res => res.json())
@@ -66,7 +66,7 @@ Since _that_ wasn't going to happen, I needed an alternative solution. This is w
 
 _A_ solution is to simply use the demo<sup>[1](#footnotes)</sup><a id="fn1"></a>:
 
-```javascript:title="/pages/xkcd.jsx"
+```javascript:title=./pages/xkcd.jsx
 function XKCDGallery() {
   const proxyUrl = 'https://cors-anywhere.herokuapp.com'
 
@@ -148,7 +148,7 @@ At this point, I have all the pieces I need to actually retrieve a number of ima
 
 Normally best practice is to extract reusuable hooks and it's _very_ unlikely that I will reuse this hook elsewhere. However, I decided to extract it anyway. Why? Because it keeps my view component logic _very_ simple.
 
-```javascript:title="/hooks/useXkcd.jsx"
+```javascript:title=./hooks/useXkcd.jsx
 import {useAsync} from 'react-use'
 import { boundedHash } from '../utils/hashFn'
 import { proxiedGet } from '../utils/proxiedrequest'
@@ -203,7 +203,7 @@ What this hook does in a nut shell is:
 
 How simple does that make my view component? Well, let's look:
 
-```javascript:title="/pages/xkcd.jsx"
+```javascript:title=./pages/xkcd.jsx
 export function XKCDGallery(props) {
   const { isLoading, isError, xkcdComics } = useXkcd({ comicQty: 5 })
 

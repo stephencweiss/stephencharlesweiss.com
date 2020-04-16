@@ -9,7 +9,7 @@ tags: ['apollo', 'composable', 'schema']
 
 When defining a GraphQL schema, it can be useful to define it in multiple files to keep it manageable.
 
-```javascript
+```javascript:title=./src/index.js
 import { buildSchema } from 'graphql'
 import { schemaToTemplateContext } from 'graphql-codegen-core'
 import { loadTypeSchema } from '../../../utils/schema'
@@ -33,7 +33,7 @@ schema = schemaToTemplateContext(buildSchema(typeDefs))
 
 The `loadTypeSchema` is:
 
-```javascript:title="./utils/schema"
+```javascript:title=./utils/schema
 import fs from 'fs'
 import path from 'path'
 
@@ -57,7 +57,7 @@ This is a function that takes a type (which is our string), and then uses Node's
 
 Let's look at the `product` schema in more detail to understand how this works.
 
-```graphql:title="product.gql"
+```graphql:title=product.gql
 enum ProductType {
   GAMING_PC
   BIKE

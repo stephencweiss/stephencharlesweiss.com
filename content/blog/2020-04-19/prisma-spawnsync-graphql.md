@@ -12,7 +12,7 @@ After initializing my project (`prisma init`) and following the prompts on the C
 
 Namely, I wanted to use the `post-deploy` hook:
 
-```yml:title="prisma.yml"
+```yml:title=prisma.yml
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.prisma
 secret: ${env:PRISMA_SECRET}
@@ -37,7 +37,7 @@ The issue, it seems is that `prisma` couldn't _find_ `graphql` and so it failed 
 
 Looking at my dependencies, however, raised some questions:
 
-```json:title="package.json"
+```json:title=package.json
 {
     "scripts": {
         "start": "nodemon -e js,graphql -x node src/index.js"
@@ -59,7 +59,7 @@ There are two fixes to this problem:
 
 The former is described by [Ashik Nesin on his blog](https://ashiknesin.com/blog/how-to-fix-spawnsync-graphql-enoent-in-prisma/). Doing my best to [refrain from installing packages globally](https://stephencharlesweiss.com/blog/2020-02-26/global-node-packages-revisited/), I pursued the latter and added a `deploy` script to the `package.json`:
 
-```json:title="package.json"
+```json:title=package.json
 {
   "scripts": {
     "start": "nodemon -e js,graphql -x node src/index.js",

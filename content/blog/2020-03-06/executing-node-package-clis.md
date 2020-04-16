@@ -22,7 +22,7 @@ Below, I'll walk through all of these using Gatsby as an example.
 The most common solution I've found, particularly for commands used frequently within a project is to add a script in the `package.json`.
 
 For example, my Gatsby starter came with a `dev` and `build` script included:
-```json title="package.json"
+```json:title=./package.json
 {
     "scripts": {
         "build": "gatsby build",
@@ -33,7 +33,7 @@ For example, my Gatsby starter came with a `dev` and `build` script included:
 
 But what if you want to build and then serve the site? You can add another line to the scripts:
 
-```json title="package.json"
+```json:title=./package.json
 {
     "scripts": {
         "build": "gatsby build",

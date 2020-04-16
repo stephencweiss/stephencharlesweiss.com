@@ -22,7 +22,7 @@ night
 Sed is also line oriented. Simply put this means that each line is processed independently.
 
 Imagine the file:
-```shell:title="panagram"
+```shell:title=panagram
 The quick brown fox jumps over the lazy dog.
 The lazy dog chases two lazy squirrels.
 The really lazy squirrel gets caught. The merely lazy gets away.

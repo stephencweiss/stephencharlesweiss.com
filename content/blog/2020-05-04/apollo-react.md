@@ -15,7 +15,7 @@ Things we'll be covering:
 
 I'm working in NextJS, so my sample client looks like the following:
 
-```javascript:title="lib/withData.js"
+```javascript:title=lib/withData.js
 import withApollo from 'next-with-apollo'
 import ApolloClient from 'apollo-boost'
 import { endpoint } from '../config'
@@ -66,6 +66,8 @@ I wanted a bit more, however, so I've added a custom `request` [configuration op
 
 Notice, that's exactly what I've done. The only modification I've made is to _also_ configure `fetchOptions` to include credentials (i.e. any cookie based credentials will be sent along for the ride on a request from the client.
 
+Conceptually, this was described to me as similar to an "express middleware". The big difference, however, is that we're on the client side here. That means that we still have access to all `localStorage`, `cookies`, etc. and what we're doing here is taking an operation and then modifying it. The specific modification in this case is that we're _injecting_ the headers and configuring our `fetchOptions`.
+
 Finally, we use our `config` file to set our URI - in this case, it's pointing to a backend GraphQL server.
 
 ## Connecting To React
@@ -74,7 +76,7 @@ According to the [Getting Started](https://www.apollographql.com/docs/react/get-
 
 In my case, it's only _marginally_ more complicated due to the fact I'm using NextJS:
 
-```javascript:title="pages/_app.js"
+```javascript:title=pages/_app.js
 import { Container } from 'next/app'
 import { Page } from '../components'
 import { ApolloProvider } from 'react-apollo'
@@ -108,7 +110,7 @@ That prop is then passed to our `ApolloProvider` as the value for the client.
 
 **Update**: `getInitialProps` was deprecated. It is now recommended to use `getStaticProps` (for statically generation) or `getServerSideProps` (for server side rendering). I'm using `getInitialProps` however because i'm on version 7.0 of NextJS and these new methods are available on 9.3+.
 
-```diff:title="pages/_app.js"
+```diff:title=pages/_app.js
 function App(props) {
 -  const { apollo, Component } = props;
 +  const { apollo, Component, pageProps } = props;

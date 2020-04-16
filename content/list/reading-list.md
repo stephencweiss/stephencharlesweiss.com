@@ -5,19 +5,17 @@ title: 'Reading List'
 ## Actively Reading
 - _REAMDE_ by Neal Stephenson
 - _Joel On Software_ by Joel Spolsky
+- _How To Solve It_ by G. Polya
+- _The Mythical Man Month_ by Frederick P. Brooks
 - [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
-
-## Started, Not Active
-
-- _Quiet_ by Susan Cain
-- _Don Quixote_ by Cervantes
-- _Everything Curl_ by Daniel Stenberg
 
 ## Finished
 
 ### 2020
 
 Total: 10
+
+### _April 2020_
 
 ### _March 2020_
 - _The Imposter's Handbook_ by Rob Conery
@@ -110,6 +108,12 @@ Total: 35
 - _Death's End_ by Cixin Liu
 - _Atomic Habits_ by James Clear
 - _The Color Purple_ by Alice Walker
+
+## Started, Not Active
+
+- _Quiet_ by Susan Cain
+- _Don Quixote_ by Cervantes
+- _Everything Curl_ by Daniel Stenberg
 
 ## Bookshelf
 

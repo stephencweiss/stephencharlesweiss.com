@@ -7,7 +7,7 @@ tags: ['typescript','tsconfig','node']
 ---
 The following is a simple TSConfig that I've found helpful when writing simple node applications.
 
-```json:title="tsconfig.json"
+```json:title=tsconfig.json
 {
   "compilerOptions": {
     "outDir": "./dist",

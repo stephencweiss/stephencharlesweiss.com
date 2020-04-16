@@ -12,7 +12,7 @@ A while back I was researching how to loop over arrays asynchronously. It turns 
 
 Even better, it's one line:
 
-```javascript title="index.js"
+```javascript:title=index.js
 const waitFor = ms => new Promise(r => setTimeout(r, ms))
 ```
 
@@ -20,7 +20,7 @@ It takes a waiting period and returns a promise. The promise takes the `resolve`
 
 So, how does this work in practice? Let's look at an example:
 
-```javascript title="index.js"
+```javascript:title=index.js
 function fakeTimer() {
   return waitFor(50).then(() => console.log(`successfully waited`))
 }
@@ -35,7 +35,7 @@ This is because the promise was placed into the event loop,<sup>[1](#footnotes)<
 
 But what if we want the code to behave more synchronously? Well, we'd need to wrap the entire thing in a function that handles this asynchronisity.
 
-```javascript title="index.js"
+```javascript:title=index.js
 async function simpleAsync() {
   await fakeTimer()
   console.log(`print after`)
@@ -46,7 +46,7 @@ Now, we're successfully waiting for the promise in `fakeTimer` to resolve _befor
 
 As I mentioned, I found this while researching asynchronous mapping of arrays. To see that in practice, we can look at an example of an array with three elements:
 
-```javascript title="index.js"
+```javascript:title=index.js
 async function fakeAsync() {
   await Promise.all(
     [1, 2, 3].map(async num => {

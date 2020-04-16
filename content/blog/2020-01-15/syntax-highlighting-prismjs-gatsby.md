@@ -2,7 +2,7 @@
 title: 'Styling Markdown Code Snippets With PrismJS'
 date: '2019-12-24'
 publish: '2020-01-15'
-updated: ['2020-01-15', '2020-03-15']
+updated: ['2020-01-15', '2020-03-15', '2020-04-14']
 category: ['programming']
 tags: ['prismjs', 'javascript', 'gatsby', 'styling', 'css']
 ---
@@ -28,10 +28,21 @@ Some of the features I've explored so far include:
 
 ## Code Titles
 
-````js:title="myFile.js"
-```js:title="myFile.js"
+````js:title=myFile.js
+```js:title=myFile.js
 // ... code goes here
 ````
+
+> Update: April 14, 2020
+>
+> Continuing to play around with titles and noticing a few things:
+> 1. By default, the title can only be one word, however, this limit can be avoided using the [non-breaking space encoding](../../2019-09-22/leading-spaces-html-react): `&nbsp;`, e.g., `lang:title=word&nbsp;second`
+> 2. You _can_ wrap your title in quotations, however, I find these unhelpful generally as:
+>    - a. they appear in the title
+>    - b. they do not help with multiple words (i.e. they don't create a single title - for that, you still need the non-breaking space).
+>
+>    e.g., `lang:title="quoted-title"`
+
 
 Using with Gatsby: [Gatsby Remark Code Titles](https://github.com/DSchau/gatsby-remark-code-titles)
 
@@ -133,7 +144,7 @@ For more on adding line numbers, [see the Gatsby plugin docs](https://www.gatsby
 Once all of this is setup, adding line numbers can be done by noting it at the top of the snippet with `{numberLines: true}`. For example:
 
 ````javascript{numberLines: true}
-;```javascript{numberLines: true}
+```javascript{numberLines: true}
 const meaningOfLife = 42;
 ```
 ````
@@ -141,7 +152,7 @@ const meaningOfLife = 42;
 Alternatively, you can start at a specified line number (in this case, line 5):
 
 ````javascript{numberLines: 5}
-;```javascript{numberLines: 5}
+```javascript{numberLines: 5}
 const meaningOfLife = 42;
 ```
 ````
@@ -175,7 +186,7 @@ I didn't like this behavior and wanted inline code to behave more like normal te
 
 The big difference between the code blocks and inline code was the former was wrapped in `<pre>` tags, whereas inline code was not. So, I just needed a specific rule to target this kind of element. Mine looked like:
 
-```css:title="src/stylesheets/code.css"
+```css:title=src/stylesheets/code.css
 /* Inline code */
 :not(pre) > code[class*='language-'] {
     /*...*/
@@ -185,7 +196,7 @@ The big difference between the code blocks and inline code was the former was wr
 
 With that in place, I made sure that I was importing my `code.css` into my `gatsby-browser` file:
 
-```javascript:title="src/gatsby-browser.js"
+```javascript:title=src/gatsby-browser.js
 import './src/stylesheets/_reset.css'
 import './src/stylesheets/global.css'
 import './src/stylesheets/code.css'

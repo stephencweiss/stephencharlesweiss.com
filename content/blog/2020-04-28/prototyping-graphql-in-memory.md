@@ -35,7 +35,7 @@ Let's see how.
 
 First, let's handle creating a new dog and making sure that it's available for querying.
 
-```javascript:title="resolvers/mutation.js"
+```javascript:title=resolvers/mutation.js
 const Mutations = {
   createDog: function(parent, args, ctx, info) {
     global.dogs = global.dogs || []; // attaching our dogs array to the global object
@@ -51,7 +51,7 @@ Instead of saving the new dog that we're creating to the database, we've pushed 
 
 Then when we're fetching the data (with our Query), we look to the global object instead of the database:
 
-```javascript:title="resolvers/query.js"
+```javascript:title=resolvers/query.js
 const Query = {
   dogs: function(parent, args, ctx, info) {
     return global.dogs || []; // in the future, this will be replaced with interfacing with our data layer

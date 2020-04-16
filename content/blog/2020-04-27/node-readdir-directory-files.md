@@ -37,7 +37,7 @@ How could we make this slightly more usable though? Perhaps by converting it int
 
 At this point we might be tempted to do something like:
 
-```javascript:title="getFiles-broken"
+```javascript:title=getFiles-broken
 const path = require('path')
 const fs = require('fs')
 
@@ -80,7 +80,7 @@ Callbacks have been one of those parts of learning Javascript that's given me fi
 
 Here's one way to look at it:
 
-```javascript:title="getFiles-async"
+```javascript:title=getFiles-async
 const path = require('path')
 const fs = require('fs')
 
@@ -111,7 +111,7 @@ You might notice that we're just passing in the function, `myCallback` and not `
 
 Switching gears a bit, if we're willing to pause your application and switch from the native asynchronous nature of javascript to synchronous, we can simplify this even further.
 
-```javascript:title="getFiles-sync"
+```javascript:title=getFiles-sync
 const path = require('path')
 const fs = require('fs')
 

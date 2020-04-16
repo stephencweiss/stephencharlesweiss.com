@@ -12,7 +12,7 @@ The problem was I didn't know how. It turns out this was a great opportunity to 
 
 The naive approach: mocking.
 
-```typescript:title="generic.tests.ts"
+```typescript:title=generic.tests.ts
 global.console.log = jest.fn()
 
 describe("Unit tests for my generic class", () => {
@@ -31,7 +31,7 @@ You can confirm it by changing the function to `warn` or `error` instead of logg
 
 An alternative (better) approach is to use jest's `spyOn` functionality.
 
-```typescript:title="generic.tests.ts"
+```typescript:title=generic.tests.ts
 const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
 describe("Unit tests for my generic class", () => {
   beforeEach(() => {
@@ -50,7 +50,7 @@ Spys aren't full proof though. They have the same potential danger. For example,
 
 Take for instance the following example:
 
-```typescript:title="generic.tests.ts"
+```typescript:title=generic.tests.ts
 const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
 describe("Unit tests for my generic class", () => {
   beforeEach(() => {

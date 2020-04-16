@@ -16,7 +16,7 @@ The steps to adding Prettier to a project are very simple:
 
 Within the `package.json`, I tend to add the following scripts:
 
-```JSON:title="package.json"
+```JSON:title=package.json
 {
     "scripts": {
         "lint": "prettier --check src/**/*",

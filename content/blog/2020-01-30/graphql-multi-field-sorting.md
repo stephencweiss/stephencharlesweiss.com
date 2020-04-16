@@ -16,7 +16,7 @@ I wanted to sort on title _and_ author to account for situations where I've read
 
 I write my book notes in markdown and I include several things in the frontmatter including the book's title and the last name of the author. For example, a note might begin:
 
-```md:title="example-david-copperfield.md"
+```md:title=example-david-copperfield.md
 ---
 title: 'Notes on David Copperfield by Charles Dickens'
 bookTitle: 'David Copperfield'
@@ -30,7 +30,7 @@ The body of the post goes here...
 
 Initially, my page query was only concerned with getting the right posts from the file system using the custom field `sourceInstance`:
 
-```javascript:title="src/pages/books.jsx"
+```javascript:title=src/pages/books.jsx
 export const pageQuery = graphql`
   query {
     books: allMarkdownRemark(
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
 
 What to do? I had a sort method on other pages, so I knew how to get started, but when I tried to add a _second_ parameter, I was at a loss. My first (naïve) attempt:
 
-```javascript:title="src/pages/books.jsx"
+```javascript:title=src/pages/books.jsx
 export const pageQuery = graphql`
   query {
     books: allMarkdownRemark(
@@ -64,7 +64,7 @@ Okay, fair enough. A little searching later and I found the answer was staring m
 
 Arrays guarantee order and can store _multiple_ values. This is exactly what I was looking for! I just hadn't put the pieces together yet.
 
-```javascript:title="src/pages/books.jsx"
+```javascript:title=src/pages/books.jsx
 export const pageQuery = graphql`
   query {
     books: allMarkdownRemark(
@@ -83,7 +83,7 @@ A few final notes on sorting with GraphQL:
 
 1. If you're only sorting on one parameter, the array is optional.
 
-```javascript:title="src/pages/books.jsx"
+```javascript:title=src/pages/books.jsx
 export const pageQuery = graphql`
   query {
     books: allMarkdownRemark(

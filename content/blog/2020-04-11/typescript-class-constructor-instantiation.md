@@ -18,7 +18,7 @@ Tonight, had a real head scratcher: how to instantiate a class in Typescript tha
 
 In Vanilla JS, this works just fine:
 
-```javascript:title="person.js"
+```javascript:title=person.js
 export class Person {
     constructor(name: string) {
         this.name = name
@@ -38,7 +38,7 @@ But, if you were to use this in Typescript, the compiler would yell, saying `nam
 
 I'll admit, I was stumped for a while.
 
-```typescript:title="person.ts"
+```typescript:title=person.ts
 export class Person {
     name = '' //highlight-line
     constructor(name: string) {

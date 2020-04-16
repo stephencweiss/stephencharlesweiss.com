@@ -18,7 +18,7 @@ Let's look at some simple examples and some error messages we might see if we ma
 
 This:
 
-```javascript:title="utils/myFunc.js"
+```javascript:title=utils/myFunc.js
 import React from 'react'
 
 export function myFunc(args) {
@@ -30,7 +30,7 @@ export function myFunc(args) {
 
 Becomes this:
 
-```javascript:title="utils/myFunc.js"
+```javascript:title=utils/myFunc.js
 const React = require('react')
 
 function myFunc(args) {
@@ -45,7 +45,7 @@ Note that not only did we change the export type, but we no longer _import_ `rea
 
 Furthermore, the way we handle this with an `index.js` file is also different than when the files are using ESModules.
 
-```javascript:title="utils/index.js"
+```javascript:title=utils/index.js
 const myFunc = require('./myFunc')
 
 module.exports = { ...myFunc }
@@ -55,7 +55,7 @@ Because the export from `myFunc` is an object, we need to spread the methods wit
 
 This raises another potentially easy error to get. Imagine _not_ refactoring to CommonJS modules and instead of a named export, we use a default export:
 
-```javascript:title="utils/myFunc.js"
+```javascript:title=utils/myFunc.js
 import React from 'react'
 
 function myFunc(args) {
@@ -70,7 +70,7 @@ If we tried to reference the `myFunc` in the `module.exports` within `utils/inde
 
 This is true in any of these situations:
 
-```javascript:title="utils/index.js"
+```javascript:title=utils/index.js
 const myFunc = require('./myFunc')
 //OR
 const myFunc = require('./myFunc').myFunc
@@ -82,7 +82,7 @@ module.exports = { ...myFunc }
 
 I'm a little fuzzy on _why_, however, we can resolve this by using the named export:
 
-```javascript:title="/utils/myFunc.js"
+```javascript:title=/utils/myFunc.js
 import React from 'react'
 
 export function myFunc(args) {
@@ -93,7 +93,7 @@ export function myFunc(args) {
 
 And then in `utils/index.js`:
 
-```javascript:title="utils/index.js"
+```javascript:title=utils/index.js
 const myFunc = require('./myFunc').myFunc
 
 module.exports = { getBlurb }

@@ -22,7 +22,7 @@ None the less, the recent discovery of mixins has been a boon to my CSS.
 
 Imagine two `css` functions defined as:
 
-```javascript:title="theme/mixins.js"
+```javascript:title=theme/mixins.js
 import { css } from 'styled-components'
 
 export default {
@@ -40,7 +40,7 @@ export default {
 
 I then export it from a `theme/index.js` in the following way:
 
-```javascript:title="theme/index.js"
+```javascript:title=theme/index.js
 export { default as mixins } from './mixins'
 /* all other exports */
 ```
@@ -49,7 +49,7 @@ What does this sort of thing offer? A single place to manage _all_ of my transit
 
 For example:
 
-```javascript:title="components/Wrapper"
+```javascript:title=components/Wrapper
 import { mixins } from '../theme'
 
 export const Wrapper = styled.div`

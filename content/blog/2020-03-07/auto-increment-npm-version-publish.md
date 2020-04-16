@@ -36,7 +36,7 @@ $ npm version patch -m "Upgrade to %s for reasons"
 
 Intriguingly, you can also tie the publish command into `npm scripts` to make the process simpler. The docs, again, include a nice example of using the `preversion`, `version`, and `postversion` to automate much of the publishing process:
 
-```json title="package.json"
+```json:title=./package.json
 "scripts": {
   "preversion": "npm test",
   "version": "npm run build && git add -A dist",

@@ -37,7 +37,7 @@ $ npm install --save-dev husky
 
 Once installed, modify the `package.json` to include a `husky` field:
 
-```json:title="package.json"
+```json:title=./package.json
 {
   "name": "my awesome library",
   //...

@@ -50,7 +50,7 @@ For the rest of this post, we'll be exploring memoization by examining what is r
 
 The Fibonacci sequence is defined as the value of the sum of the previous two numbers and the first two values in the sequence are 1. This can be written as:
 
-```javascript:title="fibonacci.js"
+```javascript:title=fibonacci.js
 function fibonacci(num) {
   let previousLow = 1
   let previousHigh = 1
@@ -66,7 +66,7 @@ function fibonacci(num) {
 
 Calculating a factorial is accomplished by multiplying all non-negative numbers less than or equal to the desired number.
 
-```javascript:title="factorial.js"
+```javascript:title=factorial.js
 function factorial(num) {
   let result = 1
   while (num >= 0) {
@@ -86,14 +86,14 @@ Those sub-problems are: the sum of the two previous numbers for the Fibonacci se
 
 Using Dynamic Programming, we can refactor these functions into their recrusive forms. That can look like the following:
 
-```javascript:title="recursiveFibonacci.js"
+```javascript:title=recursiveFibonacci.js
 function fibonacci(num) {
   if (num === 0 || num === 1) return num
   return fibonacci(num - 1) + fibonacci(num - 2)
 }
 ```
 
-```javascript:title="recursiveFactorial.js"
+```javascript:title=recursiveFactorial.js
 function factorial(num) {
   if (num === 0) return 1 // convention states that 0! is 1
   return num * factorial(num - 1)
@@ -104,7 +104,7 @@ In refactoring to a recursive solution, we traded simpler logic for potentially 
 
 If we diagram the function calls to calculate the fifth number in the fibonacci sequence vs the fifth factorial, the differences will become apparent.
 
-```shell:title="fifth fibonacci"
+```shell:title=fifth-fibonacci
                                                     fibonacci(5)
                                        _____________/            \____________
                            fibonacci(4)                                       fibfibonacci(3)
@@ -118,7 +118,7 @@ fibonacci(1)   fibonacci(0)
 
 Similaraly, calculating the fourth `factorial`, you might wind up with:
 
-```shell:title="fifth factorial"
+```shell:title=fifth-factorial
     factorial(5)
     /          \
    5            factorial(4)
@@ -176,7 +176,7 @@ By internal recursion, I mean create a new function that can be accessed by our 
 
 This would be useful in the case of the Fibonacci sequence where our recursive approach created multiple redundant calls. It might look like ([interactive repl here](https://repl.it/@stephencweiss/memoizedFib)):
 
-```javascript:title="cachedFibonnaci.js"
+```javascript:title=cachedFibonnaci.js
 function fibonacci(num) {
   const cache = {}
   return calculateFibonacci(num, cache)
@@ -203,11 +203,11 @@ Notice, however, that this provides no benefit for `factorial` because there's n
 
 If the situation is such that we'll be making the same computationally expensive call over and over, another opportunity is to memoize the results of the call itself so that if you see it again, the computer won't need to crunch through it over and over.
 
-```javascript:title="generalMemo.js"
+```javascript:title=generalMemo.js
 function memoization(fn) {
   const cache = {}
   return (...args) => {
-    const key = [...args]
+    const key = args
     if (!cache[key]) {
       cache[key] = fn(...args)
     }
@@ -220,7 +220,7 @@ It's worth noting that this solution only helps us with the case where we're cal
 
 For example. If we tweaked the factorial function to print each time it's called, like so:
 
-```javascript:title="fibonacci.js"
+```javascript:title=fibonacci.js
 function factorial(num) {
   console.log(`factorial called with -->`, num)
   if (num === 0) return 1 // convention states that 0! is 1
@@ -273,11 +273,11 @@ Because the cache is generated _outside_ of the scope of the target function, we
 
 Our generalized memoization function looks very similar to our previous one, though we're now passing along the cache into the bound function:<sup>[6](#footnotes)</sup><a id="fn6"></a>
 
-```javascript:title="es5GeneralMemo.js"
+```javascript:title=es5GeneralMemo.js
 function memoize(fn) {
   const cache = {}
   return function() {
-    const key = [...arguments]
+    const key = arguments
     if (cache[key]) {
       return cache[key]
     } else {
@@ -291,7 +291,7 @@ function memoize(fn) {
 
 This allows us to memoize the internal calls and store them in the same cache - similarly to how we memoized the Fibonacci sequence earlier:
 
-```javascript:title="cachedFactorial.js"
+```javascript:title=cachedFactorial.js
 function factorial(num, cache) {
   if (num === 0) cache[num] = 1 // convention states that 0! is 1
   if (!cache[num]) {
@@ -313,13 +313,13 @@ It's how the keys are generated.
 
 Imagine we weren't memoizing `factorial`, but `add`, where add is defined as:
 
-```javascript:title="add.js"
+```javascript:title=add.js
 function add = (a,b) => a + b;
 ```
 
 In this case, we can't just write:
 
-```javascript:title="poorlyCachedAdd.js"
+```javascript:title=poorlyCachedAdd.js
 function add = (a,b) => {
   if (!cache[a]) {
     cache[a] = a + b
@@ -332,7 +332,7 @@ What happens when `b` changes but `a` stays the same? We'd retrieve the wrong re
 
 There are any number of ways to create a key, the only rule is that it needs to be unique to the given arguments of the function. If you're dealing with strings, numbers, etc. (i.e., [Primitive data types in Javascript](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) _other than a Symbol_), you might create a concatenated string:
 
-```javascript:title="cachedAdd.js"
+```javascript:title=cachedAdd.js
 function add = (a,b) => {
   const key = [a,b].join('-')
   if (!cache[key]) {

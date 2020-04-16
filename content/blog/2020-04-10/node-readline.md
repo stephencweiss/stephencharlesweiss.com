@@ -10,7 +10,7 @@ I haven't had many opportunities to play around with building CLIs or reading da
 
 Using it to process data fed into an application from the command line was much simpler than I expected!
 
-```javascript:title="src/index.js"
+```javascript:title=src/index.js
 const readline = require('readline')
 
 const rl = readline.createInterface({
