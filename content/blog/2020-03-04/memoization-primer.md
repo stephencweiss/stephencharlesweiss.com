@@ -207,7 +207,7 @@ If the situation is such that we'll be making the same computationally expensive
 function memoization(fn) {
   const cache = {}
   return (...args) => {
-    const key = [...args]
+    const key = args
     if (!cache[key]) {
       cache[key] = fn(...args)
     }
@@ -277,7 +277,7 @@ Our generalized memoization function looks very similar to our previous one, tho
 function memoize(fn) {
   const cache = {}
   return function() {
-    const key = [...arguments]
+    const key = arguments
     if (cache[key]) {
       return cache[key]
     } else {

@@ -144,7 +144,7 @@ For more on adding line numbers, [see the Gatsby plugin docs](https://www.gatsby
 Once all of this is setup, adding line numbers can be done by noting it at the top of the snippet with `{numberLines: true}`. For example:
 
 ````javascript{numberLines: true}
-;```javascript{numberLines: true}
+```javascript{numberLines: true}
 const meaningOfLife = 42;
 ```
 ````
@@ -152,7 +152,7 @@ const meaningOfLife = 42;
 Alternatively, you can start at a specified line number (in this case, line 5):
 
 ````javascript{numberLines: 5}
-;```javascript{numberLines: 5}
+```javascript{numberLines: 5}
 const meaningOfLife = 42;
 ```
 ````
