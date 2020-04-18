@@ -549,23 +549,29 @@
         "text": "Questions you cannot answer are usually far better for you than answers you cannot question.",
         "attribution": "Yuval Noah Harari",
         "url": "https://alearningaday.blog/2020/03/31/questions-you-cannot-answer/",
-        "tags": ["knowledge","questions","answers"]
+        "tags": ["knowledge", "questions", "answers"]
     },
     {
         "text": "Again and again, I therefore admonish my students in Europe and America: Don’t aim at success – the more you aim at it and make it a target, the more you are going to miss it. For success, like happiness, cannot be pursued; it must ensue.\nAnd it only does so as the unintended side effect of one’s personal dedication to a cause greater than oneself or as the by-product of one’s surrender to a person other than oneself. Happiness must happen, and the same holds for success: you have to let it happen by not caring about it. I want you to listen to what your conscience commands you to do and go on to carry it out to the best of your knowledge.\nThen you will live to see that in the long-run, in the long-run, I say(!), success will follow you precisely because you had forgotten to think about it.",
         "attribution": "Viktor Frankl",
         "url": "https://alearningaday.blog/2020/04/14/viktor-frankl-on-success-and-happiness/",
-        "tags": ["success","happiness","attention","patience"]
+        "tags": ["success", "happiness", "attention", "patience"]
     },
     {
         "text": "Tend to your practice daily, enjoying each phase as it sprouts, grows, and flourishes",
         "attribution": "Unknown",
-        "source":"Calm App",
-        "tags": ["patience","growth","process"]
+        "source": "Calm App",
+        "tags": ["patience", "growth", "process"]
     },
     {
         "text": "Muditā (n.) (sanskrit or pali): Sympathetic or unselfish joy, or joy in the good fortune of others",
-        "source":"Calm App",
-        "tags": ["empathy","sympathy","joy"]
+        "source": "Calm App",
+        "tags": ["empathy", "sympathy", "joy"]
+    },
+    {
+        "text": "The drama of being human is great and complicated. The pathless path is pockmarked with pain and suffering. But seen from the vantage point that all steps are purposeful, all of it seems worthwhile – a glorious, life-giving retort to those who would question our worthiness and lovability.",
+        "attribution": "Jerry Colonna",
+        "source": "Reboot",
+        "url": "https://alearningaday.blog/2020/04/17/all-steps-are-purposeful/"
     }
 ]
