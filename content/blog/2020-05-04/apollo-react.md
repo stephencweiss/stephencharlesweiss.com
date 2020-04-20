@@ -2,6 +2,7 @@
 title: 'Setting Up Apollo To Work With React (And NextJS)'
 date: '2020-04-08'
 publish: '2020-05-04'
+updated: ['2020-04-20']
 category: ['programming']
 tags: ['nextjs', 'apollo', 'react', 'graphql', 'server-side-rendering', 'ssr']
 ---
@@ -108,7 +109,7 @@ That prop is then passed to our `ApolloProvider` as the value for the client.
 
 > `getInitialProps` enables [server-side rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering) in a page and allows you to do **initial data population**, it means sending the [page](https://nextjs.org/docs/basic-features/pages) with the data already populated from the server. This is especially useful for [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) .
 
-**Update**: `getInitialProps` was deprecated. It is now recommended to use `getStaticProps` (for statically generation) or `getServerSideProps` (for server side rendering). I'm using `getInitialProps` however because i'm on version 7.0 of NextJS and these new methods are available on 9.3+.
+**Update**: `getInitialProps` was deprecated. It is now recommended to use `getStaticProps` (for statically generation) or `getServerSideProps` (for server side rendering). I'm using `getInitialProps` however because I'm on version 7.0 of NextJS and these new methods are available on 9.3+.
 
 ```diff:title=pages/_app.js
 function App(props) {
@@ -138,6 +139,10 @@ function App(props) {
 
 export default withData(App);
 ```
+
+Also worth highlighting: `ctx.query` is the query parameters from the URL, i.e. the `?key=value&otherKey=otherValue` part of `example.com/pageTitle?key=value&otherKey=otherValue`.
+
+When I say that this `getInitialProps` "exposes the query to the user", I mean that in the components that are rendered which receive the `pageProps`, if there is any query parameter in the URL, it will be accessible as `props.query.x`.
 
 ## Conclusion
 
