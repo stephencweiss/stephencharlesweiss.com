@@ -572,6 +572,50 @@
         "text": "The drama of being human is great and complicated. The pathless path is pockmarked with pain and suffering. But seen from the vantage point that all steps are purposeful, all of it seems worthwhile – a glorious, life-giving retort to those who would question our worthiness and lovability.",
         "attribution": "Jerry Colonna",
         "source": "Reboot",
-        "url": "https://alearningaday.blog/2020/04/17/all-steps-are-purposeful/"
+        "url": "https://alearningaday.blog/2020/04/17/all-steps-are-purposeful/",
+        "tags": ["humanity", "life"]
+    },
+    {
+        "text": "A good workman is known by his tools.",
+        "attribution": "Proverb",
+        "source": "_The Mythical Man Month_ by Frederick P. Brooks, Jr.",
+        "tags": ["craft", "craftsmanship"]
+    },
+    {
+        "text": "Things are always at their best in the beginning",
+        "attribution": "Blaise Pascal",
+        "tags": ["beginnings"],
+        "source": "_The Mythical Man Month_ by Frederick P. Brooks, Jr."
+    },
+    {
+        "text": "That is the key to history. Terrific energy is expended--civilizations are built up--excellent institutions devised; but each time something goes wrong. Some fatal flaw always brings the selfish and cruel people to the top, and then it all slides back into misery and ruin. In fact, the machine conks. It seems to start up all right and runs a few yards, and then it breaks down.",
+        "attribution": "C.S. Lewis",
+        "tags": ["beginnings", "progress", "hope"],
+        "source": "_The Mythical Man Month_ by Frederick P. Brooks, Jr."
+    },
+    {
+        "text": "Cosgrove has perceptively pointed out that the programmer delivers satisfaction of a user need rather than any tangible product. And both the actual need and the user's perception of that need will change as programs are built, tested, and used.",
+        "attribution": "Frederick P. Brooks, Jr.",
+        "source": "_The Mythical Man Month_ by Frederick P. Brooks, Jr., pg. 117",
+        "tags": ["software", "demand", "production", "expectations"]
+    },
+    {
+        "text": "Nevertheless, some changes in objectives are inevitable, and it is better to be prepared for them than to assume that they won't come. Not only are changes in objective inevitable, changes in development strategy and technique are also inevitable. The throw-one-away concept is itself just an acceptance of the fact that as one learns, he changes the design.",
+        "attribution": "Frederick P. Brooks, Jr.",
+        "source": "_The Mythical Man Month_ by Frederick P. Brooks, Jr., pg. 117",
+        "tags": ["software", "demand", "production", "change"]
+    },
+    {
+        "text": "Xerxes wept when he beheld his Army, to consider that in less than a Hundred Years they would be all Dead. Anacreon was' Choakt with a Grape-stone, and violent Joy Kills as well as violent Grief. There is nothing in this World constant but Inconstancy; yet Plato thought that if Virtue would appear to the World in her own native Dress, all Men would be Enamoured with her. But now since Interest governs the World, and Men neglect the Golden Mean, Jupiter himself, if he came on the Earth would be Despised, unless it were as he did to Danae in a Golden Shower. For Men nowadays Worship the Rising Sun, and not the Setting.",
+        "attribution": "Jonathan Swift",
+        "source": "A Tritical Essay upon the Faculties of the Mind (1707)",
+        "url": "https://quotepark.com/quotes/1920030-jonathan-swift-there-is-nothing-in-this-world-constant-but-incons/",
+        "tags": ["proverb", "change", "inevitability"]
+    },
+    {
+        "text": "Ubuntu tells us that we can create a more peaceful world by striving for goodness in each moment, wherever we are.",
+        "attribution": "Desmond Tutu",
+        "source": "Calm App",
+        "tags": ["goodness", "humanity"]
     }
 ]
