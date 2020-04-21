@@ -6,19 +6,19 @@ category: ['programming']
 tags: ['node', 'crypto', 'passwords', 'salt', 'hash']
 ---
 
-When it comes to properly managing passwords, I think of breakfast. Okay, that's not true. I always think of breakfast. But it _is_ true that breakfast foods can be instructive for putting together a strategy for securely storing your user's sensitive information (like their passwords).
+When it comes to properly managing passwords, I think of breakfast. Okay, that's not true. I always think of breakfast. But it _is_ true that breakfast foods can be instructive for understanding some of the details needed to securely store user's sensitive information (like their passwords).
 
 Let's see how.
 
 Imagine we want to open a restaurant. I like breakfast, so the restaurant will be a diner. Really, I'd like to open a restaurant like Winona's in Steamboat, CO. (If you ever visit, don't skip it. And be sure to grab a cinnamon roll... or 6!)
 
-I'm not ready to start competing with Winona's though, so I'm going to start with some basics and do them right. My initial menu will have three items:
+I'm not a very creative chef, however, so I'll have a pretty simple menu to start with:
 
 1. Plain toast
 2. (Corned beef) Hash
 3. (Corned beef) Hash with salt
 
-Plain toast is a staple. Everyone's had it. It will work in a pinch, but really, I don't expect too many people to buy it. It's more there to fill out the menu and provide an alternative to my hash.
+Plain toast is a staple. Everyone's had it. It will work in a pinch, but really, I don't expect too many people to buy it. It's more there to fill out the menu and provide an alternative to my hash so I'm not accused of having only one item on my menu!
 
 I'm planning to make a mean hash and I expect this to be good for most people (though some might suggest different ingredients than corned beef - the point is that they're coming for my hash). But you know what makes a hash even better? Salt. Just a little bit goes a long way. The best part is, it's not hard to add!
 
@@ -33,9 +33,9 @@ I'm not going to go too far into the encryption details for a password because, 
 When it comes to encryption, I have two rules of thumb I follow:
 
 1. Never try to roll your own encryption
-2. Encryption works by making brute-force strategies untenable, not by being unbreakable, so don't undermine that by rolling your own.
+2. Encryption works when brute-force strategies are untenable.
 
-Side note: Interestingly, this is the root of some fears that quantum computers will invalidate contemporary encryption processes.
+Side note: Interestingly, this is one reason folks fear quantum computers: they may invalidate contemporary encryption processes.
 
 Here's the [MIT Review on how a quantum computer could break 2048-bit RSA encryption in 8 hours](https://www.technologyreview.com/2019/05/30/65724/how-a-quantum-computer-could-break-2048-bit-rsa-encryption-in-8-hours/) :
 
@@ -399,10 +399,20 @@ ItsyBitsyMitsy --> {
 
 Notice that the second two are identical.
 
-## Conclusion
+## Closing Thoughts
 
 We covered a lot of ground today.
 
 We learned about some of the basics of password management, some "best practices" and recipes for storing and retrieving passwords.
 
-Hopefully this article taught you a thing or two, or at least made you hungry for some corned beef hash (with salt)!
+Armed with all of this information, you might be tempted to go use this in production. Don't. Listen to [Coda Hale](https://codahale.com/how-to-safely-store-a-password/) and use a tool purpose built for this like [bcrypt](https://www.npmjs.com/package/bcrypt).
+
+Why? Remember rule #2? "Encryption works when brute-force strategies are untenable."
+
+Well, computers today are _fast_ making brute-force strategies _very_ tenable.
+
+`bcrypt` "uses a variant of the Blowfish encryption algorithm’s keying schedule, and introduces a work factor, which allows you to determine how expensive the hash function will be. Because of this, bcrypt can keep up with Moore’s law. As computers get faster you can increase the work factor and the hash will get slower." (source: Coda Hale).
+
+So, with that, I've learned a thing or two, understood how I _might_ implement my own salt and hash, and know enough not to.
+
+With that, I guess all that's left is to go make myself some hash!
