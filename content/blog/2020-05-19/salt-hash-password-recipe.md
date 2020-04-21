@@ -3,7 +3,7 @@ title: 'Salt & Hash: A Password Recipe'
 date: '2020-04-20'
 publish: '2020-05-19'
 category: ['programming']
-tags: ['node', 'crypto', 'passwords', 'salt', 'hash']
+tags: ['node', 'crypto', 'passwords', 'salt', 'hash', 'bcrypt']
 ---
 
 When it comes to properly managing passwords, I think of breakfast. Okay, that's not true. I always think of breakfast. But it _is_ true that breakfast foods can be instructive for understanding some of the details needed to securely store user's sensitive information (like their passwords).
