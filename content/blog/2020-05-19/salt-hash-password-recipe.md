@@ -163,7 +163,10 @@ const crypto = require('crypto')
 function generateSalt(length) {
     if (length < 8)
         throw new Error('Make sure salt is sufficiently long! At least 8 bytes')
-    return crypto.randomBytes(length).toString('hex')
+    return crypto
+        .randomBytes(Math.ceil(length / 2)) // ensure even number
+        .toString('hex')
+        .slice(0, length) // fix the length
 }
 
 modules.export = { generateSalt }
