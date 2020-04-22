@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Index } from 'elasticlunr'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
-import { PostTitleLink } from '../PostTitle'
 import {
   SearchContainer,
   SearchInput,
@@ -37,7 +36,7 @@ function Search(props) {
       <SearchItemWrapper>
         Search: <SearchInput type="text" value={query} onChange={handleQuery} />
       </SearchItemWrapper>
-      {results.length > 0 && <PostTitleLink>Results</PostTitleLink>}
+      {results.length > 0 && <h3>Results</h3>}
       {results.length > 0 && (
         <SearchContainer>
           {results.map(page => {
