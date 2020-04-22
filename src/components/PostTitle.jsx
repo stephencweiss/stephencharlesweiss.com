@@ -5,8 +5,8 @@ import styled, { css } from 'styled-components'
 export const MarkerStyle = css`
     display: inline;
     border-radius: 1em 0 1em 0;
-    padding: .5em;
-    background-image: linear-gradient(
+    padding: 0.5em;
+    background: linear-gradient(
         -100deg,
         rgba(255, 250, 150, 0.15),
         rgba(255, 250, 150, 0.8) 100%,
