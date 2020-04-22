@@ -1,62 +1,19 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import {
-  EntryCard,
-  Bio,
-  Layout,
-  Search,
-  SEO,
-  PageNavigation,
-} from '../components'
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import { Layout, SEO } from '../components'
+import LandingBio from '../components/LandingBio'
+import { useSiteMetadata } from '../hooks'
 
 function MainIndex(props) {
-  const { data } = props
-  const { title } = useSiteMetadata()
-  const posts = data.allMarkdownRemark.edges //.sort(sortPosts)
-
-  return (
-    <Layout location={props.location} title={title}>
-      <SEO
-        title="All posts"
-        keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-      />
-      <Search />
-      {posts.map(({ node }) => (
-        <EntryCard key={node.frontmatter.slug} node={node} />
-      ))}
-      <PageNavigation next={`/blog/1`} />
-      <Bio />
-    </Layout>
-  )
+    const {title, description} = useSiteMetadata()
+    return (
+        <Layout location={props.location}>
+            <SEO
+                title={title}
+                keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+            />
+            <LandingBio title={title} description={description}/>
+        </Layout>
+    )
 }
 
 export default MainIndex
-
-export const pageQuery = graphql`
-  query indexBlogQuery {
-    allMarkdownRemark(
-      filter: {
-        fields: { isPublished: { eq: true }, sourceInstance: { eq: "blog" } }
-      }
-      limit: 5 # NOTE: value for limit is the same as ENTRIES_PER_PAGE; cannot string interpolate w/in graphql function
-      sort: { order: [DESC], fields: [fields___listDate] }
-    ) {
-      edges {
-        node {
-          excerpt(format: PLAIN)
-          fields {
-            slug
-            listDate
-          }
-          frontmatter {
-            title
-            date
-            publish
-            updated
-          }
-        }
-      }
-    }
-  }
-`
