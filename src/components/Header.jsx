@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StyledLink } from '../StyledLink'
-import { LinkWrapper } from '../LinkWrapper'
+import { StyledLink } from './StyledLink'
+import { LinkWrapper } from './LinkWrapper'
 
 const SiteHeader = styled.header`
     background: transparent;
@@ -10,7 +10,7 @@ const SiteHeader = styled.header`
     justify-content: center;
 `
 
-function Header() {
+export function Header() {
     return (
         <SiteHeader>
             <LinkWrapper>
@@ -23,4 +23,4 @@ function Header() {
     )
 }
 
-export default Header
+

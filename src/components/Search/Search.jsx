@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Index } from 'elasticlunr'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
-import { PostTitleLink } from '../PostTitleLink'
+import { PostTitleLink } from '../PostTitle'
 import {
   SearchContainer,
   SearchInput,

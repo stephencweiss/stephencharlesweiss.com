@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import { ImageGallery } from '../components/ImageGallery'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
-import { Title } from '../components/Headers'
+import { Title } from '../components'
 
 export function XKCDGallery(props) {
   const { title } = useSiteMetadata()
