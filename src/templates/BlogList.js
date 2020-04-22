@@ -35,9 +35,8 @@ function BlogList(props) {
 
                 <Search />
                 {posts.map(({ node }) => (
-                    <BlogExcerpt key={node.frontmatter.slug} node={node} />
+                    <BlogExcerpt key={node.fields.slug} node={node} />
                 ))}
-
                 <PageNavigation previous={previousPage} next={nextPage} />
             </Content>
             <Bio />

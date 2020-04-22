@@ -19,7 +19,7 @@ const Tags = ({ data, location, pageContext }) => {
             <h1>{tagHeader}</h1>
             <ul>
                 {posts.map(({ node }) => (
-                    <BlogExcerpt key={node.frontmatter.slug} node={node} />
+                    <BlogExcerpt key={node.fields.slug} node={node} />
                 ))}
             </ul>
             <Link to="/tags">Return to all tags</Link>
