@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import {
   Bio,
-  EntryCard,
+  BlogExcerpt,
   Layout,
   PageNavigation,
   SEO,
@@ -10,9 +11,17 @@ import {
 } from '../components'
 import { useSiteMetadata } from '../hooks'
 
+// TODO: figure out if this is used/helpful - think it conflicts with the <layout>
+const Content = styled.div`
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 1.45rem 1.0875rem;
+`
+
 function BlogList(props) {
   const { data } = props
-  const { previousPage: previous, nextPage: next } = props.pageContext
+  console.log({props})
+  const { previousPage, nextPage, currentPage } = props.pageContext
   const { title: siteTitle } = useSiteMetadata()
   const posts = data.allMarkdownRemark.edges
 
@@ -22,12 +31,16 @@ function BlogList(props) {
         title="All posts"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
+      <Content>
+        <h1>Blog, page: {currentPage + 1}</h1>
+
       <Search />
       {posts.map(({ node }) => (
-        <EntryCard key={node.frontmatter.slug} node={node} />
-      ))}
+          <BlogExcerpt key={node.frontmatter.slug} node={node} />
+          ))}
 
-      <PageNavigation previous={previous} next={next} />
+      <PageNavigation previous={previousPage} next={nextPage} />
+          </Content>
       <Bio />
     </Layout>
   )
@@ -51,6 +64,10 @@ export const pageQuery = graphql`
           fields {
             slug
             listDate
+            readingTime {
+              words
+              text
+            }
           }
           frontmatter {
             title

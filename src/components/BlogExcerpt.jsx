@@ -10,7 +10,7 @@ const ContentWrapper = styled.div`
     }
 `
 
-export function EntryCard({ node }) {
+export function BlogExcerpt({ node }) {
     const { title } = node.frontmatter
     const { listDate, slug } = node.fields
     const { excerpt } = node
