@@ -43,7 +43,7 @@ function Rankings(props) {
         <b>Categories:</b>
         <ul>
           {Object.values(ratings).map(rating => (
-            <li>{rating}</li>
+            <li key={rating}>{rating}</li>
           ))}
         </ul>
       </p>
