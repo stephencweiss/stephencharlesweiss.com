@@ -1,3 +1,7 @@
-import wrapWithProvider from './src/components/wrapWithProvider'
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
 
-export const wrapRootElement = wrapWithProvider
+// You can delete this file if you're not using it
