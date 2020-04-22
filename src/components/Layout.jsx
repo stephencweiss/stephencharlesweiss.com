@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../components/Headers'
+import { Header } from '../components'
 import styled from 'styled-components'
 
 const Paper = styled.div`
