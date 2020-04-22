@@ -4,7 +4,6 @@ import { graphql, Link } from 'gatsby'
 import { ImageGallery } from '../components/ImageGallery'
 import Layout from '../components/Layout'
 import useSiteMetadata from '../hooks/useSiteMetadata'
-import { Title } from '../components'
 
 export function XKCDGallery(props) {
   const { title } = useSiteMetadata()
@@ -14,9 +13,9 @@ export function XKCDGallery(props) {
 
   return (
     <Layout location={props.location} title={title}>
-      <Title>
+      <h1>
         XKCD Daily Digest<sup>1</sup>
-      </Title>
+      </h1>
       <ImageGallery images={xkcdComics} />
       <p>
         <em>Why this page exists</em>
