@@ -1,12 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StyledLink, LinkWrapper, Layout, SEO } from '../components'
+import { SimpleLink, LinkWrapper, Layout, SEO } from '../components'
 
-const Link = styled(StyledLink)`
-    as: li;
-    margin: 0;
-    padding-top: 1.25rem;
-`
+
 
 const ColumnLinkWrapper = styled(LinkWrapper)`
     display: flex;
@@ -18,20 +14,36 @@ const ColumnLinkWrapper = styled(LinkWrapper)`
 `
 
 function Others(props) {
-    console.log({ props })
     return (
         <Layout>
             <SEO
                 title={'other pages'}
-                keywords={[`lists`, `books`, `random`, `directory`,`stats`,`xkcd`]}
+                keywords={[
+                    `lists`,
+                    `books`,
+                    `random`,
+                    `directory`,
+                    `stats`,
+                    `xkcd`,
+                ]}
             />
             <h1>Other Pages</h1>
             <p>A series of links to other pages on this site.</p>
             <ColumnLinkWrapper>
-                <Link to={'/books'}>Books</Link>
-                <Link to={'/lists'}>Lists</Link>
-                <Link to={'/stats/current-stats'}>Stats</Link>
-                <Link to={'/xkcd'}>XKCD Digest</Link>
+                <ul>
+                    <li>
+                        <SimpleLink to={'/books'}>Books</SimpleLink>
+                    </li>
+                    <li>
+                        <SimpleLink to={'/lists'}>Lists</SimpleLink>
+                    </li>
+                    <li>
+                        <SimpleLink to={'/stats/current-stats'}>Stats</SimpleLink>
+                    </li>
+                    <li>
+                        <SimpleLink to={'/xkcd'}>XKCD Digest</SimpleLink>
+                    </li>
+                </ul>
             </ColumnLinkWrapper>
         </Layout>
     )
