@@ -617,5 +617,22 @@
         "attribution": "Desmond Tutu",
         "source": "Calm App",
         "tags": ["goodness", "humanity"]
+    },
+    {
+        "text": "No mud, no lotus flower.",
+        "source": "Calm App",
+        "tags": ["perseverance", "beauty", "optimism"]
+    },
+    {
+        "text": "There are two ways to live: as if nothing is a miracle, or as if everything is a miracle.",
+        "attribution": "Albert Einstein",
+        "source": "Calm App",
+        "tags": [
+            "appreciation",
+            "wonder",
+            "miracles",
+            "mindfulness",
+            "gratitude"
+        ]
     }
 ]
