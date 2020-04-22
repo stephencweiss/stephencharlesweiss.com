@@ -1,9 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PostLink from '../components/PostLink'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import {Bio, Layout, PostTitleLink, SEO} from '../components'
+
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function Books(props) {
@@ -19,7 +17,7 @@ function Books(props) {
         const { slug } = node.fields
         return (
           <div key={slug}>
-            <PostLink slug={slug} title={`${bookTitle} by ${author}`} />
+            <PostTitleLink slug={slug} title={`${bookTitle} by ${author}`} />
           </div>
         )
       })}

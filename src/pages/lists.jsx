@@ -1,9 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import PostLink from '../components/PostLink'
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import {Bio, Layout, PostTitleLink, SEO} from '../components'
 import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function Lists(props) {
@@ -19,7 +16,7 @@ function Lists(props) {
         const { slug } = node.fields
         return (
           <div key={slug}>
-            <PostLink slug={slug} title={title} />
+            <PostTitleLink slug={slug} title={title} />
           </div>
         )
       })}
