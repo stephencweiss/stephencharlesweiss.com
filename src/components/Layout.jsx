@@ -20,13 +20,12 @@ const Footer = styled.div`
 `
 
 export function Layout(props) {
-    const { location, title, children } = props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const { children } = props
 
     return (
         <Paper>
             <Wrapper>
-                <Header title={title} root={location.pathname === rootPath} />
+                <Header />
                 {children}
             </Wrapper>
             <Footer>
