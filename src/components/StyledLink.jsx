@@ -1,5 +1,7 @@
-import { Link as GatsbyLink } from 'gatsby';
-import styled from 'styled-components';
+import React from 'react'
+import { Link as GatsbyLink } from 'gatsby'
+import styled from 'styled-components'
+
 export const StyledLink = styled(GatsbyLink)`
     color: black;
     text-decoration: none;
@@ -23,4 +25,14 @@ export const StyledLink = styled(GatsbyLink)`
         transform: scaleX(1);
         transform-origin: bottom left;
     }
-`;
+`
+
+export const SimpleLink = styled(StyledLink)`
+    margin: 0;
+    padding-top: 1.25rem;
+`
+export const ListedLink = ({ to, children }) => (
+    <li>
+        <SimpleLink to={to}>{children}</SimpleLink>
+    </li>
+)
