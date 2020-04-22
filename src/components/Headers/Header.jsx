@@ -1,32 +1,61 @@
 import React from 'react'
 import { Link as GatsbyLink } from 'gatsby'
-import { space } from 'styled-system'
 import styled from 'styled-components'
 
-const StyledHeader = styled.div`
-  margin: 0;
-  padding-top: ${({ root }) => (root ? '1.5em' : '1em')};
+const SiteHeader = styled.header`
+    background: transparent;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    a:first-of-type {
+        margin: 0;
+    }
 `
 
-const Link = styled(GatsbyLink)`
-  box-shadow: none;
-  text-decoration: none;
-  color: inherit;
-
-  &:focus-within {
-    text-decoration: underline;
-  }
+const LinkWrapper = styled.div`
+    max-width: 860px;
+    padding: 1rem 1.0875rem;
+    font-size: 1.5rem;
 `
 
-function Header(props) {
-  const { title, root } = props
-  const type = root ? 'h1' : 'h3'
+export const HeaderLink = styled(GatsbyLink)`
+    color: black;
+    margin-left: 15px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
 
-  return (
-    <StyledHeader as={type} root={root}>
-      <Link to={`/`}>{title}</Link>
-    </StyledHeader>
-  )
+    ::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        transform-origin: bottom right;
+        transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    :hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+`
+
+function Header() {
+    return (
+        <SiteHeader>
+            <LinkWrapper>
+                <HeaderLink to={`/`}>Home</HeaderLink>
+                <HeaderLink to={`/blog`}>Blog</HeaderLink>
+                <HeaderLink to={`/tags`}>Tags</HeaderLink>
+                <HeaderLink to={`/others`}>Others</HeaderLink>
+            </LinkWrapper>
+        </SiteHeader>
+    )
 }
 
 export default Header
