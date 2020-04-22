@@ -33,7 +33,7 @@ export default MyApp
 
 Yeah, it's not much. I'm simply adding a paragraph tag _before_ every `<Component>` is rendered.
 
-The `<Component>` is the `page` that's loaded. `pageProps` are any props passed along to the `Component` - it's an empty object if not using `getInitialProps`.<sup>[1](#foototes)</sup><a id="fn1"></a>
+The `Component` is the `page` that's loaded. `pageProps` are any props passed along to the `Component` - it's an empty object if not using `getInitialProps`.<sup>[1](#foototes)</sup><a id="fn1"></a>
 
 The effect, however, is that when we navigate between pages, the state that exists in `MyApp` persists - _it_ is not being rerendered.
 
@@ -47,4 +47,4 @@ If we were to put our state management, global styles, etc. at this level then, 
 
 ## Footnotes
 
-- <sup>1</sup> [`.getInitialProps`](https://nextjs.org/docs/api-reference/data-fetching/getInitialProps) is part of the Next API to asynchronously fetch data and then feed it to `props`. The big catch on using it is that it will disable [Automatic Static Optimization](https://nextjs.org/docs/advanced-features/automatic-static-optimization).
+- <sup>[1](#fn1)</sup> [`.getInitialProps`](https://nextjs.org/docs/api-reference/data-fetching/getInitialProps) is part of the Next API to asynchronously fetch data and then feed it to `props`. The big catch on using it is that it will disable [Automatic Static Optimization](https://nextjs.org/docs/advanced-features/automatic-static-optimization).

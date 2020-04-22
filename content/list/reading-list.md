@@ -3,7 +3,7 @@ title: 'Reading List'
 ---
 
 ## Actively Reading
-- _REAMDE_ by Neal Stephenson
+- _Hawaii_ by James Michener
 - _Joel On Software_ by Joel Spolsky
 - _How To Solve It_ by G. Polya
 - _The Mythical Man Month_ by Frederick P. Brooks
@@ -13,9 +13,10 @@ title: 'Reading List'
 
 ### 2020
 
-Total: 10
+Total: 11
 
 ### _April 2020_
+- _REAMDE_ by Neal Stephenson
 
 ### _March 2020_
 - _The Imposter's Handbook_ by Rob Conery
@@ -191,7 +192,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _The Covenant_ by James Michener
 1. _The Fires of Spring_ by James Michener
 1. _Centennial_ by James Michener
-1. _Hawaii_ by James Michener
 1. _Space_ by James Michener
 1. _Nome Trilogy, Book I: Truckers_ by Terry Pratchett
 1. _Nome Trilogy, Book II: Diggers_ by Terry Pratchett
@@ -222,6 +222,7 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 1. _The Toyota Way: 14 Management Principles from the World's Greatest Manufacturer_ by Jeffrey Liker
 1. _The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Readically Successful Businesses_ by Eric Ries
 1. _Radical Candor_ by Kim Scott
+1. _Power Mentoring: How Successful Mentors and Proteges Get the Most Out of Their Relationships_ by Ellen A. Ensher, Susan E. Murphy
 
 ### Philosophy
 
@@ -247,6 +248,8 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 
 1. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_ by Martin Kleppmann
 1. _Refactoring_ by Martin Fowler
+1. _The Art of Unix Programming_ by Eric S. Raymond
+1. _The Cathedral and the Bazaar_ by Eric S. Raymond
 1. _Refactoring UI_ by Adam Watham & Steve Shoger
 
 ### Other
