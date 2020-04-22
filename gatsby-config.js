@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `/* Code-Comments */`,
     author: `Stephen Weiss`,
-    description: `Notes on software and life.`,
+    description: `Notes on life and software.`,
     siteUrl: `https://stephencharlesweiss.com/`,
     social: {
       twitter: `stephencweiss`,
