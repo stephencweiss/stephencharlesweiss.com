@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SimpleLink, LinkWrapper, Layout, SEO } from '../components'
-
-
+import { ListedLink, LinkWrapper, Layout, SEO } from '../components'
 
 const ColumnLinkWrapper = styled(LinkWrapper)`
     display: flex;
@@ -28,21 +26,13 @@ function Others(props) {
                 ]}
             />
             <h1>Other Pages</h1>
-            <p>A series of links to other pages on this site.</p>
+            <p>Links to the other pages on this site.</p>
             <ColumnLinkWrapper>
                 <ul>
-                    <li>
-                        <SimpleLink to={'/books'}>Books</SimpleLink>
-                    </li>
-                    <li>
-                        <SimpleLink to={'/lists'}>Lists</SimpleLink>
-                    </li>
-                    <li>
-                        <SimpleLink to={'/stats/current-stats'}>Stats</SimpleLink>
-                    </li>
-                    <li>
-                        <SimpleLink to={'/xkcd'}>XKCD Digest</SimpleLink>
-                    </li>
+                    <ListedLink to={'/books'}>Books</ListedLink>
+                    <ListedLink to={'/lists'}>Lists</ListedLink>
+                    <ListedLink to={'/stats/current-stats'}>Stats</ListedLink>
+                    <ListedLink to={'/xkcd'}>XKCD Digest</ListedLink>
                 </ul>
             </ColumnLinkWrapper>
         </Layout>
