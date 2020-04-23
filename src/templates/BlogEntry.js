@@ -9,7 +9,6 @@ import {
     Title,
     PostNavigation,
 } from '../components'
-import { useSiteMetadata } from '../hooks'
 
 const Entry = styled.div`
     #resources + ul > li,
@@ -20,13 +19,12 @@ const Entry = styled.div`
 
 function EntryTemplate(props) {
     const entry = props.data.markdownRemark
-    const { title: siteTitle } = useSiteMetadata()
     const { previous, next } = props.pageContext
     const { title } = entry.frontmatter
     const { listDate, readingTime } = entry.fields
     const { text:estimate, words:wordCount } = readingTime
     return (
-        <Layout location={props.location} title={siteTitle}>
+        <Layout>
             <SEO title={title} description={entry.excerpt} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Title>{title}</Title>

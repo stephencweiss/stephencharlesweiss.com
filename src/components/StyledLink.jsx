@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const StyledLink = styled(GatsbyLink)`
     color: black;
-    text-decoration: none;
+    text-decoration: ${({ active }) => (active ? `underline` : `none`)};
     display: inline-block;
     position: relative;
 
@@ -21,9 +21,16 @@ export const StyledLink = styled(GatsbyLink)`
         transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
-    :hover::after, :focus::after, :focus-within::after {
+    :hover::after,
+    :focus::after,
+    :focus-within::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+    :hover,
+    :focus,
+    :focus-within {
+        text-decoration: ${({ active }) => (active ? `none` : '')};
     }
 `
 

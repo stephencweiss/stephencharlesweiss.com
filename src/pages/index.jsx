@@ -3,10 +3,10 @@ import { Layout, SEO } from '../components'
 import LandingBio from '../components/LandingBio'
 import { useSiteMetadata } from '../hooks'
 
-function MainIndex(props) {
+function MainIndex() {
     const {title, description} = useSiteMetadata()
     return (
-        <Layout location={props.location}>
+        <Layout>
             <SEO
                 title={title}
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
