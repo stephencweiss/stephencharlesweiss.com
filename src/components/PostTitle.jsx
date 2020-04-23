@@ -4,9 +4,9 @@ import styled, { css } from 'styled-components'
 
 const HighlighterGradient = css`
 linear-gradient(
-    -100deg,
+    to right,
     rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 100%,
+    rgba(255, 250, 150, 0.8) 5%,
     rgba(255, 250, 150, 0.25)
 )`
 
@@ -14,7 +14,7 @@ export const MarkerStyle = css`
     display: inline;
     border-radius: 1em 0 1em 0;
     padding: 0.5em;
-    background: ${HighlighterGradient};
+    background-image: ${HighlighterGradient};
     :focus,
     :focus-within,
     :hover {
