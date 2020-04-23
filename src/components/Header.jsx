@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { StyledLink } from './StyledLink'
 import { LinkWrapper } from './LinkWrapper'
@@ -11,22 +11,41 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
-    const rootActive = pathname==='/'
-    const blogActive = pathname.includes('blog')
-    const tagsActive = pathname.includes('tags')
-    const otherActive = !rootActive && !blogActive && !tagsActive
+    const [active, setActive] = useState(null)
+    useEffect(() => {
+        const pathname = window
+            ? window.location.pathname
+            : console.warn(`window undefined`)
+
+        if (!pathname) {
+            console.warn(`Nothing to see here. No pathname`)
+        } else if (pathname === '/') {
+            setActive('ROOT')
+        } else if (pathname.includes('/blog')) {
+            setActive('BLOG')
+        } else if (pathname.includes('/tags')) {
+            setActive('TAGS')
+        } else {
+            setActive('OTHER')
+        }
+    }, [active])
 
     return (
         <SiteHeader>
             <LinkWrapper>
-                <StyledLink active={rootActive} to={`/`}>Home</StyledLink>
-                <StyledLink active={blogActive} to={`/blog`}>Blog</StyledLink>
-                <StyledLink active={tagsActive} to={`/tags`}>Tags</StyledLink>
-                <StyledLink active={otherActive} to={`/others`}>Others</StyledLink>
+                <StyledLink active={active === 'ROOT'} to={`/`}>
+                    Home
+                </StyledLink>
+                <StyledLink active={active === 'BLOG'} to={`/blog`}>
+                    Blog
+                </StyledLink>
+                <StyledLink active={active === 'TAGS'} to={`/tags`}>
+                    Tags
+                </StyledLink>
+                <StyledLink active={active === 'OTHER'} to={`/others`}>
+                    Others
+                </StyledLink>
             </LinkWrapper>
         </SiteHeader>
     )
 }
-
-
