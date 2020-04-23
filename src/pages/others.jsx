@@ -4,7 +4,7 @@ import { ListedLink, ColumnLinkWrapper, Layout, SEO } from '../components'
 
 
 
-function Others(props) {
+function Others() {
     return (
         <Layout>
             <SEO

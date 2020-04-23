@@ -10,7 +10,6 @@ import {
     Search,
     StyledLink,
 } from '../components'
-import { useSiteMetadata } from '../hooks'
 
 // TODO: figure out if this is used/helpful - think it conflicts with the <layout>
 const Content = styled.div`
@@ -22,10 +21,9 @@ const Content = styled.div`
 function BlogList(props) {
     const { data } = props
     const { previousPage, nextPage } = props.pageContext
-    const { title: siteTitle } = useSiteMetadata()
     const posts = data.allMarkdownRemark.edges
     return (
-        <Layout location={props.location} title={siteTitle}>
+        <Layout>
             <SEO
                 title="All posts"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}

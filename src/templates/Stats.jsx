@@ -1,14 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Bio, Layout, SEO, Title } from '../components'
-import { useSiteMetadata } from '../hooks'
+import { Bio, Layout, SEO } from '../components'
 
 function Stats(props) {
   const entry = props.data.markdownRemark
-  const { title: siteTitle } = useSiteMetadata()
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout>
       <SEO
         title="Site Statistics"
         keywords={['stats','analytics']}

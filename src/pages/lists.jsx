@@ -5,11 +5,10 @@ import useSiteMetadata from '../hooks/useSiteMetadata'
 
 function Lists(props) {
     const { data } = props
-    const { title: siteTitle } = useSiteMetadata()
     const list = data.lists.edges
 
     return (
-        <Layout location={props.location} title={siteTitle}>
+        <Layout>
             <SEO title="Lists" keywords={['reading', 'books']} />
             <h1>List</h1>
             <p>A list of lists I maintain.</p>

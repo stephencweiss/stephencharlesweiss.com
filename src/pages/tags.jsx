@@ -1,7 +1,6 @@
 import React from 'react'
 import { Layout, SEO, ListedLink } from '../components'
 import kebabCase from 'lodash/kebabCase'
-import useSiteMetadata from '../hooks/useSiteMetadata'
 import { graphql } from 'gatsby'
 
 // TODO: Create groupings for the tags by letter (and have an internal link help jump between them)
@@ -9,10 +8,9 @@ import { graphql } from 'gatsby'
 
 const TagsPage = props => {
     const { group } = props.data.allMarkdownRemark
-    const { title: siteTitle } = useSiteMetadata()
 
     return (
-        <Layout location={props.location} title={siteTitle}>
+        <Layout>
             <SEO title="Tags" />
             <div>
                 <div>
