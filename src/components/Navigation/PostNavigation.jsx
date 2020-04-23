@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { StyledLink } from '../index'
 
 const List = styled.ul`
   display: flex;
@@ -21,16 +21,16 @@ function PostNavigation(props) {
     <List>
       {previous && (
         <ListItem align={'left'}>
-          <Link to={previous.fields.slug} rel="prev">
-            &lArr; {previous.frontmatter.title}
-          </Link>
+          <StyledLink to={previous.fields.slug} rel="prev">
+            &lArr; Previous: {previous.frontmatter.title}
+          </StyledLink>
         </ListItem>
       )}
       {next && (
         <ListItem align={'right'}>
-          <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} &rArr;
-          </Link>
+          <StyledLink to={next.fields.slug} rel="next">
+            Next: {next.frontmatter.title} &rArr;
+          </StyledLink>
         </ListItem>
       )}
     </List>
