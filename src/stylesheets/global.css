@@ -236,6 +236,26 @@ img {
 a {
   color: #4078c0;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4078c0;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+a:hover::after,
+a:focus::after,
+a:focus-within::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 sup a {
@@ -245,6 +265,8 @@ sup a {
 a:active {
   outline: none;
 }
+
+
 
 /*
     TABLES
