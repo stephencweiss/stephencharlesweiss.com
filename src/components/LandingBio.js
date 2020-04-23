@@ -1,5 +1,8 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
+import initials from '../assets/initials.svg'
+import { StyledLink } from './StyledLink'
 
 const Container = styled.div`
     text-align: center;
@@ -13,7 +16,7 @@ const OuterContainer = styled.div`
     height: 78vh;
 `
 
-const Description = styled.p`
+const Description = styled.h2`
     padding: 0;
     margin-bottom: 1rem;
     font-size: 1.4rem;
@@ -21,16 +24,31 @@ const Description = styled.p`
 
 const NameHeader = styled.h1`
     font-size: 3.5rem;
+    margin-top: 0;
     margin-bottom: 0;
 `
 
-const LandingBio = ({ title, description }) => (
-    <OuterContainer>
-        <Container>
-            <NameHeader>{title}</NameHeader>
-            <Description>{description}</Description>
-        </Container>
-    </OuterContainer>
-)
+const Logo = styled.img`
+    height: 100px;
+    object-fit: contain;
+`
 
+const LandingBio = ({ title, description }) => {
+    return (
+        <OuterContainer>
+            <Container>
+                <Link to={'/blog'}>
+                    <Logo src={initials} />
+                </Link>
+                <NameHeader>
+                    <StyledLink to={'/blog'}>{title}</StyledLink>
+                </NameHeader>
+                <Description>{description}</Description>
+                <p>
+                    <em>written by Stephen Weiss</em>
+                </p>
+            </Container>
+        </OuterContainer>
+    )
+}
 export default LandingBio
