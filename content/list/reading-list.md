@@ -1,5 +1,7 @@
 ---
 title: 'Reading List'
+date: '2019-01-01'
+updated: ['2020-04-22']
 ---
 
 ## Actively Reading
