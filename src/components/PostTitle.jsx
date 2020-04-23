@@ -22,17 +22,18 @@ export const MarkerStyle = css`
     }
 `
 
-export const MarkerHeader = styled.h3`
+const MarkerH3 = styled.h3`
     ${MarkerStyle}
 `
+
 export const Title = styled.h1`
     ${MarkerStyle}
 `
 export function PostTitleLink({ slug, title }) {
     return (
-        <MarkerHeader>
+        <MarkerH3>
             <StyledLink to={slug}>{title}</StyledLink>
-        </MarkerHeader>
+        </MarkerH3>
     )
 }
 
