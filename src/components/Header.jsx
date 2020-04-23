@@ -11,20 +11,13 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const pathname = typeof window ? window.location.pathname : ''
-    const rootActive = pathname==='/'
-    const blogActive = pathname.includes('blog')
-    const tagsActive = pathname.includes('tags')
-    const otherActive = !rootActive && !blogActive && !tagsActive
-
-
     return (
         <SiteHeader>
             <LinkWrapper>
-                <StyledLink active={rootActive} to={`/`}>Home</StyledLink>
-                <StyledLink active={blogActive} to={`/blog`}>Blog</StyledLink>
-                <StyledLink active={tagsActive} to={`/tags`}>Tags</StyledLink>
-                <StyledLink active={otherActive} to={`/others`}>Others</StyledLink>
+                <StyledLink to={`/`}>Home</StyledLink>
+                <StyledLink to={`/blog`}>Blog</StyledLink>
+                <StyledLink to={`/tags`}>Tags</StyledLink>
+                <StyledLink to={`/others`}>Others</StyledLink>
             </LinkWrapper>
         </SiteHeader>
     )
