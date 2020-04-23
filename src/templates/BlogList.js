@@ -8,6 +8,7 @@ import {
     PageNavigation,
     SEO,
     Search,
+    StyledLink,
 } from '../components'
 import { useSiteMetadata } from '../hooks'
 
@@ -20,10 +21,9 @@ const Content = styled.div`
 
 function BlogList(props) {
     const { data } = props
-    const { previousPage, nextPage, currentPage } = props.pageContext
+    const { previousPage, nextPage } = props.pageContext
     const { title: siteTitle } = useSiteMetadata()
     const posts = data.allMarkdownRemark.edges
-
     return (
         <Layout location={props.location} title={siteTitle}>
             <SEO
@@ -31,8 +31,7 @@ function BlogList(props) {
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
             <Content>
-                <h1>Blog, page: {currentPage + 1}</h1>
-
+                <h1><StyledLink to={"/blog"}>Blog</StyledLink></h1>
                 <Search />
                 {posts.map(({ node }) => (
                     <BlogExcerpt key={node.fields.slug} node={node} />
