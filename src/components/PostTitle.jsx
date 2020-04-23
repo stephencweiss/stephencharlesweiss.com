@@ -15,11 +15,6 @@ export const MarkerStyle = css`
     border-radius: 1em 0 1em 0;
     padding: 0.5em;
     background-image: ${HighlighterGradient};
-    :focus,
-    :focus-within,
-    :hover {
-        background: transparent;
-    }
 `
 
 const MarkerH3 = styled.h3`
