@@ -1,14 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import {
-    Bio,
-    Layout,
-    PostDetails,
-    SEO,
-    Title,
-    PostNavigation,
-} from '../components'
+import { Bio, PostDetails, SEO, Title, PostNavigation } from '../components'
 
 const Entry = styled.div`
     #resources + ul > li,
@@ -22,13 +15,17 @@ function EntryTemplate(props) {
     const { previous, next } = props.pageContext
     const { title } = entry.frontmatter
     const { listDate, readingTime } = entry.fields
-    const { text:estimate, words:wordCount } = readingTime
+    const { text: estimate, words: wordCount } = readingTime
     return (
-        <Layout>
+        <>
             <SEO title={title} description={entry.excerpt} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Title>{title}</Title>
-                <PostDetails date={listDate} estimate={estimate} wordCount={wordCount}/>
+                <PostDetails
+                    date={listDate}
+                    estimate={estimate}
+                    wordCount={wordCount}
+                />
             </div>
             <Entry
                 className={'entry'}
@@ -37,7 +34,7 @@ function EntryTemplate(props) {
             <hr />
             <Bio />
             <PostNavigation previous={previous} next={next} />
-        </Layout>
+        </>
     )
 }
 

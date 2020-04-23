@@ -2,14 +2,13 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import { ImageGallery } from '../components/ImageGallery'
-import Layout from '../components/Layout'
 
 export function XKCDGallery(props) {
     const { comicQuantity, latest } = props.data.allXkcd.nodes[0]
     const xkcdComics = [latest, ...comicQuantity]
 
     return (
-        <Layout>
+        <>
             <h1>
                 XKCD Daily Digest<sup>1</sup>
             </h1>
@@ -43,7 +42,7 @@ export function XKCDGallery(props) {
                     </li>
                 </ul>
             </footer>
-        </Layout>
+        </>
     )
 }
 
