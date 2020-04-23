@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { Bio, Layout, ColumnLinkWrapper, ListedLink, SEO } from '../components'
 
 import useSiteMetadata from '../hooks/useSiteMetadata'
