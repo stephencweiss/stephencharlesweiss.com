@@ -1,6 +1,5 @@
 import React from 'react'
-import { PostDetails, PostTitleLink } from '.'
-import { getBlurb } from '../utils'
+import { Blurb, PostDetails, PostTitleLink } from '.'
 import styled from 'styled-components'
 
 const ContentWrapper = styled.div`
@@ -19,11 +18,11 @@ export function BlogExcerpt({ node }) {
         <ContentWrapper>
             <PostTitleLink slug={slug} title={title} />
             <PostDetails
-                data={listDate}
+                date={listDate}
                 estimate={estimate}
                 wordCount={wordCount}
             />
-            {getBlurb({ content: excerpt, path: slug })}
+            <Blurb content={excerpt} path={slug} />
         </ContentWrapper>
     )
 }

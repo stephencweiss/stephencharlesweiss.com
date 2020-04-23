@@ -1,5 +1,6 @@
 export { default as Bio } from './Bio'
 export * from './BlogExcerpt'
+export * from './Blurb'
 export * from './Header'
 export * from './Search'
 export { default as Layout } from './Layout'
