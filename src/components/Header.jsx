@@ -11,7 +11,7 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const pathname = typeof window ? window.location.pathname : ''
+    const pathname = typeof window !== 'undefined' ? window.location.pathname : ''
     const rootActive = pathname==='/'
     const blogActive = pathname.includes('blog')
     const tagsActive = pathname.includes('tags')
