@@ -1,15 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ListedLink, LinkWrapper, Layout, SEO } from '../components'
+import { ListedLink, ColumnLinkWrapper, Layout, SEO } from '../components'
 
-const ColumnLinkWrapper = styled(LinkWrapper)`
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    a:first-of-type {
-        padding: 0;
-    }
-`
+
 
 function Others(props) {
     return (

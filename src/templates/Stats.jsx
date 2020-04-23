@@ -14,7 +14,7 @@ function Stats(props) {
         keywords={['stats','analytics']}
       />
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <Title>Site Statistics</Title>
+        <h1>Site Statistics</h1>
       </div>
       <p>
         These site statistics are calculated using&nbsp;
