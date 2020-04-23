@@ -11,6 +11,15 @@ const Wrapper = styled.div`
     max-width: 40em;
     margin: auto;
     flex: 1;
+    @media screen and (max-width: 40em){
+        max-width: 30em;
+    }
+    @media screen and (max-width: 30em){
+        max-width: 25em;
+    }
+    @media screen and (max-width: 25em){
+        max-width: 20em;
+    }
 `
 const Footer = styled.div`
     display: flex;
