@@ -19,7 +19,9 @@ const Footer = styled.div`
     justify-content: center;
 `
 
-export function Layout({ children }) {
+export function Layout(props) {
+    const { children } = props
+
     return (
         <Paper>
             <Wrapper>
