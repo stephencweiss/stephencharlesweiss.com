@@ -17,7 +17,6 @@ export function Header() {
     const tagsActive = pathname.includes('tags')
     const otherActive = !rootActive && !blogActive && !tagsActive
 
-
     return (
         <SiteHeader>
             <LinkWrapper>

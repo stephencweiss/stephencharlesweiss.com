@@ -39,18 +39,17 @@ Once installed, modify the `package.json` to include a `husky` field:
 
 ```json:title=./package.json
 {
-    "name": "my awesome library",
-    //...
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
+  "name": "my awesome library",
+  //...
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  }
 }
 ```
 
 Per the guide:
-
 > Using `commit-msg` gives us exactly what we want: It is executed whenever a new commit is created. Passing husky's `HUSKY_GIT_PARAMS` to `commitlint` via the `-E|--env` flag directs it to the relevant edit file. `-e` would default to `.git/COMMIT_EDITMSG`.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 ## Test The Hook
@@ -80,8 +79,7 @@ This was rejected by `commitlint` and the commit _exited_.
 
 I can see this by looking at my commit log:
 
-```shell
-commit f4aac1ef08e0f6fd3328813681349fcad96e4139 (HEAD -> new-posts-weekof-2020-02-17)
+```shellcommit f4aac1ef08e0f6fd3328813681349fcad96e4139 (HEAD -> new-posts-weekof-2020-02-17)
 Author: Stephen
 Date:   Tue Feb 4 09:20:24 2020 -0600
 
@@ -104,8 +102,11 @@ Date:   Tue Feb 4 09:12:49 2020 -0600
     These packages should make adopting conventional commits easier.
 ```
 
-## Footnotes
 
--   <sup>[1](#fn1)</sup> Of note, `commit-msg` is not a random string. It's a specific `git hook`.
-    > The hook is allowed to edit the message file in place, and can be used to normalize the message into some project standard format. It can also be used to refuse the commit after inspecting the message file.
-    > For more, see the [Git manual page on `githooks`](https://git-scm.com/docs/githooks#_commit_msg).
+
+
+
+## Footnotes
+- <sup>[1](#fn1)</sup> Of note, `commit-msg` is not a random string. It's a specific `git hook`.
+> The hook is allowed to edit the message file in place, and can be used to normalize the message into some project standard format. It can also be used to refuse the commit after inspecting the message file.
+For more, see the [Git manual page on `githooks`](https://git-scm.com/docs/githooks#_commit_msg).
