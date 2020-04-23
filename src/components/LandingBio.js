@@ -38,7 +38,7 @@ const LandingBio = ({ title, description }) => {
         <OuterContainer>
             <Container>
                 <Link to={'/blog'}>
-                    <Logo src={initials} />
+                    <Logo src={initials} alt={'logo of initials'}/>
                 </Link>
                 <NameHeader>
                     <StyledLink to={'/blog'}>{title}</StyledLink>
