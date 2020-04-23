@@ -141,18 +141,18 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.blog.edges
 
     // Create blog list pages
-    const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE)
+    const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
     let currentPage = BLOG_PAGE_TOTAL
     while (currentPage >= 0) {
-      const path = currentPage === 0 ? `/blog` : `/blog/${currentPage}`
+      const path = currentPage === 0 ? `/blog` : `/blog/page/${currentPage}`
       const previousPage =
         currentPage === 0
           ? null
           : currentPage === 1
           ? `/blog`
-          : `/blog/${currentPage - 1}`
+          : `/blog/page/${currentPage - 1}`
       const nextPage =
-        currentPage === BLOG_PAGE_TOTAL ? null : `/blog/${currentPage + 1}`
+        currentPage === BLOG_PAGE_TOTAL ? null : `/blog/page/${currentPage + 1}`
 
       createPage({
         path,
@@ -161,7 +161,7 @@ exports.createPages = ({ graphql, actions }) => {
           limit: ENTRIES_PER_PAGE,
           skip: currentPage * ENTRIES_PER_PAGE,
           numPages: BLOG_PAGE_TOTAL,
-          currentPage,
+          currentPage: currentPage,
           previousPage: previousPage,
           nextPage: nextPage,
         },
