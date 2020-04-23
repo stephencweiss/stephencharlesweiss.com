@@ -10,3 +10,11 @@ export const LinkWrapper = styled.div`
         margin-right: 0;
     }
 `
+export const ColumnLinkWrapper = styled(LinkWrapper)`
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    a:first-of-type {
+        padding: 0;
+    }
+`
