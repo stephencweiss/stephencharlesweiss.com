@@ -8,6 +8,7 @@ const Entry = styled.div`
     #footnotes + ul > li {
         list-style: none;
     }
+    padding: 0 0.5em;
 `
 
 function EntryTemplate(props) {

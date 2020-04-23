@@ -14,6 +14,10 @@ const OuterContainer = styled.div`
     justify-content: center;
     flex-direction: row;
     height: 78vh;
+    @media screen(max-width: 30em){
+        padding: 2rem 0;
+
+    }
 `
 
 const Description = styled.h2`

@@ -11,13 +11,14 @@ linear-gradient(
 )`
 
 export const MarkerStyle = css`
-    display: inline;
+    display: inline-block;
     border-radius: 1em 0 1em 0;
     padding: 0.5em;
     background-image: ${HighlighterGradient};
 `
 
 const MarkerH3 = styled.h3`
+    margin: 0;
     ${MarkerStyle}
 `
 
