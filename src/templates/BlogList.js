@@ -29,7 +29,7 @@ function BlogList(props) {
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
             <Content>
-                <h1><StyledLink to={"/blog"}>Blog</StyledLink></h1>
+                <h1><StyledLink to={"/blog"}>/*Code-Comments*/</StyledLink></h1>
                 <Search />
                 {posts.map(({ node }) => (
                     <BlogExcerpt key={node.fields.slug} node={node} />
