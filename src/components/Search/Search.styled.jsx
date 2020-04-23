@@ -24,6 +24,7 @@ export const SearchItemWrapper = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
+  margin: 1rem 0;
 `
 
 export const SearchInput = styled.input`

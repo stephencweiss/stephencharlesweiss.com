@@ -1,29 +1,37 @@
-import React, { useState } from 'react'
-import { Header } from '../components/Headers'
+import React from 'react'
+import { Header } from '../components'
 import styled from 'styled-components'
 
 const Paper = styled.div`
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 `
 const Wrapper = styled.div`
     max-width: 40em;
     margin: auto;
+    flex: 1;
+`
+const Footer = styled.div`
+    display: flex;
+    max-height: 30px;
+    margin: 1rem;
+    justify-content: center;
 `
 
 export function Layout(props) {
-    const { location, title, children } = props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const { children } = props
 
     return (
         <Paper>
             <Wrapper>
-                <Header title={title} root={location.pathname === rootPath} />
+                <Header />
                 {children}
-                <footer>
-                    © {new Date().getFullYear()}&nbsp; Built with ❤️ using&nbsp;
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
             </Wrapper>
+            <Footer>
+                © {new Date().getFullYear()}&nbsp; Built with ❤️ using&nbsp;
+                <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </Footer>
         </Paper>
     )
 }
