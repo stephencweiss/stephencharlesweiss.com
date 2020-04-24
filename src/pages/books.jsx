@@ -9,8 +9,8 @@ function Books(props) {
     return (
         <Layout>
             <SEO title="Books" keywords={['reading', 'notes', 'books']} />
-            <h1>Books</h1>
-            <p>Some books I've read and written about.</p>
+            <h1>books</h1>
+            <p>some books I've read and written about.</p>
             <ColumnLinkWrapper>
                 <ul>
                     {books.map(({ node }) => {

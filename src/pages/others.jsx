@@ -5,7 +5,7 @@ function Others() {
     return (
         <Layout>
             <SEO
-                title={'other pages'}
+                title={'others'}
                 keywords={[
                     `lists`,
                     `books`,
@@ -15,14 +15,14 @@ function Others() {
                     `xkcd`,
                 ]}
             />
-            <h1>Other Pages</h1>
-            <p>Links to the other pages on this site.</p>
+            <h1>others</h1>
+            <p>links to the other pages on this site.</p>
             <ColumnLinkWrapper>
                 <ul>
-                    <ListedLink to={'/books'}>Books</ListedLink>
-                    <ListedLink to={'/lists'}>Lists</ListedLink>
-                    <ListedLink to={'/stats/current-stats'}>Stats</ListedLink>
-                    <ListedLink to={'/xkcd'}>XKCD Digest</ListedLink>
+                    <ListedLink to={'/books'}>books</ListedLink>
+                    <ListedLink to={'/lists'}>lists</ListedLink>
+                    <ListedLink to={'/stats/current-stats'}>stats</ListedLink>
+                    <ListedLink to={'/xkcd'}>xkcd digest</ListedLink>
                 </ul>
             </ColumnLinkWrapper>
         </Layout>

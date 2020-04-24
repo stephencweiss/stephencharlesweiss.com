@@ -7,13 +7,13 @@ function Stats(props) {
     const stats = data.stats.edges
     return (
         <Layout>
-            <SEO title="Stats Page" keywords={['stats', 'analytics']} />
+            <SEO title="stats" keywords={['stats', 'analytics']} />
             {stats.map(({ node }) => {
                 const { title } = node.frontmatter
                 const { slug } = node.fields
                 return (
                     <div key={slug}>
-                        <PostTitleLink slug={slug} title={title || slug} />
+                        <PostTitleLink slug={slug} title={(title || slug).toLowerCase()} />
                     </div>
                 )
             })}
