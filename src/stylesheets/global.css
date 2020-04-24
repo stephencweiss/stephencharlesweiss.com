@@ -220,13 +220,6 @@ img {
   display: block;
 }
 
-.highlight {
-  border-color: rgb(0, 0, 0);
-  background: #fffccf;
-  color: rgb(0, 0, 0);
-  margin-top: 3em;
-  padding: 0 0.2em;
-}
 
 
 /*
@@ -239,6 +232,7 @@ a {
   display: inline-block;
   position: relative;
 }
+/* Animate a link on hover/focus/focus-within*/
 a::after {
     content: '';
     position: absolute;
@@ -251,6 +245,7 @@ a::after {
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
+
 a:hover::after,
 a:focus::after,
 a:focus-within::after {
@@ -265,8 +260,6 @@ sup a {
 a:active {
   outline: none;
 }
-
-
 
 /*
     TABLES
