@@ -13,7 +13,7 @@ module.exports = {
         menuOptions: [
             { label: 'home', path: '/' },
             { label: 'blog', path: '/blog' },
-            { label: 'tags', path: '/tags' },
+            { label: 'about', path: '/about' },
             { label: 'other', path: '/others' },
         ],
     },
