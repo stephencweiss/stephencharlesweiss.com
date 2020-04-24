@@ -11,7 +11,7 @@ const SiteHeader = styled.header`
 `
 export function Header({ menuOptions }) {
     const location = useLocation()
-    const activatedMenu = findActiveOption(menuOptions, location)
+    const activatedMenu = menuOptions && location ? findActiveOption(menuOptions, location) : []
     return (
         <SiteHeader>
             <LinkWrapper>
@@ -39,7 +39,6 @@ function findActiveOption(menuOptions, location) {
         if (label === 'home' && location.pathname === path) {
             option.active = true
         } else if (label === 'about' && location.pathname === path) {
-            console.log({ path, location })
             option.active = true
         } else if (label === 'blog' && location.pathname.includes(path)) {
             option.active = true
@@ -49,7 +48,6 @@ function findActiveOption(menuOptions, location) {
             !location.pathname.includes('about') &&
             !location.pathname.includes('blog')
         ) {
-            console.log({ label, path, location })
             option.active = true
         } else {
             option.active = false
