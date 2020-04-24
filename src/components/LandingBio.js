@@ -35,7 +35,7 @@ const Logo = styled.img`
     object-fit: contain;
 `
 
-const LandingBio = ({ title, description }) => {
+export const LandingBio = ({ title, description }) => {
     return (
         <OuterContainer>
             <Container>
@@ -53,4 +53,4 @@ const LandingBio = ({ title, description }) => {
         </OuterContainer>
     )
 }
-export default LandingBio
+
