@@ -31,7 +31,7 @@ function Rankings(props) {
     const { rating } = props
 
     return (
-        <Layout>
+        <React.Fragment>
             <h2>Rating</h2>
             {rating && (
                 <p>
@@ -46,7 +46,7 @@ function Rankings(props) {
                     ))}
                 </ul>
             </p>
-        </Layout>
+        </React.Fragment>
     )
 }
 
@@ -56,7 +56,7 @@ function BookEntry(props) {
     const { date, publish, title, rating } = entry.frontmatter
 
     return (
-        <>
+        <Layout>
             <SEO title={title} description={entry.excerpt} />
             <Date>{publish ? publish : date}</Date>
             <Title>{title}</Title>
@@ -68,7 +68,7 @@ function BookEntry(props) {
             <hr />
             <Bio />
             <PostNavigation previous={previous} next={next} />
-        </>
+        </Layout>
     )
 }
 
