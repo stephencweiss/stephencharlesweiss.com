@@ -4,7 +4,7 @@ date: '2019-09-09'
 category: ['recipes']
 tags: ['cauliflower']
 ---
-I found this insanely easy way to roast an entire Caulflower head.<sup>1</sup>
+I found this insanely easy way to roast an entire cauliflower head.<sup>1</sup>
 
 ~~If~~ When I do it again in the future, I'll experiment with other spices - cumin, za'atar, etc. Might also research a yogurt dip to put on top of it - perhaps the dip from the Harissa Eggplant.<sup>2</sup>
 
@@ -17,10 +17,10 @@ Until then, however, I'm quite pleased with how it turned out.
 * 1/4 tsp. black pepper
 
 ## Steps
-1. Deleaf and core the caulflower. Be careful to allow enough of the center to remain that the caulflower head does not disintegrate into small florets.
+1. Deleaf and core the cauliflower. Be careful to allow enough of the center to remain that the cauliflower head does not disintegrate into small florets.
 2. Place some olive oil into the cored center.
 3. Drizzle the top with olive oil, dust with salt and pepper.
-4. Roast @ 400° F for 45-60 min (unitl the top is well browned and you can skewer it with a knife easily).
+4. Roast @ 400° F for 45-60 min (until the top is well browned and you can skewer it with a knife easily).
 5. Enjoy!
 
 ![](./roasted-cauliflower.png)
