@@ -16,7 +16,6 @@ export default function About() {
             }
         }
     `)
-    // console.log({ img: props.data.file.childImageSharp, dataTwo: props.data })
     return (
         <Layout>
             <SEO title="about" keywords={['stephen charles weiss', 'about']} />
