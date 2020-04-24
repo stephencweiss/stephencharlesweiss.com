@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { StyledLink } from './StyledLink'
+import { NavLink } from './StyledLinks'
 import { LinkWrapper } from './LinkWrapper'
 
 const SiteHeader = styled.header`
@@ -33,18 +33,18 @@ export function Header() {
     return (
         <SiteHeader>
             <LinkWrapper>
-                <StyledLink active={active === 'ROOT'} to={`/`}>
+                <NavLink active={(active === 'ROOT').toString()} to={`/`}>
                     Home
-                </StyledLink>
-                <StyledLink active={active === 'BLOG'} to={`/blog`}>
+                </NavLink>
+                <NavLink active={(active === 'BLOG').toString()} to={`/blog`}>
                     Blog
-                </StyledLink>
-                <StyledLink active={active === 'TAGS'} to={`/tags`}>
+                </NavLink>
+                <NavLink active={(active === 'TAGS').toString()} to={`/tags`}>
                     Tags
-                </StyledLink>
-                <StyledLink active={active === 'OTHER'} to={`/others`}>
+                </NavLink>
+                <NavLink active={(active === 'OTHER').toString()} to={`/others`}>
                     Others
-                </StyledLink>
+                </NavLink>
             </LinkWrapper>
         </SiteHeader>
     )

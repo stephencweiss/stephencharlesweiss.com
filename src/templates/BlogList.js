@@ -7,7 +7,7 @@ import {
     PageNavigation,
     SEO,
     Search,
-    StyledLink,
+    NavLink,
 } from '../components'
 
 function BlogList(props) {
@@ -21,7 +21,7 @@ function BlogList(props) {
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
             <h1>
-                <StyledLink to={'/blog'}>/*Code-Comments*/</StyledLink>
+                <NavLink to={'/blog'}>/*Code-Comments*/</NavLink>
             </h1>
             <PageNavigation previous={previousPage} next={nextPage} />
             <Search />
