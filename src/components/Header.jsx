@@ -10,7 +10,7 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const [active, setActive] = useState('ROOT')
+    const [active, setActive] = useState()
     const location = useContext(LocationContext)
 
     useEffect(() => {
