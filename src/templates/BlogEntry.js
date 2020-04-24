@@ -18,7 +18,7 @@ function EntryTemplate(props) {
     const { listDate, readingTime } = entry.fields
     const { text: estimate, words: wordCount } = readingTime
     return (
-        <>
+        <React.Fragment>
             <SEO title={title} description={entry.excerpt} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <Title>{title}</Title>
@@ -35,7 +35,7 @@ function EntryTemplate(props) {
             <hr />
             <Bio />
             <PostNavigation previous={previous} next={next} />
-        </>
+        </React.Fragment>
     )
 }
 

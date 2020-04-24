@@ -15,7 +15,7 @@ function BlogList(props) {
     const { previousPage, nextPage } = props.pageContext
     const posts = data.allMarkdownRemark.edges
     return (
-        <>
+        <React.Fragment>
             <SEO
                 title="All posts"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -31,7 +31,7 @@ function BlogList(props) {
             <PageNavigation previous={previousPage} next={nextPage} />
 
             <Bio />
-        </>
+        </React.Fragment>
     )
 }
 

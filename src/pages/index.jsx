@@ -3,7 +3,7 @@ import { SEO } from '../components'
 import LandingBio from '../components/LandingBio'
 import { useSiteMetadata } from '../hooks'
 
-function MainIndex() {
+function Home() {
     const { title, description } = useSiteMetadata()
     return (
         <>
@@ -16,4 +16,4 @@ function MainIndex() {
     )
 }
 
-export default MainIndex
+export default Home
