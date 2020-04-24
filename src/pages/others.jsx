@@ -19,10 +19,24 @@ function Others() {
             <p>links to the other pages on this site.</p>
             <ColumnLinkWrapper>
                 <ul>
-                    <ListedLink to={'/books'}>books</ListedLink>
-                    <ListedLink to={'/lists'}>lists</ListedLink>
-                    <ListedLink to={'/stats/current-stats'}>stats</ListedLink>
-                    <ListedLink to={'/xkcd'}>xkcd digest</ListedLink>
+                    <ListedLink key="books" to={'/books'}>
+                        books
+                    </ListedLink>
+                    <ListedLink key="lists" to={'/lists'}>
+                        lists
+                    </ListedLink>
+                    <ListedLink
+                        key="stats/current-stats"
+                        to={'/stats/current-stats'}
+                    >
+                        stats
+                    </ListedLink>
+                    <ListedLink key="tags" to={'/tags'}>
+                        tags
+                    </ListedLink>
+                    <ListedLink key="xkcd" to={'/xkcd'}>
+                        xkcd digest
+                    </ListedLink>
                 </ul>
             </ColumnLinkWrapper>
         </Layout>
