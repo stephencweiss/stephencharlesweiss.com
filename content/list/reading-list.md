@@ -1,23 +1,23 @@
 ---
 title: 'Reading List'
 date: '2019-01-01'
-updated: ['2020-04-22']
+updated: ['2020-04-22', '2020-04-24']
 ---
 
 ## Actively Reading
 - _Hawaii_ by James Michener
 - _Joel On Software_ by Joel Spolsky
 - _How To Solve It_ by G. Polya
-- _The Mythical Man Month_ by Frederick P. Brooks
 - [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
 
 ## Finished
 
 ### 2020
 
-Total: 11
+Total: 12
 
 ### _April 2020_
+- _The Mythical Man Month_ by Frederick P. Brooks
 - _REAMDE_ by Neal Stephenson
 
 ### _March 2020_
