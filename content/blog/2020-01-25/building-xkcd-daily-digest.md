@@ -212,7 +212,7 @@ export function XKCDGallery(props) {
   }
 
   return (
-    <Layout location={props.location} title={title}>
+    <Layout>
       <Title> XKCD Daily Digest </Title>
       {isLoading ? (
         <CenteredLoader />

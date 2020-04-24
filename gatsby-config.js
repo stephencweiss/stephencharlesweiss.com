@@ -2,7 +2,7 @@ const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
     siteMetadata: {
-        title: `/* Code-Comments */`,
+        title: `/*Code-Comments*/`,
         author: `Stephen Weiss`,
         description: `Notes on life and software.`,
         siteUrl: `https://stephencharlesweiss.com/`,
@@ -279,7 +279,6 @@ module.exports = {
                 fields: [
                     { name: `title`, store: true, attributes: { boost: 20 } },
                     `category`,
-                    `content`,
                     `date`,
                     `publish`,
                     `tags`,
@@ -291,7 +290,6 @@ module.exports = {
                     // For any node of type MarkdownRemark, list how to resolve the fields` values
                     MarkdownRemark: {
                         category: node => node.frontmatter.category,
-                        content: node => node.internal.content,
                         date: node => node.frontmatter.date,
                         path: node => node.fields.slug,
                         publish: node => node.frontmatter.publish,

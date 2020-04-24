@@ -1,10 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
-import { ListedLink, ColumnLinkWrapper, Layout, SEO } from '../components'
+import { Layout, ListedLink, ColumnLinkWrapper, SEO } from '../components'
 
-
-
-function Others(props) {
+function Others() {
     return (
         <Layout>
             <SEO

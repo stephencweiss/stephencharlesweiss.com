@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StyledLink } from '../index'
+import { NavLink } from '../index'
 
 const List = styled.ul`
     display: flex;
@@ -22,16 +22,16 @@ function PageNavigation(props) {
         <List>
             {previous && (
                 <ListItem align={'left'}>
-                    <StyledLink to={previous} rel="prev">
+                    <NavLink to={previous} rel="prev">
                         &lArr; Previous Page
-                    </StyledLink>
+                    </NavLink>
                 </ListItem>
             )}
             {next && (
                 <ListItem align={'right'}>
-                    <StyledLink to={next} rel="next">
+                    <NavLink to={next} rel="next">
                         Next Page &rArr;
-                    </StyledLink>
+                    </NavLink>
                 </ListItem>
             )}
         </List>

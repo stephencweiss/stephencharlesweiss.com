@@ -33,7 +33,7 @@ export const SearchInput = styled.input`
   margin-left: 0.5em;
 `
 
-export const SearchContainer = styled.ul`
+export const SearchResultsContainer = styled.ul`
   border: 2px solid black;
   padding: 0 0.5em;
   margin: 0;

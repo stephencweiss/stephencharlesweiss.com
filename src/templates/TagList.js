@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { useSiteMetadata } from '../hooks'
 import { BlogExcerpt, Layout } from '../components'
 
-const Tags = ({ data, location, pageContext }) => {
-    const { title: siteTitle } = useSiteMetadata()
+const Tags = ({ data, pageContext }) => {
     const { tag } = pageContext
     const { edges: posts, totalCount } = data.allMarkdownRemark
 
@@ -15,7 +13,7 @@ const Tags = ({ data, location, pageContext }) => {
     } tagged with "${tag}"`
 
     return (
-        <Layout title={siteTitle} location={location}>
+        <Layout>
             <h1>{tagHeader}</h1>
             <ul>
                 {posts.map(({ node }) => (

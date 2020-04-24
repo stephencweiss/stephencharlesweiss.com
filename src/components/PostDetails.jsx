@@ -7,7 +7,6 @@ export const Details = styled.h5`
 `
 
 export const DetailsWrapper = styled.div`
-    margin: 0.5rem 0 0;
     padding-left: 0.5rem;
 `
 

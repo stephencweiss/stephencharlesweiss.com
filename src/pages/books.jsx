@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Bio, Layout, ColumnLinkWrapper, ListedLink, SEO } from '../components'
-
-import useSiteMetadata from '../hooks/useSiteMetadata'
+import { Bio, ColumnLinkWrapper,Layout, ListedLink, SEO } from '../components'
 
 function Books(props) {
     const { data } = props
-    const { title: siteTitle } = useSiteMetadata()
     const books = data.books.edges
 
     return (
-        <Layout location={props.location} title={siteTitle}>
+        <Layout>
             <SEO title="Books" keywords={['reading', 'notes', 'books']} />
             <h1>Books</h1>
             <p>Some books I've read and written about.</p>

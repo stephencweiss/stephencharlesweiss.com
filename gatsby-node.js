@@ -12,7 +12,7 @@ const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
 const tagTemplate = path.resolve(`./src/templates/TagList.js`)
-const statsTemplate = path.resolve(`./src/templates/Stats.jsx`)
+const statsTemplate = path.resolve(`./src/templates/Stats.js`)
 const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -197,6 +197,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
         })
 
+        // Others------------------------------------------>
         // Lists------------------------------------------->
         const lists = result.data.list.edges
         // Create list pages.

@@ -1,19 +1,18 @@
 import React from 'react'
-import { Layout, SEO } from '../components'
-import LandingBio from '../components/LandingBio'
+import { LandingBio, Layout, SEO } from '../components'
 import { useSiteMetadata } from '../hooks'
 
-function MainIndex(props) {
-    const {title, description} = useSiteMetadata()
+function Home() {
+    const { title, description } = useSiteMetadata()
     return (
-        <Layout location={props.location}>
+        <Layout>
             <SEO
                 title={title}
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
-            <LandingBio title={title} description={description}/>
+            <LandingBio title={title} description={description} />
         </Layout>
     )
 }
 
-export default MainIndex
+export default Home;

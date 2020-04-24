@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { StyledLink } from './StyledLink'
-import { LinkWrapper } from './LinkWrapper'
+import { NavLink, LinkWrapper, LocationContext } from './index'
 
 const SiteHeader = styled.header`
     background: transparent;
@@ -11,16 +10,43 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
+    const [active, setActive] = useState()
+    const location = useContext(LocationContext)
+
+    useEffect(() => {
+        const pathname = location && location.location.pathname
+        if (!pathname) {
+            console.warn(`Nothing to see here. No pathname`)
+        } else if (pathname === '/') {
+            setActive('ROOT')
+        } else if (pathname.includes('/blog')) {
+            setActive('BLOG')
+        } else if (pathname.includes('/tags')) {
+            setActive('TAGS')
+        } else {
+            setActive('OTHER')
+        }
+    }, [location.location.pathname])
+
     return (
         <SiteHeader>
             <LinkWrapper>
-                <StyledLink to={`/`}>Home</StyledLink>
-                <StyledLink to={`/blog`}>Blog</StyledLink>
-                <StyledLink to={`/tags`}>Tags</StyledLink>
-                <StyledLink to={`/others`}>Others</StyledLink>
+                <NavLink active={(active === 'ROOT').toString()} to={`/`}>
+                    Home
+                </NavLink>
+                <NavLink active={(active === 'BLOG').toString()} to={`/blog`}>
+                    Blog
+                </NavLink>
+                <NavLink active={(active === 'TAGS').toString()} to={`/tags`}>
+                    Tags
+                </NavLink>
+                <NavLink
+                    active={(active === 'OTHER').toString()}
+                    to={`/others`}
+                >
+                    Others
+                </NavLink>
             </LinkWrapper>
         </SiteHeader>
     )
 }
-
-
