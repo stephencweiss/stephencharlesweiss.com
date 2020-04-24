@@ -11,11 +11,9 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const [active, setActive] = useState(null)
+    const [active, setActive] = useState(`ROOT`)
     useEffect(() => {
-        const pathname = window
-            ? window.location.pathname
-            : console.warn(`window undefined`)
+        const pathname = window.location.pathname
 
         if (!pathname) {
             console.warn(`Nothing to see here. No pathname`)
@@ -42,7 +40,10 @@ export function Header() {
                 <NavLink active={(active === 'TAGS').toString()} to={`/tags`}>
                     Tags
                 </NavLink>
-                <NavLink active={(active === 'OTHER').toString()} to={`/others`}>
+                <NavLink
+                    active={(active === 'OTHER').toString()}
+                    to={`/others`}
+                >
                     Others
                 </NavLink>
             </LinkWrapper>
