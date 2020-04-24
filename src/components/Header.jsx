@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { NavLink } from './StyledLinks'
-import { LinkWrapper } from './LinkWrapper'
+import { NavLink, LinkWrapper, LocationContext } from './index'
 
 const SiteHeader = styled.header`
     background: transparent;
@@ -11,10 +10,11 @@ const SiteHeader = styled.header`
 `
 
 export function Header() {
-    const [active, setActive] = useState(`ROOT`)
-    useEffect(() => {
-        const pathname = window.location.pathname
+    const [active, setActive] = useState('ROOT')
+    const location = useContext(LocationContext)
 
+    useEffect(() => {
+        const pathname = location && location.location.pathname
         if (!pathname) {
             console.warn(`Nothing to see here. No pathname`)
         } else if (pathname === '/') {
@@ -26,7 +26,7 @@ export function Header() {
         } else {
             setActive('OTHER')
         }
-    }, [active])
+    }, [location.location.pathname])
 
     return (
         <SiteHeader>
