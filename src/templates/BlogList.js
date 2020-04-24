@@ -4,18 +4,20 @@ import { graphql } from 'gatsby'
 import {
     Bio,
     BlogExcerpt,
+    Layout,
+    NavLink,
     PageNavigation,
     SEO,
     Search,
-    NavLink,
 } from '../components'
 
 function BlogList(props) {
     const { data } = props
     const { previousPage, nextPage } = props.pageContext
     const posts = data.allMarkdownRemark.edges
+
     return (
-        <React.Fragment>
+        <Layout>
             <SEO
                 title="All posts"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -31,7 +33,7 @@ function BlogList(props) {
             <PageNavigation previous={previousPage} next={nextPage} />
 
             <Bio />
-        </React.Fragment>
+        </Layout>
     )
 }
 

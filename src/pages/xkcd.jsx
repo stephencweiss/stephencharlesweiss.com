@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-
+import {Layout} from '../components'
 import { ImageGallery } from '../components/ImageGallery'
 
 export function XKCDGallery(props) {
@@ -8,7 +8,7 @@ export function XKCDGallery(props) {
     const xkcdComics = [latest, ...comicQuantity]
 
     return (
-        <>
+        <Layout>
             <h1>
                 XKCD Daily Digest<sup>1</sup>
             </h1>
@@ -42,7 +42,7 @@ export function XKCDGallery(props) {
                     </li>
                 </ul>
             </footer>
-        </>
+        </Layout>
     )
 }
 

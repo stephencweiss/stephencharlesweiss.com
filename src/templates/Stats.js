@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { Bio, SEO } from '../components'
+import { Bio, Layout, SEO } from '../components'
 
 function Stats(props) {
     const entry = props.data.markdownRemark
 
     return (
-        <>
+        <Layout>
             <SEO title="Site Statistics" keywords={['stats', 'analytics']} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h1>Site Statistics</h1>
@@ -37,7 +37,7 @@ function Stats(props) {
             <Link to={'/'} rel="home">
                 &lArr; Go Back To Home
             </Link>
-        </>
+        </Layout>
     )
 }
 

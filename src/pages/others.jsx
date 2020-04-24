@@ -1,12 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
-import { ListedLink, ColumnLinkWrapper, SEO } from '../components'
-
-
+import { Layout, ListedLink, ColumnLinkWrapper, SEO } from '../components'
 
 function Others() {
     return (
-        <>
+        <Layout>
             <SEO
                 title={'other pages'}
                 keywords={[
@@ -28,7 +25,7 @@ function Others() {
                     <ListedLink to={'/xkcd'}>XKCD Digest</ListedLink>
                 </ul>
             </ColumnLinkWrapper>
-        </>
+        </Layout>
     )
 }
 

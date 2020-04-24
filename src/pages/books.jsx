@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Bio, ColumnLinkWrapper, ListedLink, SEO } from '../components'
+import { Bio, ColumnLinkWrapper,Layout, ListedLink, SEO } from '../components'
 
 function Books(props) {
     const { data } = props
     const books = data.books.edges
 
     return (
-        <>
+        <Layout>
             <SEO title="Books" keywords={['reading', 'notes', 'books']} />
             <h1>Books</h1>
             <p>Some books I've read and written about.</p>
@@ -28,7 +28,7 @@ function Books(props) {
                 See other books I've read (or plan on reading) in my <Link to="/list/reading-list">reading list</Link>.
             </p>
             <Bio />
-        </>
+        </Layout>
     )
 }
 

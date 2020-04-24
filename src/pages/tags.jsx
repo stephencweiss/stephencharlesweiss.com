@@ -1,5 +1,5 @@
 import React from 'react'
-import { SEO, ListedLink } from '../components'
+import { Layout, SEO, ListedLink } from '../components'
 import kebabCase from 'lodash/kebabCase'
 import { graphql } from 'gatsby'
 
@@ -10,7 +10,7 @@ const TagsPage = props => {
     const { group } = props.data.allMarkdownRemark
 
     return (
-        <>
+        <Layout>
             <SEO title="Tags" />
             <div>
                 <div>
@@ -27,7 +27,7 @@ const TagsPage = props => {
                     </ul>
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 

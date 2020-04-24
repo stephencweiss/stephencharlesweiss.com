@@ -1,32 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Bio,ColumnLinkWrapper,  SEO, ListedLink } from '../components'
+import { Bio, ColumnLinkWrapper, Layout, SEO, ListedLink } from '../components'
 
 function Lists(props) {
     const { data } = props
     const list = data.lists.edges
 
     return (
-        <>
+        <Layout>
             <SEO title="Lists" keywords={['reading', 'books']} />
             <h1>List</h1>
             <p>A list of lists I maintain.</p>
             <ColumnLinkWrapper>
-            <ul>
-                {list.map(({ node }) => {
-                    const { title } = node.frontmatter
-                    const { slug } = node.fields
-                    return (
-                        <ListedLink key={slug} to={slug}>
-                            {title}
-                        </ListedLink>
-                    )
-                })}
-            </ul>
-                </ColumnLinkWrapper>
-
+                <ul>
+                    {list.map(({ node }) => {
+                        const { title } = node.frontmatter
+                        const { slug } = node.fields
+                        return (
+                            <ListedLink key={slug} to={slug}>
+                                {title}
+                            </ListedLink>
+                        )
+                    })}
+                </ul>
+            </ColumnLinkWrapper>
             <Bio />
-        </>
+        </Layout>
     )
 }
 

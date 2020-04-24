@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Bio, PostNavigation, SEO } from '../components'
+import { Bio,Layout, PostNavigation, SEO } from '../components'
 
 const Date = styled.p`
     color: #999;
@@ -31,7 +31,7 @@ function Rankings(props) {
     const { rating } = props
 
     return (
-        <React.Fragment>
+        <Layout>
             <h2>Rating</h2>
             {rating && (
                 <p>
@@ -46,7 +46,7 @@ function Rankings(props) {
                     ))}
                 </ul>
             </p>
-        </React.Fragment>
+        </Layout>
     )
 }
 

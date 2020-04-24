@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { BlogExcerpt } from '../components'
+import { BlogExcerpt, Layout } from '../components'
 
 const Tags = ({ data, pageContext }) => {
     const { tag } = pageContext
@@ -13,7 +13,7 @@ const Tags = ({ data, pageContext }) => {
     } tagged with "${tag}"`
 
     return (
-        <>
+        <Layout>
             <h1>{tagHeader}</h1>
             <ul>
                 {posts.map(({ node }) => (
@@ -21,7 +21,7 @@ const Tags = ({ data, pageContext }) => {
                 ))}
             </ul>
             <Link to="/tags">Return to all tags</Link>
-        </>
+        </Layout>
     )
 }
 

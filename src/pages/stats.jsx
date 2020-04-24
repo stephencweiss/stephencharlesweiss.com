@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Bio, PostTitleLink, SEO } from '../components'
+import { Bio, Layout, PostTitleLink, SEO } from '../components'
 
 function Stats(props) {
     const { data } = props
     const stats = data.stats.edges
     return (
-        <>
+        <Layout>
             <SEO title="Stats Page" keywords={['stats', 'analytics']} />
             {stats.map(({ node }) => {
                 const { title } = node.frontmatter
@@ -19,7 +19,7 @@ function Stats(props) {
             })}
 
             <Bio />
-        </>
+        </Layout>
     )
 }
 
