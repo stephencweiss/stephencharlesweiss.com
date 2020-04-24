@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import initials from '../assets/initials.svg'
-import { StyledLink } from './StyledLink'
+import { NavLink } from './index'
 
 const Container = styled.div`
     text-align: center;
@@ -16,7 +15,6 @@ const OuterContainer = styled.div`
     height: 78vh;
     @media screen(max-width: 30em){
         padding: 2rem 0;
-
     }
 `
 
@@ -41,11 +39,11 @@ const LandingBio = ({ title, description }) => {
     return (
         <OuterContainer>
             <Container>
-                <Link to={'/blog'}>
+                <NavLink to={'/blog'}>
                     <Logo src={initials} alt={'logo of initials'}/>
-                </Link>
+                </NavLink>
                 <NameHeader>
-                    <StyledLink to={'/blog'}>{title}</StyledLink>
+                    <NavLink to={'/blog'}>{title}</NavLink>
                 </NameHeader>
                 <Description>{description}</Description>
                 <p>
