@@ -7,6 +7,10 @@ const useSiteMetadata = () => {
         siteMetadata {
           title
           description
+          menuOptions {
+              label
+              path
+          }
         }
       }
     }

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Header } from '../components'
 import styled from 'styled-components'
+import { Header } from '../components'
+import { useSiteMetadata } from '../hooks'
 
 const Paper = styled.div`
     min-height: 100vh;
@@ -29,10 +30,11 @@ const Footer = styled.div`
 `
 
 export function Layout({ children }) {
+    const { menuOptions } = useSiteMetadata()
     return (
         <Paper>
             <Wrapper>
-                <Header />
+                <Header menuOptions={menuOptions} />
                 {children}
             </Wrapper>
             <Footer>
