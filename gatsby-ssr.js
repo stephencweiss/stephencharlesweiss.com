@@ -6,10 +6,10 @@
 
 // You can delete this file if you're not using it
 
-const React = require('react')
-const Layout = require('./src/components/Layout')
+import React from 'react'
+import Layout from './src/components/Layout'
 
-exports.wrapRootElement = props => {
+export const wrapRootElement = props => {
     const { element } = props
     return <Layout>{element}</Layout>
 }
