@@ -1,13 +1,13 @@
 import React from 'react'
-import { StyledLink } from '.'
+import { NavLink } from '.'
 import styled, { css } from 'styled-components'
 
 const HighlighterGradient = css`
 linear-gradient(
     to right,
-    rgba(255, 250, 150, 0.15),
-    rgba(255, 250, 150, 0.8) 5%,
-    rgba(255, 250, 150, 0.25)
+    #FFFCEC,
+    #FDF6E3 5%,
+    #FFFDED
 )`
 
 export const MarkerStyle = css`
@@ -28,7 +28,7 @@ export const Title = styled.h1`
 export function PostTitleLink({ slug, title }) {
     return (
         <MarkerH3>
-            <StyledLink to={slug}>{title}</StyledLink>
+            <NavLink to={slug}>{title}</NavLink>
         </MarkerH3>
     )
 }
