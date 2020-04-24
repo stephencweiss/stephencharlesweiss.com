@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from './src/components/Layout'
 
 // prism stylesheets
 import 'prismjs/plugins/command-line/prism-command-line.css'
@@ -11,7 +10,9 @@ import './src/stylesheets/_reset.css'
 import './src/stylesheets/global.css'
 import './src/stylesheets/code.css'
 
+import { LocationProvider } from './src/components'
+
 export const wrapRootElement = props => {
     const { element } = props
-    return <Layout>{element}</Layout>
+    return <LocationProvider>{element}</LocationProvider>
 }
