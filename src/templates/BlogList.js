@@ -10,10 +10,12 @@ import {
     SEO,
     Search,
 } from '../components'
+import { useSiteMetadata } from '../hooks'
 
 function BlogList(props) {
     const { data } = props
     const { previousPage, nextPage } = props.pageContext
+    const { title } = useSiteMetadata()
     const posts = data.allMarkdownRemark.edges
 
     return (
@@ -22,9 +24,7 @@ function BlogList(props) {
                 title="All posts"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
-            <h1>
-                <NavLink to={'/blog'}>/*Code-Comments*/</NavLink>
-            </h1>
+            <h1>{title}</h1>
             <PageNavigation previous={previousPage} next={nextPage} />
             <Search />
             {posts.map(({ node }) => (

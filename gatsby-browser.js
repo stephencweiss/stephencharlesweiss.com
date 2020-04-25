@@ -1,5 +1,3 @@
-import React from 'react'
-
 // prism stylesheets
 import 'prismjs/plugins/command-line/prism-command-line.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
@@ -9,10 +7,3 @@ import 'prismjs/themes/prism-solarizedlight.css'
 import './src/stylesheets/_reset.css'
 import './src/stylesheets/global.css'
 import './src/stylesheets/code.css'
-
-import { LocationProvider } from './src/components'
-
-export const wrapRootElement = props => {
-    const { element } = props
-    return <LocationProvider>{element}</LocationProvider>
-}

@@ -9,8 +9,8 @@ function Lists(props) {
     return (
         <Layout>
             <SEO title="Lists" keywords={['reading', 'books']} />
-            <h1>List</h1>
-            <p>A list of lists I maintain.</p>
+            <h1>lists</h1>
+            <p>a list of lists I maintain.</p>
             <ColumnLinkWrapper>
                 <ul>
                     {list.map(({ node }) => {
@@ -18,7 +18,7 @@ function Lists(props) {
                         const { slug } = node.fields
                         return (
                             <ListedLink key={slug} to={slug}>
-                                {title}
+                                {title.toLowerCase()}
                             </ListedLink>
                         )
                     })}

@@ -28,11 +28,11 @@ export const Title = styled.h1`
 export function PostTitleLink({ slug, title }) {
     return (
         <MarkerH3>
-            <NavLink to={slug}>{title}</NavLink>
+            <NavLink to={slug}>{title.toLowerCase()}</NavLink>
         </MarkerH3>
     )
 }
 
 export function PostTitle({ title }) {
-    return <Title>{title}</Title>
+    return <Title>{title.toLowerCase()}</Title>
 }

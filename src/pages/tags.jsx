@@ -11,10 +11,10 @@ const TagsPage = props => {
 
     return (
         <Layout>
-            <SEO title="Tags" />
+            <SEO title="tags" />
             <div>
                 <div>
-                    <h1>Tags</h1>
+                    <h1>tags</h1>
                     <ul>
                         {group.map(tag => (
                             <ListedLink

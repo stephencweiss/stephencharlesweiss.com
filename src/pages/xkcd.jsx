@@ -10,7 +10,7 @@ export function XKCDGallery(props) {
     return (
         <Layout>
             <h1>
-                XKCD Daily Digest<sup>1</sup>
+                xkcd daily digest<sup>1</sup>
             </h1>
             <ImageGallery images={xkcdComics} />
             <p>

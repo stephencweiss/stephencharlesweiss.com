@@ -2,13 +2,20 @@ const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
     siteMetadata: {
-        title: `/*Code-Comments*/`,
+        title: `/*code-comments*/`,
         author: `Stephen Weiss`,
-        description: `Notes on life and software.`,
+        description: `notes on life and software.`,
         siteUrl: `https://stephencharlesweiss.com/`,
         social: {
             twitter: `stephencweiss`,
+            github: `stephencweiss`,
         },
+        menuOptions: [
+            { label: 'home', path: '/' },
+            { label: 'blog', path: '/blog' },
+            { label: 'about', path: '/about' },
+            { label: 'other', path: '/others' },
+        ],
     },
     plugins: [
         'gatsby-plugin-styled-components',

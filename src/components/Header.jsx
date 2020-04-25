@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { NavLink, LinkWrapper, LocationContext } from './index'
+import { useLocation } from '@reach/router'
+import { NavLink, LinkWrapper } from './index'
 
 const SiteHeader = styled.header`
     background: transparent;
@@ -8,45 +9,50 @@ const SiteHeader = styled.header`
     align-content: center;
     justify-content: center;
 `
-
-export function Header() {
-    const [active, setActive] = useState()
-    const location = useContext(LocationContext)
-
-    useEffect(() => {
-        const pathname = location && location.location.pathname
-        if (!pathname) {
-            console.warn(`Nothing to see here. No pathname`)
-        } else if (pathname === '/') {
-            setActive('ROOT')
-        } else if (pathname.includes('/blog')) {
-            setActive('BLOG')
-        } else if (pathname.includes('/tags')) {
-            setActive('TAGS')
-        } else {
-            setActive('OTHER')
-        }
-    }, [location.location.pathname])
-
+export function Header({ menuOptions }) {
+    const location = useLocation()
+    const activatedMenu = menuOptions && location ? findActiveOption(menuOptions, location) : []
     return (
         <SiteHeader>
             <LinkWrapper>
-                <NavLink active={(active === 'ROOT').toString()} to={`/`}>
-                    Home
-                </NavLink>
-                <NavLink active={(active === 'BLOG').toString()} to={`/blog`}>
-                    Blog
-                </NavLink>
-                <NavLink active={(active === 'TAGS').toString()} to={`/tags`}>
-                    Tags
-                </NavLink>
-                <NavLink
-                    active={(active === 'OTHER').toString()}
-                    to={`/others`}
-                >
-                    Others
-                </NavLink>
+                {activatedMenu.map(({ label, path, active }) => {
+                    return (
+                        <NavLink active={active} to={path}>
+                            {label}
+                        </NavLink>
+                    )
+                })}
             </LinkWrapper>
         </SiteHeader>
     )
+}
+
+/**
+ * A function to analyze the current menu options against location and update the items with an active flag.
+ * @param {Array} menuOptions - an array of menu items defined in the gatsby-config
+ * @param {Object} location - the current location object from @reach/router
+ * @returns {Array} - an array of menuOptions that are noted whether they are active currently or not.
+ */
+function findActiveOption(menuOptions, location) {
+    return menuOptions.map(option => {
+        const { path, label } = option
+        if (label === 'home' && location.pathname === path) {
+            option.active = true
+        } else if (label === 'about' && location.pathname === path) {
+            option.active = true
+        } else if (label === 'blog' && location.pathname.includes(path)) {
+            option.active = true
+        } else if (
+            label === 'other' &&
+            location.pathname !== '/' &&
+            !location.pathname.includes('about') &&
+            !location.pathname.includes('blog')
+        ) {
+            option.active = true
+        } else {
+            option.active = false
+        }
+        option.active = option.active.toString()
+        return option
+    })
 }

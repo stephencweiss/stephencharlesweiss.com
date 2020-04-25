@@ -7,7 +7,7 @@ import {
     PostDetails,
     PostNavigation,
     SEO,
-    Title,
+    PostTitle,
 } from '../components'
 
 const Entry = styled.div`
@@ -28,7 +28,7 @@ function EntryTemplate(props) {
         <Layout>
             <SEO title={title} description={entry.excerpt} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <Title>{title}</Title>
+                <PostTitle title={title}/>
                 <PostDetails
                     date={listDate}
                     estimate={estimate}
