@@ -2,13 +2,20 @@ const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
     siteMetadata: {
-        title: `/* Code-Comments */`,
+        title: `/*code-comments*/`,
         author: `Stephen Weiss`,
-        description: `Notes on life and software.`,
+        description: `notes on life and software.`,
         siteUrl: `https://stephencharlesweiss.com/`,
         social: {
             twitter: `stephencweiss`,
+            github: `stephencweiss`,
         },
+        menuOptions: [
+            { label: 'home', path: '/' },
+            { label: 'blog', path: '/blog' },
+            { label: 'about', path: '/about' },
+            { label: 'other', path: '/others' },
+        ],
     },
     plugins: [
         'gatsby-plugin-styled-components',
@@ -279,7 +286,6 @@ module.exports = {
                 fields: [
                     { name: `title`, store: true, attributes: { boost: 20 } },
                     `category`,
-                    `content`,
                     `date`,
                     `publish`,
                     `tags`,
@@ -291,7 +297,6 @@ module.exports = {
                     // For any node of type MarkdownRemark, list how to resolve the fields` values
                     MarkdownRemark: {
                         category: node => node.frontmatter.category,
-                        content: node => node.internal.content,
                         date: node => node.frontmatter.date,
                         path: node => node.fields.slug,
                         publish: node => node.frontmatter.publish,

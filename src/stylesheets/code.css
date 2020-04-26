@@ -39,6 +39,10 @@ Allow inline code blocks to break
     min-width: 100%; /* 2 */
 }
 
+code[class*="language-"], pre[class*="language-"] {
+    color: #475861; /*More accessible than the default with our background*/
+}
+
 .gatsby-highlight {
     background-color: #fdf6e3;
 }
@@ -76,6 +80,6 @@ Allow inline code blocks to break
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
-    background-color: #feb;
+    /* background-color: #feb; */
     border-left: 0.25em solid #f99;
 }

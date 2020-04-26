@@ -3,7 +3,7 @@ import { Index } from 'elasticlunr'
 import { useDebounce } from 'use-debounce'
 import SearchResult from './SearchResult'
 import {
-    SearchContainer,
+    SearchResultsContainer,
     SearchInput,
     SearchItemWrapper,
 } from './Search.styled'
@@ -39,14 +39,14 @@ function Search(props) {
             </SearchItemWrapper>
             {results.length > 0 && <h3>Results</h3>}
             {results.length > 0 && (
-                <SearchContainer>
+                <SearchResultsContainer>
                     {results.map(page => {
                         const blurb = (
                             <Blurb content={page.content} path={page.path} />
                         )
                         return <SearchResult page={page} blurb={blurb} />
                     })}
-                </SearchContainer>
+                </SearchResultsContainer>
             )}
         </React.Fragment>
     )

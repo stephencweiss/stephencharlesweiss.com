@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { Blurb, PostDetails, PostTitleLink } from '.'
 import styled from 'styled-components'
 
@@ -7,6 +8,10 @@ const ContentWrapper = styled.div`
     :last-of-type {
         padding-bottom: 0em;
     }
+`
+const RightAdjustDiv = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
 `
 
 export function BlogExcerpt({ node }) {
@@ -22,7 +27,10 @@ export function BlogExcerpt({ node }) {
                 estimate={estimate}
                 wordCount={wordCount}
             />
-            <Blurb content={excerpt} path={slug} />
+            <Blurb content={excerpt} />
+            <RightAdjustDiv>
+                <Link to={`/${slug}`}>&#10149;{`Read more`}</Link>
+            </RightAdjustDiv>
         </ContentWrapper>
     )
 }

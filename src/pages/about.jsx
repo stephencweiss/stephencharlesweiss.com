@@ -1,0 +1,62 @@
+import React from 'react'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import Img from 'gatsby-image'
+import { Layout, SEO } from '../components'
+
+export default function About() {
+    const data = useStaticQuery(graphql`
+        query {
+            file(relativePath: { eq: "profile-with-finn.jpeg" }) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid_withWebp
+                        ...GatsbyImageSharpFluid_tracedSVG
+                    }
+                }
+            }
+        }
+    `)
+    return (
+        <Layout>
+            <SEO title="about" keywords={['stephen charles weiss', 'about']} />
+            <h1>about</h1>
+            <p>I suppose it makes sense to say a little about myself.</p>
+            <p>
+                Let's start with the good stuff. Here's a photo of me and my puppy, Finn, when he was 12 weeks
+                old.
+            </p>
+            <Img
+                fluid={data.file.childImageSharp.fluid}
+                alt={'a photo of me and finn at 12 weeks'}
+            />
+            <br />
+            <p>Still interested in learning more? A decent starting place:</p>
+            <ul>
+                <li key="write">
+                    I write a lot, mostly about things I'm learning, which
+                    lately has been a lot of coding, at
+                    <Link to={'/blog'}>/*code-comments*/</Link>.
+                </li>
+                <li key="public">
+                    I believe in working in public, so as much as possible, you
+                    can find my experiments and projects on&nbsp;
+                    <Link to={'https://github.com/stephencweiss'}>Github</Link>.
+                </li>
+                <li key="reading">
+                    I like reading too. I keep a&nbsp;
+                    <Link to={'/list/reading-list'}>reading list</Link> of what
+                    I've read, as well as what I'm planning to read. Check it
+                    out. I'm always looking for suggestions. Thank you&nbsp;
+                    <Link to={'https://github.com/mariellefoster/marf-books'}>
+                        Marielle for setting an incredible example
+                    </Link>
+                    .
+                </li>
+            </ul>
+            <p>
+                If you want to get in touch, I'm available at stephencweiss at
+                gmail dot com.
+            </p>
+        </Layout>
+    )
+}
