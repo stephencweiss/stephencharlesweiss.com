@@ -15,6 +15,8 @@ tags:
 ---
 
 > _Preamble:_ I am exploring different areas of AWS and am finding the jargon overwhelming. To help myself, I'll be writing up summaries of some of the different services I come across, what they are, some core concepts, and links to resources for future reference.
+>
+> All entries in the series are tagged with `aws in 30 seconds` and can be found [here](../../../tags/aws-in-30-seconds/).
 
 [Introduction to AWS Identity and Access Management | AWS Training](https://www.aws.training/learningobject/video?id=16448)
 
