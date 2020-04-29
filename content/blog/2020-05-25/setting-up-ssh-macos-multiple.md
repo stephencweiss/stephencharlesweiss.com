@@ -72,7 +72,7 @@ You can verify that you have both a public and private key by listing the conten
 ```shell
 $ ssh-keygen -t rsa -b 4096 -C "<personal@host.com>" -f id_github_rsa
 $ ssh-keygen -t rsa -b 4096 -C "<work@host.com>" -f id_work_github_rsa
-$ ssh-keygen -t rsa -b 4096 -C "<personal@host.com>" -f it_gitlab_rsa
+$ ssh-keygen -t rsa -b 4096 -C "<personal@host.com>" -f id_gitlab_rsa
 $ ls -la ~/.ssh
 total 48
 drwx------   8 stephen  staff   256 Apr 27 13:47 .
