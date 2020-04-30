@@ -6,7 +6,6 @@ updated: ['2020-04-22', '2020-04-24']
 
 ## Actively Reading
 - _Hawaii_ by James Michener
-- _Joel On Software_ by Joel Spolsky
 - _How To Solve It_ by G. Polya
 - [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
 
@@ -14,9 +13,10 @@ updated: ['2020-04-22', '2020-04-24']
 
 ### 2020
 
-Total: 12
+Total: 13
 
 ### _April 2020_
+- _Joel On Software_ by Joel Spolsky
 - _The Mythical Man Month_ by Frederick P. Brooks
 - _REAMDE_ by Neal Stephenson
 
