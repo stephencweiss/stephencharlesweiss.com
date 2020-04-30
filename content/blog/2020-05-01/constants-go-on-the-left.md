@@ -10,7 +10,7 @@ By royal decree:
 
 > When evaluating, put constants on the left
 
-Okay, so this isn't actaully a decree and shouldn't be followed dogmatically, but having been burned before due to an accidental assignment (where a comparison was intended), following this rule seems sensible.
+Okay, so this isn't actually a decree and shouldn't be followed dogmatically, but having been burned before due to an accidental assignment (where a comparison was intended), following this rule seems sensible.
 
 What it looks like:
 
