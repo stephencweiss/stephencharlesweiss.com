@@ -1,29 +1,18 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { Layout, SEO } from '../components'
 
-export default function About() {
-    const data = useStaticQuery(graphql`
-        query {
-            file(relativePath: { eq: "profile-with-finn.jpeg" }) {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid_withWebp
-                        ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                }
-            }
-        }
-    `)
+export default function About(props) {
+    const { data } = props
     return (
         <Layout>
             <SEO title="about" keywords={['stephen charles weiss', 'about']} />
             <h1>about</h1>
             <p>I suppose it makes sense to say a little about myself.</p>
             <p>
-                Let's start with the good stuff. Here's a photo of me and my puppy, Finn, when he was 12 weeks
-                old.
+                Let's start with the good stuff. Here's a photo of me and my
+                puppy, Finn, when he was 12 weeks old.
             </p>
             <Img
                 fluid={data.file.childImageSharp.fluid}
@@ -60,3 +49,16 @@ export default function About() {
         </Layout>
     )
 }
+
+export const aboutPageQuery = graphql`
+    query {
+        file(relativePath: { eq: "profile-with-finn.jpeg" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+    }
+`

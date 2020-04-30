@@ -39,7 +39,8 @@ Allow inline code blocks to break
     min-width: 100%; /* 2 */
 }
 
-code[class*="language-"], pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
     color: #475861; /*More accessible than the default with our background*/
 }
 
@@ -80,6 +81,28 @@ code[class*="language-"], pre[class*="language-"] {
     margin-left: -1em;
     padding-right: 1em;
     padding-left: 0.75em;
-    /* background-color: #feb; */
+    background-color: #ffc5c5;
     border-left: 0.25em solid #f99;
+}
+
+/*
+  SELECTIONS
+--------------------------------------------- */
+
+/* Styling inline code selections
+Overrides Prisma
+*/
+p > code[class*='language-']::selection,
+p > code[class*='language-'] ::selection {
+    background: rgba(255, 109, 91, 0.8);
+    text-shadow: none;
+}
+
+/* Styling code block selections
+Overrides Prisma
+*/
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
+    background: rgba(255, 109, 91, 0.5);
+    text-shadow: none;
 }
