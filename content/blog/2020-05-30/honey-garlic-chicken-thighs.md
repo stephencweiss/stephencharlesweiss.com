@@ -1,5 +1,5 @@
 ---
-title:'Honey Garlic Chicken Thighs'
+title: 'Honey Garlic Chicken Thighs'
 date: '2020-04-29'
 publish: '2020-05-30'
 category: ['recipes']
