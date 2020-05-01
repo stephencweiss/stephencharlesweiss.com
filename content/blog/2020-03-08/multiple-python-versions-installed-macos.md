@@ -47,7 +47,7 @@ $ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 Alternatively, you can add it as an alias:
 
 ```shell:title=.bash_profile
-$ alias runpyenv='eval "\$(pyenv init -)"'z
+$ alias runpyenv='eval "\$(pyenv init -)"'
 ```
 
 To have these changes take effect, you'll need to [refresh your terminal](https://stephencharlesweiss.com/blog/2018-09-05/aliases-and-the-bash_profile/#command-shortcuts).
@@ -63,7 +63,7 @@ $ source ~/.bash_profile
    ```
    2. Install the desired version
    ```shell
-   $ pyenv install 3.7.0
+   $ pyenv install 3.8.0
    ```
 5. Set your version of python
    1. Review which versions are installed
@@ -72,7 +72,7 @@ $ source ~/.bash_profile
    ```
    1. locally
    ```shell
-   $ pyenv local 3.7.0
+   $ pyenv local 3.8.0
    ```
    2. globally
    ```shell
