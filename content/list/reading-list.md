@@ -5,6 +5,8 @@ updated: ['2020-04-22', '2020-04-24']
 ---
 
 ## Actively Reading
+- _Ancillary Sword_ by Ann Leckie
+- _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 - _How To Solve It_ by G. Polya
 - [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
 
@@ -213,7 +215,6 @@ Some books I plan to read in the future categorized in a haphazard fashion.
 ### Business
 
 1. _Inspired: How to Create Tech Products Customers Love_ by Marty Cagan
-1. _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 1. _The Effective Executive_ by Peter Drucker
 1. _Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It_ by April Dunford
 1. _Getting To Yes_ by Fisher, Ury and Patton
