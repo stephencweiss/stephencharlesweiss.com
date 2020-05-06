@@ -15,7 +15,7 @@ my json is --> {'file_prefix': 'emm_leads_data', 'staging_schema': 'army_stage',
 ng_table': 'emm_leads_raw', 'has_header': False, 'write_mode': 'Append'}
 ```
 
-With Javascript, I can use [JSON.Stringify's spacer argument](https://stephencharlesweiss.com/blog/2019-06-13/json-stringify-spacer/#with-jsonstringify-and-spacer) to convert the wall of text into a formatted object:
+With Javascript, I can use [JSON.Stringify's spacer argument](../../2019-06-13/json-stringify-spacer/#with-jsonstringify-and-spacer) to convert the wall of text into a formatted object:
 
 ```javascript
 console.log(`my json is --> ${JSON.stringify(myObj, null, 4)}`)
