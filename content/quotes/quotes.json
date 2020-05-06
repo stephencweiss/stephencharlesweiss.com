@@ -529,9 +529,9 @@
     {
         "text": "The ocean doesn't complain about the dance of ten million waves; so don't be concerned with the rise and fall of thoughts.",
         "attribution": "Papaji",
-        "source": "Calm",
+        "source": "Calm App",
         "url": "",
-        "tags": ["mindfulness", "calm", "distraction", "wondering thoughts"]
+        "tags": ["mindfulness", "calm App", "distraction", "wondering thoughts"]
     },
     {
         "text": "Everything that happens to me is the best possible thing that could happen to me.",
@@ -651,6 +651,36 @@
         "text": "Man is made by his beliefs. What he believes, he is.",
         "attribution": "Bhagavad Gita",
         "source": "Brain.fm",
-        "tags": ["beliefs","reality"]
+        "tags": ["beliefs", "reality"]
+    },
+    {
+        "text": "I think the reward for conformity is that everyone likes you, except yourself.",
+        "attribution": "Rita Mae Brown",
+        "source": "Dense Discovery, Issue 86",
+        "tags": ["conformity", "relationships", "self-worth"]
+    },
+    {
+        "text": "We do not learn from experience... we learn from reflecting on experience.",
+        "attribution": "John Dewey",
+        "source": "_Measure What Matters_, pg. 124",
+        "tags": ["lessons", "learning", "growth", "experience"]
+    },
+    {
+        "text": "We try many ways to be awake, but our society still keeps us forgetful. Meditation is to help us remember.",
+        "attribution": "Thich Nhat Hanh",
+        "source": "Calm App",
+        "tags": ["meditation", "awareness", "society"]
+    },
+    {
+        "text": "If you don't know where you're going, you might not get there.",
+        "attribution": "Yogi Berra",
+        "source": "_Measure What Matters_, pg. 3",
+        "tags": ["direction", "focus"]
+    },
+    {
+        "text": "Supposing a tree fell down, Pooh, when we were underneath it?\n Supposing it didn't, said Pooh.\n After careful thought, Piglet was comforted by this.",
+        "attribution": "A.A. Milne",
+        "source": "Calm App",
+        "tags": ["fear", "anxiety", "acceptance", "perspective"]
     }
 ]
