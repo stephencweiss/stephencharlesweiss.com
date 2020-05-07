@@ -23,7 +23,7 @@ $ netlify deploy
 
 ```shell
 $ netlify deploy
-? Publish directory(.)
+? Publish directory public
 ```
 
 4. This will then attempt to deploy the built site. If successful, re-run with a production flag:
