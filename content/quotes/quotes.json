@@ -682,5 +682,10 @@
         "attribution": "A.A. Milne",
         "source": "Calm App",
         "tags": ["fear", "anxiety", "acceptance", "perspective"]
+    },
+    {
+        "text": "Do less, do better.",
+        "attribution": "Cal Newport",
+        "tags": ["focus", "attention", "performance"]
     }
 ]
