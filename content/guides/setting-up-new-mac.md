@@ -20,15 +20,6 @@ Setting up a new machine can take a lot of time. I prefer to document the tools 
 
 Much of this is _personalized_, so, if you adopt it, your mileage may vary.
 
-## Upgrade The Terminal
-
-I like iTerm2. It can be [downloaded here](https://www.iterm2.com/downloads.html).
-
-I've [blogged](https://stephencharlesweiss.com/tags/iterm/) about some of the changes I like to make. They include:
-
--   [Persisting Directories Between Sessions](https://stephencharlesweiss.com/blog/2020-04-30/iterm-new-session-directory/)
--   [Displaying The Current Working Directory Path](https://stephencharlesweiss.com/blog/2020-04-29/iterm-terminal-window-display-path/)
-
 # Set Up SSH Keys for Common Resources
 
 The pattern I'm following for ssh keys is `id_[company]_<service>_<encryption type>`
@@ -44,41 +35,72 @@ I store an example of my `.ssh/config` file in my [dotfiles repo on Github](http
 
 ## Applications To Install Manually
 
+I like Homebrew a lot for managing my applications, so let's start there.
+
+To install [Homebrew](https://brew.sh/), use the cURL below:
+
+    ```shell
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
+## Upgrade The Terminal
+
+I like iTerm2. It can be [downloaded here](https://www.iterm2.com/downloads.html), or via Homebrew:
+
+    ```shell
+    $ brew cask install iterm2
+    ```
+
+I've [blogged](https://stephencharlesweiss.com/tags/iterm/) about some of the changes I like to make. They include:
+
+-   [Persisting Directories Between Sessions](https://stephencharlesweiss.com/blog/2020-04-30/iterm-new-session-directory/)
+-   [Displaying The Current Working Directory Path](https://stephencharlesweiss.com/blog/2020-04-29/iterm-terminal-window-display-path/)
+
 ### IDE
+
 [VSCode](https://code.visualstudio.com/)
+
     ```shell
     $ brew cask install visual-studio-code
     ```
 
+    or
+
+    ```shell
+    $ brew cask install visual-studio-code-insiders
+    ```
+
 ### Browsers
+
 [Chrome](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en) / [Firefox](https://www.mozilla.org/en-US/firefox/developer/) / [Brave](https://brave.com/download/)
 
+    ```shell
+    $ brew cask install google-chrome
+    ```
+
 ### Applications
+
 [Spotify](spotify.com)
+
     ```shell
     $ brew cask install spotify
     ```
 
 [Slack](slack.com)
+
     ```shell
     $ brew cask install slack
     ```
 
-[Bear](https://bear.app/) -
+[Bear](https://bear.app/) - use Apple's App Store here.
+
 ### Utilities
-[Homebrew](https://brew.sh/)
-    ```shell
-    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
+
 [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle) - This one's more aspirational. If I end up using this, it can obviate the need for much of this document!
-    ```shell
-    $ brew bundle
-    ```
+`shell $ brew bundle`
 
 [nvm: Node Version Manager](https://github.com/nvm-sh/nvm)
-    ```shell
-    $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-    ```
+`shell $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
 
 [pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
 
@@ -88,6 +110,7 @@ $ brew install pyenv
 ```
 
 Alternatively [poetry: Dependency Management for Python](https://github.com/python-poetry/poetry)
+
 ```shell
 $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
@@ -100,36 +123,30 @@ brew update && brew install exercism
 
 # Configuration Settings
 
-## VS Code
+## VSCode
 
-[[Prettier configurations]]
-[[Debugging The Current File In VSCode]]
+Preferences: [dotfiles/vscode-preferences.json at master · stephencweiss/dotfiles · GitHub](https://github.com/stephencweiss/dotfiles/blob/master/vscode-preferences.json)
 
-[dotfiles/vscode-preferences.json at master · stephencweiss/dotfiles · GitHub](https://github.com/stephencweiss/dotfiles/blob/master/vscode-preferences.json)
-
-### VS Code Extensions
+### VSCode Extensions
 
 Quality of Life
 
 -   [advanced-new-file - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=patbenatar.advanced-new-file)
 -   [Auto Close Tag - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 -   [Auto Rename Tag - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-
-*   [Better Comments - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
-*   [Bracket Pair Colorizer 2 - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-*   [Code Spell Checker - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-*   [Color Highlight - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
-*   [Debugger for Chrome - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-*   [Debugger for Firefox - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
-*   [DotENV - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
-*   [EditorConfig for VS Code - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-
+-   [Better Comments - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+-   [Bracket Pair Colorizer 2 - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+-   [Code Spell Checker - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+-   [Color Highlight - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+-   [Debugger for Chrome - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+-   [Debugger for Firefox - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug)
+-   [DotENV - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv)
+-   [EditorConfig for VSCode - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 -   [GitLens — Git supercharged - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-
-*   [Material Icon Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-*   [reStructuredText - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext)
-*   [Toggle Quotes - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BriteSnow.vscode-toggle-quotes)
-*   [XML Tools - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
+-   [Material Icon Theme - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+-   [reStructuredText - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext)
+-   [Toggle Quotes - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=BriteSnow.vscode-toggle-quotes)
+-   [XML Tools - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
 
 Javascript Specific
 

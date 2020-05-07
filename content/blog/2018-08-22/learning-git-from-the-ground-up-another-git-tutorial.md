@@ -1,9 +1,9 @@
 ---
 title: 'Learning Git from the ground up - another Git tutorial'
 date: '2018-08-22'
-updated: ['2020-01-19']
+updated: ['2020-01-19', '2020-05-07']
 category: ['programming']
-tags: ['git', 'learning to code', 'tutorial', 'version control']
+tags: ['git', 'learning to code', 'tutorial', 'version control', '.gitconfig']
 ---
 
 I've been trying to learn more about Git recently. I thought I'd write up some of the lessons I've learned to create a basic primer on Git, why it's useful, and how it can be used.
