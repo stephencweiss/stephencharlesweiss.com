@@ -90,7 +90,7 @@ It turns out that this is a known issue with the Chrome Debugger and Microsoft h
 
 The workaround is simply to allow the app to load the first time with the debugger and then refresh the page.
 
-> If your breakpoints aren't hit, it's most likely a sourcemapping issue or because you are having breakpoints in immediately executed code. If you for example have a breakpoint in a render function that runs on page load, sometimes our debugger might not be attached to Chrome before the code has been executed. This means that you will have to refresh the page in Chrome after we have attached from VS Code to hit your breakpoint.
+> If your breakpoints aren't hit, it's most likely a sourcemapping issue or because you are having breakpoints in immediately executed code. If you for example have a breakpoint in a render function that runs on page load, sometimes our debugger might not be attached to Chrome before the code has been executed. This means that you will have to refresh the page in Chrome after we have attached from VSCode to hit your breakpoint.
 >
 > Source: <https://github.com/Microsoft/vscode-chrome-debug#my-breakpoints-arent-hit-whats-wrong>
 

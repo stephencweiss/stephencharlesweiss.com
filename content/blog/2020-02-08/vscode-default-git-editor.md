@@ -1,5 +1,5 @@
 ---
-title: 'Make VS Code Your Default Editor For Git Commits And Diffs'
+title: 'Make VSCode Your Default Editor For Git Commits And Diffs'
 date: '2020-01-23'
 publish: '2020-02-08'
 category: ['git']

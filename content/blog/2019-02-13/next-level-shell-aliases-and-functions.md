@@ -39,7 +39,7 @@ Breaking this down:
 * `code .` uses a symlink that I configured for VSCode to open the current directory (`.`). The configuration for the symlink is stored in my `.bash_profile` as:
 ``` vim
 # // .bash_profile
-# Setting Path for VS Code (code)
+# Setting Path for VSCode (code)
 Path="/\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 ```
 
