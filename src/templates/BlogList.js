@@ -1,16 +1,36 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import styled from 'styled-components'
 import {
     Bio,
     BlogExcerpt,
     Layout,
+    LinkWrapper,
     NavLink,
     PageNavigation,
     SEO,
-    Search,
 } from '../components'
 import { useSiteMetadata } from '../hooks'
+
+const BlogHeader = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0;
+`
+
+const SearchLink = styled(NavLink)`
+    &:before {
+        content: '🔍 ';
+    }
+    :hover {
+        &:before {
+            content: '🔎 ';
+
+        }
+    }
+`
 
 function BlogList(props) {
     const { data } = props
@@ -24,9 +44,13 @@ function BlogList(props) {
                 title="All posts"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
-            <h1>{title}</h1>
+            <BlogHeader>
+                <h1>{title}</h1>
+                <LinkWrapper style={{ paddingLeft: 0 }}>
+                    <SearchLink to="/blog-search">Search The Blog</SearchLink>
+                </LinkWrapper>
+            </BlogHeader>
             <PageNavigation previous={previousPage} next={nextPage} />
-            <Search />
             {posts.map(({ node }) => (
                 <BlogExcerpt key={node.fields.slug} node={node} />
             ))}

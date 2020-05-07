@@ -34,8 +34,15 @@ function Search(props) {
     return (
         <React.Fragment>
             <SearchItemWrapper>
-                Search:&nbsp;
-                <SearchInput type="text" value={query} onChange={handleQuery} />
+                <label style={{width: '100%'}} for="searchInput">
+                    <SearchInput
+                        id="searchInput"
+                        type="text"
+                        placeholder="Search"
+                        value={query}
+                        onChange={handleQuery}
+                    />
+                </label>
             </SearchItemWrapper>
             {results.length > 0 && <h3>Results</h3>}
             {results.length > 0 && (

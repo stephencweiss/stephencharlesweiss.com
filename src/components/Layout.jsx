@@ -9,7 +9,7 @@ const Paper = styled.div`
     flex-direction: column;
 `
 const Wrapper = styled.div`
-    max-width: 40em;
+    width: 40em;
     margin: auto;
     flex: 1;
     @media screen and (max-width: 40em) {

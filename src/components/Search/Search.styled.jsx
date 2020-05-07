@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 export const Item = styled.div`
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 `
 
 export const ItemHighlight = styled.small`
-  background: rgba(0, 0, 0, 0.1);
-  margin-left: 1em;
-  padding-left: 0.5em;
+    background: rgba(0, 0, 0, 0.1);
+    margin-left: 1em;
+    padding-left: 0.5em;
 `
 
 export const ItemBlurb = styled.div`
@@ -17,24 +17,30 @@ export const ItemBlurb = styled.div`
 `
 
 export const ListItem = styled.li`
-  list-style: none;
+    list-style: none;
 `
 
 export const SearchItemWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  margin: 1rem 0;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin: 1rem 0;
 `
 
 export const SearchInput = styled.input`
-  flex: 1;
-  width: 100%;
-  margin-left: 0.5em;
+    flex: 1;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(0,0,0,.8);
+    box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.33);
+    border-radius: 1rem;
+    font-family: inherit;
+    font-size: inherit;
 `
 
 export const SearchResultsContainer = styled.ul`
-  border: 2px solid black;
-  padding: 0 0.5em;
-  margin: 0;
+    padding: 0 0.5em;
+    margin: 0;
 `
