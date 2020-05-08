@@ -33,6 +33,10 @@ For tips on managing multiple ssh keys, check out [Setting Up SSH On MacOS](../.
 
 I store an example of my `.ssh/config` file in my [dotfiles repo on Github](https://github.com/stephencweiss/dotfiles).
 
+## Setting Up Git For Multiple Profiles
+
+If it's a work machine, or there's a reason to have multiple git profiles, check out [Managing Multiple Git Configurations](https://stephencharlesweiss.com/blog/2019-12-18/git-config-multiple-settings)
+
 ## Applications To Install Manually
 
 I like Homebrew a lot for managing my applications, so let's start there.
