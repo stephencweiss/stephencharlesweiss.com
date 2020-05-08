@@ -25,7 +25,6 @@ function Search(props) {
             const searchResults = index
                 .search(searchValue, { expand: true })
                 .map(({ ref }) => index.documentStore.getDoc(ref))
-            //TODO: Reduce searchResults duplicates based on slug (which should be unique)
             setResults(searchResults)
         }
     }, [index, searchValue])
@@ -38,7 +37,7 @@ function Search(props) {
                     <SearchInput
                         id="searchInput"
                         type="text"
-                        placeholder="Search"
+                        placeholder="what would you like to search for?"
                         value={query}
                         onChange={handleQuery}
                     />
