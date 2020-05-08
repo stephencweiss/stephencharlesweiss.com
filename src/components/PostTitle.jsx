@@ -24,6 +24,7 @@ const MarkerH3 = styled.h3`
 
 export const Title = styled.h1`
     ${MarkerStyle}
+    color: rgb(70,70,70);
 `
 export function PostTitleLink({ slug, title }) {
     return (
