@@ -33,8 +33,7 @@ export const SearchInput = styled.input`
     font-size: 1rem;
     padding: 0.5rem;
     margin: 0.5rem;
-    border: 1px solid rgba(0,0,0,.8);
-    box-shadow: 5px 5px 2.5px 0px rgba(0,0,0,0.33);
+    border: 1px solid rgba(0, 0, 0, 0.8);
     border-radius: 1rem;
     font-family: inherit;
     font-size: inherit;
