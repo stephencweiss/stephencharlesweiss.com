@@ -85,10 +85,11 @@ From within the Postgres shell, we can use the `ALTER ROLE` command:<sup>[4](#fo
 
 ![Alter role](./alter-role.png)
 
-> Update:
-> If you forgot to set a password when you created the user, you can do it now by altering the user.<sup>[5](#footnotes)</sup><a id="fn5"></a>
+> **Update**: If you forgot to set a password when you created the user, you can do it now by altering the user.<sup>[5](#footnotes)</sup><a id="fn5"></a>
 >
-> `sql> <database_name>=# alter role onething_admin with password '[new_password]';`
+> ```sql
+> <database_name>=# alter role onething_admin with password '[new_password]';
+> ```
 
 ## Wrap Up
 

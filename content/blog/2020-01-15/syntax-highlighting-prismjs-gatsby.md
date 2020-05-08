@@ -33,9 +33,7 @@ Some of the features I've explored so far include:
 // ... code goes here
 ````
 
-> Update: April 14, 2020
->
-> Continuing to play around with titles and noticing a few things:
+> **Update**: Continuing to play around with titles and noticing a few things:
 > 1. By default, the title can only be one word, however, this limit can be avoided using the [non-breaking space encoding](../../2019-09-22/leading-spaces-html-react): `&nbsp;`, e.g., `lang:title=word&nbsp;second`
 > 2. You _can_ wrap your title in quotations, however, I find these unhelpful generally as:
 >    - a. they appear in the title

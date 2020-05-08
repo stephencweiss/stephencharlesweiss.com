@@ -6,7 +6,7 @@ category: ['programming']
 tags: ['vscode', 'linux', 'watchers', 'inotify']
 ---
 
-> Update: Typescript 3.8 was released today and includes "Better Directory Watching on Linux and `watchOptions`. (Here's the [release annoucement here](https://devblogs.microsoft.com/typescript/announcing-typescript-3-8/).)
+> **Update**: Typescript 3.8 was released today and includes "Better Directory Watching on Linux and `watchOptions`. (Here's the [release annoucement here](https://devblogs.microsoft.com/typescript/announcing-typescript-3-8/).)
 >
 > This change should make hitting the watcher limit less likely - or at least allow greater control over _when_ it happens - by having Typescript "wait slightly before installing directory watchers to give these highly volatile directories some time to stabilize."
 >

@@ -117,7 +117,7 @@ $ brew install unrar
 $ unrar e <filename>.rar
 ```
 
-> Update: In this case, the `e` command "Extract files without archived paths". To see other options, just enter `unrar` into the command line
+> **Update**: In this case, the `e` command "Extract files without archived paths". To see other options, just enter `unrar` into the command line
 
 ## Conclusion
 
