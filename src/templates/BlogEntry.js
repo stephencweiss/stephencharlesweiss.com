@@ -14,12 +14,13 @@ const Entry = styled.div`
     padding: 0 0.5em;
 
     & > p:first-of-type::first-letter {
-        color: #c69c6d;
+        color: rgb(70, 70, 70);
         float: left;
-        font-family: Georgia;
-        font-size: 5em;
+        font-family: Georgia, serif;
+        font-size: 3.5em;
+        font-weight: bold;
         margin: 0 0.2em 0 0;
-        line-height: 0.5;
+        line-height: 0.75;
         text-transform: lowercase;
     }
 `
@@ -34,7 +35,7 @@ const PostHeaderBlock = styled.div`
 function EntryTemplate(props) {
     const entry = props.data.markdownRemark
     const { previous, next } = props.pageContext
-    const { title } = entry.frontmatter
+    const { title, tags, category } = entry.frontmatter
     const { listDate, readingTime } = entry.fields
     const { text: estimate, words: wordCount } = readingTime
     return (
@@ -76,6 +77,8 @@ export const pageQuery = graphql`
                 title
                 date(formatString: "MMMM DD, YYYY")
                 publish(formatString: "MMMM DD, YYYY")
+                tags
+                category
             }
             fields {
                 listDate
