@@ -4,7 +4,8 @@ import styled from 'styled-components'
 
 export const NavLink = styled(GatsbyLink)`
     color: black;
-    text-decoration: ${({ active }) => (active==='true' ? 'underline' : 'none')};
+    text-decoration: ${({ active }) =>
+        active === 'true' ? 'underline' : 'none'};
 
     ::after {
         background-color: rgba(0, 0, 0, 0.8);

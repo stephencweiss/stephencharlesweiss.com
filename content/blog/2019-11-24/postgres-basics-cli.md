@@ -85,10 +85,11 @@ From within the Postgres shell, we can use the `ALTER ROLE` command:<sup>[4](#fo
 
 ![Alter role](./alter-role.png)
 
-> Update:
-> If you forgot to set a password when you created the user, you can do it now by altering the user.<sup>[5](#footnotes)</sup><a id="fn5"></a>
+> **Update**: If you forgot to set a password when you created the user, you can do it now by altering the user.<sup>[5](#footnotes)</sup><a id="fn5"></a>
 >
-> `sql> <database_name>=# alter role onething_admin with password '[new_password]';`
+> ```sql
+> <database_name>=# alter role onething_admin with password '[new_password]';
+> ```
 
 ## Wrap Up
 
@@ -106,7 +107,7 @@ If the command prompt is `<database_name>=>` - terminating with an `>` instead o
 - <sup>[2](#fn2)</sup> For more information on this command, checkout the [createdb manual page](https://linux.die.net/man/1/createdb) or the [Postgres documentation on create database](https://www.tutorialspoint.com/postgresql/postgresql_create_database.htm).
 - <sup>[3](#fn3)</sup> For more info on `createuser` - checkout the [createuser man page](https://linux.die.net/man/1/createuser) or for [Postgresql documentation on create user](https://www.postgresql.org/docs/8.0/sql-createuser.html) for guidance on creating users within the Postgres shell.
 - <sup>[4](#fn4)</sup> For more information on `alter user` - we have [PostgreSQL: Documentation: 9.1: ALTER ROLE](https://www.postgresql.org/docs/9.1/sql-alterrole.html)
-- <sup>[5](#fn5)</sup> I found [this discussion on the difference between user and role (and group) on StackOverflow](https://stackoverflow.com/questions/27709456/what-is-the-difference-between-a-user-and-a-role) really insightful. The punchline for me was:
+- <sup>[5](#fn5)</sup> I found this discussion on the [difference between user and role (and group)](https://stackoverflow.com/questions/27709456/what-is-the-difference-between-a-user-and-a-role) really insightful. The punchline for me was:
   > In modern versions of Postgres, the two concepts [users and groups] have been merged: a "role" can have the ability to login, the ability to "inherit" from other roles (like a user being a member of a group, or a group being a member of another group), and access to database objects.
   > [...]
   > Postgres still accepts commands using the old terminology, such as [CREATE USER](https://www.postgresql.org/docs/current/sql-createuser.html) and [CREATE GROUP](https://www.postgresql.org/docs/current/sql-creategroup.html) which are both aliases for [CREATE ROLE](https://www.postgresql.org/docs/current/sql-createrole.html).

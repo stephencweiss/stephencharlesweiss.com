@@ -2,15 +2,14 @@
 title: 'Constants To The Left'
 date: '2020-04-08'
 publish: '2020-05-01'
+updated: ['2020-05-08']
 category: ['programming']
 tags: ['tips', 'evaluating', 'variable assignment', 'rules of thumb']
 ---
 
-By royal decree:
+Hear ye, hear ye, by royal decree, I hereby declare: when evaluating, put constants on the left
 
-> When evaluating, put constants on the left
-
-Okay, so this isn't actaully a decree and shouldn't be followed dogmatically, but having been burned before due to an accidental assignment (where a comparison was intended), following this rule seems sensible.
+Okay, so this isn't actually a decree and shouldn't be followed dogmatically, but having been burned before due to an accidental assignment (where a comparison was intended), following this rule seems sensible.
 
 What it looks like:
 
@@ -32,3 +31,5 @@ Uncaught SyntaxError: Invalid left-hand side in assignment
 ```
 
 Filing this under other practical advice I've found for avoiding the avoidable, like not using the [greater than symbol](../../2020-01-06/stop-using-greater-than-in-code).
+
+> **Update**: Interestingly, during a code review, my use of this was actually called out as non-idiomatic. While I was able to defend my reasoning for placing the constants on the left, it's worth remembering that it may require a bit of education.

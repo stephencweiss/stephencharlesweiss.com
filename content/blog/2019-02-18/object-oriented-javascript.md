@@ -14,7 +14,7 @@ tags:
   ]
 ---
 
-> Update: I wrote a follow up post on how to [extend classes in Javascript](../../2020-04-07/object-oriented-javascript-extending-classes/).
+> **Update**: I wrote a follow up post on how to [extend classes in Javascript](../../2020-04-07/object-oriented-javascript-extending-classes/).
 
 What are classes anyway?
 A class is an entity that is capable of producing objects (instances) that share common attributes, features, and methods.

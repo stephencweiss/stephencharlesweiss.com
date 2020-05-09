@@ -6,7 +6,7 @@ category: ['programming']
 tags: ['react', 'tutorial', 'webpack', 'babel']
 ---
 
-> Update: I've now found an even more basic way to write a React app and I put together a tutorial in a post, [An Even More Basic React App Tutorial](../../2019-09-23/tutorial-even-more-basic-react-app)
+> **Update**: I've now found an even more basic way to write a React app and I put together a tutorial in a post, [An Even More Basic React App Tutorial](../../2019-09-23/tutorial-even-more-basic-react-app)
 
 At this point, I feel fairly comfortable with React, but when I had to go back to the basics and get an app up and running this weekend, I found I’d forgotten more than I thought.
 

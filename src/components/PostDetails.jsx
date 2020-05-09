@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Details = styled.h5`
+export const Details = styled.p`
     display: inline;
-    color: #606060;
+    color: rgb(70, 70, 70);
+    margin: 0;
 `
 
 export const DetailsWrapper = styled.div`
@@ -15,9 +16,9 @@ export function PostDetails({ date, estimate, wordCount }) {
         <DetailsWrapper>
             <Details>{date}</Details>
             &nbsp;|&nbsp;
-            <Details>
-                {estimate}, {wordCount} words
-            </Details>
+            <Details>~{estimate}</Details>
+            &nbsp;|&nbsp;
+            <Details>{wordCount} words</Details>
         </DetailsWrapper>
     )
 }
