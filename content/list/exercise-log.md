@@ -2,6 +2,7 @@
 title: 'Exercise Log'
 date: '2019-12-20'
 updated: ['2019-12-20']
+category: ['lists']
 tags: ['workout', 'exercise', 'gym', 'log']
 ---
 
