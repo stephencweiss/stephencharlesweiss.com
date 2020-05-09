@@ -5,7 +5,6 @@ updated: ['2020-04-22', '2020-04-24']
 ---
 
 ## Actively Reading
-- _Ancillary Sword_ by Ann Leckie
 - _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 - _How To Solve It_ by G. Polya
 - [_The Rust Programming Language_ by Steve Klabnik and Carol Nichols](https://doc.rust-lang.org/book/)
@@ -14,7 +13,10 @@ updated: ['2020-04-22', '2020-04-24']
 
 ### 2020
 
-Total: 14
+Total: 15
+
+### _May 2020_
+- _Ancillary Sword_ by Ann Leckie
 
 ### _April 2020_
 - _Hawaii_ by James Michener
