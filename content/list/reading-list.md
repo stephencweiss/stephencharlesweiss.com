@@ -5,9 +5,7 @@ category: ['lists']
 tags: ['reading','books']
 ---
 
-I love [reading](../bookshelf), but sometimes it can be challenging to know what to read next!
-
-To try to address that, I've been gathering books I want to read and placing them on my "bookshelf" below. An asterisk (<sup>*</sup>) means I don't (yet) have a copy of it.
+I love [reading](../bookshelf), but sometimes it can be challenging to know what to read next! To try to address that, I've been collecting books I'm interested in reading. An asterisk (<sup>*</sup>) means I don't (yet) have a copy of it.
 
 ### Biography
 
@@ -16,6 +14,7 @@ To try to address that, I've been gathering books I want to read and placing the
 1. _The Years of Lyndon Johnson: Master of The Senate_ by Robert Caro
 1. _Dostoevsky: The Seeds of Revolt, 1821-1849_ by Joseph Frank
 1. _Benjamin Franklin_ by Walter Isaacson
+1. _Leonardo da Vinci_ by Walter Isaacson
 1. _Stalin: Waiting for Hitler, 192-1941_ by Stephen Kotkin<sup>*</sup>
 1. _John Adams_ by David McCullough<sup>*</sup>
 1. _Lenin: The Man, the Dictator, and the Master of Terror_ by Victor Sebestyen<sup>*</sup>
