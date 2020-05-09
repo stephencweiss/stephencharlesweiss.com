@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import { Bio, ColumnLinkWrapper,Layout, ListedLink, SEO } from '../components'
+import { Bio, ColumnLinkWrapper, Layout, ListedLink, SEO } from '../components'
 
 function Books(props) {
     const { data } = props
@@ -25,7 +25,10 @@ function Books(props) {
                 </ul>
             </ColumnLinkWrapper>
             <p>
-                See other books I've read (or plan on reading) in my <Link to="/list/reading-list">reading list</Link>.
+                See other books I've read in my&nbsp;
+                <Link to="/list/bookshelf">bookshelf</Link> and those I'm
+                planning to read on my&nbsp;
+                <Link to="/list/reading-list">reading list</Link>.
             </p>
             <Bio />
         </Layout>

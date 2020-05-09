@@ -108,16 +108,22 @@ I've [blogged](https://stephencharlesweiss.com/tags/iterm/) about some of the ch
 
 [pyenv: Simple Python version management](https://github.com/pyenv/pyenv)
 
-```shell
-$ brew update
-$ brew install pyenv
-```
+    ```shell
+    $ brew update
+    $ brew install pyenv
+    ```
 
 Alternatively [poetry: Dependency Management for Python](https://github.com/python-poetry/poetry)
 
-```shell
-$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-```
+    ```shell
+    $ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+    ```
+
+[Netlify-CLI](https://cli.netlify.com/)
+
+    ```shell
+    $ brew install netlify-cli
+    ```
 
 Exercism
 
@@ -159,6 +165,7 @@ Javascript Specific
 Language / DevOps Support
 
 -   [AWS CLI Configure - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=mark-tucker.aws-cli-configure)
+-   [AWS Toolkit](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-toolkit-vscode)
 -   [Docker - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 -   [GitHub Actions - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=cschleiden.vscode-github-actions)
 -   [Go - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go)

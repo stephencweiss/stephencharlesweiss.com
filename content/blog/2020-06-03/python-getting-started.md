@@ -71,7 +71,7 @@ pip 20.1 from /Users/stephen/.pyenv/versions/3.8.0/lib/python3.8/site-packages/p
 
 Finally!
 
-At this point, I'm now able to download python packages and run them, however, [the official recommendation (as of this writing) is to use Pipenv](https://packaging.python.org/tutorials/managing-dependencies/).
+At this point, I'm now able to download python packages and run them, however, [the official recommendation (as of this writing) is to use Pipenv](https://packaging.python.org/tutorials/managing-dependencies/) (though I keep hearing about [poetry](https://python-poetry.org/), so I'll likely give that a shot at some point):
 
 > [Pipenv](https://packaging.python.org/key_projects/#pipenv) is a dependency manager for Python projects. If you’re familiar with Node.js’ [npm](https://www.npmjs.com/) or Ruby’s [bundler](http://bundler.io/) , it is similar in spirit to those tools. While [pip](https://packaging.python.org/key_projects/#pip) alone is often sufficient for personal use, Pipenv is recommended for collaborative projects as it’s a higher-level tool that simplifies dependency management for common use cases.
 

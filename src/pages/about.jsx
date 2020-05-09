@@ -33,7 +33,7 @@ export default function About(props) {
                 </li>
                 <li key="reading">
                     I like reading too. I keep a&nbsp;
-                    <Link to={'/list/reading-list'}>reading list</Link> of what
+                    <Link to={'/list/bookshelf'}>reading list</Link> of what
                     I've read, as well as what I'm planning to read. Check it
                     out. I'm always looking for suggestions. Thank you&nbsp;
                     <Link to={'https://github.com/mariellefoster/marf-books'}>
