@@ -117,3 +117,10 @@ Unfortunately, the [CanIUse](https://caniuse.com/#feat=css-initial-letter) story
 I've always admired the printed page and I want my site to feel like the _best_ parts of reading on paper -- though from time to time more interactive.
 
 With that in mind, the new addition of a drop cap is part of that trend and I hope you learned a little along the way!
+
+## Additional Reading
+
+In writing this post, I leaned on two blog posts in particular to help me understand drop caps:
+
+1. [Better CSS Drop Caps With "initial-letter"](https://webdesign.tutsplus.com/tutorials/better-css-drop-caps-with-initial-letter--cms-26350)
+2. [Drop Caps (styling the initial letter)](https://rwt.io/typography-tips/drop-caps-styling-initial-letter)
