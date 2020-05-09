@@ -14,7 +14,7 @@ tags:
   ]
 ---
 
-> Update: I recently revisited this use of `preventDefault` and `reset` in the context of utilizing the _appropriate_ event. Read about it in [Form Validation: preventDefault And onSubmit Vs onClick](../../2020-03-25/input-validation-preventdefault-onsubmit-vs-onclick.md)
+> **Update**: I recently revisited this use of `preventDefault` and `reset` in the context of utilizing the _appropriate_ event. Read about it in [Form Validation: preventDefault And onSubmit Vs onClick](../../2020-03-25/input-validation-preventdefault-onsubmit-vs-onclick.md)
 
 Two tools to keep in your tool belt when adding forms to your website should be:
 

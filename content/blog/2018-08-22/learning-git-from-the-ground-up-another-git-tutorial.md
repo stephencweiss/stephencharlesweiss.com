@@ -70,7 +70,7 @@ Commits are fine, but they’re only really useful because Git will track all of
 
 ## Revert vs Reset
 
-> Update: For even simpler uses of reset, check out my new post: [Git Tips: Undo & Clean](../../2020-01-19/git-undo-and-clean)
+> **Update**: For even simpler uses of reset, check out my new post: [Git Tips: Undo & Clean](../../2020-01-19/git-undo-and-clean)
 
 Revert will reverse the changes from a commitment and is used mostly to undo faulty commits. This means that you can revert specific commits without affecting others. Revert works by making a new commit with the changes removed. You can revert any past commit. This can be the last commit, `$ git revert HEAD`.
 

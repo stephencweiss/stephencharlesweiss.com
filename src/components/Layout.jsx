@@ -9,9 +9,18 @@ const Paper = styled.div`
     flex-direction: column;
 `
 const Wrapper = styled.div`
-    max-width: 40em;
+    width: 60em;
     margin: auto;
     flex: 1;
+    @media screen and (max-width: 70em) {
+        max-width: 50em;
+    }
+    @media screen and (max-width: 60em) {
+        max-width: 40em;
+    }
+    @media screen and (max-width: 50em) {
+        max-width: 35em;
+    }
     @media screen and (max-width: 40em) {
         max-width: 30em;
     }

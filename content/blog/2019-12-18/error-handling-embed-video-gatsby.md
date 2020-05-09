@@ -7,7 +7,7 @@ category: ['gatsby']
 tags: ['error handling','video','embed','plugin']
 ---
 
-> Update: I found a more general embedder in the Plugin library: [gatsby-remark-embedder](https://www.gatsbyjs.org/packages/gatsby-remark-embedder/?=spotify)
+> **Update**: I found a more general embedder in the Plugin library: [gatsby-remark-embedder](https://www.gatsbyjs.org/packages/gatsby-remark-embedder/?=spotify)
 > Replacing `gatsby-remark-embed-video` with it worked like a charm - and, at least so far, haven't had any issues with ordering.
 > Here's the PR in which I replaced it.
 

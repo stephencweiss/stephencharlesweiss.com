@@ -7,7 +7,7 @@ category: ['programming']
 tags: ['react', 'state', 'useEffect', 'onMount', 'life cycles']
 ---
 
-> Update: I wrote a follow up in which I suggested a more idiomatic approach to this problem through deference of control.
+> **Update**: I wrote a follow up in which I suggested a more idiomatic approach to this problem through deference of control.
 
 React makes it really easy to control a component's UI. The two most common approaches I've seen are to manage the UI completely from an external component's state via props or self-managed via state.
 

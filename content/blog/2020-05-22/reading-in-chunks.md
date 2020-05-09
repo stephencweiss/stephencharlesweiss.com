@@ -12,7 +12,7 @@ So far, this likely just sounds like reading a book unless you're one of those f
 
 The distinction I'm making here is with the intentionality with which I'm reading in chunks.
 
-For example, I like to spend ~30 minutes in the morning reading. I'll pick up one of the books I'm [currently reading](../../../list/reading-list) and read until I get to a natural break in the text. This is most often a chapter break (if they're short, I can sometimes get through two chapters in one sitting), but the key is that I'll have a hard stop and not feel bad about it. If the chapter's long, I'll stop midway so I can get on with my day.
+For example, I like to spend ~30 minutes in the morning reading. I'll pick up one of the books I'm [currently reading](../../../list/bookshelf) and read until I get to a natural break in the text. This is most often a chapter break (if they're short, I can sometimes get through two chapters in one sitting), but the key is that I'll have a hard stop and not feel bad about it. If the chapter's long, I'll stop midway so I can get on with my day.
 
 I repeat the process at night with a different book. At night, the temptation to keep reading is stronger - after all, I have nothing I'm running off to after, just sleep - but I do my best to stop so that I can repeat the next day.
 
