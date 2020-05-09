@@ -1,9 +1,9 @@
 ---
-title: 'Make VS Code Your Default Editor For Git Commits And Diffs'
+title: 'Make VSCode Your Default Editor For Git Commits And Diffs'
 date: '2020-01-23'
 publish: '2020-02-08'
 category: ['git']
-tags: ['git', 'gitconfig', 'defaults', 'vscode']
+tags: ['git', '.gitconfig', 'defaults', 'vscode']
 ---
 
 In his talk ["A Branch In Time"](https://tekin.co.uk/2019/02/a-talk-about-revision-histories) (which I wrote about recently in [Write Better Commit Messages](../../2020-02-06/write-better-commits), Tekin Süleyman has an offhand comment that I haven't been able to shake: "The command line doesn't encourage you to write descriptive commit messages."

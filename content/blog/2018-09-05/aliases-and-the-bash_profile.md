@@ -1,8 +1,18 @@
 ---
 title: Aliases and the .bash_profile
 date: '2018-09-05'
+updated: ['2020-05-08']
 category: ['programming']
-tags: ['aliases','bash basics', 'config files', 'git', 'learning to code', 'terminal']
+tags:
+    [
+        '.gitconfig',
+        'aliases',
+        'bash basics',
+        'config files',
+        'git',
+        'learning to code',
+        'terminal',
+    ]
 ---
 
 # .gitconfig follow-up with .bash_profille
@@ -22,6 +32,7 @@ Extending beyond the `.gitconfig`, I moved to my .bash_profile and added some mo
 I decided to dedicate my g-key to git and added several additional keyboard shortcuts that I’ve found myself using even more frequently than the aliases in my `.gitconfig` file.
 
 My current set up is:
+
 ```bash
 #Git Shortcuts
 alias gs='git status '
@@ -35,9 +46,11 @@ alias gk='gitk --all&'
 alias got='git '
 alias get='git '
 ```
+
 Note: the aliases for `got` and `get` are just common typos for `git`, so it’s just a little guard rail for me. (I find I am more prone to make these errors if I’m saying the command in my head…)
 
 # Navigation Shortcuts
+
 As I get comfortable with the terminal, the hardest part for me is navigating through my directory tree. Since I had some pretty common destinations, I decided to make shortcuts using an alias. I updated my `~/.bash_profile` file to include the following Directory shortcuts.
 
 ```bash
@@ -48,11 +61,13 @@ alias goCode='cd ~/Documents/_Coding' #A directory with all of my projects
 ```
 
 # Command Shortcuts
+
 The shortest section of my `.bash_profile` right now is my command shortcuts section. I imagine it will grow in time as i realize more and more things that I can do with the terminal and find myself typing the same command in over and over.
 
 Right now, the only thing I have saved is a command to reload my profile when I make changes.
 
 Since any time you make a change to your `.bash_profile`, in order for those changes to be accessible within the terminal, you need to either:
+
 1. Close and reopen your terminal for the changes to be accessible, or
 2. Manually reload your profile
 
@@ -63,9 +78,11 @@ alias bashReload=' . ~/.bash_profile'
 ```
 
 # Notes about .bash_profile and Mac
+
 Your `.bash_profile` file is located in your user’s directory, but as the `.` indicates, it’s hidden.
 
 To find and edit it, you can use the following three commands:
+
 ```bash
 $ cd ~/ # This takes you to your user's home directory (in case you were currently located
 $ ls -a # Lists all of the contents within the directory; the -a option means that it will not ignore entries starting with .
@@ -73,6 +90,7 @@ $ open .bash_profile # Opens the file using the default application for text doc
 ```
 
 When you run the `$ ls -a` command, you may see multiple different bash files. For example, I see the following:
+
 ```bash
 .bash_history
 .bash_profile

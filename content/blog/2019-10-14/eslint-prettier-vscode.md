@@ -32,7 +32,7 @@ Reading through the threads, I found a solution that works at least for VSCode, 
 > `"prettier.eslintIntegration": true`
 > to
 > `"prettier-eslint.eslintIntegration”: true`
-> in Settings (JSON) for VS Code.
+> in Settings (JSON) for VSCode.
 > Fixed the problems that I was having after upgrading to ESLint 6.x.
 
 I made the change and suddenly everything was back to normal!

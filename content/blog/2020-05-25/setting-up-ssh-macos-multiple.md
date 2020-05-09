@@ -2,6 +2,7 @@
 title: 'Setting Up SSH On MacOS'
 date: '2020-04-27'
 publish: '2020-05-25'
+updated: ['2020-05-07']
 category: ['programming']
 tags: ['ssh', 'github', 'gitlab', 'ssh-config', 'ssh-keygen', 'ssh-agent']
 ---
@@ -89,12 +90,6 @@ drwxr-xr-x+ 49 stephen  staff  1568 Apr 27 16:58 ..
 -rw-r--r--   1 stephen  staff  3353 Apr 24 16:47 known_hosts
 ```
 
-## (Optional) Adding SSH Keys to ssh-agent
-
-> ssh-agent is a program to hold private keys used for public key authentication (RSA, DSA, ECDSA, Ed25519). ssh-agent is usually started in the beginning of an X-session or a login session, and all other windows or programs are started as clients to the ssh-agent program. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using ssh(1).
-
-Github has put together a nice step-by-step guide on [how to add a key to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
-
 ## Setting Up the SSH Config
 
 Now that we've created multiple accounts, it's time to set up the ssh config ([here's the manual page with all of the options](https://linux.die.net/man/5/ssh_config))
@@ -139,6 +134,24 @@ Some notes and caveats:
     ```
 
 ([Remi Lavedrine put together a great walkthrough on Dev.To](https://dev.to/shostarsson/how-to-setup-multiple-ssh-keys-for-multiple-github-bitbucket-accounts-2ji0) which I found as I was pulling this together. )
+
+## (Optional) Adding SSH Keys to ssh-agent
+
+> ssh-agent is a program to hold private keys used for public key authentication (RSA, DSA, ECDSA, Ed25519). ssh-agent is usually started in the beginning of an X-session or a login session, and all other windows or programs are started as clients to the ssh-agent program. Through use of environment variables the agent can be located and automatically used for authentication when logging in to other machines using ssh(1).
+
+Github has put together a nice step-by-step guide on [how to add a key to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent).
+
+Make sure that the `ssh-agent` is running:
+
+```shell
+$ eval "$(ssh-agent -s)"
+```
+
+Then, once you're done setting up the SSH Config (the previous step), add the new id to the agent:
+
+```shell
+$ ssh-add -K ~/.ssh/id_rsa
+```
 
 
 ## Wrap Up
