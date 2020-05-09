@@ -19,7 +19,6 @@ const classicFirstLetterStyle = css`
 `
 
 const modernFirstLetterStyle = css`
-    -webkit-initial-letter: 3 2;
     initial-letter: 3 2;
 `
 
