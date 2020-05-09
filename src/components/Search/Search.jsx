@@ -25,7 +25,6 @@ function Search(props) {
             const searchResults = index
                 .search(searchValue, { expand: true })
                 .map(({ ref }) => index.documentStore.getDoc(ref))
-            //TODO: Reduce searchResults duplicates based on slug (which should be unique)
             setResults(searchResults)
         }
     }, [index, searchValue])
@@ -34,8 +33,15 @@ function Search(props) {
     return (
         <React.Fragment>
             <SearchItemWrapper>
-                Search:&nbsp;
-                <SearchInput type="text" value={query} onChange={handleQuery} />
+                <label style={{width: '100%'}} for="searchInput">
+                    <SearchInput
+                        id="searchInput"
+                        type="text"
+                        placeholder="what would you like to search for?"
+                        value={query}
+                        onChange={handleQuery}
+                    />
+                </label>
             </SearchItemWrapper>
             {results.length > 0 && <h3>Results</h3>}
             {results.length > 0 && (

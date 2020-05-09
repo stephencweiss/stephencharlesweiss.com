@@ -68,7 +68,7 @@ Notice that I only installed `@babel/plugin-transform-runtime` as a dependency (
 
 Once done, and I rebuilt my project, the errors evaporated. Woo!
 
-> Update: Babel has removed these presets and deprecated others. Instead of `@babel/env` we now have `@babel/preset-env`. Instead of `@babel/react`, we now have `@babel/preset-react`.
+> **Update**: Babel has removed these presets and deprecated others. Instead of `@babel/env` we now have `@babel/preset-env`. Instead of `@babel/react`, we now have `@babel/preset-react`.
 > [Jakob Lind](https://blog.jakoblind.no/babel-preset-env/) has a great write up on some of the nuances at play here as they relate to what `babel` is actually doing and how it works. Check it out!
 
 ## Footnotes
