@@ -138,8 +138,8 @@ We can even format the time:
 
 ```diff:title="custom-time-format.py
 ...
-- logging.basicConfig(filename='./configurable.log', level=log_level format='%(asctime)s %(levelname)s %(funcName)s %(lineno)d --> %(message)s')
-+ logging.basicConfig(filename='./configurable.log', level=log_level format='%(asctime)s %(levelname)s %(funcName)s %(lineno)d --> %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+- logging.basicConfig(filename='./configurable.log', level=log_level, format='%(asctime)s %(levelname)s %(funcName)s %(lineno)d --> %(message)s')
++ logging.basicConfig(filename='./configurable.log', level=log_level, format='%(asctime)s %(levelname)s %(funcName)s %(lineno)d --> %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 )
 
 def main():
