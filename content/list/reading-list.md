@@ -115,6 +115,7 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 
 ### Business
 
+-   _Work Rules!: Insights from Inside Google That Will Transform How You Live and Lead_ by Laszlo Bock<sup>\*</sup>
 -   _Inspired: How to Create Tech Products Customers Love_ by Marty Cagan<sup>\*</sup>
 -   _Competing Against Luck: The Story of Innovation and Customer Choice_ by Clayton M. Christensen, Taddy Hall, Karen Dillon, and David S. Duncan
 -   _The Effective Executive_ by Peter F. Drucker
