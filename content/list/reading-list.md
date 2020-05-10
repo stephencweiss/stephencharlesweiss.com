@@ -16,7 +16,8 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _Benjamin Franklin_ by Walter Isaacson
 -   _Leonardo da Vinci_ by Walter Isaacson
 -   _Stalin: Waiting for Hitler, 192-1941_ by Stephen Kotkin<sup>\*</sup>
--   _John Adams_ by David McCullough<sup>\*</sup>
+-   _Stan Lee_ by Liel Leibovitz
+-   _John Adams_ by David McCullough
 -   _Lenin: The Man, the Dictator, and the Master of Terror_ by Victor Sebestyen<sup>\*</sup>
 -   _The First Tycoon: The Epic Life of Cornelius Vanderbilt_ by T.J. Stiles
 
@@ -80,6 +81,7 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _Pachinko_ by Min Jin Lee<sup>\*</sup>
 -   _Paper Menagerie_ by Ken Liu<sup>\*</sup>
 -   _Circé_ by Miller
+-   _Beloved_ by Toni Morrison
 -   _The Death of Ivan Ilych_ Leo Tolstoy
 -   _Serpico_ by Maas
 -   _The Sculptor_ by Scott McCloud
@@ -196,7 +198,7 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _The Fifth Risk_ by Michael Lewis
 -   _Flash Boys_ by Michael Lewis
 -   _The Undoing Project_ by Michael Lewis
--   \_"Anna Karenina" In Our Time: Seeing More Wisely" by Gary Saul Morson
+-   _"Anna Karenina" In Our Time: Seeing More Wisely_ by Gary Saul Morson
 -   _Amusing Ourselves to Death_ by Neil Postman
 -   _Life Inc: How Corporatism Conquered the World, and How We Can Take It Back_ by Douglas Rushkoff<sup>\*</sup>
 -   _Present Shock: When Everything Happens Now_ by Douglas Rushkoff<sup>\*</sup>
