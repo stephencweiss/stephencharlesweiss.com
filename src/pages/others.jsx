@@ -12,6 +12,7 @@ function Others() {
                     `random`,
                     `directory`,
                     `stats`,
+                    `reviews`,
                     `xkcd`,
                 ]}
             />
@@ -19,6 +20,9 @@ function Others() {
             <p>links to the other pages on this site.</p>
             <ColumnLinkWrapper>
                 <ul>
+                    <ListedLink key="annualreviews" to={'/annual-reviews'}>
+                        annual reviews
+                    </ListedLink>
                     <ListedLink key="books" to={'/books'}>
                         books
                     </ListedLink>
