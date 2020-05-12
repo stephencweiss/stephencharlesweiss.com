@@ -17,7 +17,7 @@ def split_string(string, size):
   return [string[i:i+size] for i in range(0, len(string), size)]
 ```
 
-Let’s break this down (for a summary of the different parts of the syntax, see here):
+Let’s break this down (for a summary of the different parts of the syntax, refer to my previous post on [list comprehension basics](../../2020-06-11/python-list-comprehension)):
 
 1. This is using list comprehension to return a new list.
 2. The expression is `string[i:i+size]` - which is a slice of the input from `i` to `i+size` (where size is the length of the chunk)
