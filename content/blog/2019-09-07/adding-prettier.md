@@ -39,7 +39,7 @@ In VSCode open up `settings.json` - the JSON file that stores all of your custom
 
 Make sure the following two lines are present:
 
-```
+```json:title=/Library/Application\/Support/Code/User/settings.json"
 "prettier.requireConfig": true,
 "editor.formatOnSave": true,
 ```
