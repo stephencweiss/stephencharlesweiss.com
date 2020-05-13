@@ -23,7 +23,7 @@ export default function About(props) {
             <ul>
                 <li key="write">
                     I write a lot, mostly about things I'm learning, which
-                    lately has been a lot of coding, at
+                    lately has been a lot of coding, at&nbsp;
                     <Link to={'/blog'}>/*code-comments*/</Link>.
                 </li>
                 <li key="public">
