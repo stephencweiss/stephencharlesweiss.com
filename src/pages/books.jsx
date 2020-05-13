@@ -10,7 +10,13 @@ function Books(props) {
         <Layout>
             <SEO title="Books" keywords={['reading', 'notes', 'books']} />
             <h1>books</h1>
-            <p>some books I've read and written about.</p>
+            <p>
+                some books I've read and written about. see other books I've
+                read in my&nbsp;
+                <Link to="/list/bookshelf">bookshelf</Link> and those I'm
+                planning to read on my&nbsp;
+                <Link to="/list/reading-list">reading list</Link>.
+            </p>
             <ColumnLinkWrapper>
                 <ul>
                     {books.map(({ node }) => {
@@ -24,12 +30,6 @@ function Books(props) {
                     })}
                 </ul>
             </ColumnLinkWrapper>
-            <p>
-                See other books I've read in my&nbsp;
-                <Link to="/list/bookshelf">bookshelf</Link> and those I'm
-                planning to read on my&nbsp;
-                <Link to="/list/reading-list">reading list</Link>.
-            </p>
             <Bio />
         </Layout>
     )
