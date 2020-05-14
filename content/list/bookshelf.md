@@ -8,15 +8,20 @@ tags: ['reading', 'books']
 
 ## Actively Reading
 
--   _Ancillary Sword_ by Ann Leckie
--   _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
+-   _The Source_ by James Michener
+-   _Writing for Software Developers_ by Philip Kiely
 -   _How To Solve It_ by G. Polya
 
 Below are the books I've read since ~January 2019. I read books before then, but I wasn't as dilligent about tracking them. Thanks to [Marielle Foster](https://github.com/mariellefoster/marf-books) for showing me the way!
 
 ## 2020
 
-YTD: 14
+YTD: 16
+
+### _May 2020_
+
+-   _Ancillary Sword_ by Ann Leckie
+-   _Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs_ by John Doerr, Larry Page
 
 ### _April 2020_
 

@@ -92,7 +92,6 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _The Fires of Spring_ by James Michener
 -   _Centennial_ by James Michener
 -   _Space_ by James Michener
--   _The Source_ by James Michener
 -   _Nome Trilogy, Book I: Truckers_ by Terry Pratchett<sup>\*</sup>
 -   _Nome Trilogy, Book II: Diggers_ by Terry Pratchett<sup>\*</sup>
 -   _Nome Trilogy, Book III: Wings_ by Terry Pratchett<sup>\*</sup>
