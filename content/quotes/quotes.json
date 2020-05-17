@@ -700,5 +700,12 @@
         "attribution": "Albert Einstein",
         "source": "Brain.fm",
         "tags": ["prudence", "ambition", "safety", "responsibility"]
+    },
+    {
+        "text": "Simplicity is prerequisite for reliability.",
+        "attribution": "Edsger W. Dijkstra",
+        "source": "Practical Go: Real world advice for writing maintainable Go programs",
+        "url": "https://dave.cheney.net/practical-go/presentations/qcon-china.html"
+        ,"tags": ["craftsmanship","simplicity","reliability"]
     }
 ]
