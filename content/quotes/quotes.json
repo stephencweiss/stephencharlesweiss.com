@@ -705,7 +705,13 @@
         "text": "Simplicity is prerequisite for reliability.",
         "attribution": "Edsger W. Dijkstra",
         "source": "Practical Go: Real world advice for writing maintainable Go programs",
-        "url": "https://dave.cheney.net/practical-go/presentations/qcon-china.html"
-        ,"tags": ["craftsmanship","simplicity","reliability"]
+        "url": "https://dave.cheney.net/practical-go/presentations/qcon-china.html",
+        "tags": ["craftsmanship", "simplicity", "reliability"]
+    },
+    {
+        "text": "I can’t think of a sadder way to die than with the knowledge that I never showed up in this world as who I really am. I can’t think of a more graced way to die than with the knowledge that I showed up here as my true self, the best I knew how, able to engage life freely and lovingly because I had become fierce with reality.",
+        "attribution": "Parker J Palmer",
+        "url": "https://alearningaday.blog/2020/05/18/showing-up-as-we-really-are/",
+        "tags": ["life", "legacy", "honesty", "self"]
     }
 ]
