@@ -1,7 +1,7 @@
 ---
 title: 'Reading In Chunks'
 date: '2020-04-24'
-publish: '2020-05-22'
+publish: '2020-05-23'
 category: ['musings']
 tags: ['reading']
 ---
