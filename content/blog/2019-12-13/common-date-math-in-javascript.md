@@ -58,10 +58,10 @@ What about going 60 days into the future or the past?
 We've already talked about the parts necessary.
 ```javascript
 const testDate = new Date()
-testDate.setDate(testDate.getDate() + 60) 
+testDate.setDate(testDate.getDate() + 60)
 ```
 
-Remember, `setDate` starts at 1, the first day of the month. So, here `testDate.getDate() + 60` is 60 plus days on top of the day for the current day of `testData`. 
+Remember, `setDate` starts at 1, the first day of the month. So, here `testDate.getDate() + 60` is 60 plus days on top of the day for the current day of `testData`.
 
 On December 13, then that's 13+60. Said another way,:
 ```javascript
@@ -74,7 +74,7 @@ const testDate = new Date();
 testDate.setDate(testDate.getDate() - 60)
 ```
 
-Again, imagining the day this is run is December 13th, `testDate.getDate()` returns 13. On January 22nd, it would be 22. 
+Again, imagining the day this is run is December 13th, `testDate.getDate()` returns 13. On January 22nd, it would be 22.
 
 Then subtracting 60, we get -47.
 
@@ -83,7 +83,9 @@ Which leaves Javascript to evaluate:
 testDate.setDate(-47)
 ```
 
-When a negative number is passed into `setDate()`, it begins counting from the last day of the previous month. 
+When a negative number is passed into `setDate()`, it begins counting from the last day of the previous month.
+
+In addition to `setDate()`, there's also `setMinutes()` and `setSeconds()`.
 
 ## Wrap Up
 These are just a few simple examples of how to use the built-in functionality of Javascript's date object. There are plenty more.
