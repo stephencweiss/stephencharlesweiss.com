@@ -1,3 +1,9 @@
+---
+title: 'uses'
+date: '2020-05-23'
+publish: '2020-05-23'
+tags: ['uses','products']
+---
 things i use in no particular order
 
 
