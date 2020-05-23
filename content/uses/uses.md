@@ -17,6 +17,8 @@ pen & paper
 apps
 - [Bear](https://bear.app/)
 - [Brave Browser](https://brave.com/)
+- [iTerm2](https://www.iterm2.com/)
+- [Magnet](https://magnet.crowdcafe.com/)
 - [Spark Mail](https://sparkmailapp.com/)
 - [Things](https://culturedcode.com/things/)
 - [VS Code](https://code.visualstudio.com/)
