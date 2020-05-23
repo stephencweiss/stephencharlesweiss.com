@@ -1,7 +1,7 @@
 ---
 title: 'Better Form Submissions: Submit With POST'
 date: '2020-04-26'
-publish: '2020-05-23'
+publish: '2020-07-09'
 category: ['programming']
 tags: ['forms','html','preventdefault','onsubmit','form submission']
 ---
