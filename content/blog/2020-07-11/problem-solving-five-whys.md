@@ -15,3 +15,7 @@ Regardless of the problem, it was always the same process. Take a problem. Break
 The five whys, which is the process of interrogating a problem in search of a "root" cause by asking _why_ five times, is surprisingly helpful -- not necessarily in finding the root cause of a problem, there's some debate about whether it achieves that goal, but certainly in identifying a path forward.
 
 When you ask why, or break a problem down into smaller parts, each iteration leads to a deeper understanding of the problem -- which, when it's time to plan an approach, is _surprisingly_ helpful - just like it was surprising how helpful the feelings wheel was in identifying appropriate responses based on a deeper understanding of emotions.
+
+> The monster under the bed is scary because you can't see it.
+
+With the five whys (or the feeling wheel, or the digging deeper), that what we're doing: lifting the sheets to see the monster and when we do it's not so scary after all!
