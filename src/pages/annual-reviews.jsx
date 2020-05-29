@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { Bio, ColumnLinkWrapper, Layout, SEO, ListedLink } from '../components'
 
 function AnnualReviews(props) {
-    console.log({props})
     const reviews = props.data.annualreviews.edges
 
     return (
