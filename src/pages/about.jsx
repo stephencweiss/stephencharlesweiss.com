@@ -29,16 +29,16 @@ export default function About(props) {
                 <li key="public">
                     I believe in working in public, so as much as possible, you
                     can find my experiments and projects on&nbsp;
-                    <Link to={'https://github.com/stephencweiss'}>Github</Link>.
+                    <a href={'https://github.com/stephencweiss'}>Github</a>.
                 </li>
                 <li key="reading">
                     I like reading too. I keep a&nbsp;
                     <Link to={'/list/bookshelf'}>reading list</Link> of what
                     I've read, as well as what I'm <Link to={'/list/reading-list'}>planning to read</Link>. Check it
                     out. I'm always looking for suggestions. Thank you&nbsp;
-                    <Link to={'https://github.com/mariellefoster/marf-books'}>
+                    <a href={'https://github.com/mariellefoster/marf-books'}>
                         Marielle for setting an incredible example
-                    </Link>
+                    </a>
                     .
                 </li>
             </ul>

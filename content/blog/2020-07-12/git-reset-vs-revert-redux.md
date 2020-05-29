@@ -1,7 +1,7 @@
 ---
 title: 'Git Reset Vs. Revert...Redux'
 date: '2020-04-29'
-publish: '2020-05-31'
+publish: '2020-07-12'
 category: ['programming']
 tags: ['git', 'git reset','git revert','git undo']
 ---

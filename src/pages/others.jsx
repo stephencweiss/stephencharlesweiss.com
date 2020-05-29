@@ -8,6 +8,7 @@ function Others() {
                 title={'others'}
                 keywords={[
                     `lists`,
+                    `blogroll`,
                     `books`,
                     `random`,
                     `directory`,
