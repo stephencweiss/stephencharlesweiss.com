@@ -40,13 +40,13 @@ function findActiveOption(menuOptions, location) {
             option.active = true
         } else if (label === 'about' && location.pathname === path) {
             option.active = true
-        } else if (label === 'blog' && location.pathname.includes(path)) {
+        } else if (label === 'blog' && location.pathname.includes(path) && !location.pathname.includes('blogroll')) {
             option.active = true
         } else if (
             label === 'other' &&
             location.pathname !== '/' &&
             !location.pathname.includes('about') &&
-            !location.pathname.includes('blog')
+            (!location.pathname.includes('blog') || location.pathname.includes('blogroll'))
         ) {
             option.active = true
         } else {
