@@ -23,6 +23,9 @@ function Others() {
                     <ListedLink key="annualreviews" to={'/annual-reviews'}>
                         annual reviews
                     </ListedLink>
+                    <ListedLink key="blogroll" to={'/blogroll'}>
+                        blogroll
+                    </ListedLink>
                     <ListedLink key="books" to={'/books'}>
                         books
                     </ListedLink>
