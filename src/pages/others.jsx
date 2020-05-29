@@ -8,6 +8,7 @@ function Others() {
                 title={'others'}
                 keywords={[
                     `lists`,
+                    `blogroll`,
                     `books`,
                     `random`,
                     `directory`,
@@ -22,9 +23,6 @@ function Others() {
                 <ul>
                     <ListedLink key="annualreviews" to={'/annual-reviews'}>
                         annual reviews
-                    </ListedLink>
-                    <ListedLink key="blogroll" to={'/blogroll'}>
-                        blogroll
                     </ListedLink>
                     <ListedLink key="books" to={'/books'}>
                         books
