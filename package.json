@@ -72,7 +72,7 @@
     "main": "n/a",
     "scripts": {
         "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
-        "build": "gatsby build",
+        "build": "yarn run site-stats && gatsby build",
         "clean": "rm -rf .cache && rm -rf public",
         "dev": "gatsby develop",
         "develop": "yarn run dev",
@@ -83,7 +83,7 @@
         "nofilter": "nofilter='true' yarn run dev",
         "preview": "yarn run nofilter",
         "start": "yarn run develop",
-        "site-stats": "cloc . --exclude-dir=node_modules --md > ./content/site-stats/current-state.md",
+        "site-stats": "cloc . --exclude-dir=node_modules --md > ./content/stats/current-stats.md",
         "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
     },
     "husky": {
