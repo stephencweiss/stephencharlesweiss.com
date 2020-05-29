@@ -1,5 +1,11 @@
-things i use in no particular order
+---
+title: 'Uses'
+date: '2020-05-09'
+category: ['lists']
+tags: ['reading', 'books']
+---
 
+this is a list of things i use in no particular order. it's my contribution to the list Wes Bos maintains for [uses.tech](https://uses.tech)
 
 tech
 - Macbook pro 16-inch 2019
@@ -23,3 +29,4 @@ apps
 
 random
 - [Glerups - The boot with leather sole](https://www.glerups.com/products/ladies-gents/the-boot-with-leather-sole/forest/)
+- [Patagonia - Better Sweater Fleece Jacket](https://www.patagonia.com/product/mens-better-sweater-fleece-jacket/25528.html?dwvar_25528_color=STH&cgid=collection-better-sweaters-mens)
