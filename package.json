@@ -39,7 +39,7 @@
         "react-dom": "^16.5.1",
         "react-helmet": "^5.2.0",
         "react-use": "^13.22.2",
-        "remark-grid-tables": "^1.6.1",
+        "remark-grid-tables": "^2.1.1",
         "styled-theming": "^2.2.0",
         "use-debounce": "^3.1.0"
     },
