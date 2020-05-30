@@ -3,7 +3,7 @@ title: 'Sliding Window Technique'
 date: '2020-02-22'
 publish: '2020-03-11'
 category: ['programming']
-tags: ['algorithms','optimization','big o notation','time complexity','iterables']
+tags: ['algorithms','optimization','big o notation','time complexity','iterables', 'cs fundamentals']
 ---
 ## What Is The Sliding Window Technique?
 
