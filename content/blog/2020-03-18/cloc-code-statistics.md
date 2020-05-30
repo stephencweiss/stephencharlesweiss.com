@@ -2,8 +2,9 @@
 title: 'Cloc: Code Base Analysis'
 date: '2020-02-28'
 publish: '2020-03-18'
+updated: ['2020-05-30']
 category: ['programming']
-tags: ['npm', 'package discovery', 'counter', 'lines of code']
+tags: ['npm', 'package discovery', 'counter', 'cloc', 'lines of code']
 ---
 
 Today is another entry in my [Package Discovery](../../../tags/package-discovery/) series. The topic is project statistics with `cloc`.
@@ -95,6 +96,50 @@ The first step was adding a new script to my `package.json`, which I then plugge
   "build": "yarn run pre-build && gatsby build",
 }
 ```
+
+> **Update**: I made a small tweak to my `pre-build` script (which now cleans _and_ compiles the stats). Instead of excluding a single directory, I wanted to exclude multiple, so I went in search of a way to do that.
+>
+> According to this conversation on Stack Overflow, it seems that the best way to do that is to list a series of files in a `.clocignore` file and then use a subshell to process them.
+>
+> The updated script is:
+>
+> ```json:title=package.json
+> "scripts": {
+> "site-stats": "cloc . --exclude-dir=$(tr '\n' ',' < .clocignore) --md > ./content/stats/current-stats.md",
+>   "pre-build": "yarn clean && yarn site-stats",
+>   "build": "yarn pre-build && gatsby build",
+> }
+> ```
+>
+> The `.clogignore` file is just a few lines:
+>
+> ```txt:title=.clogignore
+> node_modules
+> public
+> .netlify
+> .cache
+> reduxcache*
+> ```
+>
+> The results are quite different now that I'm excluding additional files (particularly the generated HTML):
+>
+> | cloc | github.com/AlDanial/cloc v 1.85 T=0.37 s (1637.0 files/s, 120469.9 lines/s) |
+> | ---- | --------------------------------------------------------------------------- |
+>
+>
+> | Language   |    files |    blank |  comment |     code |
+> | :--------- | -------: | -------: | -------: | -------: |
+> | Markdown   |      543 |    10077 |        0 |    30289 |
+> | JavaScript |       22 |       85 |       29 |     1232 |
+> | JSX        |       28 |       99 |        8 |     1136 |
+> | JSON       |        2 |        0 |        0 |      810 |
+> | CSS        |        3 |       70 |       56 |      434 |
+> | YAML       |        2 |        3 |        0 |       28 |
+> | SVG        |        3 |        0 |        2 |       19 |
+> | --------   | -------- | -------- | -------- | -------- |
+> | SUM:       |      603 |    10334 |       95 |    33948 |
+>
+> Also, I've gotten a new computer since I initially started this. Evidently it's 10x faster!
 
 The `pre-build` script [redirects the output to `current-state.md` (via the `>`)](../../2019-12-20/angled-brackets-bash-scripting/), which I then pull in from the file system like any other file.
 
