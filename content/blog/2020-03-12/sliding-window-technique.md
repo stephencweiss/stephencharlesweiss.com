@@ -11,7 +11,7 @@ The sliding window technique refers to a way to solve a problem using dynamic pr
 
 [According to this walkthrough on the approach](https://medium.com/outco/how-to-solve-sliding-window-problems-28d67601a66), good candidates for the sliding window approach can be identified due to:
 1. The use of iterable data structures (e.g., arrays, strings, lists, etc.)
-2. The problem evaluates a subrange for a longest, shortest, target value (e.g., the longest sequence of continous values, or the maximum sum of a subrange)
+2. The problem evaluates a subrange for a longest, shortest, target value (e.g., the longest sequence of continuous values, or the maximum sum of a subrange)
 3. There is an apparent (and sub-optimal) brute force approach that would require O(n<sup>2</sup>) or O(2n) complexity.
 
 ## Visualizing The Window
@@ -47,4 +47,3 @@ The current approach increments the starting index by one, but it could be done 
 ## Conclusion
 
 As is so often the case with algorithmic enhancements, half of the battle is knowing that the solution exists. I had never heard of the sliding window technique before today, but now I have a new strategy for optimizing a whole new class of problems.
-
