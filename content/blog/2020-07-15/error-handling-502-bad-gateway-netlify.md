@@ -8,7 +8,7 @@ tags: ['netlify', 'error handling', 'debugging', '502', 'bad gateway']
 
 The root cause of this problem appears to be varied as it's been reported in a number of different tickets ([484](https://github.com/netlify/cli/issues/484), [745](https://github.com/netlify/cli/issues/745), and on [Netlify's Forum](https://community.netlify.com/t/all-of-a-sudden-netlify-deploy-throws-the-following-error-warning-texthttperror-502-bad-gateway/12973/6)).
 
-Ultimatel though, the issue is that Netlify is timing out during the build process.
+Ultimately though, the issue is that Netlify is timing out during the build process.
 
 For ad hoc changes, I'm building locally, so the best solution I've found is to increase the allowed time.
 
