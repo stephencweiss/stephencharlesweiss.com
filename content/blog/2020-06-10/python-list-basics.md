@@ -51,7 +51,7 @@ To find the number of elements in a list, we have `len` and the occurrences of a
 
 For example:
 
-```python
+```python:title=list_counting.py
 >>> my_list = ['cat','bear','dog','dog','elephant']
 >>> my_list
 ['cat', 'bear', 'dog', 'dog', 'elephant']
@@ -67,7 +67,7 @@ Slicing can be used to retrieve portions of an existing list or mutate a list.
 
 For example:
 
-```python
+```python:title=list_slicing.py
 >>> a = [1,2,3,4,5,6,7,8,9]
 >>> a[4:7] # starts at the 4th index and continues to the 7th, though the end is not included
 [5, 6, 7]
@@ -88,9 +88,27 @@ For example:
 [1, 2, 1002, [67, 78], 7, 8, 9]
 ```
 
+## Combining Two Lists
+
+Combining two lists is as easy as using the `.extend` method:
+
+```python:title=list_combination.py
+>>> a = [1,2,3,4,5]
+>>> b = [6,7,8,9,10]
+>>> a.extend(b)
+>>> a
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> b
+[2, 3, 4, 5]
+```
+
+This is _similar_ to using the spread parameter in Javascript, e.g., `a = [...a, ...b]`, that is, it mutates the original list `a` (though not `b`).
+
 ## Wrap Up
 
-Python lists are very interesting, and this is only a smattering of the use cases. There are other methods that are useful like `extend`, `clear`, `reverse`, and `copy`. See [the docs](https://docs.python.org/3/tutorial/datastructures.html?highlight=lists#more-on-lists) for more on those and other useful tips - like list comprehension!
+Python lists are very interesting, and this is only a smattering of the use cases. There are other methods that are useful like `clear`, `reverse`, and `copy`. See [the docs](https://docs.python.org/3/tutorial/datastructures.html?highlight=lists#more-on-lists) for more on those and other useful tips - like list comprehension!
+
+It's worth noting that the Python community seems to be much comfortable with mutating in place than what I grew accustomed to within the React community where reducers were an important concept for managing state transformations.
 
 ## Footnotes
 
