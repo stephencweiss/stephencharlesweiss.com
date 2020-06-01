@@ -178,29 +178,60 @@ What if we used a stack instead of the windows? Each If current value is greater
 With psuedo code first (with a known bug, I'll get to that in a second):
 
 ```
-// establish a stack, max, and index
-// while there are items remaining in a list
-  // if the stack is empty _or_ the top of the stack is less than the current val
-		// push the current val to the stack
-		// increment the index and continue
-  // else we need to pop things off _until_ the above condition is true
-		// when we pop off a value from the stack, use it to calculate an area and store the largest in the max
+// Establish a stack, max, and index
+// While there are items remaining in a list
+  // If the stack is empty _or_ the top of the stack is less than the current val
+        // Push the current val to the stack
+        // Increment the index and continue
+  // Else we need to pop things off _until_ the above condition is true
+        // When we pop off a value from the stack, use it to calculate an area and store the largest in the max
 ```
 
 Toward the end there, I kind of waved my hands and said we'd be able to calculate an area, but _how_? Well, here's the insight that it took me a long while to understand: the stack stores _indices_ not values. This is important for understanding the current width of an area. Slight refinement of the logic before getting into the code:
 
 ```
-// establish a stack, max, and index
-// while there are items remaining in a list
-  // if the stack is empty _or_ the top of the stack is less than the current val
-		// push the current _index_ to the stack
-		// increment the index and continue
-  // else
-		// take the top off the stack
-		// look up the value in the list based on the top's value (which is an index)
-		// the width is the difference between our index and last value remaining in the stack (minus an additional one) _or_ if the stack is empty, it means we're about to reach a new low, a nadir. so, using the current index as the width - we see the long, low rectangle to that point
-		// repeat this process until the stack is empty or the next value is greater than that indicated by the index value at the top of the stack
+// Establish a stack, max, and index
+// While there are items remaining in a list
+    // If the stack is empty _or_ the top of the stack is less than the current val
+        // Push the current _index_ to the stack
+        // Increment the index and continue
+    // Else
+        // Take the top off the stack
+        // Look up the value in the list based on the top's value (which is an index)
+        // The width is the difference between our index and last value remaining in the stack (minus an additional one because we want to exclude this position) _or_ if the stack is empty, it means we're about to reach a new low, a nadir. Using the current index as the width - we see the long, low rectangle to that point
+        // Repeat this process until the stack is empty or the next value is greater than that indicated by the index value at the top of the stack
 ```
+
+The intuition here took me a while to understand, but once it hit, it was like a lightning bolt. In this problem, we only care about rectangles that we can create - which means that if the heights continue to increase, we _cannot_ create a rectangle looking backwards (our current height is _above_ the previous peak), so we need to wait until there's a decline to evaluate the area. Further more, once we find a height, we know that the width is based on our current position (which is less than the top) _and_ the previous position in the stack which is necessarily lower.
+
+Let's look at a contrived example in some detail.
+
+```title=histogram.txt
+        x
+        x x   x
+    x   x x x x
+    x   x x x x
+    x   x x x x
+  x x x x x x x
+x x x x x x x x   x
+-------------------
+1 2 5 2 7 6 5 6 0 1 - height
+0 1 2 3 4 5 6 7 8 9 - position
+```
+
+Jumping ahead to our first descent (position 3), our stack is `[0,1,2]`. Since we're descending, we know we can find a rectangle's area. Our height is the height we saw at the top of the stack (at position 2 our height is 5) by a width of 1. The width is found by the space between our current position (3) less the _new_ top of the stack - we popped position two off the stack to get its height - position 1, minus 1. The extra minus one accounts for the fact that the position on the top of the stack is _below_ our current height and so should be excluded. So, we find an area of 5x1.
+
+Now that position 2 is no longer on the stack, we compare position 3's height (2) to the top of the stack (position 1), and note that it's not less, so we add position 3 to the stack, now `[0,1,3]`, and move on. (notice that we have not looked at the 2x2 or 2x3 rectangles available between positions 1 and 3. we _never_ will. This is because by definition, if the next value is _larger_ than position 3, we will ultimately be able to find an even larger rectangle -- this is the _key_ to the monotonic stack.)
+
+On the note of _when_ we will actually look at the 2x7 rectangle formed between positions 1 and 7, which is the _largest_ of the 2x rectangles: it will be at position 8, the nadir, when we pop _everything_ off the stack. Before we get there though, let's look at our _largest_ rectangle (which is also found when we get to position 8).
+
+When we first arrive at position 8, we have a stack of `[0,1,3,6,7]`. Position 8's height, 0, is clearly less than that of position 7 (6), so we find the area available (6x1) and pop position 7 off the stack (now `[0,1,3,6]`). Still at position 8, the next comparison is with position 6, the actual peak of our largest rectangle (which we can tell by visually inspecting the diagram).
+
+Our height is defined by the height at position 6 (5). Our width is the difference of the _new_ top of the stack (3) from our current position (8), less one (4). This gives us a total of 20.
+
+We continue along like this, popping off the remaining elements in our stack (3, 1, and 0 respectively) until we have an empty stack. Once we get there, we're able to add pieces back to the stack, beginning with position 8 (height 0).
+
+We end with a stack of `[8,9]`.
 
 Putting this into code, might look like:
 
@@ -208,19 +239,19 @@ Putting this into code, might look like:
 var largestRectangleArea = function(heights) {
     let stack = [] // tracks _indices_
     let max = 0
-    let index = 0
-    while (index < heights.length) {
-        const current = heights[index]
-        const stackPeekVal = heights[stack[stack.length - 1]] // if the stack is empty, stackPeekVal is undefined
-        if (stack.length == 0 || stackPeekVal <= current) {
-            stack.push(index)
-            index += 1
+    let currentPosition = 0
+    while (currentPosition < heights.length) {
+        const currentHeight = heights[currentPosition]
+        const stackPeekHeight = heights[stack[stack.length - 1]] // if the stack is empty, stackPeekHeight is undefined
+        if (stack.length == 0 || stackPeekHeight <= currentHeight) {
+            stack.push(currentPosition)
+            currentPosition += 1
         } else {
             const top = stack.pop()
             const height = heights[top]
             const width = stack.length
-                ? index - stack[stack.length - 1] - 1
-                : index
+                ? currentPosition - stack[stack.length - 1] - 1
+                : currentPosition
             const area = height * width
             max = Math.max(max, area)
         }
@@ -229,7 +260,7 @@ var largestRectangleArea = function(heights) {
 }
 ```
 
-There's another bug here though. What if the stack _never_ decreases? Current will always be larger than our `stackPeekVal` and we'll just return 0 with a lot of unprocessed values in our stack!
+Note that we don't _want_ any remaining values in our stack. In fact, while we got away with it in the above example, it could lead to wrong answers. For example, what if the stack _never_ decreases? The current position will always be larger than our `stackPeekHeight` and we'll just return 0 with a lot of unprocessed values in our stack!
 
 One way to fix that is to do a check at the end to ensure that our stack is empty before returning, and if it's not, process it on the way down. For example:
 
@@ -239,7 +270,9 @@ var largestRectangle = function(heights) {
     while (stack.length) {
         const top = stack.pop()
         const height = heights[top]
-        const width = stack.length ? index - stack[stack.length - 1] - 1 : index
+        const width = stack.length
+            ? currentPosition - stack[stack.length - 1] - 1
+            : currentPosition
         const area = height * width
         max = Math.max(max, area)
     }
@@ -254,41 +287,38 @@ var largestRectangleArea = function(heights) {
     if (!heights || !heights.length) return 0
     let stack = [] // tracks _indices_
     let max = 0
-    let index = 0
-    while (index < heights.length) {
-        const current = heights[index]
-        const stackPeekVal = heights[stack[stack.length - 1]] // if the stack is empty, stackPeekVal is undefined
-        if (stack.length == 0 || stackPeekVal <= current) {
-            // increase the index on the way _up_, a consequence of this, however, is that the index is one place ahead
-            stack.push(index)
-            index += 1
+    let currentPosition = 0
+    while (currentPosition < heights.length) {
+        const currentHeight = heights[currentPosition]
+        const stackPeekHeight = heights[stack[stack.length - 1]] // if the stack is empty, stackPeekHeight is undefined
+        if (stack.length == 0 || stackPeekHeight <= currentHeight) {
+            stack.push(currentPosition)
+            currentPosition += 1
         } else {
             const top = stack.pop()
-            const area = calculateArea({ stack, top, heights, index })
+            const area = calculateArea({ stack, top, heights, currentPosition })
             max = Math.max(max, area)
         }
     }
     while (stack.length) {
         const top = stack.pop()
-        const area = calculateArea({ stack, top, heights, index })
+        const area = calculateArea({ stack, top, heights, currentPosition })
         max = Math.max(max, area)
     }
     return max
 }
 
-function calculateArea({ stack, top, heights, index }) {
+function calculateArea({ stack, top, heights, currentPosition }) {
     const height = heights[top]
-    const width = stack.length ? index - stack[stack.length - 1] - 1 : index
+    const width = stack.length
+        ? currentPosition - stack[stack.length - 1] - 1
+        : currentPosition
     return height * width
 }
 ```
 
 ## Wrap Up
 
-Using a monotonic stack is a great way to keep track of the distance between elements for comparisons.
+Using a monotonic stack is a great way to keep track of the distance between elements for comparisons. Typically these are used to find the next neighbor that meets a condition. In our case, it was the next neighbor who was less than our current height (on the way up). When we got there, we found the area.
 
-In our case it was to calculate the maximum area of a rectangle, but it can also be used for finding the "next largest number" (or a variant) such Labula Dong discussed with [heights](https://labuladong.gitbook.io/algo-en/ii.-data-structure/monotonicstack) or as Akhil wrote about on Dev.to [daily temperatures](https://dev.to/akhilpokle/daily-temperature-and-monotonic-stack-2223).
-
-## Footnotes
-
--   <sup>1</sup>
+Some other examples from around the internet that I found helpful in understanding these stacks include Labula Dong's discussion on [heights](https://labuladong.gitbook.io/algo-en/ii.-data-structure/monotonicstack) and Akhil's Dev.to post on [daily temperatures](https://dev.to/akhilpokle/daily-temperature-and-monotonic-stack-2223).
