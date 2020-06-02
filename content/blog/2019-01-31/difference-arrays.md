@@ -7,7 +7,7 @@ tags: ['difference arrays', 'data structures', 'arrays']
 
 # Difference Arrays
 
-Imagine you’re given a problem that says for each "query" in the format `[a,b,k]` add `k` to all elements of an array of zeros with a length of `n`, between indices `a` and `b` inclusive.<sup>1</sup>
+Imagine you’re given a problem that says for each "query" in the format `[a,b,k]` add `k` to all elements of an array of zeros with a length of `n`, between indices `a` and `b` inclusive.<sup>[1](#footnotes)</sup><a id="fn1"></a>
 
 # Initial Construction
 
@@ -21,13 +21,13 @@ const queries = [[1, 4, 2], [2, 3, 2], [2, 2, 2]]
 So, in our first step, we’re going to add 2 to each index between 1 and 4 inclusive, and so on. This means the array ends up going through the following permutations:
 
 ```
-[0,0,0,0,0,0]
-[0,2,2,2,2,0]
-[0,2,4,4,2,0]
-[0,2,6,4,2,0]
+[0,0,0,0,0,0] // initial set with 6 elements
+[0,2,2,2,2,0] // after applying query 1
+[0,2,4,4,2,0] // after applying query 2
+[0,2,6,4,2,0] // after applying query 3
 ```
 
-If each element in the array represented a height, you might see a bell curve, slightly skewed to its left. Seeing it as a bell curve really helped me understand _why_ you could do this much more efficiently using what Geeks For Geeks calls a Difference Array.<sup>2</sup>
+If each element in the array represented a height, you might see a bell curve, slightly skewed to its left. Seeing it as a bell curve really helped me understand _why_ you could do this much more efficiently using what Geeks For Geeks calls a Difference Array.<sup>[2](#footnotes)</sup><a id="fn2"></a>
 
 ![](./bell-curve.png)
 This approach certainly works, but it’s not very efficient. For _each_ query, we have to iterate over a subsection of the empty array with length n. If we say we have m queries, that gives us a time complexity of `O(n x m)`. We can do better.
@@ -103,5 +103,5 @@ It should be noted that while my example was ordered in that all queries progres
 
 ## Footnotes
 
-- <sup>1</sup> [Array Manipulation | HackerRank](https://www.hackerrank.com/challenges/crush/problem) - Where I first came across the problem
-- <sup>2</sup> [Difference Array | Range update query in O(1) - GeeksforGeeks](https://www.geeksforgeeks.org/difference-array-range-update-query-o1/) - An explanation for _how_ to code the Difference Array
+- <sup>[1](#fn1)</sup> [Array Manipulation | HackerRank](https://www.hackerrank.com/challenges/crush/problem) - Where I first came across the problem
+- <sup>[2](#fn2)</sup> [Difference Array | Range update query in O(1) - GeeksforGeeks](https://www.geeksforgeeks.org/difference-array-range-update-query-o1/) - An explanation for _how_ to code the Difference Array

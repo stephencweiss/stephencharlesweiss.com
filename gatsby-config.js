@@ -116,7 +116,8 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 590,
+                            maxWidth: 650,
+                            showCaptions: true,
                         },
                     },
                     {
@@ -138,7 +139,7 @@ module.exports = {
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
-                            return allMarkdownRemark.edges.map(edge => {
+                            return allMarkdownRemark.edges.map((edge) => {
                                 return Object.assign(
                                     {},
                                     edge.node.frontmatter,
@@ -217,7 +218,7 @@ module.exports = {
                 feeds: [
                     {
                         serialize: ({ query: { site, allMarkdownRemark } }) => {
-                            return allMarkdownRemark.edges.map(edge => {
+                            return allMarkdownRemark.edges.map((edge) => {
                                 return Object.assign(
                                     {},
                                     edge.node.frontmatter,
@@ -296,16 +297,16 @@ module.exports = {
                 resolvers: {
                     // For any node of type MarkdownRemark, list how to resolve the fields` values
                     MarkdownRemark: {
-                        category: node => node.frontmatter.category,
-                        date: node => node.frontmatter.date,
-                        path: node => node.fields.slug,
-                        publish: node => node.frontmatter.publish,
-                        tags: node => node.frontmatter.tags,
-                        title: node => node.frontmatter.title,
-                        updated: node => node.frontmatter.updated,
+                        category: (node) => node.frontmatter.category,
+                        date: (node) => node.frontmatter.date,
+                        path: (node) => node.fields.slug,
+                        publish: (node) => node.frontmatter.publish,
+                        tags: (node) => node.frontmatter.tags,
+                        title: (node) => node.frontmatter.title,
+                        updated: (node) => node.frontmatter.updated,
                     },
                 },
-                filter: node => {
+                filter: (node) => {
                     if (
                         !node.internal.type === 'MarkdownRemark' ||
                         (node &&

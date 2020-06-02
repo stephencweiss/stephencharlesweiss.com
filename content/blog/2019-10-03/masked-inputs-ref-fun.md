@@ -1,6 +1,7 @@
 ---
 title: 'Masking Inputs And More Ref Fun'
 date: '2019-10-03'
+updated: ['2020-05-30']
 category: ['programming']
 tags: ['react-text-mask', 'masking', 'css', 'styled-components', 'ref']
 ---
@@ -58,6 +59,8 @@ From the docs:
 Notice that the render method has an argument `ref` that’s passed along to the `<MyStyledInput>`? That’s provided by the component! There's no need to create a ref in a containing component, no need for `useRef` or `forwardRef`! It's actually quite simple.
 
 Part of my confusion lay in the demonstration of using `innerRef`. As of v4, [`styled-components` do not require an `innerRef`](https://www.styled-components.com/docs/api#deprecated-innerref-prop), however, despite having _read_ the `styled-component` documentation, it still took a conversation with several others to understand that the `innerRef` was part of the `styled-component` api and not the `react-text-mask`. In retrospect should have been more obvious.
+
+> **Update**: As of [v5](https://styled-components.com/docs/faqs#what-do-i-need-to-do-to-migrate-to-v4), `innerRef` has been officially replaced with `ref`.
 
 After all of that, I arrived at a working solution: Masking the input, guiding my users, and providing a consistent user experience across browsers and devices.
 
