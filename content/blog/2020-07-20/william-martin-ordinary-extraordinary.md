@@ -8,24 +8,22 @@ tags: ['william martin', 'joy', 'striving']
 
 The following is an excerpt from William Martin's _The Parent's Tao Te Ching: Ancient Advice for Modern Parents_.
 
-> Do not ask your children
-> to strive for extraordinary lives.
-> Such striving may seem admirable,
-> but it is the way of foolishness.
->
-> Help them instead to find the wonder
-> and the marvel of an ordinary life.
-> Show them the joy of tasting
-> tomatoes, apples and pears.
-> Show them how to cry
-> when pets and people die.
-> Show them the infinite pleasure
-> in the touch of a hand.
->
-> And make the ordinary come alive for them.
-> The extraordinary will take care of itself.
+> Do not ask your children<br/>
+> to strive for extraordinary lives.<br/>
+> Such striving may seem admirable,<br/>
+> but it is the way of foolishness.<br/> > <br/>
+> Help them instead to find the wonder<br/>
+> and the marvel of an ordinary life.<br/>
+> Show them the joy of tasting<br/>
+> tomatoes, apples and pears.<br/>
+> Show them how to cry<br/>
+> when pets and people die.<br/>
+> Show them the infinite pleasure<br/>
+> in the touch of a hand.<br/> > <br/>
+> And make the ordinary come alive for them.<br/>
+> The extraordinary will take care of itself.<br/>
 
-I read two editions of the [_Tao Te Ching_ last year](../../../books), but I have to say that, while an amazing and inspiring text, I never felt the way I felt reading this passage from Martin's book.
+I read two editions of the [_Tao Te Ching_ last year](../../../list/bookshelf#september-2019), but I have to say that, while an amazing and inspiring text, I never felt the way I felt reading this passage from Martin's book.
 
 This is not just good advice for parents. This is good advice for living.
 
