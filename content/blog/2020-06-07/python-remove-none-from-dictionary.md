@@ -1,7 +1,7 @@
 ---
 title: 'Removing Null Values From A Dictionary'
 date: '2020-06-07'
-publish: '2020-07-19'
+publish: '2020-06-06'
 category: ['programming']
 tags: ['python', 'dictionary', 'recursion']
 ---
