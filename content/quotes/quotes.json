@@ -760,5 +760,11 @@
         "url": "https://kinginstitute.stanford.edu/king-papers/documents/address-freedom-rally-cobo-hall",
         "source": "Address at the Freedom Rally in Cobo Hall",
         "tags": ["purpose"]
+    },
+    {
+        "text": "One often meets his destiny on the road he takes to avoid it.",
+        "attribution": "Master Oogway",
+        "source": "Kung Foo Panda",
+        "tags": ["destiny", "fate", "avoidance"]
     }
 ]
