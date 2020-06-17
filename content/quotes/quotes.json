@@ -724,13 +724,13 @@
     {
         "text": "It's nice to look back on your life and see things as lessons and not regrets.",
         "attribution": "Rihanna",
-        "source": "Calm",
+        "source": "Calm App",
         "tags": ["lessons", "awareness", "perspective"]
     },
     {
         "text": "Do not judge each day by the harvest you reap, but by the seeds you plant",
         "attribution": "Robert Louis Stevenson",
-        "source": "Calm",
+        "source": "Calm App",
         "tags": ["growth", "perspective", "harvest"]
     },
     {
@@ -751,8 +751,8 @@
         "text": "Your calm mind is the ultimate weapon against your challenges",
         "attribution": "Bryant McGill",
         "url": "",
-        "source": "Calm",
-        "tags": ["calm", "mindset"]
+        "source": "Calm App",
+        "tags": ["calm App", "mindset"]
     },
     {
         "text": "But if a man has not discovered something that he will die for, he isn't fit to live.",
@@ -766,5 +766,17 @@
         "attribution": "Master Oogway",
         "source": "Kung Foo Panda",
         "tags": ["destiny", "fate", "avoidance"]
+    },
+    {
+        "text": "Trust is choosing to make something important to you vulnerable to the actions of someone else.",
+        "attribution": "Charles Feltman",
+        "url": "https://alearningaday.blog/2020/06/16/trust-and-vulnerability-to-the-actions-of-someone-else/",
+        "tags": ["vulnerability", "trust"]
+    },
+    {
+        "text": "Storms make trees grow deeper roots",
+        "attribution": "Dolly Parton",
+        "source": "Calm App",
+        "tags": ["roots", "identity", "adversity"]
     }
 ]
