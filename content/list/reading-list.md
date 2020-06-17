@@ -66,6 +66,9 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 ### Fiction
 
 -   _Legacy of Orïsha, Book I: Children of Blood and Bone_ by Tomi Adeyemi<sup>\*</sup>
+-   _The Fire Next Time_ by James Baldwin<sup>\*</sup>
+-   _Notes of a Native Son_ by James Baldwin<sup>\*</sup>
+-   _The Founders Trilogy, Book I: Foundryside_ by Robert Jackson Bennett<sup>\*</sup>
 -   _Don Quixote_ by Cervantes
 -   _The Fall_ by Albert Camus<sup>\*</sup>
 -   _Robinson Crusoe_ by Defoe
@@ -76,13 +79,15 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _A Heartbreaking Work of Staggering Genius_ by Dave Eggers
 -   _Madame Bovary_ by Gustav Flaubert
 -   _Too Far Afield_ by Günter Grass
+-   _The Queens of Innis Lear_ by Tessa Gratton <sup>\*</sup>
 -   _A Farewell to Arms_ by Ernest Hemingway
 -   _The Unbearable Lightness of Being_ by Mila Kundera
 -   _Pachinko_ by Min Jin Lee<sup>\*</sup>
 -   _Paper Menagerie_ by Ken Liu<sup>\*</sup>
 -   _Circé_ by Miller
 -   _Beloved_ by Toni Morrison
--   _The Death of Ivan Ilych_ Leo Tolstoy
+-   _Jazz_ by Toni Morrison<sup>\*</sup>
+-   _Tar Baby_ by Toni Morrison<sup>\*</sup>
 -   _Serpico_ by Maas
 -   _The Sculptor_ by Scott McCloud
 -   _Alaska_ by James Michener
@@ -92,6 +97,7 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _The Fires of Spring_ by James Michener
 -   _Centennial_ by James Michener
 -   _Space_ by James Michener
+-   _Riot Baby_ by Tochi Onyebuchi <sup>\*</sup>
 -   _Nome Trilogy, Book I: Truckers_ by Terry Pratchett<sup>\*</sup>
 -   _Nome Trilogy, Book II: Diggers_ by Terry Pratchett<sup>\*</sup>
 -   _Nome Trilogy, Book III: Wings_ by Terry Pratchett<sup>\*</sup>
@@ -105,7 +111,9 @@ I love [reading](../bookshelf), but sometimes it can be challenging to know what
 -   _Quicksilver, The Baroque Cycle Vol. 1_ by Neal Stephenson
 -   _The Confusion, The Baroque Cycle Vol. 2_ by Neal Stephenson
 -   _The System Of The World, The Baroque Cycle Vol. 3_ by Neal Stephenson
+-   _Docile_ by K.M. Szpara <sup>\*</sup>
 -   _Anna Karenina_ by Leo Tolstoy (Garnett translation)
+-   _The Death of Ivan Ilych_ Leo Tolstoy
 -   _The Adventures Of Huckleberry Finn_ by Mark Twain
 -   _The Adventures Of Tom Sawyer_ by Mark Twain
 -   _Infinite Jest_ by David Foster Wallace<sup>\*</sup>
