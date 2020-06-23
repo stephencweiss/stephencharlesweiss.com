@@ -3,15 +3,27 @@ title: 'Pytest Marker Basics'
 date: '2020-06-02'
 publish: '2020-07-17'
 category: ['programming']
-tags: ['python','testing','pytest','marks']
+tags:
+    [
+        'python',
+        'testing',
+        'pytest',
+        'marks',
+        'xfail',
+        'skip',
+        'skipif',
+        'parametrize',
+    ]
 ---
+
 Within Python's testing framework `Pytest`, markers can decorate a test method (i.e. a method which has a name beginning `test_` and inside a file prefixed/suffixed with `test`, e.g., `test_something_awesome.py`).
 
 Pytest provides some built-in markers:
-> * [skip](https://docs.pytest.org/en/latest/skipping.html#skip)  - always skip a test function
-> * [skipif](https://docs.pytest.org/en/latest/skipping.html#skipif)  - skip a test function if a certain condition is met
-> * [xfail](https://docs.pytest.org/en/latest/skipping.html#xfail)  - produce an “expected failure” outcome if a certain condition is met
-> * [parametrize](https://docs.pytest.org/en/latest/parametrize.html#parametrizemark)  to perform multiple calls to the same test function.
+
+> -   [skip](https://docs.pytest.org/en/latest/skipping.html#skip) - always skip a test function
+> -   [skipif](https://docs.pytest.org/en/latest/skipping.html#skipif) - skip a test function if a certain condition is met
+> -   [xfail](https://docs.pytest.org/en/latest/skipping.html#xfail) - produce an “expected failure” outcome if a certain condition is met
+> -   [parametrize](https://docs.pytest.org/en/latest/parametrize.html#parametrizemark) to perform multiple calls to the same test function.
 
 Before digging into _how_ to use these, let's think about _why_ we might use a mark. The built in markers offer some good intuition on this score by seeing what's provided out of the box (though the fact that custom marks can be registered, more on this in a bit, suggests it's not an exhaustive list):
 
@@ -27,7 +39,9 @@ Marks can be applied with a decorator (the `@pytest.mark.xxx()` before a test de
 > def test_the_unknown():
 >     ...
 > ```
+>
 > Alternatively, it is also possible to skip imperatively during test execution or setup by calling the
+>
 > ```python
 > pytest.skip(reason)
 > function:
@@ -39,6 +53,7 @@ Marks can be applied with a decorator (the `@pytest.mark.xxx()` before a test de
 For the remainder of this post I'll be using the decorators. Though a newer concept to me, I find the intent clearer.<sup>1</sup>
 
 ## Markers In Use
+
 I wanted to get a good grasp on the built in markers, so I decided to take an `increment` function and then build up a test suite one test at a time - leveraging markers. The different examples I cover:
 
 1. Define a basic function we want to test
@@ -49,9 +64,10 @@ I wanted to get a good grasp on the built in markers, so I decided to take an `i
 6. Define multiple tests that mix successes and expected failures
 7. Bonus: Multiple tests with _multiple_ marks
 
-All of the code can be found on GitHub.
+All of the code can be found on GitHub in my repo [pytest-example](https://github.com/stephencweiss/pytest-example).
 
 Let's start with a definition of `increment`:
+
 ```python:title=increment.py
 
 def increment(n):
@@ -87,7 +103,9 @@ test_single.py .                                                           [100%
 ```
 
 ### Tests We Expect To Fail
+
 Now that we know it works - let's use markers to say we know what _shouldn't_ work.
+
 ```python:title=test_expect_fail.py
 import pytest
 from main import increment
@@ -98,6 +116,7 @@ def test_increment():
 ```
 
 Testing this, we get the expected 1 (expected) failed:
+
 ```shell
 $ poetry run pytest -rx test_expect_fail.py
 ============================== test session starts ===============================
@@ -113,7 +132,8 @@ XFAIL test_expect_fail.py::test_increment
 =============================== 1 xfailed in 0.03s ===============================
 ```
 
-Note, we passed in the options `-rx`  which provides additional details on the failed tests
+Note, we passed in the options `-rx` which provides additional details on the failed tests
+
 ```shell
 $ pytest --help
 //...
@@ -122,6 +142,7 @@ show extra test summary info as specified by chars: (f)ailed, (E)rror, (s)kipped
 ```
 
 ### Multiple Test Cases
+
 What if we want to have test cases that handle a number of different situations and verify that we've accommodated different situations? This is a good use case for `parametrize`. The parameters are defined in the first position and then a set of scenarios are passed in as a list in the second position.
 
 ```python:title=test_parametrize.py
@@ -161,7 +182,7 @@ Skipping tests doesn't need to be a black and white decision. It can depend on c
 
 If using a boolean as a condition, a `reason` _is_ required.
 
-``` python:title=test_skip.py
+```python:title=test_skip.py
 import pytest
 from main import increment
 
@@ -201,7 +222,7 @@ SKIPPED [1] test_skip.py:14: Condition is True
 
 Now that we've done all of that prep, let's combine them and use `parametrize` with `skip` and `xfail`. The thing to note is that when we want to add a mark, we annotate the parametrized list element:
 
-``` python:title=test_combined.py
+```python:title=test_combined.py
 import pytest
 from main import increment
 
@@ -245,14 +266,13 @@ XFAIL test_combined.py::test_increment[0-0]
 ==================== 3 passed, 2 skipped, 2 xfailed in 0.04s =====================
 ```
 
-
 ### Bonus: Multiple Tests With Multiple Marks
 
 The final example for today is what happens when we want to apply _multiple_ marks to a test (e.g., a `skipif` and `xfail`) - both within parametrized and not.
 
 Note, while this is a slightly contrived example, you can imagine that it would be useful if you've registered custom marks.
 
-``` python:title=test_multiple_combined.py
+```python:title=test_multiple_combined.py
 import pytest
 from main import increment
 
@@ -314,17 +334,20 @@ XFAIL test_multiple_combined.py::test_increment_single_false
 ```
 
 ## Registering Marks
+
 Before closing this out, it's probably worth spending a moment reviewing how to register custom marks.
 
 While it's possible to [register marks in the pytest configuration](https://docs.pytest.org/en/latest/mark.html#registering-marks) I'll focus on the `pytest.ini` approach.
 
 To register a mark for use in your test suite:
+
 1. Create a `pytest.ini` file (in the root of the project)<sup>2</sup>
 2. Under a `[pytest]` section add the markers for your new marks
 3. Use the mark in a test
 4. Optionally raise errors on unknown marks by adding `addopts = --strict-markers` in the `[pytest]` section.
 
 A small example:
+
 ```ini:title=pytest.ini
 [pytest]
 markers =
@@ -333,6 +356,7 @@ markers =
 ```
 
 And then
+
 ```python:title=test_custom_marks.py
 import pytest
 from main import increment
@@ -355,7 +379,7 @@ def test_increment_three():
 
 Notice we have a _third_ mark that is _not_ expected. When we run the tests we receive a warning that `mark_three()` is not registered, however our tests are allowed to run.
 
-``` shell
+```shell
 poetry run pytest -rsx test_custom_marks.py
 ============================== test session starts ===============================
 platform darwin -- Python 3.8.0, pytest-5.4.3, py-1.8.1, pluggy-0.13.1
@@ -374,6 +398,7 @@ test_custom_marks.py:14
 ```
 
 If we add the strict usage to `pytest.ini`:
+
 ```ini:title=pytest.ini
 [pytest]
 addopts = --strict-markers
@@ -383,6 +408,7 @@ markers =
 ```
 
 Now, when we run the test, it errors and yells much more loudly:
+
 ```shell
  poetry run pytest -rsx test_custom_marks.py
 ============================== test session starts ===============================
@@ -397,10 +423,11 @@ _____________________ ERROR collecting test_custom_marks.py ____________________
 ================================ 1 error in 0.06s ================================
 ```
 
-
 ## Conclusion
+
 Okay, that's enough for one day! I hope you learned a thing or two about Pytest and how / why you might use marks for testing your Python code - I know I did!
 
 ## Footnotes
-- <sup>1</sup> Javascript _mostly_ doesn't use decorators, though there is an [RFC](https://github.com/tc39/proposal-decorators) for them and some frameworks, like Angular, use them heavily
-- <sup>2</sup> [Wikipedia](https://en.wikipedia.org/wiki/INI_file) has more on the `.ini` format.
+
+-   <sup>1</sup> Javascript _mostly_ doesn't use decorators, though there is an [RFC](https://github.com/tc39/proposal-decorators) for them and some frameworks, like Angular, use them heavily
+-   <sup>2</sup> [Wikipedia](https://en.wikipedia.org/wiki/INI_file) has more on the `.ini` format.

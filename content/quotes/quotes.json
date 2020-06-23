@@ -713,5 +713,70 @@
         "attribution": "Parker J Palmer",
         "url": "https://alearningaday.blog/2020/05/18/showing-up-as-we-really-are/",
         "tags": ["life", "legacy", "honesty", "self"]
+    },
+    {
+        "text": "There is cause to be thankful even for rebellion. It is an impressive teacher, though a stern and terrible one. [...] The thing worse than rebellion is the thing that causes rebellion.",
+        "attribution": "Frederick Douglass",
+        "url": "https://www.theatlantic.com/culture/archive/2020/06/riots-are-american-way-george-floyd-protests/612466/",
+        "source": "The Double Standard of the American Riot",
+        "tags": ["justice", "rebellion"]
+    },
+    {
+        "text": "It's nice to look back on your life and see things as lessons and not regrets.",
+        "attribution": "Rihanna",
+        "source": "Calm App",
+        "tags": ["lessons", "awareness", "perspective"]
+    },
+    {
+        "text": "Do not judge each day by the harvest you reap, but by the seeds you plant",
+        "attribution": "Robert Louis Stevenson",
+        "source": "Calm App",
+        "tags": ["growth", "perspective", "harvest"]
+    },
+    {
+        "text": "Do not ask your children\nto strive for extraordinary lives.\nSuch striving may seem admirable,\nbut it is the way of foolishness.\n\nHelp them instead to find the wonder\nand the marvel of an ordinary life.\nShow them the joy of tasting\ntomatoes, apples and pears.\nShow them how to cry\nwhen pets and people die.\nShow them the infinite pleasure\nin the touch of a hand.\n\nAnd make the ordinary come alive for them.\nThe extraordinary will take care of itself.",
+        "attribution": "William Martin",
+        "url": "",
+        "source": "The Parent's Tao Te Ching: Ancient Advice for Modern Parents",
+        "tags": [
+            "parenting",
+            "abundancy",
+            "striving",
+            "aspirations",
+            "expectations",
+            "extraordinary"
+        ]
+    },
+    {
+        "text": "Your calm mind is the ultimate weapon against your challenges",
+        "attribution": "Bryant McGill",
+        "url": "",
+        "source": "Calm App",
+        "tags": ["calm App", "mindset"]
+    },
+    {
+        "text": "But if a man has not discovered something that he will die for, he isn't fit to live.",
+        "attribution": "Martin Luther King, Jr.",
+        "url": "https://kinginstitute.stanford.edu/king-papers/documents/address-freedom-rally-cobo-hall",
+        "source": "Address at the Freedom Rally in Cobo Hall",
+        "tags": ["purpose"]
+    },
+    {
+        "text": "One often meets his destiny on the road he takes to avoid it.",
+        "attribution": "Master Oogway",
+        "source": "Kung Foo Panda",
+        "tags": ["destiny", "fate", "avoidance"]
+    },
+    {
+        "text": "Trust is choosing to make something important to you vulnerable to the actions of someone else.",
+        "attribution": "Charles Feltman",
+        "url": "https://alearningaday.blog/2020/06/16/trust-and-vulnerability-to-the-actions-of-someone-else/",
+        "tags": ["vulnerability", "trust"]
+    },
+    {
+        "text": "Storms make trees grow deeper roots",
+        "attribution": "Dolly Parton",
+        "source": "Calm App",
+        "tags": ["roots", "identity", "adversity"]
     }
 ]

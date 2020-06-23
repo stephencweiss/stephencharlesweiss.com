@@ -8,7 +8,8 @@ tags: ['reading', 'books']
 
 ## Actively Reading
 
--   _The Source_ by James Michener
+-   _Go Tell It on the Mountain_ by James Baldwin
+-   _The Source of Self-Regard: Essays, Speeches, Meditations_ by Toni Morrison
 -   _Writing for Software Developers_ by Philip Kiely
 -   _How To Solve It_ by G. Polya
 
@@ -16,7 +17,10 @@ Below are the books I've read since ~January 2019. I read books before then, but
 
 ## 2020
 
-YTD: 16
+YTD: 17
+
+### _June 2020_
+-   _The Source_ by James Michener
 
 ### _May 2020_
 

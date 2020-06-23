@@ -1,7 +1,7 @@
 ---
 title: 'Formatting Strings In Python'
 date: '2020-05-02'
-publish: '2020-06-07'
+publish: '2020-06-06'
 category: ['programming']
 tags:
     [
