@@ -26,14 +26,21 @@ function publishYear(node) {
     return dayjs(publishDate(node)).format('YYYY')
 }
 
-const reducerToMostRecentDateBeforeBuild = (accumulator, curVal) =>
-    curVal &&
-    dayjs(curVal).isAfter(dayjs(accumulator)) &&
-    (BUILD_TIME.isAfter(curVal) || BUILD_TIME.isSame(curVal, 'day'))
-        ? curVal
-        : accumulator
-
 function listDate(node) {
+    return calculateListDate(node).format('YYYY-MM-DD')
+}
+
+function listDay(node) {
+    return calculateListDate(node).format('DD')
+}
+function listMonth(node) {
+    return calculateListDate(node).format('MM')
+}
+function listYear(node) {
+    return calculateListDate(node).format('YYYY')
+}
+
+function calculateListDate(node) {
     const { updated, publish, date } = node.frontmatter
     const allDates = []
     if (updated) allDates.push(...updated)
@@ -43,14 +50,25 @@ function listDate(node) {
     const maxDate = filteredDates
         .map((day) => dayjs(day))
         .reduce(reducerToMostRecentDateBeforeBuild, FAKE_START)
+
     const returnedDate = maxDate && maxDate.isAfter(FAKE_START) ? maxDate : null
-    return dayjs(returnedDate).format('YYYY-MM-DD')
+    return dayjs(returnedDate)
 }
+
+const reducerToMostRecentDateBeforeBuild = (accumulator, curVal) =>
+    curVal &&
+    dayjs(curVal).isAfter(dayjs(accumulator)) &&
+    (BUILD_TIME.isAfter(curVal) || BUILD_TIME.isSame(curVal, 'day'))
+        ? curVal
+        : accumulator
 
 // Need to use module.exports because this is used in node, not just frontend
 module.exports = {
     isPublished,
     listDate,
+    listDay,
+    listMonth,
+    listYear,
     publishDate,
     publishDay,
     publishMonth,
