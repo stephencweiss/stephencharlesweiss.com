@@ -2,57 +2,57 @@ const dayjs = require('dayjs')
 const { BUILD_TIME, FAKE_START } = require('../constants')
 
 function isPublished(node) {
-  const { publish, date } = node.frontmatter
-  if (process.env.nofilter) {
-    return true
-  }
-  return BUILD_TIME.isAfter(publish ? dayjs(publish) : dayjs(date))
+    const { publish, date } = node.frontmatter
+    if (process.env.nofilter) {
+        return true
+    }
+    return BUILD_TIME.isAfter(publish ? dayjs(publish) : dayjs(date))
 }
 
 function publishDate(node) {
-  const { publish, date } = node.frontmatter
-  return publish ? publish : date
+    const { publish, date } = node.frontmatter
+    return publish ? publish : date
+}
+
+function publishDay(node) {
+    return dayjs(publishDate(node)).format('DD')
 }
 
 function publishMonth(node) {
-  return dayjs(publishDate(node))
-    .set('date', 1)
-    .format('YYYY-MM-DD')
+    return dayjs(publishDate(node)).format('MM')
 }
 
 function publishYear(node) {
-  return dayjs(publishDate(node))
-    .set('date', 1)
-    .set('month', 1)
-    .format('YYYY-MM-DD')
+    return dayjs(publishDate(node)).format('YYYY')
 }
 
 const reducerToMostRecentDateBeforeBuild = (accumulator, curVal) =>
-  curVal &&
-  dayjs(curVal).isAfter(dayjs(accumulator)) &&
-  (BUILD_TIME.isAfter(curVal) || BUILD_TIME.isSame(curVal, 'day'))
-    ? curVal
-    : accumulator
+    curVal &&
+    dayjs(curVal).isAfter(dayjs(accumulator)) &&
+    (BUILD_TIME.isAfter(curVal) || BUILD_TIME.isSame(curVal, 'day'))
+        ? curVal
+        : accumulator
 
 function listDate(node) {
-  const { updated, publish, date } = node.frontmatter
-  const allDates = []
-  if (updated) allDates.push(...updated)
-  allDates.push(publish, date)
-  const filteredDates = allDates.filter(day => day)
+    const { updated, publish, date } = node.frontmatter
+    const allDates = []
+    if (updated) allDates.push(...updated)
+    allDates.push(publish, date)
+    const filteredDates = allDates.filter((day) => day)
 
-  const maxDate = filteredDates
-    .map(day => dayjs(day))
-    .reduce(reducerToMostRecentDateBeforeBuild, FAKE_START)
-  const returnedDate = maxDate && maxDate.isAfter(FAKE_START) ? maxDate : null
-  return dayjs(returnedDate).format('YYYY-MM-DD')
+    const maxDate = filteredDates
+        .map((day) => dayjs(day))
+        .reduce(reducerToMostRecentDateBeforeBuild, FAKE_START)
+    const returnedDate = maxDate && maxDate.isAfter(FAKE_START) ? maxDate : null
+    return dayjs(returnedDate).format('YYYY-MM-DD')
 }
 
 // Need to use module.exports because this is used in node, not just frontend
 module.exports = {
-  isPublished,
-  listDate,
-  publishDate,
-  publishMonth,
-  publishYear,
+    isPublished,
+    listDate,
+    publishDate,
+    publishDay,
+    publishMonth,
+    publishYear,
 }
