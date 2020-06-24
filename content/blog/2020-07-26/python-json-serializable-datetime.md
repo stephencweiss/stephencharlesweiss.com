@@ -1,7 +1,7 @@
 ---
 title: 'Serializing Non Serializable Objects In Python'
-date: '2020-06-2'
-published: '2020-07-26'
+date: '2020-06-02'
+publish: '2020-07-26'
 draft: false
 tags: ['json', 'python', 'serializable', 'typeerror', 'datetime']
 category: ['programming']
