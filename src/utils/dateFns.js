@@ -22,6 +22,10 @@ function publishMonth(node) {
     return dayjs(publishDate(node)).format('MM')
 }
 
+function publishMonthLong(node) {
+    return dayjs(publishDate(node)).format('MMMM')
+}
+
 function publishYear(node) {
     return dayjs(publishDate(node)).format('YYYY')
 }
@@ -33,9 +37,15 @@ function listDate(node) {
 function listDay(node) {
     return calculateListDate(node).format('DD')
 }
+
 function listMonth(node) {
     return calculateListDate(node).format('MM')
 }
+
+function listMonthLong(node) {
+    return calculateListDate(node).format('MMMM')
+}
+
 function listYear(node) {
     return calculateListDate(node).format('YYYY')
 }
@@ -68,9 +78,11 @@ module.exports = {
     listDate,
     listDay,
     listMonth,
+    listMonthLong,
     listYear,
     publishDate,
     publishDay,
     publishMonth,
+    publishMonthLong,
     publishYear,
 }
