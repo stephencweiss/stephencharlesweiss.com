@@ -12,7 +12,7 @@ import {
 } from '../components'
 import { useSiteMetadata } from '../hooks'
 
-const BlogHeader = styled.div`
+export const BlogHeader = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -27,7 +27,6 @@ const SearchLink = styled(NavLink)`
     :hover {
         &:before {
             content: '🔎 ';
-
         }
     }
 `
