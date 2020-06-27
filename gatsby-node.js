@@ -4,8 +4,14 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const {
     isPublished,
     listDate,
+    listDay,
+    listMonth,
+    listMonthLong,
+    listYear,
     publishDate,
+    publishDay,
     publishMonth,
+    publishMonthLong,
     publishYear,
 } = require('./src/utils/dateFns')
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
@@ -136,7 +142,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             }
         `
-    ).then(result => {
+    ).then((result) => {
         if (result.errors) {
             throw result.errors
         } else if (result.data.other.edges.length > 0) {
@@ -241,7 +247,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Site Stats ------------------------------------------->
         const siteStats = result.data.stats.edges
         // Create site Stats page(s).
-        siteStats.forEach(stats => {
+        siteStats.forEach((stats) => {
             createPage({
                 path: stats.node.fields.slug,
                 component: statsTemplate,
@@ -273,7 +279,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Tags ------------------------------------------->
         const tags = result.data.tagsGroup.group
         // Create tags pages.
-        tags.forEach(tag => {
+        tags.forEach((tag) => {
             createPage({
                 path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
                 component: tagTemplate,
@@ -307,12 +313,26 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
         createNodeField({ name: 'isPublished', node, value: isPublished(node) })
         createNodeField({ name: 'listDate', node, value: listDate(node) })
+        createNodeField({ name: 'listDay', node, value: listDay(node) })
+        createNodeField({ name: 'listMonth', node, value: listMonth(node) })
+        createNodeField({
+            name: 'listMonthLong',
+            node,
+            value: listMonthLong(node),
+        })
+        createNodeField({ name: 'listYear', node, value: listYear(node) })
         createNodeField({ name: 'publishDate', node, value: publishDate(node) })
         createNodeField({
             name: 'publishMonth',
             node,
             value: publishMonth(node),
         })
+        createNodeField({
+            name: 'publishMonthLong',
+            node,
+            value: publishMonthLong(node),
+        })
         createNodeField({ name: 'publishYear', node, value: publishYear(node) })
+        createNodeField({ name: 'publishDay', node, value: publishDay(node) })
     }
 }
