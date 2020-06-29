@@ -9,7 +9,7 @@ Steps:
 1. Build with Gatsby
 
 ```shell
-$ yarn build
+$ npm run build
 ```
 
 2. Test deploy with Netlify
@@ -17,6 +17,14 @@ $ yarn build
 ```shell
 $ netlify deploy
 ? Publish directory(.)
+```
+
+The directory is only asked for if the `.netlify/state.json` hasn't been configured for the site.
+
+It may be necessary to add a timeout, e.g.,
+
+```shell
+$ netlify deploy --timeout 6000
 ```
 
 3. Use the "public" directory.
