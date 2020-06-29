@@ -28,42 +28,42 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/blog`,
+                path: `${__dirname}/old-content/blog`,
                 name: `blog`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/list`,
+                path: `${__dirname}/old-content/list`,
                 name: `list`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/annual-review`,
+                path: `${__dirname}/old-content/annual-review`,
                 name: `annual-review`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/books`,
+                path: `${__dirname}/old-content/books`,
                 name: `books`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/stats`,
+                path: `${__dirname}/old-content/stats`,
                 name: `stats`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/assets`,
+                path: `${__dirname}/old-content/assets`,
                 name: `assets`,
             },
         },

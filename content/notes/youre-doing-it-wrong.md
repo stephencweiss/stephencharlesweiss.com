@@ -1,0 +1,9 @@
+---
+title: "You're doing it wrong"
+date: '2017-05-17'
+publish: '2017-05-17'
+category: ['musings']
+tags: ['habits', 'opportunity cost', 'subscriptions']
+---
+
+Ryan Holiday recently weighed in on the phenomenon of 'ultra hardcore readers' - people who spent nearly every spare minute of their day reading. His position was unequivocal and simple - when it came to reading they "[were doing it wrong](http://thoughtcatalog.com/ryan-holiday/2017/04/if-youre-trying-to-speed-up-your-reading-and-squeeze-it-into-every-cranny-of-your-life-youre-doing-it-wrong/)." I love Ryan. I read just about everything he writes. I don't even disagree. Still, that sentence struck a chord and put me on the defensive. It's boldness. It's unwavering confidence in the rightness of its position. It got me thinking about the power of writers. To be told you're doing something wrong - without distinction or caveat is bound to trigger a response. It's provocative. It's a siren call to your ego and forces you to take sides. (Something a man who wrote that your Ego is the Enemy is likely very aware of.) Maybe you agree  with Ryan and suddenly you found a new ally, or maybe you disagree and now everything he says for the rest of the article will be subject to extra scrutiny. That's how with a single stroke of a pen, a writer can incite hundreds, thousands, even millions to action. Whether Ryan's right or not he reminded me just how powerful writing can be. It may not carry the same physical force, but by challenging or altering your view of the world, it can feel like a punch to the gut or a splash of cold water to the face. When I consider the potential reach of words, both in terms of the number of people they can reach and how deeply they can effect someone, I see the truth in the saying "the pen is mightier than the sword" and try to act accordingly.
