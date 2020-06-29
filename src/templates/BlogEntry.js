@@ -89,8 +89,8 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 title
-                date(formatString: "MMMM DD, YYYY")
-                publish(formatString: "MMMM DD, YYYY")
+                date
+                publish
                 tags
                 category
             }

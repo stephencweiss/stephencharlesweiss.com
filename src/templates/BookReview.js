@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import { Bio,Layout, PostNavigation, SEO } from '../components'
+import { Bio, Layout, PostNavigation, SEO } from '../components'
 
 const Date = styled.p`
     color: #999;
@@ -41,7 +41,7 @@ function Rankings(props) {
             <p>
                 <b>Categories:</b>
                 <ul>
-                    {Object.values(ratings).map(rating => (
+                    {Object.values(ratings).map((rating) => (
                         <li key={rating}>{rating}</li>
                     ))}
                 </ul>
@@ -90,8 +90,8 @@ export const pageQuery = graphql`
                 title
                 author
                 bookTitle
-                date(formatString: "MMMM DD, YYYY")
-                publish(formatString: "MMMM DD, YYYY")
+                date
+                publish
                 rating
             }
         }
