@@ -80,7 +80,7 @@
         "nofilter": "nofilter='true' npm run dev",
         "preview": "npm run nofilter",
         "start": "npm run develop",
-        "pre-build": "npm clean && npm site-stats",
+        "pre-build": "npm run clean && npm run site-stats",
         "site-stats": "cloc . --exclude-dir=$(tr '\n' ',' < .clocignore) --md > ./content/stats/current-stats.md",
         "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
     },
