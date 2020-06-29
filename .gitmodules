@@ -1,0 +1,3 @@
+[submodule "new-content"]
+	path = new-content
+	url = git@github.com:stephencweiss/digital-garden.git
