@@ -21,7 +21,7 @@ export function BlogExcerpt({ node }) {
     const { excerpt } = node
     return (
         <ContentWrapper>
-            <PostTitleLink slug={slug} title={title} />
+            <PostTitleLink slug={`/${slug}`} title={title} />
             <PostDetails
                 date={listDate}
                 estimate={estimate}
