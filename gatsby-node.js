@@ -1,6 +1,7 @@
 const path = require(`path`)
 const _ = require(`lodash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { buildPaths } = require('./src/utils/buildPaths')
 const {
     isPublished,
     listDate,
@@ -16,7 +17,7 @@ const statsTemplate = path.resolve(`./src/templates/Stats.js`)
 const { ENTRIES_PER_PAGE } = require('./src/constants')
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
 
     return graphql(
         `
@@ -30,6 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
                     edges {
                         node {
                             fields {
+                                oldSlug
                                 slug
                             }
                             frontmatter {
@@ -38,22 +40,43 @@ exports.createPages = ({ graphql, actions }) => {
                         }
                     }
                 }
-                blog: allMarkdownRemark(
+                notes: allMarkdownRemark(
                     sort: { fields: [fields___publishDate], order: DESC }
                     filter: {
                         fields: {
                             isPublished: { eq: true }
-                            sourceInstance: { eq: "blog" }
+                            sourceInstance: { eq: "notes" }
                         }
                     }
                 ) {
                     edges {
                         node {
                             fields {
+                                oldSlug
                                 slug
                             }
                             frontmatter {
                                 title
+                                publish
+                                date
+                            }
+                        }
+                    }
+                }
+                blog: allMarkdownRemark(
+                    sort: { fields: [fields___publishDate], order: DESC }
+                    filter: { fields: { sourceInstance: { eq: "blog" } } }
+                ) {
+                    edges {
+                        node {
+                            fields {
+                                oldSlug
+                                slug
+                            }
+                            frontmatter {
+                                title
+                                publish
+                                date
                             }
                         }
                     }
@@ -65,6 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
                     edges {
                         node {
                             fields {
+                                oldSlug
                                 slug
                             }
                             frontmatter {
@@ -80,6 +104,7 @@ exports.createPages = ({ graphql, actions }) => {
                     edges {
                         node {
                             fields {
+                                oldSlug
                                 slug
                             }
                             frontmatter {
@@ -95,6 +120,7 @@ exports.createPages = ({ graphql, actions }) => {
                     edges {
                         node {
                             fields {
+                                oldSlug
                                 slug
                             }
                             frontmatter {
@@ -110,6 +136,7 @@ exports.createPages = ({ graphql, actions }) => {
                                 nin: [
                                     "annual-review"
                                     "blog"
+                                    "notes"
                                     "books"
                                     "list"
                                     "stats"
@@ -120,9 +147,6 @@ exports.createPages = ({ graphql, actions }) => {
                 ) {
                     edges {
                         node {
-                            fields {
-                                slug
-                            }
                             frontmatter {
                                 title
                             }
@@ -136,65 +160,50 @@ exports.createPages = ({ graphql, actions }) => {
                 }
             }
         `
-    ).then(result => {
+    ).then((result) => {
         if (result.errors) {
             throw result.errors
         } else if (result.data.other.edges.length > 0) {
             throw new Error(
-                'posts included in "other" category - check to make sure all sources are accounted for'
+                `GraphQL was non-exhaustive\nCategories included in "other" category\nFound "Other" Edges -> ${JSON.stringify(
+                    { other: result.data.other.edges }
+                )}`
             )
         }
 
-        // Blog ------------------------------------------->
-        const posts = result.data.blog.edges
+        // Notes ------------------------------------------->
+        const notes = result.data.notes.edges
 
-        // Create blog list pages
-        const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
-        let currentPage = BLOG_PAGE_TOTAL
-        while (currentPage >= 0) {
-            const path =
-                currentPage === 0 ? `/blog` : `/blog/page/${currentPage}`
-            const previousPage =
-                currentPage === 0
-                    ? null
-                    : currentPage === 1
-                    ? `/blog`
-                    : `/blog/page/${currentPage - 1}`
-            const nextPage =
-                currentPage === BLOG_PAGE_TOTAL
-                    ? null
-                    : `/blog/page/${currentPage + 1}`
-
-            createPage({
-                path,
-                component: entryList,
-                context: {
-                    limit: ENTRIES_PER_PAGE,
-                    skip: currentPage * ENTRIES_PER_PAGE,
-                    numPages: BLOG_PAGE_TOTAL,
-                    currentPage: currentPage,
-                    previousPage: previousPage,
-                    nextPage: nextPage,
-                },
-            })
-
-            currentPage -= 1
-        }
-
-        // Create blog posts pages.
-        posts.forEach((post, index) => {
+        // Create notes pages.
+        notes.forEach((note, index) => {
             const previous =
-                index === posts.length - 1 ? null : posts[index + 1].node
-            const next = index === 0 ? null : posts[index - 1].node
+                index === notes.length - 1 ? null : notes[index + 1].node
+            const next = index === 0 ? null : notes[index - 1].node
+            console.log({ slug: note.node.fields.slug })
             createPage({
-                path: post.node.fields.slug,
+                path: note.node.fields.slug,
                 component: entryTemplate,
                 context: {
-                    slug: post.node.fields.slug,
+                    slug: note.node.fields.slug,
                     previous,
                     next,
                 },
             })
+        })
+
+        // OLD - Blog Redirect ------------------------------------------>
+        const blog = result.data.blog.edges
+        // Create blog post pages.
+        blog.forEach((post, index) => {
+            const { oldSlug, slug } = post.node.fields
+            createRedirect({
+                fromPath: oldSlug,
+                toPath: slug,
+                isPermanent: true,
+                redirectInBrowser: true,
+                statusCode: 301,
+            })
+            console.lo
         })
 
         // Others------------------------------------------>
@@ -241,7 +250,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Site Stats ------------------------------------------->
         const siteStats = result.data.stats.edges
         // Create site Stats page(s).
-        siteStats.forEach(stats => {
+        siteStats.forEach((stats) => {
             createPage({
                 path: stats.node.fields.slug,
                 component: statsTemplate,
@@ -273,7 +282,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Tags ------------------------------------------->
         const tags = result.data.tagsGroup.group
         // Create tags pages.
-        tags.forEach(tag => {
+        tags.forEach((tag) => {
             createPage({
                 path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
                 component: tagTemplate,
@@ -291,7 +300,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.internal.type === `MarkdownRemark`) {
         const sourceInstance = getNode(node.parent).sourceInstanceName
         const filePath = createFilePath({ node, getNode })
-        const slug = sourceInstance + filePath
+        const { slug, oldSlug } = buildPaths(sourceInstance, filePath)
 
         createNodeField({
             name: 'sourceInstance',
@@ -303,6 +312,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
             name: `slug`,
             node,
             value: slug,
+        })
+
+        createNodeField({
+            name: `oldSlug`,
+            node,
+            value: oldSlug,
         })
 
         createNodeField({ name: 'isPublished', node, value: isPublished(node) })
