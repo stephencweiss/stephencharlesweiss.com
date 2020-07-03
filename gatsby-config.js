@@ -341,6 +341,6 @@ module.exports = {
                 latest: true,
             },
         },
-        'gatsby-plugin-netlify',
+        { resolve: 'gatsby-plugin-netlify' },
     ],
 }
