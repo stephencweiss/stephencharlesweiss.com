@@ -1,6 +1,6 @@
-[submodule "content"]
-	path = content
-	url = git@github.com:stephencweiss/digital-garden.git
 [submodule "old-content"]
 	path = old-content
 	url = git@github.com:stephencweiss/old-content.git
+[submodule "content"]
+	path = content
+	url = git@github.com:stephencweiss/digital-garden.git
