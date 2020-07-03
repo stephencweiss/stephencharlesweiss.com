@@ -342,5 +342,6 @@ module.exports = {
             },
         },
         { resolve: 'gatsby-plugin-netlify' },
+        { resolve: 'gatsby-plugin-client-side-redirect' },
     ],
 }

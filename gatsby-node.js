@@ -39,12 +39,20 @@ exports.createPages = ({ graphql, actions }) => {
                         }
                     }
                 }
-                oldContent: allMarkdownRemark {
+                oldContent: allMarkdownRemark(
+                    filter: { fields: { sourceInstance: { ne: "notes" } } }
+                ) {
                     edges {
                         node {
                             fields {
                                 fromPath
                                 toPath
+                                slug
+                            }
+                            frontmatter {
+                                title
+                                publish
+                                date
                             }
                         }
                     }
@@ -80,7 +88,15 @@ exports.createPages = ({ graphql, actions }) => {
         // Create oldContent post pages.
         oldContent.forEach((post) => {
             const { fromPath, toPath } = post.node.fields
-            console.log({ fromPath, toPath })
+
+            // createPage({
+            //     path: fromPath, // this is the path for the created page
+            //     component: entryTemplate,
+            //     context: {
+            //         slug: post.node.fields.slug, // this is the context that's passed to the graphql query to _find_ the data
+            //     },
+            // })
+
             createRedirect({
                 fromPath: fromPath,
                 toPath: toPath,
