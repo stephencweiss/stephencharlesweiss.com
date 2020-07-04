@@ -9,7 +9,7 @@
  * * returns {fromPath: '/list/myList', toPath: 'myList"}
  */
 function defineRedirect(sourceInstance, filepath) {
-    const fromPath = sourceInstance + filepath
+    const fromPath = `/${sourceInstance + filepath}`
     const pattern = /\w+\/[0-9]{4}-[0-9]{2}-[0-9]{2}\//gi
     const toPath = fromPath.replace(pattern, '')
     return { fromPath, toPath }

@@ -35,42 +35,14 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/old-content/blog`,
+                path: `${__dirname}/content/blog`,
                 name: `blog`,
             },
         },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/old-content/list`,
-                name: `list`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/old-content/annual-review`,
-                name: `annual-review`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/old-content/books`,
-                name: `books`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/old-content/stats`,
-                name: `stats`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/old-content/assets`,
+                path: `${__dirname}/content/assets`,
                 name: `assets`,
             },
         },
@@ -342,6 +314,5 @@ module.exports = {
             },
         },
         { resolve: 'gatsby-plugin-netlify' },
-        { resolve: 'gatsby-plugin-client-side-redirect' },
     ],
 }
