@@ -2,7 +2,7 @@ This site is currently built nightly with a Gatsby build process and then deploy
 
 If this ever fails, it's possible to build the site manually and deploy it using the Gatsby and Netlify CLIs respectively.
 
-The following steps assumes [Netlify's CLI](https://github.com/netlify/cli) is globally installed.
+The following steps assumes [Netlify's CLI](https://github.com/netlify/cli) is globally installed. Alternatively, install the cli as a dev dependency and then it can be accessed as `./node_modules/.bin/netlify`.
 
 Steps:
 

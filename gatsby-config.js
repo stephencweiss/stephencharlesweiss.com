@@ -35,6 +35,13 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
+                path: `${__dirname}/content/notes`,
+                name: `notes`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
                 path: `${__dirname}/content/list`,
                 name: `list`,
             },
@@ -334,5 +341,6 @@ module.exports = {
                 latest: true,
             },
         },
+        { resolve: 'gatsby-plugin-netlify' },
     ],
 }
