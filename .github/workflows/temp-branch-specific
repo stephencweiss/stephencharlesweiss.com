@@ -1,0 +1,21 @@
+name: Automated Build
+on:
+  push:
+    branches:    
+    - 'feat-submodules'
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Fetch submodules
+              uses: srt32/git-actions@v0.0.3
+              with:
+                  args: git submodule update --init --recursive --remote
+            - name: Trigger Netlify Build Hook
+              run: curl -s -X POST -d {} "https://api.netlify.com/build_hooks/${TOKEN}"
+              env:
+                  TOKEN: ${{ secrets.NETLIFY_DAILY_CRON_HOOK }}
+            - name: Trigger GatsbyJS Build Hook
+              run: curl -s -X POST -d {} "https://webhook.gatsbyjs.com/hooks/data_source/publish/${TOKEN}"
+              env:
+                  TOKEN: ${{ secrets.GATSBY_DAILY_CRON_HOOK }}
