@@ -14,6 +14,7 @@
         "gatsby-plugin-feed": "^2.3.26",
         "gatsby-plugin-google-analytics": "^2.1.34",
         "gatsby-plugin-manifest": "^2.2.39",
+        "gatsby-plugin-netlify": "^2.3.13",
         "gatsby-plugin-netlify-cache": "^1.2.0",
         "gatsby-plugin-offline": "^3.2.7",
         "gatsby-plugin-react-helmet": "^3.1.21",
@@ -52,6 +53,7 @@
         "eslint-plugin-react": "^7.18.0",
         "gatsby-remark-code-titles": "^1.1.0",
         "husky": "^4.2.1",
+        "netlify-cli": "^2.59.1",
         "prettier": "^2.0.5",
         "pretty-quick": "^2.0.1",
         "styled-components": "^5.1.1",
@@ -82,12 +84,17 @@
         "start": "npm run develop",
         "pre-build": "npm run clean && npm run site-stats",
         "site-stats": "cloc . --exclude-dir=$(tr '\n' ',' < .clocignore) --md > ./content/stats/current-stats.md",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+        "updt:content": "git submodule update --remote"
     },
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "pretty-quick --staged"
         }
+    },
+    "volta": {
+        "node": "12.18.3",
+        "yarn": "1.22.5"
     }
 }
