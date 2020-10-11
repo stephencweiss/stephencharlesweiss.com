@@ -83,6 +83,7 @@
         "preview": "npm run nofilter",
         "start": "npm run develop",
         "pre-build": "npm run clean && npm run site-stats",
+        "publish:site": "netlify deploy",
         "site-stats": "cloc . --exclude-dir=$(tr '\n' ',' < .clocignore) --md > ./content/stats/current-stats.md",
         "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
         "updt:content": "git submodule update --remote"
