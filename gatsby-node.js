@@ -185,8 +185,37 @@ exports.createPages = ({ graphql, actions }) => {
         // Blog ------------------------------------------->
         const posts = result.data.blog.edges
 
+        // Create blog posts pages.
+        posts.forEach((post, index) => {
+            const { redirectTarget, slug } = post.node.fields
+            const { slug: frontmatterSlug } = post.node.frontmatter
+            createRedirect({
+                fromPath: `/${slug}`,
+                toPath: frontmatterSlug || redirectTarget,
+                isPermanent: true,
+                redirectInBrowser: true,
+                statusCode: 301,
+            })
+
+            const previous =
+                index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
+            createPage({
+                path: frontmatterSlug || redirectTarget,
+                component: entryTemplate,
+                context: {
+                    slug,
+                    previous,
+                    next,
+                },
+            })
+        })
+
+        // Notes------------------------------------------->
+        const notes = result.data.notes.edges
+
         // Create blog list pages
-        const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
+        const BLOG_PAGE_TOTAL = Math.ceil(notes.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
         let currentPage = BLOG_PAGE_TOTAL
         while (currentPage >= 0) {
             const path =
@@ -217,35 +246,6 @@ exports.createPages = ({ graphql, actions }) => {
 
             currentPage -= 1
         }
-
-        // Create blog posts pages.
-        posts.forEach((post, index) => {
-            const { redirectTarget, slug } = post.node.fields
-            const { slug: frontmatterSlug } = post.node.frontmatter
-            createRedirect({
-                fromPath: `/${slug}`,
-                toPath: frontmatterSlug || redirectTarget,
-                isPermanent: true,
-                redirectInBrowser: true,
-                statusCode: 301,
-            })
-
-            const previous =
-                index === posts.length - 1 ? null : posts[index + 1].node
-            const next = index === 0 ? null : posts[index - 1].node
-            createPage({
-                path: frontmatterSlug || redirectTarget,
-                component: entryTemplate,
-                context: {
-                    slug,
-                    previous,
-                    next,
-                },
-            })
-        })
-
-        // Notes------------------------------------------->
-        const notes = result.data.notes.edges
         notes.forEach((note, index) => {
             const { slug } = note.node.frontmatter
             // ! TODO: fix the template re: previous/next
