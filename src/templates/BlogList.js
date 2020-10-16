@@ -27,7 +27,6 @@ const SearchLink = styled(NavLink)`
     :hover {
         &:before {
             content: '🔎 ';
-
         }
     }
 `
@@ -69,7 +68,7 @@ export const pageQuery = graphql`
             filter: {
                 fields: {
                     isPublished: { eq: true }
-                    sourceInstance: { eq: "blog" }
+                    sourceInstance: { eq: "notes" }
                 }
             }
             sort: { order: [DESC], fields: [fields___listDate] }
@@ -89,6 +88,7 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        slug
                     }
                 }
             }
