@@ -255,7 +255,7 @@ exports.createPages = ({ graphql, actions }) => {
                 path: note.node.frontmatter.slug || note.node.fields.filePath,
                 component: entryTemplate,
                 context: {
-                    slug: note.node.fields.slug,
+                    slug: note.node.frontmatter.slug,
                     previous: null,
                     next: null,
                 },
