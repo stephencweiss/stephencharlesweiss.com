@@ -49,8 +49,8 @@ const PostHeaderBlock = styled.div`
 function EntryTemplate(props) {
     const entry = props.data.markdownRemark
     const { previous, next } = props.pageContext
-    const { title, tags, category } = entry.frontmatter
-    const { listDate, readingTime } = entry.fields
+    const { title, publish } = entry.frontmatter
+    const { readingTime } = entry.fields
     const { text: estimate, words: wordCount } = readingTime
     return (
         <Layout>
@@ -58,7 +58,7 @@ function EntryTemplate(props) {
             <PostHeaderBlock>
                 <PostTitle title={title} />
                 <PostDetails
-                    date={listDate}
+                    date={publish}
                     estimate={estimate}
                     wordCount={wordCount}
                 />

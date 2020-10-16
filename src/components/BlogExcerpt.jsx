@@ -15,21 +15,21 @@ const RightAdjustDiv = styled.div`
 `
 
 export function BlogExcerpt({ node }) {
-    const { title, slug } = node.frontmatter
-    const { listDate, slug: fieldSlug, readingTime } = node.fields
+    const { title, slug, publish } = node.frontmatter
+    const { readingTime } = node.fields
     const { words: wordCount, text: estimate } = readingTime
     const { excerpt } = node
     return (
         <ContentWrapper>
-            <PostTitleLink slug={`/${slug ?? fieldSlug}`} title={title} />
+            <PostTitleLink slug={`/${slug}`} title={title} />
             <PostDetails
-                date={listDate}
+                date={publish}
                 estimate={estimate}
                 wordCount={wordCount}
             />
             <Blurb content={excerpt} />
             <RightAdjustDiv>
-                <Link to={`/${slug ?? fieldSlug}`}>&#10149;{`Read more`}</Link>
+                <Link to={`/${slug}`}>&#10149;{`Read more`}</Link>
             </RightAdjustDiv>
         </ContentWrapper>
     )

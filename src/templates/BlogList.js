@@ -36,7 +36,6 @@ function BlogList(props) {
     const { previousPage, nextPage } = props.pageContext
     const { title } = useSiteMetadata()
     const posts = data.allMarkdownRemark.edges
-
     return (
         <Layout>
             <SEO
@@ -67,11 +66,13 @@ export const pageQuery = graphql`
         allMarkdownRemark(
             filter: {
                 fields: {
-                    isPublished: { eq: true }
                     sourceInstance: { eq: "notes" }
+                    isPrivate: { ne: true }
+                    stage: { eq: "published" }
                 }
+                frontmatter: { private: { ne: true } }
             }
-            sort: { order: [DESC], fields: [fields___listDate] }
+            sort: { fields: [fields___publishDate], order: DESC }
             limit: $limit
             skip: $skip
         ) {
@@ -80,7 +81,7 @@ export const pageQuery = graphql`
                     excerpt(format: PLAIN)
                     fields {
                         slug
-                        listDate
+                        isPublished
                         readingTime {
                             words
                             text
@@ -89,6 +90,7 @@ export const pageQuery = graphql`
                     frontmatter {
                         title
                         slug
+                        publish
                     }
                 }
             }
