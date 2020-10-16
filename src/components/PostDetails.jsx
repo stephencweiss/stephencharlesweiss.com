@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import dayjs from 'dayjs'
 
 export const Details = styled.p`
     display: inline;
@@ -14,8 +15,12 @@ export const DetailsWrapper = styled.div`
 export function PostDetails({ date, estimate, wordCount }) {
     return (
         <DetailsWrapper>
-            <Details>{date}</Details>
-            &nbsp;|&nbsp;
+            {dayjs(date).isValid() && (
+                <>
+                    <Details>{dayjs(date).format('YYYY-MM-DD')}</Details>
+                    &nbsp;|&nbsp;
+                </>
+            )}
             <Details>~{estimate}</Details>
             &nbsp;|&nbsp;
             <Details>{wordCount} words</Details>

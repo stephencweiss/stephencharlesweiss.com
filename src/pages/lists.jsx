@@ -14,10 +14,13 @@ function Lists(props) {
             <ColumnLinkWrapper>
                 <ul>
                     {list.map(({ node }) => {
-                        const { title } = node.frontmatter
-                        const { slug } = node.fields
+                        const { title, slug } = node.frontmatter
+                        const { slug: fieldSlug } = node.fields
                         return (
-                            <ListedLink key={slug} to={slug}>
+                            <ListedLink
+                                key={slug ?? fieldSlug}
+                                to={`/${slug ?? fieldSlug}`}
+                            >
                                 {title.toLowerCase()}
                             </ListedLink>
                         )
@@ -34,8 +37,10 @@ export default Lists
 export const pageQuery = graphql`
     query {
         lists: allMarkdownRemark(
-            filter: { fields: { sourceInstance: { eq: "list" } } }
-            sort: { fields: frontmatter___title }
+            filter: {
+                frontmatter: { category: { in: ["lists"] } }
+                fields: { sourceInstance: { eq: "notes" } }
+            }
         ) {
             edges {
                 node {
@@ -46,6 +51,7 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        slug
                     }
                 }
             }

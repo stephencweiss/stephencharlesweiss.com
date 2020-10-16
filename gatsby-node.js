@@ -9,6 +9,7 @@ const {
     publishYear,
 } = require('./src/utils/dateFns')
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
+const notesTemplate = path.resolve(`./src/templates/NotesEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
 const bookTemplate = path.resolve(`./src/templates/BookReview.js`)
 const tagTemplate = path.resolve(`./src/templates/TagList.js`)
@@ -184,8 +185,37 @@ exports.createPages = ({ graphql, actions }) => {
         // Blog ------------------------------------------->
         const posts = result.data.blog.edges
 
+        // Create blog posts pages.
+        posts.forEach((post, index) => {
+            const { redirectTarget, slug } = post.node.fields
+            const { slug: frontmatterSlug } = post.node.frontmatter
+            createRedirect({
+                fromPath: `/${slug}`,
+                toPath: frontmatterSlug || redirectTarget,
+                isPermanent: true,
+                redirectInBrowser: true,
+                statusCode: 301,
+            })
+
+            const previous =
+                index === posts.length - 1 ? null : posts[index + 1].node
+            const next = index === 0 ? null : posts[index - 1].node
+            createPage({
+                path: frontmatterSlug || redirectTarget,
+                component: entryTemplate,
+                context: {
+                    slug,
+                    previous,
+                    next,
+                },
+            })
+        })
+
+        // Notes------------------------------------------->
+        const notes = result.data.notes.edges
+
         // Create blog list pages
-        const BLOG_PAGE_TOTAL = Math.ceil(posts.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
+        const BLOG_PAGE_TOTAL = Math.ceil(notes.length / ENTRIES_PER_PAGE) - 1 // minus one because we start @ 0.
         let currentPage = BLOG_PAGE_TOTAL
         while (currentPage >= 0) {
             const path =
@@ -216,46 +246,21 @@ exports.createPages = ({ graphql, actions }) => {
 
             currentPage -= 1
         }
-
-        // Create blog posts pages.
-        posts.forEach((post, index) => {
-            const { redirectTarget, slug } = post.node.fields
-            const { slug: fmSlug } = post.node.frontmatter
-            createRedirect({
-                fromPath: `/${slug}`,
-                toPath: fmSlug || redirectTarget,
-                isPermanent: true,
-                redirectInBrowser: true,
-                statusCode: 301,
-            })
-
-            const previous =
-                index === posts.length - 1 ? null : posts[index + 1].node
-            const next = index === 0 ? null : posts[index - 1].node
-            createPage({
-                path: fmSlug || redirectTarget,
-                component: entryTemplate,
-                context: {
-                    slug: slug,
-                    previous,
-                    next,
-                },
-            })
-        })
-
-        // Notes------------------------------------------->
-        const notes = result.data.notes.edges
         notes.forEach((note, index) => {
+            const { slug } = note.node.frontmatter
             // ! TODO: fix the template re: previous/next
             // const previous =
             //     index === notes.length - 1 && Boolean(note[index+1]) ? null : note[index + 1].node
             // const next = index === 0  && Boolean(note[index-1]) ? null : note[index - 1].node
-
+            if (!slug)
+                throw new Error(
+                    `Published note does not have a slug - fix this in content\n${note}`
+                )
             createPage({
-                path: note.node.frontmatter.slug || note.node.fields.filePath,
-                component: entryTemplate,
+                path: slug,
+                component: notesTemplate,
                 context: {
-                    slug: note.node.fields.slug,
+                    slug: slug,
                     previous: null,
                     next: null,
                 },
