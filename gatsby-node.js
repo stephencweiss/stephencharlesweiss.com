@@ -44,12 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
                 blog: allMarkdownRemark(
                     sort: { fields: [fields___publishDate], order: DESC }
-                    filter: {
-                        fields: {
-                            isPublished: { eq: true }
-                            sourceInstance: { eq: "blog" }
-                        }
-                    }
+                    filter: { fields: { sourceInstance: { eq: "blog" } } }
                 ) {
                     edges {
                         node {

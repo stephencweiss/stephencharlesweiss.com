@@ -2,15 +2,17 @@ const dayjs = require('dayjs')
 const { BUILD_TIME, FAKE_START } = require('../constants')
 
 function isPublished(node) {
-    const { publish, date, stage } = node.frontmatter
+    const { publish, date, stage, sourceInstance } = node.frontmatter
+
+    const postBuild = BUILD_TIME.isAfter(publish ? dayjs(publish) : dayjs(date))
+
     if (process.env.nofilter) {
         return true
+    } else if (sourceInstance === 'notes') {
+        return stage === 'published' && postBuild
+    } else {
+        return postBuild
     }
-
-    return (
-        stage === 'published' &&
-        BUILD_TIME.isAfter(publish ? dayjs(publish) : dayjs(date))
-    )
 }
 
 function publishDate(node) {
