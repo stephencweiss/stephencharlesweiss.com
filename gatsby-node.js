@@ -382,6 +382,15 @@ exports.createPages = ({ graphql, actions }) => {
                 },
             })
         })
+
+        // Manual Redirects
+        createRedirect({
+            fromPath: `/reading-list`,
+            toPath: `/antilibrary`,
+            isPermanent: true,
+            redirectInBrowser: true,
+            statusCode: 301,
+        })
     })
 }
 
