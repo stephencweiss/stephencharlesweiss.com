@@ -8,6 +8,7 @@ const {
     publishMonth,
     publishYear,
 } = require('./src/utils/dateFns')
+const { redirectNoteManually } = require('./src/utils/redirectNoteManually')
 const entryTemplate = path.resolve(`./src/templates/BlogEntry.js`)
 const notesTemplate = path.resolve(`./src/templates/NotesEntry.js`)
 const entryList = path.resolve(`./src/templates/BlogList.js`)
@@ -379,12 +380,13 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         // Manual Redirects
-        createRedirect({
-            fromPath: `/reading-list`,
-            toPath: `/antilibrary`,
-            isPermanent: true,
-            redirectInBrowser: true,
-            statusCode: 301,
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'reading-list',
+            toPath: 'antilibrary',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
         })
     })
 }
