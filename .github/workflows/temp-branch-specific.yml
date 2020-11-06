@@ -1,11 +1,16 @@
-name: Daily Build
+name: Automated Build
 on:
-    schedule:
-        - cron: '0 8 * * *' # 0 minute, 8th hour, every day of the month, every month, every day of the week (UTC)
+    push:
+        branches:
+            - 'feat-submodules'
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
+            - name: Fetch submodules
+              uses: srt32/git-actions@v0.0.3
+              with:
+                  args: git submodule update --init --recursive --remote
             - name: Trigger Netlify Build Hook
               run: curl -s -X POST -d {} "https://api.netlify.com/build_hooks/${TOKEN}"
               env:
