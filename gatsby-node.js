@@ -243,15 +243,16 @@ exports.createPages = ({ graphql, actions }) => {
             currentPage -= 1
         }
         notes.forEach((note, index) => {
-            const { slug } = note.node.frontmatter
+            const { slug, title } = note.node.frontmatter
             // ! TODO: fix the template re: previous/next
             // const previous =
             //     index === notes.length - 1 && Boolean(note[index+1]) ? null : note[index + 1].node
             // const next = index === 0  && Boolean(note[index-1]) ? null : note[index - 1].node
-            if (!slug)
+            if (!slug) {
                 throw new Error(
-                    `Published note does not have a slug - fix this in content\n${note}`
+                    `Published note does not have a slug - fix this in content\n${title}`
                 )
+            }
             createPage({
                 path: slug,
                 component: notesTemplate,
