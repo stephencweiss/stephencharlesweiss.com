@@ -2,57 +2,88 @@ import React from 'react'
 import styled from 'styled-components'
 import { useLocation } from '@reach/router'
 import { NavLink, LinkWrapper } from './index'
+import initials from '../assets/initials.svg'
 
 const SiteHeader = styled.header`
-    background: transparent;
     display: flex;
     align-content: center;
+    align-items: center;
     justify-content: center;
+    background: transparent;
 `
+
+const ContainerHeader = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas: '
+        logo links
+    ';
+
+    justify-content: space-between;
+
+    @media screen and (min-width: 40rem) {
+        min-width: 40rem;
+    }
+`
+
+const Logo = styled.img`
+    height: 1.25rem;
+    object-fit: contain;
+    margin: 0;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+`
+
+const Main = styled.div`
+    grid-area: logo;
+    justify-self: start;
+    display: flex;
+    align-content: center;
+    align-items: center;
+`
+
+const Links = styled.div`
+    grid-template: 'links';
+    justify-self: end;
+`
+
 export function Header({ menuOptions }) {
     const location = useLocation()
-    const activatedMenu = menuOptions && location ? findActiveOption(menuOptions, location) : []
     return (
-        <SiteHeader>
-            <LinkWrapper>
-                {activatedMenu.map(({ label, path, active }) => {
-                    return (
-                        <NavLink active={active} to={path}>
-                            {label}
-                        </NavLink>
-                    )
-                })}
-            </LinkWrapper>
-        </SiteHeader>
+        <>
+            <SiteHeader>
+                <ContainerHeader>
+                    {location.pathname !== '/' && (
+                        <LinkWrapper>
+                            <NavLink to={'/'}>
+                                <Main>
+                                    <Logo
+                                        src={initials}
+                                        alt={'logo of initials'}
+                                    />
+                                    /* Code Comments */
+                                </Main>
+                            </NavLink>
+                        </LinkWrapper>
+                    )}
+                    <Links>
+                        <LinkWrapper>
+                            {menuOptions.map(({ label, path, active }) => {
+                                return (
+                                    <NavLink
+                                        key={label}
+                                        active={active}
+                                        to={path}
+                                    >
+                                        {label}
+                                    </NavLink>
+                                )
+                            })}
+                        </LinkWrapper>
+                    </Links>
+                </ContainerHeader>
+            </SiteHeader>
+        </>
     )
-}
-
-/**
- * A function to analyze the current menu options against location and update the items with an active flag.
- * @param {Array} menuOptions - an array of menu items defined in the gatsby-config
- * @param {Object} location - the current location object from @reach/router
- * @returns {Array} - an array of menuOptions that are noted whether they are active currently or not.
- */
-function findActiveOption(menuOptions, location) {
-    return menuOptions.map(option => {
-        const { path, label } = option
-        if (label === 'home' && location.pathname === path) {
-            option.active = true
-        } else if (label === 'about' && location.pathname === path) {
-            option.active = true
-        } else if (label === 'blog' && location.pathname.includes(path) && !location.pathname.includes('blogroll')) {
-            option.active = true
-        } else if (
-            label === 'other' &&
-            location.pathname !== '/' &&
-            !location.pathname.includes('about') &&
-            (!location.pathname.includes('blog') || location.pathname.includes('blogroll'))
-        ) {
-            option.active = true
-        } else {
-            option.active = false
-        }
-        option.active = option.active.toString()
-        return option
-    })
 }
