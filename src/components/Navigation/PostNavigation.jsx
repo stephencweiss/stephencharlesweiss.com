@@ -7,7 +7,7 @@ const List = styled.ul`
     justify-content: space-around;
     margin: 0;
 
-    @media screen and (max-width: 30em) {
+    @media screen and (max-width: 30rem) {
         flex-direction: column;
         justify-content: center;
         align-items: center;

@@ -11,7 +11,6 @@ module.exports = {
             github: `stephencweiss`,
         },
         menuOptions: [
-            { label: 'home', path: '/' },
             { label: 'blog', path: '/blog' },
             { label: 'about', path: '/about' },
             { label: 'other', path: '/others' },
@@ -123,7 +122,7 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 650,
+                            maxWidth: 640,
                             showCaptions: true,
                         },
                     },

@@ -9,18 +9,10 @@ const Paper = styled.div`
     flex-direction: column;
 `
 const Wrapper = styled.div`
-    width: 60em;
+    width: 40em;
     margin: auto;
     flex: 1;
-    @media screen and (max-width: 70em) {
-        max-width: 50em;
-    }
-    @media screen and (max-width: 60em) {
-        max-width: 40em;
-    }
-    @media screen and (max-width: 50em) {
-        max-width: 35em;
-    }
+
     @media screen and (max-width: 40em) {
         max-width: 30em;
     }
@@ -42,10 +34,8 @@ export function Layout({ children }) {
     const { menuOptions } = useSiteMetadata()
     return (
         <Paper>
-            <Wrapper>
-                <Header menuOptions={menuOptions} />
-                {children}
-            </Wrapper>
+            <Header menuOptions={menuOptions} />
+            <Wrapper>{children}</Wrapper>
             <Footer>
                 © {new Date().getFullYear()}&nbsp; Built with ❤️ using&nbsp;
                 <a href="https://www.gatsbyjs.org">Gatsby</a>

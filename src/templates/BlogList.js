@@ -10,10 +10,10 @@ import {
     PageNavigation,
     SEO,
 } from '../components'
-import { useSiteMetadata } from '../hooks'
 
 const BlogHeader = styled.div`
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
@@ -34,7 +34,6 @@ const SearchLink = styled(NavLink)`
 function BlogList(props) {
     const { data } = props
     const { previousPage, nextPage } = props.pageContext
-    const { title } = useSiteMetadata()
     const posts = data.allMarkdownRemark.edges
     return (
         <Layout>
@@ -43,9 +42,8 @@ function BlogList(props) {
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
             <BlogHeader>
-                <h1>{title}</h1>
-                <LinkWrapper style={{ paddingLeft: 0 }}>
-                    <SearchLink to="/blog-search">Search The Blog</SearchLink>
+                <LinkWrapper>
+                    <SearchLink to="/blog-search">search</SearchLink>
                 </LinkWrapper>
             </BlogHeader>
             <PageNavigation previous={previousPage} next={nextPage} />

@@ -13,7 +13,7 @@ const OuterContainer = styled.div`
     justify-content: center;
     flex-direction: row;
     height: 78vh;
-    @media screen(max-width: 30em){
+    @media screen(max-width: 30em) {
         padding: 2rem 0;
     }
 `
@@ -40,7 +40,7 @@ export const LandingBio = ({ title, description }) => {
         <OuterContainer>
             <Container>
                 <NavLink to={'/blog'}>
-                    <Logo src={initials} alt={'logo of initials'}/>
+                    <Logo src={initials} alt={'logo of initials'} />
                 </NavLink>
                 <NameHeader>
                     <NavLink to={'/blog'}>{title}</NavLink>
@@ -53,4 +53,3 @@ export const LandingBio = ({ title, description }) => {
         </OuterContainer>
     )
 }
-
