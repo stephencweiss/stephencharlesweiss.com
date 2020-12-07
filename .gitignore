@@ -1,3 +1,5 @@
+scripts/build
+
 # Logs
 logs
 *.log
