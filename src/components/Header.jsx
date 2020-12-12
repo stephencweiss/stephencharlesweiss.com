@@ -5,19 +5,17 @@ import { NavLink, LinkWrapper } from './index'
 import initials from '../assets/initials.svg'
 
 const SiteHeader = styled.header`
-    display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
     background: transparent;
 `
 
 const ContainerHeader = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     @media screen and (min-width: 40rem) {
-        flex-direction: row;
+        flex-direction: row-reverse;
     }
 `
 
@@ -37,17 +35,21 @@ const Main = styled.div`
     align-items: center;
 `
 
-const Links = styled.div`
-    grid-template: 'links';
-    justify-self: end;
-`
-
 export function Header({ menuOptions }) {
     const location = useLocation()
     return (
         <>
             <SiteHeader>
                 <ContainerHeader>
+                    <LinkWrapper>
+                        {menuOptions.map(({ label, path, active }) => {
+                            return (
+                                <NavLink key={label} active={active} to={path}>
+                                    {label}
+                                </NavLink>
+                            )
+                        })}
+                    </LinkWrapper>
                     {location.pathname !== '/' && (
                         <LinkWrapper>
                             <NavLink to={'/'}>
@@ -61,21 +63,6 @@ export function Header({ menuOptions }) {
                             </NavLink>
                         </LinkWrapper>
                     )}
-                    <Links>
-                        <LinkWrapper>
-                            {menuOptions.map(({ label, path, active }) => {
-                                return (
-                                    <NavLink
-                                        key={label}
-                                        active={active}
-                                        to={path}
-                                    >
-                                        {label}
-                                    </NavLink>
-                                )
-                            })}
-                        </LinkWrapper>
-                    </Links>
                 </ContainerHeader>
             </SiteHeader>
         </>
