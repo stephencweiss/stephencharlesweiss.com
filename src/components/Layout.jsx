@@ -34,8 +34,10 @@ export function Layout({ children }) {
     const { menuOptions } = useSiteMetadata()
     return (
         <Paper>
-            <Header menuOptions={menuOptions} />
-            <Wrapper>{children}</Wrapper>
+            <Wrapper>
+                <Header menuOptions={menuOptions} />
+                {children}
+            </Wrapper>
             <Footer>
                 © {new Date().getFullYear()}&nbsp; Built with ❤️ using&nbsp;
                 <a href="https://www.gatsbyjs.org">Gatsby</a>

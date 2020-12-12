@@ -13,17 +13,11 @@ const SiteHeader = styled.header`
 `
 
 const ContainerHeader = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    grid-template-areas: '
-        logo links
-    ';
-
-    justify-content: space-between;
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     @media screen and (min-width: 40rem) {
-        min-width: 40rem;
+        flex-direction: row;
     }
 `
 
