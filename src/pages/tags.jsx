@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 // TODO: Create groupings for the tags by letter (and have an internal link help jump between them)
 // TODO: Allow a sort of the tags; a->z, z->a, and count ASC/DESC
 
-const TagsPage = props => {
+const TagsPage = (props) => {
     const { group } = props.data.allMarkdownRemark
 
     return (
@@ -16,7 +16,7 @@ const TagsPage = props => {
                 <div>
                     <h1>tags</h1>
                     <ul>
-                        {group.map(tag => (
+                        {group.map((tag) => (
                             <ListedLink
                                 to={`/tags/${kebabCase(tag.fieldValue)}/`}
                                 key={tag.fieldValue}
@@ -35,15 +35,25 @@ export default TagsPage
 
 export const pageQuery = graphql`
     query {
-        site {
-            siteMetadata {
-                title
+        allMarkdownRemark(
+            filter: {
+                fields: {
+                    isPrivate: { ne: true }
+                    sourceInstance: { eq: "notes" }
+                    stage: { eq: "published" }
+                }
             }
-        }
-        allMarkdownRemark(limit: 2000) {
+        ) {
             group(field: frontmatter___tags) {
                 fieldValue
                 totalCount
+                edges {
+                    node {
+                        frontmatter {
+                            title
+                        }
+                    }
+                }
             }
         }
     }

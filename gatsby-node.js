@@ -162,9 +162,25 @@ exports.createPages = ({ graphql, actions }) => {
                         }
                     }
                 }
-                tagsGroup: allMarkdownRemark(limit: 2000) {
+                tagsGroup: allMarkdownRemark(
+                    filter: {
+                        fields: {
+                            isPrivate: { ne: true }
+                            sourceInstance: { eq: "notes" }
+                            stage: { eq: "published" }
+                        }
+                    }
+                ) {
                     group(field: frontmatter___tags) {
                         fieldValue
+                        totalCount
+                        edges {
+                            node {
+                                frontmatter {
+                                    title
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -245,9 +261,9 @@ exports.createPages = ({ graphql, actions }) => {
         notes.forEach((note, index) => {
             const { slug, title } = note.node.frontmatter
             // ! TODO: fix the template re: previous/next
-            // const previous =
-            //     index === notes.length - 1 && Boolean(note[index+1]) ? null : note[index + 1].node
-            // const next = index === 0  && Boolean(note[index-1]) ? null : note[index - 1].node
+            // const previous = index === notes.length - 1 && Boolean(note[index + 1]) ? null : note[index + 1].node
+            // const next = index === 0 && Boolean(note[index - 1]) ? null : note[index - 1].node
+
             if (!slug) {
                 throw new Error(
                     `Published note does not have a slug - fix this in content\n${title}`

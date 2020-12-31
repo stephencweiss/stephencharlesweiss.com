@@ -17,7 +17,7 @@ const Tags = ({ data, pageContext }) => {
             <h1>{tagHeader}</h1>
             <ul>
                 {posts.map(({ node }) => (
-                    <BlogExcerpt key={node.fields.slug} node={node} />
+                    <BlogExcerpt key={node.frontmatter.slug} node={node} />
                 ))}
             </ul>
             <Link to="/tags">Return to all tags</Link>
@@ -37,10 +37,10 @@ Tags.propTypes = {
                     node: PropTypes.shape({
                         excerpt: PropTypes.string.isRequired,
                         frontmatter: PropTypes.shape({
+                            slug: PropTypes.string.isRequired,
                             title: PropTypes.string.isRequired,
                         }),
                         fields: PropTypes.shape({
-                            slug: PropTypes.string.isRequired,
                             listDate: PropTypes.string.isRequired,
                             readingTime: PropTypes.shape({
                                 words: PropTypes.number.isRequired,
@@ -71,7 +71,6 @@ export const pageQuery = graphql`
                 node {
                     excerpt(format: PLAIN)
                     fields {
-                        slug
                         listDate
                         readingTime {
                             words
@@ -80,6 +79,7 @@ export const pageQuery = graphql`
                     }
                     frontmatter {
                         title
+                        slug
                     }
                 }
             }
