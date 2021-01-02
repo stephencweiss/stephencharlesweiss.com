@@ -15,8 +15,8 @@ function redirectNoteManually({
         },
     })
     createRedirect({
-        fromPath: fromPath,
-        toPath: toPath,
+        fromPath: `/${fromPath}`,
+        toPath: `/${toPath}`,
         isPermanent: true,
         redirectInBrowser: true,
         statusCode: 301,
