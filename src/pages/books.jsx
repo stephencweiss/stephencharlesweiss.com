@@ -20,10 +20,10 @@ function Books(props) {
             <ColumnLinkWrapper>
                 <ul>
                     {books.map(({ node }) => {
-                        const { author, bookTitle } = node.frontmatter
-                        const { slug } = node.fields
+                        const { author, bookTitle, slug } = node.frontmatter
+
                         return (
-                            <ListedLink key={slug} to={slug}>
+                            <ListedLink key={slug} to={`/${slug}`}>
                                 {`${bookTitle} by ${author}`}
                             </ListedLink>
                         )
@@ -40,7 +40,15 @@ export default Books
 export const pageQuery = graphql`
     query {
         books: allMarkdownRemark(
-            filter: { fields: { sourceInstance: { eq: "books" } } }
+            filter: {
+                frontmatter: {
+                    category: { in: ["reading notes"] }
+                    private: { ne: true }
+                    stage: { eq: "published" }
+                }
+                fields: { sourceInstance: { eq: "notes" } }
+            }
+
             sort: {
                 order: ASC
                 fields: [
@@ -54,11 +62,9 @@ export const pageQuery = graphql`
                 node {
                     id
                     html
-                    fields {
-                        slug
-                    }
                     frontmatter {
                         title
+                        slug
                         author
                         bookTitle
                     }
