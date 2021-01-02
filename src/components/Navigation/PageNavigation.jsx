@@ -14,6 +14,9 @@ const List = styled.ul`
 const ListItem = styled.li`
     flex: 1;
     text-align: ${({ align }) => (align ? align : '')};
+    ::marker {
+        content: '';
+    }
 `
 
 function PageNavigation(props) {
