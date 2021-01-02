@@ -405,6 +405,54 @@ exports.createPages = ({ graphql, actions }) => {
             createPage,
             createRedirect,
         })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'adding-prettier-to-a-project',
+            toPath: 'prettier-getting-started',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'es-lint-prettier-and-vs-code-when-they-stop-cooperating',
+            toPath: 'eslint-prettier-and-vs-code-when-they-stop-cooperating',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'es-lint-prettier-together',
+            toPath: 'eslint-prettier-together',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'anatomy-eslint',
+            toPath: 'eslint-anatomy',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'back-to-the-basics-html-head-tag',
+            toPath: 'html-basics-head-tag',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath: 'modifying-head-tags-as-side-effects-with-next-js',
+            toPath: 'head-tag-update-side-effect-nextjs',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
     })
 }
 

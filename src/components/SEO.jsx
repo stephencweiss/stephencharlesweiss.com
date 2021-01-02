@@ -64,7 +64,14 @@ function SEO({ description, lang, meta, keywords, title }) {
                                     : []
                             )
                             .concat(meta)}
-                    />
+                    >
+                        <script
+                            async
+                            defer
+                            data-domain="stephencharlesweiss.com"
+                            src="https://plausible.io/js/plausible.js"
+                        ></script>
+                    </Helmet>
                 )
             }}
         />
