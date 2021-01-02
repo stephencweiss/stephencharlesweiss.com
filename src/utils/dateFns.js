@@ -26,8 +26,8 @@ function publishMonth(node) {
 
 function publishYear(node) {
     return dayjs(publishDate(node))
+        .set('month', 0)
         .set('date', 1)
-        .set('month', 1)
         .format('YYYY-MM-DD')
 }
 
