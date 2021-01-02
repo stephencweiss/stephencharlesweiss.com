@@ -431,8 +431,8 @@ exports.createPages = ({ graphql, actions }) => {
         })
         redirectNoteManually({
             sourceInstance: 'notes',
-            fromPath: 'anatomy-eslint',
-            toPath: 'eslint-anatomy',
+            fromPath: 'anatomy-eslintrc',
+            toPath: 'eslintrc-anatomy',
             template: notesTemplate,
             createPage,
             createRedirect,
