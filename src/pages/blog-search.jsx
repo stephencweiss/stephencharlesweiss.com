@@ -33,7 +33,7 @@ function blogSearch() {
     return (
         <Layout>
             <SEO
-                title="All posts"
+                title="search"
                 keywords={[`blog`, `gatsby`, `javascript`, `react`]}
             />
             <h1>search blog posts</h1>

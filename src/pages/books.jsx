@@ -8,7 +8,7 @@ function Books(props) {
 
     return (
         <Layout>
-            <SEO title="Books" keywords={['reading', 'notes', 'books']} />
+            <SEO title="books" keywords={['reading', 'notes', 'books']} />
             <h1>books</h1>
             <p>
                 some books I've read and written about. see other books I've

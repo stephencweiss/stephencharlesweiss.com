@@ -8,7 +8,7 @@ function Lists(props) {
 
     return (
         <Layout>
-            <SEO title="Lists" keywords={['reading', 'books']} />
+            <SEO title="lists" keywords={['reading', 'books']} />
             <h1>lists</h1>
             <p>a list of lists I maintain.</p>
             <ColumnLinkWrapper>

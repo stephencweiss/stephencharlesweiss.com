@@ -6,13 +6,10 @@ function Home() {
     const { title, description } = useSiteMetadata()
     return (
         <Layout>
-            <SEO
-                title={title}
-                keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-            />
+            <SEO keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
             <LandingBio title={title} description={description} />
         </Layout>
     )
 }
 
-export default Home;
+export default Home

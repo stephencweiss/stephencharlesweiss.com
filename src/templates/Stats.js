@@ -7,7 +7,7 @@ function Stats(props) {
 
     return (
         <Layout>
-            <SEO title="Site Statistics" keywords={['stats', 'analytics']} />
+            <SEO title="site statistics" keywords={['stats', 'analytics']} />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <h1>Site Statistics</h1>
             </div>
