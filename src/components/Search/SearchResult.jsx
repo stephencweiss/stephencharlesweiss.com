@@ -7,7 +7,7 @@ function SearchResult({ page, blurb }) {
     return (
         <ListItem key={page.id}>
             <Item>
-                <PostTitleLink slug={`/${page.path}`} title={page.title} />
+                <PostTitleLink slug={`/${page.slug}`} title={page.title} />
                 <ItemHighlight>
                     {page.publish && `Published: ${page.publish}`}
                 </ItemHighlight>

@@ -78,7 +78,7 @@
         "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
         "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
         "lint:css": "stylelint './src/**/*.jsx?'",
-        "nofilter": "nofilter='true' npm run dev",
+        "nofilter": "export nofilter='true' && npm run dev",
         "preview": "npm run nofilter",
         "start": "npm run develop",
         "pre-build": "npm run clean && npm run site-stats",

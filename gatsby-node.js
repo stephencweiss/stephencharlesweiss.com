@@ -453,6 +453,15 @@ exports.createPages = ({ graphql, actions }) => {
             createPage,
             createRedirect,
         })
+        redirectNoteManually({
+            sourceInstance: 'notes',
+            fromPath:
+                'automating-linting-using-husky-to-lint-with-prettier-on-commit-and-before',
+            toPath: 'automating-linting-husky-lintstaged',
+            template: notesTemplate,
+            createPage,
+            createRedirect,
+        })
     })
 }
 

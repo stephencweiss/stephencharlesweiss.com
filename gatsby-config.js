@@ -298,10 +298,12 @@ module.exports = {
                 resolvers: {
                     // For any node of type MarkdownRemark, list how to resolve the fields` values
                     MarkdownRemark: {
+                        content: (node) => node.rawMarkdownBody, // not sure this one's working yet...
                         category: (node) => node.frontmatter.category,
                         date: (node) => node.frontmatter.date,
                         path: (node) => node.fields.slug,
                         publish: (node) => node.frontmatter.publish,
+                        slug: (node) => node.frontmatter.slug,
                         tags: (node) => node.frontmatter.tags,
                         title: (node) => node.frontmatter.title,
                         updated: (node) => node.frontmatter.updated,

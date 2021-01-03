@@ -15,12 +15,8 @@ function Lists(props) {
                 <ul>
                     {list.map(({ node }) => {
                         const { title, slug } = node.frontmatter
-                        const { slug: fieldSlug } = node.fields
                         return (
-                            <ListedLink
-                                key={slug ?? fieldSlug}
-                                to={`/${slug ?? fieldSlug}`}
-                            >
+                            <ListedLink key={slug} to={`/${slug}`}>
                                 {title.toLowerCase()}
                             </ListedLink>
                         )
@@ -46,9 +42,6 @@ export const pageQuery = graphql`
                 node {
                     id
                     html
-                    fields {
-                        slug
-                    }
                     frontmatter {
                         title
                         slug
