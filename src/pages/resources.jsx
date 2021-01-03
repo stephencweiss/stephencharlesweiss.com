@@ -2,18 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { Bio, ColumnLinkWrapper, Layout, SEO, ListedLink } from '../components'
 
-function AnnualReviews(props) {
-    const reviews = props.data.annualreviews.edges
+function Resources(props) {
+    const reviews = props.data.resources.edges
 
     return (
         <Layout>
-            <SEO title="Annual Reviews" keywords={['annual review', 'books']} />
-            <h1>annual reviews</h1>
-            <p>my annual reviews - I am a work in progress</p>
+            <SEO title="Templates" keywords={['resources', 'templates']} />
+            <h1>resources & templates</h1>
+            <p>some resources and templates I've collected over the years</p>
             <ColumnLinkWrapper>
                 <ul>
                     {reviews.map(({ node }) => {
                         const { title, slug } = node.frontmatter
+                        console.log({ slug })
                         return (
                             <ListedLink key={slug} to={`/${slug}`}>
                                 {title.toLowerCase()}
@@ -27,15 +28,15 @@ function AnnualReviews(props) {
     )
 }
 
-export default AnnualReviews
+export default Resources
 
 export const pageQuery = graphql`
     query {
-        annualreviews: allMarkdownRemark(
+        resources: allMarkdownRemark(
             sort: { fields: [fields___publishDate], order: DESC }
             filter: {
                 frontmatter: {
-                    category: { eq: "review" }
+                    category: { eq: "resources" }
                     stage: { eq: "published" }
                     private: { ne: true }
                 }

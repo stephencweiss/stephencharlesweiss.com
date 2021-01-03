@@ -1,6 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 import { Layout, SEO } from '../components'
 
 export default function About(props) {
@@ -19,23 +20,50 @@ export default function About(props) {
                 alt={'a photo of me and finn at 12 weeks'}
             />
             <br />
-            <p>Still interested in learning more? A decent starting place:</p>
+            <p>
+                The bottom line: I consider myself the luckiest guy in the
+                world.
+            </p>
+            <p> Other interesting factoids: </p>
+            <ul>
+                <li>
+                    My wife and I live in Chicago - which also happens to be
+                    where we met.
+                </li>
+                <li>
+                    I spend my days working as an engineer at&nbsp;
+                    <a href="https://www.olo.com/">Olo</a> where I work on our
+                    Expo product.
+                </li>
+                <li>
+                    My nights and weekends are spent tinkering, playing,
+                    reading, and writing.
+                </li>
+            </ul>
+
+            <p>Want to know more? Look no further than this site:</p>
             <ul>
                 <li key="write">
-                    I write a lot, mostly about things I'm learning, which
-                    lately has been a lot of coding, at&nbsp;
+                    Get to know me from my writing. I like to write. While I've
+                    focused in the past on writing about what I learn (lately a
+                    lot about coding), I also write about books, philosophy,
+                    economics, and really anything I find interesting. It's all
+                    published on my blog&nbsp;
                     <Link to={'/blog'}>/*code-comments*/</Link>.
                 </li>
                 <li key="public">
-                    I believe in working in public, so as much as possible, you
-                    can find my experiments and projects on&nbsp;
+                    I believe in working in public. So, in addition to writing
+                    about it, you'll find my experiments and projects on&nbsp;
                     <a href={'https://github.com/stephencweiss'}>Github</a>.
                 </li>
                 <li key="reading">
                     I like reading too. I keep a&nbsp;
                     <Link to={'/list/bookshelf'}>reading list</Link> of what
-                    I've read, as well as what I'm <Link to={'/list/reading-list'}>planning to read</Link>. Check it
-                    out. I'm always looking for suggestions. Thank you&nbsp;
+                    I've read, as well as what I'm planning to read (or not)
+                    -&nbsp;
+                    <Link to={'/list/antilibrary'}>my "anti-library"</Link>.
+                    Check it out. I'm always looking for suggestions. Thank
+                    you&nbsp;
                     <a href={'https://github.com/mariellefoster/marf-books'}>
                         Marielle for setting an incredible example
                     </a>
@@ -43,8 +71,11 @@ export default function About(props) {
                 </li>
             </ul>
             <p>
-                If you want to get in touch, I'm available at stephencweiss at
-                gmail dot com.
+                If you want to get in touch, I'm available at&nbsp;
+                <a href="mailto:stephencweiss@gmail.com">
+                    stephencweiss@gmail.com
+                </a>
+                .
             </p>
         </Layout>
     )

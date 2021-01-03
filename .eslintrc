@@ -1,6 +1,6 @@
 // Notes on configuring eslint can be found here: https://eslint.org/docs/user-guide/configuring
 {
-    "extends": "eslint:recommended",
+    "extends": ["eslint:recommended", "eslint-config-prettier"],
     "env": {
         "browser": true
     },

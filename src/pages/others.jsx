@@ -30,6 +30,9 @@ function Others() {
                     <ListedLink key="lists" to={'/lists'}>
                         lists
                     </ListedLink>
+                    <ListedLink key="tags" to={'/resources'}>
+                        resources & templates
+                    </ListedLink>
                     <ListedLink
                         key="stats/current-stats"
                         to={'/stats/current-stats'}

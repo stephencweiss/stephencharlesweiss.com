@@ -108,6 +108,7 @@ h6 {
 
 p,
 ul,
+details,
 ol,
 dl,
 blockquote,
@@ -170,6 +171,10 @@ ol {
 
 ol {
     list-style-type: upper-roman;
+}
+
+ul li::marker {
+    content: '– ';
 }
 
 h1 {

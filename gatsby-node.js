@@ -101,9 +101,9 @@ exports.createPages = ({ graphql, actions }) => {
                     sort: { fields: [fields___publishDate], order: DESC }
                     filter: {
                         fields: {
-                            isPrivate: { ne: true }
                             sourceInstance: { eq: "notes" }
                             stage: { eq: "published" }
+                            isPrivate: { ne: true }
                         }
                     }
                 ) {

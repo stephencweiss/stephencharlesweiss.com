@@ -25,7 +25,7 @@ function Stats(props) {
             <p>
                 For more about <code>cloc</code> and how I'm using it, please
                 see{' '}
-                <Link to="../../../blog/2020-03-18/cloc-code-statistics">
+                <Link to="cloc-code-statistics">
                     my blog post on the motivation for this page
                 </Link>
                 .
