@@ -15,7 +15,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                         htmlAttributes={{
                             lang,
                         }}
-                        title={title.toLowerCase()}
+                        title={title ? title.toLowerCase() : ''}
                         titleTemplate={`%s ${
                             title ? `| ${data.site.siteMetadata.title}` : ''
                         }`}

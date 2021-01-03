@@ -54,7 +54,7 @@ function EntryTemplate(props) {
     const { text: estimate, words: wordCount } = readingTime
     return (
         <Layout>
-            <SEO title={title.toLowerCase()} description={entry.excerpt} />
+            <SEO title={title} description={entry.excerpt} />
             <PostHeaderBlock>
                 <PostTitle title={title} />
                 <PostDetails
