@@ -108,18 +108,6 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: `gatsby-plugin-facebook-pixel`,
-                        options: {
-                            pixelId: 'pixel id here',
-                        },
-                    },
-                    {
-                        resolve: `gatsby-plugin-google-analytics`,
-                        options: {
-                            //trackingId: `ADD YOUR TRACKING ID HERE`,
-                        },
-                    },
-                    {
                         resolve: `gatsby-remark-images`,
                         options: {
                             maxWidth: 640,
