@@ -47,7 +47,6 @@ function Search(props) {
             {results.length > 0 && (
                 <SearchResultsContainer>
                     {results.map((page) => {
-                        console.log({ page, slug: page.slug })
                         const blurb = (
                             <Blurb content={page.content} path={page.slug} />
                         )
