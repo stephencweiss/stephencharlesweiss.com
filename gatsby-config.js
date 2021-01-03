@@ -1,6 +1,13 @@
 const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
+    flags: {
+        QUERY_ON_DEMAND: true,
+        FAST_DEV: true,
+        DEV_SSR: true,
+        LAZY_IMAGES: true,
+        FAST_REFRESH: true,
+    },
     siteMetadata: {
         title: `/*code-comments*/`,
         author: `Stephen Weiss`,
