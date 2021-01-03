@@ -7,7 +7,7 @@ function AnnualReviews(props) {
 
     return (
         <Layout>
-            <SEO title="Annual Reviews" keywords={['annual review', 'books']} />
+            <SEO title="annual reviews" keywords={['annual review', 'books']} />
             <h1>annual reviews</h1>
             <p>my annual reviews - I am a work in progress</p>
             <ColumnLinkWrapper>

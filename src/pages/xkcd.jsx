@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import {Layout} from '../components'
+import { Layout, SEO } from '../components'
 import { ImageGallery } from '../components/ImageGallery'
 
 export function XKCDGallery(props) {
@@ -9,6 +9,7 @@ export function XKCDGallery(props) {
 
     return (
         <Layout>
+            <SEO title="xkcd" keywords={['comics', 'xkcd']} />
             <h1>
                 xkcd daily digest<sup>1</sup>
             </h1>

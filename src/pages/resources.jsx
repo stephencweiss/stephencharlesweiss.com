@@ -7,7 +7,7 @@ function Resources(props) {
 
     return (
         <Layout>
-            <SEO title="Templates" keywords={['resources', 'templates']} />
+            <SEO title="templates" keywords={['resources', 'templates']} />
             <h1>resources & templates</h1>
             <p>some resources and templates I've collected over the years</p>
             <ColumnLinkWrapper>

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { BlogExcerpt, Layout } from '../components'
+import { BlogExcerpt, Layout, SEO } from '../components'
 
 const Tags = ({ data, pageContext }) => {
     const { tag } = pageContext
@@ -14,6 +14,11 @@ const Tags = ({ data, pageContext }) => {
 
     return (
         <Layout>
+            <SEO
+                title={tagHeader}
+                description={`tags for ${tagHeader}`}
+                keywords={[tagHeader, `tags`]}
+            />
             <h1>{tagHeader}</h1>
             <ul>
                 {posts.map(({ node }) => (

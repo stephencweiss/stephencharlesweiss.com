@@ -1,6 +1,13 @@
 const { isPublished } = require('./src/utils/dateFns')
 
 module.exports = {
+    flags: {
+        QUERY_ON_DEMAND: true,
+        FAST_DEV: true,
+        DEV_SSR: true,
+        LAZY_IMAGES: true,
+        FAST_REFRESH: true,
+    },
     siteMetadata: {
         title: `/*code-comments*/`,
         author: `Stephen Weiss`,
@@ -105,18 +112,6 @@ module.exports = {
                                 js: 'javascript',
                             },
                             noInlineHighlight: false,
-                        },
-                    },
-                    {
-                        resolve: `gatsby-plugin-facebook-pixel`,
-                        options: {
-                            pixelId: 'pixel id here',
-                        },
-                    },
-                    {
-                        resolve: `gatsby-plugin-google-analytics`,
-                        options: {
-                            //trackingId: `ADD YOUR TRACKING ID HERE`,
                         },
                     },
                     {

@@ -15,8 +15,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                         htmlAttributes={{
                             lang,
                         }}
-                        title={title}
-                        titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+                        title={title.toLowerCase()}
+                        titleTemplate={`%s ${
+                            title ? `| ${data.site.siteMetadata.title}` : ''
+                        }`}
                         meta={[
                             {
                                 name: `description`,
