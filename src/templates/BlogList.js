@@ -48,7 +48,10 @@ function BlogList(props) {
             </BlogHeader>
             <PageNavigation previous={previousPage} next={nextPage} />
             {posts.map(({ node }) => (
-                <BlogExcerpt key={node.fields.slug} node={node} />
+                <BlogExcerpt
+                    key={node.frontmatter.slug || node.fields.slug}
+                    node={node}
+                />
             ))}
             <PageNavigation previous={previousPage} next={nextPage} />
 
