@@ -303,7 +303,8 @@ module.exports = {
                         date: (node) => node.frontmatter.date,
                         path: (node) => node.fields.slug,
                         publish: (node) => node.frontmatter.publish,
-                        slug: (node) => node.frontmatter.slug,
+                        slug: (node) =>
+                            node.frontmatter.slug || node.fields.slug,
                         tags: (node) => node.frontmatter.tags,
                         title: (node) => node.frontmatter.title,
                         updated: (node) => node.frontmatter.updated,
@@ -314,7 +315,7 @@ module.exports = {
                         !node.internal.type === 'MarkdownRemark' ||
                         (node &&
                             node.fields &&
-                            !node.fields.sourceInstance === 'blog')
+                            node.fields.sourceInstance === 'blog')
                     )
                         return false
                     return isPublished(node)

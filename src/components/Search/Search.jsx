@@ -33,7 +33,7 @@ function Search(props) {
     return (
         <React.Fragment>
             <SearchItemWrapper>
-                <label style={{ width: '100%' }} for="searchInput">
+                <label style={{ width: '100%' }} htmlFor="searchInput">
                     <SearchInput
                         id="searchInput"
                         type="text"
