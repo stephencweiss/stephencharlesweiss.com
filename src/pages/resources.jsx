@@ -14,7 +14,6 @@ function Resources(props) {
                 <ul>
                     {reviews.map(({ node }) => {
                         const { title, slug } = node.frontmatter
-                        console.log({ slug })
                         return (
                             <ListedLink key={slug} to={`/${slug}`}>
                                 {title.toLowerCase()}
