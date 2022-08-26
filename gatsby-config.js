@@ -24,53 +24,17 @@ module.exports = {
         ],
     },
     plugins: [
+        'gatsby-plugin-image',
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp', // Needed for dynamic images
         'gatsby-plugin-styled-components',
-        {
-            resolve: 'gatsby-plugin-netlify-cache',
-            options: {
-                cachePublic: true,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/blog`,
-                name: `blog`,
-            },
-        },
+        'gatsby-plugin-netlify',
+
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/content/notes`,
                 name: `notes`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/list`,
-                name: `list`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/annual-review`,
-                name: `annual-review`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/books`,
-                name: `books`,
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/content/stats`,
-                name: `stats`,
             },
         },
         {
@@ -202,7 +166,6 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#FDF6E3`,
                 display: `minimal-ui`,
-                // icon: `content/assets/all_inclusive.svg`,
                 icon: `content/assets/initials.svg`,
                 query: `
           {
@@ -323,7 +286,7 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+            resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
             options: {
                 production: true,
                 disable: !process.env.ANALYZE_BUNDLE_SIZE,
@@ -338,6 +301,10 @@ module.exports = {
                 latest: true,
             },
         },
-        { resolve: 'gatsby-plugin-netlify' },
+        { resolve: 'gatsby-plugin-netlify',
+            options: {
+                mergeCachingHeaders: false,
+            },
+        },
     ],
 }

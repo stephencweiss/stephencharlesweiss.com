@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { graphql, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+// import styled from 'styled-components'
 import { Layout, SEO } from '../components'
 
 export default function About(props) {
     const { data } = props
+    const img = getImage(data.file)
     return (
         <Layout>
             <SEO title="about" keywords={['stephen charles weiss', 'about']} />
@@ -15,8 +16,8 @@ export default function About(props) {
                 Let's start with the good stuff. Here's a photo of me and my
                 puppy, Finn, when he was 12 weeks old.
             </p>
-            <Img
-                fluid={data.file.childImageSharp.fluid}
+            <GatsbyImage
+                image={img}
                 alt={'a photo of me and finn at 12 weeks'}
             />
             <br />
@@ -32,8 +33,7 @@ export default function About(props) {
                 </li>
                 <li>
                     I spend my days working as an engineer at&nbsp;
-                    <a href="https://www.olo.com/">Olo</a> where I work on our
-                    Expo product.
+                    <a href="https://plaid.com/">Plaid</a>.
                 </li>
                 <li>
                     My nights and weekends are spent tinkering, playing,
@@ -47,9 +47,9 @@ export default function About(props) {
                     Get to know me from my writing. I like to write. While I've
                     focused in the past on writing about what I learn (lately a
                     lot about coding), I also write about books, philosophy,
-                    economics, and really anything I find interesting. It's all
-                    published on my blog&nbsp;
-                    <Link to={'/blog'}>/*code-comments*/</Link>.
+                    economics, and really anything I find interesting. If it's
+                    public (and it almost all is), it is published on my blog
+                    &nbsp;<Link to={'/blog'}>/*code-comments*/</Link>.
                 </li>
                 <li key="public">
                     I believe in working in public. So, in addition to writing
@@ -58,10 +58,10 @@ export default function About(props) {
                 </li>
                 <li key="reading">
                     I like reading too. I keep a&nbsp;
-                    <Link to={'/list/bookshelf'}>reading list</Link> of what
+                    <Link to={'/bookshelf'}>reading list</Link> of what
                     I've read, as well as what I'm planning to read (or not)
                     -&nbsp;
-                    <Link to={'/list/antilibrary'}>my "anti-library"</Link>.
+                    <Link to={'/antilibrary'}>my "anti-library"</Link>.
                     Check it out. I'm always looking for suggestions. Thank
                     you&nbsp;
                     <a href={'https://github.com/mariellefoster/marf-books'}>
@@ -85,10 +85,10 @@ export const aboutPageQuery = graphql`
     query {
         file(relativePath: { eq: "profile-with-finn.jpeg" }) {
             childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
+                gatsbyImageData(
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                )
             }
         }
     }
