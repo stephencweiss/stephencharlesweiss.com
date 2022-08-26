@@ -499,6 +499,22 @@ function trimTrailingSlash(str) {
     }
     return str
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions
+    const typeDefs = `
+      type MarkdownRemark implements Node {
+        frontmatter: Frontmatter
+      }
+      type Frontmatter {
+        tags: [String!]
+        category: [String!]
+      }
+    `
+    createTypes(typeDefs)
+  }
+
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
 
