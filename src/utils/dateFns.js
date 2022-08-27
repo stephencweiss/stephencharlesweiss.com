@@ -1,5 +1,5 @@
-const dayjs = require('dayjs')
-const { BUILD_TIME, FAKE_START } = require('../constants')
+import dayjs from 'dayjs'
+import { BUILD_TIME, FAKE_START } from '../constants'
 
 function isPublished(node) {
     const { publish, date, stage, sourceInstance } = node.frontmatter
