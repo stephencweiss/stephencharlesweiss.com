@@ -39,7 +39,7 @@ other: allMarkdownRemark(
     filter: {
         fields: {
             sourceInstance: {
-            nin: [..., "blog"]
+            nin: [..., "notes"]
             }
         }
     }
