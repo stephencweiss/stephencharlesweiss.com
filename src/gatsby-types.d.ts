@@ -685,6 +685,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.fields.readingTime.text'
   | 'childMarkdownRemark.fields.readingTime.time'
   | 'childMarkdownRemark.fields.readingTime.words'
+  | 'childMarkdownRemark.fields.slug'
   | 'childMarkdownRemark.fields.sourceInstance'
   | 'childMarkdownRemark.fields.stage'
   | 'childMarkdownRemark.fileAbsolutePath'
@@ -695,19 +696,20 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.frontmatter.backlinks.title'
   | 'childMarkdownRemark.frontmatter.bookTitle'
   | 'childMarkdownRemark.frontmatter.category'
+  | 'childMarkdownRemark.frontmatter.context'
   | 'childMarkdownRemark.frontmatter.date'
+  | 'childMarkdownRemark.frontmatter.draft'
   | 'childMarkdownRemark.frontmatter.external_context'
   | 'childMarkdownRemark.frontmatter.internal_context'
+  | 'childMarkdownRemark.frontmatter.notes'
+  | 'childMarkdownRemark.frontmatter.pinned'
   | 'childMarkdownRemark.frontmatter.private'
   | 'childMarkdownRemark.frontmatter.project'
   | 'childMarkdownRemark.frontmatter.publish'
-  | 'childMarkdownRemark.frontmatter.publishe'
-  | 'childMarkdownRemark.frontmatter.published'
   | 'childMarkdownRemark.frontmatter.rating'
   | 'childMarkdownRemark.frontmatter.slug'
   | 'childMarkdownRemark.frontmatter.social_context'
   | 'childMarkdownRemark.frontmatter.stage'
-  | 'childMarkdownRemark.frontmatter.tag'
   | 'childMarkdownRemark.frontmatter.tags'
   | 'childMarkdownRemark.frontmatter.title'
   | 'childMarkdownRemark.frontmatter.topics'
@@ -854,6 +856,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.fields.readingTime.text'
   | 'childrenMarkdownRemark.fields.readingTime.time'
   | 'childrenMarkdownRemark.fields.readingTime.words'
+  | 'childrenMarkdownRemark.fields.slug'
   | 'childrenMarkdownRemark.fields.sourceInstance'
   | 'childrenMarkdownRemark.fields.stage'
   | 'childrenMarkdownRemark.fileAbsolutePath'
@@ -864,19 +867,20 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.frontmatter.backlinks.title'
   | 'childrenMarkdownRemark.frontmatter.bookTitle'
   | 'childrenMarkdownRemark.frontmatter.category'
+  | 'childrenMarkdownRemark.frontmatter.context'
   | 'childrenMarkdownRemark.frontmatter.date'
+  | 'childrenMarkdownRemark.frontmatter.draft'
   | 'childrenMarkdownRemark.frontmatter.external_context'
   | 'childrenMarkdownRemark.frontmatter.internal_context'
+  | 'childrenMarkdownRemark.frontmatter.notes'
+  | 'childrenMarkdownRemark.frontmatter.pinned'
   | 'childrenMarkdownRemark.frontmatter.private'
   | 'childrenMarkdownRemark.frontmatter.project'
   | 'childrenMarkdownRemark.frontmatter.publish'
-  | 'childrenMarkdownRemark.frontmatter.publishe'
-  | 'childrenMarkdownRemark.frontmatter.published'
   | 'childrenMarkdownRemark.frontmatter.rating'
   | 'childrenMarkdownRemark.frontmatter.slug'
   | 'childrenMarkdownRemark.frontmatter.social_context'
   | 'childrenMarkdownRemark.frontmatter.stage'
-  | 'childrenMarkdownRemark.frontmatter.tag'
   | 'childrenMarkdownRemark.frontmatter.tags'
   | 'childrenMarkdownRemark.frontmatter.title'
   | 'childrenMarkdownRemark.frontmatter.topics'
@@ -1143,19 +1147,20 @@ type Frontmatter = {
   readonly backlinks: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterBacklinks>>>;
   readonly bookTitle: Maybe<Scalars['String']>;
   readonly category: Maybe<ReadonlyArray<Scalars['String']>>;
+  readonly context: Maybe<Scalars['String']>;
   readonly date: Maybe<Scalars['String']>;
+  readonly draft: Maybe<Scalars['Date']>;
   readonly external_context: Maybe<Scalars['String']>;
   readonly internal_context: Maybe<Scalars['String']>;
+  readonly notes: Maybe<Scalars['String']>;
+  readonly pinned: Maybe<Scalars['Boolean']>;
   readonly private: Maybe<Scalars['Boolean']>;
   readonly project: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly publish: Maybe<Scalars['Date']>;
-  readonly publishe: Maybe<Scalars['Date']>;
-  readonly published: Maybe<Scalars['Date']>;
   readonly rating: Maybe<Scalars['Int']>;
   readonly slug: Maybe<Scalars['String']>;
   readonly social_context: Maybe<Scalars['String']>;
   readonly stage: Maybe<Scalars['String']>;
-  readonly tag: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly tags: Maybe<ReadonlyArray<Scalars['String']>>;
   readonly title: Maybe<Scalars['String']>;
   readonly topics: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
@@ -1163,23 +1168,15 @@ type Frontmatter = {
 };
 
 
+type Frontmatter_draftArgs = {
+  difference: InputMaybe<Scalars['String']>;
+  formatString: InputMaybe<Scalars['String']>;
+  fromNow: InputMaybe<Scalars['Boolean']>;
+  locale: InputMaybe<Scalars['String']>;
+};
+
+
 type Frontmatter_publishArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type Frontmatter_publisheArgs = {
-  difference: InputMaybe<Scalars['String']>;
-  formatString: InputMaybe<Scalars['String']>;
-  fromNow: InputMaybe<Scalars['Boolean']>;
-  locale: InputMaybe<Scalars['String']>;
-};
-
-
-type Frontmatter_publishedArgs = {
   difference: InputMaybe<Scalars['String']>;
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
@@ -1201,19 +1198,20 @@ type FrontmatterFilterInput = {
   readonly backlinks: InputMaybe<MarkdownRemarkFrontmatterBacklinksFilterListInput>;
   readonly bookTitle: InputMaybe<StringQueryOperatorInput>;
   readonly category: InputMaybe<StringQueryOperatorInput>;
+  readonly context: InputMaybe<StringQueryOperatorInput>;
   readonly date: InputMaybe<StringQueryOperatorInput>;
+  readonly draft: InputMaybe<DateQueryOperatorInput>;
   readonly external_context: InputMaybe<StringQueryOperatorInput>;
   readonly internal_context: InputMaybe<StringQueryOperatorInput>;
+  readonly notes: InputMaybe<StringQueryOperatorInput>;
+  readonly pinned: InputMaybe<BooleanQueryOperatorInput>;
   readonly private: InputMaybe<BooleanQueryOperatorInput>;
   readonly project: InputMaybe<StringQueryOperatorInput>;
   readonly publish: InputMaybe<DateQueryOperatorInput>;
-  readonly publishe: InputMaybe<DateQueryOperatorInput>;
-  readonly published: InputMaybe<DateQueryOperatorInput>;
   readonly rating: InputMaybe<IntQueryOperatorInput>;
   readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly social_context: InputMaybe<StringQueryOperatorInput>;
   readonly stage: InputMaybe<StringQueryOperatorInput>;
-  readonly tag: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly topics: InputMaybe<StringQueryOperatorInput>;
@@ -1887,6 +1885,7 @@ type MarkdownRemarkFields = {
   readonly publishMonth: Maybe<Scalars['String']>;
   readonly publishYear: Maybe<Scalars['String']>;
   readonly readingTime: Maybe<MarkdownRemarkFieldsReadingTime>;
+  readonly slug: Maybe<Scalars['String']>;
   readonly sourceInstance: Maybe<Scalars['String']>;
   readonly stage: Maybe<Scalars['String']>;
 };
@@ -1947,6 +1946,7 @@ type MarkdownRemarkFieldsEnum =
   | 'fields.readingTime.text'
   | 'fields.readingTime.time'
   | 'fields.readingTime.words'
+  | 'fields.slug'
   | 'fields.sourceInstance'
   | 'fields.stage'
   | 'fileAbsolutePath'
@@ -1961,19 +1961,20 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.backlinks.title'
   | 'frontmatter.bookTitle'
   | 'frontmatter.category'
+  | 'frontmatter.context'
   | 'frontmatter.date'
+  | 'frontmatter.draft'
   | 'frontmatter.external_context'
   | 'frontmatter.internal_context'
+  | 'frontmatter.notes'
+  | 'frontmatter.pinned'
   | 'frontmatter.private'
   | 'frontmatter.project'
   | 'frontmatter.publish'
-  | 'frontmatter.publishe'
-  | 'frontmatter.published'
   | 'frontmatter.rating'
   | 'frontmatter.slug'
   | 'frontmatter.social_context'
   | 'frontmatter.stage'
-  | 'frontmatter.tag'
   | 'frontmatter.tags'
   | 'frontmatter.title'
   | 'frontmatter.topics'
@@ -2051,6 +2052,7 @@ type MarkdownRemarkFieldsFilterInput = {
   readonly publishMonth: InputMaybe<StringQueryOperatorInput>;
   readonly publishYear: InputMaybe<StringQueryOperatorInput>;
   readonly readingTime: InputMaybe<MarkdownRemarkFieldsReadingTimeFilterInput>;
+  readonly slug: InputMaybe<StringQueryOperatorInput>;
   readonly sourceInstance: InputMaybe<StringQueryOperatorInput>;
   readonly stage: InputMaybe<StringQueryOperatorInput>;
 };
@@ -3120,9 +3122,6 @@ type SiteFieldsEnum =
   | 'children.parent.internal.type'
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
-  | 'flags.DEV_SSR'
-  | 'flags.FAST_DEV'
-  | 'flags.FAST_REFRESH'
   | 'flags.LAZY_IMAGES'
   | 'flags.QUERY_ON_DEMAND'
   | 'graphqlTypegen.typesOutputPath'
@@ -3211,17 +3210,11 @@ type SiteFilterInput = {
 };
 
 type SiteFlags = {
-  readonly DEV_SSR: Maybe<Scalars['Boolean']>;
-  readonly FAST_DEV: Maybe<Scalars['Boolean']>;
-  readonly FAST_REFRESH: Maybe<Scalars['Boolean']>;
   readonly LAZY_IMAGES: Maybe<Scalars['Boolean']>;
   readonly QUERY_ON_DEMAND: Maybe<Scalars['Boolean']>;
 };
 
 type SiteFlagsFilterInput = {
-  readonly DEV_SSR: InputMaybe<BooleanQueryOperatorInput>;
-  readonly FAST_DEV: InputMaybe<BooleanQueryOperatorInput>;
-  readonly FAST_REFRESH: InputMaybe<BooleanQueryOperatorInput>;
   readonly LAZY_IMAGES: InputMaybe<BooleanQueryOperatorInput>;
   readonly QUERY_ON_DEMAND: InputMaybe<BooleanQueryOperatorInput>;
 };
@@ -4630,7 +4623,7 @@ type NoteEntryBySlugQueryVariables = Exact<{
 }>;
 
 
-type NoteEntryBySlugQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly author: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly publish: string | null, readonly tags: ReadonlyArray<string> | null, readonly category: ReadonlyArray<string> | null } | null, readonly fields: { readonly listDate: string | null, readonly readingTime: { readonly text: string | null, readonly words: number | null } | null } | null } | null };
+type NoteEntryBySlugQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null, readonly author: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly publish: string | null, readonly tags: ReadonlyArray<string> | null, readonly category: ReadonlyArray<string> | null, readonly backlinks: ReadonlyArray<{ readonly title: string | null, readonly file: { readonly name: string | null } | null } | null> | null } | null, readonly fields: { readonly listDate: string | null, readonly readingTime: { readonly text: string | null, readonly words: number | null } | null } | null } | null };
 
 type PaginatedBlogDataQueryVariables = Exact<{
   limit: Scalars['Int'];

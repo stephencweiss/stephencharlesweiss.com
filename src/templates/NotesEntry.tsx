@@ -8,6 +8,7 @@ import {
     PostNavigation,
     SEO,
     PostTitle,
+    ListedLink,
 } from '../components'
 
 const classicFirstLetterStyle = css`
@@ -49,9 +50,10 @@ const PostHeaderBlock = styled.div`
 function EntryTemplate(props) {
     const entry = props.data.markdownRemark
     const { previous, next } = props.pageContext
-    const { title, publish } = entry.frontmatter
+    const { backlinks, title, publish } = entry.frontmatter
     const { readingTime } = entry.fields
     const { text: estimate, words: wordCount } = readingTime
+
     return (
         <Layout>
             <SEO title={title} description={entry.excerpt} />
@@ -67,9 +69,27 @@ function EntryTemplate(props) {
                 className={'entry'}
                 dangerouslySetInnerHTML={{ __html: entry.html }}
             />
+            {backlinks?.length > 0 && (
+                <>
+                    <hr />
+                    Related Posts
+                    <div>
+                        {backlinks.map((backlink) => {
+                            const { title, file } = backlink
+                            const { name: path } = file
+                            return (
+                                <ListedLink key={path} to={`/${path}`}>
+                                    {title}
+                                </ListedLink>
+                            )
+                        })}
+                    </div>
+                </>
+            )}
+            <hr />
+            <PostNavigation previous={previous} next={next} />
             <hr />
             <Bio />
-            <PostNavigation previous={previous} next={next} />
         </Layout>
     )
 }
@@ -93,6 +113,12 @@ export const pageQuery = graphql`
                 publish
                 tags
                 category
+                backlinks {
+                    file {
+                        name
+                    }
+                    title
+                }
             }
             fields {
                 listDate
