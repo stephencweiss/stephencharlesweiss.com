@@ -13,9 +13,9 @@ function Books(props) {
             <p>
                 some books I've read and written about. see other books I've
                 read in my&nbsp;
-                <Link to="/list/bookshelf">bookshelf</Link> and those I'm
+                <Link to="/bookshelf">bookshelf</Link> and those I'm
                 planning to read on my&nbsp;
-                <Link to="/list/reading-list">reading list</Link>.
+                <Link to="/reading-list">reading list</Link>.
             </p>
             <ColumnLinkWrapper>
                 <ul>
