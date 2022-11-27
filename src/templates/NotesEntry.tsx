@@ -54,6 +54,12 @@ function EntryTemplate(props) {
     const { readingTime } = entry.fields
     const { text: estimate, words: wordCount } = readingTime
 
+    const simpleBacklinks = new Map();
+    (backlinks??[]).map(({title, file}) => {
+        if(!simpleBacklinks.has(title) && file?.name != null){
+            simpleBacklinks.set(title, file?.name)
+        }
+    })
     return (
         <Layout>
             <SEO title={title} description={entry.excerpt} />
@@ -69,14 +75,13 @@ function EntryTemplate(props) {
                 className={'entry'}
                 dangerouslySetInnerHTML={{ __html: entry.html }}
             />
-            {backlinks?.length > 0 && (
+            {simpleBacklinks.size > 0 && (
                 <>
                     <hr />
                     Related Posts
                     <div>
-                        {backlinks.map((backlink) => {
-                            const { title, file } = backlink
-                            const { name: path } = file
+                        {[...simpleBacklinks.entries()].map(([title, path]) => {
+
                             return (
                                 <ListedLink key={path} to={`/${path}`}>
                                     {title}
